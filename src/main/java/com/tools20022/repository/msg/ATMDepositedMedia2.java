@@ -19,12 +19,14 @@ package com.tools20022.repository.msg;
 
 import com.tools20022.metamodel.MMMessageAttribute;
 import com.tools20022.metamodel.MMMessageComponent;
+import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.codeset.ActiveCurrencyCode;
 import com.tools20022.repository.codeset.CheckCodeLine1Code;
 import com.tools20022.repository.datatype.ImpliedCurrencyAndAmount;
 import com.tools20022.repository.datatype.Max70Text;
 import com.tools20022.repository.datatype.Number;
 import com.tools20022.repository.datatype.Percentage;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -107,7 +109,7 @@ public class ATMDepositedMedia2 {
 			componentContext_lazy = () -> ATMDepositedMedia2.mmObject();
 			isDerived = false;
 			xmlTag = "Cnt";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Count";
 			definition = "Number of deposit media.";
 			maxOccurs = 1;
@@ -152,7 +154,7 @@ public class ATMDepositedMedia2 {
 			componentContext_lazy = () -> ATMDepositedMedia2.mmObject();
 			isDerived = false;
 			xmlTag = "UnitVal";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "UnitValue";
 			definition = "Amount or denomination of one media item, if the media type is valued or entered by the customer.";
 			maxOccurs = 1;
@@ -195,7 +197,7 @@ public class ATMDepositedMedia2 {
 			componentContext_lazy = () -> ATMDepositedMedia2.mmObject();
 			isDerived = false;
 			xmlTag = "Ccy";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Currency";
 			definition = "Currency of media items, if valued and different from base currency.";
 			maxOccurs = 1;
@@ -237,7 +239,7 @@ public class ATMDepositedMedia2 {
 			componentContext_lazy = () -> ATMDepositedMedia2.mmObject();
 			isDerived = false;
 			xmlTag = "CdLineFrmt";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CodeLineFormat";
 			definition = "Format of the check code line.";
 			maxOccurs = 1;
@@ -278,7 +280,7 @@ public class ATMDepositedMedia2 {
 			componentContext_lazy = () -> ATMDepositedMedia2.mmObject();
 			isDerived = false;
 			xmlTag = "CdLine";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CodeLine";
 			definition = "Check code line.";
 			maxOccurs = 1;
@@ -320,7 +322,7 @@ public class ATMDepositedMedia2 {
 			componentContext_lazy = () -> ATMDepositedMedia2.mmObject();
 			isDerived = false;
 			xmlTag = "ScnndVal";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ScannedValue";
 			definition = "Check amount scanned by the check reader.";
 			maxOccurs = 1;
@@ -361,7 +363,7 @@ public class ATMDepositedMedia2 {
 			componentContext_lazy = () -> ATMDepositedMedia2.mmObject();
 			isDerived = false;
 			xmlTag = "CnfdncLvl";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ConfidenceLevel";
 			definition = "Percentage of the confidence in the check amount.";
 			maxOccurs = 1;
@@ -373,11 +375,10 @@ public class ATMDepositedMedia2 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.ATMDepositedMedia2.mmCount, com.tools20022.repository.msg.ATMDepositedMedia2.mmUnitValue, com.tools20022.repository.msg.ATMDepositedMedia2.mmCurrency,
-						com.tools20022.repository.msg.ATMDepositedMedia2.mmCodeLineFormat, com.tools20022.repository.msg.ATMDepositedMedia2.mmCodeLine, com.tools20022.repository.msg.ATMDepositedMedia2.mmScannedValue,
-						com.tools20022.repository.msg.ATMDepositedMedia2.mmConfidenceLevel);
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				messageElement_lazy = () -> Arrays.asList(ATMDepositedMedia2.mmCount, ATMDepositedMedia2.mmUnitValue, ATMDepositedMedia2.mmCurrency, ATMDepositedMedia2.mmCodeLineFormat, ATMDepositedMedia2.mmCodeLine,
+						ATMDepositedMedia2.mmScannedValue, ATMDepositedMedia2.mmConfidenceLevel);
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "ATMDepositedMedia2";
 				definition = "Media item that are deposited.";
 			}

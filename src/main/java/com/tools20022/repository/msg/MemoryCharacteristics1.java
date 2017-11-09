@@ -19,9 +19,11 @@ package com.tools20022.repository.msg;
 
 import com.tools20022.metamodel.MMMessageAttribute;
 import com.tools20022.metamodel.MMMessageComponent;
+import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.codeset.MemoryUnit1Code;
 import com.tools20022.repository.datatype.DecimalNumber;
 import com.tools20022.repository.datatype.Max35Text;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -98,7 +100,7 @@ public class MemoryCharacteristics1 {
 			componentContext_lazy = () -> MemoryCharacteristics1.mmObject();
 			isDerived = false;
 			xmlTag = "Id";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Identification";
 			definition = "Identification or name of the memory.";
 			maxOccurs = 1;
@@ -140,7 +142,7 @@ public class MemoryCharacteristics1 {
 			componentContext_lazy = () -> MemoryCharacteristics1.mmObject();
 			isDerived = false;
 			xmlTag = "TtlSz";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "TotalSize";
 			definition = "Total size of the memory unit.";
 			maxOccurs = 1;
@@ -182,7 +184,7 @@ public class MemoryCharacteristics1 {
 			componentContext_lazy = () -> MemoryCharacteristics1.mmObject();
 			isDerived = false;
 			xmlTag = "FreeSz";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "FreeSize";
 			definition = "Total size of the available memory.";
 			maxOccurs = 1;
@@ -224,7 +226,7 @@ public class MemoryCharacteristics1 {
 			componentContext_lazy = () -> MemoryCharacteristics1.mmObject();
 			isDerived = false;
 			xmlTag = "Unit";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Unit";
 			definition = "Memory unit of the sizes.";
 			maxOccurs = 1;
@@ -236,10 +238,9 @@ public class MemoryCharacteristics1 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.MemoryCharacteristics1.mmIdentification, com.tools20022.repository.msg.MemoryCharacteristics1.mmTotalSize,
-						com.tools20022.repository.msg.MemoryCharacteristics1.mmFreeSize, com.tools20022.repository.msg.MemoryCharacteristics1.mmUnit);
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				messageElement_lazy = () -> Arrays.asList(MemoryCharacteristics1.mmIdentification, MemoryCharacteristics1.mmTotalSize, MemoryCharacteristics1.mmFreeSize, MemoryCharacteristics1.mmUnit);
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "MemoryCharacteristics1";
 				definition = "Characteristics of a hardware memory module.";
 			}

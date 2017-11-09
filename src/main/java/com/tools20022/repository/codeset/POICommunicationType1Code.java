@@ -19,7 +19,9 @@ package com.tools20022.repository.codeset;
 
 import com.tools20022.metamodel.MMCode;
 import com.tools20022.metamodel.MMCodeSet;
+import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.codeset.POICommunicationTypeCode;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -122,9 +124,9 @@ public class POICommunicationType1Code extends POICommunicationTypeCode {
 	 */
 	public static final MMCode mmBluetooth = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Bluetooth";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.POICommunicationType2Code.mmBluetooth);
+			nextVersions_lazy = () -> Arrays.asList(POICommunicationType2Code.mmBluetooth);
 			owner_lazy = () -> POICommunicationType1Code.mmObject();
 		}
 	};
@@ -154,9 +156,9 @@ public class POICommunicationType1Code extends POICommunicationTypeCode {
 	 */
 	public static final MMCode mmEthernet = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Ethernet";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.POICommunicationType2Code.mmEthernet);
+			nextVersions_lazy = () -> Arrays.asList(POICommunicationType2Code.mmEthernet);
 			owner_lazy = () -> POICommunicationType1Code.mmObject();
 		}
 	};
@@ -186,9 +188,9 @@ public class POICommunicationType1Code extends POICommunicationTypeCode {
 	 */
 	public static final MMCode mmGPRS = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "GPRS";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.POICommunicationType2Code.mmGPRS);
+			nextVersions_lazy = () -> Arrays.asList(POICommunicationType2Code.mmGPRS);
 			owner_lazy = () -> POICommunicationType1Code.mmObject();
 		}
 	};
@@ -218,9 +220,9 @@ public class POICommunicationType1Code extends POICommunicationTypeCode {
 	 */
 	public static final MMCode mmGSM = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "GSM";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.POICommunicationType2Code.mmGSM);
+			nextVersions_lazy = () -> Arrays.asList(POICommunicationType2Code.mmGSM);
 			owner_lazy = () -> POICommunicationType1Code.mmObject();
 		}
 	};
@@ -250,9 +252,9 @@ public class POICommunicationType1Code extends POICommunicationTypeCode {
 	 */
 	public static final MMCode mmPSTN = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PSTN";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.POICommunicationType2Code.mmPSTN);
+			nextVersions_lazy = () -> Arrays.asList(POICommunicationType2Code.mmPSTN);
 			owner_lazy = () -> POICommunicationType1Code.mmObject();
 		}
 	};
@@ -282,9 +284,9 @@ public class POICommunicationType1Code extends POICommunicationTypeCode {
 	 */
 	public static final MMCode mmRS232 = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "RS232";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.POICommunicationType2Code.mmRS232);
+			nextVersions_lazy = () -> Arrays.asList(POICommunicationType2Code.mmRS232);
 			owner_lazy = () -> POICommunicationType1Code.mmObject();
 		}
 	};
@@ -314,9 +316,9 @@ public class POICommunicationType1Code extends POICommunicationTypeCode {
 	 */
 	public static final MMCode mmUSBDevice = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "USBDevice";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.POICommunicationType2Code.mmUSBDevice);
+			nextVersions_lazy = () -> Arrays.asList(POICommunicationType2Code.mmUSBDevice);
 			owner_lazy = () -> POICommunicationType1Code.mmObject();
 		}
 	};
@@ -346,9 +348,9 @@ public class POICommunicationType1Code extends POICommunicationTypeCode {
 	 */
 	public static final MMCode mmUSBHost = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "USBHost";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.POICommunicationType2Code.mmUSBHost);
+			nextVersions_lazy = () -> Arrays.asList(POICommunicationType2Code.mmUSBHost);
 			owner_lazy = () -> POICommunicationType1Code.mmObject();
 		}
 	};
@@ -378,9 +380,9 @@ public class POICommunicationType1Code extends POICommunicationTypeCode {
 	 */
 	public static final MMCode mmWifi = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Wifi";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.POICommunicationType2Code.mmWifi);
+			nextVersions_lazy = () -> Arrays.asList(POICommunicationType2Code.mmWifi);
 			owner_lazy = () -> POICommunicationType1Code.mmObject();
 		}
 	};
@@ -388,16 +390,14 @@ public class POICommunicationType1Code extends POICommunicationTypeCode {
 	static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
 				example = Arrays.asList("BLTH");
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "POICommunicationType1Code";
 				definition = "Low level communication of the hardware or software component toward another component or an external entity.";
 				nextVersions_lazy = () -> Arrays.asList(POICommunicationType2Code.mmObject());
-				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.POICommunicationType1Code.mmBluetooth, com.tools20022.repository.codeset.POICommunicationType1Code.mmEthernet,
-						com.tools20022.repository.codeset.POICommunicationType1Code.mmGPRS, com.tools20022.repository.codeset.POICommunicationType1Code.mmGSM, com.tools20022.repository.codeset.POICommunicationType1Code.mmPSTN,
-						com.tools20022.repository.codeset.POICommunicationType1Code.mmRS232, com.tools20022.repository.codeset.POICommunicationType1Code.mmUSBDevice, com.tools20022.repository.codeset.POICommunicationType1Code.mmUSBHost,
-						com.tools20022.repository.codeset.POICommunicationType1Code.mmWifi);
+				code_lazy = () -> Arrays.asList(POICommunicationType1Code.mmBluetooth, POICommunicationType1Code.mmEthernet, POICommunicationType1Code.mmGPRS, POICommunicationType1Code.mmGSM, POICommunicationType1Code.mmPSTN,
+						POICommunicationType1Code.mmRS232, POICommunicationType1Code.mmUSBDevice, POICommunicationType1Code.mmUSBHost, POICommunicationType1Code.mmWifi);
 				trace_lazy = () -> POICommunicationTypeCode.mmObject();
 			}
 		});

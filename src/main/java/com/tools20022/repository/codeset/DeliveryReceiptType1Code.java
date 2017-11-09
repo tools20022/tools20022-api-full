@@ -19,6 +19,8 @@ package com.tools20022.repository.codeset;
 
 import com.tools20022.metamodel.MMCode;
 import com.tools20022.metamodel.MMCodeSet;
+import com.tools20022.metamodel.MMRegistrationStatus;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -90,7 +92,7 @@ public class DeliveryReceiptType1Code {
 	 */
 	public static final MMCode mmFree = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "Free";
 			definition = "Settled free of payment. The securities movement is a result of an in-kind transaction or a custodial bank move.";
 			owner_lazy = () -> DeliveryReceiptType1Code.mmObject();
@@ -123,7 +125,7 @@ public class DeliveryReceiptType1Code {
 	 */
 	public static final MMCode mmAgainstPayment = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "AgainstPayment";
 			definition = "Settled against payment. Delivery or receipt is against payment, ie, DVP or RVP.";
 			owner_lazy = () -> DeliveryReceiptType1Code.mmObject();
@@ -157,7 +159,7 @@ public class DeliveryReceiptType1Code {
 	 */
 	public static final MMCode mmSplitFromPayment = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "SplitFromPayment";
 			definition = "Settled separate from payment. Delivery or receipt is free, with a separate payment arrangement, eg, a separate cash instruction from the buy side.";
 			owner_lazy = () -> DeliveryReceiptType1Code.mmObject();
@@ -168,13 +170,12 @@ public class DeliveryReceiptType1Code {
 	static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
 				example = Arrays.asList("FREE");
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "DeliveryReceiptType1Code";
 				definition = "Specifies how the transaction is to be settled.";
-				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.DeliveryReceiptType1Code.mmFree, com.tools20022.repository.codeset.DeliveryReceiptType1Code.mmAgainstPayment,
-						com.tools20022.repository.codeset.DeliveryReceiptType1Code.mmSplitFromPayment);
+				code_lazy = () -> Arrays.asList(DeliveryReceiptType1Code.mmFree, DeliveryReceiptType1Code.mmAgainstPayment, DeliveryReceiptType1Code.mmSplitFromPayment);
 			}
 		});
 		return mmObject_lazy.get();

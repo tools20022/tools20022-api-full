@@ -17,15 +17,15 @@
 
 package com.tools20022.repository.entity;
 
-import com.tools20022.metamodel.MMBusinessAssociationEnd;
-import com.tools20022.metamodel.MMBusinessAttribute;
-import com.tools20022.metamodel.MMBusinessComponent;
+import com.tools20022.metamodel.*;
+import com.tools20022.repository.choice.CustomerHandlingInstructionChoice;
 import com.tools20022.repository.codeset.*;
 import com.tools20022.repository.datatype.Max16Text;
 import com.tools20022.repository.datatype.Max35Text;
 import com.tools20022.repository.datatype.Number;
 import com.tools20022.repository.datatype.YesNoIndicator;
-import com.tools20022.repository.msg.OrderParameters1;
+import com.tools20022.repository.GeneratedRepository;
+import com.tools20022.repository.msg.*;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -39,6 +39,35 @@ import java.util.concurrent.atomic.AtomicReference;
  * <p>
  * <strong>Constant fields:</strong>
  * <ul>
+ * <li>
+ * {@linkplain com.tools20022.metamodel.MMBusinessComponent#getDerivationComponent
+ * derivationComponent} =
+ * <ul>
+ * <li>{@linkplain com.tools20022.repository.msg.OrderParameters1
+ * OrderParameters1}</li>
+ * </ul>
+ * </li>
+ * <li>
+ * {@linkplain com.tools20022.metamodel.MMBusinessComponent#getAssociationDomain
+ * associationDomain} =
+ * <ul>
+ * <li>
+ * {@linkplain com.tools20022.repository.entity.SecuritiesPricing#mmRelatedOrder
+ * SecuritiesPricing.mmRelatedOrder}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.entity.SecuritiesQuantity#mmMinimumQuantityOrderParameters
+ * SecuritiesQuantity.mmMinimumQuantityOrderParameters}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.entity.SecuritiesQuantity#mmMatchIncrementOrderParameters
+ * SecuritiesQuantity.mmMatchIncrementOrderParameters}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.entity.SecuritiesOrder#mmOrderExecutionParameters
+ * SecuritiesOrder.mmOrderExecutionParameters}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.entity.SecuritiesPegOrderInstruction#mmOrder
+ * SecuritiesPegOrderInstruction.mmOrder}</li>
+ * </ul>
+ * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMBusinessComponent#getElement
  * element} =
  * <ul>
@@ -114,35 +143,6 @@ import java.util.concurrent.atomic.AtomicReference;
  * </ul>
  * </li>
  * <li>
- * {@linkplain com.tools20022.metamodel.MMBusinessComponent#getAssociationDomain
- * associationDomain} =
- * <ul>
- * <li>
- * {@linkplain com.tools20022.repository.entity.SecuritiesPricing#mmRelatedOrder
- * SecuritiesPricing.mmRelatedOrder}</li>
- * <li>
- * {@linkplain com.tools20022.repository.entity.SecuritiesQuantity#mmMinimumQuantityOrderParameters
- * SecuritiesQuantity.mmMinimumQuantityOrderParameters}</li>
- * <li>
- * {@linkplain com.tools20022.repository.entity.SecuritiesQuantity#mmMatchIncrementOrderParameters
- * SecuritiesQuantity.mmMatchIncrementOrderParameters}</li>
- * <li>
- * {@linkplain com.tools20022.repository.entity.SecuritiesOrder#mmOrderExecutionParameters
- * SecuritiesOrder.mmOrderExecutionParameters}</li>
- * <li>
- * {@linkplain com.tools20022.repository.entity.SecuritiesPegOrderInstruction#mmOrder
- * SecuritiesPegOrderInstruction.mmOrder}</li>
- * </ul>
- * </li>
- * <li>
- * {@linkplain com.tools20022.metamodel.MMBusinessComponent#getDerivationComponent
- * derivationComponent} =
- * <ul>
- * <li>{@linkplain com.tools20022.repository.msg.OrderParameters1
- * OrderParameters1}</li>
- * </ul>
- * </li>
- * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
  * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
@@ -207,16 +207,16 @@ public class SecuritiesOrderParameters {
 	 */
 	public static final MMBusinessAssociationEnd mmMinimumQuantity = new MMBusinessAssociationEnd() {
 		{
-			derivation_lazy = () -> Arrays.asList(com.tools20022.repository.msg.OrderQuantity3.mmMinimumQuantity);
+			derivation_lazy = () -> Arrays.asList(OrderQuantity3.mmMinimumQuantity);
 			elementContext_lazy = () -> SecuritiesOrderParameters.mmObject();
 			isDerived = false;
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "MinimumQuantity";
 			definition = "Minimum quantity of financial instrument to be bought or sold if the entire order cannot be executed.";
 			maxOccurs = 1;
 			minOccurs = 1;
 			opposite_lazy = () -> com.tools20022.repository.entity.SecuritiesQuantity.mmMinimumQuantityOrderParameters;
-			aggregation = com.tools20022.metamodel.MMAggregation.NONE;
+			aggregation = MMAggregation.NONE;
 			type_lazy = () -> com.tools20022.repository.entity.SecuritiesQuantity.mmObject();
 		}
 	};
@@ -275,17 +275,16 @@ public class SecuritiesOrderParameters {
 	 */
 	public static final MMBusinessAssociationEnd mmMatchIncrement = new MMBusinessAssociationEnd() {
 		{
-			derivation_lazy = () -> Arrays.asList(com.tools20022.repository.msg.PartialFill1.mmMatchIncrementQuantity, com.tools20022.repository.msg.OrderQuantity3.mmMatchIncrement,
-					com.tools20022.repository.msg.PartialFill2.mmMatchIncrementQuantity);
+			derivation_lazy = () -> Arrays.asList(PartialFill1.mmMatchIncrementQuantity, OrderQuantity3.mmMatchIncrement, PartialFill2.mmMatchIncrementQuantity);
 			elementContext_lazy = () -> SecuritiesOrderParameters.mmObject();
 			isDerived = false;
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "MatchIncrement";
 			definition = "Allows orders to specify a minimum quantity that applies to every execution. (one execution could be for multiple counter-orders). The order may still fill against smaller orders, but the cumulative quantity of the execution must be in multiples of the MatchIncrement.";
 			maxOccurs = 1;
 			minOccurs = 1;
 			opposite_lazy = () -> com.tools20022.repository.entity.SecuritiesQuantity.mmMatchIncrementOrderParameters;
-			aggregation = com.tools20022.metamodel.MMAggregation.NONE;
+			aggregation = MMAggregation.NONE;
 			type_lazy = () -> com.tools20022.repository.entity.SecuritiesQuantity.mmObject();
 		}
 	};
@@ -334,16 +333,16 @@ public class SecuritiesOrderParameters {
 	 */
 	public static final MMBusinessAssociationEnd mmPegInstructions = new MMBusinessAssociationEnd() {
 		{
-			derivation_lazy = () -> Arrays.asList(com.tools20022.repository.msg.OrderParameters1.mmPegInstructionsDetails);
+			derivation_lazy = () -> Arrays.asList(OrderParameters1.mmPegInstructionsDetails);
 			elementContext_lazy = () -> SecuritiesOrderParameters.mmObject();
 			isDerived = false;
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "PegInstructions";
 			definition = "Additional instructions if the order is pegged.";
 			maxOccurs = 1;
 			minOccurs = 1;
 			opposite_lazy = () -> com.tools20022.repository.entity.SecuritiesPegOrderInstruction.mmOrder;
-			aggregation = com.tools20022.metamodel.MMAggregation.NONE;
+			aggregation = MMAggregation.NONE;
 			type_lazy = () -> com.tools20022.repository.entity.SecuritiesPegOrderInstruction.mmObject();
 		}
 	};
@@ -391,16 +390,16 @@ public class SecuritiesOrderParameters {
 	 */
 	public static final MMBusinessAssociationEnd mmPreviousClosingPrice = new MMBusinessAssociationEnd() {
 		{
-			derivation_lazy = () -> Arrays.asList(com.tools20022.repository.msg.OrderQuantity3.mmPreviousClosingPrice);
+			derivation_lazy = () -> Arrays.asList(OrderQuantity3.mmPreviousClosingPrice);
 			elementContext_lazy = () -> SecuritiesOrderParameters.mmObject();
 			isDerived = false;
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "PreviousClosingPrice";
 			definition = "Previous closing price of security.";
 			maxOccurs = 1;
 			minOccurs = 1;
 			opposite_lazy = () -> com.tools20022.repository.entity.SecuritiesPricing.mmRelatedOrder;
-			aggregation = com.tools20022.metamodel.MMAggregation.NONE;
+			aggregation = MMAggregation.NONE;
 			type_lazy = () -> com.tools20022.repository.entity.SecuritiesPricing.mmObject();
 		}
 	};
@@ -442,10 +441,10 @@ public class SecuritiesOrderParameters {
 	 */
 	public static final MMBusinessAttribute mmAutoRouting = new MMBusinessAttribute() {
 		{
-			derivation_lazy = () -> Arrays.asList(com.tools20022.repository.msg.OrderParameters1.mmAutoRoutingIndicator);
+			derivation_lazy = () -> Arrays.asList(OrderParameters1.mmAutoRoutingIndicator);
 			elementContext_lazy = () -> SecuritiesOrderParameters.mmObject();
 			isDerived = false;
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "AutoRouting";
 			definition = "Indicates whether an automatic routing system is involved.";
 			maxOccurs = 1;
@@ -487,7 +486,7 @@ public class SecuritiesOrderParameters {
 		{
 			elementContext_lazy = () -> SecuritiesOrderParameters.mmObject();
 			isDerived = false;
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "CorporateActionOptionIndicator";
 			definition = "Indicates the possible options or choices available to account owner (for investment funds).";
 			maxOccurs = 1;
@@ -534,10 +533,10 @@ public class SecuritiesOrderParameters {
 	 */
 	public static final MMBusinessAttribute mmExecutionTimeLimit = new MMBusinessAttribute() {
 		{
-			derivation_lazy = () -> Arrays.asList(com.tools20022.repository.msg.Order9.mmSideTimeInForce, com.tools20022.repository.msg.OrderParameters1.mmTimeInForce);
+			derivation_lazy = () -> Arrays.asList(Order9.mmSideTimeInForce, OrderParameters1.mmTimeInForce);
 			elementContext_lazy = () -> SecuritiesOrderParameters.mmObject();
 			isDerived = false;
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "ExecutionTimeLimit";
 			definition = "Indicates from/until when an order must be executed.";
 			maxOccurs = 1;
@@ -575,7 +574,7 @@ public class SecuritiesOrderParameters {
 		{
 			elementContext_lazy = () -> SecuritiesOrderParameters.mmObject();
 			isDerived = false;
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "PreAllocationConditionIndicator";
 			definition = "Indicates the conditions that apply to a pre-allocation.";
 			maxOccurs = 1;
@@ -619,10 +618,10 @@ public class SecuritiesOrderParameters {
 	 */
 	public static final MMBusinessAttribute mmPriorityIndicator = new MMBusinessAttribute() {
 		{
-			derivation_lazy = () -> Arrays.asList(com.tools20022.repository.msg.OrderParameters1.mmPriorityType);
+			derivation_lazy = () -> Arrays.asList(OrderParameters1.mmPriorityType);
 			elementContext_lazy = () -> SecuritiesOrderParameters.mmObject();
 			isDerived = false;
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "PriorityIndicator";
 			definition = "Indicates the execution priority of the trade.";
 			maxOccurs = 1;
@@ -660,7 +659,7 @@ public class SecuritiesOrderParameters {
 		{
 			elementContext_lazy = () -> SecuritiesOrderParameters.mmObject();
 			isDerived = false;
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "RequestedDealCurrency";
 			definition = "Currency in which a trade should be executed.";
 			maxOccurs = 1;
@@ -706,10 +705,10 @@ public class SecuritiesOrderParameters {
 	 */
 	public static final MMBusinessAttribute mmOrderHandlingInstruction = new MMBusinessAttribute() {
 		{
-			derivation_lazy = () -> Arrays.asList(com.tools20022.repository.msg.OrderParameters1.mmHandlingInstruction);
+			derivation_lazy = () -> Arrays.asList(OrderParameters1.mmHandlingInstruction);
 			elementContext_lazy = () -> SecuritiesOrderParameters.mmObject();
 			isDerived = false;
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "OrderHandlingInstruction";
 			definition = "Specifies instructions for order handling on the broker trading floor.";
 			maxOccurs = 1;
@@ -758,10 +757,10 @@ public class SecuritiesOrderParameters {
 	 */
 	public static final MMBusinessAttribute mmStockLocateRequired = new MMBusinessAttribute() {
 		{
-			derivation_lazy = () -> Arrays.asList(com.tools20022.repository.msg.OrderParameters1.mmStockLocateRequiredIndicator);
+			derivation_lazy = () -> Arrays.asList(OrderParameters1.mmStockLocateRequiredIndicator);
 			elementContext_lazy = () -> SecuritiesOrderParameters.mmObject();
 			isDerived = false;
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "StockLocateRequired";
 			definition = "Indicates whether the broker is to locate the stock in conjunction with a short sell order.\nThis information is mandatory in case of short sales. When executed, the report will then mention the securities location.";
 			maxOccurs = 1;
@@ -814,10 +813,10 @@ public class SecuritiesOrderParameters {
 	 */
 	public static final MMBusinessAttribute mmWorkingIndicator = new MMBusinessAttribute() {
 		{
-			derivation_lazy = () -> Arrays.asList(com.tools20022.repository.msg.OrderStatus1.mmWorkingIndicator, com.tools20022.repository.msg.OrderStatus3.mmWorkingIndicator);
+			derivation_lazy = () -> Arrays.asList(OrderStatus1.mmWorkingIndicator, OrderStatus3.mmWorkingIndicator);
 			elementContext_lazy = () -> SecuritiesOrderParameters.mmObject();
 			isDerived = false;
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "WorkingIndicator";
 			definition = "Indicates if the order is currently being worked. For open outcry markets this indicates that the order is being worked in the crowd.  For electronic markets it indicates that the order has transitioned from a contingent order to a market order.";
 			maxOccurs = 1;
@@ -858,7 +857,7 @@ public class SecuritiesOrderParameters {
 		{
 			elementContext_lazy = () -> SecuritiesOrderParameters.mmObject();
 			isDerived = false;
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "BookPriorityIndicator";
 			definition = "Indicates if a Cancel/Replace has caused an order to lose book priority.";
 			maxOccurs = 1;
@@ -905,10 +904,10 @@ public class SecuritiesOrderParameters {
 	 */
 	public static final MMBusinessAttribute mmMaxPriceLevels = new MMBusinessAttribute() {
 		{
-			derivation_lazy = () -> Arrays.asList(com.tools20022.repository.msg.OrderQuantity3.mmMaxPriceLevels);
+			derivation_lazy = () -> Arrays.asList(OrderQuantity3.mmMaxPriceLevels);
 			elementContext_lazy = () -> SecuritiesOrderParameters.mmObject();
 			isDerived = false;
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "MaxPriceLevels";
 			definition = "Allows an order to specify a maximum number of price levels to trade through.";
 			maxOccurs = 1;
@@ -958,10 +957,10 @@ public class SecuritiesOrderParameters {
 	 */
 	public static final MMBusinessAttribute mmPreTradeAnonymity = new MMBusinessAttribute() {
 		{
-			derivation_lazy = () -> Arrays.asList(com.tools20022.repository.msg.OrderParameters1.mmPreTradeAnonymityIndicator);
+			derivation_lazy = () -> Arrays.asList(OrderParameters1.mmPreTradeAnonymityIndicator);
 			elementContext_lazy = () -> SecuritiesOrderParameters.mmObject();
 			isDerived = false;
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "PreTradeAnonymity";
 			definition = "Allows trader to explicitly request anonymity or disclosure in pre-trade market data feeds. Anonymity is relevant in markets where counterparties are regularly disclosed in order depth feeds. Disclosure is relevant when counterparties are not normally visible.";
 			maxOccurs = 1;
@@ -1009,10 +1008,10 @@ public class SecuritiesOrderParameters {
 	 */
 	public static final MMBusinessAttribute mmGoodTillBooking = new MMBusinessAttribute() {
 		{
-			derivation_lazy = () -> Arrays.asList(com.tools20022.repository.msg.OrderParameters1.mmGoodTillBooking);
+			derivation_lazy = () -> Arrays.asList(OrderParameters1.mmGoodTillBooking);
 			elementContext_lazy = () -> SecuritiesOrderParameters.mmObject();
 			isDerived = false;
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "GoodTillBooking";
 			definition = "For partially good till orders, the specification of whether to book each execution, or to accumulate the executions.";
 			maxOccurs = 1;
@@ -1060,10 +1059,10 @@ public class SecuritiesOrderParameters {
 	 */
 	public static final MMBusinessAttribute mmManualOrderIndicator = new MMBusinessAttribute() {
 		{
-			derivation_lazy = () -> Arrays.asList(com.tools20022.repository.msg.SingleOrder1.mmManualOrderIndicator);
+			derivation_lazy = () -> Arrays.asList(SingleOrder1.mmManualOrderIndicator);
 			elementContext_lazy = () -> SecuritiesOrderParameters.mmObject();
 			isDerived = false;
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "ManualOrderIndicator";
 			definition = "Indicates if the order was initially received manually (as opposed to electronically).";
 			maxOccurs = 1;
@@ -1111,10 +1110,10 @@ public class SecuritiesOrderParameters {
 	 */
 	public static final MMBusinessAttribute mmDirectedOrder = new MMBusinessAttribute() {
 		{
-			derivation_lazy = () -> Arrays.asList(com.tools20022.repository.msg.SingleOrder1.mmDirectedOrder);
+			derivation_lazy = () -> Arrays.asList(SingleOrder1.mmDirectedOrder);
 			elementContext_lazy = () -> SecuritiesOrderParameters.mmObject();
 			isDerived = false;
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "DirectedOrder";
 			definition = "Indicates if the customer directed this order to a specific execution venue (Y) or not (N).";
 			maxOccurs = 1;
@@ -1159,10 +1158,10 @@ public class SecuritiesOrderParameters {
 	 */
 	public static final MMBusinessAttribute mmReceivedDepartment = new MMBusinessAttribute() {
 		{
-			derivation_lazy = () -> Arrays.asList(com.tools20022.repository.msg.SingleOrder1.mmReceivedDepartment);
+			derivation_lazy = () -> Arrays.asList(SingleOrder1.mmReceivedDepartment);
 			elementContext_lazy = () -> SecuritiesOrderParameters.mmObject();
 			isDerived = false;
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "ReceivedDepartment";
 			definition = "Identifies the Broker / Dealer Department that first took the order.";
 			maxOccurs = 1;
@@ -1216,11 +1215,10 @@ public class SecuritiesOrderParameters {
 	 */
 	public static final MMBusinessAttribute mmCustomerHandlingInstruction = new MMBusinessAttribute() {
 		{
-			derivation_lazy = () -> Arrays.asList(com.tools20022.repository.choice.CustomerHandlingInstructionChoice.mmCode, com.tools20022.repository.choice.CustomerHandlingInstructionChoice.mmProprietary,
-					com.tools20022.repository.msg.SingleOrder1.mmCustomerHandlingInstruction);
+			derivation_lazy = () -> Arrays.asList(CustomerHandlingInstructionChoice.mmCode, CustomerHandlingInstructionChoice.mmProprietary, SingleOrder1.mmCustomerHandlingInstruction);
 			elementContext_lazy = () -> SecuritiesOrderParameters.mmObject();
 			isDerived = false;
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "CustomerHandlingInstruction";
 			definition = "Codes that apply special information that the Broker / Dealer needs to report, as specified by the customer.";
 			maxOccurs = 1;
@@ -1265,10 +1263,10 @@ public class SecuritiesOrderParameters {
 	 */
 	public static final MMBusinessAttribute mmProcessCode = new MMBusinessAttribute() {
 		{
-			derivation_lazy = () -> Arrays.asList(com.tools20022.repository.msg.OrderParameters1.mmProcessCode);
+			derivation_lazy = () -> Arrays.asList(OrderParameters1.mmProcessCode);
 			elementContext_lazy = () -> SecuritiesOrderParameters.mmObject();
 			isDerived = false;
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "ProcessCode";
 			definition = "Used to identify soft trades at order entry.";
 			maxOccurs = 1;
@@ -1314,13 +1312,13 @@ public class SecuritiesOrderParameters {
 		{
 			elementContext_lazy = () -> SecuritiesOrderParameters.mmObject();
 			isDerived = false;
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "RelatedSecuritiesOrder";
 			definition = "Securities order for which parameters are specified.";
 			maxOccurs = 1;
 			minOccurs = 0;
 			opposite_lazy = () -> com.tools20022.repository.entity.SecuritiesOrder.mmOrderExecutionParameters;
-			aggregation = com.tools20022.metamodel.MMAggregation.NONE;
+			aggregation = MMAggregation.NONE;
 			type_lazy = () -> com.tools20022.repository.entity.SecuritiesOrder.mmObject();
 		}
 	};
@@ -1328,25 +1326,19 @@ public class SecuritiesOrderParameters {
 	static public MMBusinessComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMBusinessComponent() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "SecuritiesOrderParameters";
 				definition = "Parameters of the transfer of a financial instrument.";
 				associationDomain_lazy = () -> Arrays.asList(com.tools20022.repository.entity.SecuritiesPricing.mmRelatedOrder, com.tools20022.repository.entity.SecuritiesQuantity.mmMinimumQuantityOrderParameters,
 						com.tools20022.repository.entity.SecuritiesQuantity.mmMatchIncrementOrderParameters, com.tools20022.repository.entity.SecuritiesOrder.mmOrderExecutionParameters,
 						com.tools20022.repository.entity.SecuritiesPegOrderInstruction.mmOrder);
-				element_lazy = () -> Arrays.asList(com.tools20022.repository.entity.SecuritiesOrderParameters.mmMinimumQuantity, com.tools20022.repository.entity.SecuritiesOrderParameters.mmMatchIncrement,
-						com.tools20022.repository.entity.SecuritiesOrderParameters.mmPegInstructions, com.tools20022.repository.entity.SecuritiesOrderParameters.mmPreviousClosingPrice,
-						com.tools20022.repository.entity.SecuritiesOrderParameters.mmAutoRouting, com.tools20022.repository.entity.SecuritiesOrderParameters.mmCorporateActionOptionIndicator,
-						com.tools20022.repository.entity.SecuritiesOrderParameters.mmExecutionTimeLimit, com.tools20022.repository.entity.SecuritiesOrderParameters.mmPreAllocationConditionIndicator,
-						com.tools20022.repository.entity.SecuritiesOrderParameters.mmPriorityIndicator, com.tools20022.repository.entity.SecuritiesOrderParameters.mmRequestedDealCurrency,
-						com.tools20022.repository.entity.SecuritiesOrderParameters.mmOrderHandlingInstruction, com.tools20022.repository.entity.SecuritiesOrderParameters.mmStockLocateRequired,
-						com.tools20022.repository.entity.SecuritiesOrderParameters.mmWorkingIndicator, com.tools20022.repository.entity.SecuritiesOrderParameters.mmBookPriorityIndicator,
-						com.tools20022.repository.entity.SecuritiesOrderParameters.mmMaxPriceLevels, com.tools20022.repository.entity.SecuritiesOrderParameters.mmPreTradeAnonymity,
-						com.tools20022.repository.entity.SecuritiesOrderParameters.mmGoodTillBooking, com.tools20022.repository.entity.SecuritiesOrderParameters.mmManualOrderIndicator,
-						com.tools20022.repository.entity.SecuritiesOrderParameters.mmDirectedOrder, com.tools20022.repository.entity.SecuritiesOrderParameters.mmReceivedDepartment,
-						com.tools20022.repository.entity.SecuritiesOrderParameters.mmCustomerHandlingInstruction, com.tools20022.repository.entity.SecuritiesOrderParameters.mmProcessCode,
-						com.tools20022.repository.entity.SecuritiesOrderParameters.mmRelatedSecuritiesOrder);
+				element_lazy = () -> Arrays.asList(SecuritiesOrderParameters.mmMinimumQuantity, SecuritiesOrderParameters.mmMatchIncrement, SecuritiesOrderParameters.mmPegInstructions, SecuritiesOrderParameters.mmPreviousClosingPrice,
+						SecuritiesOrderParameters.mmAutoRouting, SecuritiesOrderParameters.mmCorporateActionOptionIndicator, SecuritiesOrderParameters.mmExecutionTimeLimit, SecuritiesOrderParameters.mmPreAllocationConditionIndicator,
+						SecuritiesOrderParameters.mmPriorityIndicator, SecuritiesOrderParameters.mmRequestedDealCurrency, SecuritiesOrderParameters.mmOrderHandlingInstruction, SecuritiesOrderParameters.mmStockLocateRequired,
+						SecuritiesOrderParameters.mmWorkingIndicator, SecuritiesOrderParameters.mmBookPriorityIndicator, SecuritiesOrderParameters.mmMaxPriceLevels, SecuritiesOrderParameters.mmPreTradeAnonymity,
+						SecuritiesOrderParameters.mmGoodTillBooking, SecuritiesOrderParameters.mmManualOrderIndicator, SecuritiesOrderParameters.mmDirectedOrder, SecuritiesOrderParameters.mmReceivedDepartment,
+						SecuritiesOrderParameters.mmCustomerHandlingInstruction, SecuritiesOrderParameters.mmProcessCode, SecuritiesOrderParameters.mmRelatedSecuritiesOrder);
 				derivationComponent_lazy = () -> Arrays.asList(OrderParameters1.mmObject());
 			}
 		});

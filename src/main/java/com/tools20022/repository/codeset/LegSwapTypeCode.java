@@ -19,6 +19,8 @@ package com.tools20022.repository.codeset;
 
 import com.tools20022.metamodel.MMCode;
 import com.tools20022.metamodel.MMCodeSet;
+import com.tools20022.metamodel.MMRegistrationStatus;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -27,6 +29,13 @@ import java.util.concurrent.atomic.AtomicReference;
  * <p>
  * <strong>Constant fields:</strong>
  * <ul>
+ * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getDerivation derivation}
+ * =
+ * <ul>
+ * <li>{@linkplain com.tools20022.repository.codeset.LegSwapType1Code
+ * LegSwapType1Code}</li>
+ * </ul>
+ * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getCode code} =
  * <ul>
  * <li>
@@ -39,13 +48,6 @@ import java.util.concurrent.atomic.AtomicReference;
  * LegSwapTypeCode.mmRisk}</li>
  * <li>{@linkplain com.tools20022.repository.codeset.LegSwapTypeCode#mmProceeds
  * LegSwapTypeCode.mmProceeds}</li>
- * </ul>
- * </li>
- * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getDerivation derivation}
- * =
- * <ul>
- * <li>{@linkplain com.tools20022.repository.codeset.LegSwapType1Code
- * LegSwapType1Code}</li>
  * </ul>
  * </li>
  * <li>
@@ -96,7 +98,7 @@ public class LegSwapTypeCode {
 	 */
 	public static final MMCode mmParForPar = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ParForPar";
 			definition = "Type of leg involved in a swap whose purpose is to exchange principal.";
 			owner_lazy = () -> LegSwapTypeCode.mmObject();
@@ -129,7 +131,7 @@ public class LegSwapTypeCode {
 	 */
 	public static final MMCode mmModifiedDuration = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ModifiedDuration";
 			definition = "Type of leg involved in a swap whose purpose is to exchange price volatility.";
 			owner_lazy = () -> LegSwapTypeCode.mmObject();
@@ -162,7 +164,7 @@ public class LegSwapTypeCode {
 	 */
 	public static final MMCode mmRisk = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Risk";
 			definition = "Type of leg involved in a swap whose purpose is to increase the credit quality and reduce the default risk. Also known as quality swap.";
 			owner_lazy = () -> LegSwapTypeCode.mmObject();
@@ -196,7 +198,7 @@ public class LegSwapTypeCode {
 	 */
 	public static final MMCode mmProceeds = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Proceeds";
 			definition = "Type of leg involved in a swap structured in the sale of a financial instrument and the simultaneous purchase of another instrument with the proceeds from the sale.";
 			owner_lazy = () -> LegSwapTypeCode.mmObject();
@@ -207,13 +209,12 @@ public class LegSwapTypeCode {
 	static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
 				example = Arrays.asList("PFPR");
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "LegSwapTypeCode";
 				definition = "Indicates the type of leg structuring a swap.";
-				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.LegSwapTypeCode.mmParForPar, com.tools20022.repository.codeset.LegSwapTypeCode.mmModifiedDuration, com.tools20022.repository.codeset.LegSwapTypeCode.mmRisk,
-						com.tools20022.repository.codeset.LegSwapTypeCode.mmProceeds);
+				code_lazy = () -> Arrays.asList(LegSwapTypeCode.mmParForPar, LegSwapTypeCode.mmModifiedDuration, LegSwapTypeCode.mmRisk, LegSwapTypeCode.mmProceeds);
 				derivation_lazy = () -> Arrays.asList(LegSwapType1Code.mmObject());
 			}
 		});

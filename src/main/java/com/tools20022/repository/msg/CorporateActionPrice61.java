@@ -19,8 +19,10 @@ package com.tools20022.repository.msg;
 
 import com.tools20022.metamodel.MMMessageAssociationEnd;
 import com.tools20022.metamodel.MMMessageComponent;
+import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.choice.PriceFormat50Choice;
 import com.tools20022.repository.entity.CorporateActionPrice;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -108,14 +110,14 @@ public class CorporateActionPrice61 {
 	 */
 	public static final MMMessageAssociationEnd mmCashInLieuOfSharePrice = new MMMessageAssociationEnd() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.CorporateActionPrice.mmCashInLieuOfSharePrice;
+			businessElementTrace_lazy = () -> CorporateActionPrice.mmCashInLieuOfSharePrice;
 			componentContext_lazy = () -> CorporateActionPrice61.mmObject();
 			isDerived = false;
 			xmlTag = "CshInLieuOfShrPric";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CashInLieuOfSharePrice";
 			definition = "Cash disbursement in lieu of equities; usually in lieu of fractional quantity.";
-			previousVersion_lazy = () -> com.tools20022.repository.msg.CorporateActionPrice30.mmCashInLieuOfSharePrice;
+			previousVersion_lazy = () -> CorporateActionPrice30.mmCashInLieuOfSharePrice;
 			maxOccurs = 1;
 			minOccurs = 0;
 			isComposite = true;
@@ -164,14 +166,14 @@ public class CorporateActionPrice61 {
 	 */
 	public static final MMMessageAssociationEnd mmOverSubscriptionDepositPrice = new MMMessageAssociationEnd() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.CorporateActionPrice.mmOverSubscriptionDepositPrice;
+			businessElementTrace_lazy = () -> CorporateActionPrice.mmOverSubscriptionDepositPrice;
 			componentContext_lazy = () -> CorporateActionPrice61.mmObject();
 			isDerived = false;
 			xmlTag = "OverSbcptDpstPric";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "OverSubscriptionDepositPrice";
 			definition = "Amount of money required per over-subscribed equity as defined by the issuer.";
-			previousVersion_lazy = () -> com.tools20022.repository.msg.CorporateActionPrice30.mmOverSubscriptionDepositPrice;
+			previousVersion_lazy = () -> CorporateActionPrice30.mmOverSubscriptionDepositPrice;
 			maxOccurs = 1;
 			minOccurs = 0;
 			isComposite = true;
@@ -182,10 +184,10 @@ public class CorporateActionPrice61 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.CorporateActionPrice61.mmCashInLieuOfSharePrice, com.tools20022.repository.msg.CorporateActionPrice61.mmOverSubscriptionDepositPrice);
+				messageElement_lazy = () -> Arrays.asList(CorporateActionPrice61.mmCashInLieuOfSharePrice, CorporateActionPrice61.mmOverSubscriptionDepositPrice);
 				trace_lazy = () -> CorporateActionPrice.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "CorporateActionPrice61";
 				definition = "Specifies prices.";
 				previousVersion_lazy = () -> CorporateActionPrice30.mmObject();

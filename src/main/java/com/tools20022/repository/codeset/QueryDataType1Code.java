@@ -19,7 +19,9 @@ package com.tools20022.repository.codeset;
 
 import com.tools20022.metamodel.MMCode;
 import com.tools20022.metamodel.MMCodeSet;
+import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.codeset.QueryDataTypeCode;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -77,7 +79,7 @@ public class QueryDataType1Code extends QueryDataTypeCode {
 	 */
 	public static final MMCode mmQueryForeignExchangeTradingData = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "QueryForeignExchangeTradingData";
 			owner_lazy = () -> QueryDataType1Code.mmObject();
 		}
@@ -100,7 +102,7 @@ public class QueryDataType1Code extends QueryDataTypeCode {
 	 */
 	public static final MMCode mmQueryOptionTradingData = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "QueryOptionTradingData";
 			owner_lazy = () -> QueryDataType1Code.mmObject();
 		}
@@ -109,11 +111,11 @@ public class QueryDataType1Code extends QueryDataTypeCode {
 	static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "QueryDataType1Code";
 				definition = "Specifies the inquiry type of the data.";
-				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.QueryDataType1Code.mmQueryForeignExchangeTradingData, com.tools20022.repository.codeset.QueryDataType1Code.mmQueryOptionTradingData);
+				code_lazy = () -> Arrays.asList(QueryDataType1Code.mmQueryForeignExchangeTradingData, QueryDataType1Code.mmQueryOptionTradingData);
 				trace_lazy = () -> QueryDataTypeCode.mmObject();
 			}
 		});

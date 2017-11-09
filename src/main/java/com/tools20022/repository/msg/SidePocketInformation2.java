@@ -20,9 +20,11 @@ package com.tools20022.repository.msg;
 import com.tools20022.metamodel.MMMessageAssociationEnd;
 import com.tools20022.metamodel.MMMessageAttribute;
 import com.tools20022.metamodel.MMMessageComponent;
+import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.datatype.Max35Text;
 import com.tools20022.repository.datatype.YesNoIndicator;
 import com.tools20022.repository.entity.SidePocket;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -106,11 +108,11 @@ public class SidePocketInformation2 {
 	 */
 	public static final MMMessageAttribute mmSidePocketInclusionIndicator = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.SidePocket.mmSidePocketInclusionIndicator;
+			businessElementTrace_lazy = () -> SidePocket.mmSidePocketInclusionIndicator;
 			componentContext_lazy = () -> SidePocketInformation2.mmObject();
 			isDerived = false;
 			xmlTag = "SdPcktInclsnInd";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SidePocketInclusionIndicator";
 			definition = "Indicates whether the investor wants to participate in the optional side pocket.";
 			maxOccurs = 1;
@@ -153,11 +155,11 @@ public class SidePocketInformation2 {
 	 */
 	public static final MMMessageAttribute mmSidePocketIdentification = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.SidePocket.mmSidePocketIdentification;
+			businessElementTrace_lazy = () -> SidePocket.mmSidePocketIdentification;
 			componentContext_lazy = () -> SidePocketInformation2.mmObject();
 			isDerived = false;
 			xmlTag = "SdPcktId";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SidePocketIdentification";
 			definition = "Identification of the side pocket.";
 			maxOccurs = 1;
@@ -200,11 +202,11 @@ public class SidePocketInformation2 {
 	 */
 	public static final MMMessageAssociationEnd mmSidePocketQuantity = new MMMessageAssociationEnd() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.SidePocket.mmSidePocketQuantity;
+			businessElementTrace_lazy = () -> SidePocket.mmSidePocketQuantity;
 			componentContext_lazy = () -> SidePocketInformation2.mmObject();
 			isDerived = false;
 			xmlTag = "SdPcktQty";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SidePocketQuantity";
 			definition = "Quantity of the side pocket.";
 			maxOccurs = 1;
@@ -217,11 +219,10 @@ public class SidePocketInformation2 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.SidePocketInformation2.mmSidePocketInclusionIndicator, com.tools20022.repository.msg.SidePocketInformation2.mmSidePocketIdentification,
-						com.tools20022.repository.msg.SidePocketInformation2.mmSidePocketQuantity);
+				messageElement_lazy = () -> Arrays.asList(SidePocketInformation2.mmSidePocketInclusionIndicator, SidePocketInformation2.mmSidePocketIdentification, SidePocketInformation2.mmSidePocketQuantity);
 				trace_lazy = () -> SidePocket.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 				name = "SidePocketInformation2";
 				definition = "Information that identifies a side pocket in investment fund orders.";
 			}

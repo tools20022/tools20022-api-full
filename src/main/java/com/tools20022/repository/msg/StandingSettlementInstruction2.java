@@ -19,11 +19,15 @@ package com.tools20022.repository.msg;
 
 import com.tools20022.metamodel.MMMessageAssociationEnd;
 import com.tools20022.metamodel.MMMessageComponent;
+import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.choice.Counterparty2Choice;
 import com.tools20022.repository.choice.PartyIdentification16Choice;
 import com.tools20022.repository.choice.SettlementStandingInstructionDatabase2Choice;
+import com.tools20022.repository.entity.Party;
+import com.tools20022.repository.entity.SecuritiesSettlement;
 import com.tools20022.repository.entity.StandingSettlementInstruction;
 import com.tools20022.repository.entity.TradePartyRole;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -118,7 +122,7 @@ public class StandingSettlementInstruction2 {
 			componentContext_lazy = () -> StandingSettlementInstruction2.mmObject();
 			isDerived = false;
 			xmlTag = "SttlmStgInstrDB";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SettlementStandingInstructionDatabase";
 			definition = "Specifies what settlement standing instruction database is to be used to derive the settlement parties involved in the transaction.";
 			maxOccurs = 1;
@@ -168,7 +172,7 @@ public class StandingSettlementInstruction2 {
 			componentContext_lazy = () -> StandingSettlementInstruction2.mmObject();
 			isDerived = false;
 			xmlTag = "CtrPty";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Counterparty";
 			definition = "Identification of the buyer or seller in a standing settlement instruction enabling to derive the Standing Settlement Instruction.";
 			maxOccurs = 1;
@@ -215,11 +219,11 @@ public class StandingSettlementInstruction2 {
 	 */
 	public static final MMMessageAssociationEnd mmVendor = new MMMessageAssociationEnd() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Party.mmIdentification;
+			businessElementTrace_lazy = () -> Party.mmIdentification;
 			componentContext_lazy = () -> StandingSettlementInstruction2.mmObject();
 			isDerived = false;
 			xmlTag = "Vndr";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Vendor";
 			definition = "Vendor of the Settlement Standing Instruction database requested to be consulted.";
 			maxOccurs = 1;
@@ -266,11 +270,11 @@ public class StandingSettlementInstruction2 {
 	 */
 	public static final MMMessageAssociationEnd mmOtherDeliveringSettlementParties = new MMMessageAssociationEnd() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.SecuritiesSettlement.mmPartyRole;
+			businessElementTrace_lazy = () -> SecuritiesSettlement.mmPartyRole;
 			componentContext_lazy = () -> StandingSettlementInstruction2.mmObject();
 			isDerived = false;
 			xmlTag = "OthrDlvrgSttlmPties";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "OtherDeliveringSettlementParties";
 			definition = "Delivering parties, other than the seller, needed for deriving the standing settlement instruction (for example, depository) or provided for information purposes (for example, instructing party settlement chain).";
 			maxOccurs = 1;
@@ -317,11 +321,11 @@ public class StandingSettlementInstruction2 {
 	 */
 	public static final MMMessageAssociationEnd mmOtherReceivingSettlementParties = new MMMessageAssociationEnd() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.SecuritiesSettlement.mmPartyRole;
+			businessElementTrace_lazy = () -> SecuritiesSettlement.mmPartyRole;
 			componentContext_lazy = () -> StandingSettlementInstruction2.mmObject();
 			isDerived = false;
 			xmlTag = "OthrRcvgSttlmPties";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "OtherReceivingSettlementParties";
 			definition = "Receiving parties, other than the buyer, needed for deriving the standing settlement instruction (for example, depository) or provided for information purposes (for example, instructing party settlement chain).";
 			maxOccurs = 1;
@@ -334,12 +338,11 @@ public class StandingSettlementInstruction2 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.StandingSettlementInstruction2.mmSettlementStandingInstructionDatabase, com.tools20022.repository.msg.StandingSettlementInstruction2.mmCounterparty,
-						com.tools20022.repository.msg.StandingSettlementInstruction2.mmVendor, com.tools20022.repository.msg.StandingSettlementInstruction2.mmOtherDeliveringSettlementParties,
-						com.tools20022.repository.msg.StandingSettlementInstruction2.mmOtherReceivingSettlementParties);
+				messageElement_lazy = () -> Arrays.asList(StandingSettlementInstruction2.mmSettlementStandingInstructionDatabase, StandingSettlementInstruction2.mmCounterparty, StandingSettlementInstruction2.mmVendor,
+						StandingSettlementInstruction2.mmOtherDeliveringSettlementParties, StandingSettlementInstruction2.mmOtherReceivingSettlementParties);
 				trace_lazy = () -> StandingSettlementInstruction.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "StandingSettlementInstruction2";
 				definition = "Details of the standing settlement instruction to be applied.";
 			}

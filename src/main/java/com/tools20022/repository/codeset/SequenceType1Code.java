@@ -19,7 +19,9 @@ package com.tools20022.repository.codeset;
 
 import com.tools20022.metamodel.MMCode;
 import com.tools20022.metamodel.MMCodeSet;
+import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.codeset.SequenceTypeCode;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -91,7 +93,7 @@ public class SequenceType1Code extends SequenceTypeCode {
 	 */
 	public static final MMCode mmFirst = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "First";
 			owner_lazy = () -> SequenceType1Code.mmObject();
 		}
@@ -114,7 +116,7 @@ public class SequenceType1Code extends SequenceTypeCode {
 	 */
 	public static final MMCode mmRecurring = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Recurring";
 			owner_lazy = () -> SequenceType1Code.mmObject();
 		}
@@ -137,7 +139,7 @@ public class SequenceType1Code extends SequenceTypeCode {
 	 */
 	public static final MMCode mmFinal = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Final";
 			owner_lazy = () -> SequenceType1Code.mmObject();
 		}
@@ -160,7 +162,7 @@ public class SequenceType1Code extends SequenceTypeCode {
 	 */
 	public static final MMCode mmOneOff = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "OneOff";
 			owner_lazy = () -> SequenceType1Code.mmObject();
 		}
@@ -169,13 +171,12 @@ public class SequenceType1Code extends SequenceTypeCode {
 	static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
 				example = Arrays.asList("FRST");
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "SequenceType1Code";
 				definition = "Specifies the type of the current transaction that belongs to a sequence of transactions. Specific attributes are required for the first, the recurring and the last instructions of a series, as well as the specification of a unique transaction (one-off direct debit transaction).";
-				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.SequenceType1Code.mmFirst, com.tools20022.repository.codeset.SequenceType1Code.mmRecurring, com.tools20022.repository.codeset.SequenceType1Code.mmFinal,
-						com.tools20022.repository.codeset.SequenceType1Code.mmOneOff);
+				code_lazy = () -> Arrays.asList(SequenceType1Code.mmFirst, SequenceType1Code.mmRecurring, SequenceType1Code.mmFinal, SequenceType1Code.mmOneOff);
 				trace_lazy = () -> SequenceTypeCode.mmObject();
 			}
 		});

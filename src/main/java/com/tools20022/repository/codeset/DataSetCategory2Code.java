@@ -19,7 +19,9 @@ package com.tools20022.repository.codeset;
 
 import com.tools20022.metamodel.MMCode;
 import com.tools20022.metamodel.MMCodeSet;
+import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.codeset.DataSetCategoryCode;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -107,7 +109,7 @@ public class DataSetCategory2Code extends DataSetCategoryCode {
 	 */
 	public static final MMCode mmSoftwareModule = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SoftwareModule";
 			owner_lazy = () -> DataSetCategory2Code.mmObject();
 		}
@@ -130,7 +132,7 @@ public class DataSetCategory2Code extends DataSetCategoryCode {
 	 */
 	public static final MMCode mmVendorParameters = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "VendorParameters";
 			owner_lazy = () -> DataSetCategory2Code.mmObject();
 		}
@@ -153,7 +155,7 @@ public class DataSetCategory2Code extends DataSetCategoryCode {
 	 */
 	public static final MMCode mmAcquirerParameters = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AcquirerParameters";
 			owner_lazy = () -> DataSetCategory2Code.mmObject();
 		}
@@ -176,7 +178,7 @@ public class DataSetCategory2Code extends DataSetCategoryCode {
 	 */
 	public static final MMCode mmApplicationParameters = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ApplicationParameters";
 			owner_lazy = () -> DataSetCategory2Code.mmObject();
 		}
@@ -199,7 +201,7 @@ public class DataSetCategory2Code extends DataSetCategoryCode {
 	 */
 	public static final MMCode mmMerchantParameters = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "MerchantParameters";
 			owner_lazy = () -> DataSetCategory2Code.mmObject();
 		}
@@ -222,7 +224,7 @@ public class DataSetCategory2Code extends DataSetCategoryCode {
 	 */
 	public static final MMCode mmBatchCapture = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "BatchCapture";
 			owner_lazy = () -> DataSetCategory2Code.mmObject();
 		}
@@ -245,7 +247,7 @@ public class DataSetCategory2Code extends DataSetCategoryCode {
 	 */
 	public static final MMCode mmCaptureResponse = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CaptureResponse";
 			owner_lazy = () -> DataSetCategory2Code.mmObject();
 		}
@@ -268,7 +270,7 @@ public class DataSetCategory2Code extends DataSetCategoryCode {
 	 */
 	public static final MMCode mmStatusReport = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "StatusReport";
 			owner_lazy = () -> DataSetCategory2Code.mmObject();
 		}
@@ -291,7 +293,7 @@ public class DataSetCategory2Code extends DataSetCategoryCode {
 	 */
 	public static final MMCode mmDelegationData = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "DelegationData";
 			owner_lazy = () -> DataSetCategory2Code.mmObject();
 		}
@@ -314,7 +316,7 @@ public class DataSetCategory2Code extends DataSetCategoryCode {
 	 */
 	public static final MMCode mmManagementPlan = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ManagementPlan";
 			owner_lazy = () -> DataSetCategory2Code.mmObject();
 		}
@@ -323,16 +325,14 @@ public class DataSetCategory2Code extends DataSetCategoryCode {
 	static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
 				example = Arrays.asList("SWPK");
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "DataSetCategory2Code";
 				definition = "Category of data set to transfer.";
-				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.DataSetCategory2Code.mmSoftwareModule, com.tools20022.repository.codeset.DataSetCategory2Code.mmVendorParameters,
-						com.tools20022.repository.codeset.DataSetCategory2Code.mmAcquirerParameters, com.tools20022.repository.codeset.DataSetCategory2Code.mmApplicationParameters,
-						com.tools20022.repository.codeset.DataSetCategory2Code.mmMerchantParameters, com.tools20022.repository.codeset.DataSetCategory2Code.mmBatchCapture,
-						com.tools20022.repository.codeset.DataSetCategory2Code.mmCaptureResponse, com.tools20022.repository.codeset.DataSetCategory2Code.mmStatusReport,
-						com.tools20022.repository.codeset.DataSetCategory2Code.mmDelegationData, com.tools20022.repository.codeset.DataSetCategory2Code.mmManagementPlan);
+				code_lazy = () -> Arrays.asList(DataSetCategory2Code.mmSoftwareModule, DataSetCategory2Code.mmVendorParameters, DataSetCategory2Code.mmAcquirerParameters, DataSetCategory2Code.mmApplicationParameters,
+						DataSetCategory2Code.mmMerchantParameters, DataSetCategory2Code.mmBatchCapture, DataSetCategory2Code.mmCaptureResponse, DataSetCategory2Code.mmStatusReport, DataSetCategory2Code.mmDelegationData,
+						DataSetCategory2Code.mmManagementPlan);
 				trace_lazy = () -> DataSetCategoryCode.mmObject();
 			}
 		});

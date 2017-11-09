@@ -19,11 +19,14 @@ package com.tools20022.repository.msg;
 
 import com.tools20022.metamodel.MMMessageAttribute;
 import com.tools20022.metamodel.MMMessageComponent;
+import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.datatype.DecimalNumber;
 import com.tools20022.repository.datatype.Exact4AlphaNumericText;
 import com.tools20022.repository.datatype.Max35Text;
 import com.tools20022.repository.entity.GenericIdentification;
 import com.tools20022.repository.entity.IdentificationIssuerRole;
+import com.tools20022.repository.entity.Scheme;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -119,14 +122,14 @@ public class GenericIdentification56 {
 	 */
 	public static final MMMessageAttribute mmIdentification = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.GenericIdentification.mmIdentification;
+			businessElementTrace_lazy = () -> GenericIdentification.mmIdentification;
 			componentContext_lazy = () -> GenericIdentification56.mmObject();
 			isDerived = false;
 			xmlTag = "Id";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Identification";
 			definition = "Proprietary information, often a code, issued by the data source scheme issuer.";
-			previousVersion_lazy = () -> com.tools20022.repository.msg.GenericIdentification22.mmIdentification;
+			previousVersion_lazy = () -> GenericIdentification22.mmIdentification;
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> Exact4AlphaNumericText.mmObject();
@@ -176,10 +179,10 @@ public class GenericIdentification56 {
 			componentContext_lazy = () -> GenericIdentification56.mmObject();
 			isDerived = false;
 			xmlTag = "Issr";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Issuer";
 			definition = "Entity that assigns the identification.";
-			previousVersion_lazy = () -> com.tools20022.repository.msg.GenericIdentification22.mmIssuer;
+			previousVersion_lazy = () -> GenericIdentification22.mmIssuer;
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> Max35Text.mmObject();
@@ -225,14 +228,14 @@ public class GenericIdentification56 {
 	 */
 	public static final MMMessageAttribute mmSchemeName = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Scheme.mmNameShort;
+			businessElementTrace_lazy = () -> Scheme.mmNameShort;
 			componentContext_lazy = () -> GenericIdentification56.mmObject();
 			isDerived = false;
 			xmlTag = "SchmeNm";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SchemeName";
 			definition = "Short textual description of the scheme.";
-			previousVersion_lazy = () -> com.tools20022.repository.msg.GenericIdentification22.mmSchemeName;
+			previousVersion_lazy = () -> GenericIdentification22.mmSchemeName;
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> Max35Text.mmObject();
@@ -277,10 +280,10 @@ public class GenericIdentification56 {
 			componentContext_lazy = () -> GenericIdentification56.mmObject();
 			isDerived = false;
 			xmlTag = "Bal";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Balance";
 			definition = "Value of the balance.";
-			previousVersion_lazy = () -> com.tools20022.repository.msg.GenericIdentification22.mmBalance;
+			previousVersion_lazy = () -> GenericIdentification22.mmBalance;
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> DecimalNumber.mmObject();
@@ -290,11 +293,10 @@ public class GenericIdentification56 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.GenericIdentification56.mmIdentification, com.tools20022.repository.msg.GenericIdentification56.mmIssuer,
-						com.tools20022.repository.msg.GenericIdentification56.mmSchemeName, com.tools20022.repository.msg.GenericIdentification56.mmBalance);
+				messageElement_lazy = () -> Arrays.asList(GenericIdentification56.mmIdentification, GenericIdentification56.mmIssuer, GenericIdentification56.mmSchemeName, GenericIdentification56.mmBalance);
 				trace_lazy = () -> GenericIdentification.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "GenericIdentification56";
 				definition = "Proprietary information related to a balance.";
 				previousVersion_lazy = () -> GenericIdentification22.mmObject();

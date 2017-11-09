@@ -19,7 +19,9 @@ package com.tools20022.repository.msg;
 
 import com.tools20022.metamodel.MMMessageAttribute;
 import com.tools20022.metamodel.MMMessageComponent;
+import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.entity.Packaging;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -111,14 +113,14 @@ public class Consignment1 {
 	 */
 	public static final MMMessageAttribute mmTotalQuantity = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Packaging.mmTotalConsignmentQuantity;
+			businessElementTrace_lazy = () -> Packaging.mmTotalConsignmentQuantity;
 			componentContext_lazy = () -> Consignment1.mmObject();
 			isDerived = false;
 			xmlTag = "TtlQty";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "TotalQuantity";
 			definition = "Total quantity of packaging units, eg number of boxes, containers, pallets, etc";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.Consignment3.mmTotalQuantity);
+			nextVersions_lazy = () -> Arrays.asList(Consignment3.mmTotalQuantity);
 			maxOccurs = 1;
 			minOccurs = 0;
 			complexType_lazy = () -> com.tools20022.repository.msg.Quantity3.mmObject();
@@ -166,14 +168,14 @@ public class Consignment1 {
 	 */
 	public static final MMMessageAttribute mmTotalVolume = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Packaging.mmTotalVolume;
+			businessElementTrace_lazy = () -> Packaging.mmTotalVolume;
 			componentContext_lazy = () -> Consignment1.mmObject();
 			isDerived = false;
 			xmlTag = "TtlVol";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "TotalVolume";
 			definition = "Total volume of goods shipped, eg number of cubic meters.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.Consignment3.mmTotalVolume);
+			nextVersions_lazy = () -> Arrays.asList(Consignment3.mmTotalVolume);
 			maxOccurs = 1;
 			minOccurs = 0;
 			complexType_lazy = () -> com.tools20022.repository.msg.Quantity3.mmObject();
@@ -220,14 +222,14 @@ public class Consignment1 {
 	 */
 	public static final MMMessageAttribute mmTotalWeight = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Packaging.mmTotalWeight;
+			businessElementTrace_lazy = () -> Packaging.mmTotalWeight;
 			componentContext_lazy = () -> Consignment1.mmObject();
 			isDerived = false;
 			xmlTag = "TtlWght";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "TotalWeight";
 			definition = "Total weight of goods shipped, eg number of kg, tons.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.Consignment3.mmTotalWeight);
+			nextVersions_lazy = () -> Arrays.asList(Consignment3.mmTotalWeight);
 			maxOccurs = 1;
 			minOccurs = 0;
 			complexType_lazy = () -> com.tools20022.repository.msg.Quantity3.mmObject();
@@ -237,10 +239,10 @@ public class Consignment1 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.Consignment1.mmTotalQuantity, com.tools20022.repository.msg.Consignment1.mmTotalVolume, com.tools20022.repository.msg.Consignment1.mmTotalWeight);
+				messageElement_lazy = () -> Arrays.asList(Consignment1.mmTotalQuantity, Consignment1.mmTotalVolume, Consignment1.mmTotalWeight);
 				trace_lazy = () -> Packaging.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "Consignment1";
 				definition = "Physical packaging of goods for transport.";
 				nextVersions_lazy = () -> Arrays.asList(Consignment3.mmObject());

@@ -19,6 +19,8 @@ package com.tools20022.repository.codeset;
 
 import com.tools20022.metamodel.MMCode;
 import com.tools20022.metamodel.MMCodeSet;
+import com.tools20022.metamodel.MMRegistrationStatus;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -27,6 +29,19 @@ import java.util.concurrent.atomic.AtomicReference;
  * <p>
  * <strong>Constant fields:</strong>
  * <ul>
+ * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getDerivation derivation}
+ * =
+ * <ul>
+ * <li>{@linkplain com.tools20022.repository.codeset.TransferStatus1Code
+ * TransferStatus1Code}</li>
+ * <li>{@linkplain com.tools20022.repository.codeset.TransferStatus2Code
+ * TransferStatus2Code}</li>
+ * <li>{@linkplain com.tools20022.repository.codeset.TransferStatus3Code
+ * TransferStatus3Code}</li>
+ * <li>{@linkplain com.tools20022.repository.codeset.TransferStatus4Code
+ * TransferStatus4Code}</li>
+ * </ul>
+ * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getCode code} =
  * <ul>
  * <li>
@@ -68,19 +83,6 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>
  * {@linkplain com.tools20022.repository.codeset.TransferStatusCode#mmComplete
  * TransferStatusCode.mmComplete}</li>
- * </ul>
- * </li>
- * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getDerivation derivation}
- * =
- * <ul>
- * <li>{@linkplain com.tools20022.repository.codeset.TransferStatus1Code
- * TransferStatus1Code}</li>
- * <li>{@linkplain com.tools20022.repository.codeset.TransferStatus2Code
- * TransferStatus2Code}</li>
- * <li>{@linkplain com.tools20022.repository.codeset.TransferStatus3Code
- * TransferStatus3Code}</li>
- * <li>{@linkplain com.tools20022.repository.codeset.TransferStatus4Code
- * TransferStatus4Code}</li>
  * </ul>
  * </li>
  * <li>
@@ -130,7 +132,7 @@ public class TransferStatusCode {
 	 */
 	public static final MMCode mmCancelled = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "Cancelled";
 			definition = "Transfer or settlement instruction has been cancelled.";
 			owner_lazy = () -> TransferStatusCode.mmObject();
@@ -163,7 +165,7 @@ public class TransferStatusCode {
 	 */
 	public static final MMCode mmSentToNextParty = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "SentToNextParty";
 			definition = "Transfer or settlement instruction has been sent to the next party, ie, the next intermediary.";
 			owner_lazy = () -> TransferStatusCode.mmObject();
@@ -196,7 +198,7 @@ public class TransferStatusCode {
 	 */
 	public static final MMCode mmAccepted = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "Accepted";
 			definition = "Transfer or settlement instruction has been acknowledged / accepted for further processing.";
 			owner_lazy = () -> TransferStatusCode.mmObject();
@@ -229,7 +231,7 @@ public class TransferStatusCode {
 	 */
 	public static final MMCode mmReversed = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "Reversed";
 			definition = "Transfer or settlement instruction has been executed, confirmed and then the confirmation has been reversed.";
 			owner_lazy = () -> TransferStatusCode.mmObject();
@@ -259,7 +261,7 @@ public class TransferStatusCode {
 	 */
 	public static final MMCode mmMatched = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "Matched";
 			definition = "Transfer or settlement instruction is matched.";
 			owner_lazy = () -> TransferStatusCode.mmObject();
@@ -292,7 +294,7 @@ public class TransferStatusCode {
 	 */
 	public static final MMCode mmAlreadyExecuted = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "AlreadyExecuted";
 			definition = "Transfer or settlement instruction is fully executed and the confirmation is sent.";
 			owner_lazy = () -> TransferStatusCode.mmObject();
@@ -322,7 +324,7 @@ public class TransferStatusCode {
 	 */
 	public static final MMCode mmInRepair = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "InRepair";
 			definition = "Transfer or settlement instruction is in repair.";
 			owner_lazy = () -> TransferStatusCode.mmObject();
@@ -352,7 +354,7 @@ public class TransferStatusCode {
 	 */
 	public static final MMCode mmUnmatched = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "Unmatched";
 			definition = "Transfer or settlement instruction is unmatched.";
 			owner_lazy = () -> TransferStatusCode.mmObject();
@@ -385,7 +387,7 @@ public class TransferStatusCode {
 	 */
 	public static final MMCode mmRejected = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "Rejected";
 			definition = "Transfer or settlement  instruction  has been rejected for further processing.";
 			owner_lazy = () -> TransferStatusCode.mmObject();
@@ -418,7 +420,7 @@ public class TransferStatusCode {
 	 */
 	public static final MMCode mmCancellationPending = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "CancellationPending";
 			definition = "Transfer cancellation instruction or settlement cancellation instruction is pending.";
 			owner_lazy = () -> TransferStatusCode.mmObject();
@@ -448,7 +450,7 @@ public class TransferStatusCode {
 	 */
 	public static final MMCode mmSettled = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Settled";
 			definition = "Transfer or settlement instruction is settled.";
 			owner_lazy = () -> TransferStatusCode.mmObject();
@@ -481,7 +483,7 @@ public class TransferStatusCode {
 	 */
 	public static final MMCode mmReceived = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Received";
 			definition = "Instruction has been received, that is, technical validation of the message is ok, and the message is now at the receiving side.";
 			owner_lazy = () -> TransferStatusCode.mmObject();
@@ -511,7 +513,7 @@ public class TransferStatusCode {
 	 */
 	public static final MMCode mmComplete = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Complete";
 			definition = "Portfolio transfer is complete.";
 			owner_lazy = () -> TransferStatusCode.mmObject();
@@ -522,16 +524,14 @@ public class TransferStatusCode {
 	static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
 				example = Arrays.asList("CAND");
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "TransferStatusCode";
 				definition = "Specifies the transfer or settlement instruction status.";
-				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.TransferStatusCode.mmCancelled, com.tools20022.repository.codeset.TransferStatusCode.mmSentToNextParty,
-						com.tools20022.repository.codeset.TransferStatusCode.mmAccepted, com.tools20022.repository.codeset.TransferStatusCode.mmReversed, com.tools20022.repository.codeset.TransferStatusCode.mmMatched,
-						com.tools20022.repository.codeset.TransferStatusCode.mmAlreadyExecuted, com.tools20022.repository.codeset.TransferStatusCode.mmInRepair, com.tools20022.repository.codeset.TransferStatusCode.mmUnmatched,
-						com.tools20022.repository.codeset.TransferStatusCode.mmRejected, com.tools20022.repository.codeset.TransferStatusCode.mmCancellationPending, com.tools20022.repository.codeset.TransferStatusCode.mmSettled,
-						com.tools20022.repository.codeset.TransferStatusCode.mmReceived, com.tools20022.repository.codeset.TransferStatusCode.mmComplete);
+				code_lazy = () -> Arrays.asList(TransferStatusCode.mmCancelled, TransferStatusCode.mmSentToNextParty, TransferStatusCode.mmAccepted, TransferStatusCode.mmReversed, TransferStatusCode.mmMatched,
+						TransferStatusCode.mmAlreadyExecuted, TransferStatusCode.mmInRepair, TransferStatusCode.mmUnmatched, TransferStatusCode.mmRejected, TransferStatusCode.mmCancellationPending, TransferStatusCode.mmSettled,
+						TransferStatusCode.mmReceived, TransferStatusCode.mmComplete);
 				derivation_lazy = () -> Arrays.asList(TransferStatus1Code.mmObject(), TransferStatus2Code.mmObject(), TransferStatus3Code.mmObject(), TransferStatus4Code.mmObject());
 			}
 		});

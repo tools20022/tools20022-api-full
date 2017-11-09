@@ -19,7 +19,9 @@ package com.tools20022.repository.codeset;
 
 import com.tools20022.metamodel.MMCode;
 import com.tools20022.metamodel.MMCodeSet;
+import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.codeset.SystemBalanceTypeCode;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -282,7 +284,7 @@ public class SystemBalanceType1Code extends SystemBalanceTypeCode {
 	 */
 	public static final MMCode mmOpening = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Opening";
 			owner_lazy = () -> SystemBalanceType1Code.mmObject();
 		}
@@ -305,7 +307,7 @@ public class SystemBalanceType1Code extends SystemBalanceTypeCode {
 	 */
 	public static final MMCode mmInterim = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Interim";
 			owner_lazy = () -> SystemBalanceType1Code.mmObject();
 		}
@@ -328,7 +330,7 @@ public class SystemBalanceType1Code extends SystemBalanceTypeCode {
 	 */
 	public static final MMCode mmClosing = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Closing";
 			owner_lazy = () -> SystemBalanceType1Code.mmObject();
 		}
@@ -351,7 +353,7 @@ public class SystemBalanceType1Code extends SystemBalanceTypeCode {
 	 */
 	public static final MMCode mmBook = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Book";
 			owner_lazy = () -> SystemBalanceType1Code.mmObject();
 		}
@@ -374,7 +376,7 @@ public class SystemBalanceType1Code extends SystemBalanceTypeCode {
 	 */
 	public static final MMCode mmCurrent = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Current";
 			owner_lazy = () -> SystemBalanceType1Code.mmObject();
 		}
@@ -397,7 +399,7 @@ public class SystemBalanceType1Code extends SystemBalanceTypeCode {
 	 */
 	public static final MMCode mmPending = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Pending";
 			owner_lazy = () -> SystemBalanceType1Code.mmObject();
 		}
@@ -420,7 +422,7 @@ public class SystemBalanceType1Code extends SystemBalanceTypeCode {
 	 */
 	public static final MMCode mmLimitRelated = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "LimitRelated";
 			owner_lazy = () -> SystemBalanceType1Code.mmObject();
 		}
@@ -443,7 +445,7 @@ public class SystemBalanceType1Code extends SystemBalanceTypeCode {
 	 */
 	public static final MMCode mmAvailable = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Available";
 			owner_lazy = () -> SystemBalanceType1Code.mmObject();
 		}
@@ -466,7 +468,7 @@ public class SystemBalanceType1Code extends SystemBalanceTypeCode {
 	 */
 	public static final MMCode mmLiquidityTransfer = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "LiquidityTransfer";
 			owner_lazy = () -> SystemBalanceType1Code.mmObject();
 		}
@@ -489,7 +491,7 @@ public class SystemBalanceType1Code extends SystemBalanceTypeCode {
 	 */
 	public static final MMCode mmCredit = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Credit";
 			owner_lazy = () -> SystemBalanceType1Code.mmObject();
 		}
@@ -512,7 +514,7 @@ public class SystemBalanceType1Code extends SystemBalanceTypeCode {
 	 */
 	public static final MMCode mmEligibleAssets = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "EligibleAssets";
 			owner_lazy = () -> SystemBalanceType1Code.mmObject();
 		}
@@ -535,7 +537,7 @@ public class SystemBalanceType1Code extends SystemBalanceTypeCode {
 	 */
 	public static final MMCode mmPayment = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Payment";
 			owner_lazy = () -> SystemBalanceType1Code.mmObject();
 		}
@@ -558,7 +560,7 @@ public class SystemBalanceType1Code extends SystemBalanceTypeCode {
 	 */
 	public static final MMCode mmBlocked = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Blocked";
 			owner_lazy = () -> SystemBalanceType1Code.mmObject();
 		}
@@ -581,7 +583,7 @@ public class SystemBalanceType1Code extends SystemBalanceTypeCode {
 	 */
 	public static final MMCode mmExpected = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Expected";
 			owner_lazy = () -> SystemBalanceType1Code.mmObject();
 		}
@@ -604,7 +606,7 @@ public class SystemBalanceType1Code extends SystemBalanceTypeCode {
 	 */
 	public static final MMCode mmDaylightOverdraft = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "DaylightOverdraft";
 			owner_lazy = () -> SystemBalanceType1Code.mmObject();
 		}
@@ -627,7 +629,7 @@ public class SystemBalanceType1Code extends SystemBalanceTypeCode {
 	 */
 	public static final MMCode mmExpectedCredit = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ExpectedCredit";
 			owner_lazy = () -> SystemBalanceType1Code.mmObject();
 		}
@@ -650,7 +652,7 @@ public class SystemBalanceType1Code extends SystemBalanceTypeCode {
 	 */
 	public static final MMCode mmExpectedDebit = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ExpectedDebit";
 			owner_lazy = () -> SystemBalanceType1Code.mmObject();
 		}
@@ -673,7 +675,7 @@ public class SystemBalanceType1Code extends SystemBalanceTypeCode {
 	 */
 	public static final MMCode mmAdjustment = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Adjustment";
 			owner_lazy = () -> SystemBalanceType1Code.mmObject();
 		}
@@ -696,7 +698,7 @@ public class SystemBalanceType1Code extends SystemBalanceTypeCode {
 	 */
 	public static final MMCode mmProgressiveAverage = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ProgressiveAverage";
 			owner_lazy = () -> SystemBalanceType1Code.mmObject();
 		}
@@ -719,7 +721,7 @@ public class SystemBalanceType1Code extends SystemBalanceTypeCode {
 	 */
 	public static final MMCode mmDebit = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Debit";
 			owner_lazy = () -> SystemBalanceType1Code.mmObject();
 		}
@@ -742,7 +744,7 @@ public class SystemBalanceType1Code extends SystemBalanceTypeCode {
 	 */
 	public static final MMCode mmThreshold = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Threshold";
 			owner_lazy = () -> SystemBalanceType1Code.mmObject();
 		}
@@ -765,7 +767,7 @@ public class SystemBalanceType1Code extends SystemBalanceTypeCode {
 	 */
 	public static final MMCode mmNoted = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Noted";
 			owner_lazy = () -> SystemBalanceType1Code.mmObject();
 		}
@@ -788,7 +790,7 @@ public class SystemBalanceType1Code extends SystemBalanceTypeCode {
 	 */
 	public static final MMCode mmSelf = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Self";
 			owner_lazy = () -> SystemBalanceType1Code.mmObject();
 		}
@@ -811,7 +813,7 @@ public class SystemBalanceType1Code extends SystemBalanceTypeCode {
 	 */
 	public static final MMCode mmMaster = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Master";
 			owner_lazy = () -> SystemBalanceType1Code.mmObject();
 		}
@@ -834,7 +836,7 @@ public class SystemBalanceType1Code extends SystemBalanceTypeCode {
 	 */
 	public static final MMCode mmForecastSettlement = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ForecastSettlement";
 			owner_lazy = () -> SystemBalanceType1Code.mmObject();
 		}
@@ -857,7 +859,7 @@ public class SystemBalanceType1Code extends SystemBalanceTypeCode {
 	 */
 	public static final MMCode mmBlockedTrades = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "BlockedTrades";
 			owner_lazy = () -> SystemBalanceType1Code.mmObject();
 		}
@@ -880,7 +882,7 @@ public class SystemBalanceType1Code extends SystemBalanceTypeCode {
 	 */
 	public static final MMCode mmOtherBlockedTrades = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "OtherBlockedTrades";
 			owner_lazy = () -> SystemBalanceType1Code.mmObject();
 		}
@@ -903,7 +905,7 @@ public class SystemBalanceType1Code extends SystemBalanceTypeCode {
 	 */
 	public static final MMCode mmCustody = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Custody";
 			owner_lazy = () -> SystemBalanceType1Code.mmObject();
 		}
@@ -926,7 +928,7 @@ public class SystemBalanceType1Code extends SystemBalanceTypeCode {
 	 */
 	public static final MMCode mmCashForecast = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CashForecast";
 			owner_lazy = () -> SystemBalanceType1Code.mmObject();
 		}
@@ -949,7 +951,7 @@ public class SystemBalanceType1Code extends SystemBalanceTypeCode {
 	 */
 	public static final MMCode mmDividendsCollection = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "DividendsCollection";
 			owner_lazy = () -> SystemBalanceType1Code.mmObject();
 		}
@@ -972,7 +974,7 @@ public class SystemBalanceType1Code extends SystemBalanceTypeCode {
 	 */
 	public static final MMCode mmNetFunding = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "NetFunding";
 			owner_lazy = () -> SystemBalanceType1Code.mmObject();
 		}
@@ -995,7 +997,7 @@ public class SystemBalanceType1Code extends SystemBalanceTypeCode {
 	 */
 	public static final MMCode mmPayInPayOut = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PayInPayOut";
 			owner_lazy = () -> SystemBalanceType1Code.mmObject();
 		}
@@ -1018,7 +1020,7 @@ public class SystemBalanceType1Code extends SystemBalanceTypeCode {
 	 */
 	public static final MMCode mmExchangeForecast = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ExchangeForecast";
 			owner_lazy = () -> SystemBalanceType1Code.mmObject();
 		}
@@ -1041,7 +1043,7 @@ public class SystemBalanceType1Code extends SystemBalanceTypeCode {
 	 */
 	public static final MMCode mmCentralCounterparty = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CentralCounterparty";
 			owner_lazy = () -> SystemBalanceType1Code.mmObject();
 		}
@@ -1064,7 +1066,7 @@ public class SystemBalanceType1Code extends SystemBalanceTypeCode {
 	 */
 	public static final MMCode mmTotalOnHold = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "TotalOnHold";
 			owner_lazy = () -> SystemBalanceType1Code.mmObject();
 		}
@@ -1087,7 +1089,7 @@ public class SystemBalanceType1Code extends SystemBalanceTypeCode {
 	 */
 	public static final MMCode mmCreditOnHold = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CreditOnHold";
 			owner_lazy = () -> SystemBalanceType1Code.mmObject();
 		}
@@ -1110,7 +1112,7 @@ public class SystemBalanceType1Code extends SystemBalanceTypeCode {
 	 */
 	public static final MMCode mmDebitOnHold = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "DebitOnHold";
 			owner_lazy = () -> SystemBalanceType1Code.mmObject();
 		}
@@ -1133,7 +1135,7 @@ public class SystemBalanceType1Code extends SystemBalanceTypeCode {
 	 */
 	public static final MMCode mmTotalProcessed = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "TotalProcessed";
 			owner_lazy = () -> SystemBalanceType1Code.mmObject();
 		}
@@ -1156,7 +1158,7 @@ public class SystemBalanceType1Code extends SystemBalanceTypeCode {
 	 */
 	public static final MMCode mmCreditProcessed = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CreditProcessed";
 			owner_lazy = () -> SystemBalanceType1Code.mmObject();
 		}
@@ -1179,7 +1181,7 @@ public class SystemBalanceType1Code extends SystemBalanceTypeCode {
 	 */
 	public static final MMCode mmDebitProcessed = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "DebitProcessed";
 			owner_lazy = () -> SystemBalanceType1Code.mmObject();
 		}
@@ -1202,7 +1204,7 @@ public class SystemBalanceType1Code extends SystemBalanceTypeCode {
 	 */
 	public static final MMCode mmTotalFuture = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "TotalFuture";
 			owner_lazy = () -> SystemBalanceType1Code.mmObject();
 		}
@@ -1225,7 +1227,7 @@ public class SystemBalanceType1Code extends SystemBalanceTypeCode {
 	 */
 	public static final MMCode mmTotalRejected = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "TotalRejected";
 			owner_lazy = () -> SystemBalanceType1Code.mmObject();
 		}
@@ -1248,7 +1250,7 @@ public class SystemBalanceType1Code extends SystemBalanceTypeCode {
 	 */
 	public static final MMCode mmFirmCollateralisation = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "FirmCollateralisation";
 			owner_lazy = () -> SystemBalanceType1Code.mmObject();
 		}
@@ -1271,7 +1273,7 @@ public class SystemBalanceType1Code extends SystemBalanceTypeCode {
 	 */
 	public static final MMCode mmUsedAmountsFirmCollateralisation = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "UsedAmountsFirmCollateralisation";
 			owner_lazy = () -> SystemBalanceType1Code.mmObject();
 		}
@@ -1294,7 +1296,7 @@ public class SystemBalanceType1Code extends SystemBalanceTypeCode {
 	 */
 	public static final MMCode mmSelfCollateralisation = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SelfCollateralisation";
 			owner_lazy = () -> SystemBalanceType1Code.mmObject();
 		}
@@ -1317,7 +1319,7 @@ public class SystemBalanceType1Code extends SystemBalanceTypeCode {
 	 */
 	public static final MMCode mmUsedAmountsSelfCollateralisation = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "UsedAmountsSelfCollateralisation";
 			owner_lazy = () -> SystemBalanceType1Code.mmObject();
 		}
@@ -1340,7 +1342,7 @@ public class SystemBalanceType1Code extends SystemBalanceTypeCode {
 	 */
 	public static final MMCode mmCustodyActual = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CustodyActual";
 			owner_lazy = () -> SystemBalanceType1Code.mmObject();
 		}
@@ -1363,7 +1365,7 @@ public class SystemBalanceType1Code extends SystemBalanceTypeCode {
 	 */
 	public static final MMCode mmCCPGuaranteedForecasting = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CCPGuaranteedForecasting";
 			owner_lazy = () -> SystemBalanceType1Code.mmObject();
 		}
@@ -1386,7 +1388,7 @@ public class SystemBalanceType1Code extends SystemBalanceTypeCode {
 	 */
 	public static final MMCode mmNonCCPGuaranteedForecasting = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "NonCCPGuaranteedForecasting";
 			owner_lazy = () -> SystemBalanceType1Code.mmObject();
 		}
@@ -1409,7 +1411,7 @@ public class SystemBalanceType1Code extends SystemBalanceTypeCode {
 	 */
 	public static final MMCode mmDefinitiveSettledSecurities = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "DefinitiveSettledSecurities";
 			owner_lazy = () -> SystemBalanceType1Code.mmObject();
 		}
@@ -1432,7 +1434,7 @@ public class SystemBalanceType1Code extends SystemBalanceTypeCode {
 	 */
 	public static final MMCode mmLackOfHoldingsTransactions = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "LackOfHoldingsTransactions";
 			owner_lazy = () -> SystemBalanceType1Code.mmObject();
 		}
@@ -1455,7 +1457,7 @@ public class SystemBalanceType1Code extends SystemBalanceTypeCode {
 	 */
 	public static final MMCode mmNonSettledSecurities = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "NonSettledSecurities";
 			owner_lazy = () -> SystemBalanceType1Code.mmObject();
 		}
@@ -1478,7 +1480,7 @@ public class SystemBalanceType1Code extends SystemBalanceTypeCode {
 	 */
 	public static final MMCode mmCCPGuaranteedOTCTransactions = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CCPGuaranteedOTCTransactions";
 			owner_lazy = () -> SystemBalanceType1Code.mmObject();
 		}
@@ -1501,7 +1503,7 @@ public class SystemBalanceType1Code extends SystemBalanceTypeCode {
 	 */
 	public static final MMCode mmForecastOTCTransactions = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ForecastOTCTransactions";
 			owner_lazy = () -> SystemBalanceType1Code.mmObject();
 		}
@@ -1524,7 +1526,7 @@ public class SystemBalanceType1Code extends SystemBalanceTypeCode {
 	 */
 	public static final MMCode mmNonCCPGuaranteedOTCTransactions = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "NonCCPGuaranteedOTCTransactions";
 			owner_lazy = () -> SystemBalanceType1Code.mmObject();
 		}
@@ -1547,7 +1549,7 @@ public class SystemBalanceType1Code extends SystemBalanceTypeCode {
 	 */
 	public static final MMCode mmSAPDirectDebitAmount = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SAPDirectDebitAmount";
 			owner_lazy = () -> SystemBalanceType1Code.mmObject();
 		}
@@ -1570,7 +1572,7 @@ public class SystemBalanceType1Code extends SystemBalanceTypeCode {
 	 */
 	public static final MMCode mmSAPDirectCreditAmount = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SAPDirectCreditAmount";
 			owner_lazy = () -> SystemBalanceType1Code.mmObject();
 		}
@@ -1593,7 +1595,7 @@ public class SystemBalanceType1Code extends SystemBalanceTypeCode {
 	 */
 	public static final MMCode mmCMUPRepoDebit = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CMUPRepoDebit";
 			owner_lazy = () -> SystemBalanceType1Code.mmObject();
 		}
@@ -1616,7 +1618,7 @@ public class SystemBalanceType1Code extends SystemBalanceTypeCode {
 	 */
 	public static final MMCode mmCMUPRepoCredit = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CMUPRepoCredit";
 			owner_lazy = () -> SystemBalanceType1Code.mmObject();
 		}
@@ -1639,7 +1641,7 @@ public class SystemBalanceType1Code extends SystemBalanceTypeCode {
 	 */
 	public static final MMCode mmBulkSettlementCMUPDebit = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "BulkSettlementCMUPDebit";
 			owner_lazy = () -> SystemBalanceType1Code.mmObject();
 		}
@@ -1662,7 +1664,7 @@ public class SystemBalanceType1Code extends SystemBalanceTypeCode {
 	 */
 	public static final MMCode mmBulkSettlementCMUPCredit = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "BulkSettlementCMUPCredit";
 			owner_lazy = () -> SystemBalanceType1Code.mmObject();
 		}
@@ -1685,7 +1687,7 @@ public class SystemBalanceType1Code extends SystemBalanceTypeCode {
 	 */
 	public static final MMCode mmSAPQueueAmount = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SAPQueueAmount";
 			owner_lazy = () -> SystemBalanceType1Code.mmObject();
 		}
@@ -1708,7 +1710,7 @@ public class SystemBalanceType1Code extends SystemBalanceTypeCode {
 	 */
 	public static final MMCode mmIntradayRepoLimit = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "IntradayRepoLimit";
 			owner_lazy = () -> SystemBalanceType1Code.mmObject();
 		}
@@ -1731,7 +1733,7 @@ public class SystemBalanceType1Code extends SystemBalanceTypeCode {
 	 */
 	public static final MMCode mmIntradayRepoDrawings = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "IntradayRepoDrawings";
 			owner_lazy = () -> SystemBalanceType1Code.mmObject();
 		}
@@ -1754,7 +1756,7 @@ public class SystemBalanceType1Code extends SystemBalanceTypeCode {
 	 */
 	public static final MMCode mmDiscountWindowRepoDrawings = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "DiscountWindowRepoDrawings";
 			owner_lazy = () -> SystemBalanceType1Code.mmObject();
 		}
@@ -1777,7 +1779,7 @@ public class SystemBalanceType1Code extends SystemBalanceTypeCode {
 	 */
 	public static final MMCode mmAvailableDMVForDiscountWindowRepo = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AvailableDMVForDiscountWindowRepo";
 			owner_lazy = () -> SystemBalanceType1Code.mmObject();
 		}
@@ -1800,7 +1802,7 @@ public class SystemBalanceType1Code extends SystemBalanceTypeCode {
 	 */
 	public static final MMCode mmAvailableDMVForIntradayRepo = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AvailableDMVForIntradayRepo";
 			owner_lazy = () -> SystemBalanceType1Code.mmObject();
 		}
@@ -1823,7 +1825,7 @@ public class SystemBalanceType1Code extends SystemBalanceTypeCode {
 	 */
 	public static final MMCode mmRestricted = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Restricted";
 			owner_lazy = () -> SystemBalanceType1Code.mmObject();
 		}
@@ -1832,43 +1834,26 @@ public class SystemBalanceType1Code extends SystemBalanceTypeCode {
 	static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
 				example = Arrays.asList("OPNG");
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "SystemBalanceType1Code";
 				definition = "Specifies the nature of the system balance, such as opening balance.";
-				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.SystemBalanceType1Code.mmOpening, com.tools20022.repository.codeset.SystemBalanceType1Code.mmInterim,
-						com.tools20022.repository.codeset.SystemBalanceType1Code.mmClosing, com.tools20022.repository.codeset.SystemBalanceType1Code.mmBook, com.tools20022.repository.codeset.SystemBalanceType1Code.mmCurrent,
-						com.tools20022.repository.codeset.SystemBalanceType1Code.mmPending, com.tools20022.repository.codeset.SystemBalanceType1Code.mmLimitRelated, com.tools20022.repository.codeset.SystemBalanceType1Code.mmAvailable,
-						com.tools20022.repository.codeset.SystemBalanceType1Code.mmLiquidityTransfer, com.tools20022.repository.codeset.SystemBalanceType1Code.mmCredit,
-						com.tools20022.repository.codeset.SystemBalanceType1Code.mmEligibleAssets, com.tools20022.repository.codeset.SystemBalanceType1Code.mmPayment, com.tools20022.repository.codeset.SystemBalanceType1Code.mmBlocked,
-						com.tools20022.repository.codeset.SystemBalanceType1Code.mmExpected, com.tools20022.repository.codeset.SystemBalanceType1Code.mmDaylightOverdraft,
-						com.tools20022.repository.codeset.SystemBalanceType1Code.mmExpectedCredit, com.tools20022.repository.codeset.SystemBalanceType1Code.mmExpectedDebit,
-						com.tools20022.repository.codeset.SystemBalanceType1Code.mmAdjustment, com.tools20022.repository.codeset.SystemBalanceType1Code.mmProgressiveAverage, com.tools20022.repository.codeset.SystemBalanceType1Code.mmDebit,
-						com.tools20022.repository.codeset.SystemBalanceType1Code.mmThreshold, com.tools20022.repository.codeset.SystemBalanceType1Code.mmNoted, com.tools20022.repository.codeset.SystemBalanceType1Code.mmSelf,
-						com.tools20022.repository.codeset.SystemBalanceType1Code.mmMaster, com.tools20022.repository.codeset.SystemBalanceType1Code.mmForecastSettlement,
-						com.tools20022.repository.codeset.SystemBalanceType1Code.mmBlockedTrades, com.tools20022.repository.codeset.SystemBalanceType1Code.mmOtherBlockedTrades,
-						com.tools20022.repository.codeset.SystemBalanceType1Code.mmCustody, com.tools20022.repository.codeset.SystemBalanceType1Code.mmCashForecast,
-						com.tools20022.repository.codeset.SystemBalanceType1Code.mmDividendsCollection, com.tools20022.repository.codeset.SystemBalanceType1Code.mmNetFunding,
-						com.tools20022.repository.codeset.SystemBalanceType1Code.mmPayInPayOut, com.tools20022.repository.codeset.SystemBalanceType1Code.mmExchangeForecast,
-						com.tools20022.repository.codeset.SystemBalanceType1Code.mmCentralCounterparty, com.tools20022.repository.codeset.SystemBalanceType1Code.mmTotalOnHold,
-						com.tools20022.repository.codeset.SystemBalanceType1Code.mmCreditOnHold, com.tools20022.repository.codeset.SystemBalanceType1Code.mmDebitOnHold,
-						com.tools20022.repository.codeset.SystemBalanceType1Code.mmTotalProcessed, com.tools20022.repository.codeset.SystemBalanceType1Code.mmCreditProcessed,
-						com.tools20022.repository.codeset.SystemBalanceType1Code.mmDebitProcessed, com.tools20022.repository.codeset.SystemBalanceType1Code.mmTotalFuture,
-						com.tools20022.repository.codeset.SystemBalanceType1Code.mmTotalRejected, com.tools20022.repository.codeset.SystemBalanceType1Code.mmFirmCollateralisation,
-						com.tools20022.repository.codeset.SystemBalanceType1Code.mmUsedAmountsFirmCollateralisation, com.tools20022.repository.codeset.SystemBalanceType1Code.mmSelfCollateralisation,
-						com.tools20022.repository.codeset.SystemBalanceType1Code.mmUsedAmountsSelfCollateralisation, com.tools20022.repository.codeset.SystemBalanceType1Code.mmCustodyActual,
-						com.tools20022.repository.codeset.SystemBalanceType1Code.mmCCPGuaranteedForecasting, com.tools20022.repository.codeset.SystemBalanceType1Code.mmNonCCPGuaranteedForecasting,
-						com.tools20022.repository.codeset.SystemBalanceType1Code.mmDefinitiveSettledSecurities, com.tools20022.repository.codeset.SystemBalanceType1Code.mmLackOfHoldingsTransactions,
-						com.tools20022.repository.codeset.SystemBalanceType1Code.mmNonSettledSecurities, com.tools20022.repository.codeset.SystemBalanceType1Code.mmCCPGuaranteedOTCTransactions,
-						com.tools20022.repository.codeset.SystemBalanceType1Code.mmForecastOTCTransactions, com.tools20022.repository.codeset.SystemBalanceType1Code.mmNonCCPGuaranteedOTCTransactions,
-						com.tools20022.repository.codeset.SystemBalanceType1Code.mmSAPDirectDebitAmount, com.tools20022.repository.codeset.SystemBalanceType1Code.mmSAPDirectCreditAmount,
-						com.tools20022.repository.codeset.SystemBalanceType1Code.mmCMUPRepoDebit, com.tools20022.repository.codeset.SystemBalanceType1Code.mmCMUPRepoCredit,
-						com.tools20022.repository.codeset.SystemBalanceType1Code.mmBulkSettlementCMUPDebit, com.tools20022.repository.codeset.SystemBalanceType1Code.mmBulkSettlementCMUPCredit,
-						com.tools20022.repository.codeset.SystemBalanceType1Code.mmSAPQueueAmount, com.tools20022.repository.codeset.SystemBalanceType1Code.mmIntradayRepoLimit,
-						com.tools20022.repository.codeset.SystemBalanceType1Code.mmIntradayRepoDrawings, com.tools20022.repository.codeset.SystemBalanceType1Code.mmDiscountWindowRepoDrawings,
-						com.tools20022.repository.codeset.SystemBalanceType1Code.mmAvailableDMVForDiscountWindowRepo, com.tools20022.repository.codeset.SystemBalanceType1Code.mmAvailableDMVForIntradayRepo,
-						com.tools20022.repository.codeset.SystemBalanceType1Code.mmRestricted);
+				code_lazy = () -> Arrays.asList(SystemBalanceType1Code.mmOpening, SystemBalanceType1Code.mmInterim, SystemBalanceType1Code.mmClosing, SystemBalanceType1Code.mmBook, SystemBalanceType1Code.mmCurrent,
+						SystemBalanceType1Code.mmPending, SystemBalanceType1Code.mmLimitRelated, SystemBalanceType1Code.mmAvailable, SystemBalanceType1Code.mmLiquidityTransfer, SystemBalanceType1Code.mmCredit,
+						SystemBalanceType1Code.mmEligibleAssets, SystemBalanceType1Code.mmPayment, SystemBalanceType1Code.mmBlocked, SystemBalanceType1Code.mmExpected, SystemBalanceType1Code.mmDaylightOverdraft,
+						SystemBalanceType1Code.mmExpectedCredit, SystemBalanceType1Code.mmExpectedDebit, SystemBalanceType1Code.mmAdjustment, SystemBalanceType1Code.mmProgressiveAverage, SystemBalanceType1Code.mmDebit,
+						SystemBalanceType1Code.mmThreshold, SystemBalanceType1Code.mmNoted, SystemBalanceType1Code.mmSelf, SystemBalanceType1Code.mmMaster, SystemBalanceType1Code.mmForecastSettlement,
+						SystemBalanceType1Code.mmBlockedTrades, SystemBalanceType1Code.mmOtherBlockedTrades, SystemBalanceType1Code.mmCustody, SystemBalanceType1Code.mmCashForecast, SystemBalanceType1Code.mmDividendsCollection,
+						SystemBalanceType1Code.mmNetFunding, SystemBalanceType1Code.mmPayInPayOut, SystemBalanceType1Code.mmExchangeForecast, SystemBalanceType1Code.mmCentralCounterparty, SystemBalanceType1Code.mmTotalOnHold,
+						SystemBalanceType1Code.mmCreditOnHold, SystemBalanceType1Code.mmDebitOnHold, SystemBalanceType1Code.mmTotalProcessed, SystemBalanceType1Code.mmCreditProcessed, SystemBalanceType1Code.mmDebitProcessed,
+						SystemBalanceType1Code.mmTotalFuture, SystemBalanceType1Code.mmTotalRejected, SystemBalanceType1Code.mmFirmCollateralisation, SystemBalanceType1Code.mmUsedAmountsFirmCollateralisation,
+						SystemBalanceType1Code.mmSelfCollateralisation, SystemBalanceType1Code.mmUsedAmountsSelfCollateralisation, SystemBalanceType1Code.mmCustodyActual, SystemBalanceType1Code.mmCCPGuaranteedForecasting,
+						SystemBalanceType1Code.mmNonCCPGuaranteedForecasting, SystemBalanceType1Code.mmDefinitiveSettledSecurities, SystemBalanceType1Code.mmLackOfHoldingsTransactions, SystemBalanceType1Code.mmNonSettledSecurities,
+						SystemBalanceType1Code.mmCCPGuaranteedOTCTransactions, SystemBalanceType1Code.mmForecastOTCTransactions, SystemBalanceType1Code.mmNonCCPGuaranteedOTCTransactions, SystemBalanceType1Code.mmSAPDirectDebitAmount,
+						SystemBalanceType1Code.mmSAPDirectCreditAmount, SystemBalanceType1Code.mmCMUPRepoDebit, SystemBalanceType1Code.mmCMUPRepoCredit, SystemBalanceType1Code.mmBulkSettlementCMUPDebit,
+						SystemBalanceType1Code.mmBulkSettlementCMUPCredit, SystemBalanceType1Code.mmSAPQueueAmount, SystemBalanceType1Code.mmIntradayRepoLimit, SystemBalanceType1Code.mmIntradayRepoDrawings,
+						SystemBalanceType1Code.mmDiscountWindowRepoDrawings, SystemBalanceType1Code.mmAvailableDMVForDiscountWindowRepo, SystemBalanceType1Code.mmAvailableDMVForIntradayRepo, SystemBalanceType1Code.mmRestricted);
 				trace_lazy = () -> SystemBalanceTypeCode.mmObject();
 			}
 		});

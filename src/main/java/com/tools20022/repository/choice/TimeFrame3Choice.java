@@ -19,8 +19,10 @@ package com.tools20022.repository.choice;
 
 import com.tools20022.metamodel.MMChoiceComponent;
 import com.tools20022.metamodel.MMMessageAttribute;
+import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.datatype.Number;
 import com.tools20022.repository.entity.TimeFrame;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -104,11 +106,11 @@ public class TimeFrame3Choice {
 	 */
 	public static final MMMessageAttribute mmTradeMinus = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.TimeFrame.mmTradeMinus;
+			businessElementTrace_lazy = () -> TimeFrame.mmTradeMinus;
 			componentContext_lazy = () -> TimeFrame3Choice.mmObject();
 			isDerived = false;
 			xmlTag = "TMns";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "TradeMinus";
 			definition = "An agreed number of days before the Trade date (T) used to define standard timeframes e.g. T-1 Dealing cut off or T-2 prepayment condition\n\nWhere = T is the date that the price is applied to a transaction,";
 			maxOccurs = 1;
@@ -154,11 +156,11 @@ public class TimeFrame3Choice {
 	 */
 	public static final MMMessageAttribute mmRenunciationMinus = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.TimeFrame.mmRenunciationMinus;
+			businessElementTrace_lazy = () -> TimeFrame.mmRenunciationMinus;
 			componentContext_lazy = () -> TimeFrame3Choice.mmObject();
 			isDerived = false;
 			xmlTag = "RMns";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "RenunciationMinus";
 			definition = "An agreed number of days before the Renunciation of Title documents are received used to define standard timeframes in redemption.";
 			maxOccurs = 1;
@@ -170,10 +172,10 @@ public class TimeFrame3Choice {
 	final static public MMChoiceComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMChoiceComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.choice.TimeFrame3Choice.mmTradeMinus, com.tools20022.repository.choice.TimeFrame3Choice.mmRenunciationMinus);
+				messageElement_lazy = () -> Arrays.asList(TimeFrame3Choice.mmTradeMinus, TimeFrame3Choice.mmRenunciationMinus);
 				trace_lazy = () -> TimeFrame.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 				name = "TimeFrame3Choice";
 				definition = "Choice between TimeFrame elements that define a period as number of days before an activity.";
 			}

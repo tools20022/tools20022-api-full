@@ -20,6 +20,7 @@ package com.tools20022.repository.area.semt;
 import com.tools20022.metamodel.MMMessageBuildingBlock;
 import com.tools20022.metamodel.MMMessageDefinition;
 import com.tools20022.metamodel.MMMessageDefinitionIdentifier;
+import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.area.SecuritiesManagementPreviousVersion;
 import com.tools20022.repository.msg.AccountingStatementOfHoldings1;
 import com.tools20022.repository.msg.AdditionalReference2;
@@ -48,6 +49,9 @@ import java.util.concurrent.atomic.AtomicReference;
  * <p>
  * <strong>Constant fields:</strong>
  * <ul>
+ * <li>
+ * {@linkplain com.tools20022.metamodel.MMMessageDefinition#getMessageDefinitionIdentifier
+ * messageDefinitionIdentifier} = {@code semt.005.001.01}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMMessageDefinition#getBusinessArea
  * businessArea} =
  * {@linkplain com.tools20022.repository.area.SecuritiesManagementPreviousVersion
@@ -82,9 +86,6 @@ import java.util.concurrent.atomic.AtomicReference;
  * AccountingStatementOfHoldingsCancellation.mmStatementToBeCancelled}</li>
  * </ul>
  * </li>
- * <li>
- * {@linkplain com.tools20022.metamodel.MMMessageDefinition#getMessageDefinitionIdentifier
- * messageDefinitionIdentifier} = {@code semt.005.001.01}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -135,7 +136,7 @@ public class AccountingStatementOfHoldingsCancellation {
 	public static final MMMessageBuildingBlock mmPreviousReference = new MMMessageBuildingBlock() {
 		{
 			xmlTag = "PrvsRef";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PreviousReference";
 			definition = "Reference to a linked message that was previously sent.";
 			maxOccurs = 1;
@@ -171,7 +172,7 @@ public class AccountingStatementOfHoldingsCancellation {
 	public static final MMMessageBuildingBlock mmRelatedReference = new MMMessageBuildingBlock() {
 		{
 			xmlTag = "RltdRef";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "RelatedReference";
 			definition = "Reference to a linked message that was previously received.";
 			maxOccurs = 1;
@@ -205,7 +206,7 @@ public class AccountingStatementOfHoldingsCancellation {
 	public static final MMMessageBuildingBlock mmMessagePagination = new MMMessageBuildingBlock() {
 		{
 			xmlTag = "MsgPgntn";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "MessagePagination";
 			definition = "Pagination of the message.";
 			maxOccurs = 1;
@@ -240,7 +241,7 @@ public class AccountingStatementOfHoldingsCancellation {
 	public static final MMMessageBuildingBlock mmStatementToBeCancelled = new MMMessageBuildingBlock() {
 		{
 			xmlTag = "StmtToBeCanc";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "StatementToBeCancelled";
 			definition = "The Accounting Statement of Holdings message to cancel.";
 			maxOccurs = 1;
@@ -252,7 +253,7 @@ public class AccountingStatementOfHoldingsCancellation {
 	final static public MMMessageDefinition mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageDefinition() {
 			{
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "AccountingStatementOfHoldingsCancellation";
 				definition = "Scope\r\nThe AccountingStatementOfHoldingsCancellation message is sent by an account servicer to the account owner or the account owner's designated agent. The account servicer may be a local agent (sub-custodian) acting on behalf of its global custodian customer, a custodian acting on behalf of an investment management institution or a broker/dealer, a fund administrator or fund intermediary, trustee or registrar.\r\nThis message is used to cancel a previously sent AccountingStatementOfHoldings message.\r\nUsage\r\nThe AccountingStatementOfHoldingsCancellation message is sent by an account servicer to the account owner to cancel a previously sent AccountingStatementOfHoldings message.\r\nThis message must contain the reference of the message to be cancelled. This message may also contain all the details of the message to be cancelled, but this is not recommended.";
 				nextVersions_lazy = () -> Arrays.asList(AccountingStatementOfHoldingsCancellationV02.mmObject());
@@ -261,9 +262,8 @@ public class AccountingStatementOfHoldingsCancellation {
 				xmlTag = "semt.005.001.01";
 				businessArea_lazy = () -> SecuritiesManagementPreviousVersion.mmObject();
 				xmlName = "semt.005.001.01";
-				messageBuildingBlock_lazy = () -> Arrays.asList(com.tools20022.repository.area.semt.AccountingStatementOfHoldingsCancellation.mmPreviousReference,
-						com.tools20022.repository.area.semt.AccountingStatementOfHoldingsCancellation.mmRelatedReference, com.tools20022.repository.area.semt.AccountingStatementOfHoldingsCancellation.mmMessagePagination,
-						com.tools20022.repository.area.semt.AccountingStatementOfHoldingsCancellation.mmStatementToBeCancelled);
+				messageBuildingBlock_lazy = () -> Arrays.asList(AccountingStatementOfHoldingsCancellation.mmPreviousReference, AccountingStatementOfHoldingsCancellation.mmRelatedReference,
+						AccountingStatementOfHoldingsCancellation.mmMessagePagination, AccountingStatementOfHoldingsCancellation.mmStatementToBeCancelled);
 				messageDefinitionIdentifier_lazy = () -> new MMMessageDefinitionIdentifier() {
 					{
 						businessArea = "semt";

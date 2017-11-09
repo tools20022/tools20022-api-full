@@ -19,6 +19,8 @@ package com.tools20022.repository.codeset;
 
 import com.tools20022.metamodel.MMCode;
 import com.tools20022.metamodel.MMCodeSet;
+import com.tools20022.metamodel.MMRegistrationStatus;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -27,6 +29,13 @@ import java.util.concurrent.atomic.AtomicReference;
  * <p>
  * <strong>Constant fields:</strong>
  * <ul>
+ * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getDerivation derivation}
+ * =
+ * <ul>
+ * <li>{@linkplain com.tools20022.repository.codeset.ResidualCash1Code
+ * ResidualCash1Code}</li>
+ * </ul>
+ * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getCode code} =
  * <ul>
  * <li>
@@ -35,13 +44,6 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>
  * {@linkplain com.tools20022.repository.codeset.ResidualCashCode#mmNotResidualCashTransfer
  * ResidualCashCode.mmNotResidualCashTransfer}</li>
- * </ul>
- * </li>
- * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getDerivation derivation}
- * =
- * <ul>
- * <li>{@linkplain com.tools20022.repository.codeset.ResidualCash1Code
- * ResidualCash1Code}</li>
  * </ul>
  * </li>
  * <li>
@@ -93,7 +95,7 @@ public class ResidualCashCode {
 	 */
 	public static final MMCode mmResidualCashTransfer = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ResidualCashTransfer";
 			definition = "Residual cash to be transferred.";
 			owner_lazy = () -> ResidualCashCode.mmObject();
@@ -123,7 +125,7 @@ public class ResidualCashCode {
 	 */
 	public static final MMCode mmNotResidualCashTransfer = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "NotResidualCashTransfer";
 			definition = "Residual Cash not to be transferred.";
 			owner_lazy = () -> ResidualCashCode.mmObject();
@@ -134,12 +136,12 @@ public class ResidualCashCode {
 	static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
 				example = Arrays.asList("RCTR");
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "ResidualCashCode";
 				definition = "Specifies whether there is cash in the account that is awaiting investment.";
-				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.ResidualCashCode.mmResidualCashTransfer, com.tools20022.repository.codeset.ResidualCashCode.mmNotResidualCashTransfer);
+				code_lazy = () -> Arrays.asList(ResidualCashCode.mmResidualCashTransfer, ResidualCashCode.mmNotResidualCashTransfer);
 				derivation_lazy = () -> Arrays.asList(ResidualCash1Code.mmObject());
 			}
 		});

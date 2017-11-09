@@ -20,7 +20,9 @@ package com.tools20022.repository.msg;
 import com.tools20022.metamodel.MMMessageAssociationEnd;
 import com.tools20022.metamodel.MMMessageAttribute;
 import com.tools20022.metamodel.MMMessageComponent;
+import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.datatype.ISODate;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.List;
@@ -98,7 +100,7 @@ public class LimitJournal1 {
 			componentContext_lazy = () -> LimitJournal1.mmObject();
 			isDerived = false;
 			xmlTag = "Lmt";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Limit";
 			definition = "Maximum value used for risk containment in a system or towards counterparts. The limit may be a current limit or a default limit. ";
 			maxOccurs = 1;
@@ -139,7 +141,7 @@ public class LimitJournal1 {
 			componentContext_lazy = () -> LimitJournal1.mmObject();
 			isDerived = false;
 			xmlTag = "JrnlActvtyDt";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "JournalActivityDate";
 			definition = "Date upon which journal activity takes place.";
 			maxOccurs = 1;
@@ -180,7 +182,7 @@ public class LimitJournal1 {
 			componentContext_lazy = () -> LimitJournal1.mmObject();
 			isDerived = false;
 			xmlTag = "JrnlNtry";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "JournalEntry";
 			definition = "Recording of transaction data pertaining to a transaction in a journal.";
 			minOccurs = 0;
@@ -192,9 +194,9 @@ public class LimitJournal1 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.LimitJournal1.mmLimit, com.tools20022.repository.msg.LimitJournal1.mmJournalActivityDate, com.tools20022.repository.msg.LimitJournal1.mmJournalEntry);
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+				messageElement_lazy = () -> Arrays.asList(LimitJournal1.mmLimit, LimitJournal1.mmJournalActivityDate, LimitJournal1.mmJournalEntry);
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 				name = "LimitJournal1";
 				definition = "Record where all transactions are originally entered.  The journal details which transactions occurred and what accounts were affected.";
 			}

@@ -19,7 +19,9 @@ package com.tools20022.repository.codeset;
 
 import com.tools20022.metamodel.MMCode;
 import com.tools20022.metamodel.MMCodeSet;
+import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.codeset.UnmatchedReasonCode;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -223,9 +225,9 @@ public class UnmatchedReason7Code extends UnmatchedReasonCode {
 	 */
 	public static final MMCode mmAccountServicerDeadlineMissed = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AccountServicerDeadlineMissed";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.UnmatchedReason10Code.mmAccountServicerDeadlineMissed);
+			nextVersions_lazy = () -> Arrays.asList(UnmatchedReason10Code.mmAccountServicerDeadlineMissed);
 			owner_lazy = () -> UnmatchedReason7Code.mmObject();
 		}
 	};
@@ -255,9 +257,9 @@ public class UnmatchedReason7Code extends UnmatchedReasonCode {
 	 */
 	public static final MMCode mmRepurchaseCallDelay = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "RepurchaseCallDelay";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.UnmatchedReason10Code.mmRepurchaseCallDelay);
+			nextVersions_lazy = () -> Arrays.asList(UnmatchedReason10Code.mmRepurchaseCallDelay);
 			owner_lazy = () -> UnmatchedReason7Code.mmObject();
 		}
 	};
@@ -287,9 +289,9 @@ public class UnmatchedReason7Code extends UnmatchedReasonCode {
 	 */
 	public static final MMCode mmCounterpartyTooLateForMatching = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CounterpartyTooLateForMatching";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.UnmatchedReason10Code.mmCounterpartyTooLateForMatching);
+			nextVersions_lazy = () -> Arrays.asList(UnmatchedReason10Code.mmCounterpartyTooLateForMatching);
 			owner_lazy = () -> UnmatchedReason7Code.mmObject();
 		}
 	};
@@ -319,9 +321,9 @@ public class UnmatchedReason7Code extends UnmatchedReasonCode {
 	 */
 	public static final MMCode mmNoMatch = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "NoMatch";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.UnmatchedReason10Code.mmNoMatch);
+			nextVersions_lazy = () -> Arrays.asList(UnmatchedReason10Code.mmNoMatch);
 			owner_lazy = () -> UnmatchedReason7Code.mmObject();
 		}
 	};
@@ -351,9 +353,9 @@ public class UnmatchedReason7Code extends UnmatchedReasonCode {
 	 */
 	public static final MMCode mmCounterpartyCancelled = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CounterpartyCancelled";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.UnmatchedReason10Code.mmCounterpartyCancelled);
+			nextVersions_lazy = () -> Arrays.asList(UnmatchedReason10Code.mmCounterpartyCancelled);
 			owner_lazy = () -> UnmatchedReason7Code.mmObject();
 		}
 	};
@@ -383,9 +385,9 @@ public class UnmatchedReason7Code extends UnmatchedReasonCode {
 	 */
 	public static final MMCode mmSettlementDate = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SettlementDate";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.UnmatchedReason10Code.mmSettlementDate);
+			nextVersions_lazy = () -> Arrays.asList(UnmatchedReason10Code.mmSettlementDate);
 			owner_lazy = () -> UnmatchedReason7Code.mmObject();
 		}
 	};
@@ -415,9 +417,9 @@ public class UnmatchedReason7Code extends UnmatchedReasonCode {
 	 */
 	public static final MMCode mmDealPrice = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "DealPrice";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.UnmatchedReason10Code.mmDealPrice);
+			nextVersions_lazy = () -> Arrays.asList(UnmatchedReason10Code.mmDealPrice);
 			owner_lazy = () -> UnmatchedReason7Code.mmObject();
 		}
 	};
@@ -447,9 +449,9 @@ public class UnmatchedReason7Code extends UnmatchedReasonCode {
 	 */
 	public static final MMCode mmTransactionDirection = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "TransactionDirection";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.UnmatchedReason10Code.mmTransactionDirection);
+			nextVersions_lazy = () -> Arrays.asList(UnmatchedReason10Code.mmTransactionDirection);
 			owner_lazy = () -> UnmatchedReason7Code.mmObject();
 		}
 	};
@@ -479,9 +481,9 @@ public class UnmatchedReason7Code extends UnmatchedReasonCode {
 	 */
 	public static final MMCode mmReceivingDeliveringDepository = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ReceivingDeliveringDepository";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.UnmatchedReason10Code.mmReceivingDeliveringDepository);
+			nextVersions_lazy = () -> Arrays.asList(UnmatchedReason10Code.mmReceivingDeliveringDepository);
 			owner_lazy = () -> UnmatchedReason7Code.mmObject();
 		}
 	};
@@ -511,9 +513,9 @@ public class UnmatchedReason7Code extends UnmatchedReasonCode {
 	 */
 	public static final MMCode mmSettlementAmount = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SettlementAmount";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.UnmatchedReason10Code.mmSettlementAmount);
+			nextVersions_lazy = () -> Arrays.asList(UnmatchedReason10Code.mmSettlementAmount);
 			owner_lazy = () -> UnmatchedReason7Code.mmObject();
 		}
 	};
@@ -543,9 +545,9 @@ public class UnmatchedReason7Code extends UnmatchedReasonCode {
 	 */
 	public static final MMCode mmFinancialInstrumentQuantity = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "FinancialInstrumentQuantity";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.UnmatchedReason10Code.mmFinancialInstrumentQuantity);
+			nextVersions_lazy = () -> Arrays.asList(UnmatchedReason10Code.mmFinancialInstrumentQuantity);
 			owner_lazy = () -> UnmatchedReason7Code.mmObject();
 		}
 	};
@@ -575,9 +577,9 @@ public class UnmatchedReason7Code extends UnmatchedReasonCode {
 	 */
 	public static final MMCode mmFinancialInstrument = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "FinancialInstrument";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.UnmatchedReason10Code.mmFinancialInstrument);
+			nextVersions_lazy = () -> Arrays.asList(UnmatchedReason10Code.mmFinancialInstrument);
 			owner_lazy = () -> UnmatchedReason7Code.mmObject();
 		}
 	};
@@ -607,9 +609,9 @@ public class UnmatchedReason7Code extends UnmatchedReasonCode {
 	 */
 	public static final MMCode mmNotRecognised = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "NotRecognised";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.UnmatchedReason10Code.mmNotRecognised);
+			nextVersions_lazy = () -> Arrays.asList(UnmatchedReason10Code.mmNotRecognised);
 			owner_lazy = () -> UnmatchedReason7Code.mmObject();
 		}
 	};
@@ -639,9 +641,9 @@ public class UnmatchedReason7Code extends UnmatchedReasonCode {
 	 */
 	public static final MMCode mmTradeDate = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "TradeDate";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.UnmatchedReason10Code.mmTradeDate);
+			nextVersions_lazy = () -> Arrays.asList(UnmatchedReason10Code.mmTradeDate);
 			owner_lazy = () -> UnmatchedReason7Code.mmObject();
 		}
 	};
@@ -671,9 +673,9 @@ public class UnmatchedReason7Code extends UnmatchedReasonCode {
 	 */
 	public static final MMCode mmForfeitRepurchaseAmount = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ForfeitRepurchaseAmount";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.UnmatchedReason10Code.mmForfeitRepurchaseAmount);
+			nextVersions_lazy = () -> Arrays.asList(UnmatchedReason10Code.mmForfeitRepurchaseAmount);
 			owner_lazy = () -> UnmatchedReason7Code.mmObject();
 		}
 	};
@@ -703,9 +705,9 @@ public class UnmatchedReason7Code extends UnmatchedReasonCode {
 	 */
 	public static final MMCode mmPaymentCode = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PaymentCode";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.UnmatchedReason10Code.mmPaymentCode);
+			nextVersions_lazy = () -> Arrays.asList(UnmatchedReason10Code.mmPaymentCode);
 			owner_lazy = () -> UnmatchedReason7Code.mmObject();
 		}
 	};
@@ -735,9 +737,9 @@ public class UnmatchedReason7Code extends UnmatchedReasonCode {
 	 */
 	public static final MMCode mmReceivingDeliveringParty1 = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ReceivingDeliveringParty1";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.UnmatchedReason10Code.mmReceivingDeliveringParty1);
+			nextVersions_lazy = () -> Arrays.asList(UnmatchedReason10Code.mmReceivingDeliveringParty1);
 			owner_lazy = () -> UnmatchedReason7Code.mmObject();
 		}
 	};
@@ -767,9 +769,9 @@ public class UnmatchedReason7Code extends UnmatchedReasonCode {
 	 */
 	public static final MMCode mmReceivingDeliveringParty2 = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ReceivingDeliveringParty2";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.UnmatchedReason10Code.mmReceivingDeliveringParty2);
+			nextVersions_lazy = () -> Arrays.asList(UnmatchedReason10Code.mmReceivingDeliveringParty2);
 			owner_lazy = () -> UnmatchedReason7Code.mmObject();
 		}
 	};
@@ -799,9 +801,9 @@ public class UnmatchedReason7Code extends UnmatchedReasonCode {
 	 */
 	public static final MMCode mmReceivingDeliveringParty3 = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ReceivingDeliveringParty3";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.UnmatchedReason10Code.mmReceivingDeliveringParty3);
+			nextVersions_lazy = () -> Arrays.asList(UnmatchedReason10Code.mmReceivingDeliveringParty3);
 			owner_lazy = () -> UnmatchedReason7Code.mmObject();
 		}
 	};
@@ -831,9 +833,9 @@ public class UnmatchedReason7Code extends UnmatchedReasonCode {
 	 */
 	public static final MMCode mmCommonReference = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CommonReference";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.UnmatchedReason10Code.mmCommonReference);
+			nextVersions_lazy = () -> Arrays.asList(UnmatchedReason10Code.mmCommonReference);
 			owner_lazy = () -> UnmatchedReason7Code.mmObject();
 		}
 	};
@@ -863,9 +865,9 @@ public class UnmatchedReason7Code extends UnmatchedReasonCode {
 	 */
 	public static final MMCode mmMarketDeadlineMissed = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "MarketDeadlineMissed";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.UnmatchedReason10Code.mmMarketDeadlineMissed);
+			nextVersions_lazy = () -> Arrays.asList(UnmatchedReason10Code.mmMarketDeadlineMissed);
 			owner_lazy = () -> UnmatchedReason7Code.mmObject();
 		}
 	};
@@ -895,9 +897,9 @@ public class UnmatchedReason7Code extends UnmatchedReasonCode {
 	 */
 	public static final MMCode mmLetterOfGuarantee = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "LetterOfGuarantee";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.UnmatchedReason10Code.mmLetterOfGuarantee);
+			nextVersions_lazy = () -> Arrays.asList(UnmatchedReason10Code.mmLetterOfGuarantee);
 			owner_lazy = () -> UnmatchedReason7Code.mmObject();
 		}
 	};
@@ -927,9 +929,9 @@ public class UnmatchedReason7Code extends UnmatchedReasonCode {
 	 */
 	public static final MMCode mmCurrencySettlementAmount = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CurrencySettlementAmount";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.UnmatchedReason10Code.mmCurrencySettlementAmount);
+			nextVersions_lazy = () -> Arrays.asList(UnmatchedReason10Code.mmCurrencySettlementAmount);
 			owner_lazy = () -> UnmatchedReason7Code.mmObject();
 		}
 	};
@@ -959,9 +961,9 @@ public class UnmatchedReason7Code extends UnmatchedReasonCode {
 	 */
 	public static final MMCode mmNoMatchingStarted = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "NoMatchingStarted";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.UnmatchedReason10Code.mmNoMatchingStarted);
+			nextVersions_lazy = () -> Arrays.asList(UnmatchedReason10Code.mmNoMatchingStarted);
 			owner_lazy = () -> UnmatchedReason7Code.mmObject();
 		}
 	};
@@ -991,9 +993,9 @@ public class UnmatchedReason7Code extends UnmatchedReasonCode {
 	 */
 	public static final MMCode mmPhysicalSettlement = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PhysicalSettlement";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.UnmatchedReason10Code.mmPhysicalSettlement);
+			nextVersions_lazy = () -> Arrays.asList(UnmatchedReason10Code.mmPhysicalSettlement);
 			owner_lazy = () -> UnmatchedReason7Code.mmObject();
 		}
 	};
@@ -1023,9 +1025,9 @@ public class UnmatchedReason7Code extends UnmatchedReasonCode {
 	 */
 	public static final MMCode mmPlaceOfTrade = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PlaceOfTrade";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.UnmatchedReason10Code.mmPlaceOfTrade);
+			nextVersions_lazy = () -> Arrays.asList(UnmatchedReason10Code.mmPlaceOfTrade);
 			owner_lazy = () -> UnmatchedReason7Code.mmObject();
 		}
 	};
@@ -1055,9 +1057,9 @@ public class UnmatchedReason7Code extends UnmatchedReasonCode {
 	 */
 	public static final MMCode mmPossibleDuplicate = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PossibleDuplicate";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.UnmatchedReason10Code.mmPossibleDuplicate);
+			nextVersions_lazy = () -> Arrays.asList(UnmatchedReason10Code.mmPossibleDuplicate);
 			owner_lazy = () -> UnmatchedReason7Code.mmObject();
 		}
 	};
@@ -1087,9 +1089,9 @@ public class UnmatchedReason7Code extends UnmatchedReasonCode {
 	 */
 	public static final MMCode mmRegistrationDetails = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "RegistrationDetails";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.UnmatchedReason10Code.mmRegistrationDetails);
+			nextVersions_lazy = () -> Arrays.asList(UnmatchedReason10Code.mmRegistrationDetails);
 			owner_lazy = () -> UnmatchedReason7Code.mmObject();
 		}
 	};
@@ -1119,9 +1121,9 @@ public class UnmatchedReason7Code extends UnmatchedReasonCode {
 	 */
 	public static final MMCode mmRepurchaseAmount = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "RepurchaseAmount";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.UnmatchedReason10Code.mmRepurchaseAmount);
+			nextVersions_lazy = () -> Arrays.asList(UnmatchedReason10Code.mmRepurchaseAmount);
 			owner_lazy = () -> UnmatchedReason7Code.mmObject();
 		}
 	};
@@ -1151,9 +1153,9 @@ public class UnmatchedReason7Code extends UnmatchedReasonCode {
 	 */
 	public static final MMCode mmRepurchaseRate = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "RepurchaseRate";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.UnmatchedReason10Code.mmRepurchaseRate);
+			nextVersions_lazy = () -> Arrays.asList(UnmatchedReason10Code.mmRepurchaseRate);
 			owner_lazy = () -> UnmatchedReason7Code.mmObject();
 		}
 	};
@@ -1183,9 +1185,9 @@ public class UnmatchedReason7Code extends UnmatchedReasonCode {
 	 */
 	public static final MMCode mmRepurchasePremiumAmount = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "RepurchasePremiumAmount";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.UnmatchedReason10Code.mmRepurchasePremiumAmount);
+			nextVersions_lazy = () -> Arrays.asList(UnmatchedReason10Code.mmRepurchasePremiumAmount);
 			owner_lazy = () -> UnmatchedReason7Code.mmObject();
 		}
 	};
@@ -1215,9 +1217,9 @@ public class UnmatchedReason7Code extends UnmatchedReasonCode {
 	 */
 	public static final MMCode mmRepurchaseRateType = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "RepurchaseRateType";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.UnmatchedReason10Code.mmRepurchaseRateType);
+			nextVersions_lazy = () -> Arrays.asList(UnmatchedReason10Code.mmRepurchaseRateType);
 			owner_lazy = () -> UnmatchedReason7Code.mmObject();
 		}
 	};
@@ -1247,9 +1249,9 @@ public class UnmatchedReason7Code extends UnmatchedReasonCode {
 	 */
 	public static final MMCode mmRTGSSystem = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "RTGSSystem";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.UnmatchedReason10Code.mmRTGSSystem);
+			nextVersions_lazy = () -> Arrays.asList(UnmatchedReason10Code.mmRTGSSystem);
 			owner_lazy = () -> UnmatchedReason7Code.mmObject();
 		}
 	};
@@ -1279,9 +1281,9 @@ public class UnmatchedReason7Code extends UnmatchedReasonCode {
 	 */
 	public static final MMCode mmSafekeepingAccount = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SafekeepingAccount";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.UnmatchedReason10Code.mmSafekeepingAccount);
+			nextVersions_lazy = () -> Arrays.asList(UnmatchedReason10Code.mmSafekeepingAccount);
 			owner_lazy = () -> UnmatchedReason7Code.mmObject();
 		}
 	};
@@ -1311,9 +1313,9 @@ public class UnmatchedReason7Code extends UnmatchedReasonCode {
 	 */
 	public static final MMCode mmSettlementTransaction = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SettlementTransaction";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.UnmatchedReason10Code.mmSettlementTransaction);
+			nextVersions_lazy = () -> Arrays.asList(UnmatchedReason10Code.mmSettlementTransaction);
 			owner_lazy = () -> UnmatchedReason7Code.mmObject();
 		}
 	};
@@ -1343,9 +1345,9 @@ public class UnmatchedReason7Code extends UnmatchedReasonCode {
 	 */
 	public static final MMCode mmSettlementSystemMethod = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SettlementSystemMethod";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.UnmatchedReason10Code.mmSettlementSystemMethod);
+			nextVersions_lazy = () -> Arrays.asList(UnmatchedReason10Code.mmSettlementSystemMethod);
 			owner_lazy = () -> UnmatchedReason7Code.mmObject();
 		}
 	};
@@ -1375,9 +1377,9 @@ public class UnmatchedReason7Code extends UnmatchedReasonCode {
 	 */
 	public static final MMCode mmClosingDateTime = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ClosingDateTime";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.UnmatchedReason10Code.mmClosingDateTime);
+			nextVersions_lazy = () -> Arrays.asList(UnmatchedReason10Code.mmClosingDateTime);
 			owner_lazy = () -> UnmatchedReason7Code.mmObject();
 		}
 	};
@@ -1407,9 +1409,9 @@ public class UnmatchedReason7Code extends UnmatchedReasonCode {
 	 */
 	public static final MMCode mmTaxStatus = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "TaxStatus";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.UnmatchedReason10Code.mmTaxStatus);
+			nextVersions_lazy = () -> Arrays.asList(UnmatchedReason10Code.mmTaxStatus);
 			owner_lazy = () -> UnmatchedReason7Code.mmObject();
 		}
 	};
@@ -1439,9 +1441,9 @@ public class UnmatchedReason7Code extends UnmatchedReasonCode {
 	 */
 	public static final MMCode mmVariableRateSupport = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "VariableRateSupport";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.UnmatchedReason10Code.mmVariableRateSupport);
+			nextVersions_lazy = () -> Arrays.asList(UnmatchedReason10Code.mmVariableRateSupport);
 			owner_lazy = () -> UnmatchedReason7Code.mmObject();
 		}
 	};
@@ -1471,9 +1473,9 @@ public class UnmatchedReason7Code extends UnmatchedReasonCode {
 	 */
 	public static final MMCode mmPlaceOfSafekeeping = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PlaceOfSafekeeping";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.UnmatchedReason10Code.mmPlaceOfSafekeeping);
+			nextVersions_lazy = () -> Arrays.asList(UnmatchedReason10Code.mmPlaceOfSafekeeping);
 			owner_lazy = () -> UnmatchedReason7Code.mmObject();
 		}
 	};
@@ -1503,9 +1505,9 @@ public class UnmatchedReason7Code extends UnmatchedReasonCode {
 	 */
 	public static final MMCode mmOther = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Other";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.UnmatchedReason10Code.mmOther);
+			nextVersions_lazy = () -> Arrays.asList(UnmatchedReason10Code.mmOther);
 			owner_lazy = () -> UnmatchedReason7Code.mmObject();
 		}
 	};
@@ -1535,9 +1537,9 @@ public class UnmatchedReason7Code extends UnmatchedReasonCode {
 	 */
 	public static final MMCode mmAccruedInterestAmount1 = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AccruedInterestAmount1";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.UnmatchedReason10Code.mmAccruedInterestAmount1);
+			nextVersions_lazy = () -> Arrays.asList(UnmatchedReason10Code.mmAccruedInterestAmount1);
 			owner_lazy = () -> UnmatchedReason7Code.mmObject();
 		}
 	};
@@ -1545,34 +1547,23 @@ public class UnmatchedReason7Code extends UnmatchedReasonCode {
 	static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
 				example = Arrays.asList("ADEA");
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "UnmatchedReason7Code";
 				definition = "Specifies the reason the transaction/instruction is unmatched.";
 				nextVersions_lazy = () -> Arrays.asList(UnmatchedReason10Code.mmObject());
 				previousVersion_lazy = () -> UnmatchedReason1Code.mmObject();
-				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.UnmatchedReason7Code.mmAccountServicerDeadlineMissed, com.tools20022.repository.codeset.UnmatchedReason7Code.mmRepurchaseCallDelay,
-						com.tools20022.repository.codeset.UnmatchedReason7Code.mmCounterpartyTooLateForMatching, com.tools20022.repository.codeset.UnmatchedReason7Code.mmNoMatch,
-						com.tools20022.repository.codeset.UnmatchedReason7Code.mmCounterpartyCancelled, com.tools20022.repository.codeset.UnmatchedReason7Code.mmSettlementDate,
-						com.tools20022.repository.codeset.UnmatchedReason7Code.mmDealPrice, com.tools20022.repository.codeset.UnmatchedReason7Code.mmTransactionDirection,
-						com.tools20022.repository.codeset.UnmatchedReason7Code.mmReceivingDeliveringDepository, com.tools20022.repository.codeset.UnmatchedReason7Code.mmSettlementAmount,
-						com.tools20022.repository.codeset.UnmatchedReason7Code.mmFinancialInstrumentQuantity, com.tools20022.repository.codeset.UnmatchedReason7Code.mmFinancialInstrument,
-						com.tools20022.repository.codeset.UnmatchedReason7Code.mmNotRecognised, com.tools20022.repository.codeset.UnmatchedReason7Code.mmTradeDate,
-						com.tools20022.repository.codeset.UnmatchedReason7Code.mmForfeitRepurchaseAmount, com.tools20022.repository.codeset.UnmatchedReason7Code.mmPaymentCode,
-						com.tools20022.repository.codeset.UnmatchedReason7Code.mmReceivingDeliveringParty1, com.tools20022.repository.codeset.UnmatchedReason7Code.mmReceivingDeliveringParty2,
-						com.tools20022.repository.codeset.UnmatchedReason7Code.mmReceivingDeliveringParty3, com.tools20022.repository.codeset.UnmatchedReason7Code.mmCommonReference,
-						com.tools20022.repository.codeset.UnmatchedReason7Code.mmMarketDeadlineMissed, com.tools20022.repository.codeset.UnmatchedReason7Code.mmLetterOfGuarantee,
-						com.tools20022.repository.codeset.UnmatchedReason7Code.mmCurrencySettlementAmount, com.tools20022.repository.codeset.UnmatchedReason7Code.mmNoMatchingStarted,
-						com.tools20022.repository.codeset.UnmatchedReason7Code.mmPhysicalSettlement, com.tools20022.repository.codeset.UnmatchedReason7Code.mmPlaceOfTrade,
-						com.tools20022.repository.codeset.UnmatchedReason7Code.mmPossibleDuplicate, com.tools20022.repository.codeset.UnmatchedReason7Code.mmRegistrationDetails,
-						com.tools20022.repository.codeset.UnmatchedReason7Code.mmRepurchaseAmount, com.tools20022.repository.codeset.UnmatchedReason7Code.mmRepurchaseRate,
-						com.tools20022.repository.codeset.UnmatchedReason7Code.mmRepurchasePremiumAmount, com.tools20022.repository.codeset.UnmatchedReason7Code.mmRepurchaseRateType,
-						com.tools20022.repository.codeset.UnmatchedReason7Code.mmRTGSSystem, com.tools20022.repository.codeset.UnmatchedReason7Code.mmSafekeepingAccount,
-						com.tools20022.repository.codeset.UnmatchedReason7Code.mmSettlementTransaction, com.tools20022.repository.codeset.UnmatchedReason7Code.mmSettlementSystemMethod,
-						com.tools20022.repository.codeset.UnmatchedReason7Code.mmClosingDateTime, com.tools20022.repository.codeset.UnmatchedReason7Code.mmTaxStatus,
-						com.tools20022.repository.codeset.UnmatchedReason7Code.mmVariableRateSupport, com.tools20022.repository.codeset.UnmatchedReason7Code.mmPlaceOfSafekeeping,
-						com.tools20022.repository.codeset.UnmatchedReason7Code.mmOther, com.tools20022.repository.codeset.UnmatchedReason7Code.mmAccruedInterestAmount1);
+				code_lazy = () -> Arrays.asList(UnmatchedReason7Code.mmAccountServicerDeadlineMissed, UnmatchedReason7Code.mmRepurchaseCallDelay, UnmatchedReason7Code.mmCounterpartyTooLateForMatching, UnmatchedReason7Code.mmNoMatch,
+						UnmatchedReason7Code.mmCounterpartyCancelled, UnmatchedReason7Code.mmSettlementDate, UnmatchedReason7Code.mmDealPrice, UnmatchedReason7Code.mmTransactionDirection,
+						UnmatchedReason7Code.mmReceivingDeliveringDepository, UnmatchedReason7Code.mmSettlementAmount, UnmatchedReason7Code.mmFinancialInstrumentQuantity, UnmatchedReason7Code.mmFinancialInstrument,
+						UnmatchedReason7Code.mmNotRecognised, UnmatchedReason7Code.mmTradeDate, UnmatchedReason7Code.mmForfeitRepurchaseAmount, UnmatchedReason7Code.mmPaymentCode, UnmatchedReason7Code.mmReceivingDeliveringParty1,
+						UnmatchedReason7Code.mmReceivingDeliveringParty2, UnmatchedReason7Code.mmReceivingDeliveringParty3, UnmatchedReason7Code.mmCommonReference, UnmatchedReason7Code.mmMarketDeadlineMissed,
+						UnmatchedReason7Code.mmLetterOfGuarantee, UnmatchedReason7Code.mmCurrencySettlementAmount, UnmatchedReason7Code.mmNoMatchingStarted, UnmatchedReason7Code.mmPhysicalSettlement, UnmatchedReason7Code.mmPlaceOfTrade,
+						UnmatchedReason7Code.mmPossibleDuplicate, UnmatchedReason7Code.mmRegistrationDetails, UnmatchedReason7Code.mmRepurchaseAmount, UnmatchedReason7Code.mmRepurchaseRate, UnmatchedReason7Code.mmRepurchasePremiumAmount,
+						UnmatchedReason7Code.mmRepurchaseRateType, UnmatchedReason7Code.mmRTGSSystem, UnmatchedReason7Code.mmSafekeepingAccount, UnmatchedReason7Code.mmSettlementTransaction, UnmatchedReason7Code.mmSettlementSystemMethod,
+						UnmatchedReason7Code.mmClosingDateTime, UnmatchedReason7Code.mmTaxStatus, UnmatchedReason7Code.mmVariableRateSupport, UnmatchedReason7Code.mmPlaceOfSafekeeping, UnmatchedReason7Code.mmOther,
+						UnmatchedReason7Code.mmAccruedInterestAmount1);
 				trace_lazy = () -> UnmatchedReasonCode.mmObject();
 			}
 		});

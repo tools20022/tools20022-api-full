@@ -20,7 +20,9 @@ package com.tools20022.repository.msg;
 import com.tools20022.metamodel.MMMessageAssociationEnd;
 import com.tools20022.metamodel.MMMessageAttribute;
 import com.tools20022.metamodel.MMMessageComponent;
+import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.datatype.Max35Text;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -115,11 +117,11 @@ public class ATMContext19 {
 			componentContext_lazy = () -> ATMContext19.mmObject();
 			isDerived = false;
 			xmlTag = "SsnRef";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SessionReference";
 			definition = "Unique identification of the customer session in which the transfer is performed.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.ATMContext20.mmSessionReference);
-			previousVersion_lazy = () -> com.tools20022.repository.msg.ATMContext18.mmSessionReference;
+			nextVersions_lazy = () -> Arrays.asList(ATMContext20.mmSessionReference);
+			previousVersion_lazy = () -> ATMContext18.mmSessionReference;
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> Max35Text.mmObject();
@@ -169,11 +171,11 @@ public class ATMContext19 {
 			componentContext_lazy = () -> ATMContext19.mmObject();
 			isDerived = false;
 			xmlTag = "Svc";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Service";
 			definition = "Fund transfer service requested by the ATM inside the session.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.ATMContext20.mmService);
-			previousVersion_lazy = () -> com.tools20022.repository.msg.ATMContext18.mmService;
+			nextVersions_lazy = () -> Arrays.asList(ATMContext20.mmService);
+			previousVersion_lazy = () -> ATMContext18.mmService;
 			maxOccurs = 1;
 			minOccurs = 1;
 			isComposite = true;
@@ -184,9 +186,9 @@ public class ATMContext19 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.ATMContext19.mmSessionReference, com.tools20022.repository.msg.ATMContext19.mmService);
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				messageElement_lazy = () -> Arrays.asList(ATMContext19.mmSessionReference, ATMContext19.mmService);
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "ATMContext19";
 				definition = "Context in which the transfer is performed.";
 				nextVersions_lazy = () -> Arrays.asList(ATMContext20.mmObject());

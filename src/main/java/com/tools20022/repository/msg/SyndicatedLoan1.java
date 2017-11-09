@@ -20,11 +20,11 @@ package com.tools20022.repository.msg;
 import com.tools20022.metamodel.MMMessageAssociationEnd;
 import com.tools20022.metamodel.MMMessageAttribute;
 import com.tools20022.metamodel.MMMessageComponent;
+import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.datatype.ActiveCurrencyAndAmount;
 import com.tools20022.repository.datatype.Percentage;
-import com.tools20022.repository.entity.Borrower;
-import com.tools20022.repository.entity.Lender;
-import com.tools20022.repository.entity.Loan;
+import com.tools20022.repository.entity.*;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -110,7 +110,7 @@ public class SyndicatedLoan1 {
 			componentContext_lazy = () -> SyndicatedLoan1.mmObject();
 			isDerived = false;
 			xmlTag = "Brrwr";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Borrower";
 			definition = "Party which obtains the loan.";
 			maxOccurs = 1;
@@ -158,7 +158,7 @@ public class SyndicatedLoan1 {
 			componentContext_lazy = () -> SyndicatedLoan1.mmObject();
 			isDerived = false;
 			xmlTag = "Lndr";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Lender";
 			definition = "Party which provides an amount of money available to others to borrow.";
 			maxOccurs = 1;
@@ -202,11 +202,11 @@ public class SyndicatedLoan1 {
 	 */
 	public static final MMMessageAttribute mmAmount = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Loan.mmPrincipalAmount;
+			businessElementTrace_lazy = () -> Loan.mmPrincipalAmount;
 			componentContext_lazy = () -> SyndicatedLoan1.mmObject();
 			isDerived = false;
 			xmlTag = "Amt";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Amount";
 			definition = "Amount of the part in the syndicated loan.";
 			maxOccurs = 1;
@@ -249,11 +249,11 @@ public class SyndicatedLoan1 {
 	 */
 	public static final MMMessageAttribute mmShare = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Allocation.mmAllocatedQuantity;
+			businessElementTrace_lazy = () -> Allocation.mmAllocatedQuantity;
 			componentContext_lazy = () -> SyndicatedLoan1.mmObject();
 			isDerived = false;
 			xmlTag = "Shr";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Share";
 			definition = "Share of the part in the syndicated loan.";
 			maxOccurs = 1;
@@ -296,11 +296,11 @@ public class SyndicatedLoan1 {
 	 */
 	public static final MMMessageAssociationEnd mmExchangeRateInformation = new MMMessageAssociationEnd() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.PaymentObligation.mmExchangeRateInformation;
+			businessElementTrace_lazy = () -> PaymentObligation.mmExchangeRateInformation;
 			componentContext_lazy = () -> SyndicatedLoan1.mmObject();
 			isDerived = false;
 			xmlTag = "XchgRateInf";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ExchangeRateInformation";
 			definition = "Provides details on the currency exchange rate and contract.";
 			maxOccurs = 1;
@@ -313,11 +313,10 @@ public class SyndicatedLoan1 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.SyndicatedLoan1.mmBorrower, com.tools20022.repository.msg.SyndicatedLoan1.mmLender, com.tools20022.repository.msg.SyndicatedLoan1.mmAmount,
-						com.tools20022.repository.msg.SyndicatedLoan1.mmShare, com.tools20022.repository.msg.SyndicatedLoan1.mmExchangeRateInformation);
+				messageElement_lazy = () -> Arrays.asList(SyndicatedLoan1.mmBorrower, SyndicatedLoan1.mmLender, SyndicatedLoan1.mmAmount, SyndicatedLoan1.mmShare, SyndicatedLoan1.mmExchangeRateInformation);
 				trace_lazy = () -> Loan.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "SyndicatedLoan1";
 				definition = "Loan offered by a group of lenders (called a syndicate) who work together to lend an amount of money to a single borrower.";
 			}

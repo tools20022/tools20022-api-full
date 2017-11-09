@@ -19,7 +19,9 @@ package com.tools20022.repository.codeset;
 
 import com.tools20022.metamodel.MMCode;
 import com.tools20022.metamodel.MMCodeSet;
+import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.codeset.CancellationStatusCode;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -86,7 +88,7 @@ public class CancellationStatus4Code extends CancellationStatusCode {
 	 */
 	public static final MMCode mmAccepted = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Accepted";
 			owner_lazy = () -> CancellationStatus4Code.mmObject();
 		}
@@ -109,7 +111,7 @@ public class CancellationStatus4Code extends CancellationStatusCode {
 	 */
 	public static final MMCode mmRejected = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Rejected";
 			owner_lazy = () -> CancellationStatus4Code.mmObject();
 		}
@@ -118,12 +120,12 @@ public class CancellationStatus4Code extends CancellationStatusCode {
 	static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
 				example = Arrays.asList("PACK");
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "CancellationStatus4Code";
 				definition = "Specifies the status of the cancellation request of an invoice financing request.";
-				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.CancellationStatus4Code.mmAccepted, com.tools20022.repository.codeset.CancellationStatus4Code.mmRejected);
+				code_lazy = () -> Arrays.asList(CancellationStatus4Code.mmAccepted, CancellationStatus4Code.mmRejected);
 				trace_lazy = () -> CancellationStatusCode.mmObject();
 			}
 		});

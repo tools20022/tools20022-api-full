@@ -19,7 +19,9 @@ package com.tools20022.repository.codeset;
 
 import com.tools20022.metamodel.MMCode;
 import com.tools20022.metamodel.MMCodeSet;
+import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.codeset.CustodianActionCode;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -89,7 +91,7 @@ public class CustodianAction1Code extends CustodianActionCode {
 	 */
 	public static final MMCode mmResearch = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Research";
 			owner_lazy = () -> CustodianAction1Code.mmObject();
 		}
@@ -112,7 +114,7 @@ public class CustodianAction1Code extends CustodianActionCode {
 	 */
 	public static final MMCode mmSendInfo = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SendInfo";
 			owner_lazy = () -> CustodianAction1Code.mmObject();
 		}
@@ -135,7 +137,7 @@ public class CustodianAction1Code extends CustodianActionCode {
 	 */
 	public static final MMCode mmDisagrees = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Disagrees";
 			owner_lazy = () -> CustodianAction1Code.mmObject();
 		}
@@ -158,7 +160,7 @@ public class CustodianAction1Code extends CustodianActionCode {
 	 */
 	public static final MMCode mmNoAction = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "NoAction";
 			owner_lazy = () -> CustodianAction1Code.mmObject();
 		}
@@ -167,13 +169,12 @@ public class CustodianAction1Code extends CustodianActionCode {
 	static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
 				example = Arrays.asList("RSCH");
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "CustodianAction1Code";
 				definition = "Specifies custodian activity codes.";
-				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.CustodianAction1Code.mmResearch, com.tools20022.repository.codeset.CustodianAction1Code.mmSendInfo,
-						com.tools20022.repository.codeset.CustodianAction1Code.mmDisagrees, com.tools20022.repository.codeset.CustodianAction1Code.mmNoAction);
+				code_lazy = () -> Arrays.asList(CustodianAction1Code.mmResearch, CustodianAction1Code.mmSendInfo, CustodianAction1Code.mmDisagrees, CustodianAction1Code.mmNoAction);
 				trace_lazy = () -> CustodianActionCode.mmObject();
 			}
 		});

@@ -19,7 +19,9 @@ package com.tools20022.repository.choice;
 
 import com.tools20022.metamodel.MMChoiceComponent;
 import com.tools20022.metamodel.MMMessageAssociationEnd;
+import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.entity.VoteInstructionRequest;
+import com.tools20022.repository.GeneratedRepository;
 import com.tools20022.repository.msg.Vote3;
 import com.tools20022.repository.msg.Vote4;
 import java.util.Arrays;
@@ -115,14 +117,14 @@ public class Vote2Choice {
 	 */
 	public static final MMMessageAssociationEnd mmVoteInstruction = new MMMessageAssociationEnd() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.VoteInstructionRequest.mmVotePerResolution;
+			businessElementTrace_lazy = () -> VoteInstructionRequest.mmVotePerResolution;
 			componentContext_lazy = () -> Vote2Choice.mmObject();
 			isDerived = false;
 			xmlTag = "VoteInstr";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "VoteInstruction";
 			definition = "Instruction specifying the instructed quantity of voting rights per resolution. Split votes can be indicated. If only one type of decision is indicated, the number of votes cast must not be adjusted if the position of the voting party increases.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.choice.Vote3Choice.mmVoteInstruction);
+			nextVersions_lazy = () -> Arrays.asList(Vote3Choice.mmVoteInstruction);
 			maxOccurs = 1000;
 			minOccurs = 1;
 			isComposite = true;
@@ -172,14 +174,14 @@ public class Vote2Choice {
 	 */
 	public static final MMMessageAssociationEnd mmGlobalVoteInstruction = new MMMessageAssociationEnd() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.VoteInstructionRequest.mmGlobalVoteInstruction;
+			businessElementTrace_lazy = () -> VoteInstructionRequest.mmGlobalVoteInstruction;
 			componentContext_lazy = () -> Vote2Choice.mmObject();
 			isDerived = false;
 			xmlTag = "GblVoteInstr";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "GlobalVoteInstruction";
 			definition = "Instruction specifiying a vote instruction per resolution for the entire entitlement.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.choice.Vote3Choice.mmGlobalVoteInstruction);
+			nextVersions_lazy = () -> Arrays.asList(Vote3Choice.mmGlobalVoteInstruction);
 			maxOccurs = 1000;
 			minOccurs = 1;
 			isComposite = true;
@@ -190,10 +192,10 @@ public class Vote2Choice {
 	final static public MMChoiceComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMChoiceComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.choice.Vote2Choice.mmVoteInstruction, com.tools20022.repository.choice.Vote2Choice.mmGlobalVoteInstruction);
+				messageElement_lazy = () -> Arrays.asList(Vote2Choice.mmVoteInstruction, Vote2Choice.mmGlobalVoteInstruction);
 				trace_lazy = () -> VoteInstructionRequest.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "Vote2Choice";
 				definition = "Determines how the voting instructions are specified.";
 				nextVersions_lazy = () -> Arrays.asList(Vote3Choice.mmObject());

@@ -19,7 +19,9 @@ package com.tools20022.repository.codeset;
 
 import com.tools20022.metamodel.MMCode;
 import com.tools20022.metamodel.MMCodeSet;
+import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.codeset.SafekeepingAccountIdentificationCode;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -80,7 +82,7 @@ public class SafekeepingAccountIdentification1Code extends SafekeepingAccountIde
 	 */
 	public static final MMCode mmGeneral = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "General";
 			owner_lazy = () -> SafekeepingAccountIdentification1Code.mmObject();
 		}
@@ -89,12 +91,12 @@ public class SafekeepingAccountIdentification1Code extends SafekeepingAccountIde
 	static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
 				example = Arrays.asList("GENR");
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "SafekeepingAccountIdentification1Code";
 				definition = "Specifies the account identification via a code.";
-				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.SafekeepingAccountIdentification1Code.mmGeneral);
+				code_lazy = () -> Arrays.asList(SafekeepingAccountIdentification1Code.mmGeneral);
 				trace_lazy = () -> SafekeepingAccountIdentificationCode.mmObject();
 			}
 		});

@@ -20,7 +20,9 @@ package com.tools20022.repository.choice;
 import com.tools20022.metamodel.MMChoiceComponent;
 import com.tools20022.metamodel.MMMessageAssociationEnd;
 import com.tools20022.metamodel.MMMessageAttribute;
+import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.codeset.CorporateActionNarrative1Code;
+import com.tools20022.repository.GeneratedRepository;
 import com.tools20022.repository.msg.GenericIdentification30;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
@@ -107,10 +109,10 @@ public class CorporateActionNarrative3Choice {
 			componentContext_lazy = () -> CorporateActionNarrative3Choice.mmObject();
 			isDerived = false;
 			xmlTag = "Cd";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Code";
 			definition = "Standard code to specify the narrative type of the message.";
-			previousVersion_lazy = () -> com.tools20022.repository.choice.CorporateActionNarrative1Choice.mmCode;
+			previousVersion_lazy = () -> CorporateActionNarrative1Choice.mmCode;
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> CorporateActionNarrative1Code.mmObject();
@@ -155,10 +157,10 @@ public class CorporateActionNarrative3Choice {
 			componentContext_lazy = () -> CorporateActionNarrative3Choice.mmObject();
 			isDerived = false;
 			xmlTag = "Prtry";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Proprietary";
 			definition = "Proprietary identification of the narrative type of the message.";
-			previousVersion_lazy = () -> com.tools20022.repository.choice.CorporateActionNarrative1Choice.mmProprietary;
+			previousVersion_lazy = () -> CorporateActionNarrative1Choice.mmProprietary;
 			maxOccurs = 1;
 			minOccurs = 1;
 			isComposite = true;
@@ -169,9 +171,9 @@ public class CorporateActionNarrative3Choice {
 	final static public MMChoiceComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMChoiceComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.choice.CorporateActionNarrative3Choice.mmCode, com.tools20022.repository.choice.CorporateActionNarrative3Choice.mmProprietary);
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				messageElement_lazy = () -> Arrays.asList(CorporateActionNarrative3Choice.mmCode, CorporateActionNarrative3Choice.mmProprietary);
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "CorporateActionNarrative3Choice";
 				definition = "Choice between a standard code or a proprietary code to specify the narrative type of corporate action.";
 				previousVersion_lazy = () -> CorporateActionNarrative1Choice.mmObject();

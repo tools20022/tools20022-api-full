@@ -19,7 +19,9 @@ package com.tools20022.repository.codeset;
 
 import com.tools20022.metamodel.MMCode;
 import com.tools20022.metamodel.MMCodeSet;
+import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.codeset.PaymentScheduleTypeCode;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -77,7 +79,7 @@ public class PaymentScheduleType1Code extends PaymentScheduleTypeCode {
 	 */
 	public static final MMCode mmContract = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Contract";
 			owner_lazy = () -> PaymentScheduleType1Code.mmObject();
 		}
@@ -100,7 +102,7 @@ public class PaymentScheduleType1Code extends PaymentScheduleTypeCode {
 	 */
 	public static final MMCode mmEstimated = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Estimated";
 			owner_lazy = () -> PaymentScheduleType1Code.mmObject();
 		}
@@ -109,11 +111,11 @@ public class PaymentScheduleType1Code extends PaymentScheduleTypeCode {
 	static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "PaymentScheduleType1Code";
 				definition = "Specifies a payment schedule type.";
-				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.PaymentScheduleType1Code.mmContract, com.tools20022.repository.codeset.PaymentScheduleType1Code.mmEstimated);
+				code_lazy = () -> Arrays.asList(PaymentScheduleType1Code.mmContract, PaymentScheduleType1Code.mmEstimated);
 				trace_lazy = () -> PaymentScheduleTypeCode.mmObject();
 			}
 		});

@@ -20,11 +20,10 @@ package com.tools20022.repository.msg;
 import com.tools20022.metamodel.MMMessageAssociationEnd;
 import com.tools20022.metamodel.MMMessageAttribute;
 import com.tools20022.metamodel.MMMessageComponent;
+import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.datatype.ISODateTime;
-import com.tools20022.repository.entity.DeliveryNote;
-import com.tools20022.repository.entity.ProductDelivery;
-import com.tools20022.repository.entity.ShipFrom;
-import com.tools20022.repository.entity.ShipTo;
+import com.tools20022.repository.entity.*;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.List;
@@ -123,14 +122,14 @@ public class TradeDelivery2 {
 	 */
 	public static final MMMessageAttribute mmDeliveryPeriod = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.ProductDelivery.mmDeliveryPeriod;
+			businessElementTrace_lazy = () -> ProductDelivery.mmDeliveryPeriod;
 			componentContext_lazy = () -> TradeDelivery2.mmObject();
 			isDerived = false;
 			xmlTag = "DlvryPrd";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "DeliveryPeriod";
 			definition = "Actual delivery period of the products and/or services.";
-			previousVersion_lazy = () -> com.tools20022.repository.msg.TradeDelivery1.mmDeliveryPeriod;
+			previousVersion_lazy = () -> TradeDelivery1.mmDeliveryPeriod;
 			maxOccurs = 1;
 			minOccurs = 0;
 			complexType_lazy = () -> com.tools20022.repository.msg.Period1.mmObject();
@@ -176,14 +175,14 @@ public class TradeDelivery2 {
 	 */
 	public static final MMMessageAttribute mmDeliveryDateTime = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.ObligationFulfilment.mmDate;
+			businessElementTrace_lazy = () -> ObligationFulfilment.mmDate;
 			componentContext_lazy = () -> TradeDelivery2.mmObject();
 			isDerived = false;
 			xmlTag = "DlvryDtTm";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "DeliveryDateTime";
 			definition = "Actual delivery date/time of the products and/or services.";
-			previousVersion_lazy = () -> com.tools20022.repository.msg.TradeDelivery1.mmDeliveryDateTime;
+			previousVersion_lazy = () -> TradeDelivery1.mmDeliveryDateTime;
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> ISODateTime.mmObject();
@@ -230,10 +229,10 @@ public class TradeDelivery2 {
 			componentContext_lazy = () -> TradeDelivery2.mmObject();
 			isDerived = false;
 			xmlTag = "ShipFr";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ShipFrom";
 			definition = "Party from whom the goods are dispatched.";
-			previousVersion_lazy = () -> com.tools20022.repository.msg.TradeDelivery1.mmShipFrom;
+			previousVersion_lazy = () -> TradeDelivery1.mmShipFrom;
 			maxOccurs = 1;
 			minOccurs = 0;
 			isComposite = true;
@@ -281,10 +280,10 @@ public class TradeDelivery2 {
 			componentContext_lazy = () -> TradeDelivery2.mmObject();
 			isDerived = false;
 			xmlTag = "ShipTo";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ShipTo";
 			definition = "Party to whom the goods are dispatched.";
-			previousVersion_lazy = () -> com.tools20022.repository.msg.TradeDelivery1.mmShipTo;
+			previousVersion_lazy = () -> TradeDelivery1.mmShipTo;
 			maxOccurs = 1;
 			minOccurs = 0;
 			isComposite = true;
@@ -332,10 +331,10 @@ public class TradeDelivery2 {
 			componentContext_lazy = () -> TradeDelivery2.mmObject();
 			isDerived = false;
 			xmlTag = "UltmtShipTo";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "UltimateShipTo";
 			definition = "Final party to whom the goods are dispatched.";
-			previousVersion_lazy = () -> com.tools20022.repository.msg.TradeDelivery1.mmUltimateShipTo;
+			previousVersion_lazy = () -> TradeDelivery1.mmUltimateShipTo;
 			maxOccurs = 1;
 			minOccurs = 0;
 			isComposite = true;
@@ -386,10 +385,10 @@ public class TradeDelivery2 {
 			componentContext_lazy = () -> TradeDelivery2.mmObject();
 			isDerived = false;
 			xmlTag = "DlvryNote";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "DeliveryNote";
 			definition = "Delivery note related to the delivery of the products and/or services.";
-			previousVersion_lazy = () -> com.tools20022.repository.msg.TradeDelivery1.mmDeliveryNote;
+			previousVersion_lazy = () -> TradeDelivery1.mmDeliveryNote;
 			maxOccurs = 1;
 			minOccurs = 0;
 			complexType_lazy = () -> com.tools20022.repository.msg.DocumentIdentification22.mmObject();
@@ -433,14 +432,14 @@ public class TradeDelivery2 {
 	 */
 	public static final MMMessageAssociationEnd mmConsignment = new MMMessageAssociationEnd() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.ProductDelivery.mmRouting;
+			businessElementTrace_lazy = () -> ProductDelivery.mmRouting;
 			componentContext_lazy = () -> TradeDelivery2.mmObject();
 			isDerived = false;
 			xmlTag = "Consgnmt";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Consignment";
 			definition = "Physical consolidation of goods for transport.";
-			previousVersion_lazy = () -> com.tools20022.repository.msg.TradeDelivery1.mmConsignment;
+			previousVersion_lazy = () -> TradeDelivery1.mmConsignment;
 			minOccurs = 0;
 			isComposite = true;
 			type_lazy = () -> com.tools20022.repository.msg.Consignment4.mmObject();
@@ -450,12 +449,11 @@ public class TradeDelivery2 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.TradeDelivery2.mmDeliveryPeriod, com.tools20022.repository.msg.TradeDelivery2.mmDeliveryDateTime,
-						com.tools20022.repository.msg.TradeDelivery2.mmShipFrom, com.tools20022.repository.msg.TradeDelivery2.mmShipTo, com.tools20022.repository.msg.TradeDelivery2.mmUltimateShipTo,
-						com.tools20022.repository.msg.TradeDelivery2.mmDeliveryNote, com.tools20022.repository.msg.TradeDelivery2.mmConsignment);
+				messageElement_lazy = () -> Arrays.asList(TradeDelivery2.mmDeliveryPeriod, TradeDelivery2.mmDeliveryDateTime, TradeDelivery2.mmShipFrom, TradeDelivery2.mmShipTo, TradeDelivery2.mmUltimateShipTo,
+						TradeDelivery2.mmDeliveryNote, TradeDelivery2.mmConsignment);
 				trace_lazy = () -> ProductDelivery.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "TradeDelivery2";
 				definition = "Specifies how the supply chain shipping arrangements and the delivery of products and/or services as well as related documentation.";
 				previousVersion_lazy = () -> TradeDelivery1.mmObject();

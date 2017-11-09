@@ -20,9 +20,11 @@ package com.tools20022.repository.msg;
 import com.tools20022.metamodel.MMMessageAssociationEnd;
 import com.tools20022.metamodel.MMMessageAttribute;
 import com.tools20022.metamodel.MMMessageComponent;
+import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.choice.UnitsOrAmountOrPercentage1Choice;
 import com.tools20022.repository.codeset.ActiveOrHistoricCurrencyCode;
 import com.tools20022.repository.entity.InvestmentFundClass;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -111,10 +113,10 @@ public class Repartition5 {
 			componentContext_lazy = () -> Repartition5.mmObject();
 			isDerived = false;
 			xmlTag = "Qty";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Quantity";
 			definition = "Amount, units or percentage of financial instrument invested or withdrawn.";
-			previousVersion_lazy = () -> com.tools20022.repository.msg.Repartition4.mmQuantity;
+			previousVersion_lazy = () -> Repartition4.mmQuantity;
 			maxOccurs = 1;
 			minOccurs = 1;
 			complexType_lazy = () -> UnitsOrAmountOrPercentage1Choice.mmObject();
@@ -163,10 +165,10 @@ public class Repartition5 {
 			componentContext_lazy = () -> Repartition5.mmObject();
 			isDerived = false;
 			xmlTag = "FinInstrm";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "FinancialInstrument";
 			definition = "Detailed information about the security or investment fund.";
-			previousVersion_lazy = () -> com.tools20022.repository.msg.Repartition4.mmFinancialInstrument;
+			previousVersion_lazy = () -> Repartition4.mmFinancialInstrument;
 			maxOccurs = 1;
 			minOccurs = 1;
 			isComposite = true;
@@ -214,10 +216,10 @@ public class Repartition5 {
 			componentContext_lazy = () -> Repartition5.mmObject();
 			isDerived = false;
 			xmlTag = "CcyOfPlan";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CurrencyOfPlan";
 			definition = "When a fund has multiple currencies within same ISIN, this indicates the currency of the savings or withdrawal plan.";
-			previousVersion_lazy = () -> com.tools20022.repository.msg.Repartition4.mmCurrencyOfPlan;
+			previousVersion_lazy = () -> Repartition4.mmCurrencyOfPlan;
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> ActiveOrHistoricCurrencyCode.mmObject();
@@ -227,10 +229,10 @@ public class Repartition5 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.Repartition5.mmQuantity, com.tools20022.repository.msg.Repartition5.mmFinancialInstrument, com.tools20022.repository.msg.Repartition5.mmCurrencyOfPlan);
+				messageElement_lazy = () -> Arrays.asList(Repartition5.mmQuantity, Repartition5.mmFinancialInstrument, Repartition5.mmCurrencyOfPlan);
 				trace_lazy = () -> InvestmentFundClass.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "Repartition5";
 				definition = "Indicates how the amount of the investment plan is split amongst the funds.";
 				previousVersion_lazy = () -> Repartition4.mmObject();

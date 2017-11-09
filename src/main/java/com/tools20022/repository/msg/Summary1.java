@@ -20,11 +20,17 @@ package com.tools20022.repository.msg;
 import com.tools20022.metamodel.MMMessageAssociationEnd;
 import com.tools20022.metamodel.MMMessageAttribute;
 import com.tools20022.metamodel.MMMessageComponent;
+import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.codeset.ExposureType1Code;
 import com.tools20022.repository.codeset.ShortLong1Code;
 import com.tools20022.repository.datatype.ActiveCurrencyAndAmount;
 import com.tools20022.repository.datatype.ISODate;
 import com.tools20022.repository.datatype.ISODateTime;
+import com.tools20022.repository.entity.ExposureCalculation;
+import com.tools20022.repository.entity.ExposureTerm;
+import com.tools20022.repository.entity.MarginCall;
+import com.tools20022.repository.entity.Obligation;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -123,11 +129,11 @@ public class Summary1 {
 	 */
 	public static final MMMessageAttribute mmExposedAmountPartyA = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.ExposureCalculation.mmTotalExposedAmount;
+			businessElementTrace_lazy = () -> ExposureCalculation.mmTotalExposedAmount;
 			componentContext_lazy = () -> Summary1.mmObject();
 			isDerived = false;
 			xmlTag = "XpsdAmtPtyA";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ExposedAmountPartyA";
 			definition = "Sum of the exposures of all transactions which are in the favour of party A. That is, all transactions which would have an amount payable by party B to party A if they were being terminated.";
 			maxOccurs = 1;
@@ -174,11 +180,11 @@ public class Summary1 {
 	 */
 	public static final MMMessageAttribute mmExposedAmountPartyB = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.ExposureCalculation.mmTotalExposedAmount;
+			businessElementTrace_lazy = () -> ExposureCalculation.mmTotalExposedAmount;
 			componentContext_lazy = () -> Summary1.mmObject();
 			isDerived = false;
 			xmlTag = "XpsdAmtPtyB";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ExposedAmountPartyB";
 			definition = "Sum of the exposures of all transactions which are in the favour of party B. That is, all transactions which would have an amount payable by party A to party B if they were being terminated.";
 			maxOccurs = 1;
@@ -224,11 +230,11 @@ public class Summary1 {
 	 */
 	public static final MMMessageAttribute mmExposureType = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.ExposureTerm.mmExposureType;
+			businessElementTrace_lazy = () -> ExposureTerm.mmExposureType;
 			componentContext_lazy = () -> Summary1.mmObject();
 			isDerived = false;
 			xmlTag = "XpsrTp";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ExposureType";
 			definition = "Specifies the underlying business area/type of trade that triggered the posting of collateral.";
 			maxOccurs = 1;
@@ -272,11 +278,11 @@ public class Summary1 {
 	 */
 	public static final MMMessageAttribute mmTotalValueOfCollateral = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.ExposureCalculation.mmTotalCollateralCurrentValue;
+			businessElementTrace_lazy = () -> ExposureCalculation.mmTotalCollateralCurrentValue;
 			componentContext_lazy = () -> Summary1.mmObject();
 			isDerived = false;
 			xmlTag = "TtlValOfColl";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "TotalValueOfCollateral";
 			definition = "Total value of the collateral (post-haircut) held by the exposed party";
 			maxOccurs = 1;
@@ -320,7 +326,7 @@ public class Summary1 {
 			componentContext_lazy = () -> Summary1.mmObject();
 			isDerived = false;
 			xmlTag = "NetXcssDfcit";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "NetExcessDeficit";
 			definition = "Specifies the amount of collateral in excess or deficit compared to the exposure.";
 			maxOccurs = 1;
@@ -364,7 +370,7 @@ public class Summary1 {
 			componentContext_lazy = () -> Summary1.mmObject();
 			isDerived = false;
 			xmlTag = "NetXcssDfcitInd";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "NetExcessDeficitIndicator";
 			definition = "Indicates whether the collateral actually posted is a long or a short position.";
 			maxOccurs = 1;
@@ -406,11 +412,11 @@ public class Summary1 {
 	 */
 	public static final MMMessageAttribute mmValuationDateTime = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.MarginCall.mmMarginCallValuationDate;
+			businessElementTrace_lazy = () -> MarginCall.mmMarginCallValuationDate;
 			componentContext_lazy = () -> Summary1.mmObject();
 			isDerived = false;
 			xmlTag = "ValtnDtTm";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ValuationDateTime";
 			definition = "Date/time at which the collateral was valued.";
 			maxOccurs = 1;
@@ -455,11 +461,11 @@ public class Summary1 {
 	 */
 	public static final MMMessageAttribute mmRequestedSettlementDate = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Obligation.mmRequestedSettlementDate;
+			businessElementTrace_lazy = () -> Obligation.mmRequestedSettlementDate;
 			componentContext_lazy = () -> Summary1.mmObject();
 			isDerived = false;
 			xmlTag = "ReqdSttlmDt";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "RequestedSettlementDate";
 			definition = "Date on which the instructing party requests settlement of the collateral to take place.";
 			maxOccurs = 1;
@@ -501,7 +507,7 @@ public class Summary1 {
 			componentContext_lazy = () -> Summary1.mmObject();
 			isDerived = false;
 			xmlTag = "SummryDtls";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SummaryDetails";
 			definition = "Provides the more details on the valuation of the collateral that is posted.";
 			maxOccurs = 1;
@@ -514,11 +520,10 @@ public class Summary1 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.Summary1.mmExposedAmountPartyA, com.tools20022.repository.msg.Summary1.mmExposedAmountPartyB, com.tools20022.repository.msg.Summary1.mmExposureType,
-						com.tools20022.repository.msg.Summary1.mmTotalValueOfCollateral, com.tools20022.repository.msg.Summary1.mmNetExcessDeficit, com.tools20022.repository.msg.Summary1.mmNetExcessDeficitIndicator,
-						com.tools20022.repository.msg.Summary1.mmValuationDateTime, com.tools20022.repository.msg.Summary1.mmRequestedSettlementDate, com.tools20022.repository.msg.Summary1.mmSummaryDetails);
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				messageElement_lazy = () -> Arrays.asList(Summary1.mmExposedAmountPartyA, Summary1.mmExposedAmountPartyB, Summary1.mmExposureType, Summary1.mmTotalValueOfCollateral, Summary1.mmNetExcessDeficit,
+						Summary1.mmNetExcessDeficitIndicator, Summary1.mmValuationDateTime, Summary1.mmRequestedSettlementDate, Summary1.mmSummaryDetails);
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "Summary1";
 				definition = "Provides information related to the collateral position, that is, the identification of the exposed party, the total exposure amount and the total collateral amount held by the taker. It also contains the valuation dates and the requested settlement date of collateral if there is a shortage of collateral.";
 			}

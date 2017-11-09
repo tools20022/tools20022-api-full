@@ -19,13 +19,15 @@ package com.tools20022.repository.msg;
 
 import com.tools20022.metamodel.MMMessageAttribute;
 import com.tools20022.metamodel.MMMessageComponent;
+import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.choice.BeneficiaryCertificationType1FormatChoice;
 import com.tools20022.repository.choice.PartyIdentification2Choice;
 import com.tools20022.repository.choice.UnitOrFaceAmount1Choice;
 import com.tools20022.repository.codeset.CountryCode;
 import com.tools20022.repository.datatype.Max350Text;
 import com.tools20022.repository.datatype.YesNoIndicator;
-import com.tools20022.repository.entity.BeneficialOwner;
+import com.tools20022.repository.entity.*;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -145,14 +147,14 @@ public class BeneficialOwner1 {
 	 */
 	public static final MMMessageAttribute mmBeneficialOwnerIdentification = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Party.mmIdentification;
+			businessElementTrace_lazy = () -> Party.mmIdentification;
 			componentContext_lazy = () -> BeneficialOwner1.mmObject();
 			isDerived = false;
 			xmlTag = "BnfclOwnrId";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "BeneficialOwnerIdentification";
 			definition = "Identification of the party that is the beneficial owner of the specified securities.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.BeneficialOwner2.mmBeneficialOwnerIdentification);
+			nextVersions_lazy = () -> Arrays.asList(BeneficialOwner2.mmBeneficialOwnerIdentification);
 			maxOccurs = 1;
 			minOccurs = 1;
 			complexType_lazy = () -> PartyIdentification2Choice.mmObject();
@@ -205,14 +207,14 @@ public class BeneficialOwner1 {
 	 */
 	public static final MMMessageAttribute mmAdditionalIdentification = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.PartyIdentificationInformation.mmOtherIdentification;
+			businessElementTrace_lazy = () -> PartyIdentificationInformation.mmOtherIdentification;
 			componentContext_lazy = () -> BeneficialOwner1.mmObject();
 			isDerived = false;
 			xmlTag = "AddtlId";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AdditionalIdentification";
 			definition = "Additional identification of the party that is the beneficial owner of the specified securities.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.BeneficialOwner2.mmAdditionalIdentification);
+			nextVersions_lazy = () -> Arrays.asList(BeneficialOwner2.mmAdditionalIdentification);
 			maxOccurs = 1;
 			minOccurs = 0;
 			complexType_lazy = () -> com.tools20022.repository.msg.GenericIdentification16.mmObject();
@@ -261,14 +263,14 @@ public class BeneficialOwner1 {
 	 */
 	public static final MMMessageAttribute mmNationality = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Country.mmCode;
+			businessElementTrace_lazy = () -> Country.mmCode;
 			componentContext_lazy = () -> BeneficialOwner1.mmObject();
 			isDerived = false;
 			xmlTag = "Ntlty";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Nationality";
 			definition = "Nationality of the beneficial owner.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.BeneficialOwner2.mmNationality);
+			nextVersions_lazy = () -> Arrays.asList(BeneficialOwner2.mmNationality);
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> CountryCode.mmObject();
@@ -320,14 +322,14 @@ public class BeneficialOwner1 {
 	 */
 	public static final MMMessageAttribute mmDomicileCountry = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Party.mmDomicile;
+			businessElementTrace_lazy = () -> Party.mmDomicile;
 			componentContext_lazy = () -> BeneficialOwner1.mmObject();
 			isDerived = false;
 			xmlTag = "DmclCtry";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "DomicileCountry";
 			definition = "Country in which a person is permanently domiciled (the place of a persons permanent home).";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.BeneficialOwner2.mmDomicileCountry);
+			nextVersions_lazy = () -> Arrays.asList(BeneficialOwner2.mmDomicileCountry);
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> CountryCode.mmObject();
@@ -379,14 +381,14 @@ public class BeneficialOwner1 {
 	 */
 	public static final MMMessageAttribute mmNonDomicileCountry = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.BeneficialOwner.mmNonDomicileCountry;
+			businessElementTrace_lazy = () -> BeneficialOwner.mmNonDomicileCountry;
 			componentContext_lazy = () -> BeneficialOwner1.mmObject();
 			isDerived = false;
 			xmlTag = "NonDmclCtry";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "NonDomicileCountry";
 			definition = "The holder of the security has to certify, in line with the terms of the corporate action, that it is not domiciled in the country indicated.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.BeneficialOwner2.mmNonDomicileCountry);
+			nextVersions_lazy = () -> Arrays.asList(BeneficialOwner2.mmNonDomicileCountry);
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> CountryCode.mmObject();
@@ -439,14 +441,14 @@ public class BeneficialOwner1 {
 	 */
 	public static final MMMessageAttribute mmCertificationIndicator = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.BeneficialOwner.mmCertificationIndicator;
+			businessElementTrace_lazy = () -> BeneficialOwner.mmCertificationIndicator;
 			componentContext_lazy = () -> BeneficialOwner1.mmObject();
 			isDerived = false;
 			xmlTag = "CertfctnInd";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CertificationIndicator";
 			definition = "Whether or not certification is required from the account owner. \nYes: certification required \nNo: no certification required";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.BeneficialOwner2.mmCertificationIndicator);
+			nextVersions_lazy = () -> Arrays.asList(BeneficialOwner2.mmCertificationIndicator);
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> YesNoIndicator.mmObject();
@@ -496,14 +498,14 @@ public class BeneficialOwner1 {
 	 */
 	public static final MMMessageAttribute mmCertificationType = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.BeneficialOwner.mmCertificationType;
+			businessElementTrace_lazy = () -> BeneficialOwner.mmCertificationType;
 			componentContext_lazy = () -> BeneficialOwner1.mmObject();
 			isDerived = false;
 			xmlTag = "CertfctnTp";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CertificationType";
 			definition = "Type of certification which is required.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.BeneficialOwner2.mmCertificationType);
+			nextVersions_lazy = () -> Arrays.asList(BeneficialOwner2.mmCertificationType);
 			maxOccurs = 1;
 			minOccurs = 0;
 			complexType_lazy = () -> BeneficiaryCertificationType1FormatChoice.mmObject();
@@ -555,14 +557,14 @@ public class BeneficialOwner1 {
 	 */
 	public static final MMMessageAttribute mmDeclarationDetails = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Security.mmDeclarationDetails;
+			businessElementTrace_lazy = () -> Security.mmDeclarationDetails;
 			componentContext_lazy = () -> BeneficialOwner1.mmObject();
 			isDerived = false;
 			xmlTag = "DclrtnDtls";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "DeclarationDetails";
 			definition = "Provides declaration details narrative relative to the financial instrument, eg, beneficial ownership.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.BeneficialOwner2.mmDeclarationDetails);
+			nextVersions_lazy = () -> Arrays.asList(BeneficialOwner2.mmDeclarationDetails);
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> Max350Text.mmObject();
@@ -604,11 +606,11 @@ public class BeneficialOwner1 {
 	 */
 	public static final MMMessageAttribute mmSecurityIdentification = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Security.mmIdentification;
+			businessElementTrace_lazy = () -> Security.mmIdentification;
 			componentContext_lazy = () -> BeneficialOwner1.mmObject();
 			isDerived = false;
 			xmlTag = "SctyId";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SecurityIdentification";
 			definition = "Identification of the financial instrument.";
 			maxOccurs = 1;
@@ -653,11 +655,11 @@ public class BeneficialOwner1 {
 	 */
 	public static final MMMessageAttribute mmElectedSecuritiesQuantity = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Security.mmSecuritiesQuantity;
+			businessElementTrace_lazy = () -> Security.mmSecuritiesQuantity;
 			componentContext_lazy = () -> BeneficialOwner1.mmObject();
 			isDerived = false;
 			xmlTag = "ElctdSctiesQty";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ElectedSecuritiesQuantity";
 			definition = "Quantity of securities elected by to the beneficial owner.";
 			maxOccurs = 1;
@@ -669,13 +671,12 @@ public class BeneficialOwner1 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.BeneficialOwner1.mmBeneficialOwnerIdentification, com.tools20022.repository.msg.BeneficialOwner1.mmAdditionalIdentification,
-						com.tools20022.repository.msg.BeneficialOwner1.mmNationality, com.tools20022.repository.msg.BeneficialOwner1.mmDomicileCountry, com.tools20022.repository.msg.BeneficialOwner1.mmNonDomicileCountry,
-						com.tools20022.repository.msg.BeneficialOwner1.mmCertificationIndicator, com.tools20022.repository.msg.BeneficialOwner1.mmCertificationType, com.tools20022.repository.msg.BeneficialOwner1.mmDeclarationDetails,
-						com.tools20022.repository.msg.BeneficialOwner1.mmSecurityIdentification, com.tools20022.repository.msg.BeneficialOwner1.mmElectedSecuritiesQuantity);
+				messageElement_lazy = () -> Arrays.asList(BeneficialOwner1.mmBeneficialOwnerIdentification, BeneficialOwner1.mmAdditionalIdentification, BeneficialOwner1.mmNationality, BeneficialOwner1.mmDomicileCountry,
+						BeneficialOwner1.mmNonDomicileCountry, BeneficialOwner1.mmCertificationIndicator, BeneficialOwner1.mmCertificationType, BeneficialOwner1.mmDeclarationDetails, BeneficialOwner1.mmSecurityIdentification,
+						BeneficialOwner1.mmElectedSecuritiesQuantity);
 				trace_lazy = () -> BeneficialOwner.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "BeneficialOwner1";
 				definition = "Provides information about the beneficial owner of the securities.";
 				nextVersions_lazy = () -> Arrays.asList(BeneficialOwner2.mmObject());

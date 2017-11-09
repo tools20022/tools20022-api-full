@@ -19,8 +19,14 @@ package com.tools20022.repository.entity;
 
 import com.tools20022.metamodel.MMBusinessAttribute;
 import com.tools20022.metamodel.MMBusinessComponent;
+import com.tools20022.metamodel.MMRegistrationStatus;
+import com.tools20022.repository.choice.MarginTerms1Choice;
 import com.tools20022.repository.codeset.IndependentAmountConventionTypeCode;
 import com.tools20022.repository.entity.ExposureTerm;
+import com.tools20022.repository.GeneratedRepository;
+import com.tools20022.repository.msg.IndependentAmount1;
+import com.tools20022.repository.msg.IndependentAmount2;
+import com.tools20022.repository.msg.Margin1;
 import com.tools20022.repository.msg.SegregatedIndependentAmountMargin1;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
@@ -35,12 +41,13 @@ import java.util.concurrent.atomic.AtomicReference;
  * <p>
  * <strong>Constant fields:</strong>
  * <ul>
- * <li>{@linkplain com.tools20022.metamodel.MMBusinessComponent#getElement
- * element} =
+ * <li>
+ * {@linkplain com.tools20022.metamodel.MMBusinessComponent#getDerivationComponent
+ * derivationComponent} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.entity.IndependentAmountTerm#mmConvention
- * IndependentAmountTerm.mmConvention}</li>
+ * {@linkplain com.tools20022.repository.msg.SegregatedIndependentAmountMargin1
+ * SegregatedIndependentAmountMargin1}</li>
  * </ul>
  * </li>
  * <li>
@@ -58,13 +65,12 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>{@linkplain com.tools20022.metamodel.MMBusinessComponent#getSuperType
  * superType} = {@linkplain com.tools20022.repository.entity.ExposureTerm
  * ExposureTerm}</li>
- * <li>
- * {@linkplain com.tools20022.metamodel.MMBusinessComponent#getDerivationComponent
- * derivationComponent} =
+ * <li>{@linkplain com.tools20022.metamodel.MMBusinessComponent#getElement
+ * element} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.msg.SegregatedIndependentAmountMargin1
- * SegregatedIndependentAmountMargin1}</li>
+ * {@linkplain com.tools20022.repository.entity.IndependentAmountTerm#mmConvention
+ * IndependentAmountTerm.mmConvention}</li>
  * </ul>
  * </li>
  * <li>
@@ -135,10 +141,10 @@ public class IndependentAmountTerm extends ExposureTerm {
 	 */
 	public static final MMBusinessAttribute mmConvention = new MMBusinessAttribute() {
 		{
-			derivation_lazy = () -> Arrays.asList(com.tools20022.repository.msg.IndependentAmount1.mmConvention, com.tools20022.repository.msg.IndependentAmount2.mmConvention);
+			derivation_lazy = () -> Arrays.asList(IndependentAmount1.mmConvention, IndependentAmount2.mmConvention);
 			elementContext_lazy = () -> IndependentAmountTerm.mmObject();
 			isDerived = false;
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Convention";
 			definition = "Determines how the independent amount was applied in the calculation. \r\r\nIt is either:\r\r\n- Before threshold, effectively acting as an add on to exposure, \r\r\n- After threshold where the amount is an add on to the credit support amount and forms part of the variation margin requirement,\r\r\n- Segregated where it is treated independently of variation margin for segregation purposes.Defines the specific terms used to calculate an independent amount.";
 			maxOccurs = 1;
@@ -150,13 +156,13 @@ public class IndependentAmountTerm extends ExposureTerm {
 	static public MMBusinessComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMBusinessComponent() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 				name = "IndependentAmountTerm";
 				definition = "Defines the specific terms used to calculate an independent amount.";
-				derivationElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.Margin1.mmSegregatedIndependentAmountMargin, com.tools20022.repository.choice.MarginTerms1Choice.mmSegregatedIndependentAmountMargin);
+				derivationElement_lazy = () -> Arrays.asList(Margin1.mmSegregatedIndependentAmountMargin, MarginTerms1Choice.mmSegregatedIndependentAmountMargin);
 				superType_lazy = () -> ExposureTerm.mmObject();
-				element_lazy = () -> Arrays.asList(com.tools20022.repository.entity.IndependentAmountTerm.mmConvention);
+				element_lazy = () -> Arrays.asList(IndependentAmountTerm.mmConvention);
 				derivationComponent_lazy = () -> Arrays.asList(SegregatedIndependentAmountMargin1.mmObject());
 			}
 		});

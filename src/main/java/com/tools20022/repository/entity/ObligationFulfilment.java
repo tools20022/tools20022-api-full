@@ -17,10 +17,11 @@
 
 package com.tools20022.repository.entity;
 
-import com.tools20022.metamodel.MMBusinessAssociationEnd;
-import com.tools20022.metamodel.MMBusinessAttribute;
-import com.tools20022.metamodel.MMBusinessComponent;
+import com.tools20022.metamodel.*;
+import com.tools20022.repository.choice.PaymentCodeOrOther1Choice;
 import com.tools20022.repository.datatype.ISODate;
+import com.tools20022.repository.GeneratedRepository;
+import com.tools20022.repository.msg.*;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.List;
@@ -34,17 +35,15 @@ import java.util.List;
  * <p>
  * <strong>Constant fields:</strong>
  * <ul>
- * <li>{@linkplain com.tools20022.metamodel.MMBusinessComponent#getElement
- * element} =
+ * <li>
+ * {@linkplain com.tools20022.metamodel.MMBusinessComponent#getAssociationDomain
+ * associationDomain} =
  * <ul>
- * <li>{@linkplain com.tools20022.repository.entity.ObligationFulfilment#mmDate
- * ObligationFulfilment.mmDate}</li>
+ * <li>{@linkplain com.tools20022.repository.entity.Obligation#mmOffset
+ * Obligation.mmOffset}</li>
  * <li>
- * {@linkplain com.tools20022.repository.entity.ObligationFulfilment#mmObligationOffset
- * ObligationFulfilment.mmObligationOffset}</li>
- * <li>
- * {@linkplain com.tools20022.repository.entity.ObligationFulfilment#mmResultingObligation
- * ObligationFulfilment.mmResultingObligation}</li>
+ * {@linkplain com.tools20022.repository.entity.Obligation#mmOriginalObligationProcess
+ * Obligation.mmOriginalObligationProcess}</li>
  * </ul>
  * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMBusinessComponent#getSubType
@@ -63,15 +62,17 @@ import java.util.List;
  * <li>{@linkplain com.tools20022.repository.entity.Novation Novation}</li>
  * </ul>
  * </li>
- * <li>
- * {@linkplain com.tools20022.metamodel.MMBusinessComponent#getAssociationDomain
- * associationDomain} =
+ * <li>{@linkplain com.tools20022.metamodel.MMBusinessComponent#getElement
+ * element} =
  * <ul>
- * <li>{@linkplain com.tools20022.repository.entity.Obligation#mmOffset
- * Obligation.mmOffset}</li>
+ * <li>{@linkplain com.tools20022.repository.entity.ObligationFulfilment#mmDate
+ * ObligationFulfilment.mmDate}</li>
  * <li>
- * {@linkplain com.tools20022.repository.entity.Obligation#mmOriginalObligationProcess
- * Obligation.mmOriginalObligationProcess}</li>
+ * {@linkplain com.tools20022.repository.entity.ObligationFulfilment#mmObligationOffset
+ * ObligationFulfilment.mmObligationOffset}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.entity.ObligationFulfilment#mmResultingObligation
+ * ObligationFulfilment.mmResultingObligation}</li>
  * </ul>
  * </li>
  * <li>
@@ -240,23 +241,16 @@ public class ObligationFulfilment {
 	 */
 	public static final MMBusinessAttribute mmDate = new MMBusinessAttribute() {
 		{
-			derivation_lazy = () -> Arrays.asList(com.tools20022.repository.msg.Transfer4.mmEffectiveTransferDate, com.tools20022.repository.msg.Transfer7.mmEffectiveTransferDate,
-					com.tools20022.repository.msg.Transfer17.mmEffectiveTransferDate, com.tools20022.repository.msg.Transfer2.mmEffectiveTransferDate, com.tools20022.repository.msg.Transfer10.mmEffectiveTransferDate,
-					com.tools20022.repository.msg.Transfer14.mmEffectiveTransferDate, com.tools20022.repository.msg.Transfer24.mmEffectiveTransferDate, com.tools20022.repository.msg.Transfer25.mmEffectiveTransferDate,
-					com.tools20022.repository.msg.Transfer18.mmEffectiveTransferDate, com.tools20022.repository.msg.Transfer26.mmEffectiveTransferDate, com.tools20022.repository.msg.Transfer13.mmEffectiveTransferDate,
-					com.tools20022.repository.msg.Transfer23.mmEffectiveTransferDate, com.tools20022.repository.msg.TradeDelivery1.mmDeliveryDateTime, com.tools20022.repository.msg.IntentToPay1.mmExpectedPaymentDate,
-					com.tools20022.repository.msg.ExpectedExecutionDetails3.mmPrepaymentDate, com.tools20022.repository.choice.PaymentCodeOrOther1Choice.mmPaymentDueDate, com.tools20022.repository.msg.Transfer28.mmEffectiveTransferDate,
-					com.tools20022.repository.msg.Transfer29.mmEffectiveTransferDate, com.tools20022.repository.msg.IntentToPay2.mmExpectedPaymentDate, com.tools20022.repository.msg.DetailedAmount6.mmDateTime,
-					com.tools20022.repository.msg.ReconciliationList1.mmPaymentDate, com.tools20022.repository.msg.ATMAccountStatement2.mmTransactionDate, com.tools20022.repository.msg.CardTransaction10.mmInitiatorTransactionDateTime,
-					com.tools20022.repository.msg.CardTransaction9.mmInitiatorTransactionDateTime, com.tools20022.repository.msg.CardTransactionDetail2.mmValidityDate, com.tools20022.repository.msg.CardTransactionDetail1.mmValidityDate,
-					com.tools20022.repository.msg.CardTransactionDetail4.mmValidityDate, com.tools20022.repository.msg.CardTransactionDetail3.mmValidityDate, com.tools20022.repository.msg.TransactionCertificate2.mmTransactionDate,
-					com.tools20022.repository.msg.CertificateReference1.mmDate, com.tools20022.repository.msg.Transfer31.mmEffectiveTransferDate, com.tools20022.repository.msg.Transfer31.mmAverageDate,
-					com.tools20022.repository.msg.Transfer31.mmNewAverageDate, com.tools20022.repository.msg.Transfer33.mmEffectiveTransferDate, com.tools20022.repository.msg.Transfer33.mmAverageDate,
-					com.tools20022.repository.msg.Transfer33.mmNewAverageDate, com.tools20022.repository.msg.DetailedAmount14.mmDateTime, com.tools20022.repository.msg.TradeDelivery2.mmDeliveryDateTime,
-					com.tools20022.repository.msg.MandateAuthentication1.mmDate);
+			derivation_lazy = () -> Arrays.asList(Transfer4.mmEffectiveTransferDate, Transfer7.mmEffectiveTransferDate, Transfer17.mmEffectiveTransferDate, Transfer2.mmEffectiveTransferDate, Transfer10.mmEffectiveTransferDate,
+					Transfer14.mmEffectiveTransferDate, Transfer24.mmEffectiveTransferDate, Transfer25.mmEffectiveTransferDate, Transfer18.mmEffectiveTransferDate, Transfer26.mmEffectiveTransferDate, Transfer13.mmEffectiveTransferDate,
+					Transfer23.mmEffectiveTransferDate, TradeDelivery1.mmDeliveryDateTime, IntentToPay1.mmExpectedPaymentDate, ExpectedExecutionDetails3.mmPrepaymentDate, PaymentCodeOrOther1Choice.mmPaymentDueDate,
+					Transfer28.mmEffectiveTransferDate, Transfer29.mmEffectiveTransferDate, IntentToPay2.mmExpectedPaymentDate, DetailedAmount6.mmDateTime, ReconciliationList1.mmPaymentDate, ATMAccountStatement2.mmTransactionDate,
+					CardTransaction10.mmInitiatorTransactionDateTime, CardTransaction9.mmInitiatorTransactionDateTime, CardTransactionDetail2.mmValidityDate, CardTransactionDetail1.mmValidityDate, CardTransactionDetail4.mmValidityDate,
+					CardTransactionDetail3.mmValidityDate, TransactionCertificate2.mmTransactionDate, CertificateReference1.mmDate, Transfer31.mmEffectiveTransferDate, Transfer31.mmAverageDate, Transfer31.mmNewAverageDate,
+					Transfer33.mmEffectiveTransferDate, Transfer33.mmAverageDate, Transfer33.mmNewAverageDate, DetailedAmount14.mmDateTime, TradeDelivery2.mmDeliveryDateTime, MandateAuthentication1.mmDate);
 			elementContext_lazy = () -> ObligationFulfilment.mmObject();
 			isDerived = false;
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "Date";
 			definition = "Date and time on which assets become available.";
 			maxOccurs = 1;
@@ -305,12 +299,12 @@ public class ObligationFulfilment {
 		{
 			elementContext_lazy = () -> ObligationFulfilment.mmObject();
 			isDerived = false;
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "ObligationOffset";
 			definition = "Specifies the obligation which has been offset for instance a payment obligation or a securities delivery.";
 			minOccurs = 0;
 			opposite_lazy = () -> com.tools20022.repository.entity.Obligation.mmOffset;
-			aggregation = com.tools20022.metamodel.MMAggregation.NONE;
+			aggregation = MMAggregation.NONE;
 			type_lazy = () -> com.tools20022.repository.entity.Obligation.mmObject();
 		}
 	};
@@ -355,12 +349,12 @@ public class ObligationFulfilment {
 		{
 			elementContext_lazy = () -> ObligationFulfilment.mmObject();
 			isDerived = false;
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "ResultingObligation";
 			definition = "Specifies the obligation which result from a settlement process, for instance the remaining obligation when the obligations are netted.";
 			minOccurs = 0;
 			opposite_lazy = () -> com.tools20022.repository.entity.Obligation.mmOriginalObligationProcess;
-			aggregation = com.tools20022.metamodel.MMAggregation.NONE;
+			aggregation = MMAggregation.NONE;
 			type_lazy = () -> com.tools20022.repository.entity.Obligation.mmObject();
 		}
 	};
@@ -368,15 +362,14 @@ public class ObligationFulfilment {
 	static public MMBusinessComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMBusinessComponent() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "ObligationFulfilment";
 				definition = "Processes by which an obligation is extinguished fully or partially.";
 				associationDomain_lazy = () -> Arrays.asList(com.tools20022.repository.entity.Obligation.mmOffset, com.tools20022.repository.entity.Obligation.mmOriginalObligationProcess);
 				subType_lazy = () -> Arrays.asList(Payment.mmObject(), SecuritiesTransfer.mmObject(), Clearing.mmObject(), ProductDelivery.mmObject(), BuyIn.mmObject(), PairOff.mmObject(), Netting.mmObject(), Rollover.mmObject(),
 						Novation.mmObject());
-				element_lazy = () -> Arrays.asList(com.tools20022.repository.entity.ObligationFulfilment.mmDate, com.tools20022.repository.entity.ObligationFulfilment.mmObligationOffset,
-						com.tools20022.repository.entity.ObligationFulfilment.mmResultingObligation);
+				element_lazy = () -> Arrays.asList(ObligationFulfilment.mmDate, ObligationFulfilment.mmObligationOffset, ObligationFulfilment.mmResultingObligation);
 			}
 		});
 		return mmObject_lazy.get();

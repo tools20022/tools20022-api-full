@@ -19,6 +19,8 @@ package com.tools20022.repository.codeset;
 
 import com.tools20022.metamodel.MMCode;
 import com.tools20022.metamodel.MMCodeSet;
+import com.tools20022.metamodel.MMRegistrationStatus;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -27,6 +29,13 @@ import java.util.concurrent.atomic.AtomicReference;
  * <p>
  * <strong>Constant fields:</strong>
  * <ul>
+ * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getDerivation derivation}
+ * =
+ * <ul>
+ * <li>{@linkplain com.tools20022.repository.codeset.AgreementFramework1Code
+ * AgreementFramework1Code}</li>
+ * </ul>
+ * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getCode code} =
  * <ul>
  * <li>
@@ -44,13 +53,6 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>
  * {@linkplain com.tools20022.repository.codeset.AgreementFrameworkCode#mmNoReference
  * AgreementFrameworkCode.mmNoReference}</li>
- * </ul>
- * </li>
- * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getDerivation derivation}
- * =
- * <ul>
- * <li>{@linkplain com.tools20022.repository.codeset.AgreementFramework1Code
- * AgreementFramework1Code}</li>
  * </ul>
  * </li>
  * <li>
@@ -100,7 +102,7 @@ public class AgreementFrameworkCode {
 	 */
 	public static final MMCode mmFBAAgreement = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "FBAAgreement";
 			definition = "French Banker's Association Agreement.";
 			owner_lazy = () -> AgreementFrameworkCode.mmObject();
@@ -130,7 +132,7 @@ public class AgreementFrameworkCode {
 	 */
 	public static final MMCode mmBBAAgreement = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "BBAAgreement";
 			definition = "British Banker's Association Agreement.";
 			owner_lazy = () -> AgreementFrameworkCode.mmObject();
@@ -160,7 +162,7 @@ public class AgreementFrameworkCode {
 	 */
 	public static final MMCode mmGermanRahmenvertragAgreement = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "GermanRahmenvertragAgreement";
 			definition = "German Rahmenvertrag Agreement.";
 			owner_lazy = () -> AgreementFrameworkCode.mmObject();
@@ -191,7 +193,7 @@ public class AgreementFrameworkCode {
 	 */
 	public static final MMCode mmISDAAgreement = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ISDAAgreement";
 			definition = "International Swaps and Derivatives Association Agreement.";
 			owner_lazy = () -> AgreementFrameworkCode.mmObject();
@@ -221,7 +223,7 @@ public class AgreementFrameworkCode {
 	 */
 	public static final MMCode mmNoReference = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "NoReference";
 			definition = "No information about the master agreement is available.";
 			owner_lazy = () -> AgreementFrameworkCode.mmObject();
@@ -232,14 +234,13 @@ public class AgreementFrameworkCode {
 	static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
 				example = Arrays.asList("FBAA");
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "AgreementFrameworkCode";
 				definition = "Specifies the agreement type details for the margin call.";
-				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.AgreementFrameworkCode.mmFBAAgreement, com.tools20022.repository.codeset.AgreementFrameworkCode.mmBBAAgreement,
-						com.tools20022.repository.codeset.AgreementFrameworkCode.mmGermanRahmenvertragAgreement, com.tools20022.repository.codeset.AgreementFrameworkCode.mmISDAAgreement,
-						com.tools20022.repository.codeset.AgreementFrameworkCode.mmNoReference);
+				code_lazy = () -> Arrays.asList(AgreementFrameworkCode.mmFBAAgreement, AgreementFrameworkCode.mmBBAAgreement, AgreementFrameworkCode.mmGermanRahmenvertragAgreement, AgreementFrameworkCode.mmISDAAgreement,
+						AgreementFrameworkCode.mmNoReference);
 				derivation_lazy = () -> Arrays.asList(AgreementFramework1Code.mmObject());
 			}
 		});

@@ -20,9 +20,11 @@ package com.tools20022.repository.choice;
 import com.tools20022.metamodel.MMChoiceComponent;
 import com.tools20022.metamodel.MMMessageAssociationEnd;
 import com.tools20022.metamodel.MMMessageAttribute;
+import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.datatype.ActiveCurrencyAnd13DecimalAmount;
 import com.tools20022.repository.datatype.PercentageRate;
 import com.tools20022.repository.entity.Interest;
+import com.tools20022.repository.GeneratedRepository;
 import com.tools20022.repository.msg.RateTypeAndAmountAndStatus24;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
@@ -112,14 +114,14 @@ public class InterestRateUsedForPaymentFormat7Choice {
 	 */
 	public static final MMMessageAttribute mmRate = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Interest.mmRate;
+			businessElementTrace_lazy = () -> Interest.mmRate;
 			componentContext_lazy = () -> InterestRateUsedForPaymentFormat7Choice.mmObject();
 			isDerived = false;
 			xmlTag = "Rate";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Rate";
 			definition = "Value is expressed as a rate.";
-			previousVersion_lazy = () -> com.tools20022.repository.choice.InterestRateUsedForPaymentFormat2Choice.mmRate;
+			previousVersion_lazy = () -> InterestRateUsedForPaymentFormat2Choice.mmRate;
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> PercentageRate.mmObject();
@@ -166,14 +168,14 @@ public class InterestRateUsedForPaymentFormat7Choice {
 	 */
 	public static final MMMessageAttribute mmAmount = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Interest.mmAmount;
+			businessElementTrace_lazy = () -> Interest.mmAmount;
 			componentContext_lazy = () -> InterestRateUsedForPaymentFormat7Choice.mmObject();
 			isDerived = false;
 			xmlTag = "Amt";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Amount";
 			definition = "Number of monetary units specified in a currency.";
-			previousVersion_lazy = () -> com.tools20022.repository.choice.InterestRateUsedForPaymentFormat2Choice.mmAmount;
+			previousVersion_lazy = () -> InterestRateUsedForPaymentFormat2Choice.mmAmount;
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> ActiveCurrencyAnd13DecimalAmount.mmObject();
@@ -224,10 +226,10 @@ public class InterestRateUsedForPaymentFormat7Choice {
 			componentContext_lazy = () -> InterestRateUsedForPaymentFormat7Choice.mmObject();
 			isDerived = false;
 			xmlTag = "RateTpAndAmtAndRateSts";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "RateTypeAndAmountAndRateStatus";
 			definition = "Specifies different formats for interest rate used for payment.";
-			previousVersion_lazy = () -> com.tools20022.repository.choice.InterestRateUsedForPaymentFormat2Choice.mmRateTypeAndAmountAndRateStatus;
+			previousVersion_lazy = () -> InterestRateUsedForPaymentFormat2Choice.mmRateTypeAndAmountAndRateStatus;
 			maxOccurs = 1;
 			minOccurs = 1;
 			isComposite = true;
@@ -238,11 +240,10 @@ public class InterestRateUsedForPaymentFormat7Choice {
 	final static public MMChoiceComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMChoiceComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.choice.InterestRateUsedForPaymentFormat7Choice.mmRate, com.tools20022.repository.choice.InterestRateUsedForPaymentFormat7Choice.mmAmount,
-						com.tools20022.repository.choice.InterestRateUsedForPaymentFormat7Choice.mmRateTypeAndAmountAndRateStatus);
+				messageElement_lazy = () -> Arrays.asList(InterestRateUsedForPaymentFormat7Choice.mmRate, InterestRateUsedForPaymentFormat7Choice.mmAmount, InterestRateUsedForPaymentFormat7Choice.mmRateTypeAndAmountAndRateStatus);
 				trace_lazy = () -> Interest.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "InterestRateUsedForPaymentFormat7Choice";
 				definition = "Choice between an amount or a rate.";
 				previousVersion_lazy = () -> InterestRateUsedForPaymentFormat2Choice.mmObject();

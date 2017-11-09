@@ -17,15 +17,12 @@
 
 package com.tools20022.repository.entity;
 
-import com.tools20022.metamodel.MMBusinessAssociationEnd;
-import com.tools20022.metamodel.MMBusinessAttribute;
-import com.tools20022.metamodel.MMBusinessComponent;
+import com.tools20022.metamodel.*;
 import com.tools20022.repository.choice.MarketInfrastructureIdentification1Choice;
 import com.tools20022.repository.datatype.Max35Text;
 import com.tools20022.repository.datatype.Max70Text;
-import com.tools20022.repository.msg.AutomatedTellerMachine10;
-import com.tools20022.repository.msg.AutomatedTellerMachine3;
-import com.tools20022.repository.msg.AutomatedTellerMachine4;
+import com.tools20022.repository.GeneratedRepository;
+import com.tools20022.repository.msg.*;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.List;
@@ -39,30 +36,19 @@ import java.util.List;
  * <p>
  * <strong>Constant fields:</strong>
  * <ul>
- * <li>{@linkplain com.tools20022.metamodel.MMBusinessComponent#getElement
- * element} =
+ * <li>
+ * {@linkplain com.tools20022.metamodel.MMBusinessComponent#getDerivationComponent
+ * derivationComponent} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.entity.SystemIdentification#mmIdentificationForSystem
- * SystemIdentification.mmIdentificationForSystem}</li>
- * <li>
- * {@linkplain com.tools20022.repository.entity.SystemIdentification#mmModel
- * SystemIdentification.mmModel}</li>
- * <li>
- * {@linkplain com.tools20022.repository.entity.SystemIdentification#mmSerialNumber
- * SystemIdentification.mmSerialNumber}</li>
- * <li>
- * {@linkplain com.tools20022.repository.entity.SystemIdentification#mmApprovalNumber
- * SystemIdentification.mmApprovalNumber}</li>
- * <li>
- * {@linkplain com.tools20022.repository.entity.SystemIdentification#mmSystemVersion
- * SystemIdentification.mmSystemVersion}</li>
- * <li>
- * {@linkplain com.tools20022.repository.entity.SystemIdentification#mmSystemName
- * SystemIdentification.mmSystemName}</li>
- * <li>
- * {@linkplain com.tools20022.repository.entity.SystemIdentification#mmIdentification
- * SystemIdentification.mmIdentification}</li>
+ * {@linkplain com.tools20022.repository.choice.MarketInfrastructureIdentification1Choice
+ * MarketInfrastructureIdentification1Choice}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.AutomatedTellerMachine3
+ * AutomatedTellerMachine3}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.AutomatedTellerMachine4
+ * AutomatedTellerMachine4}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.AutomatedTellerMachine10
+ * AutomatedTellerMachine10}</li>
  * </ul>
  * </li>
  * <li>
@@ -92,19 +78,30 @@ import java.util.List;
  * MarketInfrastructureIdentification1Choice.mmProprietary}</li>
  * </ul>
  * </li>
- * <li>
- * {@linkplain com.tools20022.metamodel.MMBusinessComponent#getDerivationComponent
- * derivationComponent} =
+ * <li>{@linkplain com.tools20022.metamodel.MMBusinessComponent#getElement
+ * element} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.choice.MarketInfrastructureIdentification1Choice
- * MarketInfrastructureIdentification1Choice}</li>
- * <li>{@linkplain com.tools20022.repository.msg.AutomatedTellerMachine3
- * AutomatedTellerMachine3}</li>
- * <li>{@linkplain com.tools20022.repository.msg.AutomatedTellerMachine4
- * AutomatedTellerMachine4}</li>
- * <li>{@linkplain com.tools20022.repository.msg.AutomatedTellerMachine10
- * AutomatedTellerMachine10}</li>
+ * {@linkplain com.tools20022.repository.entity.SystemIdentification#mmIdentificationForSystem
+ * SystemIdentification.mmIdentificationForSystem}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.entity.SystemIdentification#mmModel
+ * SystemIdentification.mmModel}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.entity.SystemIdentification#mmSerialNumber
+ * SystemIdentification.mmSerialNumber}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.entity.SystemIdentification#mmApprovalNumber
+ * SystemIdentification.mmApprovalNumber}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.entity.SystemIdentification#mmSystemVersion
+ * SystemIdentification.mmSystemVersion}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.entity.SystemIdentification#mmSystemName
+ * SystemIdentification.mmSystemName}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.entity.SystemIdentification#mmIdentification
+ * SystemIdentification.mmIdentification}</li>
  * </ul>
  * </li>
  * <li>
@@ -174,17 +171,16 @@ public class SystemIdentification {
 	 */
 	public static final MMBusinessAssociationEnd mmIdentificationForSystem = new MMBusinessAssociationEnd() {
 		{
-			derivation_lazy = () -> Arrays.asList(com.tools20022.repository.msg.AutomatedTellerMachine3.mmIdentification, com.tools20022.repository.msg.AutomatedTellerMachine4.mmIdentification,
-					com.tools20022.repository.msg.AutomatedTellerMachine10.mmIdentification);
+			derivation_lazy = () -> Arrays.asList(AutomatedTellerMachine3.mmIdentification, AutomatedTellerMachine4.mmIdentification, AutomatedTellerMachine10.mmIdentification);
 			elementContext_lazy = () -> SystemIdentification.mmObject();
 			isDerived = false;
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "IdentificationForSystem";
 			definition = "System which is identified.";
 			maxOccurs = 1;
 			minOccurs = 0;
 			opposite_lazy = () -> com.tools20022.repository.entity.System.mmSystemIdentification;
-			aggregation = com.tools20022.metamodel.MMAggregation.NONE;
+			aggregation = MMAggregation.NONE;
 			type_lazy = () -> com.tools20022.repository.entity.System.mmObject();
 		}
 	};
@@ -227,10 +223,10 @@ public class SystemIdentification {
 	 */
 	public static final MMBusinessAttribute mmModel = new MMBusinessAttribute() {
 		{
-			derivation_lazy = () -> Arrays.asList(com.tools20022.repository.msg.PointOfInteractionComponent1.mmModel, com.tools20022.repository.msg.PointOfInteractionComponent2.mmModel);
+			derivation_lazy = () -> Arrays.asList(PointOfInteractionComponent1.mmModel, PointOfInteractionComponent2.mmModel);
 			elementContext_lazy = () -> SystemIdentification.mmObject();
 			isDerived = false;
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "Model";
 			definition = "Identification of a model for a given manufacturer.";
 			maxOccurs = 1;
@@ -280,11 +276,10 @@ public class SystemIdentification {
 	 */
 	public static final MMBusinessAttribute mmSerialNumber = new MMBusinessAttribute() {
 		{
-			derivation_lazy = () -> Arrays.asList(com.tools20022.repository.msg.PointOfInteractionComponent1.mmSerialNumber, com.tools20022.repository.msg.PointOfInteractionComponent2.mmSerialNumber,
-					com.tools20022.repository.msg.PointOfInteractionComponentIdentification1.mmSerialNumber);
+			derivation_lazy = () -> Arrays.asList(PointOfInteractionComponent1.mmSerialNumber, PointOfInteractionComponent2.mmSerialNumber, PointOfInteractionComponentIdentification1.mmSerialNumber);
 			elementContext_lazy = () -> SystemIdentification.mmObject();
 			isDerived = false;
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "SerialNumber";
 			definition = "Serial number of a component.";
 			maxOccurs = 1;
@@ -334,10 +329,10 @@ public class SystemIdentification {
 	 */
 	public static final MMBusinessAttribute mmApprovalNumber = new MMBusinessAttribute() {
 		{
-			derivation_lazy = () -> Arrays.asList(com.tools20022.repository.msg.PointOfInteractionComponent1.mmApprovalNumber, com.tools20022.repository.msg.PointOfInteractionComponent2.mmApprovalNumber);
+			derivation_lazy = () -> Arrays.asList(PointOfInteractionComponent1.mmApprovalNumber, PointOfInteractionComponent2.mmApprovalNumber);
 			elementContext_lazy = () -> SystemIdentification.mmObject();
 			isDerived = false;
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "ApprovalNumber";
 			definition = "Unique approval number for a component, delivered by a certification body.";
 			maxOccurs = 1;
@@ -391,11 +386,11 @@ public class SystemIdentification {
 	 */
 	public static final MMBusinessAttribute mmSystemVersion = new MMBusinessAttribute() {
 		{
-			derivation_lazy = () -> Arrays.asList(com.tools20022.repository.msg.PointOfInteractionComponent2.mmVersionNumber, com.tools20022.repository.msg.PointOfInteractionComponentStatus1.mmVersionNumber,
-					com.tools20022.repository.msg.PointOfInteractionComponentStatus2.mmVersionNumber, com.tools20022.repository.msg.PointOfInteractionComponentStatus3.mmVersionNumber);
+			derivation_lazy = () -> Arrays.asList(PointOfInteractionComponent2.mmVersionNumber, PointOfInteractionComponentStatus1.mmVersionNumber, PointOfInteractionComponentStatus2.mmVersionNumber,
+					PointOfInteractionComponentStatus3.mmVersionNumber);
 			elementContext_lazy = () -> SystemIdentification.mmObject();
 			isDerived = false;
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "SystemVersion";
 			definition = "Version of the system, eg, \"4.0.1\" to indicate version 4.0.1.";
 			maxOccurs = 1;
@@ -453,16 +448,15 @@ public class SystemIdentification {
 	 */
 	public static final MMBusinessAssociationEnd mmSystemName = new MMBusinessAssociationEnd() {
 		{
-			derivation_lazy = () -> Arrays.asList(com.tools20022.repository.msg.AutomatedTellerMachine3.mmSequenceNumber, com.tools20022.repository.msg.AutomatedTellerMachine4.mmSequenceNumber,
-					com.tools20022.repository.msg.AutomatedTellerMachine10.mmSequenceNumber);
+			derivation_lazy = () -> Arrays.asList(AutomatedTellerMachine3.mmSequenceNumber, AutomatedTellerMachine4.mmSequenceNumber, AutomatedTellerMachine10.mmSequenceNumber);
 			elementContext_lazy = () -> SystemIdentification.mmObject();
 			isDerived = false;
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "SystemName";
 			definition = "Name by which a system is known.";
 			minOccurs = 0;
 			opposite_lazy = () -> com.tools20022.repository.entity.SystemName.mmSystemIdentification;
-			aggregation = com.tools20022.metamodel.MMAggregation.NONE;
+			aggregation = MMAggregation.NONE;
 			type_lazy = () -> com.tools20022.repository.entity.SystemName.mmObject();
 		}
 	};
@@ -568,24 +562,19 @@ public class SystemIdentification {
 	 */
 	public static final MMBusinessAssociationEnd mmIdentification = new MMBusinessAssociationEnd() {
 		{
-			derivation_lazy = () -> Arrays.asList(com.tools20022.repository.msg.ManagementPlan1.mmPOIIdentification, com.tools20022.repository.msg.ManagementPlan1.mmTerminalManagerIdentification,
-					com.tools20022.repository.msg.ManagementPlan2.mmPOIIdentification, com.tools20022.repository.msg.ManagementPlan2.mmTerminalManagerIdentification,
-					com.tools20022.repository.msg.CardPaymentTransaction17.mmPOIIdentification, com.tools20022.repository.msg.ManagementPlan3.mmPOIIdentification,
-					com.tools20022.repository.msg.ManagementPlan3.mmTerminalManagerIdentification, com.tools20022.repository.msg.CardPaymentTransaction21.mmPOIIdentification,
-					com.tools20022.repository.msg.CardPaymentTransaction33.mmPOIIdentification, com.tools20022.repository.msg.ManagementPlan4.mmPOIIdentification,
-					com.tools20022.repository.msg.ManagementPlan4.mmTerminalManagerIdentification, com.tools20022.repository.msg.CardPaymentTransaction50.mmPOIIdentification,
-					com.tools20022.repository.msg.CardPaymentTransaction37.mmPOIIdentification, com.tools20022.repository.msg.ManagementPlan5.mmPOIIdentification,
-					com.tools20022.repository.msg.ManagementPlan5.mmTerminalManagerIdentification, com.tools20022.repository.msg.CardPaymentTransaction52.mmPOIIdentification,
-					com.tools20022.repository.msg.CardPaymentTransaction65.mmPOIIdentification, com.tools20022.repository.msg.ManagementPlan6.mmPOIIdentification,
-					com.tools20022.repository.msg.ManagementPlan6.mmTerminalManagerIdentification, com.tools20022.repository.msg.CardPaymentTransaction73.mmPOIIdentification);
+			derivation_lazy = () -> Arrays.asList(ManagementPlan1.mmPOIIdentification, ManagementPlan1.mmTerminalManagerIdentification, ManagementPlan2.mmPOIIdentification, ManagementPlan2.mmTerminalManagerIdentification,
+					CardPaymentTransaction17.mmPOIIdentification, ManagementPlan3.mmPOIIdentification, ManagementPlan3.mmTerminalManagerIdentification, CardPaymentTransaction21.mmPOIIdentification,
+					CardPaymentTransaction33.mmPOIIdentification, ManagementPlan4.mmPOIIdentification, ManagementPlan4.mmTerminalManagerIdentification, CardPaymentTransaction50.mmPOIIdentification,
+					CardPaymentTransaction37.mmPOIIdentification, ManagementPlan5.mmPOIIdentification, ManagementPlan5.mmTerminalManagerIdentification, CardPaymentTransaction52.mmPOIIdentification,
+					CardPaymentTransaction65.mmPOIIdentification, ManagementPlan6.mmPOIIdentification, ManagementPlan6.mmTerminalManagerIdentification, CardPaymentTransaction73.mmPOIIdentification);
 			elementContext_lazy = () -> SystemIdentification.mmObject();
 			isDerived = false;
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "Identification";
 			definition = "Identification of a system.";
 			minOccurs = 0;
 			opposite_lazy = () -> com.tools20022.repository.entity.GenericIdentification.mmRelatedSystemIdentification;
-			aggregation = com.tools20022.metamodel.MMAggregation.NONE;
+			aggregation = MMAggregation.NONE;
 			type_lazy = () -> com.tools20022.repository.entity.GenericIdentification.mmObject();
 		}
 	};
@@ -593,16 +582,15 @@ public class SystemIdentification {
 	static public MMBusinessComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMBusinessComponent() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "SystemIdentification";
 				definition = "Parameters that identify a system.";
 				associationDomain_lazy = () -> Arrays.asList(com.tools20022.repository.entity.GenericIdentification.mmRelatedSystemIdentification, com.tools20022.repository.entity.System.mmSystemIdentification,
 						com.tools20022.repository.entity.SystemName.mmSystemIdentification);
-				derivationElement_lazy = () -> Arrays.asList(com.tools20022.repository.choice.MarketInfrastructureIdentification1Choice.mmCode, com.tools20022.repository.choice.MarketInfrastructureIdentification1Choice.mmProprietary);
-				element_lazy = () -> Arrays.asList(com.tools20022.repository.entity.SystemIdentification.mmIdentificationForSystem, com.tools20022.repository.entity.SystemIdentification.mmModel,
-						com.tools20022.repository.entity.SystemIdentification.mmSerialNumber, com.tools20022.repository.entity.SystemIdentification.mmApprovalNumber, com.tools20022.repository.entity.SystemIdentification.mmSystemVersion,
-						com.tools20022.repository.entity.SystemIdentification.mmSystemName, com.tools20022.repository.entity.SystemIdentification.mmIdentification);
+				derivationElement_lazy = () -> Arrays.asList(MarketInfrastructureIdentification1Choice.mmCode, MarketInfrastructureIdentification1Choice.mmProprietary);
+				element_lazy = () -> Arrays.asList(SystemIdentification.mmIdentificationForSystem, SystemIdentification.mmModel, SystemIdentification.mmSerialNumber, SystemIdentification.mmApprovalNumber,
+						SystemIdentification.mmSystemVersion, SystemIdentification.mmSystemName, SystemIdentification.mmIdentification);
 				derivationComponent_lazy = () -> Arrays.asList(MarketInfrastructureIdentification1Choice.mmObject(), AutomatedTellerMachine3.mmObject(), AutomatedTellerMachine4.mmObject(), AutomatedTellerMachine10.mmObject());
 			}
 		});

@@ -20,8 +20,10 @@ package com.tools20022.repository.choice;
 import com.tools20022.metamodel.MMChoiceComponent;
 import com.tools20022.metamodel.MMMessageAssociationEnd;
 import com.tools20022.metamodel.MMMessageAttribute;
+import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.datatype.Exact3UpperCaseAlphaNumericText;
 import com.tools20022.repository.datatype.RestrictedFINXMax30Text;
+import com.tools20022.repository.GeneratedRepository;
 import com.tools20022.repository.msg.GenericIdentification86;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
@@ -100,7 +102,7 @@ public class IdentificationFormat4Choice {
 			componentContext_lazy = () -> IdentificationFormat4Choice.mmObject();
 			isDerived = false;
 			xmlTag = "ShrtId";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ShortIdentification";
 			definition = "Format expressed as a short identification.";
 			maxOccurs = 1;
@@ -142,7 +144,7 @@ public class IdentificationFormat4Choice {
 			componentContext_lazy = () -> IdentificationFormat4Choice.mmObject();
 			isDerived = false;
 			xmlTag = "LngId";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "LongIdentification";
 			definition = "Format expressed as a long identification.";
 			maxOccurs = 1;
@@ -183,7 +185,7 @@ public class IdentificationFormat4Choice {
 			componentContext_lazy = () -> IdentificationFormat4Choice.mmObject();
 			isDerived = false;
 			xmlTag = "PrtryId";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ProprietaryIdentification";
 			definition = "Format expressed as a proprietary identification.";
 			maxOccurs = 1;
@@ -196,10 +198,9 @@ public class IdentificationFormat4Choice {
 	final static public MMChoiceComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMChoiceComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.choice.IdentificationFormat4Choice.mmShortIdentification, com.tools20022.repository.choice.IdentificationFormat4Choice.mmLongIdentification,
-						com.tools20022.repository.choice.IdentificationFormat4Choice.mmProprietaryIdentification);
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				messageElement_lazy = () -> Arrays.asList(IdentificationFormat4Choice.mmShortIdentification, IdentificationFormat4Choice.mmLongIdentification, IdentificationFormat4Choice.mmProprietaryIdentification);
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "IdentificationFormat4Choice";
 				definition = "Choice between either a short, long or a proprietary identification format.";
 			}

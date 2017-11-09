@@ -20,11 +20,14 @@ package com.tools20022.repository.msg;
 import com.tools20022.metamodel.MMMessageAssociationEnd;
 import com.tools20022.metamodel.MMMessageAttribute;
 import com.tools20022.metamodel.MMMessageComponent;
+import com.tools20022.metamodel.MMRegistrationStatus;
+import com.tools20022.repository.area.reda.NettingCutOffReferenceDataReportV01;
 import com.tools20022.repository.choice.PartyIdentification73Choice;
 import com.tools20022.repository.datatype.ISODate;
 import com.tools20022.repository.datatype.ISODateTime;
 import com.tools20022.repository.datatype.Max35Text;
 import com.tools20022.repository.datatype.Max4Text;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -128,7 +131,7 @@ public class NettingCutOffReportData1 {
 			componentContext_lazy = () -> NettingCutOffReportData1.mmObject();
 			isDerived = false;
 			xmlTag = "MsgId";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "MessageIdentification";
 			definition = "Unique and unambiguous identifier for a message, as assigned by the Sender. This unique identifier can be used for cross-referencing purposes in subsequent messages.";
 			maxOccurs = 1;
@@ -169,7 +172,7 @@ public class NettingCutOffReportData1 {
 			componentContext_lazy = () -> NettingCutOffReportData1.mmObject();
 			isDerived = false;
 			xmlTag = "CreDtTm";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CreationDateTime";
 			definition = "Date and time at which the net report was generated.";
 			maxOccurs = 1;
@@ -213,7 +216,7 @@ public class NettingCutOffReportData1 {
 			componentContext_lazy = () -> NettingCutOffReportData1.mmObject();
 			isDerived = false;
 			xmlTag = "RptTp";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ReportType";
 			definition = "Describes the type of net report, indicating how the obligations have been calculated.";
 			maxOccurs = 1;
@@ -255,7 +258,7 @@ public class NettingCutOffReportData1 {
 			componentContext_lazy = () -> NettingCutOffReportData1.mmObject();
 			isDerived = false;
 			xmlTag = "ActvtnDt";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ActivationDate";
 			definition = "Date on which the proposed netting cut off will become active.";
 			maxOccurs = 1;
@@ -296,7 +299,7 @@ public class NettingCutOffReportData1 {
 			componentContext_lazy = () -> NettingCutOffReportData1.mmObject();
 			isDerived = false;
 			xmlTag = "NetSvcPtcptId";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "NetServiceParticipantIdentification";
 			definition = "Describes the participant receiving the net report.";
 			maxOccurs = 1;
@@ -340,7 +343,7 @@ public class NettingCutOffReportData1 {
 			componentContext_lazy = () -> NettingCutOffReportData1.mmObject();
 			isDerived = false;
 			xmlTag = "RptSvcr";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ReportServicer";
 			definition = "Describes the central system responsible for generating the net report.";
 			maxOccurs = 1;
@@ -383,7 +386,7 @@ public class NettingCutOffReportData1 {
 			componentContext_lazy = () -> NettingCutOffReportData1.mmObject();
 			isDerived = false;
 			xmlTag = "NetSvcTp";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "NetServiceType";
 			definition = "Describes the type of netting service supporting the net report.";
 			maxOccurs = 1;
@@ -426,7 +429,7 @@ public class NettingCutOffReportData1 {
 			componentContext_lazy = () -> NettingCutOffReportData1.mmObject();
 			isDerived = false;
 			xmlTag = "MsgPgntn";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "MessagePagination";
 			definition = "Page number of the message (within the net cut off report) and continuation indicator to indicate that the report is to continue or that the message is the last page of the report.";
 			maxOccurs = 1;
@@ -439,13 +442,11 @@ public class NettingCutOffReportData1 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.NettingCutOffReportData1.mmMessageIdentification, com.tools20022.repository.msg.NettingCutOffReportData1.mmCreationDateTime,
-						com.tools20022.repository.msg.NettingCutOffReportData1.mmReportType, com.tools20022.repository.msg.NettingCutOffReportData1.mmActivationDate,
-						com.tools20022.repository.msg.NettingCutOffReportData1.mmNetServiceParticipantIdentification, com.tools20022.repository.msg.NettingCutOffReportData1.mmReportServicer,
-						com.tools20022.repository.msg.NettingCutOffReportData1.mmNetServiceType, com.tools20022.repository.msg.NettingCutOffReportData1.mmMessagePagination);
-				messageBuildingBlock_lazy = () -> Arrays.asList(com.tools20022.repository.area.reda.NettingCutOffReferenceDataReportV01.mmReportData);
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				messageElement_lazy = () -> Arrays.asList(NettingCutOffReportData1.mmMessageIdentification, NettingCutOffReportData1.mmCreationDateTime, NettingCutOffReportData1.mmReportType, NettingCutOffReportData1.mmActivationDate,
+						NettingCutOffReportData1.mmNetServiceParticipantIdentification, NettingCutOffReportData1.mmReportServicer, NettingCutOffReportData1.mmNetServiceType, NettingCutOffReportData1.mmMessagePagination);
+				messageBuildingBlock_lazy = () -> Arrays.asList(NettingCutOffReferenceDataReportV01.mmReportData);
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "NettingCutOffReportData1";
 				definition = "Specifies the meta data associated with a netting cut off report.";
 			}

@@ -19,7 +19,9 @@ package com.tools20022.repository.codeset;
 
 import com.tools20022.metamodel.MMCode;
 import com.tools20022.metamodel.MMCodeSet;
+import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.codeset.StatusCode;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -89,7 +91,7 @@ public class Status3Code extends StatusCode {
 	 */
 	public static final MMCode mmCancelled = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Cancelled";
 			owner_lazy = () -> Status3Code.mmObject();
 		}
@@ -111,7 +113,7 @@ public class Status3Code extends StatusCode {
 	 */
 	public static final MMCode mmAccepted = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Accepted";
 			owner_lazy = () -> Status3Code.mmObject();
 		}
@@ -133,7 +135,7 @@ public class Status3Code extends StatusCode {
 	 */
 	public static final MMCode mmNotReceived = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "NotReceived";
 			owner_lazy = () -> Status3Code.mmObject();
 		}
@@ -155,7 +157,7 @@ public class Status3Code extends StatusCode {
 	 */
 	public static final MMCode mmCompleted = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Completed";
 			owner_lazy = () -> Status3Code.mmObject();
 		}
@@ -177,7 +179,7 @@ public class Status3Code extends StatusCode {
 	 */
 	public static final MMCode mmReceivedByIssuerOrRegistrar = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ReceivedByIssuerOrRegistrar";
 			owner_lazy = () -> Status3Code.mmObject();
 		}
@@ -199,7 +201,7 @@ public class Status3Code extends StatusCode {
 	 */
 	public static final MMCode mmStandingInstruction = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "StandingInstruction";
 			owner_lazy = () -> Status3Code.mmObject();
 		}
@@ -208,13 +210,12 @@ public class Status3Code extends StatusCode {
 	static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
 				example = Arrays.asList("CAND");
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "Status3Code";
 				definition = "Specifies the status of an instruction.";
-				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.Status3Code.mmCancelled, com.tools20022.repository.codeset.Status3Code.mmAccepted, com.tools20022.repository.codeset.Status3Code.mmNotReceived,
-						com.tools20022.repository.codeset.Status3Code.mmCompleted, com.tools20022.repository.codeset.Status3Code.mmReceivedByIssuerOrRegistrar, com.tools20022.repository.codeset.Status3Code.mmStandingInstruction);
+				code_lazy = () -> Arrays.asList(Status3Code.mmCancelled, Status3Code.mmAccepted, Status3Code.mmNotReceived, Status3Code.mmCompleted, Status3Code.mmReceivedByIssuerOrRegistrar, Status3Code.mmStandingInstruction);
 				trace_lazy = () -> StatusCode.mmObject();
 			}
 		});

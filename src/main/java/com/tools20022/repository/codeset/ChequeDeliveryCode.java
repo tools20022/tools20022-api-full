@@ -19,6 +19,8 @@ package com.tools20022.repository.codeset;
 
 import com.tools20022.metamodel.MMCode;
 import com.tools20022.metamodel.MMCodeSet;
+import com.tools20022.metamodel.MMRegistrationStatus;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -27,6 +29,15 @@ import java.util.concurrent.atomic.AtomicReference;
  * <p>
  * <strong>Constant fields:</strong>
  * <ul>
+ * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getDerivation derivation}
+ * =
+ * <ul>
+ * <li>{@linkplain com.tools20022.repository.codeset.ChequeDelivery1Code
+ * ChequeDelivery1Code}</li>
+ * <li>{@linkplain com.tools20022.repository.codeset.ChequeDelivery2Code
+ * ChequeDelivery2Code}</li>
+ * </ul>
+ * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getCode code} =
  * <ul>
  * <li>
@@ -65,15 +76,6 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>
  * {@linkplain com.tools20022.repository.codeset.ChequeDeliveryCode#mmRegisteredMailToFinalAgent
  * ChequeDeliveryCode.mmRegisteredMailToFinalAgent}</li>
- * </ul>
- * </li>
- * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getDerivation derivation}
- * =
- * <ul>
- * <li>{@linkplain com.tools20022.repository.codeset.ChequeDelivery1Code
- * ChequeDelivery1Code}</li>
- * <li>{@linkplain com.tools20022.repository.codeset.ChequeDelivery2Code
- * ChequeDelivery2Code}</li>
  * </ul>
  * </li>
  * <li>
@@ -124,7 +126,7 @@ public class ChequeDeliveryCode {
 	 */
 	public static final MMCode mmMailToDebtor = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "MailToDebtor";
 			definition = "Cheque is to be sent through mail services to debtor.";
 			owner_lazy = () -> ChequeDeliveryCode.mmObject();
@@ -154,7 +156,7 @@ public class ChequeDeliveryCode {
 	 */
 	public static final MMCode mmMailToCreditor = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "MailToCreditor";
 			definition = "Cheque is to be sent through mail services to creditor.";
 			owner_lazy = () -> ChequeDeliveryCode.mmObject();
@@ -185,7 +187,7 @@ public class ChequeDeliveryCode {
 	 */
 	public static final MMCode mmMailToFinalAgent = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "MailToFinalAgent";
 			definition = "Cheque is to be sent through mail services to creditor agent.";
 			owner_lazy = () -> ChequeDeliveryCode.mmObject();
@@ -215,7 +217,7 @@ public class ChequeDeliveryCode {
 	 */
 	public static final MMCode mmCourierToDebtor = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "CourierToDebtor";
 			definition = "Cheque is to be sent through courier services to debtor.";
 			owner_lazy = () -> ChequeDeliveryCode.mmObject();
@@ -246,7 +248,7 @@ public class ChequeDeliveryCode {
 	 */
 	public static final MMCode mmCourierToCreditor = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "CourierToCreditor";
 			definition = "Cheque is to be sent through courier services to creditor.";
 			owner_lazy = () -> ChequeDeliveryCode.mmObject();
@@ -277,7 +279,7 @@ public class ChequeDeliveryCode {
 	 */
 	public static final MMCode mmCourierToFinalAgent = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "CourierToFinalAgent";
 			definition = "Cheque is to be sent through courier services to creditor agent.";
 			owner_lazy = () -> ChequeDeliveryCode.mmObject();
@@ -307,7 +309,7 @@ public class ChequeDeliveryCode {
 	 */
 	public static final MMCode mmPickUpByDebtor = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "PickUpByDebtor";
 			definition = "Cheque will be picked up by the debtor.";
 			owner_lazy = () -> ChequeDeliveryCode.mmObject();
@@ -337,7 +339,7 @@ public class ChequeDeliveryCode {
 	 */
 	public static final MMCode mmPickUpByCreditor = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "PickUpByCreditor";
 			definition = "Cheque will be picked up by the creditor";
 			owner_lazy = () -> ChequeDeliveryCode.mmObject();
@@ -367,7 +369,7 @@ public class ChequeDeliveryCode {
 	 */
 	public static final MMCode mmPickUpByFinalAgent = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "PickUpByFinalAgent";
 			definition = "Cheque will be picked up by the creditor agent.";
 			owner_lazy = () -> ChequeDeliveryCode.mmObject();
@@ -398,7 +400,7 @@ public class ChequeDeliveryCode {
 	 */
 	public static final MMCode mmRegisteredMailToDebtor = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "RegisteredMailToDebtor";
 			definition = "Cheque is to be sent through registered mail services to debtor";
 			owner_lazy = () -> ChequeDeliveryCode.mmObject();
@@ -429,7 +431,7 @@ public class ChequeDeliveryCode {
 	 */
 	public static final MMCode mmRegisteredMailToCreditor = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "RegisteredMailToCreditor";
 			definition = "Cheque is to be sent through registered mail services to creditor.";
 			owner_lazy = () -> ChequeDeliveryCode.mmObject();
@@ -461,7 +463,7 @@ public class ChequeDeliveryCode {
 	 */
 	public static final MMCode mmRegisteredMailToFinalAgent = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "RegisteredMailToFinalAgent";
 			definition = "Cheque is to be sent through registered mail services to creditor agent.";
 			owner_lazy = () -> ChequeDeliveryCode.mmObject();
@@ -472,17 +474,14 @@ public class ChequeDeliveryCode {
 	static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
 				example = Arrays.asList("MLDB");
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "ChequeDeliveryCode";
 				definition = "Specifies the method to be used in delivering a cheque to a party.";
-				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.ChequeDeliveryCode.mmMailToDebtor, com.tools20022.repository.codeset.ChequeDeliveryCode.mmMailToCreditor,
-						com.tools20022.repository.codeset.ChequeDeliveryCode.mmMailToFinalAgent, com.tools20022.repository.codeset.ChequeDeliveryCode.mmCourierToDebtor,
-						com.tools20022.repository.codeset.ChequeDeliveryCode.mmCourierToCreditor, com.tools20022.repository.codeset.ChequeDeliveryCode.mmCourierToFinalAgent,
-						com.tools20022.repository.codeset.ChequeDeliveryCode.mmPickUpByDebtor, com.tools20022.repository.codeset.ChequeDeliveryCode.mmPickUpByCreditor,
-						com.tools20022.repository.codeset.ChequeDeliveryCode.mmPickUpByFinalAgent, com.tools20022.repository.codeset.ChequeDeliveryCode.mmRegisteredMailToDebtor,
-						com.tools20022.repository.codeset.ChequeDeliveryCode.mmRegisteredMailToCreditor, com.tools20022.repository.codeset.ChequeDeliveryCode.mmRegisteredMailToFinalAgent);
+				code_lazy = () -> Arrays.asList(ChequeDeliveryCode.mmMailToDebtor, ChequeDeliveryCode.mmMailToCreditor, ChequeDeliveryCode.mmMailToFinalAgent, ChequeDeliveryCode.mmCourierToDebtor, ChequeDeliveryCode.mmCourierToCreditor,
+						ChequeDeliveryCode.mmCourierToFinalAgent, ChequeDeliveryCode.mmPickUpByDebtor, ChequeDeliveryCode.mmPickUpByCreditor, ChequeDeliveryCode.mmPickUpByFinalAgent, ChequeDeliveryCode.mmRegisteredMailToDebtor,
+						ChequeDeliveryCode.mmRegisteredMailToCreditor, ChequeDeliveryCode.mmRegisteredMailToFinalAgent);
 				derivation_lazy = () -> Arrays.asList(ChequeDelivery1Code.mmObject(), ChequeDelivery2Code.mmObject());
 			}
 		});

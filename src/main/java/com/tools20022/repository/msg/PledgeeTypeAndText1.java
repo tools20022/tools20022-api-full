@@ -19,9 +19,11 @@ package com.tools20022.repository.msg;
 
 import com.tools20022.metamodel.MMMessageAttribute;
 import com.tools20022.metamodel.MMMessageComponent;
+import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.codeset.PledgeeType1Code;
 import com.tools20022.repository.datatype.Max35Text;
 import com.tools20022.repository.entity.Pledgee;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -106,7 +108,7 @@ public class PledgeeTypeAndText1 {
 			componentContext_lazy = () -> PledgeeTypeAndText1.mmObject();
 			isDerived = false;
 			xmlTag = "Id";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Identification";
 			definition = "Additional information about the entity to which the financial instruments are pledged.";
 			maxOccurs = 1;
@@ -153,11 +155,11 @@ public class PledgeeTypeAndText1 {
 	 */
 	public static final MMMessageAttribute mmPledgeeType = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Pledgee.mmPledgeeType;
+			businessElementTrace_lazy = () -> Pledgee.mmPledgeeType;
 			componentContext_lazy = () -> PledgeeTypeAndText1.mmObject();
 			isDerived = false;
 			xmlTag = "PldgeeTp";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PledgeeType";
 			definition = "Entity to which the financial instruments are pledged expressed as a code.";
 			maxOccurs = 1;
@@ -169,10 +171,10 @@ public class PledgeeTypeAndText1 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.PledgeeTypeAndText1.mmIdentification, com.tools20022.repository.msg.PledgeeTypeAndText1.mmPledgeeType);
+				messageElement_lazy = () -> Arrays.asList(PledgeeTypeAndText1.mmIdentification, PledgeeTypeAndText1.mmPledgeeType);
 				trace_lazy = () -> Pledgee.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "PledgeeTypeAndText1";
 				definition = "Identification of the entity to which the financial instruments are pledged expressed as a code and a narrative description.";
 			}

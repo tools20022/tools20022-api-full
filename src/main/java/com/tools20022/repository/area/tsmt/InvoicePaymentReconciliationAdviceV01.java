@@ -20,6 +20,7 @@ package com.tools20022.repository.area.tsmt;
 import com.tools20022.metamodel.MMMessageBuildingBlock;
 import com.tools20022.metamodel.MMMessageDefinition;
 import com.tools20022.metamodel.MMMessageDefinitionIdentifier;
+import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.area.TradeServicesManagementLatestVersion;
 import com.tools20022.repository.datatype.DecimalNumber;
 import com.tools20022.repository.datatype.Max15NumericText;
@@ -42,6 +43,9 @@ import java.util.List;
  * <p>
  * <strong>Constant fields:</strong>
  * <ul>
+ * <li>
+ * {@linkplain com.tools20022.metamodel.MMMessageDefinition#getMessageDefinitionIdentifier
+ * messageDefinitionIdentifier} = {@code tsmt.053.001.01}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMMessageDefinition#getBusinessArea
  * businessArea} =
  * {@linkplain com.tools20022.repository.area.TradeServicesManagementLatestVersion
@@ -82,9 +86,6 @@ import java.util.List;
  * InvoicePaymentReconciliationAdviceV01.mmAttachedMessage}</li>
  * </ul>
  * </li>
- * <li>
- * {@linkplain com.tools20022.metamodel.MMMessageDefinition#getMessageDefinitionIdentifier
- * messageDefinitionIdentifier} = {@code tsmt.053.001.01}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -129,7 +130,7 @@ public class InvoicePaymentReconciliationAdviceV01 {
 	public static final MMMessageBuildingBlock mmHeader = new MMMessageBuildingBlock() {
 		{
 			xmlTag = "Hdr";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Header";
 			definition = "Set of characteristics that unambiguously identify the letter, common parameters, documents and identifications.";
 			maxOccurs = 1;
@@ -164,7 +165,7 @@ public class InvoicePaymentReconciliationAdviceV01 {
 	public static final MMMessageBuildingBlock mmReconciliationList = new MMMessageBuildingBlock() {
 		{
 			xmlTag = "RcncltnList";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ReconciliationList";
 			definition = "List of payment reconciliation information.";
 			minOccurs = 1;
@@ -198,7 +199,7 @@ public class InvoicePaymentReconciliationAdviceV01 {
 	public static final MMMessageBuildingBlock mmReconciliationCount = new MMMessageBuildingBlock() {
 		{
 			xmlTag = "RcncltnCnt";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ReconciliationCount";
 			definition = "Number of reconciliation lists as control value.";
 			maxOccurs = 1;
@@ -233,7 +234,7 @@ public class InvoicePaymentReconciliationAdviceV01 {
 	public static final MMMessageBuildingBlock mmItemCount = new MMMessageBuildingBlock() {
 		{
 			xmlTag = "ItmCnt";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ItemCount";
 			definition = "Total number of individual items in all lists.";
 			maxOccurs = 1;
@@ -271,7 +272,7 @@ public class InvoicePaymentReconciliationAdviceV01 {
 	public static final MMMessageBuildingBlock mmControlSum = new MMMessageBuildingBlock() {
 		{
 			xmlTag = "CtrlSum";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ControlSum";
 			definition = "Total of all individual amounts included in all lists, irrespective of currencies or direction.";
 			maxOccurs = 1;
@@ -306,7 +307,7 @@ public class InvoicePaymentReconciliationAdviceV01 {
 	public static final MMMessageBuildingBlock mmAttachedMessage = new MMMessageBuildingBlock() {
 		{
 			xmlTag = "AttchdMsg";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AttachedMessage";
 			definition = "Referenced or related business message.";
 			minOccurs = 0;
@@ -317,17 +318,15 @@ public class InvoicePaymentReconciliationAdviceV01 {
 	final static public MMMessageDefinition mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageDefinition() {
 			{
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "InvoicePaymentReconciliationAdviceV01";
 				definition = "The message InvoicePaymentReconciliationAdvice is sent by a payer to a payee to indicate attribution of payments to instalment of payment obligations in order to simplify the account netting or clearing when a lot of invoices are paid with a unique payment (for instance an SCT or an SDD).\r\nThe message contains references to payment instructions, may reference other messages and may include referenced data.\r\nThe message can carry digital signatures if required by context.";
 				messageSet_lazy = () -> Arrays.asList(FactoringServicesISOLatestversion.mmObject());
 				rootElement = "Document";
 				xmlTag = "InvcPmtRcncltnAdvc";
 				businessArea_lazy = () -> TradeServicesManagementLatestVersion.mmObject();
-				messageBuildingBlock_lazy = () -> Arrays.asList(com.tools20022.repository.area.tsmt.InvoicePaymentReconciliationAdviceV01.mmHeader,
-						com.tools20022.repository.area.tsmt.InvoicePaymentReconciliationAdviceV01.mmReconciliationList, com.tools20022.repository.area.tsmt.InvoicePaymentReconciliationAdviceV01.mmReconciliationCount,
-						com.tools20022.repository.area.tsmt.InvoicePaymentReconciliationAdviceV01.mmItemCount, com.tools20022.repository.area.tsmt.InvoicePaymentReconciliationAdviceV01.mmControlSum,
-						com.tools20022.repository.area.tsmt.InvoicePaymentReconciliationAdviceV01.mmAttachedMessage);
+				messageBuildingBlock_lazy = () -> Arrays.asList(InvoicePaymentReconciliationAdviceV01.mmHeader, InvoicePaymentReconciliationAdviceV01.mmReconciliationList, InvoicePaymentReconciliationAdviceV01.mmReconciliationCount,
+						InvoicePaymentReconciliationAdviceV01.mmItemCount, InvoicePaymentReconciliationAdviceV01.mmControlSum, InvoicePaymentReconciliationAdviceV01.mmAttachedMessage);
 				messageDefinitionIdentifier_lazy = () -> new MMMessageDefinitionIdentifier() {
 					{
 						businessArea = "tsmt";

@@ -19,8 +19,11 @@ package com.tools20022.repository.msg;
 
 import com.tools20022.metamodel.MMMessageAttribute;
 import com.tools20022.metamodel.MMMessageComponent;
+import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.datatype.Max240Text;
 import com.tools20022.repository.datatype.Max350Text;
+import com.tools20022.repository.entity.GenericIdentification;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -103,7 +106,7 @@ public class UpdatedAdditionalInformation6SD2 {
 			componentContext_lazy = () -> UpdatedAdditionalInformation6SD2.mmObject();
 			isDerived = false;
 			xmlTag = "PlcAndNm";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PlaceAndName";
 			definition = "Unambiguous reference to the location where the supplementary data must be inserted in the message instance. \r\n\r\nIn the case of XML, this is expressed by a valid XPath.";
 			maxOccurs = 1;
@@ -147,11 +150,11 @@ public class UpdatedAdditionalInformation6SD2 {
 	 */
 	public static final MMMessageAttribute mmFullLocalLanguageSecurityName = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.GenericIdentification.mmIdentification;
+			businessElementTrace_lazy = () -> GenericIdentification.mmIdentification;
 			componentContext_lazy = () -> UpdatedAdditionalInformation6SD2.mmObject();
 			isDerived = false;
 			xmlTag = "FullLclLangSctyNm";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "FullLocalLanguageSecurityName";
 			definition = "Full and formal name of underlying securities in the local language.";
 			maxOccurs = 1;
@@ -197,7 +200,7 @@ public class UpdatedAdditionalInformation6SD2 {
 			componentContext_lazy = () -> UpdatedAdditionalInformation6SD2.mmObject();
 			isDerived = false;
 			xmlTag = "AbbrvtdLclLangSctyNm";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AbbreviatedLocalLanguageSecurityName";
 			definition = "Abbreviated name of underlying securities in the local language. \r\nIn case of non-listed securities, it will be a full local language security name.\r\n銘柄名（銘柄略称";
 			maxOccurs = 1;
@@ -209,10 +212,10 @@ public class UpdatedAdditionalInformation6SD2 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.UpdatedAdditionalInformation6SD2.mmPlaceAndName, com.tools20022.repository.msg.UpdatedAdditionalInformation6SD2.mmFullLocalLanguageSecurityName,
-						com.tools20022.repository.msg.UpdatedAdditionalInformation6SD2.mmAbbreviatedLocalLanguageSecurityName);
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				messageElement_lazy = () -> Arrays.asList(UpdatedAdditionalInformation6SD2.mmPlaceAndName, UpdatedAdditionalInformation6SD2.mmFullLocalLanguageSecurityName,
+						UpdatedAdditionalInformation6SD2.mmAbbreviatedLocalLanguageSecurityName);
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "UpdatedAdditionalInformation6SD2";
 				definition = "Extension to provide the local language information of the new company name when the corporate action event type code is CHAN (name change).";
 			}

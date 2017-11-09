@@ -17,15 +17,14 @@
 
 package com.tools20022.repository.msg;
 
-import com.tools20022.metamodel.MMMessageAssociationEnd;
-import com.tools20022.metamodel.MMMessageAttribute;
-import com.tools20022.metamodel.MMMessageComponent;
-import com.tools20022.metamodel.MMXor;
+import com.tools20022.metamodel.*;
 import com.tools20022.repository.choice.PartiallySettled21Choice;
 import com.tools20022.repository.codeset.SettledStatusReason1Code;
 import com.tools20022.repository.datatype.Extended350Code;
 import com.tools20022.repository.datatype.Max350Text;
 import com.tools20022.repository.entity.SecuritiesOrderStatus;
+import com.tools20022.repository.entity.StatusReason;
+import com.tools20022.repository.GeneratedRepository;
 import java.text.DateFormat;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
@@ -129,11 +128,11 @@ public class PartiallySettledStatus1 {
 	 */
 	public static final MMMessageAttribute mmReason = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.SecuritiesOrderStatus.mmPartiallySettledStatusReason;
+			businessElementTrace_lazy = () -> SecuritiesOrderStatus.mmPartiallySettledStatusReason;
 			componentContext_lazy = () -> PartiallySettledStatus1.mmObject();
 			isDerived = false;
 			xmlTag = "Rsn";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Reason";
 			definition = "Reason for the partially settled status.";
 			maxOccurs = 1;
@@ -175,7 +174,7 @@ public class PartiallySettledStatus1 {
 			componentContext_lazy = () -> PartiallySettledStatus1.mmObject();
 			isDerived = false;
 			xmlTag = "XtndedRsn";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ExtendedReason";
 			definition = "Reason for the partially settled status.";
 			maxOccurs = 1;
@@ -220,11 +219,11 @@ public class PartiallySettledStatus1 {
 	 */
 	public static final MMMessageAssociationEnd mmDataSourceScheme = new MMMessageAssociationEnd() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.StatusReason.mmDataSourceScheme;
+			businessElementTrace_lazy = () -> StatusReason.mmDataSourceScheme;
 			componentContext_lazy = () -> PartiallySettledStatus1.mmObject();
 			isDerived = false;
 			xmlTag = "DataSrcSchme";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "DataSourceScheme";
 			definition = "Proprietary identification of the reason for the partially settled status in the report.";
 			maxOccurs = 1;
@@ -269,11 +268,11 @@ public class PartiallySettledStatus1 {
 	 */
 	public static final MMMessageAttribute mmAdditionalInformation = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.StatusReason.mmReason;
+			businessElementTrace_lazy = () -> StatusReason.mmReason;
 			componentContext_lazy = () -> PartiallySettledStatus1.mmObject();
 			isDerived = false;
 			xmlTag = "AddtlInf";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AdditionalInformation";
 			definition = "Additional information about the partially settled status reason.";
 			maxOccurs = 1;
@@ -287,6 +286,10 @@ public class PartiallySettledStatus1 {
 	 * <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
+	 * <li>{@linkplain com.tools20022.metamodel.MMXor#getMessageComponent
+	 * messageComponent} =
+	 * {@linkplain com.tools20022.repository.msg.PartiallySettledStatus1
+	 * PartiallySettledStatus1}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMXor#getImpactedElements
 	 * impactedElements} =
 	 * <ul>
@@ -301,10 +304,6 @@ public class PartiallySettledStatus1 {
 	 * PartiallySettledStatus1.mmDataSourceScheme}</li>
 	 * </ul>
 	 * </li>
-	 * <li>{@linkplain com.tools20022.metamodel.MMXor#getMessageComponent
-	 * messageComponent} =
-	 * {@linkplain com.tools20022.repository.msg.PartiallySettledStatus1
-	 * PartiallySettledStatus1}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
@@ -320,23 +319,21 @@ public class PartiallySettledStatus1 {
 	 */
 	public static final MMXor mmReasonOrExtendedReasonOrDSSRule = new MMXor() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ReasonOrExtendedReasonOrDSSRule";
 			definition = "One and only one message element in the list (Reason, ExtendedReason, DataSourceScheme) must be present.";
 			messageComponent_lazy = () -> PartiallySettledStatus1.mmObject();
-			impactedElements_lazy = () -> Arrays.asList(com.tools20022.repository.msg.PartiallySettledStatus1.mmReason, com.tools20022.repository.msg.PartiallySettledStatus1.mmExtendedReason,
-					com.tools20022.repository.msg.PartiallySettledStatus1.mmDataSourceScheme);
+			impactedElements_lazy = () -> Arrays.asList(PartiallySettledStatus1.mmReason, PartiallySettledStatus1.mmExtendedReason, PartiallySettledStatus1.mmDataSourceScheme);
 		}
 	};
 
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.PartiallySettledStatus1.mmReason, com.tools20022.repository.msg.PartiallySettledStatus1.mmExtendedReason,
-						com.tools20022.repository.msg.PartiallySettledStatus1.mmDataSourceScheme, com.tools20022.repository.msg.PartiallySettledStatus1.mmAdditionalInformation);
+				messageElement_lazy = () -> Arrays.asList(PartiallySettledStatus1.mmReason, PartiallySettledStatus1.mmExtendedReason, PartiallySettledStatus1.mmDataSourceScheme, PartiallySettledStatus1.mmAdditionalInformation);
 				trace_lazy = () -> SecuritiesOrderStatus.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.OBSOLETE;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.OBSOLETE;
 				removalDate = ((Supplier<Date>) (() -> {
 					try {
 						return DateFormat.getDateInstance(java.text.DateFormat.LONG).parse("September 9, 2016");
@@ -347,7 +344,7 @@ public class PartiallySettledStatus1 {
 				name = "PartiallySettledStatus1";
 				definition = "Status is partially settled.";
 				nextVersions_lazy = () -> Arrays.asList(PartiallySettledStatus10.mmObject(), PartiallySettled21Choice.mmObject());
-				xors_lazy = () -> Arrays.asList(com.tools20022.repository.msg.PartiallySettledStatus1.mmReasonOrExtendedReasonOrDSSRule);
+				xors_lazy = () -> Arrays.asList(PartiallySettledStatus1.mmReasonOrExtendedReasonOrDSSRule);
 			}
 		});
 		return mmObject_lazy.get();

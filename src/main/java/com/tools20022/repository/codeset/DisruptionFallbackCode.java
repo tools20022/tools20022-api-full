@@ -19,6 +19,8 @@ package com.tools20022.repository.codeset;
 
 import com.tools20022.metamodel.MMCode;
 import com.tools20022.metamodel.MMCodeSet;
+import com.tools20022.metamodel.MMRegistrationStatus;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -118,7 +120,7 @@ public class DisruptionFallbackCode {
 	 */
 	public static final MMCode mmAssignmentOfClaim = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "AssignmentOfClaim";
 			definition = "As per the 1998 FX and Currency Option Definitions published by the International Swaps and Derivatives Association inc., the Emerging Market Traders Association and the Foreign Exchange Committee.";
 			owner_lazy = () -> DisruptionFallbackCode.mmObject();
@@ -152,7 +154,7 @@ public class DisruptionFallbackCode {
 	 */
 	public static final MMCode mmCalculationAgentDeterminationOfSettlementRate = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "CalculationAgentDeterminationOfSettlementRate";
 			definition = "As per the 1998 FX and Currency Option Definitions published by the International Swaps and Derivatives Association inc., the Emerging Market Traders Association and the Foreign Exchange Committee.";
 			owner_lazy = () -> DisruptionFallbackCode.mmObject();
@@ -186,7 +188,7 @@ public class DisruptionFallbackCode {
 	 */
 	public static final MMCode mmDeliverableSubstitute = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "DeliverableSubstitute";
 			definition = "As per the 1998 FX and Currency Option Definitions published by the International Swaps and Derivatives Association inc., the Emerging Market Traders Association and the Foreign Exchange Committee.";
 			owner_lazy = () -> DisruptionFallbackCode.mmObject();
@@ -220,7 +222,7 @@ public class DisruptionFallbackCode {
 	 */
 	public static final MMCode mmEscrowArrangement = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "EscrowArrangement";
 			definition = "As per the 1998 FX and Currency Option Definitions published by the International Swaps and Derivatives Association inc., the Emerging Market Traders Association and the Foreign Exchange Committee.";
 			owner_lazy = () -> DisruptionFallbackCode.mmObject();
@@ -254,7 +256,7 @@ public class DisruptionFallbackCode {
 	 */
 	public static final MMCode mmFallbackReferencePrice = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "FallbackReferencePrice";
 			definition = "As per the 1998 FX and Currency Option Definitions published by the International Swaps and Derivatives Association inc., the Emerging Market Traders Association and the Foreign Exchange Committee.";
 			owner_lazy = () -> DisruptionFallbackCode.mmObject();
@@ -288,7 +290,7 @@ public class DisruptionFallbackCode {
 	 */
 	public static final MMCode mmLocalAssetSubstituteGross = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "LocalAssetSubstituteGross";
 			definition = "As per the 1998 FX and Currency Option Definitions published by the International Swaps and Derivatives Association inc., the Emerging Market Traders Association and the Foreign Exchange Committee.";
 			owner_lazy = () -> DisruptionFallbackCode.mmObject();
@@ -322,7 +324,7 @@ public class DisruptionFallbackCode {
 	 */
 	public static final MMCode mmLocalAssetSubstituteNet = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "LocalAssetSubstituteNet";
 			definition = "As per the 1998 FX and Currency Option Definitions published by the International Swaps and Derivatives Association inc., the Emerging Market Traders Association and the Foreign Exchange Committee.";
 			owner_lazy = () -> DisruptionFallbackCode.mmObject();
@@ -356,7 +358,7 @@ public class DisruptionFallbackCode {
 	 */
 	public static final MMCode mmLocalCurrencySubstitute = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "LocalCurrencySubstitute";
 			definition = "As per the 1998 FX and Currency Option Definitions published by the International Swaps and Derivatives Association inc., the Emerging Market Traders Association and the Foreign Exchange Committee.";
 			owner_lazy = () -> DisruptionFallbackCode.mmObject();
@@ -390,7 +392,7 @@ public class DisruptionFallbackCode {
 	 */
 	public static final MMCode mmNoFaultTermination = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "NoFaultTermination";
 			definition = "As per the 1998 FX and Currency Option Definitions published by the International Swaps and Derivatives Association inc., the Emerging Market Traders Association and the Foreign Exchange Committee.";
 			owner_lazy = () -> DisruptionFallbackCode.mmObject();
@@ -424,7 +426,7 @@ public class DisruptionFallbackCode {
 	 */
 	public static final MMCode mmNonDeliverableSubstitute = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "NonDeliverableSubstitute";
 			definition = "As per the 1998 FX and Currency Option Definitions published by the International Swaps and Derivatives Association inc., the Emerging Market Traders Association and the Foreign Exchange Committee.";
 			owner_lazy = () -> DisruptionFallbackCode.mmObject();
@@ -458,7 +460,7 @@ public class DisruptionFallbackCode {
 	 */
 	public static final MMCode mmSettlementPostponement = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "SettlementPostponement";
 			definition = "As per the 1998 FX and Currency Option Definitions published by the International Swaps and Derivatives Association inc., the Emerging Market Traders Association and the Foreign Exchange Committee.";
 			owner_lazy = () -> DisruptionFallbackCode.mmObject();
@@ -469,17 +471,14 @@ public class DisruptionFallbackCode {
 	static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
 				example = Arrays.asList("AOCL");
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "DisruptionFallbackCode";
 				definition = "Identifies the method used to determine a settlement rate when a disruption event has occurred.";
-				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.DisruptionFallbackCode.mmAssignmentOfClaim, com.tools20022.repository.codeset.DisruptionFallbackCode.mmCalculationAgentDeterminationOfSettlementRate,
-						com.tools20022.repository.codeset.DisruptionFallbackCode.mmDeliverableSubstitute, com.tools20022.repository.codeset.DisruptionFallbackCode.mmEscrowArrangement,
-						com.tools20022.repository.codeset.DisruptionFallbackCode.mmFallbackReferencePrice, com.tools20022.repository.codeset.DisruptionFallbackCode.mmLocalAssetSubstituteGross,
-						com.tools20022.repository.codeset.DisruptionFallbackCode.mmLocalAssetSubstituteNet, com.tools20022.repository.codeset.DisruptionFallbackCode.mmLocalCurrencySubstitute,
-						com.tools20022.repository.codeset.DisruptionFallbackCode.mmNoFaultTermination, com.tools20022.repository.codeset.DisruptionFallbackCode.mmNonDeliverableSubstitute,
-						com.tools20022.repository.codeset.DisruptionFallbackCode.mmSettlementPostponement);
+				code_lazy = () -> Arrays.asList(DisruptionFallbackCode.mmAssignmentOfClaim, DisruptionFallbackCode.mmCalculationAgentDeterminationOfSettlementRate, DisruptionFallbackCode.mmDeliverableSubstitute,
+						DisruptionFallbackCode.mmEscrowArrangement, DisruptionFallbackCode.mmFallbackReferencePrice, DisruptionFallbackCode.mmLocalAssetSubstituteGross, DisruptionFallbackCode.mmLocalAssetSubstituteNet,
+						DisruptionFallbackCode.mmLocalCurrencySubstitute, DisruptionFallbackCode.mmNoFaultTermination, DisruptionFallbackCode.mmNonDeliverableSubstitute, DisruptionFallbackCode.mmSettlementPostponement);
 			}
 		});
 		return mmObject_lazy.get();

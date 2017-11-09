@@ -19,9 +19,11 @@ package com.tools20022.repository.msg;
 
 import com.tools20022.metamodel.MMMessageAttribute;
 import com.tools20022.metamodel.MMMessageComponent;
+import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.choice.SystemEventType3Choice;
 import com.tools20022.repository.datatype.Max35Text;
 import com.tools20022.repository.entity.SystemEventInformation;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -96,7 +98,7 @@ public class ServiceAvailability1 {
 			componentContext_lazy = () -> ServiceAvailability1.mmObject();
 			isDerived = false;
 			xmlTag = "BizSvc";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "BusinessService";
 			definition = "Specifies the applicable business service.  ";
 			maxOccurs = 1;
@@ -140,11 +142,11 @@ public class ServiceAvailability1 {
 	 */
 	public static final MMMessageAttribute mmAvailabilityStatus = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.SystemEventInformation.mmType;
+			businessElementTrace_lazy = () -> SystemEventInformation.mmType;
 			componentContext_lazy = () -> ServiceAvailability1.mmObject();
 			isDerived = false;
 			xmlTag = "AvlbtySts";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AvailabilityStatus";
 			definition = "Status of service availability.";
 			maxOccurs = 1;
@@ -156,10 +158,10 @@ public class ServiceAvailability1 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.ServiceAvailability1.mmBusinessService, com.tools20022.repository.msg.ServiceAvailability1.mmAvailabilityStatus);
+				messageElement_lazy = () -> Arrays.asList(ServiceAvailability1.mmBusinessService, ServiceAvailability1.mmAvailabilityStatus);
 				trace_lazy = () -> SystemEventInformation.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 				name = "ServiceAvailability1";
 				definition = "Provides details on the availability of a service.";
 			}

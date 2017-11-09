@@ -19,9 +19,11 @@ package com.tools20022.repository.msg;
 
 import com.tools20022.metamodel.MMMessageAttribute;
 import com.tools20022.metamodel.MMMessageComponent;
+import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.datatype.ISODate;
 import com.tools20022.repository.datatype.Max35Text;
 import com.tools20022.repository.entity.PaymentSchedule;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -103,7 +105,7 @@ public class PaymentDateRange1 {
 			componentContext_lazy = () -> PaymentDateRange1.mmObject();
 			isDerived = false;
 			xmlTag = "PmtSchdlId";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PaymentScheduleIdentification";
 			definition = "Unique and unambiguous identification of the payment schedule.";
 			maxOccurs = 1;
@@ -151,14 +153,14 @@ public class PaymentDateRange1 {
 	 */
 	public static final MMMessageAttribute mmExpectedDate = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.PaymentSchedule.mmDate;
+			businessElementTrace_lazy = () -> PaymentSchedule.mmDate;
 			componentContext_lazy = () -> PaymentDateRange1.mmObject();
 			isDerived = false;
 			xmlTag = "XpctdDt";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ExpectedDate";
 			definition = "Expected payment date.";
-			previousVersion_lazy = () -> com.tools20022.repository.msg.ShipmentDateRange1.mmEarliestShipmentDate;
+			previousVersion_lazy = () -> ShipmentDateRange1.mmEarliestShipmentDate;
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> ISODate.mmObject();
@@ -204,14 +206,14 @@ public class PaymentDateRange1 {
 	 */
 	public static final MMMessageAttribute mmDueDate = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.PaymentSchedule.mmDate;
+			businessElementTrace_lazy = () -> PaymentSchedule.mmDate;
 			componentContext_lazy = () -> PaymentDateRange1.mmObject();
 			isDerived = false;
 			xmlTag = "DueDt";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "DueDate";
 			definition = "Latest date whereby the amount must be paid.";
-			previousVersion_lazy = () -> com.tools20022.repository.msg.ShipmentDateRange1.mmLatestShipmentDate;
+			previousVersion_lazy = () -> ShipmentDateRange1.mmLatestShipmentDate;
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> ISODate.mmObject();
@@ -221,11 +223,10 @@ public class PaymentDateRange1 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.PaymentDateRange1.mmPaymentScheduleIdentification, com.tools20022.repository.msg.PaymentDateRange1.mmExpectedDate,
-						com.tools20022.repository.msg.PaymentDateRange1.mmDueDate);
+				messageElement_lazy = () -> Arrays.asList(PaymentDateRange1.mmPaymentScheduleIdentification, PaymentDateRange1.mmExpectedDate, PaymentDateRange1.mmDueDate);
 				trace_lazy = () -> PaymentSchedule.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "PaymentDateRange1";
 				definition = "Specifies expected and due payment date.";
 				previousVersion_lazy = () -> ShipmentDateRange1.mmObject();

@@ -19,8 +19,10 @@ package com.tools20022.repository.msg;
 
 import com.tools20022.metamodel.MMMessageAttribute;
 import com.tools20022.metamodel.MMMessageComponent;
+import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.datatype.ISODateTime;
 import com.tools20022.repository.entity.CashSettlement;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -103,11 +105,11 @@ public class SettlementDateTimeIndication1 {
 	 */
 	public static final MMMessageAttribute mmDebitDateTime = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.CashSettlement.mmDebitDateTime;
+			businessElementTrace_lazy = () -> CashSettlement.mmDebitDateTime;
 			componentContext_lazy = () -> SettlementDateTimeIndication1.mmObject();
 			isDerived = false;
 			xmlTag = "DbtDtTm";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "DebitDateTime";
 			definition = "Date and time at which a payment has been debited at the transaction administrator. In the case of TARGET, the date and time at which the payment has been debited at the central bank, expressed in Central European Time (CET).";
 			maxOccurs = 1;
@@ -155,11 +157,11 @@ public class SettlementDateTimeIndication1 {
 	 */
 	public static final MMMessageAttribute mmCreditDateTime = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.CashSettlement.mmCreditDateTime;
+			businessElementTrace_lazy = () -> CashSettlement.mmCreditDateTime;
 			componentContext_lazy = () -> SettlementDateTimeIndication1.mmObject();
 			isDerived = false;
 			xmlTag = "CdtDtTm";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CreditDateTime";
 			definition = "Date and time at which a payment has been credited at the transaction administrator. In the case of TARGET, the date and time at which the payment has been credited at the receiving central bank, expressed in Central European Time (CET).";
 			maxOccurs = 1;
@@ -171,10 +173,10 @@ public class SettlementDateTimeIndication1 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.SettlementDateTimeIndication1.mmDebitDateTime, com.tools20022.repository.msg.SettlementDateTimeIndication1.mmCreditDateTime);
+				messageElement_lazy = () -> Arrays.asList(SettlementDateTimeIndication1.mmDebitDateTime, SettlementDateTimeIndication1.mmCreditDateTime);
 				trace_lazy = () -> CashSettlement.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "SettlementDateTimeIndication1";
 				definition = "Information on the occurred settlement time(s) of the payment transaction.";
 			}

@@ -20,14 +20,14 @@ package com.tools20022.repository.msg;
 import com.tools20022.metamodel.MMMessageAssociationEnd;
 import com.tools20022.metamodel.MMMessageAttribute;
 import com.tools20022.metamodel.MMMessageComponent;
+import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.choice.ShipmentSchedule2Choice;
 import com.tools20022.repository.codeset.ActiveCurrencyCode;
 import com.tools20022.repository.datatype.ActiveCurrencyAndAmount;
 import com.tools20022.repository.datatype.ISODate;
 import com.tools20022.repository.datatype.TrueFalseIndicator;
-import com.tools20022.repository.entity.BuyerRole;
-import com.tools20022.repository.entity.Contract;
-import com.tools20022.repository.entity.SellerRole;
+import com.tools20022.repository.entity.*;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.List;
@@ -131,11 +131,11 @@ public class TradeContract1 {
 	 */
 	public static final MMMessageAttribute mmContractDocumentIdentification = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.GenericIdentification.mmIdentification;
+			businessElementTrace_lazy = () -> GenericIdentification.mmIdentification;
 			componentContext_lazy = () -> TradeContract1.mmObject();
 			isDerived = false;
 			xmlTag = "CtrctDocId";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ContractDocumentIdentification";
 			definition = "Contract document referenced from this trade agreement.";
 			maxOccurs = 1;
@@ -178,11 +178,11 @@ public class TradeContract1 {
 	 */
 	public static final MMMessageAttribute mmAmount = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.PaymentObligation.mmAmount;
+			businessElementTrace_lazy = () -> PaymentObligation.mmAmount;
 			componentContext_lazy = () -> TradeContract1.mmObject();
 			isDerived = false;
 			xmlTag = "Amt";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Amount";
 			definition = "Amount of the trade contract.";
 			maxOccurs = 1;
@@ -227,7 +227,7 @@ public class TradeContract1 {
 			componentContext_lazy = () -> TradeContract1.mmObject();
 			isDerived = false;
 			xmlTag = "Buyr";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Buyer";
 			definition = "Party that is specified as the buyer for this trade agreement.";
 			minOccurs = 1;
@@ -272,7 +272,7 @@ public class TradeContract1 {
 			componentContext_lazy = () -> TradeContract1.mmObject();
 			isDerived = false;
 			xmlTag = "Sellr";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Seller";
 			definition = "Party that is specified as the seller for this trade agreement.";
 			minOccurs = 1;
@@ -314,11 +314,11 @@ public class TradeContract1 {
 	 */
 	public static final MMMessageAttribute mmMaturityDate = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Trade.mmEndDate;
+			businessElementTrace_lazy = () -> Trade.mmEndDate;
 			componentContext_lazy = () -> TradeContract1.mmObject();
 			isDerived = false;
 			xmlTag = "MtrtyDt";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "MaturityDate";
 			definition = "Planned final payment date at the time of issuance.";
 			maxOccurs = 1;
@@ -360,7 +360,7 @@ public class TradeContract1 {
 			componentContext_lazy = () -> TradeContract1.mmObject();
 			isDerived = false;
 			xmlTag = "PrlngtnFlg";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ProlongationFlag";
 			definition = "Indicates whether the contract duration is extended or not.";
 			maxOccurs = 1;
@@ -402,11 +402,11 @@ public class TradeContract1 {
 	 */
 	public static final MMMessageAttribute mmStartDate = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Trade.mmStartDate;
+			businessElementTrace_lazy = () -> Trade.mmStartDate;
 			componentContext_lazy = () -> TradeContract1.mmObject();
 			isDerived = false;
 			xmlTag = "StartDt";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "StartDate";
 			definition = "Start date of the trade contract.";
 			maxOccurs = 1;
@@ -449,11 +449,11 @@ public class TradeContract1 {
 	 */
 	public static final MMMessageAttribute mmSettlementCurrency = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Account.mmBaseCurrency;
+			businessElementTrace_lazy = () -> Account.mmBaseCurrency;
 			componentContext_lazy = () -> TradeContract1.mmObject();
 			isDerived = false;
 			xmlTag = "SttlmCcy";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SettlementCurrency";
 			definition = "Currency in which the trade is being settled.";
 			maxOccurs = 1;
@@ -495,11 +495,11 @@ public class TradeContract1 {
 	 */
 	public static final MMMessageAssociationEnd mmExchangeRateInformation = new MMMessageAssociationEnd() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.PaymentObligation.mmExchangeRateInformation;
+			businessElementTrace_lazy = () -> PaymentObligation.mmExchangeRateInformation;
 			componentContext_lazy = () -> TradeContract1.mmObject();
 			isDerived = false;
 			xmlTag = "XchgRateInf";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ExchangeRateInformation";
 			definition = "Provides details on the currency exchange rate and contract.";
 			maxOccurs = 1;
@@ -542,11 +542,11 @@ public class TradeContract1 {
 	 */
 	public static final MMMessageAssociationEnd mmPaymentSchedule = new MMMessageAssociationEnd() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.PaymentObligation.mmPaymentTerms;
+			businessElementTrace_lazy = () -> PaymentObligation.mmPaymentTerms;
 			componentContext_lazy = () -> TradeContract1.mmObject();
 			isDerived = false;
 			xmlTag = "PmtSchdl";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PaymentSchedule";
 			definition = "Schedule of the payments defined for the trade contract.";
 			maxOccurs = 1;
@@ -589,11 +589,11 @@ public class TradeContract1 {
 	 */
 	public static final MMMessageAssociationEnd mmShipmentSchedule = new MMMessageAssociationEnd() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Transport.mmShipmentDates;
+			businessElementTrace_lazy = () -> Transport.mmShipmentDates;
 			componentContext_lazy = () -> TradeContract1.mmObject();
 			isDerived = false;
 			xmlTag = "ShipmntSchdl";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ShipmentSchedule";
 			definition = "Schedule of the shipment.";
 			maxOccurs = 1;
@@ -636,11 +636,11 @@ public class TradeContract1 {
 	 */
 	public static final MMMessageAssociationEnd mmAttachment = new MMMessageAssociationEnd() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.RegisteredContract.mmAttachment;
+			businessElementTrace_lazy = () -> RegisteredContract.mmAttachment;
 			componentContext_lazy = () -> TradeContract1.mmObject();
 			isDerived = false;
 			xmlTag = "Attchmnt";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Attachment";
 			definition = "Documents provided as attachments to the trade contract.";
 			minOccurs = 0;
@@ -652,14 +652,12 @@ public class TradeContract1 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.TradeContract1.mmContractDocumentIdentification, com.tools20022.repository.msg.TradeContract1.mmAmount,
-						com.tools20022.repository.msg.TradeContract1.mmBuyer, com.tools20022.repository.msg.TradeContract1.mmSeller, com.tools20022.repository.msg.TradeContract1.mmMaturityDate,
-						com.tools20022.repository.msg.TradeContract1.mmProlongationFlag, com.tools20022.repository.msg.TradeContract1.mmStartDate, com.tools20022.repository.msg.TradeContract1.mmSettlementCurrency,
-						com.tools20022.repository.msg.TradeContract1.mmExchangeRateInformation, com.tools20022.repository.msg.TradeContract1.mmPaymentSchedule, com.tools20022.repository.msg.TradeContract1.mmShipmentSchedule,
-						com.tools20022.repository.msg.TradeContract1.mmAttachment);
+				messageElement_lazy = () -> Arrays.asList(TradeContract1.mmContractDocumentIdentification, TradeContract1.mmAmount, TradeContract1.mmBuyer, TradeContract1.mmSeller, TradeContract1.mmMaturityDate,
+						TradeContract1.mmProlongationFlag, TradeContract1.mmStartDate, TradeContract1.mmSettlementCurrency, TradeContract1.mmExchangeRateInformation, TradeContract1.mmPaymentSchedule, TradeContract1.mmShipmentSchedule,
+						TradeContract1.mmAttachment);
 				trace_lazy = () -> Contract.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "TradeContract1";
 				definition = "Agreement between the parties, stipulating the terms and conditions of the delivery of goods or services.";
 			}

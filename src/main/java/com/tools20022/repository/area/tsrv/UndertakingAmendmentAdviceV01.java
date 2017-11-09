@@ -20,6 +20,7 @@ package com.tools20022.repository.area.tsrv;
 import com.tools20022.metamodel.MMMessageBuildingBlock;
 import com.tools20022.metamodel.MMMessageDefinition;
 import com.tools20022.metamodel.MMMessageDefinitionIdentifier;
+import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.area.TradeServicesLatestVersion;
 import com.tools20022.repository.datatype.ISODate;
 import com.tools20022.repository.datatype.Max2000Text;
@@ -46,6 +47,9 @@ import java.util.List;
  * <p>
  * <strong>Constant fields:</strong>
  * <ul>
+ * <li>
+ * {@linkplain com.tools20022.metamodel.MMMessageDefinition#getMessageDefinitionIdentifier
+ * messageDefinitionIdentifier} = {@code tsrv.006.001.01}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMMessageDefinition#getBusinessArea
  * businessArea} =
  * {@linkplain com.tools20022.repository.area.TradeServicesLatestVersion
@@ -86,9 +90,6 @@ import java.util.List;
  * UndertakingAmendmentAdviceV01.mmDigitalSignature}</li>
  * </ul>
  * </li>
- * <li>
- * {@linkplain com.tools20022.metamodel.MMMessageDefinition#getMessageDefinitionIdentifier
- * messageDefinitionIdentifier} = {@code tsrv.006.001.01}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -132,7 +133,7 @@ public class UndertakingAmendmentAdviceV01 {
 	public static final MMMessageBuildingBlock mmAdvisingParty = new MMMessageBuildingBlock() {
 		{
 			xmlTag = "AdvsgPty";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AdvisingParty";
 			definition = "Party advising the undertaking to the beneficiary or to another party.";
 			maxOccurs = 1;
@@ -167,7 +168,7 @@ public class UndertakingAmendmentAdviceV01 {
 	public static final MMMessageBuildingBlock mmSecondAdvisingParty = new MMMessageBuildingBlock() {
 		{
 			xmlTag = "ScndAdvsgPty";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SecondAdvisingParty";
 			definition = "Additional party that advises the undertaking.";
 			maxOccurs = 1;
@@ -201,7 +202,7 @@ public class UndertakingAmendmentAdviceV01 {
 	public static final MMMessageBuildingBlock mmDateOfAdvice = new MMMessageBuildingBlock() {
 		{
 			xmlTag = "DtOfAdvc";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "DateOfAdvice";
 			definition = "Date on which the undertaking is advised.";
 			maxOccurs = 1;
@@ -236,7 +237,7 @@ public class UndertakingAmendmentAdviceV01 {
 	public static final MMMessageBuildingBlock mmUndertakingAmendmentAdviceDetails = new MMMessageBuildingBlock() {
 		{
 			xmlTag = "UdrtkgAmdmntAdvcDtls";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "UndertakingAmendmentAdviceDetails";
 			definition = "Details related to the advice of the proposed amended undertaking.";
 			maxOccurs = 1;
@@ -271,7 +272,7 @@ public class UndertakingAmendmentAdviceV01 {
 	public static final MMMessageBuildingBlock mmBankToBankInformation = new MMMessageBuildingBlock() {
 		{
 			xmlTag = "BkToBkInf";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "BankToBankInformation";
 			definition = "Additional information specific to the bank-to-bank communication.";
 			maxOccurs = 5;
@@ -306,7 +307,7 @@ public class UndertakingAmendmentAdviceV01 {
 	public static final MMMessageBuildingBlock mmDigitalSignature = new MMMessageBuildingBlock() {
 		{
 			xmlTag = "DgtlSgntr";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "DigitalSignature";
 			definition = "Digital signature of the proposed amendment advice.";
 			maxOccurs = 1;
@@ -318,16 +319,15 @@ public class UndertakingAmendmentAdviceV01 {
 	final static public MMMessageDefinition mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageDefinition() {
 			{
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "UndertakingAmendmentAdviceV01";
 				definition = "The UndertakingAmendmentAdvice message is sent by an advising party to the beneficiary, either directly or via one or more other advising parties in the transaction chain, to advise the content of a proposed amendment to an undertaking. Information about the message may also be sent to other interested parties. The proposed undertaking amendment could be to a demand guarantee, standby letter of credit, or counter-undertaking (counter-guarantee or counter-standby). In addition to providing the terms of the proposed amendment and relevant details on proposed changes to the undertaking, the message may provide information from the sender such as confirmation details. It may also be used to advise the proposed termination or cancellation of the undertaking.";
 				messageSet_lazy = () -> Arrays.asList(DemandGuaranteesandStandbyLettersofCreditISOLatestversion.mmObject());
 				rootElement = "Document";
 				xmlTag = "UdrtkgAmdmntAdvc";
 				businessArea_lazy = () -> TradeServicesLatestVersion.mmObject();
-				messageBuildingBlock_lazy = () -> Arrays.asList(com.tools20022.repository.area.tsrv.UndertakingAmendmentAdviceV01.mmAdvisingParty, com.tools20022.repository.area.tsrv.UndertakingAmendmentAdviceV01.mmSecondAdvisingParty,
-						com.tools20022.repository.area.tsrv.UndertakingAmendmentAdviceV01.mmDateOfAdvice, com.tools20022.repository.area.tsrv.UndertakingAmendmentAdviceV01.mmUndertakingAmendmentAdviceDetails,
-						com.tools20022.repository.area.tsrv.UndertakingAmendmentAdviceV01.mmBankToBankInformation, com.tools20022.repository.area.tsrv.UndertakingAmendmentAdviceV01.mmDigitalSignature);
+				messageBuildingBlock_lazy = () -> Arrays.asList(UndertakingAmendmentAdviceV01.mmAdvisingParty, UndertakingAmendmentAdviceV01.mmSecondAdvisingParty, UndertakingAmendmentAdviceV01.mmDateOfAdvice,
+						UndertakingAmendmentAdviceV01.mmUndertakingAmendmentAdviceDetails, UndertakingAmendmentAdviceV01.mmBankToBankInformation, UndertakingAmendmentAdviceV01.mmDigitalSignature);
 				messageDefinitionIdentifier_lazy = () -> new MMMessageDefinitionIdentifier() {
 					{
 						businessArea = "tsrv";

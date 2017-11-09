@@ -20,7 +20,10 @@ package com.tools20022.repository.msg;
 import com.tools20022.metamodel.MMMessageAssociationEnd;
 import com.tools20022.metamodel.MMMessageAttribute;
 import com.tools20022.metamodel.MMMessageComponent;
+import com.tools20022.metamodel.MMRegistrationStatus;
+import com.tools20022.repository.area.seev.*;
 import com.tools20022.repository.datatype.YesNoIndicator;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -118,7 +121,7 @@ public class AmendInformation1 {
 			componentContext_lazy = () -> AmendInformation1.mmObject();
 			isDerived = false;
 			xmlTag = "PrvsRef";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PreviousReference";
 			definition = "Identifies the linked message which was previously sent.";
 			maxOccurs = 1;
@@ -165,7 +168,7 @@ public class AmendInformation1 {
 			componentContext_lazy = () -> AmendInformation1.mmObject();
 			isDerived = false;
 			xmlTag = "RcnfrmInstrs";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ReconfirmInstructions";
 			definition = "Indicates whether instructions must be resent (in case of modification of the parameters of a meeting for which instructions have already been sent).";
 			maxOccurs = 1;
@@ -177,13 +180,11 @@ public class AmendInformation1 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.AmendInformation1.mmPreviousReference, com.tools20022.repository.msg.AmendInformation1.mmReconfirmInstructions);
-				messageBuildingBlock_lazy = () -> Arrays.asList(com.tools20022.repository.area.seev.MeetingNotificationV02.mmAmendment, com.tools20022.repository.area.seev.MeetingNotificationV03.mmAmendment,
-						com.tools20022.repository.area.seev.MeetingNotificationV04.mmAmendment, com.tools20022.repository.area.seev.MeetingCancellationV02.mmMessageCancellation,
-						com.tools20022.repository.area.seev.MeetingCancellationV03.mmMessageCancellation, com.tools20022.repository.area.seev.MeetingCancellationV04.mmMessageCancellation,
-						com.tools20022.repository.area.seev.MeetingNotificationV05.mmAmendment);
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				messageElement_lazy = () -> Arrays.asList(AmendInformation1.mmPreviousReference, AmendInformation1.mmReconfirmInstructions);
+				messageBuildingBlock_lazy = () -> Arrays.asList(MeetingNotificationV02.mmAmendment, MeetingNotificationV03.mmAmendment, MeetingNotificationV04.mmAmendment, MeetingCancellationV02.mmMessageCancellation,
+						MeetingCancellationV03.mmMessageCancellation, MeetingCancellationV04.mmMessageCancellation, MeetingNotificationV05.mmAmendment);
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "AmendInformation1";
 				definition = "Information specific to an amendment or cancellation.";
 			}

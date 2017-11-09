@@ -19,11 +19,13 @@ package com.tools20022.repository.msg;
 
 import com.tools20022.metamodel.MMMessageAttribute;
 import com.tools20022.metamodel.MMMessageComponent;
+import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.codeset.FrankingClass1Code;
 import com.tools20022.repository.datatype.Max350Text;
 import com.tools20022.repository.datatype.PercentageRate;
 import com.tools20022.repository.datatype.RestrictedFINActiveCurrencyAnd13DecimalAmount;
 import com.tools20022.repository.datatype.YesNoIndicator;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -116,7 +118,7 @@ public class FrankingSD1 {
 			componentContext_lazy = () -> FrankingSD1.mmObject();
 			isDerived = false;
 			xmlTag = "PlcAndNm";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PlaceAndName";
 			definition = "Unambiguous reference to the location where the supplementary data must be inserted in the message instance. ";
 			maxOccurs = 1;
@@ -158,7 +160,7 @@ public class FrankingSD1 {
 			componentContext_lazy = () -> FrankingSD1.mmObject();
 			isDerived = false;
 			xmlTag = "FrnkgClss";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "FrankingClass";
 			definition = "Dividend / Distribution kind where the franking information apples to.";
 			maxOccurs = 1;
@@ -199,7 +201,7 @@ public class FrankingSD1 {
 			componentContext_lazy = () -> FrankingSD1.mmObject();
 			isDerived = false;
 			xmlTag = "FullyFrnkdInd";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "FullyFrankedIndicator";
 			definition = "Indicator if the dividend is fully franked.";
 			maxOccurs = 1;
@@ -240,7 +242,7 @@ public class FrankingSD1 {
 			componentContext_lazy = () -> FrankingSD1.mmObject();
 			isDerived = false;
 			xmlTag = "FrnkdPctg";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "FrankedPercentage";
 			definition = "Percentage of dividend that is franked.";
 			maxOccurs = 1;
@@ -281,7 +283,7 @@ public class FrankingSD1 {
 			componentContext_lazy = () -> FrankingSD1.mmObject();
 			isDerived = false;
 			xmlTag = "UfrnkdPctg";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "UnfrankedPercentage";
 			definition = "Percentage of dividend that is unfranked.";
 			maxOccurs = 1;
@@ -324,7 +326,7 @@ public class FrankingSD1 {
 			componentContext_lazy = () -> FrankingSD1.mmObject();
 			isDerived = false;
 			xmlTag = "CorpTaxRateForFrnkgCdt";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CorporateTaxRateForFrankingCredit";
 			definition = "The corporate tax rate for the for franking credit of the dividend.\r\n";
 			maxOccurs = 1;
@@ -366,7 +368,7 @@ public class FrankingSD1 {
 			componentContext_lazy = () -> FrankingSD1.mmObject();
 			isDerived = false;
 			xmlTag = "FrnkdAmtPerScty";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "FrankedAmountPerSecurity";
 			definition = "Cents amount of the dividend which has been franked at 30%.";
 			maxOccurs = 1;
@@ -407,7 +409,7 @@ public class FrankingSD1 {
 			componentContext_lazy = () -> FrankingSD1.mmObject();
 			isDerived = false;
 			xmlTag = "UfrnkdAmtPerScty";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "UnfrankedAmountPerSecurity";
 			definition = "Amount of the dividend which has been unfranked.\r\r\n";
 			maxOccurs = 1;
@@ -449,7 +451,7 @@ public class FrankingSD1 {
 			componentContext_lazy = () -> FrankingSD1.mmObject();
 			isDerived = false;
 			xmlTag = "CndtFrgnIncmAmt";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ConduitForeignIncomeAmount";
 			definition = "Conduit foreign income (CFI) amount related to the corporate action.";
 			maxOccurs = 1;
@@ -461,12 +463,10 @@ public class FrankingSD1 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.FrankingSD1.mmPlaceAndName, com.tools20022.repository.msg.FrankingSD1.mmFrankingClass,
-						com.tools20022.repository.msg.FrankingSD1.mmFullyFrankedIndicator, com.tools20022.repository.msg.FrankingSD1.mmFrankedPercentage, com.tools20022.repository.msg.FrankingSD1.mmUnfrankedPercentage,
-						com.tools20022.repository.msg.FrankingSD1.mmCorporateTaxRateForFrankingCredit, com.tools20022.repository.msg.FrankingSD1.mmFrankedAmountPerSecurity,
-						com.tools20022.repository.msg.FrankingSD1.mmUnfrankedAmountPerSecurity, com.tools20022.repository.msg.FrankingSD1.mmConduitForeignIncomeAmount);
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				messageElement_lazy = () -> Arrays.asList(FrankingSD1.mmPlaceAndName, FrankingSD1.mmFrankingClass, FrankingSD1.mmFullyFrankedIndicator, FrankingSD1.mmFrankedPercentage, FrankingSD1.mmUnfrankedPercentage,
+						FrankingSD1.mmCorporateTaxRateForFrankingCredit, FrankingSD1.mmFrankedAmountPerSecurity, FrankingSD1.mmUnfrankedAmountPerSecurity, FrankingSD1.mmConduitForeignIncomeAmount);
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "FrankingSD1";
 				definition = "Franking details";
 			}

@@ -19,11 +19,14 @@ package com.tools20022.repository.msg;
 
 import com.tools20022.metamodel.MMMessageAttribute;
 import com.tools20022.metamodel.MMMessageComponent;
+import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.codeset.ActiveCurrencyCode;
 import com.tools20022.repository.codeset.TypeTransactionTotals2Code;
 import com.tools20022.repository.datatype.ImpliedCurrencyAndAmount;
 import com.tools20022.repository.datatype.Max35Text;
 import com.tools20022.repository.datatype.Number;
+import com.tools20022.repository.entity.ReconciliationTransaction;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -120,10 +123,10 @@ public class TransactionTotals7 {
 			componentContext_lazy = () -> TransactionTotals7.mmObject();
 			isDerived = false;
 			xmlTag = "POIGrpId";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "POIGroupIdentification";
 			definition = "Identifier assigned by the merchant identifying a set of POI terminals performing some categories of transactions.";
-			previousVersion_lazy = () -> com.tools20022.repository.msg.TransactionTotals3.mmPOIGroupIdentification;
+			previousVersion_lazy = () -> TransactionTotals3.mmPOIGroupIdentification;
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> Max35Text.mmObject();
@@ -170,10 +173,10 @@ public class TransactionTotals7 {
 			componentContext_lazy = () -> TransactionTotals7.mmObject();
 			isDerived = false;
 			xmlTag = "CardPdctPrfl";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CardProductProfile";
 			definition = "Category of cards related the acceptance processing rules defined by the acquirer.";
-			previousVersion_lazy = () -> com.tools20022.repository.msg.TransactionTotals3.mmCardProductProfile;
+			previousVersion_lazy = () -> TransactionTotals3.mmCardProductProfile;
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> Max35Text.mmObject();
@@ -220,14 +223,14 @@ public class TransactionTotals7 {
 	 */
 	public static final MMMessageAttribute mmCurrency = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.ReconciliationTransaction.mmCurrency;
+			businessElementTrace_lazy = () -> ReconciliationTransaction.mmCurrency;
 			componentContext_lazy = () -> TransactionTotals7.mmObject();
 			isDerived = false;
 			xmlTag = "Ccy";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Currency";
 			definition = "Currency associated with the transaction totals.";
-			previousVersion_lazy = () -> com.tools20022.repository.msg.TransactionTotals3.mmCurrency;
+			previousVersion_lazy = () -> TransactionTotals3.mmCurrency;
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> ActiveCurrencyCode.mmObject();
@@ -274,14 +277,14 @@ public class TransactionTotals7 {
 	 */
 	public static final MMMessageAttribute mmType = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.ReconciliationTransaction.mmTransactionType;
+			businessElementTrace_lazy = () -> ReconciliationTransaction.mmTransactionType;
 			componentContext_lazy = () -> TransactionTotals7.mmObject();
 			isDerived = false;
 			xmlTag = "Tp";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Type";
 			definition = "Identification of the type of transaction.";
-			previousVersion_lazy = () -> com.tools20022.repository.msg.TransactionTotals3.mmType;
+			previousVersion_lazy = () -> TransactionTotals3.mmType;
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> TypeTransactionTotals2Code.mmObject();
@@ -326,10 +329,10 @@ public class TransactionTotals7 {
 			componentContext_lazy = () -> TransactionTotals7.mmObject();
 			isDerived = false;
 			xmlTag = "TtlNb";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "TotalNumber";
 			definition = "Total number of transactions during a reconciliation period.";
-			previousVersion_lazy = () -> com.tools20022.repository.msg.TransactionTotals3.mmTotalNumber;
+			previousVersion_lazy = () -> TransactionTotals3.mmTotalNumber;
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> Number.mmObject();
@@ -376,14 +379,14 @@ public class TransactionTotals7 {
 	 */
 	public static final MMMessageAttribute mmCumulativeAmount = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.ReconciliationTransaction.mmCumulativeAmount;
+			businessElementTrace_lazy = () -> ReconciliationTransaction.mmCumulativeAmount;
 			componentContext_lazy = () -> TransactionTotals7.mmObject();
 			isDerived = false;
 			xmlTag = "CmltvAmt";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CumulativeAmount";
 			definition = "Total amount of a collection of transactions.";
-			previousVersion_lazy = () -> com.tools20022.repository.msg.TransactionTotals3.mmCumulativeAmount;
+			previousVersion_lazy = () -> TransactionTotals3.mmCumulativeAmount;
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> ImpliedCurrencyAndAmount.mmObject();
@@ -393,11 +396,10 @@ public class TransactionTotals7 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.TransactionTotals7.mmPOIGroupIdentification, com.tools20022.repository.msg.TransactionTotals7.mmCardProductProfile,
-						com.tools20022.repository.msg.TransactionTotals7.mmCurrency, com.tools20022.repository.msg.TransactionTotals7.mmType, com.tools20022.repository.msg.TransactionTotals7.mmTotalNumber,
-						com.tools20022.repository.msg.TransactionTotals7.mmCumulativeAmount);
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				messageElement_lazy = () -> Arrays.asList(TransactionTotals7.mmPOIGroupIdentification, TransactionTotals7.mmCardProductProfile, TransactionTotals7.mmCurrency, TransactionTotals7.mmType, TransactionTotals7.mmTotalNumber,
+						TransactionTotals7.mmCumulativeAmount);
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "TransactionTotals7";
 				definition = "Transaction totals during the reconciliation period, for a certain type of transaction.";
 				previousVersion_lazy = () -> TransactionTotals3.mmObject();

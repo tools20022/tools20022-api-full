@@ -19,8 +19,10 @@ package com.tools20022.repository.msg;
 
 import com.tools20022.metamodel.MMMessageAttribute;
 import com.tools20022.metamodel.MMMessageComponent;
+import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.datatype.DecimalNumber;
 import com.tools20022.repository.datatype.Number;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -96,7 +98,7 @@ public class StatisticsTransparency2 {
 			componentContext_lazy = () -> StatisticsTransparency2.mmObject();
 			isDerived = false;
 			xmlTag = "TtlNbOfTxsExctd";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "TotalNumberOfTransactionsExecuted";
 			definition = "Total number of transactions that have been performed on this market.";
 			maxOccurs = 1;
@@ -139,7 +141,7 @@ public class StatisticsTransparency2 {
 			componentContext_lazy = () -> StatisticsTransparency2.mmObject();
 			isDerived = false;
 			xmlTag = "TtlVolOfTxsExctd";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "TotalVolumeOfTransactionsExecuted";
 			definition = "Total volume of transactions that have been performed on this market.";
 			maxOccurs = 1;
@@ -151,9 +153,9 @@ public class StatisticsTransparency2 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.StatisticsTransparency2.mmTotalNumberOfTransactionsExecuted, com.tools20022.repository.msg.StatisticsTransparency2.mmTotalVolumeOfTransactionsExecuted);
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				messageElement_lazy = () -> Arrays.asList(StatisticsTransparency2.mmTotalNumberOfTransactionsExecuted, StatisticsTransparency2.mmTotalVolumeOfTransactionsExecuted);
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "StatisticsTransparency2";
 				definition = "Statistics for a financial instrument generated as part of transparency calculations.";
 			}

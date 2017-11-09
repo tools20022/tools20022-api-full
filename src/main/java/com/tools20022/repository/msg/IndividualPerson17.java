@@ -20,12 +20,12 @@ package com.tools20022.repository.msg;
 import com.tools20022.metamodel.MMMessageAssociationEnd;
 import com.tools20022.metamodel.MMMessageAttribute;
 import com.tools20022.metamodel.MMMessageComponent;
+import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.choice.LongPostalAddress2Choice;
 import com.tools20022.repository.choice.PartyIdentification9Choice;
 import com.tools20022.repository.datatype.Max35Text;
-import com.tools20022.repository.entity.EmployingPartyRole;
-import com.tools20022.repository.entity.Person;
-import com.tools20022.repository.entity.PostalAddress;
+import com.tools20022.repository.entity.*;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -128,14 +128,14 @@ public class IndividualPerson17 {
 	 */
 	public static final MMMessageAttribute mmBirthName = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.PersonName.mmBirthName;
+			businessElementTrace_lazy = () -> PersonName.mmBirthName;
 			componentContext_lazy = () -> IndividualPerson17.mmObject();
 			isDerived = false;
 			xmlTag = "BirthNm";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "BirthName";
 			definition = "Name received at birth, eg, maiden name.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.IndividualPerson26.mmBirthName);
+			nextVersions_lazy = () -> Arrays.asList(IndividualPerson26.mmBirthName);
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> Max35Text.mmObject();
@@ -184,14 +184,14 @@ public class IndividualPerson17 {
 	 */
 	public static final MMMessageAttribute mmGivenName = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.PersonName.mmGivenName;
+			businessElementTrace_lazy = () -> PersonName.mmGivenName;
 			componentContext_lazy = () -> IndividualPerson17.mmObject();
 			isDerived = false;
 			xmlTag = "GvnNm";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "GivenName";
 			definition = "First name of a person.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.IndividualPerson26.mmGivenName);
+			nextVersions_lazy = () -> Arrays.asList(IndividualPerson26.mmGivenName);
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> Max35Text.mmObject();
@@ -240,14 +240,14 @@ public class IndividualPerson17 {
 	 */
 	public static final MMMessageAssociationEnd mmIdentification = new MMMessageAssociationEnd() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Person.mmPersonIdentification;
+			businessElementTrace_lazy = () -> Person.mmPersonIdentification;
 			componentContext_lazy = () -> IndividualPerson17.mmObject();
 			isDerived = false;
 			xmlTag = "Id";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Identification";
 			definition = "Unique and unambiguous identification of a person, eg, passport.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.IndividualPerson26.mmIdentification);
+			nextVersions_lazy = () -> Arrays.asList(IndividualPerson26.mmIdentification);
 			maxOccurs = 1;
 			minOccurs = 0;
 			isComposite = true;
@@ -301,10 +301,10 @@ public class IndividualPerson17 {
 			componentContext_lazy = () -> IndividualPerson17.mmObject();
 			isDerived = false;
 			xmlTag = "Adr";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Address";
 			definition = "Postal address of a party.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.IndividualPerson26.mmAddress);
+			nextVersions_lazy = () -> Arrays.asList(IndividualPerson26.mmAddress);
 			maxOccurs = 1;
 			minOccurs = 0;
 			isComposite = true;
@@ -359,10 +359,10 @@ public class IndividualPerson17 {
 			componentContext_lazy = () -> IndividualPerson17.mmObject();
 			isDerived = false;
 			xmlTag = "EmplngPty";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "EmployingParty";
 			definition = "Organisation represented by a person, or for which a person works.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.IndividualPerson26.mmEmployingParty);
+			nextVersions_lazy = () -> Arrays.asList(IndividualPerson26.mmEmployingParty);
 			maxOccurs = 1;
 			minOccurs = 0;
 			isComposite = true;
@@ -411,14 +411,14 @@ public class IndividualPerson17 {
 	 */
 	public static final MMMessageAssociationEnd mmAttendanceCardDetails = new MMMessageAssociationEnd() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.MeetingAttendance.mmAttendanceCard;
+			businessElementTrace_lazy = () -> MeetingAttendance.mmAttendanceCard;
 			componentContext_lazy = () -> IndividualPerson17.mmObject();
 			isDerived = false;
 			xmlTag = "AttndncCardDtls";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AttendanceCardDetails";
 			definition = "Specifies details related to the attendance card.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.IndividualPerson26.mmAttendanceCardDetails);
+			nextVersions_lazy = () -> Arrays.asList(IndividualPerson26.mmAttendanceCardDetails);
 			maxOccurs = 1;
 			minOccurs = 1;
 			isComposite = true;
@@ -429,12 +429,11 @@ public class IndividualPerson17 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.IndividualPerson17.mmBirthName, com.tools20022.repository.msg.IndividualPerson17.mmGivenName,
-						com.tools20022.repository.msg.IndividualPerson17.mmIdentification, com.tools20022.repository.msg.IndividualPerson17.mmAddress, com.tools20022.repository.msg.IndividualPerson17.mmEmployingParty,
-						com.tools20022.repository.msg.IndividualPerson17.mmAttendanceCardDetails);
+				messageElement_lazy = () -> Arrays.asList(IndividualPerson17.mmBirthName, IndividualPerson17.mmGivenName, IndividualPerson17.mmIdentification, IndividualPerson17.mmAddress, IndividualPerson17.mmEmployingParty,
+						IndividualPerson17.mmAttendanceCardDetails);
 				trace_lazy = () -> Person.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "IndividualPerson17";
 				definition = "Human entity, as distinguished from a corporate entity (which is sometimes referred to as an 'artificial person').";
 				nextVersions_lazy = () -> Arrays.asList(IndividualPerson26.mmObject());

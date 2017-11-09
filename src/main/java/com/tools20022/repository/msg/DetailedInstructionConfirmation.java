@@ -20,9 +20,11 @@ package com.tools20022.repository.msg;
 import com.tools20022.metamodel.MMMessageAssociationEnd;
 import com.tools20022.metamodel.MMMessageAttribute;
 import com.tools20022.metamodel.MMMessageComponent;
+import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.datatype.Max35Text;
 import com.tools20022.repository.datatype.YesNoIndicator;
 import com.tools20022.repository.entity.MeetingStatus;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -102,7 +104,7 @@ public class DetailedInstructionConfirmation {
 			componentContext_lazy = () -> DetailedInstructionConfirmation.mmObject();
 			isDerived = false;
 			xmlTag = "Id";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Identification";
 			definition = "Identifies the instruction for which a status is confirmed.";
 			maxOccurs = 1;
@@ -145,7 +147,7 @@ public class DetailedInstructionConfirmation {
 			componentContext_lazy = () -> DetailedInstructionConfirmation.mmObject();
 			isDerived = false;
 			xmlTag = "StgInstr";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "StandingInstruction";
 			definition = "Indicates whether standing instruction have been applied or not.";
 			maxOccurs = 1;
@@ -192,7 +194,7 @@ public class DetailedInstructionConfirmation {
 			componentContext_lazy = () -> DetailedInstructionConfirmation.mmObject();
 			isDerived = false;
 			xmlTag = "Sts";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Status";
 			definition = "Defines the status of the instruction.";
 			maxOccurs = 1;
@@ -205,11 +207,10 @@ public class DetailedInstructionConfirmation {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.DetailedInstructionConfirmation.mmIdentification, com.tools20022.repository.msg.DetailedInstructionConfirmation.mmStandingInstruction,
-						com.tools20022.repository.msg.DetailedInstructionConfirmation.mmStatus);
+				messageElement_lazy = () -> Arrays.asList(DetailedInstructionConfirmation.mmIdentification, DetailedInstructionConfirmation.mmStandingInstruction, DetailedInstructionConfirmation.mmStatus);
 				trace_lazy = () -> MeetingStatus.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 				name = "DetailedInstructionConfirmation";
 				definition = "Contains information relative to the status of a detailed instruction.";
 			}

@@ -19,7 +19,9 @@ package com.tools20022.repository.msg;
 
 import com.tools20022.metamodel.MMMessageAttribute;
 import com.tools20022.metamodel.MMMessageComponent;
+import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.datatype.Max35Text;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -93,7 +95,7 @@ public class ElectronicMessageDetails1 {
 			componentContext_lazy = () -> ElectronicMessageDetails1.mmObject();
 			isDerived = false;
 			xmlTag = "ElctrncSysInfMsgIdr";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ElectronicSystemInformationMessageIdentifier";
 			definition = "Information about separate electronic system information message.";
 			maxOccurs = 1;
@@ -134,7 +136,7 @@ public class ElectronicMessageDetails1 {
 			componentContext_lazy = () -> ElectronicMessageDetails1.mmObject();
 			isDerived = false;
 			xmlTag = "ElctrncSysInfMsgPacketIdr";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ElectronicSystemInformationMessagePacketIdentifier";
 			definition = "Information about packet of electronic system messages.";
 			maxOccurs = 1;
@@ -146,10 +148,9 @@ public class ElectronicMessageDetails1 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.ElectronicMessageDetails1.mmElectronicSystemInformationMessageIdentifier,
-						com.tools20022.repository.msg.ElectronicMessageDetails1.mmElectronicSystemInformationMessagePacketIdentifier);
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+				messageElement_lazy = () -> Arrays.asList(ElectronicMessageDetails1.mmElectronicSystemInformationMessageIdentifier, ElectronicMessageDetails1.mmElectronicSystemInformationMessagePacketIdentifier);
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 				name = "ElectronicMessageDetails1";
 				definition = "Summary of electronic message details.";
 			}

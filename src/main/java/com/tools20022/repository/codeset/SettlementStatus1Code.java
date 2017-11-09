@@ -19,7 +19,9 @@ package com.tools20022.repository.codeset;
 
 import com.tools20022.metamodel.MMCode;
 import com.tools20022.metamodel.MMCodeSet;
+import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.codeset.SettlementStatusCode;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -107,7 +109,7 @@ public class SettlementStatus1Code extends SettlementStatusCode {
 	 */
 	public static final MMCode mmAwaitingAuthorisation = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AwaitingAuthorisation";
 			owner_lazy = () -> SettlementStatus1Code.mmObject();
 		}
@@ -130,7 +132,7 @@ public class SettlementStatus1Code extends SettlementStatusCode {
 	 */
 	public static final MMCode mmAcceptedForSettlement = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AcceptedForSettlement";
 			owner_lazy = () -> SettlementStatus1Code.mmObject();
 		}
@@ -153,7 +155,7 @@ public class SettlementStatus1Code extends SettlementStatusCode {
 	 */
 	public static final MMCode mmSettlementTransactionCreated = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SettlementTransactionCreated";
 			owner_lazy = () -> SettlementStatus1Code.mmObject();
 		}
@@ -176,7 +178,7 @@ public class SettlementStatus1Code extends SettlementStatusCode {
 	 */
 	public static final MMCode mmRejected = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Rejected";
 			owner_lazy = () -> SettlementStatus1Code.mmObject();
 		}
@@ -199,7 +201,7 @@ public class SettlementStatus1Code extends SettlementStatusCode {
 	 */
 	public static final MMCode mmSplit = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Split";
 			owner_lazy = () -> SettlementStatus1Code.mmObject();
 		}
@@ -222,7 +224,7 @@ public class SettlementStatus1Code extends SettlementStatusCode {
 	 */
 	public static final MMCode mmPartiallySettled = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PartiallySettled";
 			owner_lazy = () -> SettlementStatus1Code.mmObject();
 		}
@@ -245,7 +247,7 @@ public class SettlementStatus1Code extends SettlementStatusCode {
 	 */
 	public static final MMCode mmSettled = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Settled";
 			owner_lazy = () -> SettlementStatus1Code.mmObject();
 		}
@@ -268,7 +270,7 @@ public class SettlementStatus1Code extends SettlementStatusCode {
 	 */
 	public static final MMCode mmAwaitingCreationConfirmation = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AwaitingCreationConfirmation";
 			owner_lazy = () -> SettlementStatus1Code.mmObject();
 		}
@@ -291,7 +293,7 @@ public class SettlementStatus1Code extends SettlementStatusCode {
 	 */
 	public static final MMCode mmAwaitingRescindConfirmation = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AwaitingRescindConfirmation";
 			owner_lazy = () -> SettlementStatus1Code.mmObject();
 		}
@@ -300,15 +302,13 @@ public class SettlementStatus1Code extends SettlementStatusCode {
 	static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
 				example = Arrays.asList("AAUT");
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "SettlementStatus1Code";
 				definition = "Specifies the status of the settlement of a trade in a central matching and settlement system.";
-				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.SettlementStatus1Code.mmAwaitingAuthorisation, com.tools20022.repository.codeset.SettlementStatus1Code.mmAcceptedForSettlement,
-						com.tools20022.repository.codeset.SettlementStatus1Code.mmSettlementTransactionCreated, com.tools20022.repository.codeset.SettlementStatus1Code.mmRejected,
-						com.tools20022.repository.codeset.SettlementStatus1Code.mmSplit, com.tools20022.repository.codeset.SettlementStatus1Code.mmPartiallySettled, com.tools20022.repository.codeset.SettlementStatus1Code.mmSettled,
-						com.tools20022.repository.codeset.SettlementStatus1Code.mmAwaitingCreationConfirmation, com.tools20022.repository.codeset.SettlementStatus1Code.mmAwaitingRescindConfirmation);
+				code_lazy = () -> Arrays.asList(SettlementStatus1Code.mmAwaitingAuthorisation, SettlementStatus1Code.mmAcceptedForSettlement, SettlementStatus1Code.mmSettlementTransactionCreated, SettlementStatus1Code.mmRejected,
+						SettlementStatus1Code.mmSplit, SettlementStatus1Code.mmPartiallySettled, SettlementStatus1Code.mmSettled, SettlementStatus1Code.mmAwaitingCreationConfirmation, SettlementStatus1Code.mmAwaitingRescindConfirmation);
 				trace_lazy = () -> SettlementStatusCode.mmObject();
 			}
 		});

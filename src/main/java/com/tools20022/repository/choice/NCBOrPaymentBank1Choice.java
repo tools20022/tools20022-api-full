@@ -20,7 +20,9 @@ package com.tools20022.repository.choice;
 import com.tools20022.metamodel.MMChoiceComponent;
 import com.tools20022.metamodel.MMMessageAssociationEnd;
 import com.tools20022.metamodel.MMMessageAttribute;
+import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.datatype.BICFIIdentifier;
+import com.tools20022.repository.GeneratedRepository;
 import com.tools20022.repository.msg.SystemPartyIdentification3;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
@@ -97,7 +99,7 @@ public class NCBOrPaymentBank1Choice {
 			componentContext_lazy = () -> NCBOrPaymentBank1Choice.mmObject();
 			isDerived = false;
 			xmlTag = "NCBId";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "NCBIdentification";
 			definition = "Unique business identifier code used to identify the national central bank providing the information.";
 			maxOccurs = 1;
@@ -141,7 +143,7 @@ public class NCBOrPaymentBank1Choice {
 			componentContext_lazy = () -> NCBOrPaymentBank1Choice.mmObject();
 			isDerived = false;
 			xmlTag = "PmtBkId";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PaymentBankIdentification";
 			definition = "Unique business identifier code used to identify the payment bank providing the information.";
 			maxOccurs = 1;
@@ -154,9 +156,9 @@ public class NCBOrPaymentBank1Choice {
 	final static public MMChoiceComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMChoiceComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.choice.NCBOrPaymentBank1Choice.mmNCBIdentification, com.tools20022.repository.choice.NCBOrPaymentBank1Choice.mmPaymentBankIdentification);
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+				messageElement_lazy = () -> Arrays.asList(NCBOrPaymentBank1Choice.mmNCBIdentification, NCBOrPaymentBank1Choice.mmPaymentBankIdentification);
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 				name = "NCBOrPaymentBank1Choice";
 				definition = "Choice between a national central bank or a payment bank.";
 			}

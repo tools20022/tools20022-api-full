@@ -19,11 +19,13 @@ package com.tools20022.repository.msg;
 
 import com.tools20022.metamodel.MMMessageAttribute;
 import com.tools20022.metamodel.MMMessageComponent;
+import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.codeset.EventWorkflowStatus1Code;
 import com.tools20022.repository.datatype.ISODate;
 import com.tools20022.repository.datatype.ISODateTime;
 import com.tools20022.repository.datatype.Max350Text;
 import com.tools20022.repository.datatype.Max4AlphaNumericText;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -113,7 +115,7 @@ public class CorporateActionNotificationSD4 {
 			componentContext_lazy = () -> CorporateActionNotificationSD4.mmObject();
 			isDerived = false;
 			xmlTag = "PlcAndNm";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PlaceAndName";
 			definition = "xPath to the element that is being extended.";
 			maxOccurs = 1;
@@ -155,7 +157,7 @@ public class CorporateActionNotificationSD4 {
 			componentContext_lazy = () -> CorporateActionNotificationSD4.mmObject();
 			isDerived = false;
 			xmlTag = "EvtSts";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "EventStatus";
 			definition = "Workflow status of the event.";
 			maxOccurs = 1;
@@ -197,7 +199,7 @@ public class CorporateActionNotificationSD4 {
 			componentContext_lazy = () -> CorporateActionNotificationSD4.mmObject();
 			isDerived = false;
 			xmlTag = "ApprvdDt";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ApprovedDate";
 			definition = "Date by which the announcement is set to approve event status.";
 			maxOccurs = 1;
@@ -241,7 +243,7 @@ public class CorporateActionNotificationSD4 {
 			componentContext_lazy = () -> CorporateActionNotificationSD4.mmObject();
 			isDerived = false;
 			xmlTag = "MtchDt";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "MatchDate";
 			definition = "Date used to match records from multiple vendors to the same event. It is typically the first key date on the event.";
 			maxOccurs = 1;
@@ -285,7 +287,7 @@ public class CorporateActionNotificationSD4 {
 			componentContext_lazy = () -> CorporateActionNotificationSD4.mmObject();
 			isDerived = false;
 			xmlTag = "ActvUntilDt";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ActiveUntilDate";
 			definition = "Date until which the event will remain in an active status on DTCC  (The Depository Trust and Clearing Corporation) system.";
 			maxOccurs = 1;
@@ -326,7 +328,7 @@ public class CorporateActionNotificationSD4 {
 			componentContext_lazy = () -> CorporateActionNotificationSD4.mmObject();
 			isDerived = false;
 			xmlTag = "SvcLvlAgrmtPrd";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ServiceLevelAgreementPeriod";
 			definition = "Start date and end date of the service level agreement.";
 			maxOccurs = 1;
@@ -373,7 +375,7 @@ public class CorporateActionNotificationSD4 {
 			componentContext_lazy = () -> CorporateActionNotificationSD4.mmObject();
 			isDerived = false;
 			xmlTag = "VldtnNotSpprtdRsn";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ValidationNotSupportedReason";
 			definition = "Specifies a reason why a corporate action will not be supported by the validation service. This is usually due to the event type or the product (security) type. The list of values will be provided externally to the schema.";
 			maxOccurs = 1;
@@ -385,12 +387,11 @@ public class CorporateActionNotificationSD4 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.CorporateActionNotificationSD4.mmPlaceAndName, com.tools20022.repository.msg.CorporateActionNotificationSD4.mmEventStatus,
-						com.tools20022.repository.msg.CorporateActionNotificationSD4.mmApprovedDate, com.tools20022.repository.msg.CorporateActionNotificationSD4.mmMatchDate,
-						com.tools20022.repository.msg.CorporateActionNotificationSD4.mmActiveUntilDate, com.tools20022.repository.msg.CorporateActionNotificationSD4.mmServiceLevelAgreementPeriod,
-						com.tools20022.repository.msg.CorporateActionNotificationSD4.mmValidationNotSupportedReason);
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+				messageElement_lazy = () -> Arrays.asList(CorporateActionNotificationSD4.mmPlaceAndName, CorporateActionNotificationSD4.mmEventStatus, CorporateActionNotificationSD4.mmApprovedDate,
+						CorporateActionNotificationSD4.mmMatchDate, CorporateActionNotificationSD4.mmActiveUntilDate, CorporateActionNotificationSD4.mmServiceLevelAgreementPeriod,
+						CorporateActionNotificationSD4.mmValidationNotSupportedReason);
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 				name = "CorporateActionNotificationSD4";
 				definition = "Provides additional information regarding notification general information details.";
 			}

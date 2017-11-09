@@ -20,13 +20,16 @@ package com.tools20022.repository.msg;
 import com.tools20022.metamodel.MMMessageAssociationEnd;
 import com.tools20022.metamodel.MMMessageAttribute;
 import com.tools20022.metamodel.MMMessageComponent;
+import com.tools20022.metamodel.MMRegistrationStatus;
+import com.tools20022.repository.area.acmt.AccountOpeningInstructionV07;
 import com.tools20022.repository.choice.*;
 import com.tools20022.repository.codeset.*;
 import com.tools20022.repository.datatype.Max350Text;
 import com.tools20022.repository.datatype.Max35Text;
 import com.tools20022.repository.datatype.Number;
 import com.tools20022.repository.datatype.YesNoIndicator;
-import com.tools20022.repository.entity.InvestmentAccount;
+import com.tools20022.repository.entity.*;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.List;
@@ -230,14 +233,14 @@ public class InvestmentAccount61 {
 	 */
 	public static final MMMessageAttribute mmIdentification = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Account.mmIdentification;
+			businessElementTrace_lazy = () -> Account.mmIdentification;
 			componentContext_lazy = () -> InvestmentAccount61.mmObject();
 			isDerived = false;
 			xmlTag = "Id";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Identification";
 			definition = "Unique and unambiguous identification for the account between the account owner and the account servicer.";
-			previousVersion_lazy = () -> com.tools20022.repository.msg.InvestmentAccount49.mmIdentification;
+			previousVersion_lazy = () -> InvestmentAccount49.mmIdentification;
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> Max35Text.mmObject();
@@ -287,14 +290,14 @@ public class InvestmentAccount61 {
 	 */
 	public static final MMMessageAttribute mmName = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.AccountIdentification.mmName;
+			businessElementTrace_lazy = () -> AccountIdentification.mmName;
 			componentContext_lazy = () -> InvestmentAccount61.mmObject();
 			isDerived = false;
 			xmlTag = "Nm";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Name";
 			definition = "Name of the account. It provides an additional means of identification, and is designated by the account servicer in agreement with the account owner.";
-			previousVersion_lazy = () -> com.tools20022.repository.msg.InvestmentAccount49.mmName;
+			previousVersion_lazy = () -> InvestmentAccount49.mmName;
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> Max35Text.mmObject();
@@ -346,14 +349,14 @@ public class InvestmentAccount61 {
 	 */
 	public static final MMMessageAttribute mmDesignation = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.InvestmentAccount.mmDesignation;
+			businessElementTrace_lazy = () -> InvestmentAccount.mmDesignation;
 			componentContext_lazy = () -> InvestmentAccount61.mmObject();
 			isDerived = false;
 			xmlTag = "Dsgnt";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Designation";
 			definition = "Supplementary registration information applying to a specific block of units for dealing and reporting purposes. The supplementary registration information may be used when all the units are registered, for example, to a funds supermarket, but holdings for each investor have to reconciled individually.";
-			previousVersion_lazy = () -> com.tools20022.repository.msg.InvestmentAccount49.mmDesignation;
+			previousVersion_lazy = () -> InvestmentAccount49.mmDesignation;
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> Max35Text.mmObject();
@@ -404,10 +407,10 @@ public class InvestmentAccount61 {
 			componentContext_lazy = () -> InvestmentAccount61.mmObject();
 			isDerived = false;
 			xmlTag = "Tp";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Type";
 			definition = "Type of account.";
-			previousVersion_lazy = () -> com.tools20022.repository.msg.InvestmentAccount49.mmType;
+			previousVersion_lazy = () -> InvestmentAccount49.mmType;
 			maxOccurs = 1;
 			minOccurs = 0;
 			complexType_lazy = () -> AccountType2Choice.mmObject();
@@ -455,14 +458,14 @@ public class InvestmentAccount61 {
 	 */
 	public static final MMMessageAttribute mmOwnershipType = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.InvestmentAccount.mmOwnershipType;
+			businessElementTrace_lazy = () -> InvestmentAccount.mmOwnershipType;
 			componentContext_lazy = () -> InvestmentAccount61.mmObject();
 			isDerived = false;
 			xmlTag = "OwnrshTp";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "OwnershipType";
 			definition = "Ownership status of the account, for example, joint owners.";
-			previousVersion_lazy = () -> com.tools20022.repository.msg.InvestmentAccount49.mmOwnershipType;
+			previousVersion_lazy = () -> InvestmentAccount49.mmOwnershipType;
 			maxOccurs = 1;
 			minOccurs = 1;
 			complexType_lazy = () -> OwnershipType2Choice.mmObject();
@@ -509,14 +512,14 @@ public class InvestmentAccount61 {
 	 */
 	public static final MMMessageAttribute mmTaxExemption = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.InvestmentAccount.mmInvestmentFundTax;
+			businessElementTrace_lazy = () -> InvestmentAccount.mmInvestmentFundTax;
 			componentContext_lazy = () -> InvestmentAccount61.mmObject();
 			isDerived = false;
 			xmlTag = "TaxXmptn";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "TaxExemption";
 			definition = "Tax advantage specific to the account.";
-			previousVersion_lazy = () -> com.tools20022.repository.msg.InvestmentAccount49.mmTaxExemption;
+			previousVersion_lazy = () -> InvestmentAccount49.mmTaxExemption;
 			maxOccurs = 1;
 			minOccurs = 0;
 			complexType_lazy = () -> TaxExemptionReason2Choice.mmObject();
@@ -563,14 +566,14 @@ public class InvestmentAccount61 {
 	 */
 	public static final MMMessageAttribute mmStatementFrequency = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.ReportingService.mmStatementFrequency;
+			businessElementTrace_lazy = () -> ReportingService.mmStatementFrequency;
 			componentContext_lazy = () -> InvestmentAccount61.mmObject();
 			isDerived = false;
 			xmlTag = "StmtFrqcy";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "StatementFrequency";
 			definition = "Frequency at which a statement is issued.";
-			previousVersion_lazy = () -> com.tools20022.repository.msg.InvestmentAccount49.mmStatementFrequency;
+			previousVersion_lazy = () -> InvestmentAccount49.mmStatementFrequency;
 			maxOccurs = 1;
 			minOccurs = 0;
 			complexType_lazy = () -> StatementFrequencyReason2Choice.mmObject();
@@ -620,14 +623,14 @@ public class InvestmentAccount61 {
 	 */
 	public static final MMMessageAttribute mmReferenceCurrency = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.InvestmentAccount.mmReferenceCurrency;
+			businessElementTrace_lazy = () -> InvestmentAccount.mmReferenceCurrency;
 			componentContext_lazy = () -> InvestmentAccount61.mmObject();
 			isDerived = false;
 			xmlTag = "RefCcy";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ReferenceCurrency";
 			definition = "Currency chosen for reporting purposes by the account owner in agreement with the account servicer.";
-			previousVersion_lazy = () -> com.tools20022.repository.msg.InvestmentAccount49.mmReferenceCurrency;
+			previousVersion_lazy = () -> InvestmentAccount49.mmReferenceCurrency;
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> ActiveCurrencyCode.mmObject();
@@ -673,14 +676,14 @@ public class InvestmentAccount61 {
 	 */
 	public static final MMMessageAttribute mmLanguage = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Account.mmLanguage;
+			businessElementTrace_lazy = () -> Account.mmLanguage;
 			componentContext_lazy = () -> InvestmentAccount61.mmObject();
 			isDerived = false;
 			xmlTag = "Lang";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Language";
 			definition = "Language for all communication concerning the account.";
-			previousVersion_lazy = () -> com.tools20022.repository.msg.InvestmentAccount49.mmLanguage;
+			previousVersion_lazy = () -> InvestmentAccount49.mmLanguage;
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> LanguageCode.mmObject();
@@ -730,14 +733,14 @@ public class InvestmentAccount61 {
 	 */
 	public static final MMMessageAttribute mmIncomePreference = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.InvestmentAccountService.mmIncomePreference;
+			businessElementTrace_lazy = () -> InvestmentAccountService.mmIncomePreference;
 			componentContext_lazy = () -> InvestmentAccount61.mmObject();
 			isDerived = false;
 			xmlTag = "IncmPref";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "IncomePreference";
 			definition = "Dividend option chosen by the account owner based on the options offered in the prospectus.";
-			previousVersion_lazy = () -> com.tools20022.repository.msg.InvestmentAccount49.mmIncomePreference;
+			previousVersion_lazy = () -> InvestmentAccount49.mmIncomePreference;
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> IncomePreference2Code.mmObject();
@@ -787,14 +790,14 @@ public class InvestmentAccount61 {
 	 */
 	public static final MMMessageAssociationEnd mmReinvestmentDetails = new MMMessageAssociationEnd() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.InvestmentAccountService.mmReinvestment;
+			businessElementTrace_lazy = () -> InvestmentAccountService.mmReinvestment;
 			componentContext_lazy = () -> InvestmentAccount61.mmObject();
 			isDerived = false;
 			xmlTag = "RinvstmtDtls";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ReinvestmentDetails";
 			definition = "Specifies, for income on the fund or security that is to be reinvested, parameters for the reinvestment. If the reinvestment percentage is less than one hundred percent, the remaining percentage will be invested according to the investor’s or account owner's subsequent instructions.";
-			previousVersion_lazy = () -> com.tools20022.repository.msg.InvestmentAccount49.mmReinvestmentDetails;
+			previousVersion_lazy = () -> InvestmentAccount49.mmReinvestmentDetails;
 			minOccurs = 0;
 			isComposite = true;
 			type_lazy = () -> com.tools20022.repository.msg.Reinvestment3.mmObject();
@@ -846,14 +849,14 @@ public class InvestmentAccount61 {
 	 */
 	public static final MMMessageAttribute mmTaxWithholdingMethod = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.InvestmentAccountService.mmTaxWithholdingMethod;
+			businessElementTrace_lazy = () -> InvestmentAccountService.mmTaxWithholdingMethod;
 			componentContext_lazy = () -> InvestmentAccount61.mmObject();
 			isDerived = false;
 			xmlTag = "TaxWhldgMtd";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "TaxWithholdingMethod";
 			definition = "Method by which the tax (withholding tax) is to be processed, that is,  either withheld at source or tax information is reported to tax authorities or tax information is reported due to the provision of a tax certificate.";
-			previousVersion_lazy = () -> com.tools20022.repository.msg.InvestmentAccount49.mmTaxWithholdingMethod;
+			previousVersion_lazy = () -> InvestmentAccount49.mmTaxWithholdingMethod;
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> TaxWithholdingMethod3Code.mmObject();
@@ -900,14 +903,14 @@ public class InvestmentAccount61 {
 	 */
 	public static final MMMessageAssociationEnd mmTaxReporting = new MMMessageAssociationEnd() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.TaxPartyRole.mmTax;
+			businessElementTrace_lazy = () -> TaxPartyRole.mmTax;
 			componentContext_lazy = () -> InvestmentAccount61.mmObject();
 			isDerived = false;
 			xmlTag = "TaxRptg";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "TaxReporting";
 			definition = "Details for the reporting of tax, for example, the country of taxation.";
-			previousVersion_lazy = () -> com.tools20022.repository.msg.InvestmentAccount49.mmTaxReporting;
+			previousVersion_lazy = () -> InvestmentAccount49.mmTaxReporting;
 			minOccurs = 0;
 			isComposite = true;
 			type_lazy = () -> com.tools20022.repository.msg.TaxReporting2.mmObject();
@@ -953,14 +956,14 @@ public class InvestmentAccount61 {
 	 */
 	public static final MMMessageAttribute mmLetterIntentDetails = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.InvestmentAccountContract.mmLetterIntentReference;
+			businessElementTrace_lazy = () -> InvestmentAccountContract.mmLetterIntentReference;
 			componentContext_lazy = () -> InvestmentAccount61.mmObject();
 			isDerived = false;
 			xmlTag = "LttrInttDtls";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "LetterIntentDetails";
 			definition = "Details of the letter of intent.";
-			previousVersion_lazy = () -> com.tools20022.repository.msg.InvestmentAccount49.mmLetterIntentDetails;
+			previousVersion_lazy = () -> InvestmentAccount49.mmLetterIntentDetails;
 			maxOccurs = 1;
 			minOccurs = 0;
 			complexType_lazy = () -> com.tools20022.repository.msg.LetterIntent1.mmObject();
@@ -1011,14 +1014,14 @@ public class InvestmentAccount61 {
 	 */
 	public static final MMMessageAttribute mmAccumulationRightReference = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.InvestmentAccountContract.mmAccumulationRightReference;
+			businessElementTrace_lazy = () -> InvestmentAccountContract.mmAccumulationRightReference;
 			componentContext_lazy = () -> InvestmentAccount61.mmObject();
 			isDerived = false;
 			xmlTag = "AcmltnRghtRef";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AccumulationRightReference";
 			definition = "Reference of an accumulation rights program, in which sales commissions are based on a customer's present purchases of shares and the aggregate quantity previously purchased by the customer. An accumulation rights program is mainly used in the US market.";
-			previousVersion_lazy = () -> com.tools20022.repository.msg.InvestmentAccount49.mmAccumulationRightReference;
+			previousVersion_lazy = () -> InvestmentAccount49.mmAccumulationRightReference;
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> Max35Text.mmObject();
@@ -1067,14 +1070,14 @@ public class InvestmentAccount61 {
 	 */
 	public static final MMMessageAttribute mmRequiredSignatoriesNumber = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.SignatureCondition.mmRequiredSignatureNumber;
+			businessElementTrace_lazy = () -> SignatureCondition.mmRequiredSignatureNumber;
 			componentContext_lazy = () -> InvestmentAccount61.mmObject();
 			isDerived = false;
 			xmlTag = "ReqrdSgntriesNb";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "RequiredSignatoriesNumber";
 			definition = "Number of account owners or related parties required to authorise transactions on the account.";
-			previousVersion_lazy = () -> com.tools20022.repository.msg.InvestmentAccount49.mmRequiredSignatoriesNumber;
+			previousVersion_lazy = () -> InvestmentAccount49.mmRequiredSignatoriesNumber;
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> Number.mmObject();
@@ -1120,14 +1123,14 @@ public class InvestmentAccount61 {
 	 */
 	public static final MMMessageAttribute mmFundFamilyName = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.InvestmentFundFamily.mmFundFamilyName;
+			businessElementTrace_lazy = () -> InvestmentFundFamily.mmFundFamilyName;
 			componentContext_lazy = () -> InvestmentAccount61.mmObject();
 			isDerived = false;
 			xmlTag = "FndFmlyNm";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "FundFamilyName";
 			definition = "Name of the investment fund family.";
-			previousVersion_lazy = () -> com.tools20022.repository.msg.InvestmentAccount49.mmFundFamilyName;
+			previousVersion_lazy = () -> InvestmentAccount49.mmFundFamilyName;
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> Max350Text.mmObject();
@@ -1175,14 +1178,14 @@ public class InvestmentAccount61 {
 	 */
 	public static final MMMessageAssociationEnd mmFinancialInstrumentDetails = new MMMessageAssociationEnd() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.InvestmentAccount.mmInvestmentFundClass;
+			businessElementTrace_lazy = () -> InvestmentAccount.mmInvestmentFundClass;
 			componentContext_lazy = () -> InvestmentAccount61.mmObject();
 			isDerived = false;
 			xmlTag = "FinInstrmDtls";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "FinancialInstrumentDetails";
 			definition = "Detailed information about the investment fund or security associated to the account.";
-			previousVersion_lazy = () -> com.tools20022.repository.msg.InvestmentAccount49.mmFinancialInstrumentDetails;
+			previousVersion_lazy = () -> InvestmentAccount49.mmFinancialInstrumentDetails;
 			minOccurs = 0;
 			isComposite = true;
 			type_lazy = () -> com.tools20022.repository.msg.FinancialInstrument56.mmObject();
@@ -1230,14 +1233,14 @@ public class InvestmentAccount61 {
 	 */
 	public static final MMMessageAssociationEnd mmRoundingDetails = new MMMessageAssociationEnd() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.InvestmentAccountService.mmRoundingMethod;
+			businessElementTrace_lazy = () -> InvestmentAccountService.mmRoundingMethod;
 			componentContext_lazy = () -> InvestmentAccount61.mmObject();
 			isDerived = false;
 			xmlTag = "RndgDtls";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "RoundingDetails";
 			definition = "Parameters to be applied on deal amount for orders when the amount is a fractional number.";
-			previousVersion_lazy = () -> com.tools20022.repository.msg.InvestmentAccount49.mmRoundingDetails;
+			previousVersion_lazy = () -> InvestmentAccount49.mmRoundingDetails;
 			maxOccurs = 1;
 			minOccurs = 0;
 			isComposite = true;
@@ -1289,14 +1292,14 @@ public class InvestmentAccount61 {
 	 */
 	public static final MMMessageAssociationEnd mmAccountServicer = new MMMessageAssociationEnd() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Party.mmIdentification;
+			businessElementTrace_lazy = () -> Party.mmIdentification;
 			componentContext_lazy = () -> InvestmentAccount61.mmObject();
 			isDerived = false;
 			xmlTag = "AcctSvcr";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AccountServicer";
 			definition = "Party that manages the account on behalf of the account owner, that is manages the registration and booking of entries on the account, calculates balances on the account and provides information about the account.";
-			previousVersion_lazy = () -> com.tools20022.repository.msg.InvestmentAccount49.mmAccountServicer;
+			previousVersion_lazy = () -> InvestmentAccount49.mmAccountServicer;
 			maxOccurs = 1;
 			minOccurs = 0;
 			isComposite = true;
@@ -1347,14 +1350,14 @@ public class InvestmentAccount61 {
 	 */
 	public static final MMMessageAttribute mmBlockedStatus = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Account.mmStatus;
+			businessElementTrace_lazy = () -> Account.mmStatus;
 			componentContext_lazy = () -> InvestmentAccount61.mmObject();
 			isDerived = false;
 			xmlTag = "BlckdSts";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "BlockedStatus";
 			definition = "Specifies the account is blocked and other factors for the blocked account.";
-			previousVersion_lazy = () -> com.tools20022.repository.msg.InvestmentAccount49.mmBlockedStatus;
+			previousVersion_lazy = () -> InvestmentAccount49.mmBlockedStatus;
 			maxOccurs = 1;
 			minOccurs = 0;
 			complexType_lazy = () -> BlockedStatusReason2Choice.mmObject();
@@ -1405,10 +1408,10 @@ public class InvestmentAccount61 {
 			componentContext_lazy = () -> InvestmentAccount61.mmObject();
 			isDerived = false;
 			xmlTag = "AcctUsgTp";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AccountUsageType";
 			definition = "Type of usage of the account.";
-			previousVersion_lazy = () -> com.tools20022.repository.msg.InvestmentAccount49.mmAccountUsageType;
+			previousVersion_lazy = () -> InvestmentAccount49.mmAccountUsageType;
 			maxOccurs = 1;
 			minOccurs = 0;
 			complexType_lazy = () -> AccountUsageType2Choice.mmObject();
@@ -1456,10 +1459,10 @@ public class InvestmentAccount61 {
 			componentContext_lazy = () -> InvestmentAccount61.mmObject();
 			isDerived = false;
 			xmlTag = "FrgnStsCertfctn";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ForeignStatusCertification";
 			definition = "Specifies if documentary evidence has been provided for the foreign resident.";
-			previousVersion_lazy = () -> com.tools20022.repository.msg.InvestmentAccount49.mmForeignStatusCertification;
+			previousVersion_lazy = () -> InvestmentAccount49.mmForeignStatusCertification;
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> Provided1Code.mmObject();
@@ -1507,14 +1510,14 @@ public class InvestmentAccount61 {
 	 */
 	public static final MMMessageAttribute mmAccountSignatureDateTime = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Agreement.mmDateSigned;
+			businessElementTrace_lazy = () -> Agreement.mmDateSigned;
 			componentContext_lazy = () -> InvestmentAccount61.mmObject();
 			isDerived = false;
 			xmlTag = "AcctSgntrDtTm";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AccountSignatureDateTime";
 			definition = "Date the investor or account owner signs the open account form.";
-			previousVersion_lazy = () -> com.tools20022.repository.msg.InvestmentAccount49.mmAccountSignatureDateTime;
+			previousVersion_lazy = () -> InvestmentAccount49.mmAccountSignatureDateTime;
 			maxOccurs = 1;
 			minOccurs = 0;
 			complexType_lazy = () -> DateAndDateTimeChoice.mmObject();
@@ -1563,14 +1566,14 @@ public class InvestmentAccount61 {
 	 */
 	public static final MMMessageAssociationEnd mmTransactionChannelType = new MMMessageAssociationEnd() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.AccountContract.mmTransactionChannel;
+			businessElementTrace_lazy = () -> AccountContract.mmTransactionChannel;
 			componentContext_lazy = () -> InvestmentAccount61.mmObject();
 			isDerived = false;
 			xmlTag = "TxChanlTp";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "TransactionChannelType";
 			definition = "Means by which the investor or account owner submits the open account form. ";
-			previousVersion_lazy = () -> com.tools20022.repository.msg.InvestmentAccount49.mmTransactionChannelType;
+			previousVersion_lazy = () -> InvestmentAccount49.mmTransactionChannelType;
 			maxOccurs = 1;
 			minOccurs = 0;
 			isComposite = true;
@@ -1617,14 +1620,14 @@ public class InvestmentAccount61 {
 	 */
 	public static final MMMessageAssociationEnd mmInvestmentAccountCategory = new MMMessageAssociationEnd() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.InvestmentAccount.mmCategory;
+			businessElementTrace_lazy = () -> InvestmentAccount.mmCategory;
 			componentContext_lazy = () -> InvestmentAccount61.mmObject();
 			isDerived = false;
 			xmlTag = "InvstmtAcctCtgy";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "InvestmentAccountCategory";
 			definition = "Category of the account.";
-			previousVersion_lazy = () -> com.tools20022.repository.msg.InvestmentAccount49.mmInvestmentAccountCategory;
+			previousVersion_lazy = () -> InvestmentAccount49.mmInvestmentAccountCategory;
 			maxOccurs = 1;
 			minOccurs = 0;
 			isComposite = true;
@@ -1672,10 +1675,10 @@ public class InvestmentAccount61 {
 			componentContext_lazy = () -> InvestmentAccount61.mmObject();
 			isDerived = false;
 			xmlTag = "Pldgg";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Pledging";
 			definition = "Specifies whether the holdings in the account are eligible for pledging.";
-			previousVersion_lazy = () -> com.tools20022.repository.msg.InvestmentAccount49.mmPledging;
+			previousVersion_lazy = () -> InvestmentAccount49.mmPledging;
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> Eligible1Code.mmObject();
@@ -1721,10 +1724,10 @@ public class InvestmentAccount61 {
 			componentContext_lazy = () -> InvestmentAccount61.mmObject();
 			isDerived = false;
 			xmlTag = "Coll";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Collateral";
 			definition = "Specifies whether the holdings in the account are used as collateral.";
-			previousVersion_lazy = () -> com.tools20022.repository.msg.InvestmentAccount49.mmCollateral;
+			previousVersion_lazy = () -> InvestmentAccount49.mmCollateral;
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> Collateral1Code.mmObject();
@@ -1767,10 +1770,10 @@ public class InvestmentAccount61 {
 			componentContext_lazy = () -> InvestmentAccount61.mmObject();
 			isDerived = false;
 			xmlTag = "ThrdPtyRghts";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ThirdPartyRights";
 			definition = "Details of third party rights.";
-			previousVersion_lazy = () -> com.tools20022.repository.msg.InvestmentAccount49.mmThirdPartyRights;
+			previousVersion_lazy = () -> InvestmentAccount49.mmThirdPartyRights;
 			maxOccurs = 1;
 			minOccurs = 0;
 			isComposite = true;
@@ -1818,10 +1821,10 @@ public class InvestmentAccount61 {
 			componentContext_lazy = () -> InvestmentAccount61.mmObject();
 			isDerived = false;
 			xmlTag = "PwrOfAttnyLvlOfCtrl";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PowerOfAttorneyLevelOfControl";
 			definition = "Functionality permitted to a third party in the actions that may be taken on an account on behalf of the investor.";
-			previousVersion_lazy = () -> com.tools20022.repository.msg.InvestmentAccount49.mmPowerOfAttorneyLevelOfControl;
+			previousVersion_lazy = () -> InvestmentAccount49.mmPowerOfAttorneyLevelOfControl;
 			maxOccurs = 1;
 			minOccurs = 0;
 			isComposite = true;
@@ -1869,10 +1872,10 @@ public class InvestmentAccount61 {
 			componentContext_lazy = () -> InvestmentAccount61.mmObject();
 			isDerived = false;
 			xmlTag = "AcctgSts";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AccountingStatus";
 			definition = "Specifies if the account is regarded as domestic or non-domestic for reporting purposes.";
-			previousVersion_lazy = () -> com.tools20022.repository.msg.InvestmentAccount49.mmAccountingStatus;
+			previousVersion_lazy = () -> InvestmentAccount49.mmAccountingStatus;
 			maxOccurs = 1;
 			minOccurs = 0;
 			isComposite = true;
@@ -1919,14 +1922,14 @@ public class InvestmentAccount61 {
 	 */
 	public static final MMMessageAssociationEnd mmOpeningDate = new MMMessageAssociationEnd() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Account.mmOpeningDate;
+			businessElementTrace_lazy = () -> Account.mmOpeningDate;
 			componentContext_lazy = () -> InvestmentAccount61.mmObject();
 			isDerived = false;
 			xmlTag = "OpngDt";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "OpeningDate";
 			definition = "Legal opening date for the account.";
-			previousVersion_lazy = () -> com.tools20022.repository.msg.InvestmentAccount49.mmOpeningDate;
+			previousVersion_lazy = () -> InvestmentAccount49.mmOpeningDate;
 			maxOccurs = 1;
 			minOccurs = 0;
 			isComposite = true;
@@ -1973,14 +1976,14 @@ public class InvestmentAccount61 {
 	 */
 	public static final MMMessageAssociationEnd mmClosingDate = new MMMessageAssociationEnd() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Account.mmClosingDate;
+			businessElementTrace_lazy = () -> Account.mmClosingDate;
 			componentContext_lazy = () -> InvestmentAccount61.mmObject();
 			isDerived = false;
 			xmlTag = "ClsgDt";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ClosingDate";
 			definition = "Legal closing date for the account.";
-			previousVersion_lazy = () -> com.tools20022.repository.msg.InvestmentAccount49.mmClosingDate;
+			previousVersion_lazy = () -> InvestmentAccount49.mmClosingDate;
 			maxOccurs = 1;
 			minOccurs = 0;
 			isComposite = true;
@@ -2028,10 +2031,10 @@ public class InvestmentAccount61 {
 			componentContext_lazy = () -> InvestmentAccount61.mmObject();
 			isDerived = false;
 			xmlTag = "NegInd";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "NegativeIndicator";
 			definition = "Indicates whether the account can hold a negative position in a security.";
-			previousVersion_lazy = () -> com.tools20022.repository.msg.InvestmentAccount49.mmNegativeIndicator;
+			previousVersion_lazy = () -> InvestmentAccount49.mmNegativeIndicator;
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> YesNoIndicator.mmObject();
@@ -2078,14 +2081,14 @@ public class InvestmentAccount61 {
 	 */
 	public static final MMMessageAttribute mmProcessingOrder = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.SecuritiesOrder.mmPositionEffect;
+			businessElementTrace_lazy = () -> SecuritiesOrder.mmPositionEffect;
 			componentContext_lazy = () -> InvestmentAccount61.mmObject();
 			isDerived = false;
 			xmlTag = "PrcgOrdr";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ProcessingOrder";
 			definition = "Order in which securities are moved from the account.";
-			previousVersion_lazy = () -> com.tools20022.repository.msg.InvestmentAccount49.mmProcessingOrder;
+			previousVersion_lazy = () -> InvestmentAccount49.mmProcessingOrder;
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> PositionEffect3Code.mmObject();
@@ -2130,10 +2133,10 @@ public class InvestmentAccount61 {
 			componentContext_lazy = () -> InvestmentAccount61.mmObject();
 			isDerived = false;
 			xmlTag = "Lblty";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Liability";
 			definition = "Specifies whether the investor assumes responsibility for the liability.";
-			previousVersion_lazy = () -> com.tools20022.repository.msg.InvestmentAccount49.mmLiability;
+			previousVersion_lazy = () -> InvestmentAccount49.mmLiability;
 			maxOccurs = 1;
 			minOccurs = 0;
 			isComposite = true;
@@ -2180,10 +2183,10 @@ public class InvestmentAccount61 {
 			componentContext_lazy = () -> InvestmentAccount61.mmObject();
 			isDerived = false;
 			xmlTag = "InvstrPrfl";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "InvestorProfile";
 			definition = "Information used to determine fees and types of operations that can be carried out on the account.";
-			previousVersion_lazy = () -> com.tools20022.repository.msg.InvestmentAccount49.mmInvestorProfile;
+			previousVersion_lazy = () -> InvestmentAccount49.mmInvestorProfile;
 			minOccurs = 0;
 			isComposite = true;
 			type_lazy = () -> com.tools20022.repository.msg.InvestorProfile1.mmObject();
@@ -2228,14 +2231,14 @@ public class InvestmentAccount61 {
 	 */
 	public static final MMMessageAssociationEnd mmFiscalYear = new MMMessageAssociationEnd() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Tax.mmTaxDate;
+			businessElementTrace_lazy = () -> Tax.mmTaxDate;
 			componentContext_lazy = () -> InvestmentAccount61.mmObject();
 			isDerived = false;
 			xmlTag = "FsclYr";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "FiscalYear";
 			definition = "Fiscal year, when not the same as the calendar year.";
-			previousVersion_lazy = () -> com.tools20022.repository.msg.InvestmentAccount49.mmFiscalYear;
+			previousVersion_lazy = () -> InvestmentAccount49.mmFiscalYear;
 			maxOccurs = 1;
 			minOccurs = 0;
 			isComposite = true;
@@ -2246,25 +2249,18 @@ public class InvestmentAccount61 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.InvestmentAccount61.mmIdentification, com.tools20022.repository.msg.InvestmentAccount61.mmName,
-						com.tools20022.repository.msg.InvestmentAccount61.mmDesignation, com.tools20022.repository.msg.InvestmentAccount61.mmType, com.tools20022.repository.msg.InvestmentAccount61.mmOwnershipType,
-						com.tools20022.repository.msg.InvestmentAccount61.mmTaxExemption, com.tools20022.repository.msg.InvestmentAccount61.mmStatementFrequency, com.tools20022.repository.msg.InvestmentAccount61.mmReferenceCurrency,
-						com.tools20022.repository.msg.InvestmentAccount61.mmLanguage, com.tools20022.repository.msg.InvestmentAccount61.mmIncomePreference, com.tools20022.repository.msg.InvestmentAccount61.mmReinvestmentDetails,
-						com.tools20022.repository.msg.InvestmentAccount61.mmTaxWithholdingMethod, com.tools20022.repository.msg.InvestmentAccount61.mmTaxReporting, com.tools20022.repository.msg.InvestmentAccount61.mmLetterIntentDetails,
-						com.tools20022.repository.msg.InvestmentAccount61.mmAccumulationRightReference, com.tools20022.repository.msg.InvestmentAccount61.mmRequiredSignatoriesNumber,
-						com.tools20022.repository.msg.InvestmentAccount61.mmFundFamilyName, com.tools20022.repository.msg.InvestmentAccount61.mmFinancialInstrumentDetails,
-						com.tools20022.repository.msg.InvestmentAccount61.mmRoundingDetails, com.tools20022.repository.msg.InvestmentAccount61.mmAccountServicer, com.tools20022.repository.msg.InvestmentAccount61.mmBlockedStatus,
-						com.tools20022.repository.msg.InvestmentAccount61.mmAccountUsageType, com.tools20022.repository.msg.InvestmentAccount61.mmForeignStatusCertification,
-						com.tools20022.repository.msg.InvestmentAccount61.mmAccountSignatureDateTime, com.tools20022.repository.msg.InvestmentAccount61.mmTransactionChannelType,
-						com.tools20022.repository.msg.InvestmentAccount61.mmInvestmentAccountCategory, com.tools20022.repository.msg.InvestmentAccount61.mmPledging, com.tools20022.repository.msg.InvestmentAccount61.mmCollateral,
-						com.tools20022.repository.msg.InvestmentAccount61.mmThirdPartyRights, com.tools20022.repository.msg.InvestmentAccount61.mmPowerOfAttorneyLevelOfControl,
-						com.tools20022.repository.msg.InvestmentAccount61.mmAccountingStatus, com.tools20022.repository.msg.InvestmentAccount61.mmOpeningDate, com.tools20022.repository.msg.InvestmentAccount61.mmClosingDate,
-						com.tools20022.repository.msg.InvestmentAccount61.mmNegativeIndicator, com.tools20022.repository.msg.InvestmentAccount61.mmProcessingOrder, com.tools20022.repository.msg.InvestmentAccount61.mmLiability,
-						com.tools20022.repository.msg.InvestmentAccount61.mmInvestorProfile, com.tools20022.repository.msg.InvestmentAccount61.mmFiscalYear);
-				messageBuildingBlock_lazy = () -> Arrays.asList(com.tools20022.repository.area.acmt.AccountOpeningInstructionV07.mmInvestmentAccount);
+				messageElement_lazy = () -> Arrays.asList(InvestmentAccount61.mmIdentification, InvestmentAccount61.mmName, InvestmentAccount61.mmDesignation, InvestmentAccount61.mmType, InvestmentAccount61.mmOwnershipType,
+						InvestmentAccount61.mmTaxExemption, InvestmentAccount61.mmStatementFrequency, InvestmentAccount61.mmReferenceCurrency, InvestmentAccount61.mmLanguage, InvestmentAccount61.mmIncomePreference,
+						InvestmentAccount61.mmReinvestmentDetails, InvestmentAccount61.mmTaxWithholdingMethod, InvestmentAccount61.mmTaxReporting, InvestmentAccount61.mmLetterIntentDetails, InvestmentAccount61.mmAccumulationRightReference,
+						InvestmentAccount61.mmRequiredSignatoriesNumber, InvestmentAccount61.mmFundFamilyName, InvestmentAccount61.mmFinancialInstrumentDetails, InvestmentAccount61.mmRoundingDetails, InvestmentAccount61.mmAccountServicer,
+						InvestmentAccount61.mmBlockedStatus, InvestmentAccount61.mmAccountUsageType, InvestmentAccount61.mmForeignStatusCertification, InvestmentAccount61.mmAccountSignatureDateTime,
+						InvestmentAccount61.mmTransactionChannelType, InvestmentAccount61.mmInvestmentAccountCategory, InvestmentAccount61.mmPledging, InvestmentAccount61.mmCollateral, InvestmentAccount61.mmThirdPartyRights,
+						InvestmentAccount61.mmPowerOfAttorneyLevelOfControl, InvestmentAccount61.mmAccountingStatus, InvestmentAccount61.mmOpeningDate, InvestmentAccount61.mmClosingDate, InvestmentAccount61.mmNegativeIndicator,
+						InvestmentAccount61.mmProcessingOrder, InvestmentAccount61.mmLiability, InvestmentAccount61.mmInvestorProfile, InvestmentAccount61.mmFiscalYear);
+				messageBuildingBlock_lazy = () -> Arrays.asList(AccountOpeningInstructionV07.mmInvestmentAccount);
 				trace_lazy = () -> InvestmentAccount.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "InvestmentAccount61";
 				definition = "Information about a securities account and its characteristics.";
 				previousVersion_lazy = () -> InvestmentAccount49.mmObject();

@@ -20,8 +20,10 @@ package com.tools20022.repository.msg;
 import com.tools20022.metamodel.MMMessageAssociationEnd;
 import com.tools20022.metamodel.MMMessageAttribute;
 import com.tools20022.metamodel.MMMessageComponent;
+import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.datatype.Max35Text;
-import com.tools20022.repository.entity.SecuritiesTrade;
+import com.tools20022.repository.entity.*;
+import com.tools20022.repository.GeneratedRepository;
 import java.text.DateFormat;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
@@ -163,15 +165,15 @@ public class Transaction36 {
 	 */
 	public static final MMMessageAttribute mmAccountOwnerTransactionIdentification = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Entry.mmAccountOwnerTransactionIdentification;
+			businessElementTrace_lazy = () -> Entry.mmAccountOwnerTransactionIdentification;
 			componentContext_lazy = () -> Transaction36.mmObject();
 			isDerived = false;
 			xmlTag = "AcctOwnrTxId";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AccountOwnerTransactionIdentification";
 			definition = "Unambiguous identification of the transaction as known by the account owner (or the instructing party managing the account).";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.Transaction46.mmAccountOwnerTransactionIdentification);
-			previousVersion_lazy = () -> com.tools20022.repository.msg.Transaction29.mmAccountOwnerTransactionIdentification;
+			nextVersions_lazy = () -> Arrays.asList(Transaction46.mmAccountOwnerTransactionIdentification);
+			previousVersion_lazy = () -> Transaction29.mmAccountOwnerTransactionIdentification;
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> Max35Text.mmObject();
@@ -227,15 +229,15 @@ public class Transaction36 {
 	 */
 	public static final MMMessageAttribute mmAccountServicerTransactionIdentification = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Entry.mmAccountServicerTransactionIdentification;
+			businessElementTrace_lazy = () -> Entry.mmAccountServicerTransactionIdentification;
 			componentContext_lazy = () -> Transaction36.mmObject();
 			isDerived = false;
 			xmlTag = "AcctSvcrTxId";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AccountServicerTransactionIdentification";
 			definition = "Unambiguous identification of the transaction as known by the account servicer.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.Transaction46.mmAccountServicerTransactionIdentification);
-			previousVersion_lazy = () -> com.tools20022.repository.msg.Transaction29.mmAccountServicerTransactionIdentification;
+			nextVersions_lazy = () -> Arrays.asList(Transaction46.mmAccountServicerTransactionIdentification);
+			previousVersion_lazy = () -> Transaction29.mmAccountServicerTransactionIdentification;
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> Max35Text.mmObject();
@@ -292,15 +294,15 @@ public class Transaction36 {
 	 */
 	public static final MMMessageAttribute mmMarketInfrastructureTransactionIdentification = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.SecuritiesTradeIdentification.mmMarketInfrastructureTransactionIdentification;
+			businessElementTrace_lazy = () -> SecuritiesTradeIdentification.mmMarketInfrastructureTransactionIdentification;
 			componentContext_lazy = () -> Transaction36.mmObject();
 			isDerived = false;
 			xmlTag = "MktInfrstrctrTxId";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "MarketInfrastructureTransactionIdentification";
 			definition = "Identification of a transaction assigned by a market infrastructure other than a central securities depository, for example, Target2-Securities.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.Transaction46.mmMarketInfrastructureTransactionIdentification);
-			previousVersion_lazy = () -> com.tools20022.repository.msg.Transaction29.mmMarketInfrastructureTransactionIdentification;
+			nextVersions_lazy = () -> Arrays.asList(Transaction46.mmMarketInfrastructureTransactionIdentification);
+			previousVersion_lazy = () -> Transaction29.mmMarketInfrastructureTransactionIdentification;
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> Max35Text.mmObject();
@@ -357,15 +359,15 @@ public class Transaction36 {
 	 */
 	public static final MMMessageAttribute mmProcessorTransactionIdentification = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.SecuritiesTradeIdentification.mmProcessorTransactionIdentification;
+			businessElementTrace_lazy = () -> SecuritiesTradeIdentification.mmProcessorTransactionIdentification;
 			componentContext_lazy = () -> Transaction36.mmObject();
 			isDerived = false;
 			xmlTag = "PrcrTxId";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ProcessorTransactionIdentification";
 			definition = "Identification of the transaction assigned by the processor of the instruction other than the account owner the account servicer and the market infrastructure.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.Transaction46.mmProcessorTransactionIdentification);
-			previousVersion_lazy = () -> com.tools20022.repository.msg.Transaction29.mmProcessorTransactionIdentification;
+			nextVersions_lazy = () -> Arrays.asList(Transaction46.mmProcessorTransactionIdentification);
+			previousVersion_lazy = () -> Transaction29.mmProcessorTransactionIdentification;
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> Max35Text.mmObject();
@@ -422,15 +424,15 @@ public class Transaction36 {
 	 */
 	public static final MMMessageAttribute mmTradeIdentification = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.TradeIdentification.mmIdentification;
+			businessElementTrace_lazy = () -> TradeIdentification.mmIdentification;
 			componentContext_lazy = () -> Transaction36.mmObject();
 			isDerived = false;
 			xmlTag = "TradId";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "TradeIdentification";
 			definition = "Reference assigned to the trade by the investor or the trading party. This reference will be used throughout the trade life cycle to access/update the trade details.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.Transaction46.mmTradeIdentification);
-			previousVersion_lazy = () -> com.tools20022.repository.msg.Transaction29.mmTradeIdentification;
+			nextVersions_lazy = () -> Arrays.asList(Transaction46.mmTradeIdentification);
+			previousVersion_lazy = () -> Transaction29.mmTradeIdentification;
 			minOccurs = 0;
 			simpleType_lazy = () -> Max35Text.mmObject();
 		}
@@ -482,15 +484,15 @@ public class Transaction36 {
 	 */
 	public static final MMMessageAttribute mmPoolIdentification = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.SecuritiesTradeIdentification.mmPoolIdentification;
+			businessElementTrace_lazy = () -> SecuritiesTradeIdentification.mmPoolIdentification;
 			componentContext_lazy = () -> Transaction36.mmObject();
 			isDerived = false;
 			xmlTag = "PoolId";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PoolIdentification";
 			definition = "Collective reference identifying a set of messages.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.Transaction46.mmPoolIdentification);
-			previousVersion_lazy = () -> com.tools20022.repository.msg.Transaction29.mmPoolIdentification;
+			nextVersions_lazy = () -> Arrays.asList(Transaction46.mmPoolIdentification);
+			previousVersion_lazy = () -> Transaction29.mmPoolIdentification;
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> Max35Text.mmObject();
@@ -546,15 +548,15 @@ public class Transaction36 {
 	 */
 	public static final MMMessageAttribute mmCommonIdentification = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.TradeIdentification.mmCommonIdentification;
+			businessElementTrace_lazy = () -> TradeIdentification.mmCommonIdentification;
 			componentContext_lazy = () -> Transaction36.mmObject();
 			isDerived = false;
 			xmlTag = "CmonId";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CommonIdentification";
 			definition = "Unique reference agreed upon by the two trade counterparties to identify the trade.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.Transaction46.mmCommonIdentification);
-			previousVersion_lazy = () -> com.tools20022.repository.msg.Transaction29.mmCommonIdentification;
+			nextVersions_lazy = () -> Arrays.asList(Transaction46.mmCommonIdentification);
+			previousVersion_lazy = () -> Transaction29.mmCommonIdentification;
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> Max35Text.mmObject();
@@ -610,15 +612,15 @@ public class Transaction36 {
 	 */
 	public static final MMMessageAttribute mmCorporateActionEventIdentification = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.CorporateActionEventRegistration.mmCorporateActionEventIdentification;
+			businessElementTrace_lazy = () -> CorporateActionEventRegistration.mmCorporateActionEventIdentification;
 			componentContext_lazy = () -> Transaction36.mmObject();
 			isDerived = false;
 			xmlTag = "CorpActnEvtId";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CorporateActionEventIdentification";
 			definition = "Identification assigned by the account servicer to unambiguously identify a corporate action event.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.Transaction46.mmCorporateActionEventIdentification);
-			previousVersion_lazy = () -> com.tools20022.repository.msg.Transaction29.mmCorporateActionEventIdentification;
+			nextVersions_lazy = () -> Arrays.asList(Transaction46.mmCorporateActionEventIdentification);
+			previousVersion_lazy = () -> Transaction29.mmCorporateActionEventIdentification;
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> Max35Text.mmObject();
@@ -675,15 +677,15 @@ public class Transaction36 {
 	 */
 	public static final MMMessageAttribute mmTripartyAgentCollateralTransactionIdentification = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.SecuritiesTradeIdentification.mmTripartyAgentCollateralTransactionIdentification;
+			businessElementTrace_lazy = () -> SecuritiesTradeIdentification.mmTripartyAgentCollateralTransactionIdentification;
 			componentContext_lazy = () -> Transaction36.mmObject();
 			isDerived = false;
 			xmlTag = "TrptyAgtCollTxId";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "TripartyAgentCollateralTransactionIdentification";
 			definition = "Unique reference identifying the triparty collateral management transaction from the triparty agent's point of view.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.Transaction46.mmTripartyAgentCollateralTransactionIdentification);
-			previousVersion_lazy = () -> com.tools20022.repository.msg.Transaction29.mmTripartyAgentCollateralTransactionIdentification;
+			nextVersions_lazy = () -> Arrays.asList(Transaction46.mmTripartyAgentCollateralTransactionIdentification);
+			previousVersion_lazy = () -> Transaction29.mmTripartyAgentCollateralTransactionIdentification;
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> Max35Text.mmObject();
@@ -740,15 +742,15 @@ public class Transaction36 {
 	 */
 	public static final MMMessageAttribute mmClientTripartyCollateralTransactionIdentification = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.SecuritiesTradeIdentification.mmClientTripartyCollateralTransactionIdentification;
+			businessElementTrace_lazy = () -> SecuritiesTradeIdentification.mmClientTripartyCollateralTransactionIdentification;
 			componentContext_lazy = () -> Transaction36.mmObject();
 			isDerived = false;
 			xmlTag = "ClntTrptyCollTxId";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ClientTripartyCollateralTransactionIdentification";
 			definition = "Unique reference identifying the triparty collateral management transaction from the client's point of view.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.Transaction46.mmClientTripartyCollateralTransactionIdentification);
-			previousVersion_lazy = () -> com.tools20022.repository.msg.Transaction29.mmClientTripartyCollateralTransactionIdentification;
+			nextVersions_lazy = () -> Arrays.asList(Transaction46.mmClientTripartyCollateralTransactionIdentification);
+			previousVersion_lazy = () -> Transaction29.mmClientTripartyCollateralTransactionIdentification;
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> Max35Text.mmObject();
@@ -802,15 +804,15 @@ public class Transaction36 {
 	 */
 	public static final MMMessageAttribute mmClientCollateralInstructionIdentification = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.SecuritiesTradeIdentification.mmCollateralTransactionIdentification;
+			businessElementTrace_lazy = () -> SecuritiesTradeIdentification.mmCollateralTransactionIdentification;
 			componentContext_lazy = () -> Transaction36.mmObject();
 			isDerived = false;
 			xmlTag = "ClntCollInstrId";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ClientCollateralInstructionIdentification";
 			definition = "Unique identification assigned to the instruction by the client.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.Transaction46.mmClientCollateralInstructionIdentification);
-			previousVersion_lazy = () -> com.tools20022.repository.msg.Transaction29.mmClientCollateralInstructionIdentification;
+			nextVersions_lazy = () -> Arrays.asList(Transaction46.mmClientCollateralInstructionIdentification);
+			previousVersion_lazy = () -> Transaction29.mmClientCollateralInstructionIdentification;
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> Max35Text.mmObject();
@@ -866,15 +868,15 @@ public class Transaction36 {
 	 */
 	public static final MMMessageAttribute mmTripartyCollateralInstructionIdentification = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.SecuritiesTradeIdentification.mmTripartyAgentCollateralTransactionIdentification;
+			businessElementTrace_lazy = () -> SecuritiesTradeIdentification.mmTripartyAgentCollateralTransactionIdentification;
 			componentContext_lazy = () -> Transaction36.mmObject();
 			isDerived = false;
 			xmlTag = "TrptyCollInstrId";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "TripartyCollateralInstructionIdentification";
 			definition = "Unique identification assigned to the instruction by the triparty agent.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.Transaction46.mmTripartyCollateralInstructionIdentification);
-			previousVersion_lazy = () -> com.tools20022.repository.msg.Transaction29.mmTripartyCollateralInstructionIdentification;
+			nextVersions_lazy = () -> Arrays.asList(Transaction46.mmTripartyCollateralInstructionIdentification);
+			previousVersion_lazy = () -> Transaction29.mmTripartyCollateralInstructionIdentification;
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> Max35Text.mmObject();
@@ -930,11 +932,11 @@ public class Transaction36 {
 			componentContext_lazy = () -> Transaction36.mmObject();
 			isDerived = false;
 			xmlTag = "TxDtls";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "TransactionDetails";
 			definition = "Identifies the details of the transaction.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.Transaction46.mmTransactionDetails);
-			previousVersion_lazy = () -> com.tools20022.repository.msg.Transaction29.mmTransactionDetails;
+			nextVersions_lazy = () -> Arrays.asList(Transaction46.mmTransactionDetails);
+			previousVersion_lazy = () -> Transaction29.mmTransactionDetails;
 			maxOccurs = 1;
 			minOccurs = 0;
 			isComposite = true;
@@ -988,11 +990,11 @@ public class Transaction36 {
 			componentContext_lazy = () -> Transaction36.mmObject();
 			isDerived = false;
 			xmlTag = "SplmtryData";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SupplementaryData";
 			definition = "Additional information that cannot be captured in the structured elements and/or any other specific block.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.Transaction46.mmSupplementaryData);
-			previousVersion_lazy = () -> com.tools20022.repository.msg.Transaction29.mmSupplementaryData;
+			nextVersions_lazy = () -> Arrays.asList(Transaction46.mmSupplementaryData);
+			previousVersion_lazy = () -> Transaction29.mmSupplementaryData;
 			minOccurs = 0;
 			isComposite = true;
 			type_lazy = () -> com.tools20022.repository.msg.SupplementaryData1.mmObject();
@@ -1002,16 +1004,13 @@ public class Transaction36 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.Transaction36.mmAccountOwnerTransactionIdentification, com.tools20022.repository.msg.Transaction36.mmAccountServicerTransactionIdentification,
-						com.tools20022.repository.msg.Transaction36.mmMarketInfrastructureTransactionIdentification, com.tools20022.repository.msg.Transaction36.mmProcessorTransactionIdentification,
-						com.tools20022.repository.msg.Transaction36.mmTradeIdentification, com.tools20022.repository.msg.Transaction36.mmPoolIdentification, com.tools20022.repository.msg.Transaction36.mmCommonIdentification,
-						com.tools20022.repository.msg.Transaction36.mmCorporateActionEventIdentification, com.tools20022.repository.msg.Transaction36.mmTripartyAgentCollateralTransactionIdentification,
-						com.tools20022.repository.msg.Transaction36.mmClientTripartyCollateralTransactionIdentification, com.tools20022.repository.msg.Transaction36.mmClientCollateralInstructionIdentification,
-						com.tools20022.repository.msg.Transaction36.mmTripartyCollateralInstructionIdentification, com.tools20022.repository.msg.Transaction36.mmTransactionDetails,
-						com.tools20022.repository.msg.Transaction36.mmSupplementaryData);
+				messageElement_lazy = () -> Arrays.asList(Transaction36.mmAccountOwnerTransactionIdentification, Transaction36.mmAccountServicerTransactionIdentification, Transaction36.mmMarketInfrastructureTransactionIdentification,
+						Transaction36.mmProcessorTransactionIdentification, Transaction36.mmTradeIdentification, Transaction36.mmPoolIdentification, Transaction36.mmCommonIdentification, Transaction36.mmCorporateActionEventIdentification,
+						Transaction36.mmTripartyAgentCollateralTransactionIdentification, Transaction36.mmClientTripartyCollateralTransactionIdentification, Transaction36.mmClientCollateralInstructionIdentification,
+						Transaction36.mmTripartyCollateralInstructionIdentification, Transaction36.mmTransactionDetails, Transaction36.mmSupplementaryData);
 				trace_lazy = () -> SecuritiesTrade.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.OBSOLETE;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.OBSOLETE;
 				removalDate = ((Supplier<Date>) (() -> {
 					try {
 						return DateFormat.getDateInstance(java.text.DateFormat.LONG).parse("May 5, 2016");

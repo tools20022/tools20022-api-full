@@ -20,12 +20,15 @@ package com.tools20022.repository.msg;
 import com.tools20022.metamodel.MMMessageAssociationEnd;
 import com.tools20022.metamodel.MMMessageAttribute;
 import com.tools20022.metamodel.MMMessageComponent;
+import com.tools20022.metamodel.MMRegistrationStatus;
+import com.tools20022.repository.area.tsin.InvoiceFinancingRequestV01;
 import com.tools20022.repository.codeset.CurrencyCode;
 import com.tools20022.repository.datatype.*;
 import com.tools20022.repository.entity.FinancingRequestorRole;
 import com.tools20022.repository.entity.FirstAgentRole;
 import com.tools20022.repository.entity.IntermediaryAgentRole;
 import com.tools20022.repository.entity.InvoiceFinancingAgreement;
+import com.tools20022.repository.GeneratedRepository;
 import java.text.DateFormat;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
@@ -154,7 +157,7 @@ public class RequestGroupInformation1 {
 			componentContext_lazy = () -> RequestGroupInformation1.mmObject();
 			isDerived = false;
 			xmlTag = "GrpId";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "GroupIdentification";
 			definition = "Point to point reference assigned by the financing requestor  to unambiguously identify the invoice financing request message.\n\nUsage: The financing requestor has to make sure that 'GroupIdentification' is unique for a pre-agreed period.";
 			maxOccurs = 1;
@@ -196,7 +199,7 @@ public class RequestGroupInformation1 {
 			componentContext_lazy = () -> RequestGroupInformation1.mmObject();
 			isDerived = false;
 			xmlTag = "CreDtTm";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CreationDateTime";
 			definition = "Date and time on which the invoice financing request was created.";
 			maxOccurs = 1;
@@ -247,11 +250,11 @@ public class RequestGroupInformation1 {
 	 */
 	public static final MMMessageAttribute mmAuthorisation = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.InvoiceFinancingAgreement.mmAuthorisation;
+			businessElementTrace_lazy = () -> InvoiceFinancingAgreement.mmAuthorisation;
 			componentContext_lazy = () -> RequestGroupInformation1.mmObject();
 			isDerived = false;
 			xmlTag = "Authstn";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Authorisation";
 			definition = "User identification or any user key that allows to check if the financing requestor is allowed to ask for invoice financing.\n\nUsage: the content is not of a technical nature, but reflects the organisational structure at the requesting side.\nThe authorisation element can typically be used in case the financing requestor acts on behalf of one or more suppliers.";
 			maxOccurs = 2;
@@ -296,7 +299,7 @@ public class RequestGroupInformation1 {
 			componentContext_lazy = () -> RequestGroupInformation1.mmObject();
 			isDerived = false;
 			xmlTag = "NbOfInvcReqs";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "NumberOfInvoiceRequests";
 			definition = "Specifies the number of single invoice financing requests included in the bulk request message.";
 			maxOccurs = 1;
@@ -342,7 +345,7 @@ public class RequestGroupInformation1 {
 			componentContext_lazy = () -> RequestGroupInformation1.mmObject();
 			isDerived = false;
 			xmlTag = "TtlBlkInvcAmt";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "TotalBulkInvoiceAmount";
 			definition = "Total amount of the bulk invoice financing request. It is composed by the sum of the total amounts of all invoices included in the financing request.";
 			maxOccurs = 1;
@@ -383,7 +386,7 @@ public class RequestGroupInformation1 {
 			componentContext_lazy = () -> RequestGroupInformation1.mmObject();
 			isDerived = false;
 			xmlTag = "Ccy";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Currency";
 			definition = "Reference currency of the invoice financing request.";
 			maxOccurs = 1;
@@ -429,11 +432,11 @@ public class RequestGroupInformation1 {
 	 */
 	public static final MMMessageAttribute mmFinancingAgreement = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.InvoiceFinancingAgreement.mmFinancingMethod;
+			businessElementTrace_lazy = () -> InvoiceFinancingAgreement.mmFinancingMethod;
 			componentContext_lazy = () -> RequestGroupInformation1.mmObject();
 			isDerived = false;
 			xmlTag = "FincgAgrmt";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "FinancingAgreement";
 			definition = "Specifies the financing method related to invoice financing (eg collection mandate).";
 			maxOccurs = 1;
@@ -481,7 +484,7 @@ public class RequestGroupInformation1 {
 			componentContext_lazy = () -> RequestGroupInformation1.mmObject();
 			isDerived = false;
 			xmlTag = "FincgRqstr";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "FinancingRequestor";
 			definition = "Party that requests the invoice financing, on behalf of a creditor.";
 			maxOccurs = 1;
@@ -532,7 +535,7 @@ public class RequestGroupInformation1 {
 			componentContext_lazy = () -> RequestGroupInformation1.mmObject();
 			isDerived = false;
 			xmlTag = "IntrmyAgt";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "IntermediaryAgent";
 			definition = "Financial institution that receives the request from the financing requestor and forwards it to the first agent for execution.";
 			maxOccurs = 1;
@@ -583,7 +586,7 @@ public class RequestGroupInformation1 {
 			componentContext_lazy = () -> RequestGroupInformation1.mmObject();
 			isDerived = false;
 			xmlTag = "FrstAgt";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "FirstAgent";
 			definition = "Financial institution of financing requestor to which an invoice financing request is addressed.";
 			maxOccurs = 1;
@@ -628,7 +631,7 @@ public class RequestGroupInformation1 {
 			componentContext_lazy = () -> RequestGroupInformation1.mmObject();
 			isDerived = false;
 			xmlTag = "AgrmtClauses";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AgreementClauses";
 			definition = "Agreements between financing requestor and his bank concerning conditions about the service of invoice financing, based on specific contractual schemes.";
 			minOccurs = 0;
@@ -668,7 +671,7 @@ public class RequestGroupInformation1 {
 			componentContext_lazy = () -> RequestGroupInformation1.mmObject();
 			isDerived = false;
 			xmlTag = "AddtlInf";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AdditionalInformation";
 			definition = "Additional information about the financing request.";
 			minOccurs = 0;
@@ -680,16 +683,14 @@ public class RequestGroupInformation1 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.RequestGroupInformation1.mmGroupIdentification, com.tools20022.repository.msg.RequestGroupInformation1.mmCreationDateTime,
-						com.tools20022.repository.msg.RequestGroupInformation1.mmAuthorisation, com.tools20022.repository.msg.RequestGroupInformation1.mmNumberOfInvoiceRequests,
-						com.tools20022.repository.msg.RequestGroupInformation1.mmTotalBulkInvoiceAmount, com.tools20022.repository.msg.RequestGroupInformation1.mmCurrency,
-						com.tools20022.repository.msg.RequestGroupInformation1.mmFinancingAgreement, com.tools20022.repository.msg.RequestGroupInformation1.mmFinancingRequestor,
-						com.tools20022.repository.msg.RequestGroupInformation1.mmIntermediaryAgent, com.tools20022.repository.msg.RequestGroupInformation1.mmFirstAgent,
-						com.tools20022.repository.msg.RequestGroupInformation1.mmAgreementClauses, com.tools20022.repository.msg.RequestGroupInformation1.mmAdditionalInformation);
-				messageBuildingBlock_lazy = () -> Arrays.asList(com.tools20022.repository.area.tsin.InvoiceFinancingRequestV01.mmRequestGroupInformation);
+				messageElement_lazy = () -> Arrays.asList(RequestGroupInformation1.mmGroupIdentification, RequestGroupInformation1.mmCreationDateTime, RequestGroupInformation1.mmAuthorisation,
+						RequestGroupInformation1.mmNumberOfInvoiceRequests, RequestGroupInformation1.mmTotalBulkInvoiceAmount, RequestGroupInformation1.mmCurrency, RequestGroupInformation1.mmFinancingAgreement,
+						RequestGroupInformation1.mmFinancingRequestor, RequestGroupInformation1.mmIntermediaryAgent, RequestGroupInformation1.mmFirstAgent, RequestGroupInformation1.mmAgreementClauses,
+						RequestGroupInformation1.mmAdditionalInformation);
+				messageBuildingBlock_lazy = () -> Arrays.asList(InvoiceFinancingRequestV01.mmRequestGroupInformation);
 				trace_lazy = () -> InvoiceFinancingAgreement.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.OBSOLETE;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.OBSOLETE;
 				removalDate = ((Supplier<Date>) (() -> {
 					try {
 						return DateFormat.getDateInstance(java.text.DateFormat.LONG).parse("September 9, 2016");

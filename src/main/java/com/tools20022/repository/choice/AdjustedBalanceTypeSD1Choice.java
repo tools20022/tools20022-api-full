@@ -19,6 +19,8 @@ package com.tools20022.repository.choice;
 
 import com.tools20022.metamodel.MMChoiceComponent;
 import com.tools20022.metamodel.MMMessageAttribute;
+import com.tools20022.metamodel.MMRegistrationStatus;
+import com.tools20022.repository.GeneratedRepository;
 import com.tools20022.repository.msg.SignedQuantityFormat4;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
@@ -117,10 +119,10 @@ public class AdjustedBalanceTypeSD1Choice {
 			componentContext_lazy = () -> AdjustedBalanceTypeSD1Choice.mmObject();
 			isDerived = false;
 			xmlTag = "StockLn";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "StockLoan";
 			definition = "Stock loan transaction position. Stock loan is loaned / borrowed from / to a third party.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.choice.AdjustedBalanceTypeSD3Choice.mmStockLoan);
+			nextVersions_lazy = () -> Arrays.asList(AdjustedBalanceTypeSD3Choice.mmStockLoan);
 			maxOccurs = 1;
 			minOccurs = 1;
 			complexType_lazy = () -> SignedQuantityFormat4.mmObject();
@@ -172,10 +174,10 @@ public class AdjustedBalanceTypeSD1Choice {
 			componentContext_lazy = () -> AdjustedBalanceTypeSD1Choice.mmObject();
 			isDerived = false;
 			xmlTag = "Repo";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Repo";
 			definition = "Repurchase agreement (REPO) between a seller and a buyer whereby the seller agrees to repurchase the securities at an agreed upon price, and usually at a stated time. ";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.choice.AdjustedBalanceTypeSD3Choice.mmRepo);
+			nextVersions_lazy = () -> Arrays.asList(AdjustedBalanceTypeSD3Choice.mmRepo);
 			maxOccurs = 1;
 			minOccurs = 1;
 			complexType_lazy = () -> SignedQuantityFormat4.mmObject();
@@ -219,7 +221,7 @@ public class AdjustedBalanceTypeSD1Choice {
 			componentContext_lazy = () -> AdjustedBalanceTypeSD1Choice.mmObject();
 			isDerived = false;
 			xmlTag = "Fail";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Fail";
 			definition = "Securities undelivered (FAIL) transaction position.  FAIL occurs due to the failure of selling clients to deliver the securities to their brokers so the latter can deliver them to the buying brokers.  ";
 			maxOccurs = 1;
@@ -231,10 +233,9 @@ public class AdjustedBalanceTypeSD1Choice {
 	final static public MMChoiceComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMChoiceComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.choice.AdjustedBalanceTypeSD1Choice.mmStockLoan, com.tools20022.repository.choice.AdjustedBalanceTypeSD1Choice.mmRepo,
-						com.tools20022.repository.choice.AdjustedBalanceTypeSD1Choice.mmFail);
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				messageElement_lazy = () -> Arrays.asList(AdjustedBalanceTypeSD1Choice.mmStockLoan, AdjustedBalanceTypeSD1Choice.mmRepo, AdjustedBalanceTypeSD1Choice.mmFail);
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "AdjustedBalanceTypeSD1Choice";
 				definition = "Choice of balance types to provide transaction details.";
 				nextVersions_lazy = () -> Arrays.asList(AdjustedBalanceTypeSD2Choice.mmObject(), AdjustedBalanceTypeSD3Choice.mmObject());

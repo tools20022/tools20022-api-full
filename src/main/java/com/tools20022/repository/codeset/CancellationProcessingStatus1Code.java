@@ -19,7 +19,9 @@ package com.tools20022.repository.codeset;
 
 import com.tools20022.metamodel.MMCode;
 import com.tools20022.metamodel.MMCodeSet;
+import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.codeset.CancellationProcessingStatusCode;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -104,7 +106,7 @@ public class CancellationProcessingStatus1Code extends CancellationProcessingSta
 	 */
 	public static final MMCode mmCancellationCompleted = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CancellationCompleted";
 			owner_lazy = () -> CancellationProcessingStatus1Code.mmObject();
 		}
@@ -127,7 +129,7 @@ public class CancellationProcessingStatus1Code extends CancellationProcessingSta
 	 */
 	public static final MMCode mmPendingCancellation = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PendingCancellation";
 			owner_lazy = () -> CancellationProcessingStatus1Code.mmObject();
 		}
@@ -150,7 +152,7 @@ public class CancellationProcessingStatus1Code extends CancellationProcessingSta
 	 */
 	public static final MMCode mmDenied = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Denied";
 			owner_lazy = () -> CancellationProcessingStatus1Code.mmObject();
 		}
@@ -173,7 +175,7 @@ public class CancellationProcessingStatus1Code extends CancellationProcessingSta
 	 */
 	public static final MMCode mmReceivedAtStockExchange = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ReceivedAtStockExchange";
 			owner_lazy = () -> CancellationProcessingStatus1Code.mmObject();
 		}
@@ -196,7 +198,7 @@ public class CancellationProcessingStatus1Code extends CancellationProcessingSta
 	 */
 	public static final MMCode mmReceivedAtIntermediary = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ReceivedAtIntermediary";
 			owner_lazy = () -> CancellationProcessingStatus1Code.mmObject();
 		}
@@ -219,7 +221,7 @@ public class CancellationProcessingStatus1Code extends CancellationProcessingSta
 	 */
 	public static final MMCode mmAccepted = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Accepted";
 			owner_lazy = () -> CancellationProcessingStatus1Code.mmObject();
 		}
@@ -242,7 +244,7 @@ public class CancellationProcessingStatus1Code extends CancellationProcessingSta
 	 */
 	public static final MMCode mmPartiallyFilled = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PartiallyFilled";
 			owner_lazy = () -> CancellationProcessingStatus1Code.mmObject();
 		}
@@ -265,7 +267,7 @@ public class CancellationProcessingStatus1Code extends CancellationProcessingSta
 	 */
 	public static final MMCode mmRejected = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Rejected";
 			owner_lazy = () -> CancellationProcessingStatus1Code.mmObject();
 		}
@@ -288,7 +290,7 @@ public class CancellationProcessingStatus1Code extends CancellationProcessingSta
 	 */
 	public static final MMCode mmInRepair = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "InRepair";
 			owner_lazy = () -> CancellationProcessingStatus1Code.mmObject();
 		}
@@ -297,16 +299,14 @@ public class CancellationProcessingStatus1Code extends CancellationProcessingSta
 	static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
 				example = Arrays.asList("CAND");
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "CancellationProcessingStatus1Code";
 				definition = "Specifies the status of a cancellation request.";
-				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.CancellationProcessingStatus1Code.mmCancellationCompleted, com.tools20022.repository.codeset.CancellationProcessingStatus1Code.mmPendingCancellation,
-						com.tools20022.repository.codeset.CancellationProcessingStatus1Code.mmDenied, com.tools20022.repository.codeset.CancellationProcessingStatus1Code.mmReceivedAtStockExchange,
-						com.tools20022.repository.codeset.CancellationProcessingStatus1Code.mmReceivedAtIntermediary, com.tools20022.repository.codeset.CancellationProcessingStatus1Code.mmAccepted,
-						com.tools20022.repository.codeset.CancellationProcessingStatus1Code.mmPartiallyFilled, com.tools20022.repository.codeset.CancellationProcessingStatus1Code.mmRejected,
-						com.tools20022.repository.codeset.CancellationProcessingStatus1Code.mmInRepair);
+				code_lazy = () -> Arrays.asList(CancellationProcessingStatus1Code.mmCancellationCompleted, CancellationProcessingStatus1Code.mmPendingCancellation, CancellationProcessingStatus1Code.mmDenied,
+						CancellationProcessingStatus1Code.mmReceivedAtStockExchange, CancellationProcessingStatus1Code.mmReceivedAtIntermediary, CancellationProcessingStatus1Code.mmAccepted,
+						CancellationProcessingStatus1Code.mmPartiallyFilled, CancellationProcessingStatus1Code.mmRejected, CancellationProcessingStatus1Code.mmInRepair);
 				trace_lazy = () -> CancellationProcessingStatusCode.mmObject();
 			}
 		});

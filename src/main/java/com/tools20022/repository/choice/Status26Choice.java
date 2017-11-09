@@ -19,6 +19,9 @@ package com.tools20022.repository.choice;
 
 import com.tools20022.metamodel.MMChoiceComponent;
 import com.tools20022.metamodel.MMMessageAssociationEnd;
+import com.tools20022.metamodel.MMRegistrationStatus;
+import com.tools20022.repository.area.setr.OrderCancellationStatusReportV04;
+import com.tools20022.repository.GeneratedRepository;
 import com.tools20022.repository.msg.IndividualOrderStatusAndReason8;
 import com.tools20022.repository.msg.OrderStatusAndReason9;
 import java.util.Arrays;
@@ -104,7 +107,7 @@ public class Status26Choice {
 			componentContext_lazy = () -> Status26Choice.mmObject();
 			isDerived = false;
 			xmlTag = "CxlStsRpt";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CancellationStatusReport";
 			definition = "Status report details of a bulk or multiple or switch order cancellation message.";
 			maxOccurs = 1;
@@ -149,7 +152,7 @@ public class Status26Choice {
 			componentContext_lazy = () -> Status26Choice.mmObject();
 			isDerived = false;
 			xmlTag = "IndvCxlStsRpt";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "IndividualCancellationStatusReport";
 			definition = "Status report details of one or more individual orders from a bulk or multiple or switch order cancellation request.";
 			minOccurs = 1;
@@ -161,10 +164,10 @@ public class Status26Choice {
 	final static public MMChoiceComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMChoiceComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.choice.Status26Choice.mmCancellationStatusReport, com.tools20022.repository.choice.Status26Choice.mmIndividualCancellationStatusReport);
-				messageBuildingBlock_lazy = () -> Arrays.asList(com.tools20022.repository.area.setr.OrderCancellationStatusReportV04.mmStatusReport);
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				messageElement_lazy = () -> Arrays.asList(Status26Choice.mmCancellationStatusReport, Status26Choice.mmIndividualCancellationStatusReport);
+				messageBuildingBlock_lazy = () -> Arrays.asList(OrderCancellationStatusReportV04.mmStatusReport);
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "Status26Choice";
 				definition = "Choice of status.";
 			}

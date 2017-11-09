@@ -19,7 +19,9 @@ package com.tools20022.repository.codeset;
 
 import com.tools20022.metamodel.MMCode;
 import com.tools20022.metamodel.MMCodeSet;
+import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.codeset.CardAccountTypeCode;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -146,9 +148,9 @@ public class CardAccountType3Code extends CardAccountTypeCode {
 	 */
 	public static final MMCode mmCertificateOfDeposit = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CertificateOfDeposit";
-			previousVersion_lazy = () -> com.tools20022.repository.codeset.CardAccountType2Code.mmCertificateOfDeposit;
+			previousVersion_lazy = () -> CardAccountType2Code.mmCertificateOfDeposit;
 			owner_lazy = () -> CardAccountType3Code.mmObject();
 		}
 	};
@@ -175,9 +177,9 @@ public class CardAccountType3Code extends CardAccountTypeCode {
 	 */
 	public static final MMCode mmChecking = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Checking";
-			previousVersion_lazy = () -> com.tools20022.repository.codeset.CardAccountType2Code.mmChecking;
+			previousVersion_lazy = () -> CardAccountType2Code.mmChecking;
 			owner_lazy = () -> CardAccountType3Code.mmObject();
 		}
 	};
@@ -204,9 +206,9 @@ public class CardAccountType3Code extends CardAccountTypeCode {
 	 */
 	public static final MMCode mmCreditCard = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CreditCard";
-			previousVersion_lazy = () -> com.tools20022.repository.codeset.CardAccountType2Code.mmCreditCard;
+			previousVersion_lazy = () -> CardAccountType2Code.mmCreditCard;
 			owner_lazy = () -> CardAccountType3Code.mmObject();
 		}
 	};
@@ -233,9 +235,9 @@ public class CardAccountType3Code extends CardAccountTypeCode {
 	 */
 	public static final MMCode mmCurrent = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Current";
-			previousVersion_lazy = () -> com.tools20022.repository.codeset.CardAccountType2Code.mmCurrent;
+			previousVersion_lazy = () -> CardAccountType2Code.mmCurrent;
 			owner_lazy = () -> CardAccountType3Code.mmObject();
 		}
 	};
@@ -262,9 +264,9 @@ public class CardAccountType3Code extends CardAccountTypeCode {
 	 */
 	public static final MMCode mmDebitCard = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "DebitCard";
-			previousVersion_lazy = () -> com.tools20022.repository.codeset.CardAccountType2Code.mmDebitCard;
+			previousVersion_lazy = () -> CardAccountType2Code.mmDebitCard;
 			owner_lazy = () -> CardAccountType3Code.mmObject();
 		}
 	};
@@ -291,9 +293,9 @@ public class CardAccountType3Code extends CardAccountTypeCode {
 	 */
 	public static final MMCode mmDefault = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Default";
-			previousVersion_lazy = () -> com.tools20022.repository.codeset.CardAccountType2Code.mmDefault;
+			previousVersion_lazy = () -> CardAccountType2Code.mmDefault;
 			owner_lazy = () -> CardAccountType3Code.mmObject();
 		}
 	};
@@ -320,9 +322,9 @@ public class CardAccountType3Code extends CardAccountTypeCode {
 	 */
 	public static final MMCode mmEpurseCard = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "EpurseCard";
-			previousVersion_lazy = () -> com.tools20022.repository.codeset.CardAccountType2Code.mmEpurseCard;
+			previousVersion_lazy = () -> CardAccountType2Code.mmEpurseCard;
 			owner_lazy = () -> CardAccountType3Code.mmObject();
 		}
 	};
@@ -349,9 +351,9 @@ public class CardAccountType3Code extends CardAccountTypeCode {
 	 */
 	public static final MMCode mmHomeEquityLoan = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "HomeEquityLoan";
-			previousVersion_lazy = () -> com.tools20022.repository.codeset.CardAccountType2Code.mmHomeEquityLoan;
+			previousVersion_lazy = () -> CardAccountType2Code.mmHomeEquityLoan;
 			owner_lazy = () -> CardAccountType3Code.mmObject();
 		}
 	};
@@ -378,9 +380,9 @@ public class CardAccountType3Code extends CardAccountTypeCode {
 	 */
 	public static final MMCode mmInstalmentLoan = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "InstalmentLoan";
-			previousVersion_lazy = () -> com.tools20022.repository.codeset.CardAccountType2Code.mmInstalmentLoan;
+			previousVersion_lazy = () -> CardAccountType2Code.mmInstalmentLoan;
 			owner_lazy = () -> CardAccountType3Code.mmObject();
 		}
 	};
@@ -407,9 +409,9 @@ public class CardAccountType3Code extends CardAccountTypeCode {
 	 */
 	public static final MMCode mmInvestment = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Investment";
-			previousVersion_lazy = () -> com.tools20022.repository.codeset.CardAccountType2Code.mmInvestment;
+			previousVersion_lazy = () -> CardAccountType2Code.mmInvestment;
 			owner_lazy = () -> CardAccountType3Code.mmObject();
 		}
 	};
@@ -436,9 +438,9 @@ public class CardAccountType3Code extends CardAccountTypeCode {
 	 */
 	public static final MMCode mmLineOfCredit = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "LineOfCredit";
-			previousVersion_lazy = () -> com.tools20022.repository.codeset.CardAccountType2Code.mmLineOfCredit;
+			previousVersion_lazy = () -> CardAccountType2Code.mmLineOfCredit;
 			owner_lazy = () -> CardAccountType3Code.mmObject();
 		}
 	};
@@ -465,9 +467,9 @@ public class CardAccountType3Code extends CardAccountTypeCode {
 	 */
 	public static final MMCode mmMobilePhoneAccount = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "MobilePhoneAccount";
-			previousVersion_lazy = () -> com.tools20022.repository.codeset.CardAccountType2Code.mmMobilePhoneAccount;
+			previousVersion_lazy = () -> CardAccountType2Code.mmMobilePhoneAccount;
 			owner_lazy = () -> CardAccountType3Code.mmObject();
 		}
 	};
@@ -494,9 +496,9 @@ public class CardAccountType3Code extends CardAccountTypeCode {
 	 */
 	public static final MMCode mmMoneyMarket = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "MoneyMarket";
-			previousVersion_lazy = () -> com.tools20022.repository.codeset.CardAccountType2Code.mmMoneyMarket;
+			previousVersion_lazy = () -> CardAccountType2Code.mmMoneyMarket;
 			owner_lazy = () -> CardAccountType3Code.mmObject();
 		}
 	};
@@ -523,9 +525,9 @@ public class CardAccountType3Code extends CardAccountTypeCode {
 	 */
 	public static final MMCode mmMoneyMarketChecking = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "MoneyMarketChecking";
-			previousVersion_lazy = () -> com.tools20022.repository.codeset.CardAccountType2Code.mmMoneyMarketChecking;
+			previousVersion_lazy = () -> CardAccountType2Code.mmMoneyMarketChecking;
 			owner_lazy = () -> CardAccountType3Code.mmObject();
 		}
 	};
@@ -552,9 +554,9 @@ public class CardAccountType3Code extends CardAccountTypeCode {
 	 */
 	public static final MMCode mmMortgageLoan = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "MortgageLoan";
-			previousVersion_lazy = () -> com.tools20022.repository.codeset.CardAccountType2Code.mmMortgageLoan;
+			previousVersion_lazy = () -> CardAccountType2Code.mmMortgageLoan;
 			owner_lazy = () -> CardAccountType3Code.mmObject();
 		}
 	};
@@ -581,9 +583,9 @@ public class CardAccountType3Code extends CardAccountTypeCode {
 	 */
 	public static final MMCode mmRetirementAccount = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "RetirementAccount";
-			previousVersion_lazy = () -> com.tools20022.repository.codeset.CardAccountType2Code.mmRetirementAccount;
+			previousVersion_lazy = () -> CardAccountType2Code.mmRetirementAccount;
 			owner_lazy = () -> CardAccountType3Code.mmObject();
 		}
 	};
@@ -610,9 +612,9 @@ public class CardAccountType3Code extends CardAccountTypeCode {
 	 */
 	public static final MMCode mmRevolvingLoanAccount = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "RevolvingLoanAccount";
-			previousVersion_lazy = () -> com.tools20022.repository.codeset.CardAccountType2Code.mmRevolvingLoanAccount;
+			previousVersion_lazy = () -> CardAccountType2Code.mmRevolvingLoanAccount;
 			owner_lazy = () -> CardAccountType3Code.mmObject();
 		}
 	};
@@ -639,9 +641,9 @@ public class CardAccountType3Code extends CardAccountTypeCode {
 	 */
 	public static final MMCode mmSavings = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Savings";
-			previousVersion_lazy = () -> com.tools20022.repository.codeset.CardAccountType2Code.mmSavings;
+			previousVersion_lazy = () -> CardAccountType2Code.mmSavings;
 			owner_lazy = () -> CardAccountType3Code.mmObject();
 		}
 	};
@@ -668,9 +670,9 @@ public class CardAccountType3Code extends CardAccountTypeCode {
 	 */
 	public static final MMCode mmStockOrBond = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "StockOrBond";
-			previousVersion_lazy = () -> com.tools20022.repository.codeset.CardAccountType2Code.mmStockOrBond;
+			previousVersion_lazy = () -> CardAccountType2Code.mmStockOrBond;
 			owner_lazy = () -> CardAccountType3Code.mmObject();
 		}
 	};
@@ -697,9 +699,9 @@ public class CardAccountType3Code extends CardAccountTypeCode {
 	 */
 	public static final MMCode mmUniversal = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Universal";
-			previousVersion_lazy = () -> com.tools20022.repository.codeset.CardAccountType2Code.mmUniversal;
+			previousVersion_lazy = () -> CardAccountType2Code.mmUniversal;
 			owner_lazy = () -> CardAccountType3Code.mmObject();
 		}
 	};
@@ -721,7 +723,7 @@ public class CardAccountType3Code extends CardAccountTypeCode {
 	 */
 	public static final MMCode mmPrePaid = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PrePaid";
 			owner_lazy = () -> CardAccountType3Code.mmObject();
 		}
@@ -744,7 +746,7 @@ public class CardAccountType3Code extends CardAccountTypeCode {
 	 */
 	public static final MMCode mmFleetCard = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "FleetCard";
 			owner_lazy = () -> CardAccountType3Code.mmObject();
 		}
@@ -753,20 +755,16 @@ public class CardAccountType3Code extends CardAccountTypeCode {
 	static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "CardAccountType3Code";
 				definition = "Type of cardholder account used for the transaction.";
 				previousVersion_lazy = () -> CardAccountType2Code.mmObject();
-				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.CardAccountType3Code.mmCertificateOfDeposit, com.tools20022.repository.codeset.CardAccountType3Code.mmChecking,
-						com.tools20022.repository.codeset.CardAccountType3Code.mmCreditCard, com.tools20022.repository.codeset.CardAccountType3Code.mmCurrent, com.tools20022.repository.codeset.CardAccountType3Code.mmDebitCard,
-						com.tools20022.repository.codeset.CardAccountType3Code.mmDefault, com.tools20022.repository.codeset.CardAccountType3Code.mmEpurseCard, com.tools20022.repository.codeset.CardAccountType3Code.mmHomeEquityLoan,
-						com.tools20022.repository.codeset.CardAccountType3Code.mmInstalmentLoan, com.tools20022.repository.codeset.CardAccountType3Code.mmInvestment, com.tools20022.repository.codeset.CardAccountType3Code.mmLineOfCredit,
-						com.tools20022.repository.codeset.CardAccountType3Code.mmMobilePhoneAccount, com.tools20022.repository.codeset.CardAccountType3Code.mmMoneyMarket,
-						com.tools20022.repository.codeset.CardAccountType3Code.mmMoneyMarketChecking, com.tools20022.repository.codeset.CardAccountType3Code.mmMortgageLoan,
-						com.tools20022.repository.codeset.CardAccountType3Code.mmRetirementAccount, com.tools20022.repository.codeset.CardAccountType3Code.mmRevolvingLoanAccount,
-						com.tools20022.repository.codeset.CardAccountType3Code.mmSavings, com.tools20022.repository.codeset.CardAccountType3Code.mmStockOrBond, com.tools20022.repository.codeset.CardAccountType3Code.mmUniversal,
-						com.tools20022.repository.codeset.CardAccountType3Code.mmPrePaid, com.tools20022.repository.codeset.CardAccountType3Code.mmFleetCard);
+				code_lazy = () -> Arrays.asList(CardAccountType3Code.mmCertificateOfDeposit, CardAccountType3Code.mmChecking, CardAccountType3Code.mmCreditCard, CardAccountType3Code.mmCurrent, CardAccountType3Code.mmDebitCard,
+						CardAccountType3Code.mmDefault, CardAccountType3Code.mmEpurseCard, CardAccountType3Code.mmHomeEquityLoan, CardAccountType3Code.mmInstalmentLoan, CardAccountType3Code.mmInvestment,
+						CardAccountType3Code.mmLineOfCredit, CardAccountType3Code.mmMobilePhoneAccount, CardAccountType3Code.mmMoneyMarket, CardAccountType3Code.mmMoneyMarketChecking, CardAccountType3Code.mmMortgageLoan,
+						CardAccountType3Code.mmRetirementAccount, CardAccountType3Code.mmRevolvingLoanAccount, CardAccountType3Code.mmSavings, CardAccountType3Code.mmStockOrBond, CardAccountType3Code.mmUniversal,
+						CardAccountType3Code.mmPrePaid, CardAccountType3Code.mmFleetCard);
 				trace_lazy = () -> CardAccountTypeCode.mmObject();
 			}
 		});

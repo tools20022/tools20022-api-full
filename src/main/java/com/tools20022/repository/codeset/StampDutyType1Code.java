@@ -19,7 +19,9 @@ package com.tools20022.repository.codeset;
 
 import com.tools20022.metamodel.MMCode;
 import com.tools20022.metamodel.MMCodeSet;
+import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.codeset.StampDutyTypeCode;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -88,7 +90,7 @@ public class StampDutyType1Code extends StampDutyTypeCode {
 	 */
 	public static final MMCode mmOutsideCSD = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "OutsideCSD";
 			owner_lazy = () -> StampDutyType1Code.mmObject();
 		}
@@ -111,7 +113,7 @@ public class StampDutyType1Code extends StampDutyTypeCode {
 	 */
 	public static final MMCode mmPaid = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Paid";
 			owner_lazy = () -> StampDutyType1Code.mmObject();
 		}
@@ -134,7 +136,7 @@ public class StampDutyType1Code extends StampDutyTypeCode {
 	 */
 	public static final MMCode mmNotApplicable = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "NotApplicable";
 			owner_lazy = () -> StampDutyType1Code.mmObject();
 		}
@@ -157,7 +159,7 @@ public class StampDutyType1Code extends StampDutyTypeCode {
 	 */
 	public static final MMCode mmExemption = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Exemption";
 			owner_lazy = () -> StampDutyType1Code.mmObject();
 		}
@@ -166,13 +168,12 @@ public class StampDutyType1Code extends StampDutyTypeCode {
 	static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
 				example = Arrays.asList("SDRU");
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "StampDutyType1Code";
 				definition = "Specifies if the stamp duty is applicable";
-				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.StampDutyType1Code.mmOutsideCSD, com.tools20022.repository.codeset.StampDutyType1Code.mmPaid,
-						com.tools20022.repository.codeset.StampDutyType1Code.mmNotApplicable, com.tools20022.repository.codeset.StampDutyType1Code.mmExemption);
+				code_lazy = () -> Arrays.asList(StampDutyType1Code.mmOutsideCSD, StampDutyType1Code.mmPaid, StampDutyType1Code.mmNotApplicable, StampDutyType1Code.mmExemption);
 				trace_lazy = () -> StampDutyTypeCode.mmObject();
 			}
 		});

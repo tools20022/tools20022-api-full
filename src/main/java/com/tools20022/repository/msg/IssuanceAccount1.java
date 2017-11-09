@@ -19,7 +19,9 @@ package com.tools20022.repository.msg;
 
 import com.tools20022.metamodel.MMMessageAttribute;
 import com.tools20022.metamodel.MMMessageComponent;
+import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.datatype.YesNoIndicator;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -95,7 +97,7 @@ public class IssuanceAccount1 {
 			componentContext_lazy = () -> IssuanceAccount1.mmObject();
 			isDerived = false;
 			xmlTag = "IssncAcct";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "IssuanceAccount";
 			definition = "Account to or from which a securities entry is made.";
 			maxOccurs = 1;
@@ -138,7 +140,7 @@ public class IssuanceAccount1 {
 			componentContext_lazy = () -> IssuanceAccount1.mmObject();
 			isDerived = false;
 			xmlTag = "PmryAcctInd";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PrimaryAccountIndicator";
 			definition = "Defines if the related issuance account is the primary account or not.";
 			maxOccurs = 1;
@@ -150,9 +152,9 @@ public class IssuanceAccount1 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.IssuanceAccount1.mmIssuanceAccount, com.tools20022.repository.msg.IssuanceAccount1.mmPrimaryAccountIndicator);
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+				messageElement_lazy = () -> Arrays.asList(IssuanceAccount1.mmIssuanceAccount, IssuanceAccount1.mmPrimaryAccountIndicator);
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 				name = "IssuanceAccount1";
 				definition = "Defines the account to or from which a securities entry is made and the usage type.";
 			}

@@ -19,7 +19,9 @@ package com.tools20022.repository.codeset;
 
 import com.tools20022.metamodel.MMCode;
 import com.tools20022.metamodel.MMCodeSet;
+import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.codeset.CommissionTypeV2Code;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -86,7 +88,7 @@ public class CommissionType6Code extends CommissionTypeV2Code {
 	 */
 	public static final MMCode mmFrontEndLoad = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "FrontEndLoad";
 			owner_lazy = () -> CommissionType6Code.mmObject();
 		}
@@ -109,7 +111,7 @@ public class CommissionType6Code extends CommissionTypeV2Code {
 	 */
 	public static final MMCode mmBackEndLoad = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "BackEndLoad";
 			owner_lazy = () -> CommissionType6Code.mmObject();
 		}
@@ -132,7 +134,7 @@ public class CommissionType6Code extends CommissionTypeV2Code {
 	 */
 	public static final MMCode mmCommissionDePlacement = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CommissionDePlacement";
 			owner_lazy = () -> CommissionType6Code.mmObject();
 		}
@@ -141,13 +143,12 @@ public class CommissionType6Code extends CommissionTypeV2Code {
 	static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
 				example = Arrays.asList("FEND");
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "CommissionType6Code";
 				definition = "Specifies the type of investment fund commission.";
-				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.CommissionType6Code.mmFrontEndLoad, com.tools20022.repository.codeset.CommissionType6Code.mmBackEndLoad,
-						com.tools20022.repository.codeset.CommissionType6Code.mmCommissionDePlacement);
+				code_lazy = () -> Arrays.asList(CommissionType6Code.mmFrontEndLoad, CommissionType6Code.mmBackEndLoad, CommissionType6Code.mmCommissionDePlacement);
 				trace_lazy = () -> CommissionTypeV2Code.mmObject();
 			}
 		});

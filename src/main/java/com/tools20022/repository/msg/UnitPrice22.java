@@ -19,13 +19,17 @@ package com.tools20022.repository.msg;
 
 import com.tools20022.metamodel.MMMessageAttribute;
 import com.tools20022.metamodel.MMMessageComponent;
+import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.choice.TaxableIncomePerShareCalculated2Choice;
 import com.tools20022.repository.choice.TypeOfPrice46Choice;
 import com.tools20022.repository.codeset.PriceMethod1Code;
 import com.tools20022.repository.datatype.ActiveCurrencyAnd13DecimalAmount;
 import com.tools20022.repository.datatype.Max350Text;
 import com.tools20022.repository.datatype.Number;
+import com.tools20022.repository.entity.DateTimePeriod;
 import com.tools20022.repository.entity.SecuritiesPricing;
+import com.tools20022.repository.entity.SecuritiesTax;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -123,14 +127,14 @@ public class UnitPrice22 {
 	 */
 	public static final MMMessageAttribute mmType = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.SecuritiesPricing.mmPriceType;
+			businessElementTrace_lazy = () -> SecuritiesPricing.mmPriceType;
 			componentContext_lazy = () -> UnitPrice22.mmObject();
 			isDerived = false;
 			xmlTag = "Tp";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Type";
 			definition = "Type and information about a price.";
-			previousVersion_lazy = () -> com.tools20022.repository.msg.UnitPrice10.mmType;
+			previousVersion_lazy = () -> UnitPrice10.mmType;
 			maxOccurs = 1;
 			minOccurs = 1;
 			complexType_lazy = () -> TypeOfPrice46Choice.mmObject();
@@ -176,14 +180,14 @@ public class UnitPrice22 {
 	 */
 	public static final MMMessageAttribute mmValue = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.SecuritiesPricing.mmPrice;
+			businessElementTrace_lazy = () -> SecuritiesPricing.mmPrice;
 			componentContext_lazy = () -> UnitPrice22.mmObject();
 			isDerived = false;
 			xmlTag = "Val";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Value";
 			definition = "Value of the price, for example, as a currency and value.";
-			previousVersion_lazy = () -> com.tools20022.repository.msg.UnitPrice10.mmValue;
+			previousVersion_lazy = () -> UnitPrice10.mmValue;
 			maxOccurs = 1;
 			minOccurs = 1;
 			complexType_lazy = () -> com.tools20022.repository.msg.PriceValue1.mmObject();
@@ -229,14 +233,14 @@ public class UnitPrice22 {
 	 */
 	public static final MMMessageAttribute mmPriceMethod = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.SecuritiesPricing.mmPriceMethod;
+			businessElementTrace_lazy = () -> SecuritiesPricing.mmPriceMethod;
 			componentContext_lazy = () -> UnitPrice22.mmObject();
 			isDerived = false;
 			xmlTag = "PricMtd";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PriceMethod";
 			definition = "Type of pricing calculation method.";
-			previousVersion_lazy = () -> com.tools20022.repository.msg.UnitPrice10.mmPriceMethod;
+			previousVersion_lazy = () -> UnitPrice10.mmPriceMethod;
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> PriceMethod1Code.mmObject();
@@ -284,14 +288,14 @@ public class UnitPrice22 {
 	 */
 	public static final MMMessageAttribute mmNumberOfDaysAccrued = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.DateTimePeriod.mmNumberOfDays;
+			businessElementTrace_lazy = () -> DateTimePeriod.mmNumberOfDays;
 			componentContext_lazy = () -> UnitPrice22.mmObject();
 			isDerived = false;
 			xmlTag = "NbOfDaysAcrd";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "NumberOfDaysAccrued";
 			definition = "Specifies the number of days used for calculating the accrued interest amount.";
-			previousVersion_lazy = () -> com.tools20022.repository.msg.UnitPrice10.mmNumberOfDaysAccrued;
+			previousVersion_lazy = () -> UnitPrice10.mmNumberOfDaysAccrued;
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> Number.mmObject();
@@ -341,14 +345,14 @@ public class UnitPrice22 {
 	 */
 	public static final MMMessageAttribute mmTaxableIncomePerShare = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.SecuritiesTax.mmTaxableIncomePerShare;
+			businessElementTrace_lazy = () -> SecuritiesTax.mmTaxableIncomePerShare;
 			componentContext_lazy = () -> UnitPrice22.mmObject();
 			isDerived = false;
 			xmlTag = "TaxblIncmPerShr";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "TaxableIncomePerShare";
 			definition = "Amount included in the NAV that corresponds to gains directly or indirectly derived from interest payment in the scope of the European Directive on taxation of savings income in the form of interest payments.";
-			previousVersion_lazy = () -> com.tools20022.repository.msg.UnitPrice10.mmTaxableIncomePerShare;
+			previousVersion_lazy = () -> UnitPrice10.mmTaxableIncomePerShare;
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> ActiveCurrencyAnd13DecimalAmount.mmObject();
@@ -396,14 +400,14 @@ public class UnitPrice22 {
 	 */
 	public static final MMMessageAttribute mmTaxableIncomePerShareCalculated = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.SecuritiesTax.mmTaxableIncomePerShareCalculated;
+			businessElementTrace_lazy = () -> SecuritiesTax.mmTaxableIncomePerShareCalculated;
 			componentContext_lazy = () -> UnitPrice22.mmObject();
 			isDerived = false;
 			xmlTag = "TaxblIncmPerShrClctd";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "TaxableIncomePerShareCalculated";
 			definition = "Specifies whether the fund calculates a taxable interest per share (TIS).";
-			previousVersion_lazy = () -> com.tools20022.repository.msg.UnitPrice10.mmTaxableIncomePerShareCalculated;
+			previousVersion_lazy = () -> UnitPrice10.mmTaxableIncomePerShareCalculated;
 			maxOccurs = 1;
 			minOccurs = 0;
 			complexType_lazy = () -> TaxableIncomePerShareCalculated2Choice.mmObject();
@@ -447,10 +451,10 @@ public class UnitPrice22 {
 			componentContext_lazy = () -> UnitPrice22.mmObject();
 			isDerived = false;
 			xmlTag = "PricDiffRsn";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PriceDifferenceReason";
 			definition = "Reason why the price is different from the current market price.";
-			previousVersion_lazy = () -> com.tools20022.repository.msg.UnitPrice10.mmPriceDifferenceReason;
+			previousVersion_lazy = () -> UnitPrice10.mmPriceDifferenceReason;
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> Max350Text.mmObject();
@@ -460,12 +464,11 @@ public class UnitPrice22 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.UnitPrice22.mmType, com.tools20022.repository.msg.UnitPrice22.mmValue, com.tools20022.repository.msg.UnitPrice22.mmPriceMethod,
-						com.tools20022.repository.msg.UnitPrice22.mmNumberOfDaysAccrued, com.tools20022.repository.msg.UnitPrice22.mmTaxableIncomePerShare, com.tools20022.repository.msg.UnitPrice22.mmTaxableIncomePerShareCalculated,
-						com.tools20022.repository.msg.UnitPrice22.mmPriceDifferenceReason);
+				messageElement_lazy = () -> Arrays.asList(UnitPrice22.mmType, UnitPrice22.mmValue, UnitPrice22.mmPriceMethod, UnitPrice22.mmNumberOfDaysAccrued, UnitPrice22.mmTaxableIncomePerShare,
+						UnitPrice22.mmTaxableIncomePerShareCalculated, UnitPrice22.mmPriceDifferenceReason);
 				trace_lazy = () -> SecuritiesPricing.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "UnitPrice22";
 				definition = "Amount of money for which goods or services are offered, sold, or bought.";
 				previousVersion_lazy = () -> UnitPrice10.mmObject();

@@ -20,11 +20,13 @@ package com.tools20022.repository.msg;
 import com.tools20022.metamodel.MMMessageAssociationEnd;
 import com.tools20022.metamodel.MMMessageAttribute;
 import com.tools20022.metamodel.MMMessageComponent;
+import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.codeset.ERISAEligibility1Code;
 import com.tools20022.repository.datatype.PercentageRate;
 import com.tools20022.repository.datatype.YesNoIndicator;
 import com.tools20022.repository.entity.BeneficialOwner;
 import com.tools20022.repository.entity.Person;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -112,7 +114,7 @@ public class BeneficiaryInformation1 {
 			componentContext_lazy = () -> BeneficiaryInformation1.mmObject();
 			isDerived = false;
 			xmlTag = "BnfcryId";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "BeneficiaryIdentification";
 			definition = "Identification of the beneficial owner.";
 			maxOccurs = 1;
@@ -158,11 +160,11 @@ public class BeneficiaryInformation1 {
 	 */
 	public static final MMMessageAttribute mmERISAEligibility = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.BeneficialOwner.mmERISAEligibility;
+			businessElementTrace_lazy = () -> BeneficialOwner.mmERISAEligibility;
 			componentContext_lazy = () -> BeneficiaryInformation1.mmObject();
 			isDerived = false;
 			xmlTag = "ERISAElgblty";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ERISAEligibility";
 			definition = "Eligibility to federal Employee Retirement Income Security Act.";
 			maxOccurs = 1;
@@ -207,11 +209,11 @@ public class BeneficiaryInformation1 {
 	 */
 	public static final MMMessageAttribute mmERISARate = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.BeneficialOwner.mmERISARate;
+			businessElementTrace_lazy = () -> BeneficialOwner.mmERISARate;
 			componentContext_lazy = () -> BeneficiaryInformation1.mmObject();
 			isDerived = false;
 			xmlTag = "ERISARate";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ERISARate";
 			definition = "Federal Employee Retirement Income Security Act (ERISA) rate.";
 			maxOccurs = 1;
@@ -256,11 +258,11 @@ public class BeneficiaryInformation1 {
 	 */
 	public static final MMMessageAttribute mmBenefitPlanDeclarationIndicator = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.BeneficialOwner.mmBenefitPlanDeclarationIndicator;
+			businessElementTrace_lazy = () -> BeneficialOwner.mmBenefitPlanDeclarationIndicator;
 			componentContext_lazy = () -> BeneficiaryInformation1.mmObject();
 			isDerived = false;
 			xmlTag = "BnftPlanDclrtnInd";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "BenefitPlanDeclarationIndicator";
 			definition = "Indicates whether the investor is a benefit plan investor.";
 			maxOccurs = 1;
@@ -306,7 +308,7 @@ public class BeneficiaryInformation1 {
 			componentContext_lazy = () -> BeneficiaryInformation1.mmObject();
 			isDerived = false;
 			xmlTag = "NoChngToBnfcryDtlsInd";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "NoChangeToBeneficiaryDetailsIndicator";
 			definition = "Indicates that there has been no change to the beneficiary's details, such as domicile, investor status, etc, as represented in the initial subscription document.";
 			maxOccurs = 1;
@@ -318,12 +320,11 @@ public class BeneficiaryInformation1 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.BeneficiaryInformation1.mmBeneficiaryIdentification, com.tools20022.repository.msg.BeneficiaryInformation1.mmERISAEligibility,
-						com.tools20022.repository.msg.BeneficiaryInformation1.mmERISARate, com.tools20022.repository.msg.BeneficiaryInformation1.mmBenefitPlanDeclarationIndicator,
-						com.tools20022.repository.msg.BeneficiaryInformation1.mmNoChangeToBeneficiaryDetailsIndicator);
+				messageElement_lazy = () -> Arrays.asList(BeneficiaryInformation1.mmBeneficiaryIdentification, BeneficiaryInformation1.mmERISAEligibility, BeneficiaryInformation1.mmERISARate,
+						BeneficiaryInformation1.mmBenefitPlanDeclarationIndicator, BeneficiaryInformation1.mmNoChangeToBeneficiaryDetailsIndicator);
 				trace_lazy = () -> BeneficialOwner.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 				name = "BeneficiaryInformation1";
 				definition = "Information about the beneficial owner.";
 			}

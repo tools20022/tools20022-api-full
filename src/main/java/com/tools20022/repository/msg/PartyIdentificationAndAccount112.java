@@ -20,10 +20,13 @@ package com.tools20022.repository.msg;
 import com.tools20022.metamodel.MMMessageAssociationEnd;
 import com.tools20022.metamodel.MMMessageAttribute;
 import com.tools20022.metamodel.MMMessageComponent;
+import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.choice.CashAccountIdentification5Choice;
 import com.tools20022.repository.choice.PartyIdentification94Choice;
 import com.tools20022.repository.datatype.LEIIdentifier;
+import com.tools20022.repository.entity.Account;
 import com.tools20022.repository.entity.PartyIdentificationInformation;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -132,10 +135,10 @@ public class PartyIdentificationAndAccount112 {
 			componentContext_lazy = () -> PartyIdentificationAndAccount112.mmObject();
 			isDerived = false;
 			xmlTag = "Id";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Identification";
 			definition = "Identification of the party.";
-			previousVersion_lazy = () -> com.tools20022.repository.msg.PartyIdentificationAndAccount50.mmIdentification;
+			previousVersion_lazy = () -> PartyIdentificationAndAccount50.mmIdentification;
 			maxOccurs = 1;
 			minOccurs = 1;
 			isComposite = true;
@@ -180,11 +183,11 @@ public class PartyIdentificationAndAccount112 {
 	 */
 	public static final MMMessageAttribute mmLEI = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.PartyIdentificationInformation.mmLEI;
+			businessElementTrace_lazy = () -> PartyIdentificationInformation.mmLEI;
 			componentContext_lazy = () -> PartyIdentificationAndAccount112.mmObject();
 			isDerived = false;
 			xmlTag = "LEI";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "LEI";
 			definition = "Legal entity identification as an alternate identification for a party.";
 			maxOccurs = 1;
@@ -236,10 +239,10 @@ public class PartyIdentificationAndAccount112 {
 			componentContext_lazy = () -> PartyIdentificationAndAccount112.mmObject();
 			isDerived = false;
 			xmlTag = "AltrnId";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AlternateIdentification";
 			definition = "Alternate identification for a party.";
-			previousVersion_lazy = () -> com.tools20022.repository.msg.PartyIdentificationAndAccount50.mmAlternateIdentification;
+			previousVersion_lazy = () -> PartyIdentificationAndAccount50.mmAlternateIdentification;
 			maxOccurs = 1;
 			minOccurs = 0;
 			isComposite = true;
@@ -286,14 +289,14 @@ public class PartyIdentificationAndAccount112 {
 	 */
 	public static final MMMessageAssociationEnd mmCashAccount = new MMMessageAssociationEnd() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Account.mmIdentification;
+			businessElementTrace_lazy = () -> Account.mmIdentification;
 			componentContext_lazy = () -> PartyIdentificationAndAccount112.mmObject();
 			isDerived = false;
 			xmlTag = "CshAcct";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CashAccount";
 			definition = "Account to or from which a cash entry is made.";
-			previousVersion_lazy = () -> com.tools20022.repository.msg.PartyIdentificationAndAccount50.mmCashAccount;
+			previousVersion_lazy = () -> PartyIdentificationAndAccount50.mmCashAccount;
 			maxOccurs = 1;
 			minOccurs = 0;
 			isComposite = true;
@@ -343,14 +346,14 @@ public class PartyIdentificationAndAccount112 {
 	 */
 	public static final MMMessageAssociationEnd mmChargesAccount = new MMMessageAssociationEnd() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Account.mmIdentification;
+			businessElementTrace_lazy = () -> Account.mmIdentification;
 			componentContext_lazy = () -> PartyIdentificationAndAccount112.mmObject();
 			isDerived = false;
 			xmlTag = "ChrgsAcct";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ChargesAccount";
 			definition = "Account to be used for charges/fees if different from the account for payment.";
-			previousVersion_lazy = () -> com.tools20022.repository.msg.PartyIdentificationAndAccount50.mmChargesAccount;
+			previousVersion_lazy = () -> PartyIdentificationAndAccount50.mmChargesAccount;
 			maxOccurs = 1;
 			minOccurs = 0;
 			isComposite = true;
@@ -400,14 +403,14 @@ public class PartyIdentificationAndAccount112 {
 	 */
 	public static final MMMessageAssociationEnd mmCommissionAccount = new MMMessageAssociationEnd() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Account.mmIdentification;
+			businessElementTrace_lazy = () -> Account.mmIdentification;
 			componentContext_lazy = () -> PartyIdentificationAndAccount112.mmObject();
 			isDerived = false;
 			xmlTag = "ComssnAcct";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CommissionAccount";
 			definition = "Account to be used for commission if different from the account for payment.";
-			previousVersion_lazy = () -> com.tools20022.repository.msg.PartyIdentificationAndAccount50.mmCommissionAccount;
+			previousVersion_lazy = () -> PartyIdentificationAndAccount50.mmCommissionAccount;
 			maxOccurs = 1;
 			minOccurs = 0;
 			isComposite = true;
@@ -456,14 +459,14 @@ public class PartyIdentificationAndAccount112 {
 	 */
 	public static final MMMessageAssociationEnd mmTaxAccount = new MMMessageAssociationEnd() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Account.mmIdentification;
+			businessElementTrace_lazy = () -> Account.mmIdentification;
 			componentContext_lazy = () -> PartyIdentificationAndAccount112.mmObject();
 			isDerived = false;
 			xmlTag = "TaxAcct";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "TaxAccount";
 			definition = "Account to be used for taxes if different from the account for payment.";
-			previousVersion_lazy = () -> com.tools20022.repository.msg.PartyIdentificationAndAccount50.mmTaxAccount;
+			previousVersion_lazy = () -> PartyIdentificationAndAccount50.mmTaxAccount;
 			maxOccurs = 1;
 			minOccurs = 0;
 			isComposite = true;
@@ -508,10 +511,10 @@ public class PartyIdentificationAndAccount112 {
 			componentContext_lazy = () -> PartyIdentificationAndAccount112.mmObject();
 			isDerived = false;
 			xmlTag = "AddtlInf";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AdditionalInformation";
 			definition = "Provides additional information to a party identification.";
-			previousVersion_lazy = () -> com.tools20022.repository.msg.PartyIdentificationAndAccount50.mmAdditionalInformation;
+			previousVersion_lazy = () -> PartyIdentificationAndAccount50.mmAdditionalInformation;
 			maxOccurs = 1;
 			minOccurs = 0;
 			isComposite = true;
@@ -522,13 +525,12 @@ public class PartyIdentificationAndAccount112 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.PartyIdentificationAndAccount112.mmIdentification, com.tools20022.repository.msg.PartyIdentificationAndAccount112.mmLEI,
-						com.tools20022.repository.msg.PartyIdentificationAndAccount112.mmAlternateIdentification, com.tools20022.repository.msg.PartyIdentificationAndAccount112.mmCashAccount,
-						com.tools20022.repository.msg.PartyIdentificationAndAccount112.mmChargesAccount, com.tools20022.repository.msg.PartyIdentificationAndAccount112.mmCommissionAccount,
-						com.tools20022.repository.msg.PartyIdentificationAndAccount112.mmTaxAccount, com.tools20022.repository.msg.PartyIdentificationAndAccount112.mmAdditionalInformation);
+				messageElement_lazy = () -> Arrays.asList(PartyIdentificationAndAccount112.mmIdentification, PartyIdentificationAndAccount112.mmLEI, PartyIdentificationAndAccount112.mmAlternateIdentification,
+						PartyIdentificationAndAccount112.mmCashAccount, PartyIdentificationAndAccount112.mmChargesAccount, PartyIdentificationAndAccount112.mmCommissionAccount, PartyIdentificationAndAccount112.mmTaxAccount,
+						PartyIdentificationAndAccount112.mmAdditionalInformation);
 				trace_lazy = () -> PartyIdentificationInformation.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "PartyIdentificationAndAccount112";
 				definition = "Party and account details.";
 				previousVersion_lazy = () -> PartyIdentificationAndAccount50.mmObject();

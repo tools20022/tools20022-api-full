@@ -19,8 +19,10 @@ package com.tools20022.repository.msg;
 
 import com.tools20022.metamodel.MMMessageAttribute;
 import com.tools20022.metamodel.MMMessageComponent;
+import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.datatype.ActiveCurrencyAndAmount;
 import com.tools20022.repository.entity.CollateralBalance;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -114,11 +116,11 @@ public class MarginCollateral1 {
 	 */
 	public static final MMMessageAttribute mmHeldByPartyA = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.CollateralBalance.mmHeldAmount;
+			businessElementTrace_lazy = () -> CollateralBalance.mmHeldAmount;
 			componentContext_lazy = () -> MarginCollateral1.mmObject();
 			isDerived = false;
 			xmlTag = "HeldByPtyA";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "HeldByPartyA";
 			definition = "Post haircut market value of all margin collateral held by party A.";
 			maxOccurs = 1;
@@ -163,11 +165,11 @@ public class MarginCollateral1 {
 	 */
 	public static final MMMessageAttribute mmHeldByPartyB = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.CollateralBalance.mmHeldAmount;
+			businessElementTrace_lazy = () -> CollateralBalance.mmHeldAmount;
 			componentContext_lazy = () -> MarginCollateral1.mmObject();
 			isDerived = false;
 			xmlTag = "HeldByPtyB";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "HeldByPartyB";
 			definition = "Post haircut market value of all margin collateral held by party B.";
 			maxOccurs = 1;
@@ -214,11 +216,11 @@ public class MarginCollateral1 {
 	 */
 	public static final MMMessageAttribute mmPriorAgreedToPartyA = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.CollateralBalance.mmPriorAgreed;
+			businessElementTrace_lazy = () -> CollateralBalance.mmPriorAgreed;
 			componentContext_lazy = () -> MarginCollateral1.mmObject();
 			isDerived = false;
 			xmlTag = "PrrAgrdToPtyA";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PriorAgreedToPartyA";
 			definition = "Sum of all margin agreed amounts due to party A from prior days’ collateral calls where collateral movements have not yet been agreed.";
 			maxOccurs = 1;
@@ -265,11 +267,11 @@ public class MarginCollateral1 {
 	 */
 	public static final MMMessageAttribute mmPriorAgreedToPartyB = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.CollateralBalance.mmPriorAgreed;
+			businessElementTrace_lazy = () -> CollateralBalance.mmPriorAgreed;
 			componentContext_lazy = () -> MarginCollateral1.mmObject();
 			isDerived = false;
 			xmlTag = "PrrAgrdToPtyB";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PriorAgreedToPartyB";
 			definition = "Sum of all margin agreed amounts due to party B from prior days’ collateral calls where collateral movements have not yet been agreed.";
 			maxOccurs = 1;
@@ -316,11 +318,11 @@ public class MarginCollateral1 {
 	 */
 	public static final MMMessageAttribute mmInTransitToPartyA = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.CollateralBalance.mmInTransit;
+			businessElementTrace_lazy = () -> CollateralBalance.mmInTransit;
 			componentContext_lazy = () -> MarginCollateral1.mmObject();
 			isDerived = false;
 			xmlTag = "InTrnstToPtyA";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "InTransitToPartyA";
 			definition = "Sum of all margin collateral movements due to party A in progress but not yet settled.";
 			maxOccurs = 1;
@@ -367,11 +369,11 @@ public class MarginCollateral1 {
 	 */
 	public static final MMMessageAttribute mmInTransitToPartyB = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.CollateralBalance.mmInTransit;
+			businessElementTrace_lazy = () -> CollateralBalance.mmInTransit;
 			componentContext_lazy = () -> MarginCollateral1.mmObject();
 			isDerived = false;
 			xmlTag = "InTrnstToPtyB";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "InTransitToPartyB";
 			definition = "Sum of all margin collateral movements due to party B in progress but not yet settled.";
 			maxOccurs = 1;
@@ -383,12 +385,11 @@ public class MarginCollateral1 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.MarginCollateral1.mmHeldByPartyA, com.tools20022.repository.msg.MarginCollateral1.mmHeldByPartyB,
-						com.tools20022.repository.msg.MarginCollateral1.mmPriorAgreedToPartyA, com.tools20022.repository.msg.MarginCollateral1.mmPriorAgreedToPartyB, com.tools20022.repository.msg.MarginCollateral1.mmInTransitToPartyA,
-						com.tools20022.repository.msg.MarginCollateral1.mmInTransitToPartyB);
+				messageElement_lazy = () -> Arrays.asList(MarginCollateral1.mmHeldByPartyA, MarginCollateral1.mmHeldByPartyB, MarginCollateral1.mmPriorAgreedToPartyA, MarginCollateral1.mmPriorAgreedToPartyB,
+						MarginCollateral1.mmInTransitToPartyA, MarginCollateral1.mmInTransitToPartyB);
 				trace_lazy = () -> CollateralBalance.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "MarginCollateral1";
 				definition = "Provides details about the collateral held, in transit or that still needs to be agreed by both parties.";
 			}

@@ -19,8 +19,12 @@ package com.tools20022.repository.msg;
 
 import com.tools20022.metamodel.MMMessageAssociationEnd;
 import com.tools20022.metamodel.MMMessageComponent;
+import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.choice.BalanceFormat2Choice;
+import com.tools20022.repository.entity.ChoiceCorporateAction;
+import com.tools20022.repository.entity.CorporateActionEntitlement;
 import com.tools20022.repository.entity.CorporateActionEvent;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.List;
@@ -98,11 +102,11 @@ public class InstructedBalanceDetails2 {
 	 */
 	public static final MMMessageAssociationEnd mmTotalInstructedBalance = new MMMessageAssociationEnd() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.CorporateActionEntitlement.mmInstructedBalance;
+			businessElementTrace_lazy = () -> CorporateActionEntitlement.mmInstructedBalance;
 			componentContext_lazy = () -> InstructedBalanceDetails2.mmObject();
 			isDerived = false;
 			xmlTag = "TtlInstdBal";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "TotalInstructedBalance";
 			definition = "Provides information about the total instructed balance.";
 			maxOccurs = 1;
@@ -147,11 +151,11 @@ public class InstructedBalanceDetails2 {
 	 */
 	public static final MMMessageAssociationEnd mmOptionDetails = new MMMessageAssociationEnd() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.ChoiceCorporateAction.mmCorporateActionOptionDefinition;
+			businessElementTrace_lazy = () -> ChoiceCorporateAction.mmCorporateActionOptionDefinition;
 			componentContext_lazy = () -> InstructedBalanceDetails2.mmObject();
 			isDerived = false;
 			xmlTag = "OptnDtls";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "OptionDetails";
 			definition = "Provide instructed balance breakdown information per option.";
 			minOccurs = 0;
@@ -163,10 +167,10 @@ public class InstructedBalanceDetails2 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.InstructedBalanceDetails2.mmTotalInstructedBalance, com.tools20022.repository.msg.InstructedBalanceDetails2.mmOptionDetails);
+				messageElement_lazy = () -> Arrays.asList(InstructedBalanceDetails2.mmTotalInstructedBalance, InstructedBalanceDetails2.mmOptionDetails);
 				trace_lazy = () -> CorporateActionEvent.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "InstructedBalanceDetails2";
 				definition = "Provides information about total instructed balance.";
 			}

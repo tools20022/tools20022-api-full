@@ -19,7 +19,10 @@ package com.tools20022.repository.choice;
 
 import com.tools20022.metamodel.MMChoiceComponent;
 import com.tools20022.metamodel.MMMessageAttribute;
+import com.tools20022.metamodel.MMRegistrationStatus;
+import com.tools20022.repository.area.sese.ReversalOfTransferOutConfirmationV07;
 import com.tools20022.repository.entity.SecuritiesTransfer;
+import com.tools20022.repository.GeneratedRepository;
 import com.tools20022.repository.msg.TransferOut16;
 import com.tools20022.repository.msg.TransferReference10;
 import java.util.Arrays;
@@ -116,10 +119,10 @@ public class Reversal8Choice {
 			componentContext_lazy = () -> Reversal8Choice.mmObject();
 			isDerived = false;
 			xmlTag = "Refs";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "References";
 			definition = "Reference of the transfer confirmation to be reversed.";
-			previousVersion_lazy = () -> com.tools20022.repository.choice.Reversal5Choice.mmReferences;
+			previousVersion_lazy = () -> Reversal5Choice.mmReferences;
 			minOccurs = 1;
 			complexType_lazy = () -> TransferReference10.mmObject();
 		}
@@ -164,14 +167,14 @@ public class Reversal8Choice {
 	 */
 	public static final MMMessageAttribute mmTransferOutConfirmationDetails = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.SecuritiesTransfer.mmRelatedSettlement;
+			businessElementTrace_lazy = () -> SecuritiesTransfer.mmRelatedSettlement;
 			componentContext_lazy = () -> Reversal8Choice.mmObject();
 			isDerived = false;
 			xmlTag = "TrfOutConfDtls";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "TransferOutConfirmationDetails";
 			definition = "Details of the transfer out confirmation to be reversed.";
-			previousVersion_lazy = () -> com.tools20022.repository.choice.Reversal5Choice.mmTransferOutConfirmationDetails;
+			previousVersion_lazy = () -> Reversal5Choice.mmTransferOutConfirmationDetails;
 			maxOccurs = 1;
 			minOccurs = 1;
 			complexType_lazy = () -> TransferOut16.mmObject();
@@ -181,11 +184,11 @@ public class Reversal8Choice {
 	final static public MMChoiceComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMChoiceComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.choice.Reversal8Choice.mmReferences, com.tools20022.repository.choice.Reversal8Choice.mmTransferOutConfirmationDetails);
-				messageBuildingBlock_lazy = () -> Arrays.asList(com.tools20022.repository.area.sese.ReversalOfTransferOutConfirmationV07.mmReversal);
+				messageElement_lazy = () -> Arrays.asList(Reversal8Choice.mmReferences, Reversal8Choice.mmTransferOutConfirmationDetails);
+				messageBuildingBlock_lazy = () -> Arrays.asList(ReversalOfTransferOutConfirmationV07.mmReversal);
 				trace_lazy = () -> SecuritiesTransfer.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "Reversal8Choice";
 				definition = "Choice between reversal by reference or by reversal details.";
 				previousVersion_lazy = () -> Reversal5Choice.mmObject();

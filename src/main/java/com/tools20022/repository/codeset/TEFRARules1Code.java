@@ -19,7 +19,9 @@ package com.tools20022.repository.codeset;
 
 import com.tools20022.metamodel.MMCode;
 import com.tools20022.metamodel.MMCodeSet;
+import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.codeset.TEFRARulesCode;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -83,7 +85,7 @@ public class TEFRARules1Code extends TEFRARulesCode {
 	 */
 	public static final MMCode mmC = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "C";
 			owner_lazy = () -> TEFRARules1Code.mmObject();
 		}
@@ -106,7 +108,7 @@ public class TEFRARules1Code extends TEFRARulesCode {
 	 */
 	public static final MMCode mmD = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "D";
 			owner_lazy = () -> TEFRARules1Code.mmObject();
 		}
@@ -115,12 +117,12 @@ public class TEFRARules1Code extends TEFRARulesCode {
 	static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
 				example = Arrays.asList("RULC");
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "TEFRARules1Code";
 				definition = "Indicates the Tax Equity and Fiscal Responsibility Act (TEFRA) rule levied by the IRS under which the security is issued.";
-				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.TEFRARules1Code.mmC, com.tools20022.repository.codeset.TEFRARules1Code.mmD);
+				code_lazy = () -> Arrays.asList(TEFRARules1Code.mmC, TEFRARules1Code.mmD);
 				trace_lazy = () -> TEFRARulesCode.mmObject();
 			}
 		});

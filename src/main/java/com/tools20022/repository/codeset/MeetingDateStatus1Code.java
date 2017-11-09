@@ -19,7 +19,9 @@ package com.tools20022.repository.codeset;
 
 import com.tools20022.metamodel.MMCode;
 import com.tools20022.metamodel.MMCodeSet;
+import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.codeset.MeetingDateStatusCode;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -89,7 +91,7 @@ public class MeetingDateStatus1Code extends MeetingDateStatusCode {
 	 */
 	public static final MMCode mmTentative = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Tentative";
 			owner_lazy = () -> MeetingDateStatus1Code.mmObject();
 		}
@@ -112,7 +114,7 @@ public class MeetingDateStatus1Code extends MeetingDateStatusCode {
 	 */
 	public static final MMCode mmConfirmed = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Confirmed";
 			owner_lazy = () -> MeetingDateStatus1Code.mmObject();
 		}
@@ -135,7 +137,7 @@ public class MeetingDateStatus1Code extends MeetingDateStatusCode {
 	 */
 	public static final MMCode mmCancelled = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Cancelled";
 			owner_lazy = () -> MeetingDateStatus1Code.mmObject();
 		}
@@ -158,7 +160,7 @@ public class MeetingDateStatus1Code extends MeetingDateStatusCode {
 	 */
 	public static final MMCode mmNoQuorum = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "NoQuorum";
 			owner_lazy = () -> MeetingDateStatus1Code.mmObject();
 		}
@@ -167,13 +169,12 @@ public class MeetingDateStatus1Code extends MeetingDateStatusCode {
 	static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
 				example = Arrays.asList("TNTA");
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "MeetingDateStatus1Code";
 				definition = "Identifies the possible statuses of a meeting date.";
-				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.MeetingDateStatus1Code.mmTentative, com.tools20022.repository.codeset.MeetingDateStatus1Code.mmConfirmed,
-						com.tools20022.repository.codeset.MeetingDateStatus1Code.mmCancelled, com.tools20022.repository.codeset.MeetingDateStatus1Code.mmNoQuorum);
+				code_lazy = () -> Arrays.asList(MeetingDateStatus1Code.mmTentative, MeetingDateStatus1Code.mmConfirmed, MeetingDateStatus1Code.mmCancelled, MeetingDateStatus1Code.mmNoQuorum);
 				trace_lazy = () -> MeetingDateStatusCode.mmObject();
 			}
 		});

@@ -18,7 +18,11 @@
 package com.tools20022.repository.entity;
 
 import com.tools20022.metamodel.MMBusinessComponent;
+import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.entity.Broker;
+import com.tools20022.repository.GeneratedRepository;
+import com.tools20022.repository.msg.ConfirmationParties2;
+import com.tools20022.repository.msg.ConfirmationParties4;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -69,11 +73,11 @@ public class ClearingBroker extends Broker {
 	static public MMBusinessComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMBusinessComponent() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "ClearingBroker";
 				definition = "Party which acts as a liaison between an investor and a clearing corporation.";
-				derivationElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.ConfirmationParties4.mmClearingFirm, com.tools20022.repository.msg.ConfirmationParties2.mmClearingFirm);
+				derivationElement_lazy = () -> Arrays.asList(ConfirmationParties4.mmClearingFirm, ConfirmationParties2.mmClearingFirm);
 				superType_lazy = () -> Broker.mmObject();
 			}
 		});

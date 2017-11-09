@@ -19,9 +19,11 @@ package com.tools20022.repository.choice;
 
 import com.tools20022.metamodel.MMChoiceComponent;
 import com.tools20022.metamodel.MMMessageAssociationEnd;
+import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.entity.AmountAndQuantity;
 import com.tools20022.repository.entity.AmountRatio;
 import com.tools20022.repository.entity.QuantityRatio;
+import com.tools20022.repository.GeneratedRepository;
 import com.tools20022.repository.msg.AmountAndQuantityRatio5;
 import com.tools20022.repository.msg.AmountToAmountRatio3;
 import com.tools20022.repository.msg.QuantityToQuantityRatio2;
@@ -108,7 +110,7 @@ public class RatioFormat22Choice {
 			componentContext_lazy = () -> RatioFormat22Choice.mmObject();
 			isDerived = false;
 			xmlTag = "QtyToQty";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "QuantityToQuantity";
 			definition = "Ratio expressed as a quotient of quantities.";
 			maxOccurs = 1;
@@ -154,7 +156,7 @@ public class RatioFormat22Choice {
 			componentContext_lazy = () -> RatioFormat22Choice.mmObject();
 			isDerived = false;
 			xmlTag = "AmtToAmt";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AmountToAmount";
 			definition = "Ratio expressed as a quotient of amounts.";
 			maxOccurs = 1;
@@ -202,7 +204,7 @@ public class RatioFormat22Choice {
 			componentContext_lazy = () -> RatioFormat22Choice.mmObject();
 			isDerived = false;
 			xmlTag = "AmtToQty";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AmountToQuantity";
 			definition = "Ratio expressed as an amount to quantity ratio.";
 			maxOccurs = 1;
@@ -250,7 +252,7 @@ public class RatioFormat22Choice {
 			componentContext_lazy = () -> RatioFormat22Choice.mmObject();
 			isDerived = false;
 			xmlTag = "QtyToAmt";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "QuantityToAmount";
 			definition = "Ratio expressed as a quantity to amount ratio.";
 			maxOccurs = 1;
@@ -263,10 +265,9 @@ public class RatioFormat22Choice {
 	final static public MMChoiceComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMChoiceComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.choice.RatioFormat22Choice.mmQuantityToQuantity, com.tools20022.repository.choice.RatioFormat22Choice.mmAmountToAmount,
-						com.tools20022.repository.choice.RatioFormat22Choice.mmAmountToQuantity, com.tools20022.repository.choice.RatioFormat22Choice.mmQuantityToAmount);
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				messageElement_lazy = () -> Arrays.asList(RatioFormat22Choice.mmQuantityToQuantity, RatioFormat22Choice.mmAmountToAmount, RatioFormat22Choice.mmAmountToQuantity, RatioFormat22Choice.mmQuantityToAmount);
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "RatioFormat22Choice";
 				definition = "Choice of format to expressed a ratio.";
 			}

@@ -19,11 +19,14 @@ package com.tools20022.repository.msg;
 
 import com.tools20022.metamodel.MMMessageAttribute;
 import com.tools20022.metamodel.MMMessageComponent;
+import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.choice.TaxIdentificationType1Choice;
 import com.tools20022.repository.codeset.CountryCode;
 import com.tools20022.repository.datatype.ISODate;
 import com.tools20022.repository.datatype.Max35Text;
+import com.tools20022.repository.entity.Party;
 import com.tools20022.repository.entity.Tax;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -113,11 +116,11 @@ public class TaxIdentification2 {
 	 */
 	public static final MMMessageAttribute mmIdentification = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Tax.mmIdentification;
+			businessElementTrace_lazy = () -> Tax.mmIdentification;
 			componentContext_lazy = () -> TaxIdentification2.mmObject();
 			isDerived = false;
 			xmlTag = "Id";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Identification";
 			definition = "Tax identification number or identifier.";
 			maxOccurs = 1;
@@ -161,11 +164,11 @@ public class TaxIdentification2 {
 	 */
 	public static final MMMessageAttribute mmTaxIdentificationType = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Tax.mmTaxIdentificationType;
+			businessElementTrace_lazy = () -> Tax.mmTaxIdentificationType;
 			componentContext_lazy = () -> TaxIdentification2.mmObject();
 			isDerived = false;
 			xmlTag = "TaxIdTp";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "TaxIdentificationType";
 			definition = "Type of tax identification number or identifier.";
 			maxOccurs = 1;
@@ -208,11 +211,11 @@ public class TaxIdentification2 {
 	 */
 	public static final MMMessageAttribute mmIssuer = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Tax.mmAdministrationZone;
+			businessElementTrace_lazy = () -> Tax.mmAdministrationZone;
 			componentContext_lazy = () -> TaxIdentification2.mmObject();
 			isDerived = false;
 			xmlTag = "Issr";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Issuer";
 			definition = "Entity that assigns the identifier.";
 			maxOccurs = 1;
@@ -253,7 +256,7 @@ public class TaxIdentification2 {
 			componentContext_lazy = () -> TaxIdentification2.mmObject();
 			isDerived = false;
 			xmlTag = "IsseDt";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "IssueDate";
 			definition = "Date at which the identification was issued.";
 			maxOccurs = 1;
@@ -294,7 +297,7 @@ public class TaxIdentification2 {
 			componentContext_lazy = () -> TaxIdentification2.mmObject();
 			isDerived = false;
 			xmlTag = "XpryDt";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ExpiryDate";
 			definition = "Date at which the identification expires.";
 			maxOccurs = 1;
@@ -342,14 +345,14 @@ public class TaxIdentification2 {
 	 */
 	public static final MMMessageAttribute mmIssuerCountry = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Party.mmTaxationConditions;
+			businessElementTrace_lazy = () -> Party.mmTaxationConditions;
 			componentContext_lazy = () -> TaxIdentification2.mmObject();
 			isDerived = false;
 			xmlTag = "IssrCtry";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "IssuerCountry";
 			definition = "Country that issued the tax identification.";
-			previousVersion_lazy = () -> com.tools20022.repository.msg.TaxIdentification1.mmTaxationCountry;
+			previousVersion_lazy = () -> TaxIdentification1.mmTaxationCountry;
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> CountryCode.mmObject();
@@ -359,12 +362,11 @@ public class TaxIdentification2 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.TaxIdentification2.mmIdentification, com.tools20022.repository.msg.TaxIdentification2.mmTaxIdentificationType,
-						com.tools20022.repository.msg.TaxIdentification2.mmIssuer, com.tools20022.repository.msg.TaxIdentification2.mmIssueDate, com.tools20022.repository.msg.TaxIdentification2.mmExpiryDate,
-						com.tools20022.repository.msg.TaxIdentification2.mmIssuerCountry);
+				messageElement_lazy = () -> Arrays.asList(TaxIdentification2.mmIdentification, TaxIdentification2.mmTaxIdentificationType, TaxIdentification2.mmIssuer, TaxIdentification2.mmIssueDate, TaxIdentification2.mmExpiryDate,
+						TaxIdentification2.mmIssuerCountry);
 				trace_lazy = () -> Tax.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 				name = "TaxIdentification2";
 				definition = "Tax identification information.";
 				previousVersion_lazy = () -> TaxIdentification1.mmObject();

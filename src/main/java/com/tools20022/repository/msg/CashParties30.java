@@ -20,7 +20,11 @@ package com.tools20022.repository.msg;
 import com.tools20022.metamodel.MMMessageAssociationEnd;
 import com.tools20022.metamodel.MMMessageAttribute;
 import com.tools20022.metamodel.MMMessageComponent;
+import com.tools20022.metamodel.MMRegistrationStatus;
+import com.tools20022.repository.area.sese.*;
+import com.tools20022.repository.entity.Party;
 import com.tools20022.repository.entity.PaymentPartyRole;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -139,11 +143,11 @@ public class CashParties30 {
 	 */
 	public static final MMMessageAssociationEnd mmDebtor = new MMMessageAssociationEnd() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Party.mmIdentification;
+			businessElementTrace_lazy = () -> Party.mmIdentification;
 			componentContext_lazy = () -> CashParties30.mmObject();
 			isDerived = false;
 			xmlTag = "Dbtr";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Debtor";
 			definition = "Party that owes an amount of money to the (ultimate) creditor.";
 			maxOccurs = 1;
@@ -187,11 +191,11 @@ public class CashParties30 {
 	 */
 	public static final MMMessageAssociationEnd mmDebtorAgent = new MMMessageAssociationEnd() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Party.mmIdentification;
+			businessElementTrace_lazy = () -> Party.mmIdentification;
 			componentContext_lazy = () -> CashParties30.mmObject();
 			isDerived = false;
 			xmlTag = "DbtrAgt";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "DebtorAgent";
 			definition = "Financial institution servicing an account for the debtor.";
 			maxOccurs = 1;
@@ -234,11 +238,11 @@ public class CashParties30 {
 	 */
 	public static final MMMessageAssociationEnd mmCreditor = new MMMessageAssociationEnd() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Party.mmIdentification;
+			businessElementTrace_lazy = () -> Party.mmIdentification;
 			componentContext_lazy = () -> CashParties30.mmObject();
 			isDerived = false;
 			xmlTag = "Cdtr";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Creditor";
 			definition = "Party to which an amount of money is due.";
 			maxOccurs = 1;
@@ -282,11 +286,11 @@ public class CashParties30 {
 	 */
 	public static final MMMessageAssociationEnd mmCreditorAgent = new MMMessageAssociationEnd() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Party.mmIdentification;
+			businessElementTrace_lazy = () -> Party.mmIdentification;
 			componentContext_lazy = () -> CashParties30.mmObject();
 			isDerived = false;
 			xmlTag = "CdtrAgt";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CreditorAgent";
 			definition = "Financial institution servicing an account for the creditor.";
 			maxOccurs = 1;
@@ -333,11 +337,11 @@ public class CashParties30 {
 	 */
 	public static final MMMessageAttribute mmIntermediary = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Party.mmIdentification;
+			businessElementTrace_lazy = () -> Party.mmIdentification;
 			componentContext_lazy = () -> CashParties30.mmObject();
 			isDerived = false;
 			xmlTag = "Intrmy";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Intermediary";
 			definition = "Financial institution through which the transaction must pass to reach the account with institution.";
 			maxOccurs = 1;
@@ -349,17 +353,14 @@ public class CashParties30 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.CashParties30.mmDebtor, com.tools20022.repository.msg.CashParties30.mmDebtorAgent, com.tools20022.repository.msg.CashParties30.mmCreditor,
-						com.tools20022.repository.msg.CashParties30.mmCreditorAgent, com.tools20022.repository.msg.CashParties30.mmIntermediary);
-				messageBuildingBlock_lazy = () -> Arrays.asList(com.tools20022.repository.area.sese.SecuritiesSettlementTransactionConfirmation002V06.mmCashParties,
-						com.tools20022.repository.area.sese.SecuritiesSettlementTransactionGenerationNotification002V06.mmCashParties, com.tools20022.repository.area.sese.SecuritiesSettlementTransactionInstruction002V06.mmCashParties,
-						com.tools20022.repository.area.sese.SecuritiesFinancingInstruction002V06.mmCashParties, com.tools20022.repository.area.sese.SecuritiesFinancingConfirmation002V06.mmCashParties,
-						com.tools20022.repository.area.sese.SecuritiesSettlementTransactionInstruction002V07.mmCashParties, com.tools20022.repository.area.sese.SecuritiesFinancingConfirmation002V07.mmCashParties,
-						com.tools20022.repository.area.sese.SecuritiesFinancingInstruction002V07.mmCashParties, com.tools20022.repository.area.sese.SecuritiesSettlementTransactionGenerationNotification002V07.mmCashParties,
-						com.tools20022.repository.area.sese.SecuritiesSettlementTransactionConfirmation002V07.mmCashParties);
+				messageElement_lazy = () -> Arrays.asList(CashParties30.mmDebtor, CashParties30.mmDebtorAgent, CashParties30.mmCreditor, CashParties30.mmCreditorAgent, CashParties30.mmIntermediary);
+				messageBuildingBlock_lazy = () -> Arrays.asList(SecuritiesSettlementTransactionConfirmation002V06.mmCashParties, SecuritiesSettlementTransactionGenerationNotification002V06.mmCashParties,
+						SecuritiesSettlementTransactionInstruction002V06.mmCashParties, SecuritiesFinancingInstruction002V06.mmCashParties, SecuritiesFinancingConfirmation002V06.mmCashParties,
+						SecuritiesSettlementTransactionInstruction002V07.mmCashParties, SecuritiesFinancingConfirmation002V07.mmCashParties, SecuritiesFinancingInstruction002V07.mmCashParties,
+						SecuritiesSettlementTransactionGenerationNotification002V07.mmCashParties, SecuritiesSettlementTransactionConfirmation002V07.mmCashParties);
 				trace_lazy = () -> PaymentPartyRole.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "CashParties30";
 				definition = "Payment processes required to transfer cash from the debtor to the creditor.";
 			}

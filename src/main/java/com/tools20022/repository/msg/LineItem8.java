@@ -20,7 +20,13 @@ package com.tools20022.repository.msg;
 import com.tools20022.metamodel.MMMessageAssociationEnd;
 import com.tools20022.metamodel.MMMessageAttribute;
 import com.tools20022.metamodel.MMMessageComponent;
+import com.tools20022.metamodel.MMRegistrationStatus;
+import com.tools20022.repository.area.tsmt.BaselineReportV03;
 import com.tools20022.repository.datatype.CurrencyAndAmount;
+import com.tools20022.repository.entity.CommercialTrade;
+import com.tools20022.repository.entity.Invoice;
+import com.tools20022.repository.entity.PurchaseOrder;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.List;
@@ -140,14 +146,14 @@ public class LineItem8 {
 	 */
 	public static final MMMessageAssociationEnd mmLineItemDetails = new MMMessageAssociationEnd() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Invoice.mmLineItem;
+			businessElementTrace_lazy = () -> Invoice.mmLineItem;
 			componentContext_lazy = () -> LineItem8.mmObject();
 			isDerived = false;
 			xmlTag = "LineItmDtls";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "LineItemDetails";
 			definition = "Calculated information about the goods of the underlying transaction.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.LineItem14.mmLineItemDetails);
+			nextVersions_lazy = () -> Arrays.asList(LineItem14.mmLineItemDetails);
 			minOccurs = 1;
 			isComposite = true;
 			type_lazy = () -> com.tools20022.repository.msg.LineItemDetails8.mmObject();
@@ -196,14 +202,14 @@ public class LineItem8 {
 	 */
 	public static final MMMessageAttribute mmOrderedLineItemsTotalAmount = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.PurchaseOrder.mmTotalAmount;
+			businessElementTrace_lazy = () -> PurchaseOrder.mmTotalAmount;
 			componentContext_lazy = () -> LineItem8.mmObject();
 			isDerived = false;
 			xmlTag = "OrdrdLineItmsTtlAmt";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "OrderedLineItemsTotalAmount";
 			definition = "Line items total amount as indicated in the baseline.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.LineItem14.mmOrderedLineItemsTotalAmount);
+			nextVersions_lazy = () -> Arrays.asList(LineItem14.mmOrderedLineItemsTotalAmount);
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> CurrencyAndAmount.mmObject();
@@ -253,14 +259,14 @@ public class LineItem8 {
 	 */
 	public static final MMMessageAttribute mmAcceptedLineItemsTotalAmount = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.CommercialTrade.mmTotalAcceptedAmount;
+			businessElementTrace_lazy = () -> CommercialTrade.mmTotalAcceptedAmount;
 			componentContext_lazy = () -> LineItem8.mmObject();
 			isDerived = false;
 			xmlTag = "AccptdLineItmsTtlAmt";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AcceptedLineItemsTotalAmount";
 			definition = "Line items total amount accepted by a data set submission(s).";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.LineItem14.mmAcceptedLineItemsTotalAmount);
+			nextVersions_lazy = () -> Arrays.asList(LineItem14.mmAcceptedLineItemsTotalAmount);
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> CurrencyAndAmount.mmObject();
@@ -309,10 +315,10 @@ public class LineItem8 {
 			componentContext_lazy = () -> LineItem8.mmObject();
 			isDerived = false;
 			xmlTag = "OutsdngLineItmsTtlAmt";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "OutstandingLineItemsTotalAmount";
 			definition = "Difference between the ordered and the accepted line items total amount.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.LineItem14.mmOutstandingLineItemsTotalAmount);
+			nextVersions_lazy = () -> Arrays.asList(LineItem14.mmOutstandingLineItemsTotalAmount);
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> CurrencyAndAmount.mmObject();
@@ -362,10 +368,10 @@ public class LineItem8 {
 			componentContext_lazy = () -> LineItem8.mmObject();
 			isDerived = false;
 			xmlTag = "PdgLineItmsTtlAmt";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PendingLineItemsTotalAmount";
 			definition = "Line item total amount for which a mismatched data set has been submitted and has not yet been accepted or rejected.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.LineItem14.mmPendingLineItemsTotalAmount);
+			nextVersions_lazy = () -> Arrays.asList(LineItem14.mmPendingLineItemsTotalAmount);
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> CurrencyAndAmount.mmObject();
@@ -414,14 +420,14 @@ public class LineItem8 {
 	 */
 	public static final MMMessageAttribute mmOrderedTotalNetAmount = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Invoice.mmTotalNetAmount;
+			businessElementTrace_lazy = () -> Invoice.mmTotalNetAmount;
 			componentContext_lazy = () -> LineItem8.mmObject();
 			isDerived = false;
 			xmlTag = "OrdrdTtlNetAmt";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "OrderedTotalNetAmount";
 			definition = "Total net amount as indicated in the baseline.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.LineItem14.mmOrderedTotalNetAmount);
+			nextVersions_lazy = () -> Arrays.asList(LineItem14.mmOrderedTotalNetAmount);
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> CurrencyAndAmount.mmObject();
@@ -470,14 +476,14 @@ public class LineItem8 {
 	 */
 	public static final MMMessageAttribute mmAcceptedTotalNetAmount = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Invoice.mmTotalInvoiceAmount;
+			businessElementTrace_lazy = () -> Invoice.mmTotalInvoiceAmount;
 			componentContext_lazy = () -> LineItem8.mmObject();
 			isDerived = false;
 			xmlTag = "AccptdTtlNetAmt";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AcceptedTotalNetAmount";
 			definition = "Total net amount accepted by a data set submission.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.LineItem14.mmAcceptedTotalNetAmount);
+			nextVersions_lazy = () -> Arrays.asList(LineItem14.mmAcceptedTotalNetAmount);
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> CurrencyAndAmount.mmObject();
@@ -527,10 +533,10 @@ public class LineItem8 {
 			componentContext_lazy = () -> LineItem8.mmObject();
 			isDerived = false;
 			xmlTag = "OutsdngTtlNetAmt";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "OutstandingTotalNetAmount";
 			definition = "Total net amount for which a mismatched data set has been submitted and has not yet been accepted or rejected.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.LineItem14.mmOutstandingTotalNetAmount);
+			nextVersions_lazy = () -> Arrays.asList(LineItem14.mmOutstandingTotalNetAmount);
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> CurrencyAndAmount.mmObject();
@@ -578,10 +584,10 @@ public class LineItem8 {
 			componentContext_lazy = () -> LineItem8.mmObject();
 			isDerived = false;
 			xmlTag = "PdgTtlNetAmt";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PendingTotalNetAmount";
 			definition = "Difference between the ordered and the accepted total net amount.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.LineItem14.mmPendingTotalNetAmount);
+			nextVersions_lazy = () -> Arrays.asList(LineItem14.mmPendingTotalNetAmount);
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> CurrencyAndAmount.mmObject();
@@ -591,13 +597,11 @@ public class LineItem8 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.LineItem8.mmLineItemDetails, com.tools20022.repository.msg.LineItem8.mmOrderedLineItemsTotalAmount,
-						com.tools20022.repository.msg.LineItem8.mmAcceptedLineItemsTotalAmount, com.tools20022.repository.msg.LineItem8.mmOutstandingLineItemsTotalAmount,
-						com.tools20022.repository.msg.LineItem8.mmPendingLineItemsTotalAmount, com.tools20022.repository.msg.LineItem8.mmOrderedTotalNetAmount, com.tools20022.repository.msg.LineItem8.mmAcceptedTotalNetAmount,
-						com.tools20022.repository.msg.LineItem8.mmOutstandingTotalNetAmount, com.tools20022.repository.msg.LineItem8.mmPendingTotalNetAmount);
-				messageBuildingBlock_lazy = () -> Arrays.asList(com.tools20022.repository.area.tsmt.BaselineReportV03.mmReportedLineItem);
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				messageElement_lazy = () -> Arrays.asList(LineItem8.mmLineItemDetails, LineItem8.mmOrderedLineItemsTotalAmount, LineItem8.mmAcceptedLineItemsTotalAmount, LineItem8.mmOutstandingLineItemsTotalAmount,
+						LineItem8.mmPendingLineItemsTotalAmount, LineItem8.mmOrderedTotalNetAmount, LineItem8.mmAcceptedTotalNetAmount, LineItem8.mmOutstandingTotalNetAmount, LineItem8.mmPendingTotalNetAmount);
+				messageBuildingBlock_lazy = () -> Arrays.asList(BaselineReportV03.mmReportedLineItem);
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "LineItem8";
 				definition = "Calculation of the current situation of a baseline as a result of the submission of a commercial data set.";
 				nextVersions_lazy = () -> Arrays.asList(LineItem14.mmObject());

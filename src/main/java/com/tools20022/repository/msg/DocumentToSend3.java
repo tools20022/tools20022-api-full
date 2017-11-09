@@ -20,9 +20,15 @@ package com.tools20022.repository.msg;
 import com.tools20022.metamodel.MMMessageAssociationEnd;
 import com.tools20022.metamodel.MMMessageAttribute;
 import com.tools20022.metamodel.MMMessageComponent;
+import com.tools20022.metamodel.MMRegistrationStatus;
+import com.tools20022.repository.area.acmt.AccountDetailsConfirmationV06;
+import com.tools20022.repository.area.acmt.AccountDetailsConfirmationV07;
+import com.tools20022.repository.area.acmt.AccountOpeningInstructionV06;
+import com.tools20022.repository.area.acmt.AccountOpeningInstructionV07;
 import com.tools20022.repository.choice.CommunicationMethod3Choice;
 import com.tools20022.repository.choice.PartyIdentification70Choice;
 import com.tools20022.repository.datatype.Max140Text;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -124,10 +130,10 @@ public class DocumentToSend3 {
 			componentContext_lazy = () -> DocumentToSend3.mmObject();
 			isDerived = false;
 			xmlTag = "Tp";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Type";
 			definition = "Type of document.";
-			previousVersion_lazy = () -> com.tools20022.repository.msg.DocumentToSend2.mmType;
+			previousVersion_lazy = () -> DocumentToSend2.mmType;
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> Max140Text.mmObject();
@@ -172,10 +178,10 @@ public class DocumentToSend3 {
 			componentContext_lazy = () -> DocumentToSend3.mmObject();
 			isDerived = false;
 			xmlTag = "Rcpt";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Recipient";
 			definition = "Party that should receive the document.";
-			previousVersion_lazy = () -> com.tools20022.repository.msg.DocumentToSend2.mmRecipient;
+			previousVersion_lazy = () -> DocumentToSend2.mmRecipient;
 			maxOccurs = 1;
 			minOccurs = 1;
 			complexType_lazy = () -> PartyIdentification70Choice.mmObject();
@@ -219,10 +225,10 @@ public class DocumentToSend3 {
 			componentContext_lazy = () -> DocumentToSend3.mmObject();
 			isDerived = false;
 			xmlTag = "MtdOfTrnsmssn";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "MethodOfTransmission";
 			definition = "Communication method to be used.";
-			previousVersion_lazy = () -> com.tools20022.repository.msg.DocumentToSend2.mmMethodOfTransmission;
+			previousVersion_lazy = () -> DocumentToSend2.mmMethodOfTransmission;
 			maxOccurs = 1;
 			minOccurs = 1;
 			isComposite = true;
@@ -233,13 +239,11 @@ public class DocumentToSend3 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays
-						.asList(com.tools20022.repository.msg.DocumentToSend3.mmType, com.tools20022.repository.msg.DocumentToSend3.mmRecipient, com.tools20022.repository.msg.DocumentToSend3.mmMethodOfTransmission);
-				messageBuildingBlock_lazy = () -> Arrays.asList(com.tools20022.repository.area.acmt.AccountOpeningInstructionV06.mmServiceLevelAgreement,
-						com.tools20022.repository.area.acmt.AccountDetailsConfirmationV06.mmServiceLevelAgreement, com.tools20022.repository.area.acmt.AccountDetailsConfirmationV07.mmServiceLevelAgreement,
-						com.tools20022.repository.area.acmt.AccountOpeningInstructionV07.mmServiceLevelAgreement);
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				messageElement_lazy = () -> Arrays.asList(DocumentToSend3.mmType, DocumentToSend3.mmRecipient, DocumentToSend3.mmMethodOfTransmission);
+				messageBuildingBlock_lazy = () -> Arrays.asList(AccountOpeningInstructionV06.mmServiceLevelAgreement, AccountDetailsConfirmationV06.mmServiceLevelAgreement, AccountDetailsConfirmationV07.mmServiceLevelAgreement,
+						AccountOpeningInstructionV07.mmServiceLevelAgreement);
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "DocumentToSend3";
 				definition = "Type of document and the type of communication method to be used to notify a party.";
 				previousVersion_lazy = () -> DocumentToSend2.mmObject();

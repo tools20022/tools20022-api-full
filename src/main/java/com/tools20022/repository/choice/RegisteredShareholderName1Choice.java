@@ -19,6 +19,8 @@ package com.tools20022.repository.choice;
 
 import com.tools20022.metamodel.MMChoiceComponent;
 import com.tools20022.metamodel.MMMessageAssociationEnd;
+import com.tools20022.metamodel.MMRegistrationStatus;
+import com.tools20022.repository.GeneratedRepository;
 import com.tools20022.repository.msg.IndividualPerson29;
 import com.tools20022.repository.msg.Organisation23;
 import java.util.Arrays;
@@ -94,7 +96,7 @@ public class RegisteredShareholderName1Choice {
 			componentContext_lazy = () -> RegisteredShareholderName1Choice.mmObject();
 			isDerived = false;
 			xmlTag = "IndvPrsn";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "IndividualPerson";
 			definition = "Human entity, as distinguished from a corporate entity (which is sometimes referred to as an 'artificial person').";
 			maxOccurs = 1;
@@ -139,7 +141,7 @@ public class RegisteredShareholderName1Choice {
 			componentContext_lazy = () -> RegisteredShareholderName1Choice.mmObject();
 			isDerived = false;
 			xmlTag = "Org";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Organisation";
 			definition = "Organised structure that is set up for a particular purpose, for example, a business, government body, department, charity, or financial institution.";
 			maxOccurs = 1;
@@ -152,9 +154,9 @@ public class RegisteredShareholderName1Choice {
 	final static public MMChoiceComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMChoiceComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.choice.RegisteredShareholderName1Choice.mmIndividualPerson, com.tools20022.repository.choice.RegisteredShareholderName1Choice.mmOrganisation);
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				messageElement_lazy = () -> Arrays.asList(RegisteredShareholderName1Choice.mmIndividualPerson, RegisteredShareholderName1Choice.mmOrganisation);
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "RegisteredShareholderName1Choice";
 				definition = "Choice of individual or organisation name and address.";
 			}

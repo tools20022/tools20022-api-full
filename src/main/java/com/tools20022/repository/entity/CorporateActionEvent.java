@@ -17,14 +17,15 @@
 
 package com.tools20022.repository.entity;
 
-import com.tools20022.metamodel.MMBusinessAssociationEnd;
-import com.tools20022.metamodel.MMBusinessAttribute;
-import com.tools20022.metamodel.MMBusinessComponent;
+import com.tools20022.metamodel.*;
+import com.tools20022.repository.choice.*;
 import com.tools20022.repository.codeset.*;
 import com.tools20022.repository.datatype.ISODate;
 import com.tools20022.repository.datatype.ISODateTime;
 import com.tools20022.repository.datatype.Max350Text;
 import com.tools20022.repository.datatype.YesNoIndicator;
+import com.tools20022.repository.GeneratedRepository;
+import com.tools20022.repository.msg.*;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
@@ -40,160 +41,9 @@ import java.util.List;
  * <p>
  * <strong>Constant fields:</strong>
  * <ul>
- * <li>{@linkplain com.tools20022.metamodel.MMBusinessComponent#getElement
- * element} =
- * <ul>
- * <li>{@linkplain com.tools20022.repository.entity.CorporateActionEvent#mmType
- * CorporateActionEvent.mmType}</li>
  * <li>
- * {@linkplain com.tools20022.repository.entity.CorporateActionEvent#mmMandatoryVoluntaryEventType
- * CorporateActionEvent.mmMandatoryVoluntaryEventType}</li>
- * <li>
- * {@linkplain com.tools20022.repository.entity.CorporateActionEvent#mmUnderlyingSecurity
- * CorporateActionEvent.mmUnderlyingSecurity}</li>
- * <li>
- * {@linkplain com.tools20022.repository.entity.CorporateActionEvent#mmCorporateActionPrice
- * CorporateActionEvent.mmCorporateActionPrice}</li>
- * <li>
- * {@linkplain com.tools20022.repository.entity.CorporateActionEvent#mmExchangeRate
- * CorporateActionEvent.mmExchangeRate}</li>
- * <li>
- * {@linkplain com.tools20022.repository.entity.CorporateActionEvent#mmRegistrationDetails
- * CorporateActionEvent.mmRegistrationDetails}</li>
- * <li>
- * {@linkplain com.tools20022.repository.entity.CorporateActionEvent#mmBasketOrIndexInformation
- * CorporateActionEvent.mmBasketOrIndexInformation}</li>
- * <li>
- * {@linkplain com.tools20022.repository.entity.CorporateActionEvent#mmDeadline
- * CorporateActionEvent.mmDeadline}</li>
- * <li>
- * {@linkplain com.tools20022.repository.entity.CorporateActionEvent#mmAdditionalBusinessProcess
- * CorporateActionEvent.mmAdditionalBusinessProcess}</li>
- * <li>
- * {@linkplain com.tools20022.repository.entity.CorporateActionEvent#mmTradingDate
- * CorporateActionEvent.mmTradingDate}</li>
- * <li>
- * {@linkplain com.tools20022.repository.entity.CorporateActionEvent#mmCorporateActionCharge
- * CorporateActionEvent.mmCorporateActionCharge}</li>
- * <li>
- * {@linkplain com.tools20022.repository.entity.CorporateActionEvent#mmPariPassuDate
- * CorporateActionEvent.mmPariPassuDate}</li>
- * <li>
- * {@linkplain com.tools20022.repository.entity.CorporateActionEvent#mmInformationConditions
- * CorporateActionEvent.mmInformationConditions}</li>
- * <li>
- * {@linkplain com.tools20022.repository.entity.CorporateActionEvent#mmFractionalQuantity
- * CorporateActionEvent.mmFractionalQuantity}</li>
- * <li>
- * {@linkplain com.tools20022.repository.entity.CorporateActionEvent#mmEventProcessingType
- * CorporateActionEvent.mmEventProcessingType}</li>
- * <li>
- * {@linkplain com.tools20022.repository.entity.CorporateActionEvent#mmCorporateActionStatus
- * CorporateActionEvent.mmCorporateActionStatus}</li>
- * <li>
- * {@linkplain com.tools20022.repository.entity.CorporateActionEvent#mmAnnouncementDate
- * CorporateActionEvent.mmAnnouncementDate}</li>
- * <li>
- * {@linkplain com.tools20022.repository.entity.CorporateActionEvent#mmEffectiveDate
- * CorporateActionEvent.mmEffectiveDate}</li>
- * <li>
- * {@linkplain com.tools20022.repository.entity.CorporateActionEvent#mmFurtherDetailsAnnouncementDate
- * CorporateActionEvent.mmFurtherDetailsAnnouncementDate}</li>
- * <li>
- * {@linkplain com.tools20022.repository.entity.CorporateActionEvent#mmMarginFixingDate
- * CorporateActionEvent.mmMarginFixingDate}</li>
- * <li>
- * {@linkplain com.tools20022.repository.entity.CorporateActionEvent#mmResultPublicationDate
- * CorporateActionEvent.mmResultPublicationDate}</li>
- * <li>
- * {@linkplain com.tools20022.repository.entity.CorporateActionEvent#mmUnconditionalDate
- * CorporateActionEvent.mmUnconditionalDate}</li>
- * <li>
- * {@linkplain com.tools20022.repository.entity.CorporateActionEvent#mmWhollyUnconditionalDate
- * CorporateActionEvent.mmWhollyUnconditionalDate}</li>
- * <li>
- * {@linkplain com.tools20022.repository.entity.CorporateActionEvent#mmLapsedDate
- * CorporateActionEvent.mmLapsedDate}</li>
- * <li>
- * {@linkplain com.tools20022.repository.entity.CorporateActionEvent#mmBookClosurePeriod
- * CorporateActionEvent.mmBookClosurePeriod}</li>
- * <li>
- * {@linkplain com.tools20022.repository.entity.CorporateActionEvent#mmSecuritiesQuantity
- * CorporateActionEvent.mmSecuritiesQuantity}</li>
- * <li>
- * {@linkplain com.tools20022.repository.entity.CorporateActionEvent#mmRestrictionIndicator
- * CorporateActionEvent.mmRestrictionIndicator}</li>
- * <li>
- * {@linkplain com.tools20022.repository.entity.CorporateActionEvent#mmEventStage
- * CorporateActionEvent.mmEventStage}</li>
- * <li>
- * {@linkplain com.tools20022.repository.entity.CorporateActionEvent#mmDocumentationLocation
- * CorporateActionEvent.mmDocumentationLocation}</li>
- * <li>
- * {@linkplain com.tools20022.repository.entity.CorporateActionEvent#mmSecuritiesQuantitySought
- * CorporateActionEvent.mmSecuritiesQuantitySought}</li>
- * <li>
- * {@linkplain com.tools20022.repository.entity.CorporateActionEvent#mmPartialElectionIndicator
- * CorporateActionEvent.mmPartialElectionIndicator}</li>
- * <li>
- * {@linkplain com.tools20022.repository.entity.CorporateActionEvent#mmCorporateActionPartyRole
- * CorporateActionEvent.mmCorporateActionPartyRole}</li>
- * <li>
- * {@linkplain com.tools20022.repository.entity.CorporateActionEvent#mmMarketClaim
- * CorporateActionEvent.mmMarketClaim}</li>
- * <li>
- * {@linkplain com.tools20022.repository.entity.CorporateActionEvent#mmBiddingConditions
- * CorporateActionEvent.mmBiddingConditions}</li>
- * <li>
- * {@linkplain com.tools20022.repository.entity.CorporateActionEvent#mmRelatedClassAction
- * CorporateActionEvent.mmRelatedClassAction}</li>
- * <li>
- * {@linkplain com.tools20022.repository.entity.CorporateActionEvent#mmCorporateActionEventRegistration
- * CorporateActionEvent.mmCorporateActionEventRegistration}</li>
- * <li>
- * {@linkplain com.tools20022.repository.entity.CorporateActionEvent#mmSuspensionPeriod
- * CorporateActionEvent.mmSuspensionPeriod}</li>
- * <li>
- * {@linkplain com.tools20022.repository.entity.CorporateActionEvent#mmLottery
- * CorporateActionEvent.mmLottery}</li>
- * <li>
- * {@linkplain com.tools20022.repository.entity.CorporateActionEvent#mmMarginType
- * CorporateActionEvent.mmMarginType}</li>
- * <li>
- * {@linkplain com.tools20022.repository.entity.CorporateActionEvent#mmRelatedMeeting
- * CorporateActionEvent.mmRelatedMeeting}</li>
- * <li>
- * {@linkplain com.tools20022.repository.entity.CorporateActionEvent#mmServices
- * CorporateActionEvent.mmServices}</li>
- * <li>
- * {@linkplain com.tools20022.repository.entity.CorporateActionEvent#mmIssuance
- * CorporateActionEvent.mmIssuance}</li>
- * <li>
- * {@linkplain com.tools20022.repository.entity.CorporateActionEvent#mmSecuritiesModification
- * CorporateActionEvent.mmSecuritiesModification}</li>
- * <li>
- * {@linkplain com.tools20022.repository.entity.CorporateActionEvent#mmTradingPeriod
- * CorporateActionEvent.mmTradingPeriod}</li>
- * <li>
- * {@linkplain com.tools20022.repository.entity.CorporateActionEvent#mmTransactionTax
- * CorporateActionEvent.mmTransactionTax}</li>
- * <li>
- * {@linkplain com.tools20022.repository.entity.CorporateActionEvent#mmConsentType
- * CorporateActionEvent.mmConsentType}</li>
- * <li>
- * {@linkplain com.tools20022.repository.entity.CorporateActionEvent#mmProceedsDefinition
- * CorporateActionEvent.mmProceedsDefinition}</li>
- * </ul>
- * </li>
- * <li>{@linkplain com.tools20022.metamodel.MMBusinessComponent#getSubType
- * subType} =
- * <ul>
- * <li>{@linkplain com.tools20022.repository.entity.VoluntaryCorporateAction
- * VoluntaryCorporateAction}</li>
- * <li>{@linkplain com.tools20022.repository.entity.MandatoryCorporateAction
- * MandatoryCorporateAction}</li>
- * </ul>
- * </li>
+ * {@linkplain com.tools20022.metamodel.MMBusinessComponent#getDerivationComponent
+ * derivationComponent} = List of 519 elements</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMBusinessComponent#getAssociationDomain
  * associationDomain} =
@@ -575,9 +425,160 @@ import java.util.List;
  * SecuritiesOption63.mmRateDetails}</li>
  * </ul>
  * </li>
+ * <li>{@linkplain com.tools20022.metamodel.MMBusinessComponent#getSubType
+ * subType} =
+ * <ul>
+ * <li>{@linkplain com.tools20022.repository.entity.VoluntaryCorporateAction
+ * VoluntaryCorporateAction}</li>
+ * <li>{@linkplain com.tools20022.repository.entity.MandatoryCorporateAction
+ * MandatoryCorporateAction}</li>
+ * </ul>
+ * </li>
+ * <li>{@linkplain com.tools20022.metamodel.MMBusinessComponent#getElement
+ * element} =
+ * <ul>
+ * <li>{@linkplain com.tools20022.repository.entity.CorporateActionEvent#mmType
+ * CorporateActionEvent.mmType}</li>
  * <li>
- * {@linkplain com.tools20022.metamodel.MMBusinessComponent#getDerivationComponent
- * derivationComponent} = List of 519 elements</li>
+ * {@linkplain com.tools20022.repository.entity.CorporateActionEvent#mmMandatoryVoluntaryEventType
+ * CorporateActionEvent.mmMandatoryVoluntaryEventType}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.entity.CorporateActionEvent#mmUnderlyingSecurity
+ * CorporateActionEvent.mmUnderlyingSecurity}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.entity.CorporateActionEvent#mmCorporateActionPrice
+ * CorporateActionEvent.mmCorporateActionPrice}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.entity.CorporateActionEvent#mmExchangeRate
+ * CorporateActionEvent.mmExchangeRate}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.entity.CorporateActionEvent#mmRegistrationDetails
+ * CorporateActionEvent.mmRegistrationDetails}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.entity.CorporateActionEvent#mmBasketOrIndexInformation
+ * CorporateActionEvent.mmBasketOrIndexInformation}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.entity.CorporateActionEvent#mmDeadline
+ * CorporateActionEvent.mmDeadline}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.entity.CorporateActionEvent#mmAdditionalBusinessProcess
+ * CorporateActionEvent.mmAdditionalBusinessProcess}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.entity.CorporateActionEvent#mmTradingDate
+ * CorporateActionEvent.mmTradingDate}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.entity.CorporateActionEvent#mmCorporateActionCharge
+ * CorporateActionEvent.mmCorporateActionCharge}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.entity.CorporateActionEvent#mmPariPassuDate
+ * CorporateActionEvent.mmPariPassuDate}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.entity.CorporateActionEvent#mmInformationConditions
+ * CorporateActionEvent.mmInformationConditions}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.entity.CorporateActionEvent#mmFractionalQuantity
+ * CorporateActionEvent.mmFractionalQuantity}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.entity.CorporateActionEvent#mmEventProcessingType
+ * CorporateActionEvent.mmEventProcessingType}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.entity.CorporateActionEvent#mmCorporateActionStatus
+ * CorporateActionEvent.mmCorporateActionStatus}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.entity.CorporateActionEvent#mmAnnouncementDate
+ * CorporateActionEvent.mmAnnouncementDate}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.entity.CorporateActionEvent#mmEffectiveDate
+ * CorporateActionEvent.mmEffectiveDate}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.entity.CorporateActionEvent#mmFurtherDetailsAnnouncementDate
+ * CorporateActionEvent.mmFurtherDetailsAnnouncementDate}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.entity.CorporateActionEvent#mmMarginFixingDate
+ * CorporateActionEvent.mmMarginFixingDate}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.entity.CorporateActionEvent#mmResultPublicationDate
+ * CorporateActionEvent.mmResultPublicationDate}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.entity.CorporateActionEvent#mmUnconditionalDate
+ * CorporateActionEvent.mmUnconditionalDate}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.entity.CorporateActionEvent#mmWhollyUnconditionalDate
+ * CorporateActionEvent.mmWhollyUnconditionalDate}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.entity.CorporateActionEvent#mmLapsedDate
+ * CorporateActionEvent.mmLapsedDate}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.entity.CorporateActionEvent#mmBookClosurePeriod
+ * CorporateActionEvent.mmBookClosurePeriod}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.entity.CorporateActionEvent#mmSecuritiesQuantity
+ * CorporateActionEvent.mmSecuritiesQuantity}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.entity.CorporateActionEvent#mmRestrictionIndicator
+ * CorporateActionEvent.mmRestrictionIndicator}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.entity.CorporateActionEvent#mmEventStage
+ * CorporateActionEvent.mmEventStage}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.entity.CorporateActionEvent#mmDocumentationLocation
+ * CorporateActionEvent.mmDocumentationLocation}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.entity.CorporateActionEvent#mmSecuritiesQuantitySought
+ * CorporateActionEvent.mmSecuritiesQuantitySought}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.entity.CorporateActionEvent#mmPartialElectionIndicator
+ * CorporateActionEvent.mmPartialElectionIndicator}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.entity.CorporateActionEvent#mmCorporateActionPartyRole
+ * CorporateActionEvent.mmCorporateActionPartyRole}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.entity.CorporateActionEvent#mmMarketClaim
+ * CorporateActionEvent.mmMarketClaim}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.entity.CorporateActionEvent#mmBiddingConditions
+ * CorporateActionEvent.mmBiddingConditions}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.entity.CorporateActionEvent#mmRelatedClassAction
+ * CorporateActionEvent.mmRelatedClassAction}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.entity.CorporateActionEvent#mmCorporateActionEventRegistration
+ * CorporateActionEvent.mmCorporateActionEventRegistration}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.entity.CorporateActionEvent#mmSuspensionPeriod
+ * CorporateActionEvent.mmSuspensionPeriod}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.entity.CorporateActionEvent#mmLottery
+ * CorporateActionEvent.mmLottery}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.entity.CorporateActionEvent#mmMarginType
+ * CorporateActionEvent.mmMarginType}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.entity.CorporateActionEvent#mmRelatedMeeting
+ * CorporateActionEvent.mmRelatedMeeting}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.entity.CorporateActionEvent#mmServices
+ * CorporateActionEvent.mmServices}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.entity.CorporateActionEvent#mmIssuance
+ * CorporateActionEvent.mmIssuance}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.entity.CorporateActionEvent#mmSecuritiesModification
+ * CorporateActionEvent.mmSecuritiesModification}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.entity.CorporateActionEvent#mmTradingPeriod
+ * CorporateActionEvent.mmTradingPeriod}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.entity.CorporateActionEvent#mmTransactionTax
+ * CorporateActionEvent.mmTransactionTax}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.entity.CorporateActionEvent#mmConsentType
+ * CorporateActionEvent.mmConsentType}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.entity.CorporateActionEvent#mmProceedsDefinition
+ * CorporateActionEvent.mmProceedsDefinition}</li>
+ * </ul>
+ * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
@@ -1385,131 +1386,73 @@ public class CorporateActionEvent {
 	 */
 	public static final MMBusinessAttribute mmType = new MMBusinessAttribute() {
 		{
-			derivation_lazy = () -> Arrays.asList(com.tools20022.repository.choice.CorporateActionEventType3Choice.mmCode, com.tools20022.repository.choice.CorporateActionEventType3Choice.mmProprietary,
-					com.tools20022.repository.msg.CorporateActionGeneralInformation8.mmEventType, com.tools20022.repository.choice.CorporateActionEventType4Choice.mmCode,
-					com.tools20022.repository.choice.CorporateActionEventType4Choice.mmProprietary, com.tools20022.repository.msg.CorporateActionGeneralInformation20.mmEventType,
-					com.tools20022.repository.msg.CorporateActionGeneralInformation25.mmEventType, com.tools20022.repository.msg.CorporateActionGeneralInformation32.mmEventType,
-					com.tools20022.repository.choice.CorporateActionEventType7Choice.mmCode, com.tools20022.repository.choice.CorporateActionEventType7Choice.mmProprietary,
-					com.tools20022.repository.msg.CorporateActionGeneralInformation35.mmEventType, com.tools20022.repository.choice.CorporateActionEventType9Choice.mmCode,
-					com.tools20022.repository.choice.CorporateActionEventType9Choice.mmProprietary, com.tools20022.repository.msg.CorporateActionGeneralInformation43.mmEventType,
-					com.tools20022.repository.choice.CorporateActionEventType11Choice.mmCode, com.tools20022.repository.choice.CorporateActionEventType11Choice.mmProprietary,
-					com.tools20022.repository.choice.CorporateActionEventType14Choice.mmCode, com.tools20022.repository.choice.CorporateActionEventType14Choice.mmProprietary,
-					com.tools20022.repository.msg.CorporateActionGeneralInformation53.mmEventType, com.tools20022.repository.choice.CorporateActionEventType13Choice.mmCode,
-					com.tools20022.repository.choice.CorporateActionEventType13Choice.mmProprietary, com.tools20022.repository.msg.CorporateActionGeneralInformation56.mmEventType,
-					com.tools20022.repository.choice.CorporateActionEventType21Choice.mmCode, com.tools20022.repository.choice.CorporateActionEventType21Choice.mmProprietary,
-					com.tools20022.repository.msg.CorporateActionGeneralInformation57.mmEventType, com.tools20022.repository.msg.CorporateActionGeneralInformation9.mmEventType,
-					com.tools20022.repository.msg.CorporateActionGeneralInformation13.mmEventType, com.tools20022.repository.msg.CorporateActionGeneralInformation34.mmEventType,
-					com.tools20022.repository.msg.CorporateActionGeneralInformation42.mmEventType, com.tools20022.repository.msg.CorporateActionGeneralInformation52.mmEventType,
-					com.tools20022.repository.choice.CorporateActionEventType22Choice.mmCode, com.tools20022.repository.choice.CorporateActionEventType22Choice.mmProprietary,
-					com.tools20022.repository.msg.CorporateActionGeneralInformation58.mmEventType, com.tools20022.repository.msg.CorporateActionGeneralInformation6.mmEventType,
-					com.tools20022.repository.msg.CorporateActionGeneralInformation15.mmEventType, com.tools20022.repository.msg.CorporateActionGeneralInformation21.mmEventType,
-					com.tools20022.repository.msg.CorporateActionGeneralInformation28.mmEventType, com.tools20022.repository.msg.CorporateActionGeneralInformation36.mmEventType,
-					com.tools20022.repository.msg.CorporateActionGeneralInformation44.mmEventType, com.tools20022.repository.msg.CorporateActionGeneralInformation55.mmEventType,
-					com.tools20022.repository.msg.CorporateActionGeneralInformation61.mmEventType, com.tools20022.repository.msg.CorporateActionGeneralInformation7.mmEventType,
-					com.tools20022.repository.msg.CorporateActionGeneralInformation26.mmEventType, com.tools20022.repository.msg.CorporateActionGeneralInformation33.mmEventType,
-					com.tools20022.repository.msg.CorporateActionGeneralInformation27.mmEventType, com.tools20022.repository.msg.CorporateActionGeneralInformation41.mmEventType,
-					com.tools20022.repository.msg.CorporateActionGeneralInformation49.mmEventType, com.tools20022.repository.msg.CorporateActionGeneralInformation68.mmEventType, com.tools20022.repository.msg.EventInformation1.mmEventType,
-					com.tools20022.repository.msg.EventInformation2.mmEventType, com.tools20022.repository.msg.EventInformation3.mmEventType, com.tools20022.repository.msg.EventInformation4.mmEventType,
-					com.tools20022.repository.msg.EventInformation5.mmEventType, com.tools20022.repository.msg.EventInformation6.mmEventType, com.tools20022.repository.msg.CorporateActionGeneralInformation4.mmEventType,
-					com.tools20022.repository.msg.CorporateActionGeneralInformation16.mmEventType, com.tools20022.repository.choice.CorporateActionEventType5Choice.mmCode,
-					com.tools20022.repository.choice.CorporateActionEventType5Choice.mmProprietary, com.tools20022.repository.msg.CorporateActionGeneralInformation24.mmEventType,
-					com.tools20022.repository.choice.CorporateActionEventType6Choice.mmCode, com.tools20022.repository.choice.CorporateActionEventType6Choice.mmProprietary,
-					com.tools20022.repository.msg.CorporateActionGeneralInformation29.mmEventType, com.tools20022.repository.choice.CorporateActionEventType8Choice.mmCode,
-					com.tools20022.repository.choice.CorporateActionEventType8Choice.mmProprietary, com.tools20022.repository.msg.CorporateActionGeneralInformation39.mmEventType,
-					com.tools20022.repository.choice.CorporateActionEventType10Choice.mmCode, com.tools20022.repository.choice.CorporateActionEventType10Choice.mmProprietary,
-					com.tools20022.repository.msg.CorporateActionGeneralInformation47.mmEventType, com.tools20022.repository.choice.CorporateActionEventType12Choice.mmCode,
-					com.tools20022.repository.choice.CorporateActionEventType12Choice.mmProprietary, com.tools20022.repository.msg.CorporateActionGeneralInformation50.mmEventType,
-					com.tools20022.repository.choice.CorporateActionEventType27Choice.mmCode, com.tools20022.repository.choice.CorporateActionEventType27Choice.mmProprietary,
-					com.tools20022.repository.msg.CorporateActionGeneralInformation62.mmEventType, com.tools20022.repository.msg.CorporateActionGeneralInformation3.mmEventType,
-					com.tools20022.repository.msg.CorporateActionGeneralInformation17.mmEventType, com.tools20022.repository.msg.CorporateActionGeneralInformation23.mmEventType,
-					com.tools20022.repository.msg.CorporateActionGeneralInformation30.mmEventType, com.tools20022.repository.msg.CorporateActionGeneralInformation38.mmEventType,
-					com.tools20022.repository.msg.CorporateActionGeneralInformation46.mmEventType, com.tools20022.repository.msg.CorporateActionGeneralInformation54.mmEventType,
-					com.tools20022.repository.choice.CorporateActionEventType28Choice.mmCode, com.tools20022.repository.choice.CorporateActionEventType28Choice.mmProprietary,
-					com.tools20022.repository.msg.CorporateActionGeneralInformation64.mmEventType, com.tools20022.repository.msg.CorporateActionGeneralInformation63.mmEventType,
-					com.tools20022.repository.msg.CorporateActionGeneralInformation11.mmEventType, com.tools20022.repository.msg.CorporateActionGeneralInformation19.mmEventType,
-					com.tools20022.repository.msg.CorporateActionGeneralInformation22.mmEventType, com.tools20022.repository.msg.CorporateActionGeneralInformation31.mmEventType,
-					com.tools20022.repository.msg.CorporateActionGeneralInformation37.mmEventType, com.tools20022.repository.msg.CorporateActionGeneralInformation45.mmEventType,
-					com.tools20022.repository.msg.CorporateActionGeneralInformation51.mmEventType, com.tools20022.repository.msg.CorporateActionGeneralInformation67.mmEventType,
-					com.tools20022.repository.choice.CorporateActionEventType16Choice.mmCode, com.tools20022.repository.choice.CorporateActionEventType16Choice.mmProprietary,
-					com.tools20022.repository.choice.CorporateActionEventType17Choice.mmCode, com.tools20022.repository.choice.CorporateActionEventType17Choice.mmProprietary,
-					com.tools20022.repository.msg.IntraPositionMovementDetails1.mmCorporateActionEventType, com.tools20022.repository.msg.IntraPositionMovementDetails2.mmCorporateActionEventType,
-					com.tools20022.repository.msg.IntraPositionMovementDetails5.mmCorporateActionEventType, com.tools20022.repository.msg.IntraPositionMovementDetails6.mmCorporateActionEventType,
-					com.tools20022.repository.msg.IntraPositionMovementDetails7.mmCorporateActionEventType, com.tools20022.repository.msg.IntraPositionMovementDetails8.mmCorporateActionEventType,
-					com.tools20022.repository.msg.IntraPositionMovementDetails9.mmCorporateActionEventType, com.tools20022.repository.msg.IntraPositionMovementDetails10.mmCorporateActionEventType,
-					com.tools20022.repository.choice.CorporateActionEventType1Choice.mmCode, com.tools20022.repository.choice.CorporateActionEventType1Choice.mmProprietary,
-					com.tools20022.repository.choice.SettlementOrCorporateActionEvent2Choice.mmCorporateActionEventType, com.tools20022.repository.choice.CorporateActionEventType2Choice.mmCode,
-					com.tools20022.repository.choice.CorporateActionEventType2Choice.mmProprietary, com.tools20022.repository.choice.SettlementOrCorporateActionEvent3Choice.mmCorporateActionEventType,
-					com.tools20022.repository.choice.SettlementOrCorporateActionEvent6Choice.mmCorporateActionEventType, com.tools20022.repository.choice.SettlementOrCorporateActionEvent8Choice.mmCorporateActionEventType,
-					com.tools20022.repository.choice.CorporateActionEventType15Choice.mmCode, com.tools20022.repository.choice.CorporateActionEventType15Choice.mmProprietary,
-					com.tools20022.repository.choice.SettlementOrCorporateActionEvent10Choice.mmCorporateActionEventType, com.tools20022.repository.choice.CorporateActionEventType19Choice.mmCode,
-					com.tools20022.repository.choice.CorporateActionEventType19Choice.mmProprietary, com.tools20022.repository.choice.SettlementOrCorporateActionEvent11Choice.mmCorporateActionEventType,
-					com.tools20022.repository.choice.SettlementOrCorporateActionEvent1Choice.mmCorporateActionEventType, com.tools20022.repository.choice.SettlementOrCorporateActionEvent4Choice.mmCorporateActionEventType,
-					com.tools20022.repository.choice.SettlementOrCorporateActionEvent5Choice.mmCorporateActionEventType, com.tools20022.repository.choice.SettlementOrCorporateActionEvent7Choice.mmCorporateActionEventType,
-					com.tools20022.repository.choice.SettlementOrCorporateActionEvent9Choice.mmCorporateActionEventType, com.tools20022.repository.choice.SettlementOrCorporateActionEvent12Choice.mmCorporateActionEventType,
-					com.tools20022.repository.msg.CorporateAction9.mmEventType, com.tools20022.repository.choice.CorporateActionEventType1CodeChoice.mmStructured,
-					com.tools20022.repository.choice.CorporateActionEventType1CodeChoice.mmUnstructured, com.tools20022.repository.msg.InvestmentFundTransaction2.mmCorporateActionEventType,
-					com.tools20022.repository.msg.InvestmentFundTransaction3.mmCorporateActionEventType, com.tools20022.repository.msg.InvestmentFundTransaction3.mmExtendedCorporateActionEventType,
-					com.tools20022.repository.choice.CorporateActionEventType2FormatChoice.mmCode, com.tools20022.repository.choice.CorporateActionEventType2FormatChoice.mmProprietary,
-					com.tools20022.repository.msg.CorporateActionInformation2.mmEventType, com.tools20022.repository.choice.CorporateActionFrequencyType1FormatChoice.mmCode,
-					com.tools20022.repository.choice.CorporateActionFrequencyType1FormatChoice.mmProprietary, com.tools20022.repository.msg.CorporateActionInformation1.mmEventType,
-					com.tools20022.repository.msg.CorporateActionStandingInstructionGeneralInformation1.mmEventType, com.tools20022.repository.msg.CorporateActionGeneralInformation14.mmEventType,
-					com.tools20022.repository.msg.IntraPositionMovementDetails3.mmCorporateActionEventType, com.tools20022.repository.msg.IntraPositionMovementDetails4.mmCorporateActionEventType,
-					com.tools20022.repository.msg.CorporateActionGeneralInformation12.mmEventType, com.tools20022.repository.msg.CorporateActionGeneralInformation5.mmEventType,
-					com.tools20022.repository.msg.CorporateActionGeneralInformation71.mmEventType, com.tools20022.repository.msg.CorporateActionGeneralInformation69.mmEventType,
-					com.tools20022.repository.msg.CorporateActionGeneralInformation70.mmEventType, com.tools20022.repository.msg.CorporateActionGeneralInformation78.mmEventType,
-					com.tools20022.repository.msg.CorporateActionGeneralInformation77.mmEventType, com.tools20022.repository.msg.CorporateActionGeneralInformation76.mmEventType,
-					com.tools20022.repository.choice.TransactionType1Choice.mmCorporateActionType, com.tools20022.repository.choice.CorporateAction1Choice.mmType, com.tools20022.repository.choice.CorporateAction1Choice.mmProprietary,
-					com.tools20022.repository.msg.CorporateActionGeneralInformation79.mmEventType, com.tools20022.repository.msg.CorporateActionGeneralInformation83.mmEventType,
-					com.tools20022.repository.msg.CorporateActionGeneralInformation82.mmEventType, com.tools20022.repository.choice.SettlementOrCorporateActionEvent14Choice.mmCorporateActionEventType,
-					com.tools20022.repository.choice.CorporateActionEventType30Choice.mmCode, com.tools20022.repository.choice.CorporateActionEventType30Choice.mmProprietary,
-					com.tools20022.repository.choice.CorporateActionEventType29Choice.mmCode, com.tools20022.repository.choice.CorporateActionEventType29Choice.mmProprietary,
-					com.tools20022.repository.msg.IntraPositionMovementDetails11.mmCorporateActionEventType, com.tools20022.repository.choice.SettlementOrCorporateActionEvent13Choice.mmCorporateActionEventType,
-					com.tools20022.repository.msg.CorporateActionGeneralInformation89.mmEventType, com.tools20022.repository.msg.CorporateActionGeneralInformation88.mmEventType,
-					com.tools20022.repository.msg.CorporateActionGeneralInformation86.mmEventType, com.tools20022.repository.msg.CorporateActionGeneralInformation91.mmEventType,
-					com.tools20022.repository.msg.CorporateActionGeneralInformation87.mmEventType, com.tools20022.repository.msg.CorporateActionGeneralInformation84.mmEventType,
-					com.tools20022.repository.msg.CorporateActionGeneralInformation85.mmEventType, com.tools20022.repository.msg.CorporateActionGeneralInformation90.mmEventType,
-					com.tools20022.repository.choice.CorporateActionEventType33Choice.mmCode, com.tools20022.repository.choice.CorporateActionEventType33Choice.mmProprietary,
-					com.tools20022.repository.choice.CorporateActionEventType32Choice.mmCode, com.tools20022.repository.choice.CorporateActionEventType32Choice.mmProprietary,
-					com.tools20022.repository.choice.CorporateActionEventType34Choice.mmCode, com.tools20022.repository.choice.CorporateActionEventType34Choice.mmProprietary,
-					com.tools20022.repository.choice.CorporateActionEventType31Choice.mmCode, com.tools20022.repository.choice.CorporateActionEventType31Choice.mmProprietary, com.tools20022.repository.msg.EventInformation7.mmEventType,
-					com.tools20022.repository.msg.CorporateActionGeneralInformation93.mmEventType, com.tools20022.repository.msg.CorporateActionGeneralInformation98.mmEventType,
-					com.tools20022.repository.msg.CorporateActionGeneralInformation100.mmEventType, com.tools20022.repository.msg.CorporateActionGeneralInformation97.mmEventType,
-					com.tools20022.repository.msg.CorporateActionGeneralInformation99.mmEventType, com.tools20022.repository.msg.CorporateActionGeneralInformation94.mmEventType,
-					com.tools20022.repository.msg.CorporateActionGeneralInformation103.mmEventType, com.tools20022.repository.choice.CorporateActionEventType42Choice.mmCode,
-					com.tools20022.repository.choice.CorporateActionEventType42Choice.mmProprietary, com.tools20022.repository.choice.CorporateActionEventType35Choice.mmCode,
-					com.tools20022.repository.choice.CorporateActionEventType35Choice.mmProprietary, com.tools20022.repository.choice.CorporateActionEventType41Choice.mmCode,
-					com.tools20022.repository.choice.CorporateActionEventType41Choice.mmProprietary, com.tools20022.repository.msg.EventInformation8.mmEventType, com.tools20022.repository.choice.CorporateActionEventType36Choice.mmCode,
-					com.tools20022.repository.choice.CorporateActionEventType36Choice.mmProprietary, com.tools20022.repository.choice.CorporateActionEventType46Choice.mmCode,
-					com.tools20022.repository.choice.CorporateActionEventType46Choice.mmProprietary, com.tools20022.repository.choice.SettlementOrCorporateActionEvent16Choice.mmCorporateActionEventType,
-					com.tools20022.repository.choice.SettlementOrCorporateActionEvent15Choice.mmCorporateActionEventType, com.tools20022.repository.choice.CorporateActionEventType48Choice.mmCode,
-					com.tools20022.repository.choice.CorporateActionEventType48Choice.mmProprietary, com.tools20022.repository.msg.IntraPositionMovementDetails12.mmCorporateActionEventType,
-					com.tools20022.repository.msg.CorporateActionGeneralInformation104.mmEventType, com.tools20022.repository.choice.CorporateActionEventType50Choice.mmCode,
-					com.tools20022.repository.choice.CorporateActionEventType50Choice.mmProprietary, com.tools20022.repository.msg.CorporateActionGeneralInformation109.mmEventType,
-					com.tools20022.repository.msg.CorporateActionGeneralInformation111.mmEventType, com.tools20022.repository.msg.CorporateActionGeneralInformation112.mmEventType,
-					com.tools20022.repository.msg.CorporateActionGeneralInformation110.mmEventType, com.tools20022.repository.msg.CorporateActionGeneralInformation105.mmEventType,
-					com.tools20022.repository.msg.CorporateActionGeneralInformation107.mmEventType, com.tools20022.repository.msg.CorporateActionGeneralInformation106.mmEventType,
-					com.tools20022.repository.msg.CorporateActionGeneralInformation108.mmEventType, com.tools20022.repository.choice.CorporateActionEventType51Choice.mmCode,
-					com.tools20022.repository.choice.CorporateActionEventType51Choice.mmProprietary, com.tools20022.repository.choice.CorporateActionEventType52Choice.mmCode,
-					com.tools20022.repository.choice.CorporateActionEventType52Choice.mmProprietary, com.tools20022.repository.choice.CorporateActionEventType54Choice.mmCode,
-					com.tools20022.repository.choice.CorporateActionEventType54Choice.mmProprietary, com.tools20022.repository.msg.EventInformation9.mmEventType, com.tools20022.repository.choice.CorporateActionEventType53Choice.mmCode,
-					com.tools20022.repository.choice.CorporateActionEventType53Choice.mmProprietary, com.tools20022.repository.choice.SettlementOrCorporateActionEvent19Choice.mmCorporateActionEventType,
-					com.tools20022.repository.choice.SettlementOrCorporateActionEvent17Choice.mmCorporateActionEventType, com.tools20022.repository.msg.IntraPositionMovementDetails13.mmCorporateActionEventType,
-					com.tools20022.repository.choice.CorporateActionEventType56Choice.mmCode, com.tools20022.repository.choice.CorporateActionEventType56Choice.mmProprietary,
-					com.tools20022.repository.msg.CorporateActionGeneralInformation114.mmEventType, com.tools20022.repository.msg.CorporateActionGeneralInformation120.mmEventType,
-					com.tools20022.repository.msg.CorporateActionGeneralInformation115.mmEventType, com.tools20022.repository.msg.CorporateActionGeneralInformation118.mmEventType,
-					com.tools20022.repository.msg.CorporateActionGeneralInformation121.mmEventType, com.tools20022.repository.msg.CorporateActionGeneralInformation123.mmEventType,
-					com.tools20022.repository.msg.CorporateActionGeneralInformation117.mmEventType, com.tools20022.repository.msg.CorporateActionGeneralInformation113.mmEventType,
-					com.tools20022.repository.choice.CorporateActionEventType62Choice.mmCode, com.tools20022.repository.choice.CorporateActionEventType62Choice.mmProprietary,
-					com.tools20022.repository.choice.CorporateActionEventType61Choice.mmCode, com.tools20022.repository.choice.CorporateActionEventType61Choice.mmProprietary, com.tools20022.repository.msg.EventInformation10.mmEventType,
-					com.tools20022.repository.msg.IntraPositionMovementDetails14.mmCorporateActionEventType, com.tools20022.repository.choice.SettlementOrCorporateActionEvent20Choice.mmCorporateActionEventType,
-					com.tools20022.repository.choice.CorporateActionEventType71Choice.mmCode, com.tools20022.repository.choice.CorporateActionEventType71Choice.mmProprietary,
-					com.tools20022.repository.choice.CorporateActionEventType69Choice.mmCode, com.tools20022.repository.choice.CorporateActionEventType69Choice.mmProprietary,
-					com.tools20022.repository.choice.SettlementOrCorporateActionEvent21Choice.mmCorporateActionEventType, com.tools20022.repository.choice.CorporateActionEventType57Choice.mmCode,
-					com.tools20022.repository.choice.CorporateActionEventType57Choice.mmProprietary, com.tools20022.repository.choice.CorporateActionEventType58Choice.mmCode,
-					com.tools20022.repository.choice.CorporateActionEventType58Choice.mmProprietary);
+			derivation_lazy = () -> Arrays.asList(CorporateActionEventType3Choice.mmCode, CorporateActionEventType3Choice.mmProprietary, CorporateActionGeneralInformation8.mmEventType, CorporateActionEventType4Choice.mmCode,
+					CorporateActionEventType4Choice.mmProprietary, CorporateActionGeneralInformation20.mmEventType, CorporateActionGeneralInformation25.mmEventType, CorporateActionGeneralInformation32.mmEventType,
+					CorporateActionEventType7Choice.mmCode, CorporateActionEventType7Choice.mmProprietary, CorporateActionGeneralInformation35.mmEventType, CorporateActionEventType9Choice.mmCode,
+					CorporateActionEventType9Choice.mmProprietary, CorporateActionGeneralInformation43.mmEventType, CorporateActionEventType11Choice.mmCode, CorporateActionEventType11Choice.mmProprietary,
+					CorporateActionEventType14Choice.mmCode, CorporateActionEventType14Choice.mmProprietary, CorporateActionGeneralInformation53.mmEventType, CorporateActionEventType13Choice.mmCode,
+					CorporateActionEventType13Choice.mmProprietary, CorporateActionGeneralInformation56.mmEventType, CorporateActionEventType21Choice.mmCode, CorporateActionEventType21Choice.mmProprietary,
+					CorporateActionGeneralInformation57.mmEventType, CorporateActionGeneralInformation9.mmEventType, CorporateActionGeneralInformation13.mmEventType, CorporateActionGeneralInformation34.mmEventType,
+					CorporateActionGeneralInformation42.mmEventType, CorporateActionGeneralInformation52.mmEventType, CorporateActionEventType22Choice.mmCode, CorporateActionEventType22Choice.mmProprietary,
+					CorporateActionGeneralInformation58.mmEventType, CorporateActionGeneralInformation6.mmEventType, CorporateActionGeneralInformation15.mmEventType, CorporateActionGeneralInformation21.mmEventType,
+					CorporateActionGeneralInformation28.mmEventType, CorporateActionGeneralInformation36.mmEventType, CorporateActionGeneralInformation44.mmEventType, CorporateActionGeneralInformation55.mmEventType,
+					CorporateActionGeneralInformation61.mmEventType, CorporateActionGeneralInformation7.mmEventType, CorporateActionGeneralInformation26.mmEventType, CorporateActionGeneralInformation33.mmEventType,
+					CorporateActionGeneralInformation27.mmEventType, CorporateActionGeneralInformation41.mmEventType, CorporateActionGeneralInformation49.mmEventType, CorporateActionGeneralInformation68.mmEventType,
+					EventInformation1.mmEventType, EventInformation2.mmEventType, EventInformation3.mmEventType, EventInformation4.mmEventType, EventInformation5.mmEventType, EventInformation6.mmEventType,
+					CorporateActionGeneralInformation4.mmEventType, CorporateActionGeneralInformation16.mmEventType, CorporateActionEventType5Choice.mmCode, CorporateActionEventType5Choice.mmProprietary,
+					CorporateActionGeneralInformation24.mmEventType, CorporateActionEventType6Choice.mmCode, CorporateActionEventType6Choice.mmProprietary, CorporateActionGeneralInformation29.mmEventType,
+					CorporateActionEventType8Choice.mmCode, CorporateActionEventType8Choice.mmProprietary, CorporateActionGeneralInformation39.mmEventType, CorporateActionEventType10Choice.mmCode,
+					CorporateActionEventType10Choice.mmProprietary, CorporateActionGeneralInformation47.mmEventType, CorporateActionEventType12Choice.mmCode, CorporateActionEventType12Choice.mmProprietary,
+					CorporateActionGeneralInformation50.mmEventType, CorporateActionEventType27Choice.mmCode, CorporateActionEventType27Choice.mmProprietary, CorporateActionGeneralInformation62.mmEventType,
+					CorporateActionGeneralInformation3.mmEventType, CorporateActionGeneralInformation17.mmEventType, CorporateActionGeneralInformation23.mmEventType, CorporateActionGeneralInformation30.mmEventType,
+					CorporateActionGeneralInformation38.mmEventType, CorporateActionGeneralInformation46.mmEventType, CorporateActionGeneralInformation54.mmEventType, CorporateActionEventType28Choice.mmCode,
+					CorporateActionEventType28Choice.mmProprietary, CorporateActionGeneralInformation64.mmEventType, CorporateActionGeneralInformation63.mmEventType, CorporateActionGeneralInformation11.mmEventType,
+					CorporateActionGeneralInformation19.mmEventType, CorporateActionGeneralInformation22.mmEventType, CorporateActionGeneralInformation31.mmEventType, CorporateActionGeneralInformation37.mmEventType,
+					CorporateActionGeneralInformation45.mmEventType, CorporateActionGeneralInformation51.mmEventType, CorporateActionGeneralInformation67.mmEventType, CorporateActionEventType16Choice.mmCode,
+					CorporateActionEventType16Choice.mmProprietary, CorporateActionEventType17Choice.mmCode, CorporateActionEventType17Choice.mmProprietary, IntraPositionMovementDetails1.mmCorporateActionEventType,
+					IntraPositionMovementDetails2.mmCorporateActionEventType, IntraPositionMovementDetails5.mmCorporateActionEventType, IntraPositionMovementDetails6.mmCorporateActionEventType,
+					IntraPositionMovementDetails7.mmCorporateActionEventType, IntraPositionMovementDetails8.mmCorporateActionEventType, IntraPositionMovementDetails9.mmCorporateActionEventType,
+					IntraPositionMovementDetails10.mmCorporateActionEventType, CorporateActionEventType1Choice.mmCode, CorporateActionEventType1Choice.mmProprietary, SettlementOrCorporateActionEvent2Choice.mmCorporateActionEventType,
+					CorporateActionEventType2Choice.mmCode, CorporateActionEventType2Choice.mmProprietary, SettlementOrCorporateActionEvent3Choice.mmCorporateActionEventType,
+					SettlementOrCorporateActionEvent6Choice.mmCorporateActionEventType, SettlementOrCorporateActionEvent8Choice.mmCorporateActionEventType, CorporateActionEventType15Choice.mmCode,
+					CorporateActionEventType15Choice.mmProprietary, SettlementOrCorporateActionEvent10Choice.mmCorporateActionEventType, CorporateActionEventType19Choice.mmCode, CorporateActionEventType19Choice.mmProprietary,
+					SettlementOrCorporateActionEvent11Choice.mmCorporateActionEventType, SettlementOrCorporateActionEvent1Choice.mmCorporateActionEventType, SettlementOrCorporateActionEvent4Choice.mmCorporateActionEventType,
+					SettlementOrCorporateActionEvent5Choice.mmCorporateActionEventType, SettlementOrCorporateActionEvent7Choice.mmCorporateActionEventType, SettlementOrCorporateActionEvent9Choice.mmCorporateActionEventType,
+					SettlementOrCorporateActionEvent12Choice.mmCorporateActionEventType, CorporateAction9.mmEventType, CorporateActionEventType1CodeChoice.mmStructured, CorporateActionEventType1CodeChoice.mmUnstructured,
+					InvestmentFundTransaction2.mmCorporateActionEventType, InvestmentFundTransaction3.mmCorporateActionEventType, InvestmentFundTransaction3.mmExtendedCorporateActionEventType, CorporateActionEventType2FormatChoice.mmCode,
+					CorporateActionEventType2FormatChoice.mmProprietary, CorporateActionInformation2.mmEventType, CorporateActionFrequencyType1FormatChoice.mmCode, CorporateActionFrequencyType1FormatChoice.mmProprietary,
+					CorporateActionInformation1.mmEventType, CorporateActionStandingInstructionGeneralInformation1.mmEventType, CorporateActionGeneralInformation14.mmEventType, IntraPositionMovementDetails3.mmCorporateActionEventType,
+					IntraPositionMovementDetails4.mmCorporateActionEventType, CorporateActionGeneralInformation12.mmEventType, CorporateActionGeneralInformation5.mmEventType, CorporateActionGeneralInformation71.mmEventType,
+					CorporateActionGeneralInformation69.mmEventType, CorporateActionGeneralInformation70.mmEventType, CorporateActionGeneralInformation78.mmEventType, CorporateActionGeneralInformation77.mmEventType,
+					CorporateActionGeneralInformation76.mmEventType, TransactionType1Choice.mmCorporateActionType, CorporateAction1Choice.mmType, CorporateAction1Choice.mmProprietary, CorporateActionGeneralInformation79.mmEventType,
+					CorporateActionGeneralInformation83.mmEventType, CorporateActionGeneralInformation82.mmEventType, SettlementOrCorporateActionEvent14Choice.mmCorporateActionEventType, CorporateActionEventType30Choice.mmCode,
+					CorporateActionEventType30Choice.mmProprietary, CorporateActionEventType29Choice.mmCode, CorporateActionEventType29Choice.mmProprietary, IntraPositionMovementDetails11.mmCorporateActionEventType,
+					SettlementOrCorporateActionEvent13Choice.mmCorporateActionEventType, CorporateActionGeneralInformation89.mmEventType, CorporateActionGeneralInformation88.mmEventType, CorporateActionGeneralInformation86.mmEventType,
+					CorporateActionGeneralInformation91.mmEventType, CorporateActionGeneralInformation87.mmEventType, CorporateActionGeneralInformation84.mmEventType, CorporateActionGeneralInformation85.mmEventType,
+					CorporateActionGeneralInformation90.mmEventType, CorporateActionEventType33Choice.mmCode, CorporateActionEventType33Choice.mmProprietary, CorporateActionEventType32Choice.mmCode,
+					CorporateActionEventType32Choice.mmProprietary, CorporateActionEventType34Choice.mmCode, CorporateActionEventType34Choice.mmProprietary, CorporateActionEventType31Choice.mmCode,
+					CorporateActionEventType31Choice.mmProprietary, EventInformation7.mmEventType, CorporateActionGeneralInformation93.mmEventType, CorporateActionGeneralInformation98.mmEventType,
+					CorporateActionGeneralInformation100.mmEventType, CorporateActionGeneralInformation97.mmEventType, CorporateActionGeneralInformation99.mmEventType, CorporateActionGeneralInformation94.mmEventType,
+					CorporateActionGeneralInformation103.mmEventType, CorporateActionEventType42Choice.mmCode, CorporateActionEventType42Choice.mmProprietary, CorporateActionEventType35Choice.mmCode,
+					CorporateActionEventType35Choice.mmProprietary, CorporateActionEventType41Choice.mmCode, CorporateActionEventType41Choice.mmProprietary, EventInformation8.mmEventType, CorporateActionEventType36Choice.mmCode,
+					CorporateActionEventType36Choice.mmProprietary, CorporateActionEventType46Choice.mmCode, CorporateActionEventType46Choice.mmProprietary, SettlementOrCorporateActionEvent16Choice.mmCorporateActionEventType,
+					SettlementOrCorporateActionEvent15Choice.mmCorporateActionEventType, CorporateActionEventType48Choice.mmCode, CorporateActionEventType48Choice.mmProprietary, IntraPositionMovementDetails12.mmCorporateActionEventType,
+					CorporateActionGeneralInformation104.mmEventType, CorporateActionEventType50Choice.mmCode, CorporateActionEventType50Choice.mmProprietary, CorporateActionGeneralInformation109.mmEventType,
+					CorporateActionGeneralInformation111.mmEventType, CorporateActionGeneralInformation112.mmEventType, CorporateActionGeneralInformation110.mmEventType, CorporateActionGeneralInformation105.mmEventType,
+					CorporateActionGeneralInformation107.mmEventType, CorporateActionGeneralInformation106.mmEventType, CorporateActionGeneralInformation108.mmEventType, CorporateActionEventType51Choice.mmCode,
+					CorporateActionEventType51Choice.mmProprietary, CorporateActionEventType52Choice.mmCode, CorporateActionEventType52Choice.mmProprietary, CorporateActionEventType54Choice.mmCode,
+					CorporateActionEventType54Choice.mmProprietary, EventInformation9.mmEventType, CorporateActionEventType53Choice.mmCode, CorporateActionEventType53Choice.mmProprietary,
+					SettlementOrCorporateActionEvent19Choice.mmCorporateActionEventType, SettlementOrCorporateActionEvent17Choice.mmCorporateActionEventType, IntraPositionMovementDetails13.mmCorporateActionEventType,
+					CorporateActionEventType56Choice.mmCode, CorporateActionEventType56Choice.mmProprietary, CorporateActionGeneralInformation114.mmEventType, CorporateActionGeneralInformation120.mmEventType,
+					CorporateActionGeneralInformation115.mmEventType, CorporateActionGeneralInformation118.mmEventType, CorporateActionGeneralInformation121.mmEventType, CorporateActionGeneralInformation123.mmEventType,
+					CorporateActionGeneralInformation117.mmEventType, CorporateActionGeneralInformation113.mmEventType, CorporateActionEventType62Choice.mmCode, CorporateActionEventType62Choice.mmProprietary,
+					CorporateActionEventType61Choice.mmCode, CorporateActionEventType61Choice.mmProprietary, EventInformation10.mmEventType, IntraPositionMovementDetails14.mmCorporateActionEventType,
+					SettlementOrCorporateActionEvent20Choice.mmCorporateActionEventType, CorporateActionEventType71Choice.mmCode, CorporateActionEventType71Choice.mmProprietary, CorporateActionEventType69Choice.mmCode,
+					CorporateActionEventType69Choice.mmProprietary, SettlementOrCorporateActionEvent21Choice.mmCorporateActionEventType, CorporateActionEventType57Choice.mmCode, CorporateActionEventType57Choice.mmProprietary,
+					CorporateActionEventType58Choice.mmCode, CorporateActionEventType58Choice.mmProprietary);
 			elementContext_lazy = () -> CorporateActionEvent.mmObject();
 			isDerived = false;
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "Type";
 			definition = "Type of corporate action event.";
 			maxOccurs = 1;
@@ -1761,44 +1704,32 @@ public class CorporateActionEvent {
 	 */
 	public static final MMBusinessAttribute mmMandatoryVoluntaryEventType = new MMBusinessAttribute() {
 		{
-			derivation_lazy = () -> Arrays.asList(com.tools20022.repository.choice.CorporateActionMandatoryVoluntary1Choice.mmCode, com.tools20022.repository.choice.CorporateActionMandatoryVoluntary1Choice.mmProprietary,
-					com.tools20022.repository.msg.CorporateActionGeneralInformation8.mmMandatoryVoluntaryEventType, com.tools20022.repository.choice.CorporateActionMandatoryVoluntary2Choice.mmCode,
-					com.tools20022.repository.choice.CorporateActionMandatoryVoluntary2Choice.mmProprietary, com.tools20022.repository.msg.CorporateActionGeneralInformation20.mmMandatoryVoluntaryEventType,
-					com.tools20022.repository.msg.CorporateActionGeneralInformation25.mmMandatoryVoluntaryEventType, com.tools20022.repository.msg.CorporateActionGeneralInformation32.mmMandatoryVoluntaryEventType,
-					com.tools20022.repository.msg.CorporateActionGeneralInformation35.mmMandatoryVoluntaryEventType, com.tools20022.repository.msg.CorporateActionGeneralInformation43.mmMandatoryVoluntaryEventType,
-					com.tools20022.repository.msg.CorporateActionGeneralInformation53.mmMandatoryVoluntaryEventType, com.tools20022.repository.msg.CorporateActionGeneralInformation56.mmMandatoryVoluntaryEventType,
-					com.tools20022.repository.msg.CorporateActionGeneralInformation57.mmMandatoryVoluntaryEventType, com.tools20022.repository.msg.EventInformation1.mmMandatoryVoluntaryEventType,
-					com.tools20022.repository.msg.EventInformation2.mmMandatoryVoluntaryEventType, com.tools20022.repository.msg.EventInformation3.mmMandatoryVoluntaryEventType,
-					com.tools20022.repository.msg.EventInformation4.mmMandatoryVoluntaryEventType, com.tools20022.repository.msg.EventInformation5.mmMandatoryVoluntaryEventType,
-					com.tools20022.repository.msg.EventInformation6.mmMandatoryVoluntaryEventType, com.tools20022.repository.msg.CorporateActionGeneralInformation3.mmMandatoryVoluntaryEventType,
-					com.tools20022.repository.msg.CorporateActionGeneralInformation17.mmMandatoryVoluntaryEventType, com.tools20022.repository.msg.CorporateActionGeneralInformation23.mmMandatoryVoluntaryEventType,
-					com.tools20022.repository.msg.CorporateActionGeneralInformation30.mmMandatoryVoluntaryEventType, com.tools20022.repository.msg.CorporateActionGeneralInformation38.mmMandatoryVoluntaryEventType,
-					com.tools20022.repository.msg.CorporateActionGeneralInformation46.mmMandatoryVoluntaryEventType, com.tools20022.repository.msg.CorporateActionGeneralInformation54.mmMandatoryVoluntaryEventType,
-					com.tools20022.repository.msg.CorporateActionGeneralInformation64.mmMandatoryVoluntaryEventType, com.tools20022.repository.msg.CorporateActionGeneralInformation63.mmMandatoryVoluntaryEventType,
-					com.tools20022.repository.msg.CorporateActionGeneralInformation11.mmMandatoryVoluntaryEventType, com.tools20022.repository.msg.CorporateActionGeneralInformation19.mmMandatoryVoluntaryEventType,
-					com.tools20022.repository.msg.CorporateActionGeneralInformation22.mmMandatoryVoluntaryEventType, com.tools20022.repository.msg.CorporateActionGeneralInformation31.mmMandatoryVoluntaryEventType,
-					com.tools20022.repository.msg.CorporateActionGeneralInformation37.mmMandatoryVoluntaryEventType, com.tools20022.repository.msg.CorporateActionGeneralInformation45.mmMandatoryVoluntaryEventType,
-					com.tools20022.repository.msg.CorporateActionGeneralInformation51.mmMandatoryVoluntaryEventType, com.tools20022.repository.msg.CorporateActionGeneralInformation67.mmMandatoryVoluntaryEventType,
-					com.tools20022.repository.choice.CorporateActionMandatoryVoluntary1FormatChoice.mmCode, com.tools20022.repository.choice.CorporateActionMandatoryVoluntary1FormatChoice.mmProprietary,
-					com.tools20022.repository.msg.CorporateActionInformation2.mmMandatoryVoluntaryEventType, com.tools20022.repository.msg.CorporateActionInformation1.mmMandatoryVoluntaryEventType,
-					com.tools20022.repository.msg.CorporateActionGeneralInformation12.mmMandatoryVoluntaryEventType, com.tools20022.repository.msg.CorporateActionGeneralInformation69.mmMandatoryVoluntaryEventType,
-					com.tools20022.repository.msg.CorporateActionGeneralInformation70.mmMandatoryVoluntaryEventType, com.tools20022.repository.msg.CorporateActionGeneralInformation78.mmMandatoryVoluntaryEventType,
-					com.tools20022.repository.msg.CorporateActionGeneralInformation76.mmMandatoryVoluntaryEventType, com.tools20022.repository.msg.CorporateActionGeneralInformation86.mmMandatoryVoluntaryEventType,
-					com.tools20022.repository.msg.CorporateActionGeneralInformation87.mmMandatoryVoluntaryEventType, com.tools20022.repository.msg.CorporateActionGeneralInformation84.mmMandatoryVoluntaryEventType,
-					com.tools20022.repository.msg.CorporateActionGeneralInformation85.mmMandatoryVoluntaryEventType, com.tools20022.repository.choice.CorporateActionMandatoryVoluntary3Choice.mmCode,
-					com.tools20022.repository.choice.CorporateActionMandatoryVoluntary3Choice.mmProprietary, com.tools20022.repository.msg.EventInformation7.mmMandatoryVoluntaryEventType,
-					com.tools20022.repository.msg.CorporateActionGeneralInformation93.mmMandatoryVoluntaryEventType, com.tools20022.repository.msg.CorporateActionGeneralInformation100.mmMandatoryVoluntaryEventType,
-					com.tools20022.repository.msg.CorporateActionGeneralInformation99.mmMandatoryVoluntaryEventType, com.tools20022.repository.msg.CorporateActionGeneralInformation103.mmMandatoryVoluntaryEventType,
-					com.tools20022.repository.msg.EventInformation8.mmMandatoryVoluntaryEventType, com.tools20022.repository.choice.CorporateActionMandatoryVoluntary4Choice.mmCode,
-					com.tools20022.repository.choice.CorporateActionMandatoryVoluntary4Choice.mmProprietary, com.tools20022.repository.msg.CorporateActionGeneralInformation112.mmMandatoryVoluntaryEventType,
-					com.tools20022.repository.msg.CorporateActionGeneralInformation105.mmMandatoryVoluntaryEventType, com.tools20022.repository.msg.CorporateActionGeneralInformation106.mmMandatoryVoluntaryEventType,
-					com.tools20022.repository.msg.CorporateActionGeneralInformation108.mmMandatoryVoluntaryEventType, com.tools20022.repository.msg.EventInformation9.mmMandatoryVoluntaryEventType,
-					com.tools20022.repository.msg.CorporateActionGeneralInformation120.mmMandatoryVoluntaryEventType, com.tools20022.repository.msg.CorporateActionGeneralInformation123.mmMandatoryVoluntaryEventType,
-					com.tools20022.repository.msg.CorporateActionGeneralInformation117.mmMandatoryVoluntaryEventType, com.tools20022.repository.msg.CorporateActionGeneralInformation113.mmMandatoryVoluntaryEventType,
-					com.tools20022.repository.msg.EventInformation10.mmMandatoryVoluntaryEventType);
+			derivation_lazy = () -> Arrays.asList(CorporateActionMandatoryVoluntary1Choice.mmCode, CorporateActionMandatoryVoluntary1Choice.mmProprietary, CorporateActionGeneralInformation8.mmMandatoryVoluntaryEventType,
+					CorporateActionMandatoryVoluntary2Choice.mmCode, CorporateActionMandatoryVoluntary2Choice.mmProprietary, CorporateActionGeneralInformation20.mmMandatoryVoluntaryEventType,
+					CorporateActionGeneralInformation25.mmMandatoryVoluntaryEventType, CorporateActionGeneralInformation32.mmMandatoryVoluntaryEventType, CorporateActionGeneralInformation35.mmMandatoryVoluntaryEventType,
+					CorporateActionGeneralInformation43.mmMandatoryVoluntaryEventType, CorporateActionGeneralInformation53.mmMandatoryVoluntaryEventType, CorporateActionGeneralInformation56.mmMandatoryVoluntaryEventType,
+					CorporateActionGeneralInformation57.mmMandatoryVoluntaryEventType, EventInformation1.mmMandatoryVoluntaryEventType, EventInformation2.mmMandatoryVoluntaryEventType, EventInformation3.mmMandatoryVoluntaryEventType,
+					EventInformation4.mmMandatoryVoluntaryEventType, EventInformation5.mmMandatoryVoluntaryEventType, EventInformation6.mmMandatoryVoluntaryEventType, CorporateActionGeneralInformation3.mmMandatoryVoluntaryEventType,
+					CorporateActionGeneralInformation17.mmMandatoryVoluntaryEventType, CorporateActionGeneralInformation23.mmMandatoryVoluntaryEventType, CorporateActionGeneralInformation30.mmMandatoryVoluntaryEventType,
+					CorporateActionGeneralInformation38.mmMandatoryVoluntaryEventType, CorporateActionGeneralInformation46.mmMandatoryVoluntaryEventType, CorporateActionGeneralInformation54.mmMandatoryVoluntaryEventType,
+					CorporateActionGeneralInformation64.mmMandatoryVoluntaryEventType, CorporateActionGeneralInformation63.mmMandatoryVoluntaryEventType, CorporateActionGeneralInformation11.mmMandatoryVoluntaryEventType,
+					CorporateActionGeneralInformation19.mmMandatoryVoluntaryEventType, CorporateActionGeneralInformation22.mmMandatoryVoluntaryEventType, CorporateActionGeneralInformation31.mmMandatoryVoluntaryEventType,
+					CorporateActionGeneralInformation37.mmMandatoryVoluntaryEventType, CorporateActionGeneralInformation45.mmMandatoryVoluntaryEventType, CorporateActionGeneralInformation51.mmMandatoryVoluntaryEventType,
+					CorporateActionGeneralInformation67.mmMandatoryVoluntaryEventType, CorporateActionMandatoryVoluntary1FormatChoice.mmCode, CorporateActionMandatoryVoluntary1FormatChoice.mmProprietary,
+					CorporateActionInformation2.mmMandatoryVoluntaryEventType, CorporateActionInformation1.mmMandatoryVoluntaryEventType, CorporateActionGeneralInformation12.mmMandatoryVoluntaryEventType,
+					CorporateActionGeneralInformation69.mmMandatoryVoluntaryEventType, CorporateActionGeneralInformation70.mmMandatoryVoluntaryEventType, CorporateActionGeneralInformation78.mmMandatoryVoluntaryEventType,
+					CorporateActionGeneralInformation76.mmMandatoryVoluntaryEventType, CorporateActionGeneralInformation86.mmMandatoryVoluntaryEventType, CorporateActionGeneralInformation87.mmMandatoryVoluntaryEventType,
+					CorporateActionGeneralInformation84.mmMandatoryVoluntaryEventType, CorporateActionGeneralInformation85.mmMandatoryVoluntaryEventType, CorporateActionMandatoryVoluntary3Choice.mmCode,
+					CorporateActionMandatoryVoluntary3Choice.mmProprietary, EventInformation7.mmMandatoryVoluntaryEventType, CorporateActionGeneralInformation93.mmMandatoryVoluntaryEventType,
+					CorporateActionGeneralInformation100.mmMandatoryVoluntaryEventType, CorporateActionGeneralInformation99.mmMandatoryVoluntaryEventType, CorporateActionGeneralInformation103.mmMandatoryVoluntaryEventType,
+					EventInformation8.mmMandatoryVoluntaryEventType, CorporateActionMandatoryVoluntary4Choice.mmCode, CorporateActionMandatoryVoluntary4Choice.mmProprietary,
+					CorporateActionGeneralInformation112.mmMandatoryVoluntaryEventType, CorporateActionGeneralInformation105.mmMandatoryVoluntaryEventType, CorporateActionGeneralInformation106.mmMandatoryVoluntaryEventType,
+					CorporateActionGeneralInformation108.mmMandatoryVoluntaryEventType, EventInformation9.mmMandatoryVoluntaryEventType, CorporateActionGeneralInformation120.mmMandatoryVoluntaryEventType,
+					CorporateActionGeneralInformation123.mmMandatoryVoluntaryEventType, CorporateActionGeneralInformation117.mmMandatoryVoluntaryEventType, CorporateActionGeneralInformation113.mmMandatoryVoluntaryEventType,
+					EventInformation10.mmMandatoryVoluntaryEventType);
 			elementContext_lazy = () -> CorporateActionEvent.mmObject();
 			isDerived = false;
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "MandatoryVoluntaryEventType";
 			definition = "Specifies whether the event is mandatory, mandatory with options or voluntary.";
 			maxOccurs = 1;
@@ -2198,62 +2129,43 @@ public class CorporateActionEvent {
 	 */
 	public static final MMBusinessAssociationEnd mmUnderlyingSecurity = new MMBusinessAssociationEnd() {
 		{
-			derivation_lazy = () -> Arrays.asList(com.tools20022.repository.msg.CorporateActionGeneralInformation6.mmUnderlyingSecurity, com.tools20022.repository.msg.CorporateActionGeneralInformation15.mmUnderlyingSecurity,
-					com.tools20022.repository.msg.CorporateActionGeneralInformation21.mmUnderlyingSecurity, com.tools20022.repository.msg.CorporateActionGeneralInformation28.mmUnderlyingSecurity,
-					com.tools20022.repository.msg.CorporateActionGeneralInformation36.mmUnderlyingSecurity, com.tools20022.repository.msg.CorporateActionGeneralInformation44.mmUnderlyingSecurity,
-					com.tools20022.repository.msg.CorporateActionGeneralInformation55.mmUnderlyingSecurity, com.tools20022.repository.msg.CorporateActionGeneralInformation61.mmUnderlyingSecurity,
-					com.tools20022.repository.msg.CorporateActionEventAndBalance1.mmUnderlyingSecurity, com.tools20022.repository.msg.CorporateActionEventAndBalance2.mmUnderlyingSecurity,
-					com.tools20022.repository.msg.CorporateActionEventAndBalance3.mmUnderlyingSecurity, com.tools20022.repository.msg.CorporateActionEventAndBalance4.mmUnderlyingSecurity,
-					com.tools20022.repository.msg.CorporateActionEventAndBalance5.mmUnderlyingSecurity, com.tools20022.repository.msg.CorporateActionEventAndBalance6.mmUnderlyingSecurity,
-					com.tools20022.repository.msg.CorporateActionEventAndBalance7.mmUnderlyingSecurity, com.tools20022.repository.msg.CorporateActionEventAndBalance8.mmUnderlyingSecurity,
-					com.tools20022.repository.msg.SecuritiesOption3.mmDateDetails, com.tools20022.repository.msg.SecuritiesOption8.mmDateDetails, com.tools20022.repository.msg.SecuritiesOption18.mmDateDetails,
-					com.tools20022.repository.msg.SecuritiesOption20.mmDateDetails, com.tools20022.repository.msg.SecuritiesOption26.mmDateDetails, com.tools20022.repository.msg.SecuritiesOption31.mmDateDetails,
-					com.tools20022.repository.msg.SecuritiesOption35.mmDateDetails, com.tools20022.repository.msg.SecuritiesOption36.mmDateDetails, com.tools20022.repository.msg.CorporateActionGeneralInformation3.mmUnderlyingSecurity,
-					com.tools20022.repository.msg.SecuritiesOption4.mmSecurityDetails, com.tools20022.repository.msg.SecuritiesOption4.mmDateDetails, com.tools20022.repository.msg.CorporateActionGeneralInformation17.mmUnderlyingSecurity,
-					com.tools20022.repository.msg.SecuritiesOption10.mmSecurityDetails, com.tools20022.repository.msg.SecuritiesOption10.mmDateDetails, com.tools20022.repository.msg.CorporateActionGeneralInformation23.mmUnderlyingSecurity,
-					com.tools20022.repository.msg.SecuritiesOption13.mmSecurityDetails, com.tools20022.repository.msg.SecuritiesOption13.mmDateDetails, com.tools20022.repository.msg.CorporateActionGeneralInformation30.mmUnderlyingSecurity,
-					com.tools20022.repository.msg.SecuritiesOption17.mmSecurityDetails, com.tools20022.repository.msg.SecuritiesOption17.mmDateDetails, com.tools20022.repository.msg.CorporateActionGeneralInformation38.mmUnderlyingSecurity,
-					com.tools20022.repository.msg.SecuritiesOption24.mmSecurityDetails, com.tools20022.repository.msg.SecuritiesOption24.mmDateDetails, com.tools20022.repository.msg.CorporateActionGeneralInformation46.mmUnderlyingSecurity,
-					com.tools20022.repository.msg.SecuritiesOption29.mmSecurityDetails, com.tools20022.repository.msg.SecuritiesOption29.mmDateDetails, com.tools20022.repository.msg.CorporateActionGeneralInformation54.mmUnderlyingSecurity,
-					com.tools20022.repository.msg.SecuritiesOption33.mmSecurityDetails, com.tools20022.repository.msg.SecuritiesOption33.mmDateDetails, com.tools20022.repository.msg.SecuritiesOption38.mmSecurityDetails,
-					com.tools20022.repository.msg.SecuritiesOption38.mmDateDetails, com.tools20022.repository.msg.CorporateActionGeneralInformation64.mmUnderlyingSecurity, com.tools20022.repository.msg.SecuritiesOption37.mmSecurityDetails,
-					com.tools20022.repository.msg.SecuritiesOption37.mmDateDetails, com.tools20022.repository.msg.SecuritiesOption39.mmSecurityDetails, com.tools20022.repository.msg.SecuritiesOption39.mmDateDetails,
-					com.tools20022.repository.msg.CorporateActionGeneralInformation11.mmUnderlyingSecurity, com.tools20022.repository.msg.SecuritiesOption6.mmSecurityDetails, com.tools20022.repository.msg.SecuritiesOption6.mmDateDetails,
-					com.tools20022.repository.msg.CorporateActionGeneralInformation19.mmUnderlyingSecurity, com.tools20022.repository.msg.SecuritiesOption12.mmSecurityDetails, com.tools20022.repository.msg.SecuritiesOption12.mmDateDetails,
-					com.tools20022.repository.msg.CorporateActionGeneralInformation22.mmUnderlyingSecurity, com.tools20022.repository.msg.SecuritiesOption14.mmSecurityDetails, com.tools20022.repository.msg.SecuritiesOption14.mmDateDetails,
-					com.tools20022.repository.msg.CorporateActionGeneralInformation31.mmUnderlyingSecurity, com.tools20022.repository.msg.SecuritiesOption22.mmSecurityDetails, com.tools20022.repository.msg.SecuritiesOption22.mmDateDetails,
-					com.tools20022.repository.msg.CorporateActionGeneralInformation37.mmUnderlyingSecurity, com.tools20022.repository.msg.SecuritiesOption25.mmSecurityDetails, com.tools20022.repository.msg.SecuritiesOption25.mmDateDetails,
-					com.tools20022.repository.msg.CorporateActionGeneralInformation45.mmUnderlyingSecurity, com.tools20022.repository.msg.SecuritiesOption30.mmSecurityDetails, com.tools20022.repository.msg.SecuritiesOption30.mmDateDetails,
-					com.tools20022.repository.msg.CorporateActionGeneralInformation51.mmUnderlyingSecurity, com.tools20022.repository.msg.CorporateActionGeneralInformation67.mmUnderlyingSecurity,
-					com.tools20022.repository.msg.CorporateActionInformation2.mmUnderlyingSecurity, com.tools20022.repository.msg.CorporateActionInformation2.mmOtherUnderlyingSecurity,
-					com.tools20022.repository.msg.CorporateActionInformation1.mmUnderlyingSecurity, com.tools20022.repository.msg.CorporateActionStandingInstructionGeneralInformation1.mmUnderlyingSecurity,
-					com.tools20022.repository.msg.CorporateActionGeneralInformation5.mmUnderlyingSecurity, com.tools20022.repository.msg.CorporateActionGeneralInformation71.mmUnderlyingSecurity,
-					com.tools20022.repository.msg.CorporateActionGeneralInformation69.mmUnderlyingSecurity, com.tools20022.repository.msg.CorporateActionGeneralInformation70.mmUnderlyingSecurity,
-					com.tools20022.repository.msg.SecuritiesOption42.mmDateDetails, com.tools20022.repository.msg.SecuritiesOption40.mmSecurityDetails, com.tools20022.repository.msg.SecuritiesOption40.mmDateDetails,
-					com.tools20022.repository.msg.CorporateActionGeneralInformation78.mmUnderlyingSecurity, com.tools20022.repository.msg.CorporateActionGeneralInformation77.mmUnderlyingSecurity,
-					com.tools20022.repository.msg.CorporateActionGeneralInformation76.mmUnderlyingSecurity, com.tools20022.repository.msg.SecuritiesOption48.mmDateDetails, com.tools20022.repository.msg.SecuritiesOption45.mmSecurityDetails,
-					com.tools20022.repository.msg.SecuritiesOption45.mmDateDetails, com.tools20022.repository.msg.CorporateActionGeneralInformation88.mmUnderlyingSecurity,
-					com.tools20022.repository.msg.CorporateActionGeneralInformation84.mmUnderlyingSecurity, com.tools20022.repository.msg.CorporateActionGeneralInformation85.mmUnderlyingSecurity,
-					com.tools20022.repository.msg.SecuritiesOption49.mmSecurityDetails, com.tools20022.repository.msg.SecuritiesOption49.mmDateDetails, com.tools20022.repository.msg.CorporateActionEventAndBalance9.mmUnderlyingSecurity,
-					com.tools20022.repository.msg.SecuritiesOption50.mmDateDetails, com.tools20022.repository.msg.CorporateActionGeneralInformation100.mmUnderlyingSecurity,
-					com.tools20022.repository.msg.CorporateActionGeneralInformation97.mmUnderlyingSecurity, com.tools20022.repository.msg.CorporateActionGeneralInformation103.mmUnderlyingSecurity,
-					com.tools20022.repository.msg.SecuritiesOption55.mmDateDetails, com.tools20022.repository.msg.SecuritiesOption57.mmSecurityDetails, com.tools20022.repository.msg.SecuritiesOption57.mmDateDetails,
-					com.tools20022.repository.msg.CorporateActionEventAndBalance10.mmUnderlyingSecurity, com.tools20022.repository.msg.CorporateActionGeneralInformation105.mmUnderlyingSecurity,
-					com.tools20022.repository.msg.CorporateActionGeneralInformation107.mmUnderlyingSecurity, com.tools20022.repository.msg.CorporateActionGeneralInformation106.mmUnderlyingSecurity,
-					com.tools20022.repository.msg.SecuritiesOption60.mmDateDetails, com.tools20022.repository.msg.SecuritiesOption59.mmSecurityDetails, com.tools20022.repository.msg.SecuritiesOption59.mmDateDetails,
-					com.tools20022.repository.msg.CorporateActionEventAndBalance11.mmUnderlyingSecurity, com.tools20022.repository.msg.CorporateActionGeneralInformation115.mmUnderlyingSecurity,
-					com.tools20022.repository.msg.CorporateActionGeneralInformation117.mmUnderlyingSecurity, com.tools20022.repository.msg.CorporateActionGeneralInformation113.mmUnderlyingSecurity,
-					com.tools20022.repository.msg.SecuritiesOption61.mmSecurityDetails, com.tools20022.repository.msg.SecuritiesOption61.mmDateDetails, com.tools20022.repository.msg.CorporateActionEventAndBalance12.mmUnderlyingSecurity,
-					com.tools20022.repository.msg.SecuritiesOption63.mmDateDetails);
+			derivation_lazy = () -> Arrays.asList(CorporateActionGeneralInformation6.mmUnderlyingSecurity, CorporateActionGeneralInformation15.mmUnderlyingSecurity, CorporateActionGeneralInformation21.mmUnderlyingSecurity,
+					CorporateActionGeneralInformation28.mmUnderlyingSecurity, CorporateActionGeneralInformation36.mmUnderlyingSecurity, CorporateActionGeneralInformation44.mmUnderlyingSecurity,
+					CorporateActionGeneralInformation55.mmUnderlyingSecurity, CorporateActionGeneralInformation61.mmUnderlyingSecurity, CorporateActionEventAndBalance1.mmUnderlyingSecurity,
+					CorporateActionEventAndBalance2.mmUnderlyingSecurity, CorporateActionEventAndBalance3.mmUnderlyingSecurity, CorporateActionEventAndBalance4.mmUnderlyingSecurity, CorporateActionEventAndBalance5.mmUnderlyingSecurity,
+					CorporateActionEventAndBalance6.mmUnderlyingSecurity, CorporateActionEventAndBalance7.mmUnderlyingSecurity, CorporateActionEventAndBalance8.mmUnderlyingSecurity, SecuritiesOption3.mmDateDetails,
+					SecuritiesOption8.mmDateDetails, SecuritiesOption18.mmDateDetails, SecuritiesOption20.mmDateDetails, SecuritiesOption26.mmDateDetails, SecuritiesOption31.mmDateDetails, SecuritiesOption35.mmDateDetails,
+					SecuritiesOption36.mmDateDetails, CorporateActionGeneralInformation3.mmUnderlyingSecurity, SecuritiesOption4.mmSecurityDetails, SecuritiesOption4.mmDateDetails, CorporateActionGeneralInformation17.mmUnderlyingSecurity,
+					SecuritiesOption10.mmSecurityDetails, SecuritiesOption10.mmDateDetails, CorporateActionGeneralInformation23.mmUnderlyingSecurity, SecuritiesOption13.mmSecurityDetails, SecuritiesOption13.mmDateDetails,
+					CorporateActionGeneralInformation30.mmUnderlyingSecurity, SecuritiesOption17.mmSecurityDetails, SecuritiesOption17.mmDateDetails, CorporateActionGeneralInformation38.mmUnderlyingSecurity,
+					SecuritiesOption24.mmSecurityDetails, SecuritiesOption24.mmDateDetails, CorporateActionGeneralInformation46.mmUnderlyingSecurity, SecuritiesOption29.mmSecurityDetails, SecuritiesOption29.mmDateDetails,
+					CorporateActionGeneralInformation54.mmUnderlyingSecurity, SecuritiesOption33.mmSecurityDetails, SecuritiesOption33.mmDateDetails, SecuritiesOption38.mmSecurityDetails, SecuritiesOption38.mmDateDetails,
+					CorporateActionGeneralInformation64.mmUnderlyingSecurity, SecuritiesOption37.mmSecurityDetails, SecuritiesOption37.mmDateDetails, SecuritiesOption39.mmSecurityDetails, SecuritiesOption39.mmDateDetails,
+					CorporateActionGeneralInformation11.mmUnderlyingSecurity, SecuritiesOption6.mmSecurityDetails, SecuritiesOption6.mmDateDetails, CorporateActionGeneralInformation19.mmUnderlyingSecurity,
+					SecuritiesOption12.mmSecurityDetails, SecuritiesOption12.mmDateDetails, CorporateActionGeneralInformation22.mmUnderlyingSecurity, SecuritiesOption14.mmSecurityDetails, SecuritiesOption14.mmDateDetails,
+					CorporateActionGeneralInformation31.mmUnderlyingSecurity, SecuritiesOption22.mmSecurityDetails, SecuritiesOption22.mmDateDetails, CorporateActionGeneralInformation37.mmUnderlyingSecurity,
+					SecuritiesOption25.mmSecurityDetails, SecuritiesOption25.mmDateDetails, CorporateActionGeneralInformation45.mmUnderlyingSecurity, SecuritiesOption30.mmSecurityDetails, SecuritiesOption30.mmDateDetails,
+					CorporateActionGeneralInformation51.mmUnderlyingSecurity, CorporateActionGeneralInformation67.mmUnderlyingSecurity, CorporateActionInformation2.mmUnderlyingSecurity,
+					CorporateActionInformation2.mmOtherUnderlyingSecurity, CorporateActionInformation1.mmUnderlyingSecurity, CorporateActionStandingInstructionGeneralInformation1.mmUnderlyingSecurity,
+					CorporateActionGeneralInformation5.mmUnderlyingSecurity, CorporateActionGeneralInformation71.mmUnderlyingSecurity, CorporateActionGeneralInformation69.mmUnderlyingSecurity,
+					CorporateActionGeneralInformation70.mmUnderlyingSecurity, SecuritiesOption42.mmDateDetails, SecuritiesOption40.mmSecurityDetails, SecuritiesOption40.mmDateDetails,
+					CorporateActionGeneralInformation78.mmUnderlyingSecurity, CorporateActionGeneralInformation77.mmUnderlyingSecurity, CorporateActionGeneralInformation76.mmUnderlyingSecurity, SecuritiesOption48.mmDateDetails,
+					SecuritiesOption45.mmSecurityDetails, SecuritiesOption45.mmDateDetails, CorporateActionGeneralInformation88.mmUnderlyingSecurity, CorporateActionGeneralInformation84.mmUnderlyingSecurity,
+					CorporateActionGeneralInformation85.mmUnderlyingSecurity, SecuritiesOption49.mmSecurityDetails, SecuritiesOption49.mmDateDetails, CorporateActionEventAndBalance9.mmUnderlyingSecurity, SecuritiesOption50.mmDateDetails,
+					CorporateActionGeneralInformation100.mmUnderlyingSecurity, CorporateActionGeneralInformation97.mmUnderlyingSecurity, CorporateActionGeneralInformation103.mmUnderlyingSecurity, SecuritiesOption55.mmDateDetails,
+					SecuritiesOption57.mmSecurityDetails, SecuritiesOption57.mmDateDetails, CorporateActionEventAndBalance10.mmUnderlyingSecurity, CorporateActionGeneralInformation105.mmUnderlyingSecurity,
+					CorporateActionGeneralInformation107.mmUnderlyingSecurity, CorporateActionGeneralInformation106.mmUnderlyingSecurity, SecuritiesOption60.mmDateDetails, SecuritiesOption59.mmSecurityDetails,
+					SecuritiesOption59.mmDateDetails, CorporateActionEventAndBalance11.mmUnderlyingSecurity, CorporateActionGeneralInformation115.mmUnderlyingSecurity, CorporateActionGeneralInformation117.mmUnderlyingSecurity,
+					CorporateActionGeneralInformation113.mmUnderlyingSecurity, SecuritiesOption61.mmSecurityDetails, SecuritiesOption61.mmDateDetails, CorporateActionEventAndBalance12.mmUnderlyingSecurity, SecuritiesOption63.mmDateDetails);
 			elementContext_lazy = () -> CorporateActionEvent.mmObject();
 			isDerived = false;
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "UnderlyingSecurity";
 			definition = "Security to which this instruction or event applies.";
 			maxOccurs = 1;
 			minOccurs = 1;
 			opposite_lazy = () -> com.tools20022.repository.entity.Security.mmCorporateEvent;
-			aggregation = com.tools20022.metamodel.MMAggregation.NONE;
+			aggregation = MMAggregation.NONE;
 			type_lazy = () -> com.tools20022.repository.entity.Security.mmObject();
 		}
 	};
@@ -2740,64 +2652,40 @@ public class CorporateActionEvent {
 	 */
 	public static final MMBusinessAssociationEnd mmCorporateActionPrice = new MMBusinessAssociationEnd() {
 		{
-			derivation_lazy = () -> Arrays.asList(com.tools20022.repository.msg.CorporateActionOption5.mmPriceDetails, com.tools20022.repository.msg.CorporateActionOption13.mmPriceDetails,
-					com.tools20022.repository.msg.CorporateActionOption25.mmPriceDetails, com.tools20022.repository.msg.CorporateActionOption30.mmPriceDetails, com.tools20022.repository.msg.CorporateActionOption38.mmPriceDetails,
-					com.tools20022.repository.msg.CorporateActionOption47.mmPriceDetails, com.tools20022.repository.msg.CorporateActionOption57.mmPriceDetails, com.tools20022.repository.msg.CorporateActionOption58.mmPriceDetails,
-					com.tools20022.repository.msg.SecuritiesOption3.mmPriceDetails, com.tools20022.repository.msg.CorporateActionOption4.mmPriceDetails, com.tools20022.repository.msg.SecuritiesOption8.mmPriceDetails,
-					com.tools20022.repository.msg.CorporateActionOption14.mmPriceDetails, com.tools20022.repository.msg.SecuritiesOption18.mmPriceDetails, com.tools20022.repository.msg.CashOption12.mmPriceDetails,
-					com.tools20022.repository.msg.CorporateActionOption23.mmPriceDetails, com.tools20022.repository.msg.SecuritiesOption20.mmPriceDetails, com.tools20022.repository.msg.CashOption13.mmPriceDetails,
-					com.tools20022.repository.msg.CorporateActionOption31.mmPriceDetails, com.tools20022.repository.msg.SecuritiesOption26.mmPriceDetails, com.tools20022.repository.msg.CashOption18.mmPriceDetails,
-					com.tools20022.repository.msg.CorporateActionOption37.mmPriceDetails, com.tools20022.repository.msg.SecuritiesOption31.mmPriceDetails, com.tools20022.repository.msg.CashOption22.mmPriceDetails,
-					com.tools20022.repository.msg.CorporateActionOption46.mmPriceDetails, com.tools20022.repository.msg.SecuritiesOption35.mmPriceDetails, com.tools20022.repository.msg.CashOption26.mmPriceDetails,
-					com.tools20022.repository.msg.CorporateActionOption53.mmPriceDetails, com.tools20022.repository.msg.SecuritiesOption36.mmPriceDetails, com.tools20022.repository.msg.CashOption27.mmPriceDetails,
-					com.tools20022.repository.msg.CorporateActionOption54.mmPriceDetails, com.tools20022.repository.msg.SecuritiesOption4.mmPriceDetails, com.tools20022.repository.msg.CorporateActionOption10.mmPriceDetails,
-					com.tools20022.repository.msg.SecuritiesOption10.mmPriceDetails, com.tools20022.repository.msg.CorporateActionOption15.mmPriceDetails, com.tools20022.repository.msg.SecuritiesOption13.mmPriceDetails,
-					com.tools20022.repository.msg.CashOption11.mmPriceDetails, com.tools20022.repository.msg.CorporateActionOption20.mmPriceDetails, com.tools20022.repository.msg.SecuritiesOption17.mmPriceDetails,
-					com.tools20022.repository.msg.CashOption14.mmPriceDetails, com.tools20022.repository.msg.CorporateActionOption32.mmPriceDetails, com.tools20022.repository.msg.SecuritiesOption24.mmPriceDetails,
-					com.tools20022.repository.msg.CashOption16.mmPriceDetails, com.tools20022.repository.msg.CorporateActionOption35.mmPriceDetails, com.tools20022.repository.msg.SecuritiesOption29.mmPriceDetails,
-					com.tools20022.repository.msg.CashOption20.mmPriceDetails, com.tools20022.repository.msg.CorporateActionOption44.mmPriceDetails, com.tools20022.repository.msg.SecuritiesOption33.mmPriceDetails,
-					com.tools20022.repository.msg.SecuritiesOption38.mmPriceDetails, com.tools20022.repository.msg.CashOption25.mmPriceDetails, com.tools20022.repository.msg.CorporateActionOption52.mmPriceDetails,
-					com.tools20022.repository.msg.SecuritiesOption37.mmPriceDetails, com.tools20022.repository.msg.SecuritiesOption39.mmPriceDetails, com.tools20022.repository.msg.CashOption28.mmPriceDetails,
-					com.tools20022.repository.msg.CorporateActionOption55.mmPriceDetails, com.tools20022.repository.msg.CorporateAction3.mmPriceDetails, com.tools20022.repository.msg.SecuritiesOption6.mmPriceDetails,
-					com.tools20022.repository.msg.CorporateActionOption3.mmPriceDetails, com.tools20022.repository.msg.CorporateAction4.mmPriceDetails, com.tools20022.repository.msg.SecuritiesOption12.mmPriceDetails,
-					com.tools20022.repository.msg.CorporateActionOption17.mmPriceDetails, com.tools20022.repository.msg.CorporateAction5.mmPriceDetails, com.tools20022.repository.msg.SecuritiesOption14.mmPriceDetails,
-					com.tools20022.repository.msg.CashOption10.mmPriceDetails, com.tools20022.repository.msg.CorporateActionOption19.mmPriceDetails, com.tools20022.repository.msg.CorporateAction6.mmPriceDetails,
-					com.tools20022.repository.msg.SecuritiesOption22.mmPriceDetails, com.tools20022.repository.msg.CashOption15.mmPriceDetails, com.tools20022.repository.msg.CorporateActionOption34.mmPriceDetails,
-					com.tools20022.repository.msg.CorporateAction7.mmPriceDetails, com.tools20022.repository.msg.SecuritiesOption25.mmPriceDetails, com.tools20022.repository.msg.CashOption17.mmPriceDetails,
-					com.tools20022.repository.msg.CorporateActionOption36.mmPriceDetails, com.tools20022.repository.msg.CorporateAction8.mmPriceDetails, com.tools20022.repository.msg.SecuritiesOption30.mmPriceDetails,
-					com.tools20022.repository.msg.CashOption21.mmPriceDetails, com.tools20022.repository.msg.CorporateActionOption45.mmPriceDetails, com.tools20022.repository.msg.CorporateAction10.mmPriceDetails,
-					com.tools20022.repository.msg.CashOption24.mmPriceDetails, com.tools20022.repository.msg.CorporateActionOption51.mmPriceDetails, com.tools20022.repository.msg.CorporateAction11.mmPriceDetails,
-					com.tools20022.repository.msg.CashOption29.mmPriceDetails, com.tools20022.repository.msg.CorporateActionOption56.mmPriceDetails, com.tools20022.repository.msg.CorporateAction2.mmPriceDetails,
-					com.tools20022.repository.msg.SecurityOption1.mmPriceDetails, com.tools20022.repository.msg.CorporateActionOption1.mmPriceDetails, com.tools20022.repository.msg.CorporateActionOption103.mmPriceDetails,
-					com.tools20022.repository.msg.CorporateActionOption100.mmPriceDetails, com.tools20022.repository.msg.CorporateActionOption101.mmPriceDetails, com.tools20022.repository.msg.CorporateAction12.mmPriceDetails,
-					com.tools20022.repository.msg.CorporateActionOption102.mmPriceDetails, com.tools20022.repository.msg.CashOption30.mmPriceDetails, com.tools20022.repository.msg.SecuritiesOption42.mmPriceDetails,
-					com.tools20022.repository.msg.CashOption31.mmPriceDetails, com.tools20022.repository.msg.SecuritiesOption40.mmPriceDetails, com.tools20022.repository.msg.CashOption32.mmPriceDetails,
-					com.tools20022.repository.msg.CorporateActionOption110.mmPriceDetails, com.tools20022.repository.msg.CorporateActionOption108.mmPriceDetails, com.tools20022.repository.msg.CorporateActionOption107.mmPriceDetails,
-					com.tools20022.repository.msg.CorporateActionOption106.mmPriceDetails, com.tools20022.repository.msg.CorporateAction17.mmPriceDetails, com.tools20022.repository.msg.CashOption36.mmPriceDetails,
-					com.tools20022.repository.msg.CashOption35.mmPriceDetails, com.tools20022.repository.msg.CashOption38.mmPriceDetails, com.tools20022.repository.msg.SecuritiesOption48.mmPriceDetails,
-					com.tools20022.repository.msg.SecuritiesOption45.mmPriceDetails, com.tools20022.repository.msg.CorporateActionOption111.mmPriceDetails, com.tools20022.repository.msg.CashOption39.mmPriceDetails,
-					com.tools20022.repository.msg.CorporateActionOption113.mmPriceDetails, com.tools20022.repository.msg.CashOption41.mmPriceDetails, com.tools20022.repository.msg.CorporateActionOption117.mmPriceDetails,
-					com.tools20022.repository.msg.CorporateActionOption118.mmPriceDetails, com.tools20022.repository.msg.CorporateActionOption115.mmPriceDetails, com.tools20022.repository.msg.CorporateActionOption114.mmPriceDetails,
-					com.tools20022.repository.msg.CorporateAction31.mmPriceDetails, com.tools20022.repository.msg.CashOption44.mmPriceDetails, com.tools20022.repository.msg.SecuritiesOption49.mmPriceDetails,
-					com.tools20022.repository.msg.CashOption42.mmPriceDetails, com.tools20022.repository.msg.CashOption43.mmPriceDetails, com.tools20022.repository.msg.SecuritiesOption50.mmPriceDetails,
-					com.tools20022.repository.msg.CorporateActionOption124.mmPriceDetails, com.tools20022.repository.msg.CorporateActionOption125.mmPriceDetails, com.tools20022.repository.msg.CorporateActionOption123.mmPriceDetails,
-					com.tools20022.repository.msg.CorporateActionOption127.mmPriceDetails, com.tools20022.repository.msg.CorporateAction40.mmPriceDetails, com.tools20022.repository.msg.CashOption46.mmPriceDetails,
-					com.tools20022.repository.msg.SecuritiesOption55.mmPriceDetails, com.tools20022.repository.msg.CashOption49.mmPriceDetails, com.tools20022.repository.msg.CashOption47.mmPriceDetails,
-					com.tools20022.repository.msg.SecuritiesOption57.mmPriceDetails, com.tools20022.repository.msg.CorporateActionOption132.mmPriceDetails, com.tools20022.repository.msg.CorporateActionOption130.mmPriceDetails,
-					com.tools20022.repository.msg.CorporateActionOption131.mmPriceDetails, com.tools20022.repository.msg.CorporateActionOption129.mmPriceDetails, com.tools20022.repository.msg.CashOption52.mmPriceDetails,
-					com.tools20022.repository.msg.SecuritiesOption60.mmPriceDetails, com.tools20022.repository.msg.CashOption51.mmPriceDetails, com.tools20022.repository.msg.SecuritiesOption59.mmPriceDetails,
-					com.tools20022.repository.msg.CashOption50.mmPriceDetails, com.tools20022.repository.msg.CorporateActionOption134.mmPriceDetails, com.tools20022.repository.msg.CorporateActionOption136.mmPriceDetails,
-					com.tools20022.repository.msg.CorporateActionOption135.mmPriceDetails, com.tools20022.repository.msg.CorporateActionOption133.mmPriceDetails, com.tools20022.repository.msg.CashOption53.mmPriceDetails,
-					com.tools20022.repository.msg.SecuritiesOption61.mmPriceDetails, com.tools20022.repository.msg.SecuritiesOption63.mmPriceDetails, com.tools20022.repository.msg.CashOption54.mmPriceDetails,
-					com.tools20022.repository.msg.CashOption55.mmPriceDetails);
+			derivation_lazy = () -> Arrays.asList(CorporateActionOption5.mmPriceDetails, CorporateActionOption13.mmPriceDetails, CorporateActionOption25.mmPriceDetails, CorporateActionOption30.mmPriceDetails,
+					CorporateActionOption38.mmPriceDetails, CorporateActionOption47.mmPriceDetails, CorporateActionOption57.mmPriceDetails, CorporateActionOption58.mmPriceDetails, SecuritiesOption3.mmPriceDetails,
+					CorporateActionOption4.mmPriceDetails, SecuritiesOption8.mmPriceDetails, CorporateActionOption14.mmPriceDetails, SecuritiesOption18.mmPriceDetails, CashOption12.mmPriceDetails, CorporateActionOption23.mmPriceDetails,
+					SecuritiesOption20.mmPriceDetails, CashOption13.mmPriceDetails, CorporateActionOption31.mmPriceDetails, SecuritiesOption26.mmPriceDetails, CashOption18.mmPriceDetails, CorporateActionOption37.mmPriceDetails,
+					SecuritiesOption31.mmPriceDetails, CashOption22.mmPriceDetails, CorporateActionOption46.mmPriceDetails, SecuritiesOption35.mmPriceDetails, CashOption26.mmPriceDetails, CorporateActionOption53.mmPriceDetails,
+					SecuritiesOption36.mmPriceDetails, CashOption27.mmPriceDetails, CorporateActionOption54.mmPriceDetails, SecuritiesOption4.mmPriceDetails, CorporateActionOption10.mmPriceDetails, SecuritiesOption10.mmPriceDetails,
+					CorporateActionOption15.mmPriceDetails, SecuritiesOption13.mmPriceDetails, CashOption11.mmPriceDetails, CorporateActionOption20.mmPriceDetails, SecuritiesOption17.mmPriceDetails, CashOption14.mmPriceDetails,
+					CorporateActionOption32.mmPriceDetails, SecuritiesOption24.mmPriceDetails, CashOption16.mmPriceDetails, CorporateActionOption35.mmPriceDetails, SecuritiesOption29.mmPriceDetails, CashOption20.mmPriceDetails,
+					CorporateActionOption44.mmPriceDetails, SecuritiesOption33.mmPriceDetails, SecuritiesOption38.mmPriceDetails, CashOption25.mmPriceDetails, CorporateActionOption52.mmPriceDetails, SecuritiesOption37.mmPriceDetails,
+					SecuritiesOption39.mmPriceDetails, CashOption28.mmPriceDetails, CorporateActionOption55.mmPriceDetails, CorporateAction3.mmPriceDetails, SecuritiesOption6.mmPriceDetails, CorporateActionOption3.mmPriceDetails,
+					CorporateAction4.mmPriceDetails, SecuritiesOption12.mmPriceDetails, CorporateActionOption17.mmPriceDetails, CorporateAction5.mmPriceDetails, SecuritiesOption14.mmPriceDetails, CashOption10.mmPriceDetails,
+					CorporateActionOption19.mmPriceDetails, CorporateAction6.mmPriceDetails, SecuritiesOption22.mmPriceDetails, CashOption15.mmPriceDetails, CorporateActionOption34.mmPriceDetails, CorporateAction7.mmPriceDetails,
+					SecuritiesOption25.mmPriceDetails, CashOption17.mmPriceDetails, CorporateActionOption36.mmPriceDetails, CorporateAction8.mmPriceDetails, SecuritiesOption30.mmPriceDetails, CashOption21.mmPriceDetails,
+					CorporateActionOption45.mmPriceDetails, CorporateAction10.mmPriceDetails, CashOption24.mmPriceDetails, CorporateActionOption51.mmPriceDetails, CorporateAction11.mmPriceDetails, CashOption29.mmPriceDetails,
+					CorporateActionOption56.mmPriceDetails, CorporateAction2.mmPriceDetails, SecurityOption1.mmPriceDetails, CorporateActionOption1.mmPriceDetails, CorporateActionOption103.mmPriceDetails,
+					CorporateActionOption100.mmPriceDetails, CorporateActionOption101.mmPriceDetails, CorporateAction12.mmPriceDetails, CorporateActionOption102.mmPriceDetails, CashOption30.mmPriceDetails,
+					SecuritiesOption42.mmPriceDetails, CashOption31.mmPriceDetails, SecuritiesOption40.mmPriceDetails, CashOption32.mmPriceDetails, CorporateActionOption110.mmPriceDetails, CorporateActionOption108.mmPriceDetails,
+					CorporateActionOption107.mmPriceDetails, CorporateActionOption106.mmPriceDetails, CorporateAction17.mmPriceDetails, CashOption36.mmPriceDetails, CashOption35.mmPriceDetails, CashOption38.mmPriceDetails,
+					SecuritiesOption48.mmPriceDetails, SecuritiesOption45.mmPriceDetails, CorporateActionOption111.mmPriceDetails, CashOption39.mmPriceDetails, CorporateActionOption113.mmPriceDetails, CashOption41.mmPriceDetails,
+					CorporateActionOption117.mmPriceDetails, CorporateActionOption118.mmPriceDetails, CorporateActionOption115.mmPriceDetails, CorporateActionOption114.mmPriceDetails, CorporateAction31.mmPriceDetails,
+					CashOption44.mmPriceDetails, SecuritiesOption49.mmPriceDetails, CashOption42.mmPriceDetails, CashOption43.mmPriceDetails, SecuritiesOption50.mmPriceDetails, CorporateActionOption124.mmPriceDetails,
+					CorporateActionOption125.mmPriceDetails, CorporateActionOption123.mmPriceDetails, CorporateActionOption127.mmPriceDetails, CorporateAction40.mmPriceDetails, CashOption46.mmPriceDetails,
+					SecuritiesOption55.mmPriceDetails, CashOption49.mmPriceDetails, CashOption47.mmPriceDetails, SecuritiesOption57.mmPriceDetails, CorporateActionOption132.mmPriceDetails, CorporateActionOption130.mmPriceDetails,
+					CorporateActionOption131.mmPriceDetails, CorporateActionOption129.mmPriceDetails, CashOption52.mmPriceDetails, SecuritiesOption60.mmPriceDetails, CashOption51.mmPriceDetails, SecuritiesOption59.mmPriceDetails,
+					CashOption50.mmPriceDetails, CorporateActionOption134.mmPriceDetails, CorporateActionOption136.mmPriceDetails, CorporateActionOption135.mmPriceDetails, CorporateActionOption133.mmPriceDetails,
+					CashOption53.mmPriceDetails, SecuritiesOption61.mmPriceDetails, SecuritiesOption63.mmPriceDetails, CashOption54.mmPriceDetails, CashOption55.mmPriceDetails);
 			elementContext_lazy = () -> CorporateActionEvent.mmObject();
 			isDerived = false;
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "CorporateActionPrice";
 			definition = "Specifies prices related to a corporate action.";
 			minOccurs = 0;
 			opposite_lazy = () -> com.tools20022.repository.entity.CorporateActionPrice.mmCorporateActionEvent;
-			aggregation = com.tools20022.metamodel.MMAggregation.NONE;
+			aggregation = MMAggregation.NONE;
 			type_lazy = () -> com.tools20022.repository.entity.CorporateActionPrice.mmObject();
 		}
 	};
@@ -3022,36 +2910,27 @@ public class CorporateActionEvent {
 	 */
 	public static final MMBusinessAssociationEnd mmExchangeRate = new MMBusinessAssociationEnd() {
 		{
-			derivation_lazy = () -> Arrays.asList(com.tools20022.repository.msg.CorporateActionNarrative8.mmForeignExchangeInstructionsAdditionalInformation,
-					com.tools20022.repository.msg.CorporateActionNarrative13.mmForeignExchangeInstructionsAdditionalInformation, com.tools20022.repository.msg.CashOption2.mmForeignExchangeDetails,
-					com.tools20022.repository.msg.CashOption9.mmForeignExchangeDetails, com.tools20022.repository.msg.CashOption12.mmForeignExchangeDetails, com.tools20022.repository.msg.CashOption13.mmForeignExchangeDetails,
-					com.tools20022.repository.msg.CashOption18.mmForeignExchangeDetails, com.tools20022.repository.msg.CashOption22.mmForeignExchangeDetails, com.tools20022.repository.msg.CashOption26.mmForeignExchangeDetails,
-					com.tools20022.repository.msg.CashOption27.mmForeignExchangeDetails, com.tools20022.repository.msg.CashOption3.mmForeignExchangeDetails, com.tools20022.repository.msg.CashOption6.mmForeignExchangeDetails,
-					com.tools20022.repository.msg.CashOption11.mmForeignExchangeDetails, com.tools20022.repository.msg.CashOption14.mmForeignExchangeDetails, com.tools20022.repository.msg.CashOption16.mmForeignExchangeDetails,
-					com.tools20022.repository.msg.CashOption20.mmForeignExchangeDetails, com.tools20022.repository.msg.CashOption25.mmForeignExchangeDetails, com.tools20022.repository.msg.CashOption28.mmForeignExchangeDetails,
-					com.tools20022.repository.msg.CashOption4.mmForeignExchangeDetails, com.tools20022.repository.msg.CashOption8.mmForeignExchangeDetails, com.tools20022.repository.msg.CashOption10.mmForeignExchangeDetails,
-					com.tools20022.repository.msg.CashOption15.mmForeignExchangeDetails, com.tools20022.repository.msg.CashOption17.mmForeignExchangeDetails, com.tools20022.repository.msg.CashOption21.mmForeignExchangeDetails,
-					com.tools20022.repository.msg.CorporateActionRate36.mmIssuerDeclaredExchangeRate, com.tools20022.repository.msg.CashOption24.mmForeignExchangeDetails,
-					com.tools20022.repository.msg.CorporateActionRate42.mmIssuerDeclaredExchangeRate, com.tools20022.repository.msg.CashOption29.mmForeignExchangeDetails, com.tools20022.repository.msg.CorporateActionRate2.mmExchangeRate,
-					com.tools20022.repository.msg.CashOption1.mmExchangeRate, com.tools20022.repository.msg.CashOption30.mmForeignExchangeDetails, com.tools20022.repository.msg.CorporateActionRate44.mmIssuerDeclaredExchangeRate,
-					com.tools20022.repository.msg.CashOption31.mmForeignExchangeDetails, com.tools20022.repository.msg.CashOption32.mmForeignExchangeDetails, com.tools20022.repository.msg.CashOption36.mmForeignExchangeDetails,
-					com.tools20022.repository.msg.CashOption35.mmForeignExchangeDetails, com.tools20022.repository.msg.CashOption38.mmForeignExchangeDetails, com.tools20022.repository.msg.CorporateActionRate57.mmIssuerDeclaredExchangeRate,
-					com.tools20022.repository.msg.CashOption39.mmForeignExchangeDetails, com.tools20022.repository.msg.CashOption41.mmForeignExchangeDetails, com.tools20022.repository.msg.CashOption44.mmForeignExchangeDetails,
-					com.tools20022.repository.msg.CorporateActionRate68.mmIssuerDeclaredExchangeRate, com.tools20022.repository.msg.CashOption42.mmForeignExchangeDetails, com.tools20022.repository.msg.CashOption43.mmForeignExchangeDetails,
-					com.tools20022.repository.msg.CorporateActionNarrative32.mmForeignExchangeInstructionsAdditionalInformation, com.tools20022.repository.msg.CashOption46.mmForeignExchangeDetails,
-					com.tools20022.repository.msg.CorporateActionRate79.mmIssuerDeclaredExchangeRate, com.tools20022.repository.msg.CashOption49.mmForeignExchangeDetails, com.tools20022.repository.msg.CashOption47.mmForeignExchangeDetails,
-					com.tools20022.repository.msg.CorporateActionNarrative33.mmForeignExchangeInstructionsAdditionalInformation, com.tools20022.repository.msg.CashOption52.mmForeignExchangeDetails,
-					com.tools20022.repository.msg.CashOption51.mmForeignExchangeDetails, com.tools20022.repository.msg.CorporateActionRate80.mmIssuerDeclaredExchangeRate, com.tools20022.repository.msg.CashOption50.mmForeignExchangeDetails,
-					com.tools20022.repository.msg.CashOption53.mmForeignExchangeDetails, com.tools20022.repository.msg.CorporateActionRate83.mmIssuerDeclaredExchangeRate, com.tools20022.repository.msg.CashOption54.mmForeignExchangeDetails,
-					com.tools20022.repository.msg.CashOption55.mmForeignExchangeDetails);
+			derivation_lazy = () -> Arrays.asList(CorporateActionNarrative8.mmForeignExchangeInstructionsAdditionalInformation, CorporateActionNarrative13.mmForeignExchangeInstructionsAdditionalInformation,
+					CashOption2.mmForeignExchangeDetails, CashOption9.mmForeignExchangeDetails, CashOption12.mmForeignExchangeDetails, CashOption13.mmForeignExchangeDetails, CashOption18.mmForeignExchangeDetails,
+					CashOption22.mmForeignExchangeDetails, CashOption26.mmForeignExchangeDetails, CashOption27.mmForeignExchangeDetails, CashOption3.mmForeignExchangeDetails, CashOption6.mmForeignExchangeDetails,
+					CashOption11.mmForeignExchangeDetails, CashOption14.mmForeignExchangeDetails, CashOption16.mmForeignExchangeDetails, CashOption20.mmForeignExchangeDetails, CashOption25.mmForeignExchangeDetails,
+					CashOption28.mmForeignExchangeDetails, CashOption4.mmForeignExchangeDetails, CashOption8.mmForeignExchangeDetails, CashOption10.mmForeignExchangeDetails, CashOption15.mmForeignExchangeDetails,
+					CashOption17.mmForeignExchangeDetails, CashOption21.mmForeignExchangeDetails, CorporateActionRate36.mmIssuerDeclaredExchangeRate, CashOption24.mmForeignExchangeDetails,
+					CorporateActionRate42.mmIssuerDeclaredExchangeRate, CashOption29.mmForeignExchangeDetails, CorporateActionRate2.mmExchangeRate, CashOption1.mmExchangeRate, CashOption30.mmForeignExchangeDetails,
+					CorporateActionRate44.mmIssuerDeclaredExchangeRate, CashOption31.mmForeignExchangeDetails, CashOption32.mmForeignExchangeDetails, CashOption36.mmForeignExchangeDetails, CashOption35.mmForeignExchangeDetails,
+					CashOption38.mmForeignExchangeDetails, CorporateActionRate57.mmIssuerDeclaredExchangeRate, CashOption39.mmForeignExchangeDetails, CashOption41.mmForeignExchangeDetails, CashOption44.mmForeignExchangeDetails,
+					CorporateActionRate68.mmIssuerDeclaredExchangeRate, CashOption42.mmForeignExchangeDetails, CashOption43.mmForeignExchangeDetails, CorporateActionNarrative32.mmForeignExchangeInstructionsAdditionalInformation,
+					CashOption46.mmForeignExchangeDetails, CorporateActionRate79.mmIssuerDeclaredExchangeRate, CashOption49.mmForeignExchangeDetails, CashOption47.mmForeignExchangeDetails,
+					CorporateActionNarrative33.mmForeignExchangeInstructionsAdditionalInformation, CashOption52.mmForeignExchangeDetails, CashOption51.mmForeignExchangeDetails, CorporateActionRate80.mmIssuerDeclaredExchangeRate,
+					CashOption50.mmForeignExchangeDetails, CashOption53.mmForeignExchangeDetails, CorporateActionRate83.mmIssuerDeclaredExchangeRate, CashOption54.mmForeignExchangeDetails, CashOption55.mmForeignExchangeDetails);
 			elementContext_lazy = () -> CorporateActionEvent.mmObject();
 			isDerived = false;
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "ExchangeRate";
 			definition = "Rate, specified by the issuer, when the paid amount is not in the same currency as the specified amount.";
 			minOccurs = 0;
 			opposite_lazy = () -> com.tools20022.repository.entity.CurrencyExchange.mmRelatedCorporateActionEvent;
-			aggregation = com.tools20022.metamodel.MMAggregation.NONE;
+			aggregation = MMAggregation.NONE;
 			type_lazy = () -> com.tools20022.repository.entity.CurrencyExchange.mmObject();
 		}
 	};
@@ -3142,18 +3021,14 @@ public class CorporateActionEvent {
 	 */
 	public static final MMBusinessAttribute mmRegistrationDetails = new MMBusinessAttribute() {
 		{
-			derivation_lazy = () -> Arrays.asList(com.tools20022.repository.msg.CorporateActionNarrative7.mmRegistrationDetails, com.tools20022.repository.msg.CorporateActionNarrative12.mmRegistrationDetails,
-					com.tools20022.repository.msg.CorporateActionNarrative21.mmRegistrationDetails, com.tools20022.repository.msg.CorporateActionNarrative23.mmRegistrationDetails,
-					com.tools20022.repository.msg.CorporateActionNarrative4.mmRegistrationDetails, com.tools20022.repository.msg.CorporateActionNarrative14.mmRegistrationDetails,
-					com.tools20022.repository.msg.CorporateActionNarrative6.mmRegistrationDetails, com.tools20022.repository.msg.CorporateActionNarrative16.mmRegistrationDetails,
-					com.tools20022.repository.msg.CorporateActionNarrative11.mmRegistrationDetails, com.tools20022.repository.msg.CorporateActionNarrative17.mmRegistrationDetails,
-					com.tools20022.repository.msg.CorporateActionNarrative2.mmRegistrationDetails, com.tools20022.repository.msg.CorporateActionAdditionalInformation1.mmRegistrationDetails,
-					com.tools20022.repository.msg.CorporateActionNarrative27.mmRegistrationDetails, com.tools20022.repository.msg.CorporateActionNarrative30.mmRegistrationDetails,
-					com.tools20022.repository.msg.CorporateActionNarrative28.mmRegistrationDetails, com.tools20022.repository.msg.CorporateActionNarrative37.mmRegistrationDetails,
-					com.tools20022.repository.msg.CorporateActionNarrative34.mmRegistrationDetails, com.tools20022.repository.msg.CorporateActionNarrative41.mmRegistrationDetails);
+			derivation_lazy = () -> Arrays.asList(CorporateActionNarrative7.mmRegistrationDetails, CorporateActionNarrative12.mmRegistrationDetails, CorporateActionNarrative21.mmRegistrationDetails,
+					CorporateActionNarrative23.mmRegistrationDetails, CorporateActionNarrative4.mmRegistrationDetails, CorporateActionNarrative14.mmRegistrationDetails, CorporateActionNarrative6.mmRegistrationDetails,
+					CorporateActionNarrative16.mmRegistrationDetails, CorporateActionNarrative11.mmRegistrationDetails, CorporateActionNarrative17.mmRegistrationDetails, CorporateActionNarrative2.mmRegistrationDetails,
+					CorporateActionAdditionalInformation1.mmRegistrationDetails, CorporateActionNarrative27.mmRegistrationDetails, CorporateActionNarrative30.mmRegistrationDetails, CorporateActionNarrative28.mmRegistrationDetails,
+					CorporateActionNarrative37.mmRegistrationDetails, CorporateActionNarrative34.mmRegistrationDetails, CorporateActionNarrative41.mmRegistrationDetails);
 			elementContext_lazy = () -> CorporateActionEvent.mmObject();
 			isDerived = false;
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "RegistrationDetails";
 			definition = "Provides information required for the registration.";
 			maxOccurs = 1;
@@ -3239,16 +3114,13 @@ public class CorporateActionEvent {
 	 */
 	public static final MMBusinessAttribute mmBasketOrIndexInformation = new MMBusinessAttribute() {
 		{
-			derivation_lazy = () -> Arrays.asList(com.tools20022.repository.msg.CorporateActionNarrative7.mmBasketOrIndexInformation, com.tools20022.repository.msg.CorporateActionNarrative12.mmBasketOrIndexInformation,
-					com.tools20022.repository.msg.CorporateActionNarrative21.mmBasketOrIndexInformation, com.tools20022.repository.msg.CorporateActionNarrative23.mmBasketOrIndexInformation,
-					com.tools20022.repository.msg.CorporateActionNarrative4.mmBasketOrIndexInformation, com.tools20022.repository.msg.CorporateActionNarrative14.mmBasketOrIndexInformation,
-					com.tools20022.repository.msg.CorporateActionNarrative6.mmBasketOrIndexInformation, com.tools20022.repository.msg.CorporateActionNarrative16.mmBasketOrIndexInformation,
-					com.tools20022.repository.msg.CorporateActionNarrative11.mmBasketOrIndexInformation, com.tools20022.repository.msg.CorporateActionNarrative17.mmBasketOrIndexInformation,
-					com.tools20022.repository.msg.CorporateActionNarrative27.mmBasketOrIndexInformation, com.tools20022.repository.msg.CorporateActionNarrative28.mmBasketOrIndexInformation,
-					com.tools20022.repository.msg.CorporateActionNarrative37.mmBasketOrIndexInformation, com.tools20022.repository.msg.CorporateActionNarrative41.mmBasketOrIndexInformation);
+			derivation_lazy = () -> Arrays.asList(CorporateActionNarrative7.mmBasketOrIndexInformation, CorporateActionNarrative12.mmBasketOrIndexInformation, CorporateActionNarrative21.mmBasketOrIndexInformation,
+					CorporateActionNarrative23.mmBasketOrIndexInformation, CorporateActionNarrative4.mmBasketOrIndexInformation, CorporateActionNarrative14.mmBasketOrIndexInformation, CorporateActionNarrative6.mmBasketOrIndexInformation,
+					CorporateActionNarrative16.mmBasketOrIndexInformation, CorporateActionNarrative11.mmBasketOrIndexInformation, CorporateActionNarrative17.mmBasketOrIndexInformation, CorporateActionNarrative27.mmBasketOrIndexInformation,
+					CorporateActionNarrative28.mmBasketOrIndexInformation, CorporateActionNarrative37.mmBasketOrIndexInformation, CorporateActionNarrative41.mmBasketOrIndexInformation);
 			elementContext_lazy = () -> CorporateActionEvent.mmObject();
 			isDerived = false;
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "BasketOrIndexInformation";
 			definition = "Provides additional information on the basket or index underlying a security, for example a warrant.";
 			maxOccurs = 1;
@@ -3333,21 +3205,19 @@ public class CorporateActionEvent {
 	 */
 	public static final MMBusinessAssociationEnd mmDeadline = new MMBusinessAssociationEnd() {
 		{
-			derivation_lazy = () -> Arrays.asList(com.tools20022.repository.msg.InstructedCorporateActionOption1.mmDeadlineDateTime, com.tools20022.repository.msg.InstructedCorporateActionOption1.mmDeadlineType,
-					com.tools20022.repository.msg.InstructedCorporateActionOption2.mmDeadlineDateTime, com.tools20022.repository.msg.InstructedCorporateActionOption2.mmDeadlineType,
-					com.tools20022.repository.msg.InstructedCorporateActionOption4.mmDeadlineDateTime, com.tools20022.repository.msg.InstructedCorporateActionOption4.mmDeadlineType,
-					com.tools20022.repository.msg.InstructedCorporateActionOption5.mmDeadlineDateTime, com.tools20022.repository.msg.InstructedCorporateActionOption5.mmDeadlineType,
-					com.tools20022.repository.msg.InstructedCorporateActionOption6.mmDeadlineDateTime, com.tools20022.repository.msg.InstructedCorporateActionOption6.mmDeadlineType,
-					com.tools20022.repository.msg.InstructedCorporateActionOption7.mmDeadlineDateTime, com.tools20022.repository.msg.InstructedCorporateActionOption7.mmDeadlineType);
+			derivation_lazy = () -> Arrays.asList(InstructedCorporateActionOption1.mmDeadlineDateTime, InstructedCorporateActionOption1.mmDeadlineType, InstructedCorporateActionOption2.mmDeadlineDateTime,
+					InstructedCorporateActionOption2.mmDeadlineType, InstructedCorporateActionOption4.mmDeadlineDateTime, InstructedCorporateActionOption4.mmDeadlineType, InstructedCorporateActionOption5.mmDeadlineDateTime,
+					InstructedCorporateActionOption5.mmDeadlineType, InstructedCorporateActionOption6.mmDeadlineDateTime, InstructedCorporateActionOption6.mmDeadlineType, InstructedCorporateActionOption7.mmDeadlineDateTime,
+					InstructedCorporateActionOption7.mmDeadlineType);
 			elementContext_lazy = () -> CorporateActionEvent.mmObject();
 			isDerived = false;
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "Deadline";
 			definition = "Specifies the different deadlines related to a corporate event.";
 			maxOccurs = 1;
 			minOccurs = 0;
 			opposite_lazy = () -> com.tools20022.repository.entity.Deadline.mmRelatedCorporateActionEvent;
-			aggregation = com.tools20022.metamodel.MMAggregation.NONE;
+			aggregation = MMAggregation.NONE;
 			type_lazy = () -> com.tools20022.repository.entity.Deadline.mmObject();
 		}
 	};
@@ -3602,42 +3472,30 @@ public class CorporateActionEvent {
 	 */
 	public static final MMBusinessAttribute mmAdditionalBusinessProcess = new MMBusinessAttribute() {
 		{
-			derivation_lazy = () -> Arrays.asList(com.tools20022.repository.choice.AdditionalBusinessProcessFormat3Choice.mmCode, com.tools20022.repository.choice.AdditionalBusinessProcessFormat3Choice.mmProprietary,
-					com.tools20022.repository.msg.CorporateActionGeneralInformation4.mmAdditionalBusinessProcessIndicator, com.tools20022.repository.choice.AdditionalBusinessProcessFormat5Choice.mmCode,
-					com.tools20022.repository.choice.AdditionalBusinessProcessFormat5Choice.mmProprietary, com.tools20022.repository.msg.CorporateActionGeneralInformation16.mmAdditionalBusinessProcessIndicator,
-					com.tools20022.repository.msg.CorporateActionGeneralInformation24.mmAdditionalBusinessProcessIndicator, com.tools20022.repository.msg.CorporateActionGeneralInformation29.mmAdditionalBusinessProcessIndicator,
-					com.tools20022.repository.choice.AdditionalBusinessProcessFormat7Choice.mmCode, com.tools20022.repository.choice.AdditionalBusinessProcessFormat7Choice.mmProprietary,
-					com.tools20022.repository.msg.CorporateActionGeneralInformation39.mmAdditionalBusinessProcessIndicator, com.tools20022.repository.choice.AdditionalBusinessProcessFormat8Choice.mmCode,
-					com.tools20022.repository.choice.AdditionalBusinessProcessFormat8Choice.mmProprietary, com.tools20022.repository.msg.CorporateActionGeneralInformation47.mmAdditionalBusinessProcessIndicator,
-					com.tools20022.repository.msg.CorporateActionGeneralInformation50.mmAdditionalBusinessProcessIndicator, com.tools20022.repository.msg.CorporateActionGeneralInformation62.mmAdditionalBusinessProcessIndicator,
-					com.tools20022.repository.choice.AdditionalBusinessProcessFormat2Choice.mmCode, com.tools20022.repository.choice.AdditionalBusinessProcessFormat2Choice.mmProprietary,
-					com.tools20022.repository.msg.CorporateActionGeneralInformation3.mmAdditionalBusinessProcessIndicator, com.tools20022.repository.choice.AdditionalBusinessProcessFormat6Choice.mmCode,
-					com.tools20022.repository.choice.AdditionalBusinessProcessFormat6Choice.mmProprietary, com.tools20022.repository.msg.CorporateActionGeneralInformation17.mmAdditionalBusinessProcessIndicator,
-					com.tools20022.repository.msg.CorporateActionGeneralInformation23.mmAdditionalBusinessProcessIndicator, com.tools20022.repository.msg.CorporateActionGeneralInformation30.mmAdditionalBusinessProcessIndicator,
-					com.tools20022.repository.msg.CorporateActionGeneralInformation38.mmAdditionalBusinessProcessIndicator, com.tools20022.repository.msg.CorporateActionGeneralInformation46.mmAdditionalBusinessProcessIndicator,
-					com.tools20022.repository.msg.CorporateActionGeneralInformation54.mmAdditionalBusinessProcessIndicator, com.tools20022.repository.msg.CorporateActionGeneralInformation64.mmAdditionalBusinessProcessIndicator,
-					com.tools20022.repository.choice.AdditionalBusinessProcessFormat1Choice.mmCode, com.tools20022.repository.choice.AdditionalBusinessProcessFormat1Choice.mmProprietary,
-					com.tools20022.repository.msg.CorporateAction3.mmAdditionalBusinessProcessIndicator, com.tools20022.repository.choice.AdditionalBusinessProcessFormat4Choice.mmCode,
-					com.tools20022.repository.choice.AdditionalBusinessProcessFormat4Choice.mmProprietary, com.tools20022.repository.msg.CorporateAction4.mmAdditionalBusinessProcessIndicator,
-					com.tools20022.repository.msg.CorporateAction5.mmAdditionalBusinessProcessIndicator, com.tools20022.repository.msg.CorporateAction6.mmAdditionalBusinessProcessIndicator,
-					com.tools20022.repository.msg.CorporateAction7.mmAdditionalBusinessProcessIndicator, com.tools20022.repository.msg.CorporateAction8.mmAdditionalBusinessProcessIndicator,
-					com.tools20022.repository.msg.CorporateAction10.mmAdditionalBusinessProcessIndicator, com.tools20022.repository.msg.CorporateAction11.mmAdditionalBusinessProcessIndicator,
-					com.tools20022.repository.msg.CorporateActionGeneralInformation69.mmAdditionalBusinessProcessIndicator, com.tools20022.repository.msg.CorporateAction12.mmAdditionalBusinessProcessIndicator,
-					com.tools20022.repository.msg.CorporateActionGeneralInformation78.mmAdditionalBusinessProcessIndicator, com.tools20022.repository.msg.CorporateAction17.mmAdditionalBusinessProcessIndicator,
-					com.tools20022.repository.msg.CorporateActionGeneralInformation79.mmAdditionalBusinessProcessIndicator, com.tools20022.repository.msg.CorporateActionGeneralInformation83.mmAdditionalBusinessProcessIndicator,
-					com.tools20022.repository.msg.CorporateActionGeneralInformation82.mmAdditionalBusinessProcessIndicator, com.tools20022.repository.msg.CorporateAction33.mmAdditionalBusinessProcessIndicator,
-					com.tools20022.repository.msg.CorporateAction32.mmAdditionalBusinessProcessIndicator, com.tools20022.repository.msg.CorporateAction31.mmAdditionalBusinessProcessIndicator,
-					com.tools20022.repository.choice.AdditionalBusinessProcessFormat10Choice.mmCode, com.tools20022.repository.choice.AdditionalBusinessProcessFormat10Choice.mmProprietary,
-					com.tools20022.repository.choice.AdditionalBusinessProcessFormat11Choice.mmCode, com.tools20022.repository.choice.AdditionalBusinessProcessFormat11Choice.mmProprietary,
-					com.tools20022.repository.choice.AdditionalBusinessProcessFormat9Choice.mmCode, com.tools20022.repository.choice.AdditionalBusinessProcessFormat9Choice.mmProprietary,
-					com.tools20022.repository.msg.CorporateAction36.mmAdditionalBusinessProcessIndicator, com.tools20022.repository.msg.CorporateAction38.mmAdditionalBusinessProcessIndicator,
-					com.tools20022.repository.msg.CorporateAction40.mmAdditionalBusinessProcessIndicator, com.tools20022.repository.choice.AdditionalBusinessProcessFormat12Choice.mmCode,
-					com.tools20022.repository.choice.AdditionalBusinessProcessFormat12Choice.mmProprietary, com.tools20022.repository.choice.AdditionalBusinessProcessFormat14Choice.mmCode,
-					com.tools20022.repository.choice.AdditionalBusinessProcessFormat14Choice.mmProprietary, com.tools20022.repository.choice.AdditionalBusinessProcessFormat13Choice.mmCode,
-					com.tools20022.repository.choice.AdditionalBusinessProcessFormat13Choice.mmProprietary);
+			derivation_lazy = () -> Arrays.asList(AdditionalBusinessProcessFormat3Choice.mmCode, AdditionalBusinessProcessFormat3Choice.mmProprietary, CorporateActionGeneralInformation4.mmAdditionalBusinessProcessIndicator,
+					AdditionalBusinessProcessFormat5Choice.mmCode, AdditionalBusinessProcessFormat5Choice.mmProprietary, CorporateActionGeneralInformation16.mmAdditionalBusinessProcessIndicator,
+					CorporateActionGeneralInformation24.mmAdditionalBusinessProcessIndicator, CorporateActionGeneralInformation29.mmAdditionalBusinessProcessIndicator, AdditionalBusinessProcessFormat7Choice.mmCode,
+					AdditionalBusinessProcessFormat7Choice.mmProprietary, CorporateActionGeneralInformation39.mmAdditionalBusinessProcessIndicator, AdditionalBusinessProcessFormat8Choice.mmCode,
+					AdditionalBusinessProcessFormat8Choice.mmProprietary, CorporateActionGeneralInformation47.mmAdditionalBusinessProcessIndicator, CorporateActionGeneralInformation50.mmAdditionalBusinessProcessIndicator,
+					CorporateActionGeneralInformation62.mmAdditionalBusinessProcessIndicator, AdditionalBusinessProcessFormat2Choice.mmCode, AdditionalBusinessProcessFormat2Choice.mmProprietary,
+					CorporateActionGeneralInformation3.mmAdditionalBusinessProcessIndicator, AdditionalBusinessProcessFormat6Choice.mmCode, AdditionalBusinessProcessFormat6Choice.mmProprietary,
+					CorporateActionGeneralInformation17.mmAdditionalBusinessProcessIndicator, CorporateActionGeneralInformation23.mmAdditionalBusinessProcessIndicator,
+					CorporateActionGeneralInformation30.mmAdditionalBusinessProcessIndicator, CorporateActionGeneralInformation38.mmAdditionalBusinessProcessIndicator,
+					CorporateActionGeneralInformation46.mmAdditionalBusinessProcessIndicator, CorporateActionGeneralInformation54.mmAdditionalBusinessProcessIndicator,
+					CorporateActionGeneralInformation64.mmAdditionalBusinessProcessIndicator, AdditionalBusinessProcessFormat1Choice.mmCode, AdditionalBusinessProcessFormat1Choice.mmProprietary,
+					CorporateAction3.mmAdditionalBusinessProcessIndicator, AdditionalBusinessProcessFormat4Choice.mmCode, AdditionalBusinessProcessFormat4Choice.mmProprietary, CorporateAction4.mmAdditionalBusinessProcessIndicator,
+					CorporateAction5.mmAdditionalBusinessProcessIndicator, CorporateAction6.mmAdditionalBusinessProcessIndicator, CorporateAction7.mmAdditionalBusinessProcessIndicator, CorporateAction8.mmAdditionalBusinessProcessIndicator,
+					CorporateAction10.mmAdditionalBusinessProcessIndicator, CorporateAction11.mmAdditionalBusinessProcessIndicator, CorporateActionGeneralInformation69.mmAdditionalBusinessProcessIndicator,
+					CorporateAction12.mmAdditionalBusinessProcessIndicator, CorporateActionGeneralInformation78.mmAdditionalBusinessProcessIndicator, CorporateAction17.mmAdditionalBusinessProcessIndicator,
+					CorporateActionGeneralInformation79.mmAdditionalBusinessProcessIndicator, CorporateActionGeneralInformation83.mmAdditionalBusinessProcessIndicator,
+					CorporateActionGeneralInformation82.mmAdditionalBusinessProcessIndicator, CorporateAction33.mmAdditionalBusinessProcessIndicator, CorporateAction32.mmAdditionalBusinessProcessIndicator,
+					CorporateAction31.mmAdditionalBusinessProcessIndicator, AdditionalBusinessProcessFormat10Choice.mmCode, AdditionalBusinessProcessFormat10Choice.mmProprietary, AdditionalBusinessProcessFormat11Choice.mmCode,
+					AdditionalBusinessProcessFormat11Choice.mmProprietary, AdditionalBusinessProcessFormat9Choice.mmCode, AdditionalBusinessProcessFormat9Choice.mmProprietary, CorporateAction36.mmAdditionalBusinessProcessIndicator,
+					CorporateAction38.mmAdditionalBusinessProcessIndicator, CorporateAction40.mmAdditionalBusinessProcessIndicator, AdditionalBusinessProcessFormat12Choice.mmCode, AdditionalBusinessProcessFormat12Choice.mmProprietary,
+					AdditionalBusinessProcessFormat14Choice.mmCode, AdditionalBusinessProcessFormat14Choice.mmProprietary, AdditionalBusinessProcessFormat13Choice.mmCode, AdditionalBusinessProcessFormat13Choice.mmProprietary);
 			elementContext_lazy = () -> CorporateActionEvent.mmObject();
 			isDerived = false;
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "AdditionalBusinessProcess";
 			definition = "Specifies the type of the additional business process linked to a corporate action event such as a claim compensation or tax refund.";
 			maxOccurs = 1;
@@ -3696,12 +3554,11 @@ public class CorporateActionEvent {
 	 */
 	public static final MMBusinessAttribute mmTradingDate = new MMBusinessAttribute() {
 		{
-			derivation_lazy = () -> Arrays.asList(com.tools20022.repository.msg.CorporateActionDate6.mmTradingDate, com.tools20022.repository.msg.CorporateActionDate10.mmTradingDate,
-					com.tools20022.repository.msg.CorporateActionDate18.mmTradingDate, com.tools20022.repository.msg.CorporateActionDate19.mmTradingDate, com.tools20022.repository.msg.CorporateActionDate46.mmTradingDate,
-					com.tools20022.repository.msg.CorporateActionDate52.mmTradingDate);
+			derivation_lazy = () -> Arrays.asList(CorporateActionDate6.mmTradingDate, CorporateActionDate10.mmTradingDate, CorporateActionDate18.mmTradingDate, CorporateActionDate19.mmTradingDate, CorporateActionDate46.mmTradingDate,
+					CorporateActionDate52.mmTradingDate);
 			elementContext_lazy = () -> CorporateActionEvent.mmObject();
 			isDerived = false;
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "TradingDate";
 			definition = "Date/time at which the deal (rights) was agreed.";
 			maxOccurs = 1;
@@ -3866,29 +3723,22 @@ public class CorporateActionEvent {
 	 */
 	public static final MMBusinessAssociationEnd mmCorporateActionCharge = new MMBusinessAssociationEnd() {
 		{
-			derivation_lazy = () -> Arrays.asList(com.tools20022.repository.msg.CorporateActionRate4.mmChargesFees, com.tools20022.repository.msg.CorporateActionRate10.mmChargesFees,
-					com.tools20022.repository.msg.RateDetails2.mmChargesFees, com.tools20022.repository.msg.RateDetails4.mmChargesFees, com.tools20022.repository.msg.CorporateActionRate29.mmChargesFees,
-					com.tools20022.repository.msg.RateDetails7.mmChargesFees, com.tools20022.repository.msg.CorporateActionRate34.mmChargesFees, com.tools20022.repository.msg.RateDetails9.mmChargesFees,
-					com.tools20022.repository.msg.RateDetails11.mmChargesFees, com.tools20022.repository.msg.RateDetails12.mmChargesFees, com.tools20022.repository.msg.CorporateActionRate5.mmChargesFees,
-					com.tools20022.repository.msg.CorporateActionRate12.mmChargesFees, com.tools20022.repository.msg.RateDetails3.mmChargesFees, com.tools20022.repository.msg.RateDetails5.mmChargesFees,
-					com.tools20022.repository.msg.CorporateActionRate28.mmChargesFees, com.tools20022.repository.msg.CorporateActionRate33.mmChargesFees, com.tools20022.repository.msg.RateDetails10.mmChargesFees,
-					com.tools20022.repository.msg.RateDetails13.mmChargesFees, com.tools20022.repository.msg.CorporateActionRate1.mmCharges, com.tools20022.repository.msg.CorporateActionRate2.mmCharges,
-					com.tools20022.repository.msg.RateDetails15.mmChargesFees, com.tools20022.repository.msg.CorporateActionRate48.mmChargesFees, com.tools20022.repository.msg.CorporateActionRate49.mmChargesFees,
-					com.tools20022.repository.msg.RateDetails14.mmChargesFees, com.tools20022.repository.msg.CorporateActionRate58.mmChargesFees, com.tools20022.repository.msg.RateDetails18.mmChargesFees,
-					com.tools20022.repository.msg.RateDetails21.mmChargesFees, com.tools20022.repository.msg.CorporateActionRate65.mmChargesFees, com.tools20022.repository.msg.RateDetails23.mmChargesFees,
-					com.tools20022.repository.msg.CorporateActionRate69.mmChargesFees, com.tools20022.repository.msg.RateDetails22.mmChargesFees, com.tools20022.repository.msg.CorporateActionRate72.mmChargesFees,
-					com.tools20022.repository.msg.RateDetails24.mmChargesFees, com.tools20022.repository.msg.RateDetails25.mmChargesFees, com.tools20022.repository.msg.CorporateActionRate77.mmChargesFees,
-					com.tools20022.repository.msg.CorporateActionRate75.mmChargesFees, com.tools20022.repository.msg.RateDetails26.mmChargesFees, com.tools20022.repository.msg.RateDetails27.mmChargesFees,
-					com.tools20022.repository.msg.RateDetails28.mmChargesFees, com.tools20022.repository.msg.RateDetails30.mmChargesFees);
+			derivation_lazy = () -> Arrays.asList(CorporateActionRate4.mmChargesFees, CorporateActionRate10.mmChargesFees, RateDetails2.mmChargesFees, RateDetails4.mmChargesFees, CorporateActionRate29.mmChargesFees,
+					RateDetails7.mmChargesFees, CorporateActionRate34.mmChargesFees, RateDetails9.mmChargesFees, RateDetails11.mmChargesFees, RateDetails12.mmChargesFees, CorporateActionRate5.mmChargesFees,
+					CorporateActionRate12.mmChargesFees, RateDetails3.mmChargesFees, RateDetails5.mmChargesFees, CorporateActionRate28.mmChargesFees, CorporateActionRate33.mmChargesFees, RateDetails10.mmChargesFees,
+					RateDetails13.mmChargesFees, CorporateActionRate1.mmCharges, CorporateActionRate2.mmCharges, RateDetails15.mmChargesFees, CorporateActionRate48.mmChargesFees, CorporateActionRate49.mmChargesFees,
+					RateDetails14.mmChargesFees, CorporateActionRate58.mmChargesFees, RateDetails18.mmChargesFees, RateDetails21.mmChargesFees, CorporateActionRate65.mmChargesFees, RateDetails23.mmChargesFees,
+					CorporateActionRate69.mmChargesFees, RateDetails22.mmChargesFees, CorporateActionRate72.mmChargesFees, RateDetails24.mmChargesFees, RateDetails25.mmChargesFees, CorporateActionRate77.mmChargesFees,
+					CorporateActionRate75.mmChargesFees, RateDetails26.mmChargesFees, RateDetails27.mmChargesFees, RateDetails28.mmChargesFees, RateDetails30.mmChargesFees);
 			elementContext_lazy = () -> CorporateActionEvent.mmObject();
 			isDerived = false;
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "CorporateActionCharge";
 			definition = "Specifies the charges relative to a corporate action event.";
 			maxOccurs = 1;
 			minOccurs = 0;
 			opposite_lazy = () -> com.tools20022.repository.entity.CorporateActionFeesAndCharges.mmCorporateAction;
-			aggregation = com.tools20022.metamodel.MMAggregation.NONE;
+			aggregation = MMAggregation.NONE;
 			type_lazy = () -> com.tools20022.repository.entity.CorporateActionFeesAndCharges.mmObject();
 		}
 	};
@@ -3973,14 +3823,12 @@ public class CorporateActionEvent {
 	 */
 	public static final MMBusinessAttribute mmPariPassuDate = new MMBusinessAttribute() {
 		{
-			derivation_lazy = () -> Arrays.asList(com.tools20022.repository.msg.SecurityDate1.mmPariPassuDate, com.tools20022.repository.msg.SecurityDate3.mmPariPassuDate, com.tools20022.repository.msg.SecurityDate6.mmPariPassuDate,
-					com.tools20022.repository.msg.SecurityDate7.mmPariPassuDate, com.tools20022.repository.msg.SecurityDate2.mmPariPassuDate, com.tools20022.repository.msg.SecurityDate4.mmPariPassuDate,
-					com.tools20022.repository.msg.SecurityDate5.mmPariPassuDate, com.tools20022.repository.msg.SecurityDate8.mmPariPassuDate, com.tools20022.repository.msg.SecurityDate9.mmPariPassuDate,
-					com.tools20022.repository.msg.SecurityDate10.mmPariPassuDate, com.tools20022.repository.msg.CorporateActionDate3.mmPariPassuDate, com.tools20022.repository.msg.SecurityDate12.mmPariPassuDate,
-					com.tools20022.repository.msg.SecurityDate11.mmPariPassuDate, com.tools20022.repository.msg.SecurityDate14.mmPariPassuDate, com.tools20022.repository.msg.SecurityDate13.mmPariPassuDate);
+			derivation_lazy = () -> Arrays.asList(SecurityDate1.mmPariPassuDate, SecurityDate3.mmPariPassuDate, SecurityDate6.mmPariPassuDate, SecurityDate7.mmPariPassuDate, SecurityDate2.mmPariPassuDate, SecurityDate4.mmPariPassuDate,
+					SecurityDate5.mmPariPassuDate, SecurityDate8.mmPariPassuDate, SecurityDate9.mmPariPassuDate, SecurityDate10.mmPariPassuDate, CorporateActionDate3.mmPariPassuDate, SecurityDate12.mmPariPassuDate,
+					SecurityDate11.mmPariPassuDate, SecurityDate14.mmPariPassuDate, SecurityDate13.mmPariPassuDate);
 			elementContext_lazy = () -> CorporateActionEvent.mmObject();
 			isDerived = false;
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "PariPassuDate";
 			definition = "Date on which security will assimilate, become fungible, or have the same rights to dividends as the parent issue.";
 			maxOccurs = 1;
@@ -4082,19 +3930,14 @@ public class CorporateActionEvent {
 	 */
 	public static final MMBusinessAttribute mmInformationConditions = new MMBusinessAttribute() {
 		{
-			derivation_lazy = () -> Arrays.asList(com.tools20022.repository.msg.CorporateActionNarrative4.mmInformationConditions, com.tools20022.repository.msg.CorporateActionNarrative14.mmInformationConditions,
-					com.tools20022.repository.msg.CorporateActionNarrative5.mmInformationConditions, com.tools20022.repository.msg.CorporateActionNarrative6.mmInformationConditions,
-					com.tools20022.repository.msg.CorporateActionNarrative15.mmInformationConditions, com.tools20022.repository.msg.CorporateActionNarrative16.mmInformationConditions,
-					com.tools20022.repository.msg.CorporateActionNarrative20.mmInformationConditions, com.tools20022.repository.msg.CorporateActionNarrative22.mmInformationConditions,
-					com.tools20022.repository.msg.CorporateActionNarrative11.mmInformationConditions, com.tools20022.repository.msg.CorporateActionNarrative17.mmInformationConditions,
-					com.tools20022.repository.msg.CorporateActionNarrative1.mmInformationConditions, com.tools20022.repository.msg.CorporateActionNarrative2.mmInformationConditions,
-					com.tools20022.repository.msg.CorporateActionNarrative9.mmInformationConditions, com.tools20022.repository.msg.CorporateActionNarrative27.mmInformationConditions,
-					com.tools20022.repository.msg.CorporateActionNarrative28.mmInformationConditions, com.tools20022.repository.msg.CorporateActionNarrative29.mmInformationConditions,
-					com.tools20022.repository.msg.CorporateActionNarrative37.mmInformationConditions, com.tools20022.repository.msg.CorporateActionNarrative41.mmInformationConditions,
-					com.tools20022.repository.msg.CorporateActionNarrative36.mmInformationConditions);
+			derivation_lazy = () -> Arrays.asList(CorporateActionNarrative4.mmInformationConditions, CorporateActionNarrative14.mmInformationConditions, CorporateActionNarrative5.mmInformationConditions,
+					CorporateActionNarrative6.mmInformationConditions, CorporateActionNarrative15.mmInformationConditions, CorporateActionNarrative16.mmInformationConditions, CorporateActionNarrative20.mmInformationConditions,
+					CorporateActionNarrative22.mmInformationConditions, CorporateActionNarrative11.mmInformationConditions, CorporateActionNarrative17.mmInformationConditions, CorporateActionNarrative1.mmInformationConditions,
+					CorporateActionNarrative2.mmInformationConditions, CorporateActionNarrative9.mmInformationConditions, CorporateActionNarrative27.mmInformationConditions, CorporateActionNarrative28.mmInformationConditions,
+					CorporateActionNarrative29.mmInformationConditions, CorporateActionNarrative37.mmInformationConditions, CorporateActionNarrative41.mmInformationConditions, CorporateActionNarrative36.mmInformationConditions);
 			elementContext_lazy = () -> CorporateActionEvent.mmObject();
 			isDerived = false;
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "InformationConditions";
 			definition = "Provides conditional information related to the event, eg, an offer is subject to 50% acceptance, the offeror allows the securities holder to set some conditions.";
 			maxOccurs = 1;
@@ -4173,19 +4016,17 @@ public class CorporateActionEvent {
 	 */
 	public static final MMBusinessAssociationEnd mmFractionalQuantity = new MMBusinessAssociationEnd() {
 		{
-			derivation_lazy = () -> Arrays.asList(com.tools20022.repository.msg.CorporateActionGeneralInformation50.mmFractionalQuantity, com.tools20022.repository.msg.CorporateActionGeneralInformation62.mmFractionalQuantity,
-					com.tools20022.repository.msg.CorporateActionGeneralInformation79.mmFractionalQuantity, com.tools20022.repository.msg.CorporateActionGeneralInformation83.mmFractionalQuantity,
-					com.tools20022.repository.msg.CorporateActionGeneralInformation82.mmFractionalQuantity, com.tools20022.repository.msg.CorporateActionGeneralInformation89.mmFractionalQuantity,
-					com.tools20022.repository.msg.CorporateActionGeneralInformation98.mmFractionalQuantity, com.tools20022.repository.msg.CorporateActionGeneralInformation111.mmFractionalQuantity,
-					com.tools20022.repository.msg.CorporateActionGeneralInformation118.mmFractionalQuantity);
+			derivation_lazy = () -> Arrays.asList(CorporateActionGeneralInformation50.mmFractionalQuantity, CorporateActionGeneralInformation62.mmFractionalQuantity, CorporateActionGeneralInformation79.mmFractionalQuantity,
+					CorporateActionGeneralInformation83.mmFractionalQuantity, CorporateActionGeneralInformation82.mmFractionalQuantity, CorporateActionGeneralInformation89.mmFractionalQuantity,
+					CorporateActionGeneralInformation98.mmFractionalQuantity, CorporateActionGeneralInformation111.mmFractionalQuantity, CorporateActionGeneralInformation118.mmFractionalQuantity);
 			elementContext_lazy = () -> CorporateActionEvent.mmObject();
 			isDerived = false;
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "FractionalQuantity";
 			definition = "Fractional quantity resulting from an event which will be paid with cash in lieu. ";
 			minOccurs = 0;
 			opposite_lazy = () -> com.tools20022.repository.entity.SecuritiesQuantity.mmRelatedEventForFractionalQuantity;
-			aggregation = com.tools20022.metamodel.MMAggregation.NONE;
+			aggregation = MMAggregation.NONE;
 			type_lazy = () -> com.tools20022.repository.entity.SecuritiesQuantity.mmObject();
 		}
 	};
@@ -4343,29 +4184,23 @@ public class CorporateActionEvent {
 	 */
 	public static final MMBusinessAttribute mmEventProcessingType = new MMBusinessAttribute() {
 		{
-			derivation_lazy = () -> Arrays.asList(com.tools20022.repository.choice.CorporateActionEventProcessingTypeChoice.mmCode, com.tools20022.repository.choice.CorporateActionEventProcessingTypeChoice.mmProprietary,
-					com.tools20022.repository.msg.CorporateActionGeneralInformation3.mmEventProcessingType, com.tools20022.repository.choice.CorporateActionEventProcessingType1Choice.mmCode,
-					com.tools20022.repository.choice.CorporateActionEventProcessingType1Choice.mmProprietary, com.tools20022.repository.msg.CorporateActionGeneralInformation17.mmEventProcessingType,
-					com.tools20022.repository.msg.CorporateActionGeneralInformation23.mmEventProcessingType, com.tools20022.repository.msg.CorporateActionGeneralInformation30.mmEventProcessingType,
-					com.tools20022.repository.msg.CorporateActionGeneralInformation38.mmEventProcessingType, com.tools20022.repository.msg.CorporateActionGeneralInformation46.mmEventProcessingType,
-					com.tools20022.repository.msg.CorporateActionGeneralInformation54.mmEventProcessingType, com.tools20022.repository.msg.CorporateActionGeneralInformation64.mmEventProcessingType,
-					com.tools20022.repository.msg.CorporateActionGeneralInformation11.mmEventProcessingType, com.tools20022.repository.msg.CorporateActionGeneralInformation19.mmEventProcessingType,
-					com.tools20022.repository.msg.CorporateActionGeneralInformation22.mmEventProcessingType, com.tools20022.repository.msg.CorporateActionGeneralInformation31.mmEventProcessingType,
-					com.tools20022.repository.msg.CorporateActionGeneralInformation37.mmEventProcessingType, com.tools20022.repository.msg.CorporateActionGeneralInformation45.mmEventProcessingType,
-					com.tools20022.repository.msg.CorporateActionGeneralInformation51.mmEventProcessingType, com.tools20022.repository.msg.CorporateActionGeneralInformation67.mmEventProcessingType,
-					com.tools20022.repository.choice.CorporateActionEventProcessingType1FormatChoice.mmCode, com.tools20022.repository.choice.CorporateActionEventProcessingType1FormatChoice.mmProprietary,
-					com.tools20022.repository.msg.CorporateActionInformation2.mmEventProcessingType, com.tools20022.repository.msg.CorporateActionInformation1.mmEventProcessingType,
-					com.tools20022.repository.msg.CorporateActionGeneralInformation69.mmEventProcessingType, com.tools20022.repository.msg.CorporateActionGeneralInformation70.mmEventProcessingType,
-					com.tools20022.repository.msg.CorporateActionGeneralInformation78.mmEventProcessingType, com.tools20022.repository.msg.CorporateActionGeneralInformation76.mmEventProcessingType,
-					com.tools20022.repository.msg.CorporateActionGeneralInformation84.mmEventProcessingType, com.tools20022.repository.msg.CorporateActionGeneralInformation85.mmEventProcessingType,
-					com.tools20022.repository.choice.CorporateActionEventProcessingType2Choice.mmCode, com.tools20022.repository.choice.CorporateActionEventProcessingType2Choice.mmProprietary,
-					com.tools20022.repository.msg.CorporateActionGeneralInformation100.mmEventProcessingType, com.tools20022.repository.msg.CorporateActionGeneralInformation103.mmEventProcessingType,
-					com.tools20022.repository.choice.CorporateActionEventProcessingType3Choice.mmCode, com.tools20022.repository.choice.CorporateActionEventProcessingType3Choice.mmProprietary,
-					com.tools20022.repository.msg.CorporateActionGeneralInformation105.mmEventProcessingType, com.tools20022.repository.msg.CorporateActionGeneralInformation106.mmEventProcessingType,
-					com.tools20022.repository.msg.CorporateActionGeneralInformation117.mmEventProcessingType, com.tools20022.repository.msg.CorporateActionGeneralInformation113.mmEventProcessingType);
+			derivation_lazy = () -> Arrays.asList(CorporateActionEventProcessingTypeChoice.mmCode, CorporateActionEventProcessingTypeChoice.mmProprietary, CorporateActionGeneralInformation3.mmEventProcessingType,
+					CorporateActionEventProcessingType1Choice.mmCode, CorporateActionEventProcessingType1Choice.mmProprietary, CorporateActionGeneralInformation17.mmEventProcessingType,
+					CorporateActionGeneralInformation23.mmEventProcessingType, CorporateActionGeneralInformation30.mmEventProcessingType, CorporateActionGeneralInformation38.mmEventProcessingType,
+					CorporateActionGeneralInformation46.mmEventProcessingType, CorporateActionGeneralInformation54.mmEventProcessingType, CorporateActionGeneralInformation64.mmEventProcessingType,
+					CorporateActionGeneralInformation11.mmEventProcessingType, CorporateActionGeneralInformation19.mmEventProcessingType, CorporateActionGeneralInformation22.mmEventProcessingType,
+					CorporateActionGeneralInformation31.mmEventProcessingType, CorporateActionGeneralInformation37.mmEventProcessingType, CorporateActionGeneralInformation45.mmEventProcessingType,
+					CorporateActionGeneralInformation51.mmEventProcessingType, CorporateActionGeneralInformation67.mmEventProcessingType, CorporateActionEventProcessingType1FormatChoice.mmCode,
+					CorporateActionEventProcessingType1FormatChoice.mmProprietary, CorporateActionInformation2.mmEventProcessingType, CorporateActionInformation1.mmEventProcessingType,
+					CorporateActionGeneralInformation69.mmEventProcessingType, CorporateActionGeneralInformation70.mmEventProcessingType, CorporateActionGeneralInformation78.mmEventProcessingType,
+					CorporateActionGeneralInformation76.mmEventProcessingType, CorporateActionGeneralInformation84.mmEventProcessingType, CorporateActionGeneralInformation85.mmEventProcessingType,
+					CorporateActionEventProcessingType2Choice.mmCode, CorporateActionEventProcessingType2Choice.mmProprietary, CorporateActionGeneralInformation100.mmEventProcessingType,
+					CorporateActionGeneralInformation103.mmEventProcessingType, CorporateActionEventProcessingType3Choice.mmCode, CorporateActionEventProcessingType3Choice.mmProprietary,
+					CorporateActionGeneralInformation105.mmEventProcessingType, CorporateActionGeneralInformation106.mmEventProcessingType, CorporateActionGeneralInformation117.mmEventProcessingType,
+					CorporateActionGeneralInformation113.mmEventProcessingType);
 			elementContext_lazy = () -> CorporateActionEvent.mmObject();
 			isDerived = false;
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "EventProcessingType";
 			definition = "Type of processing involved by a Corporate Action.";
 			maxOccurs = 1;
@@ -4433,17 +4268,16 @@ public class CorporateActionEvent {
 	 */
 	public static final MMBusinessAssociationEnd mmCorporateActionStatus = new MMBusinessAssociationEnd() {
 		{
-			derivation_lazy = () -> Arrays.asList(com.tools20022.repository.msg.CorporateActionNotification2.mmProcessingStatus, com.tools20022.repository.msg.CorporateActionNotification3.mmProcessingStatus,
-					com.tools20022.repository.msg.CorporateActionNotification1.mmProcessingStatus, com.tools20022.repository.msg.CorporateActionNotification4.mmProcessingStatus,
-					com.tools20022.repository.msg.CorporateActionNotification5.mmProcessingStatus, com.tools20022.repository.msg.CorporateActionNotification6.mmProcessingStatus);
+			derivation_lazy = () -> Arrays.asList(CorporateActionNotification2.mmProcessingStatus, CorporateActionNotification3.mmProcessingStatus, CorporateActionNotification1.mmProcessingStatus,
+					CorporateActionNotification4.mmProcessingStatus, CorporateActionNotification5.mmProcessingStatus, CorporateActionNotification6.mmProcessingStatus);
 			elementContext_lazy = () -> CorporateActionEvent.mmObject();
 			isDerived = false;
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "CorporateActionStatus";
 			definition = "Status of the corporate action process.";
 			minOccurs = 0;
 			opposite_lazy = () -> com.tools20022.repository.entity.CorporateActionStatus.mmCorporateActionEvent;
-			aggregation = com.tools20022.metamodel.MMAggregation.NONE;
+			aggregation = MMAggregation.NONE;
 			type_lazy = () -> com.tools20022.repository.entity.CorporateActionStatus.mmObject();
 		}
 	};
@@ -4538,16 +4372,13 @@ public class CorporateActionEvent {
 	 */
 	public static final MMBusinessAttribute mmAnnouncementDate = new MMBusinessAttribute() {
 		{
-			derivation_lazy = () -> Arrays.asList(com.tools20022.repository.msg.CorporateActionDate1.mmAnnouncementDate, com.tools20022.repository.msg.CorporateActionDate13.mmAnnouncementDate,
-					com.tools20022.repository.msg.CorporateActionDate14.mmAnnouncementDate, com.tools20022.repository.msg.CorporateActionDate21.mmAnnouncementDate, com.tools20022.repository.msg.CorporateActionDate22.mmAnnouncementDate,
-					com.tools20022.repository.msg.CorporateActionDate25.mmAnnouncementDate, com.tools20022.repository.msg.CorporateActionDate27.mmAnnouncementDate, com.tools20022.repository.msg.CorporateActionDate28.mmAnnouncementDate,
-					com.tools20022.repository.msg.MeetingNotice1.mmAnnouncementDate, com.tools20022.repository.msg.MeetingNotice2.mmAnnouncementDate, com.tools20022.repository.msg.MeetingNotice3.mmAnnouncementDate,
-					com.tools20022.repository.msg.CorporateActionNotification1.mmAnnouncementDate, com.tools20022.repository.msg.Issuance1.mmAnnouncementDate,
-					com.tools20022.repository.msg.CorporateActionGeneralInformation32SD1.mmWebServiceNotificationDate, com.tools20022.repository.msg.CorporateActionGeneralInformation32SD1.mmPreviousWebServiceNotificationDate,
-					com.tools20022.repository.msg.MeetingNotice4.mmAnnouncementDate, com.tools20022.repository.msg.CorporateActionDate44.mmAnnouncementDate, com.tools20022.repository.msg.CorporateActionDate58.mmAnnouncementDate);
+			derivation_lazy = () -> Arrays.asList(CorporateActionDate1.mmAnnouncementDate, CorporateActionDate13.mmAnnouncementDate, CorporateActionDate14.mmAnnouncementDate, CorporateActionDate21.mmAnnouncementDate,
+					CorporateActionDate22.mmAnnouncementDate, CorporateActionDate25.mmAnnouncementDate, CorporateActionDate27.mmAnnouncementDate, CorporateActionDate28.mmAnnouncementDate, MeetingNotice1.mmAnnouncementDate,
+					MeetingNotice2.mmAnnouncementDate, MeetingNotice3.mmAnnouncementDate, CorporateActionNotification1.mmAnnouncementDate, Issuance1.mmAnnouncementDate, CorporateActionGeneralInformation32SD1.mmWebServiceNotificationDate,
+					CorporateActionGeneralInformation32SD1.mmPreviousWebServiceNotificationDate, MeetingNotice4.mmAnnouncementDate, CorporateActionDate44.mmAnnouncementDate, CorporateActionDate58.mmAnnouncementDate);
 			elementContext_lazy = () -> CorporateActionEvent.mmObject();
 			isDerived = false;
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "AnnouncementDate";
 			definition = "Date/time at which the issuer announced that a corporate action event will occur such as the issue of securities or an official meeting.";
 			maxOccurs = 1;
@@ -4624,13 +4455,12 @@ public class CorporateActionEvent {
 	 */
 	public static final MMBusinessAttribute mmEffectiveDate = new MMBusinessAttribute() {
 		{
-			derivation_lazy = () -> Arrays.asList(com.tools20022.repository.msg.CorporateActionDate1.mmEffectiveDate, com.tools20022.repository.msg.CorporateActionDate13.mmEffectiveDate,
-					com.tools20022.repository.msg.CorporateActionDate14.mmEffectiveDate, com.tools20022.repository.msg.CorporateActionDate21.mmEffectiveDate, com.tools20022.repository.msg.CorporateActionDate22.mmEffectiveDate,
-					com.tools20022.repository.msg.CorporateActionDate25.mmEffectiveDate, com.tools20022.repository.msg.CorporateActionDate27.mmEffectiveDate, com.tools20022.repository.msg.CorporateActionDate28.mmEffectiveDate,
-					com.tools20022.repository.msg.CorporateActionDate2.mmEffectiveDate, com.tools20022.repository.msg.CorporateActionDate44.mmEffectiveDate, com.tools20022.repository.msg.CorporateActionDate58.mmEffectiveDate);
+			derivation_lazy = () -> Arrays.asList(CorporateActionDate1.mmEffectiveDate, CorporateActionDate13.mmEffectiveDate, CorporateActionDate14.mmEffectiveDate, CorporateActionDate21.mmEffectiveDate,
+					CorporateActionDate22.mmEffectiveDate, CorporateActionDate25.mmEffectiveDate, CorporateActionDate27.mmEffectiveDate, CorporateActionDate28.mmEffectiveDate, CorporateActionDate2.mmEffectiveDate,
+					CorporateActionDate44.mmEffectiveDate, CorporateActionDate58.mmEffectiveDate);
 			elementContext_lazy = () -> CorporateActionEvent.mmObject();
 			isDerived = false;
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "EffectiveDate";
 			definition = "Date/time at which an event is officially effective from the issuer's perspective.";
 			maxOccurs = 1;
@@ -4707,15 +4537,13 @@ public class CorporateActionEvent {
 	 */
 	public static final MMBusinessAttribute mmFurtherDetailsAnnouncementDate = new MMBusinessAttribute() {
 		{
-			derivation_lazy = () -> Arrays.asList(com.tools20022.repository.msg.CorporateActionDate1.mmFurtherDetailedAnnouncementDate, com.tools20022.repository.msg.CorporateActionDate13.mmFurtherDetailedAnnouncementDate,
-					com.tools20022.repository.msg.CorporateActionDate14.mmFurtherDetailedAnnouncementDate, com.tools20022.repository.msg.CorporateActionDate21.mmFurtherDetailedAnnouncementDate,
-					com.tools20022.repository.msg.CorporateActionDate22.mmFurtherDetailedAnnouncementDate, com.tools20022.repository.msg.CorporateActionDate25.mmFurtherDetailedAnnouncementDate,
-					com.tools20022.repository.msg.CorporateActionDate27.mmFurtherDetailedAnnouncementDate, com.tools20022.repository.msg.CorporateActionDate28.mmFurtherDetailedAnnouncementDate,
-					com.tools20022.repository.msg.CorporateActionNotification1.mmFurtherDetailedAnnouncementDate, com.tools20022.repository.msg.CorporateActionDate44.mmFurtherDetailedAnnouncementDate,
-					com.tools20022.repository.msg.CorporateActionDate58.mmFurtherDetailedAnnouncementDate);
+			derivation_lazy = () -> Arrays.asList(CorporateActionDate1.mmFurtherDetailedAnnouncementDate, CorporateActionDate13.mmFurtherDetailedAnnouncementDate, CorporateActionDate14.mmFurtherDetailedAnnouncementDate,
+					CorporateActionDate21.mmFurtherDetailedAnnouncementDate, CorporateActionDate22.mmFurtherDetailedAnnouncementDate, CorporateActionDate25.mmFurtherDetailedAnnouncementDate,
+					CorporateActionDate27.mmFurtherDetailedAnnouncementDate, CorporateActionDate28.mmFurtherDetailedAnnouncementDate, CorporateActionNotification1.mmFurtherDetailedAnnouncementDate,
+					CorporateActionDate44.mmFurtherDetailedAnnouncementDate, CorporateActionDate58.mmFurtherDetailedAnnouncementDate);
 			elementContext_lazy = () -> CorporateActionEvent.mmObject();
 			isDerived = false;
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "FurtherDetailsAnnouncementDate";
 			definition = "Date/time at which additional information on the event will be announced, for instance exchange ratio announcement date.";
 			maxOccurs = 1;
@@ -4789,13 +4617,12 @@ public class CorporateActionEvent {
 	 */
 	public static final MMBusinessAttribute mmMarginFixingDate = new MMBusinessAttribute() {
 		{
-			derivation_lazy = () -> Arrays.asList(com.tools20022.repository.msg.CorporateActionDate1.mmMarginFixingDate, com.tools20022.repository.msg.CorporateActionDate13.mmMarginFixingDate,
-					com.tools20022.repository.msg.CorporateActionDate14.mmMarginFixingDate, com.tools20022.repository.msg.CorporateActionDate21.mmMarginFixingDate, com.tools20022.repository.msg.CorporateActionDate22.mmMarginFixingDate,
-					com.tools20022.repository.msg.CorporateActionDate25.mmMarginFixingDate, com.tools20022.repository.msg.CorporateActionDate27.mmMarginFixingDate, com.tools20022.repository.msg.CorporateActionDate28.mmMarginFixingDate,
-					com.tools20022.repository.msg.CorporateActionDate2.mmMarginFixingDate, com.tools20022.repository.msg.CorporateActionDate44.mmMarginFixingDate, com.tools20022.repository.msg.CorporateActionDate58.mmMarginFixingDate);
+			derivation_lazy = () -> Arrays.asList(CorporateActionDate1.mmMarginFixingDate, CorporateActionDate13.mmMarginFixingDate, CorporateActionDate14.mmMarginFixingDate, CorporateActionDate21.mmMarginFixingDate,
+					CorporateActionDate22.mmMarginFixingDate, CorporateActionDate25.mmMarginFixingDate, CorporateActionDate27.mmMarginFixingDate, CorporateActionDate28.mmMarginFixingDate, CorporateActionDate2.mmMarginFixingDate,
+					CorporateActionDate44.mmMarginFixingDate, CorporateActionDate58.mmMarginFixingDate);
 			elementContext_lazy = () -> CorporateActionEvent.mmObject();
 			isDerived = false;
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "MarginFixingDate";
 			definition = "Date/time at which the margin rate will be determined .";
 			maxOccurs = 1;
@@ -4884,16 +4711,13 @@ public class CorporateActionEvent {
 	 */
 	public static final MMBusinessAttribute mmResultPublicationDate = new MMBusinessAttribute() {
 		{
-			derivation_lazy = () -> Arrays.asList(com.tools20022.repository.msg.CorporateActionDate1.mmResultsPublicationDate, com.tools20022.repository.msg.CorporateActionDate13.mmResultsPublicationDate,
-					com.tools20022.repository.msg.CorporateActionDate14.mmResultsPublicationDate, com.tools20022.repository.msg.CorporateActionDate21.mmResultsPublicationDate,
-					com.tools20022.repository.msg.CorporateActionDate22.mmResultsPublicationDate, com.tools20022.repository.msg.CorporateActionDate25.mmResultsPublicationDate,
-					com.tools20022.repository.msg.CorporateActionDate27.mmResultsPublicationDate, com.tools20022.repository.msg.CorporateActionDate28.mmResultsPublicationDate,
-					com.tools20022.repository.msg.MeetingNotice1.mmResultPublicationDate, com.tools20022.repository.msg.MeetingNotice2.mmResultPublicationDate, com.tools20022.repository.msg.MeetingNotice3.mmResultPublicationDate,
-					com.tools20022.repository.msg.CorporateActionDate2.mmResultsPublicationDate, com.tools20022.repository.msg.MeetingNotice4.mmResultPublicationDate,
-					com.tools20022.repository.msg.CorporateActionDate44.mmResultsPublicationDate, com.tools20022.repository.msg.CorporateActionDate58.mmResultsPublicationDate);
+			derivation_lazy = () -> Arrays.asList(CorporateActionDate1.mmResultsPublicationDate, CorporateActionDate13.mmResultsPublicationDate, CorporateActionDate14.mmResultsPublicationDate,
+					CorporateActionDate21.mmResultsPublicationDate, CorporateActionDate22.mmResultsPublicationDate, CorporateActionDate25.mmResultsPublicationDate, CorporateActionDate27.mmResultsPublicationDate,
+					CorporateActionDate28.mmResultsPublicationDate, MeetingNotice1.mmResultPublicationDate, MeetingNotice2.mmResultPublicationDate, MeetingNotice3.mmResultPublicationDate, CorporateActionDate2.mmResultsPublicationDate,
+					MeetingNotice4.mmResultPublicationDate, CorporateActionDate44.mmResultsPublicationDate, CorporateActionDate58.mmResultsPublicationDate);
 			elementContext_lazy = () -> CorporateActionEvent.mmObject();
 			isDerived = false;
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "ResultPublicationDate";
 			definition = "Date on which results are published, eg, results of an offer, of a meeting.";
 			maxOccurs = 1;
@@ -4970,13 +4794,12 @@ public class CorporateActionEvent {
 	 */
 	public static final MMBusinessAttribute mmUnconditionalDate = new MMBusinessAttribute() {
 		{
-			derivation_lazy = () -> Arrays.asList(com.tools20022.repository.msg.CorporateActionDate1.mmUnconditionalDate, com.tools20022.repository.msg.CorporateActionDate13.mmUnconditionalDate,
-					com.tools20022.repository.msg.CorporateActionDate14.mmUnconditionalDate, com.tools20022.repository.msg.CorporateActionDate21.mmUnconditionalDate, com.tools20022.repository.msg.CorporateActionDate22.mmUnconditionalDate,
-					com.tools20022.repository.msg.CorporateActionDate25.mmUnconditionalDate, com.tools20022.repository.msg.CorporateActionDate27.mmUnconditionalDate, com.tools20022.repository.msg.CorporateActionDate28.mmUnconditionalDate,
-					com.tools20022.repository.msg.CorporateActionDate2.mmUnconditionalDate, com.tools20022.repository.msg.CorporateActionDate44.mmUnconditionalDate, com.tools20022.repository.msg.CorporateActionDate58.mmUnconditionalDate);
+			derivation_lazy = () -> Arrays.asList(CorporateActionDate1.mmUnconditionalDate, CorporateActionDate13.mmUnconditionalDate, CorporateActionDate14.mmUnconditionalDate, CorporateActionDate21.mmUnconditionalDate,
+					CorporateActionDate22.mmUnconditionalDate, CorporateActionDate25.mmUnconditionalDate, CorporateActionDate27.mmUnconditionalDate, CorporateActionDate28.mmUnconditionalDate, CorporateActionDate2.mmUnconditionalDate,
+					CorporateActionDate44.mmUnconditionalDate, CorporateActionDate58.mmUnconditionalDate);
 			elementContext_lazy = () -> CorporateActionEvent.mmObject();
 			isDerived = false;
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "UnconditionalDate";
 			definition = "Date upon which the terms of the take-over become unconditional as to acceptances.";
 			maxOccurs = 1;
@@ -5053,15 +4876,12 @@ public class CorporateActionEvent {
 	 */
 	public static final MMBusinessAttribute mmWhollyUnconditionalDate = new MMBusinessAttribute() {
 		{
-			derivation_lazy = () -> Arrays.asList(com.tools20022.repository.msg.CorporateActionDate1.mmWhollyUnconditionalDate, com.tools20022.repository.msg.CorporateActionDate13.mmWhollyUnconditionalDate,
-					com.tools20022.repository.msg.CorporateActionDate14.mmWhollyUnconditionalDate, com.tools20022.repository.msg.CorporateActionDate21.mmWhollyUnconditionalDate,
-					com.tools20022.repository.msg.CorporateActionDate22.mmWhollyUnconditionalDate, com.tools20022.repository.msg.CorporateActionDate25.mmWhollyUnconditionalDate,
-					com.tools20022.repository.msg.CorporateActionDate27.mmWhollyUnconditionalDate, com.tools20022.repository.msg.CorporateActionDate28.mmWhollyUnconditionalDate,
-					com.tools20022.repository.msg.CorporateActionDate2.mmWhollyUnconditionalDate, com.tools20022.repository.msg.CorporateActionDate44.mmWhollyUnconditionalDate,
-					com.tools20022.repository.msg.CorporateActionDate58.mmWhollyUnconditionalDate);
+			derivation_lazy = () -> Arrays.asList(CorporateActionDate1.mmWhollyUnconditionalDate, CorporateActionDate13.mmWhollyUnconditionalDate, CorporateActionDate14.mmWhollyUnconditionalDate,
+					CorporateActionDate21.mmWhollyUnconditionalDate, CorporateActionDate22.mmWhollyUnconditionalDate, CorporateActionDate25.mmWhollyUnconditionalDate, CorporateActionDate27.mmWhollyUnconditionalDate,
+					CorporateActionDate28.mmWhollyUnconditionalDate, CorporateActionDate2.mmWhollyUnconditionalDate, CorporateActionDate44.mmWhollyUnconditionalDate, CorporateActionDate58.mmWhollyUnconditionalDate);
 			elementContext_lazy = () -> CorporateActionEvent.mmObject();
 			isDerived = false;
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "WhollyUnconditionalDate";
 			definition = "Date on which all conditions, including regulatory, legal etc. pertaining to the take-over, have been met.";
 			maxOccurs = 1;
@@ -5136,13 +4956,11 @@ public class CorporateActionEvent {
 	 */
 	public static final MMBusinessAttribute mmLapsedDate = new MMBusinessAttribute() {
 		{
-			derivation_lazy = () -> Arrays.asList(com.tools20022.repository.msg.CorporateActionDate1.mmLapsedDate, com.tools20022.repository.msg.CorporateActionDate13.mmLapsedDate,
-					com.tools20022.repository.msg.CorporateActionDate14.mmLapsedDate, com.tools20022.repository.msg.CorporateActionDate21.mmLapsedDate, com.tools20022.repository.msg.CorporateActionDate22.mmLapsedDate,
-					com.tools20022.repository.msg.CorporateActionDate25.mmLapsedDate, com.tools20022.repository.msg.CorporateActionDate27.mmLapsedDate, com.tools20022.repository.msg.CorporateActionDate28.mmLapsedDate,
-					com.tools20022.repository.msg.CorporateActionDate2.mmLapsedDate, com.tools20022.repository.msg.CorporateActionDate44.mmLapsedDate, com.tools20022.repository.msg.CorporateActionDate58.mmLapsedDate);
+			derivation_lazy = () -> Arrays.asList(CorporateActionDate1.mmLapsedDate, CorporateActionDate13.mmLapsedDate, CorporateActionDate14.mmLapsedDate, CorporateActionDate21.mmLapsedDate, CorporateActionDate22.mmLapsedDate,
+					CorporateActionDate25.mmLapsedDate, CorporateActionDate27.mmLapsedDate, CorporateActionDate28.mmLapsedDate, CorporateActionDate2.mmLapsedDate, CorporateActionDate44.mmLapsedDate, CorporateActionDate58.mmLapsedDate);
 			elementContext_lazy = () -> CorporateActionEvent.mmObject();
 			isDerived = false;
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "LapsedDate";
 			definition = "Date/time at which an event/offer is terminated or lapsed.";
 			maxOccurs = 1;
@@ -5207,17 +5025,16 @@ public class CorporateActionEvent {
 	 */
 	public static final MMBusinessAssociationEnd mmBookClosurePeriod = new MMBusinessAssociationEnd() {
 		{
-			derivation_lazy = () -> Arrays.asList(com.tools20022.repository.msg.CorporateActionPeriod3.mmBookClosurePeriod, com.tools20022.repository.msg.CorporateActionPeriod6.mmBookClosurePeriod,
-					com.tools20022.repository.msg.CorporateActionPeriod8.mmBookClosurePeriod, com.tools20022.repository.msg.CorporateActionPeriod10.mmBookClosurePeriod);
+			derivation_lazy = () -> Arrays.asList(CorporateActionPeriod3.mmBookClosurePeriod, CorporateActionPeriod6.mmBookClosurePeriod, CorporateActionPeriod8.mmBookClosurePeriod, CorporateActionPeriod10.mmBookClosurePeriod);
 			elementContext_lazy = () -> CorporateActionEvent.mmObject();
 			isDerived = false;
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "BookClosurePeriod";
 			definition = "Period defining the last date on which shareholder registration will be accepted by the issuer and the date on which shareholder registration will resume.";
 			maxOccurs = 1;
 			minOccurs = 1;
 			opposite_lazy = () -> com.tools20022.repository.entity.DateTimePeriod.mmBookClosureCorporateAction;
-			aggregation = com.tools20022.metamodel.MMAggregation.NONE;
+			aggregation = MMAggregation.NONE;
 			type_lazy = () -> com.tools20022.repository.entity.DateTimePeriod.mmObject();
 		}
 	};
@@ -5295,18 +5112,17 @@ public class CorporateActionEvent {
 	 */
 	public static final MMBusinessAssociationEnd mmSecuritiesQuantity = new MMBusinessAssociationEnd() {
 		{
-			derivation_lazy = () -> Arrays.asList(com.tools20022.repository.msg.CorporateAction3.mmSecuritiesQuantity, com.tools20022.repository.msg.CorporateAction4.mmSecuritiesQuantity,
-					com.tools20022.repository.msg.CorporateAction5.mmSecuritiesQuantity, com.tools20022.repository.msg.CorporateAction6.mmSecuritiesQuantity, com.tools20022.repository.msg.CorporateAction10.mmSecuritiesQuantity,
-					com.tools20022.repository.msg.CorporateAction11.mmSecuritiesQuantity, com.tools20022.repository.msg.CorporateAction12.mmSecuritiesQuantity, com.tools20022.repository.msg.CorporateAction17.mmSecuritiesQuantity,
-					com.tools20022.repository.msg.CorporateAction31.mmSecuritiesQuantity, com.tools20022.repository.msg.CorporateAction40.mmSecuritiesQuantity);
+			derivation_lazy = () -> Arrays.asList(CorporateAction3.mmSecuritiesQuantity, CorporateAction4.mmSecuritiesQuantity, CorporateAction5.mmSecuritiesQuantity, CorporateAction6.mmSecuritiesQuantity,
+					CorporateAction10.mmSecuritiesQuantity, CorporateAction11.mmSecuritiesQuantity, CorporateAction12.mmSecuritiesQuantity, CorporateAction17.mmSecuritiesQuantity, CorporateAction31.mmSecuritiesQuantity,
+					CorporateAction40.mmSecuritiesQuantity);
 			elementContext_lazy = () -> CorporateActionEvent.mmObject();
 			isDerived = false;
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "SecuritiesQuantity";
 			definition = "Provides information about securities quantity linked to a corporate action.";
 			minOccurs = 0;
 			opposite_lazy = () -> com.tools20022.repository.entity.SecuritiesQuantity.mmCorporateActionEvent;
-			aggregation = com.tools20022.metamodel.MMAggregation.NONE;
+			aggregation = MMAggregation.NONE;
 			type_lazy = () -> com.tools20022.repository.entity.SecuritiesQuantity.mmObject();
 		}
 	};
@@ -5389,14 +5205,12 @@ public class CorporateActionEvent {
 	 */
 	public static final MMBusinessAttribute mmRestrictionIndicator = new MMBusinessAttribute() {
 		{
-			derivation_lazy = () -> Arrays.asList(com.tools20022.repository.msg.CorporateAction3.mmRestrictionIndicator, com.tools20022.repository.msg.CorporateAction4.mmRestrictionIndicator,
-					com.tools20022.repository.msg.CorporateAction5.mmRestrictionIndicator, com.tools20022.repository.msg.CorporateAction6.mmRestrictionIndicator, com.tools20022.repository.msg.CorporateAction7.mmRestrictionIndicator,
-					com.tools20022.repository.msg.CorporateAction8.mmRestrictionIndicator, com.tools20022.repository.msg.CorporateAction10.mmRestrictionIndicator, com.tools20022.repository.msg.CorporateAction11.mmRestrictionIndicator,
-					com.tools20022.repository.msg.CorporateAction2.mmRestrictionIndicator, com.tools20022.repository.msg.CorporateAction12.mmRestrictionIndicator, com.tools20022.repository.msg.CorporateAction17.mmRestrictionIndicator,
-					com.tools20022.repository.msg.CorporateAction31.mmRestrictionIndicator, com.tools20022.repository.msg.CorporateAction40.mmRestrictionIndicator);
+			derivation_lazy = () -> Arrays.asList(CorporateAction3.mmRestrictionIndicator, CorporateAction4.mmRestrictionIndicator, CorporateAction5.mmRestrictionIndicator, CorporateAction6.mmRestrictionIndicator,
+					CorporateAction7.mmRestrictionIndicator, CorporateAction8.mmRestrictionIndicator, CorporateAction10.mmRestrictionIndicator, CorporateAction11.mmRestrictionIndicator, CorporateAction2.mmRestrictionIndicator,
+					CorporateAction12.mmRestrictionIndicator, CorporateAction17.mmRestrictionIndicator, CorporateAction31.mmRestrictionIndicator, CorporateAction40.mmRestrictionIndicator);
 			elementContext_lazy = () -> CorporateActionEvent.mmObject();
 			isDerived = false;
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "RestrictionIndicator";
 			definition = "Indicates whether there are legal or other restrictions associated with a rights offer or other corporate event, for example, domicile, citizenship, residency, type of investor.\r\nYes = There are restrictions.\r\nNo = There are no restrictions.";
 			maxOccurs = 1;
@@ -5645,39 +5459,24 @@ public class CorporateActionEvent {
 	 */
 	public static final MMBusinessAttribute mmEventStage = new MMBusinessAttribute() {
 		{
-			derivation_lazy = () -> Arrays.asList(com.tools20022.repository.choice.CorporateActionEventStageFormat1Choice.mmCode, com.tools20022.repository.choice.CorporateActionEventStageFormat1Choice.mmProprietary,
-					com.tools20022.repository.msg.CorporateAction3.mmEventStage, com.tools20022.repository.choice.CorporateActionEventStageFormat2Choice.mmCode,
-					com.tools20022.repository.choice.CorporateActionEventStageFormat2Choice.mmProprietary, com.tools20022.repository.msg.CorporateAction4.mmEventStage,
-					com.tools20022.repository.choice.CorporateActionEventStageFormat3Choice.mmCode, com.tools20022.repository.choice.CorporateActionEventStageFormat3Choice.mmProprietary,
-					com.tools20022.repository.msg.CorporateAction5.mmEventStage, com.tools20022.repository.choice.CorporateActionEventStageFormat4Choice.mmCode,
-					com.tools20022.repository.choice.CorporateActionEventStageFormat4Choice.mmProprietary, com.tools20022.repository.msg.CorporateAction6.mmEventStage, com.tools20022.repository.msg.CorporateAction7.mmEventStage,
-					com.tools20022.repository.msg.CorporateAction8.mmEventStage, com.tools20022.repository.msg.CorporateAction10.mmEventStage, com.tools20022.repository.msg.CorporateAction11.mmEventStage,
-					com.tools20022.repository.choice.CorporateActionEventStage1FormatChoice.mmCode, com.tools20022.repository.choice.CorporateActionEventStage1FormatChoice.mmProprietary,
-					com.tools20022.repository.msg.CorporateAction2.mmEventStage, com.tools20022.repository.choice.CorporateActionEventStage1Choice.mmCode, com.tools20022.repository.choice.CorporateActionEventStage1Choice.mmProprietary,
-					com.tools20022.repository.choice.Status1Choice.mmCorporateActionEventStage, com.tools20022.repository.choice.Status8Choice.mmCorporateActionEventStage,
-					com.tools20022.repository.choice.CorporateActionEventStage2Choice.mmCode, com.tools20022.repository.choice.CorporateActionEventStage2Choice.mmProprietary,
-					com.tools20022.repository.choice.Status3Choice.mmCorporateActionEventStage, com.tools20022.repository.choice.Status10Choice.mmCorporateActionEventStage, com.tools20022.repository.msg.CorporateAction13.mmEventStage,
-					com.tools20022.repository.msg.CorporateAction12.mmEventStage, com.tools20022.repository.choice.CorporateActionEventStageFormat5Choice.mmCode,
-					com.tools20022.repository.choice.CorporateActionEventStageFormat5Choice.mmProprietary, com.tools20022.repository.choice.CorporateActionEventStageFormat6Choice.mmCode,
-					com.tools20022.repository.choice.CorporateActionEventStageFormat6Choice.mmProprietary, com.tools20022.repository.msg.CorporateAction18.mmEventStage, com.tools20022.repository.msg.CorporateAction17.mmEventStage,
-					com.tools20022.repository.choice.CorporateActionEventStageFormat9Choice.mmCode, com.tools20022.repository.choice.CorporateActionEventStageFormat9Choice.mmProprietary,
-					com.tools20022.repository.choice.CorporateActionEventStageFormat10Choice.mmCode, com.tools20022.repository.choice.CorporateActionEventStageFormat10Choice.mmProprietary,
-					com.tools20022.repository.msg.CorporateAction24.mmEventStage, com.tools20022.repository.msg.CorporateAction30.mmEventStage, com.tools20022.repository.msg.CorporateAction28.mmEventStage,
-					com.tools20022.repository.msg.CorporateAction29.mmEventStage, com.tools20022.repository.choice.CorporateActionEventStageFormat12Choice.mmCode,
-					com.tools20022.repository.choice.CorporateActionEventStageFormat12Choice.mmProprietary, com.tools20022.repository.choice.CorporateActionEventStageFormat11Choice.mmCode,
-					com.tools20022.repository.choice.CorporateActionEventStageFormat11Choice.mmProprietary, com.tools20022.repository.choice.Status19Choice.mmCorporateActionEventStage,
-					com.tools20022.repository.choice.CorporateActionEventStage3Choice.mmCode, com.tools20022.repository.choice.CorporateActionEventStage3Choice.mmProprietary, com.tools20022.repository.msg.CorporateAction33.mmEventStage,
-					com.tools20022.repository.msg.CorporateAction32.mmEventStage, com.tools20022.repository.msg.CorporateAction31.mmEventStage, com.tools20022.repository.choice.CorporateActionEventStageFormat14Choice.mmCode,
-					com.tools20022.repository.choice.CorporateActionEventStageFormat14Choice.mmProprietary, com.tools20022.repository.choice.CorporateActionEventStageFormat13Choice.mmCode,
-					com.tools20022.repository.choice.CorporateActionEventStageFormat13Choice.mmProprietary, com.tools20022.repository.msg.CorporateAction34.mmEventStage, com.tools20022.repository.msg.CorporateAction35.mmEventStage,
-					com.tools20022.repository.msg.CorporateAction36.mmEventStage, com.tools20022.repository.msg.CorporateAction38.mmEventStage, com.tools20022.repository.msg.CorporateAction40.mmEventStage,
-					com.tools20022.repository.choice.CorporateActionEventStageFormat15Choice.mmCode, com.tools20022.repository.choice.CorporateActionEventStageFormat15Choice.mmProprietary,
-					com.tools20022.repository.choice.CorporateActionEventStageFormat20Choice.mmCode, com.tools20022.repository.choice.CorporateActionEventStageFormat20Choice.mmProprietary,
-					com.tools20022.repository.choice.Status22Choice.mmCorporateActionEventStage, com.tools20022.repository.choice.CorporateActionEventStage4Choice.mmCode,
-					com.tools20022.repository.choice.CorporateActionEventStage4Choice.mmProprietary);
+			derivation_lazy = () -> Arrays.asList(CorporateActionEventStageFormat1Choice.mmCode, CorporateActionEventStageFormat1Choice.mmProprietary, CorporateAction3.mmEventStage, CorporateActionEventStageFormat2Choice.mmCode,
+					CorporateActionEventStageFormat2Choice.mmProprietary, CorporateAction4.mmEventStage, CorporateActionEventStageFormat3Choice.mmCode, CorporateActionEventStageFormat3Choice.mmProprietary, CorporateAction5.mmEventStage,
+					CorporateActionEventStageFormat4Choice.mmCode, CorporateActionEventStageFormat4Choice.mmProprietary, CorporateAction6.mmEventStage, CorporateAction7.mmEventStage, CorporateAction8.mmEventStage,
+					CorporateAction10.mmEventStage, CorporateAction11.mmEventStage, CorporateActionEventStage1FormatChoice.mmCode, CorporateActionEventStage1FormatChoice.mmProprietary, CorporateAction2.mmEventStage,
+					CorporateActionEventStage1Choice.mmCode, CorporateActionEventStage1Choice.mmProprietary, Status1Choice.mmCorporateActionEventStage, Status8Choice.mmCorporateActionEventStage, CorporateActionEventStage2Choice.mmCode,
+					CorporateActionEventStage2Choice.mmProprietary, Status3Choice.mmCorporateActionEventStage, Status10Choice.mmCorporateActionEventStage, CorporateAction13.mmEventStage, CorporateAction12.mmEventStage,
+					CorporateActionEventStageFormat5Choice.mmCode, CorporateActionEventStageFormat5Choice.mmProprietary, CorporateActionEventStageFormat6Choice.mmCode, CorporateActionEventStageFormat6Choice.mmProprietary,
+					CorporateAction18.mmEventStage, CorporateAction17.mmEventStage, CorporateActionEventStageFormat9Choice.mmCode, CorporateActionEventStageFormat9Choice.mmProprietary, CorporateActionEventStageFormat10Choice.mmCode,
+					CorporateActionEventStageFormat10Choice.mmProprietary, CorporateAction24.mmEventStage, CorporateAction30.mmEventStage, CorporateAction28.mmEventStage, CorporateAction29.mmEventStage,
+					CorporateActionEventStageFormat12Choice.mmCode, CorporateActionEventStageFormat12Choice.mmProprietary, CorporateActionEventStageFormat11Choice.mmCode, CorporateActionEventStageFormat11Choice.mmProprietary,
+					Status19Choice.mmCorporateActionEventStage, CorporateActionEventStage3Choice.mmCode, CorporateActionEventStage3Choice.mmProprietary, CorporateAction33.mmEventStage, CorporateAction32.mmEventStage,
+					CorporateAction31.mmEventStage, CorporateActionEventStageFormat14Choice.mmCode, CorporateActionEventStageFormat14Choice.mmProprietary, CorporateActionEventStageFormat13Choice.mmCode,
+					CorporateActionEventStageFormat13Choice.mmProprietary, CorporateAction34.mmEventStage, CorporateAction35.mmEventStage, CorporateAction36.mmEventStage, CorporateAction38.mmEventStage, CorporateAction40.mmEventStage,
+					CorporateActionEventStageFormat15Choice.mmCode, CorporateActionEventStageFormat15Choice.mmProprietary, CorporateActionEventStageFormat20Choice.mmCode, CorporateActionEventStageFormat20Choice.mmProprietary,
+					Status22Choice.mmCorporateActionEventStage, CorporateActionEventStage4Choice.mmCode, CorporateActionEventStage4Choice.mmProprietary);
 			elementContext_lazy = () -> CorporateActionEvent.mmObject();
 			isDerived = false;
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "EventStage";
 			definition = "Stage in the corporate action event life cycle.";
 			maxOccurs = 1;
@@ -5742,16 +5541,15 @@ public class CorporateActionEvent {
 	 */
 	public static final MMBusinessAssociationEnd mmDocumentationLocation = new MMBusinessAssociationEnd() {
 		{
-			derivation_lazy = () -> Arrays.asList(com.tools20022.repository.msg.CorporateActionNarrative24.mmURLAddress, com.tools20022.repository.msg.CorporateActionNarrative25.mmURLAddress,
-					com.tools20022.repository.msg.CorporateActionNarrative26.mmURLAddress, com.tools20022.repository.msg.CorporateActionNarrative39.mmURLAddress);
+			derivation_lazy = () -> Arrays.asList(CorporateActionNarrative24.mmURLAddress, CorporateActionNarrative25.mmURLAddress, CorporateActionNarrative26.mmURLAddress, CorporateActionNarrative39.mmURLAddress);
 			elementContext_lazy = () -> CorporateActionEvent.mmObject();
 			isDerived = false;
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "DocumentationLocation";
 			definition = "Information on where additional information published for the event, can be received. for instance the address for the Universal Resource Locator (URL), eg, used over the www (HTTP) service.";
 			minOccurs = 0;
 			opposite_lazy = () -> com.tools20022.repository.entity.ContactPoint.mmRelatedCorporateActionEvent;
-			aggregation = com.tools20022.metamodel.MMAggregation.NONE;
+			aggregation = MMAggregation.NONE;
 			type_lazy = () -> com.tools20022.repository.entity.ContactPoint.mmObject();
 		}
 	};
@@ -5802,16 +5600,16 @@ public class CorporateActionEvent {
 	 */
 	public static final MMBusinessAssociationEnd mmSecuritiesQuantitySought = new MMBusinessAssociationEnd() {
 		{
-			derivation_lazy = () -> Arrays.asList(com.tools20022.repository.msg.CorporateAction2.mmSecuritiesQuantitySought);
+			derivation_lazy = () -> Arrays.asList(CorporateAction2.mmSecuritiesQuantitySought);
 			elementContext_lazy = () -> CorporateActionEvent.mmObject();
 			isDerived = false;
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "SecuritiesQuantitySought";
 			definition = "Quantity of securities the offeror/issuer will purchase or redeem under the terms of the event. This can be a number or the term \"any and all\".";
 			maxOccurs = 1;
 			minOccurs = 1;
 			opposite_lazy = () -> com.tools20022.repository.entity.SecuritiesQuantity.mmRelatedCorporateActionEvent;
-			aggregation = com.tools20022.metamodel.MMAggregation.NONE;
+			aggregation = MMAggregation.NONE;
 			type_lazy = () -> com.tools20022.repository.entity.SecuritiesQuantity.mmObject();
 		}
 	};
@@ -5856,10 +5654,10 @@ public class CorporateActionEvent {
 	 */
 	public static final MMBusinessAttribute mmPartialElectionIndicator = new MMBusinessAttribute() {
 		{
-			derivation_lazy = () -> Arrays.asList(com.tools20022.repository.msg.CorporateAction2.mmPartialElectionIndicator);
+			derivation_lazy = () -> Arrays.asList(CorporateAction2.mmPartialElectionIndicator);
 			elementContext_lazy = () -> CorporateActionEvent.mmObject();
 			isDerived = false;
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "PartialElectionIndicator";
 			definition = "Specifies if the issuer will allow the agent to accept partial elections. It is to allow split voting over options. It allows the client to elect more than one option to be selected per designated holding.";
 			maxOccurs = 1;
@@ -5909,13 +5707,13 @@ public class CorporateActionEvent {
 		{
 			elementContext_lazy = () -> CorporateActionEvent.mmObject();
 			isDerived = false;
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "CorporateActionPartyRole";
 			definition = "Specifies the role played by a party in the context of a corporate action.";
 			maxOccurs = 1;
 			minOccurs = 1;
 			opposite_lazy = () -> com.tools20022.repository.entity.CorporateActionPartyRole.mmCorporateActionEvent;
-			aggregation = com.tools20022.metamodel.MMAggregation.NONE;
+			aggregation = MMAggregation.NONE;
 			type_lazy = () -> com.tools20022.repository.entity.CorporateActionPartyRole.mmObject();
 		}
 	};
@@ -5957,12 +5755,12 @@ public class CorporateActionEvent {
 		{
 			elementContext_lazy = () -> CorporateActionEvent.mmObject();
 			isDerived = false;
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "MarketClaim";
 			definition = "Market claim information.";
 			minOccurs = 0;
 			opposite_lazy = () -> com.tools20022.repository.entity.MarketClaim.mmRelatedCorporateEvent;
-			aggregation = com.tools20022.metamodel.MMAggregation.NONE;
+			aggregation = MMAggregation.NONE;
 			type_lazy = () -> com.tools20022.repository.entity.MarketClaim.mmObject();
 		}
 	};
@@ -6007,13 +5805,13 @@ public class CorporateActionEvent {
 		{
 			elementContext_lazy = () -> CorporateActionEvent.mmObject();
 			isDerived = false;
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "BiddingConditions";
 			definition = "Specifies the conditions under which securities can be acquired as part of a corporate action.";
 			maxOccurs = 1;
 			minOccurs = 0;
 			opposite_lazy = () -> com.tools20022.repository.entity.BiddingConditions.mmEvent;
-			aggregation = com.tools20022.metamodel.MMAggregation.NONE;
+			aggregation = MMAggregation.NONE;
 			type_lazy = () -> com.tools20022.repository.entity.BiddingConditions.mmObject();
 		}
 	};
@@ -6056,12 +5854,12 @@ public class CorporateActionEvent {
 		{
 			elementContext_lazy = () -> CorporateActionEvent.mmObject();
 			isDerived = false;
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "RelatedClassAction";
 			definition = "Specifies the underlying class action related to the event.";
 			minOccurs = 0;
 			opposite_lazy = () -> com.tools20022.repository.entity.ClassAction.mmCorporateEvent;
-			aggregation = com.tools20022.metamodel.MMAggregation.NONE;
+			aggregation = MMAggregation.NONE;
 			type_lazy = () -> com.tools20022.repository.entity.ClassAction.mmObject();
 		}
 	};
@@ -6104,12 +5902,12 @@ public class CorporateActionEvent {
 		{
 			elementContext_lazy = () -> CorporateActionEvent.mmObject();
 			isDerived = false;
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "CorporateActionEventRegistration";
 			definition = "Official registration of the event.";
 			minOccurs = 0;
 			opposite_lazy = () -> com.tools20022.repository.entity.CorporateActionEventRegistration.mmCorporateActionEvent;
-			aggregation = com.tools20022.metamodel.MMAggregation.NONE;
+			aggregation = MMAggregation.NONE;
 			type_lazy = () -> com.tools20022.repository.entity.CorporateActionEventRegistration.mmObject();
 		}
 	};
@@ -6155,13 +5953,13 @@ public class CorporateActionEvent {
 		{
 			elementContext_lazy = () -> CorporateActionEvent.mmObject();
 			isDerived = false;
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "SuspensionPeriod";
 			definition = "Period defining the last date for which an action will be accepted and the date on which the suspension will be released and normal processing will resume.";
 			maxOccurs = 1;
 			minOccurs = 0;
 			opposite_lazy = () -> com.tools20022.repository.entity.SuspensionPeriod.mmCorporateActionEvent;
-			aggregation = com.tools20022.metamodel.MMAggregation.NONE;
+			aggregation = MMAggregation.NONE;
 			type_lazy = () -> com.tools20022.repository.entity.SuspensionPeriod.mmObject();
 		}
 	};
@@ -6206,13 +6004,13 @@ public class CorporateActionEvent {
 		{
 			elementContext_lazy = () -> CorporateActionEvent.mmObject();
 			isDerived = false;
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "Lottery";
 			definition = "Organisation of draws for cash prizes on bonds (instead of coupon payments). Every issued bond (similar to a lottery ticket) has an equal opportunity at winning payments in the draws.";
 			maxOccurs = 1;
 			minOccurs = 0;
 			opposite_lazy = () -> com.tools20022.repository.entity.Lottery.mmRelatedCorporateEvent;
-			aggregation = com.tools20022.metamodel.MMAggregation.NONE;
+			aggregation = MMAggregation.NONE;
 			type_lazy = () -> com.tools20022.repository.entity.Lottery.mmObject();
 		}
 	};
@@ -6247,7 +6045,7 @@ public class CorporateActionEvent {
 		{
 			elementContext_lazy = () -> CorporateActionEvent.mmObject();
 			isDerived = false;
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "MarginType";
 			definition = "Specifies the margin type for a remarketing procedure.";
 			maxOccurs = 1;
@@ -6293,12 +6091,12 @@ public class CorporateActionEvent {
 		{
 			elementContext_lazy = () -> CorporateActionEvent.mmObject();
 			isDerived = false;
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "RelatedMeeting";
 			definition = "Provides information on the meeting  related to the corporate event.";
 			minOccurs = 0;
 			opposite_lazy = () -> com.tools20022.repository.entity.Meeting.mmCorporateEvent;
-			aggregation = com.tools20022.metamodel.MMAggregation.NONE;
+			aggregation = MMAggregation.NONE;
 			type_lazy = () -> com.tools20022.repository.entity.Meeting.mmObject();
 		}
 	};
@@ -6342,12 +6140,12 @@ public class CorporateActionEvent {
 		{
 			elementContext_lazy = () -> CorporateActionEvent.mmObject();
 			isDerived = false;
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "Services";
 			definition = "Specifies the different services linked to a corporate action event.";
 			minOccurs = 0;
 			opposite_lazy = () -> com.tools20022.repository.entity.CorporateActionServicing.mmEvent;
-			aggregation = com.tools20022.metamodel.MMAggregation.NONE;
+			aggregation = MMAggregation.NONE;
 			type_lazy = () -> com.tools20022.repository.entity.CorporateActionServicing.mmObject();
 		}
 	};
@@ -6391,12 +6189,12 @@ public class CorporateActionEvent {
 		{
 			elementContext_lazy = () -> CorporateActionEvent.mmObject();
 			isDerived = false;
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "Issuance";
 			definition = "Information specified when the corporate event relates to the issuance of securities.";
 			minOccurs = 0;
 			opposite_lazy = () -> com.tools20022.repository.entity.Issuance.mmEventInformation;
-			aggregation = com.tools20022.metamodel.MMAggregation.NONE;
+			aggregation = MMAggregation.NONE;
 			type_lazy = () -> com.tools20022.repository.entity.Issuance.mmObject();
 		}
 	};
@@ -6442,12 +6240,12 @@ public class CorporateActionEvent {
 		{
 			elementContext_lazy = () -> CorporateActionEvent.mmObject();
 			isDerived = false;
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "SecuritiesModification";
 			definition = "Modification of the reference data of a security or of the organisation that issued it.";
 			minOccurs = 0;
 			opposite_lazy = () -> com.tools20022.repository.entity.SecuritiesModification.mmRelatedCorporateEvent;
-			aggregation = com.tools20022.metamodel.MMAggregation.NONE;
+			aggregation = MMAggregation.NONE;
 			type_lazy = () -> com.tools20022.repository.entity.SecuritiesModification.mmObject();
 		}
 	};
@@ -6586,27 +6384,22 @@ public class CorporateActionEvent {
 	 */
 	public static final MMBusinessAssociationEnd mmTradingPeriod = new MMBusinessAssociationEnd() {
 		{
-			derivation_lazy = () -> Arrays.asList(com.tools20022.repository.msg.SecuritiesOption4.mmTradingPeriod, com.tools20022.repository.msg.SecuritiesOption10.mmTradingPeriod,
-					com.tools20022.repository.msg.SecuritiesOption13.mmTradingPeriod, com.tools20022.repository.msg.SecuritiesOption17.mmTradingPeriod, com.tools20022.repository.msg.SecuritiesOption24.mmTradingPeriod,
-					com.tools20022.repository.msg.SecuritiesOption29.mmTradingPeriod, com.tools20022.repository.msg.SecuritiesOption33.mmTradingPeriod, com.tools20022.repository.msg.SecuritiesOption38.mmTradingPeriod,
-					com.tools20022.repository.msg.SecuritiesOption37.mmTradingPeriod, com.tools20022.repository.msg.SecuritiesOption39.mmTradingPeriod, com.tools20022.repository.msg.FinancialInstrumentAttributes3.mmTradingPeriod,
-					com.tools20022.repository.msg.SecuritiesOption6.mmTradingPeriod, com.tools20022.repository.msg.FinancialInstrumentAttributes12.mmTradingPeriod, com.tools20022.repository.msg.SecuritiesOption12.mmTradingPeriod,
-					com.tools20022.repository.msg.FinancialInstrumentAttributes17.mmTradingPeriod, com.tools20022.repository.msg.SecuritiesOption14.mmTradingPeriod,
-					com.tools20022.repository.msg.FinancialInstrumentAttributes25.mmTradingPeriod, com.tools20022.repository.msg.SecuritiesOption22.mmTradingPeriod, com.tools20022.repository.msg.SecuritiesOption25.mmTradingPeriod,
-					com.tools20022.repository.msg.SecuritiesOption30.mmTradingPeriod, com.tools20022.repository.msg.FinancialInstrumentAttributes46.mmTradingPeriod,
-					com.tools20022.repository.msg.FinancialInstrumentAttributes47.mmTradingPeriod, com.tools20022.repository.msg.SecurityOption1.mmTradingPeriod, com.tools20022.repository.msg.SecuritiesOption40.mmTradingPeriod,
-					com.tools20022.repository.msg.SecuritiesOption45.mmTradingPeriod, com.tools20022.repository.msg.FinancialInstrumentAttributes68.mmTradingPeriod, com.tools20022.repository.msg.SecuritiesOption49.mmTradingPeriod,
-					com.tools20022.repository.msg.FinancialInstrumentAttributes73.mmTradingPeriod, com.tools20022.repository.msg.SecuritiesOption57.mmTradingPeriod, com.tools20022.repository.msg.SecuritiesOption59.mmTradingPeriod,
-					com.tools20022.repository.msg.SecuritiesOption61.mmTradingPeriod);
+			derivation_lazy = () -> Arrays.asList(SecuritiesOption4.mmTradingPeriod, SecuritiesOption10.mmTradingPeriod, SecuritiesOption13.mmTradingPeriod, SecuritiesOption17.mmTradingPeriod, SecuritiesOption24.mmTradingPeriod,
+					SecuritiesOption29.mmTradingPeriod, SecuritiesOption33.mmTradingPeriod, SecuritiesOption38.mmTradingPeriod, SecuritiesOption37.mmTradingPeriod, SecuritiesOption39.mmTradingPeriod,
+					FinancialInstrumentAttributes3.mmTradingPeriod, SecuritiesOption6.mmTradingPeriod, FinancialInstrumentAttributes12.mmTradingPeriod, SecuritiesOption12.mmTradingPeriod, FinancialInstrumentAttributes17.mmTradingPeriod,
+					SecuritiesOption14.mmTradingPeriod, FinancialInstrumentAttributes25.mmTradingPeriod, SecuritiesOption22.mmTradingPeriod, SecuritiesOption25.mmTradingPeriod, SecuritiesOption30.mmTradingPeriod,
+					FinancialInstrumentAttributes46.mmTradingPeriod, FinancialInstrumentAttributes47.mmTradingPeriod, SecurityOption1.mmTradingPeriod, SecuritiesOption40.mmTradingPeriod, SecuritiesOption45.mmTradingPeriod,
+					FinancialInstrumentAttributes68.mmTradingPeriod, SecuritiesOption49.mmTradingPeriod, FinancialInstrumentAttributes73.mmTradingPeriod, SecuritiesOption57.mmTradingPeriod, SecuritiesOption59.mmTradingPeriod,
+					SecuritiesOption61.mmTradingPeriod);
 			elementContext_lazy = () -> CorporateActionEvent.mmObject();
 			isDerived = false;
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "TradingPeriod";
 			definition = "Period during which a financial instrument is available for trading.";
 			maxOccurs = 1;
 			minOccurs = 1;
 			opposite_lazy = () -> com.tools20022.repository.entity.DateTimePeriod.mmRelatedCorporateAction;
-			aggregation = com.tools20022.metamodel.MMAggregation.NONE;
+			aggregation = MMAggregation.NONE;
 			type_lazy = () -> com.tools20022.repository.entity.DateTimePeriod.mmObject();
 		}
 	};
@@ -6674,19 +6467,18 @@ public class CorporateActionEvent {
 	 */
 	public static final MMBusinessAssociationEnd mmTransactionTax = new MMBusinessAssociationEnd() {
 		{
-			derivation_lazy = () -> Arrays.asList(com.tools20022.repository.msg.CorporateActionRate48.mmFinancialTransactionTaxRate, com.tools20022.repository.msg.CorporateActionRate49.mmFinancialTransactionTaxRate,
-					com.tools20022.repository.msg.CorporateActionRate58.mmFinancialTransactionTaxRate, com.tools20022.repository.msg.CorporateActionRate65.mmFinancialTransactionTaxRate,
-					com.tools20022.repository.msg.CorporateActionRate69.mmFinancialTransactionTaxRate, com.tools20022.repository.msg.CorporateActionRate72.mmFinancialTransactionTaxRate,
-					com.tools20022.repository.msg.CorporateActionRate77.mmFinancialTransactionTaxRate, com.tools20022.repository.msg.CorporateActionRate75.mmFinancialTransactionTaxRate);
+			derivation_lazy = () -> Arrays.asList(CorporateActionRate48.mmFinancialTransactionTaxRate, CorporateActionRate49.mmFinancialTransactionTaxRate, CorporateActionRate58.mmFinancialTransactionTaxRate,
+					CorporateActionRate65.mmFinancialTransactionTaxRate, CorporateActionRate69.mmFinancialTransactionTaxRate, CorporateActionRate72.mmFinancialTransactionTaxRate, CorporateActionRate77.mmFinancialTransactionTaxRate,
+					CorporateActionRate75.mmFinancialTransactionTaxRate);
 			elementContext_lazy = () -> CorporateActionEvent.mmObject();
 			isDerived = false;
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "TransactionTax";
 			definition = "Tax rate of financial transactions related to an event.";
 			maxOccurs = 1;
 			minOccurs = 1;
 			opposite_lazy = () -> com.tools20022.repository.entity.Tax.mmCorporateActionEvent;
-			aggregation = com.tools20022.metamodel.MMAggregation.NONE;
+			aggregation = MMAggregation.NONE;
 			type_lazy = () -> com.tools20022.repository.entity.Tax.mmObject();
 		}
 	};
@@ -6764,14 +6556,12 @@ public class CorporateActionEvent {
 	 */
 	public static final MMBusinessAttribute mmConsentType = new MMBusinessAttribute() {
 		{
-			derivation_lazy = () -> Arrays.asList(com.tools20022.repository.msg.CorporateAction12.mmConsentType, com.tools20022.repository.choice.ConsentTypeFormat1Choice.mmCode,
-					com.tools20022.repository.choice.ConsentTypeFormat1Choice.mmProprietary, com.tools20022.repository.msg.CorporateAction17.mmConsentType, com.tools20022.repository.choice.ConsentTypeFormat3Choice.mmCode,
-					com.tools20022.repository.choice.ConsentTypeFormat3Choice.mmProprietary, com.tools20022.repository.msg.CorporateAction31.mmConsentType, com.tools20022.repository.choice.ConsentTypeFormat4Choice.mmCode,
-					com.tools20022.repository.choice.ConsentTypeFormat4Choice.mmProprietary, com.tools20022.repository.msg.CorporateAction40.mmConsentType, com.tools20022.repository.choice.ConsentTypeFormat5Choice.mmCode,
-					com.tools20022.repository.choice.ConsentTypeFormat5Choice.mmProprietary);
+			derivation_lazy = () -> Arrays.asList(CorporateAction12.mmConsentType, ConsentTypeFormat1Choice.mmCode, ConsentTypeFormat1Choice.mmProprietary, CorporateAction17.mmConsentType, ConsentTypeFormat3Choice.mmCode,
+					ConsentTypeFormat3Choice.mmProprietary, CorporateAction31.mmConsentType, ConsentTypeFormat4Choice.mmCode, ConsentTypeFormat4Choice.mmProprietary, CorporateAction40.mmConsentType, ConsentTypeFormat5Choice.mmCode,
+					ConsentTypeFormat5Choice.mmProprietary);
 			elementContext_lazy = () -> CorporateActionEvent.mmObject();
 			isDerived = false;
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "ConsentType";
 			definition = "Corporate actions may be approved by shareholders without a meeting or a vote by means of execution of a consent by a majority of shareholders entitled to vote.";
 			maxOccurs = 1;
@@ -6817,13 +6607,13 @@ public class CorporateActionEvent {
 		{
 			elementContext_lazy = () -> CorporateActionEvent.mmObject();
 			isDerived = false;
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "ProceedsDefinition";
 			definition = "Specifies the proceeds of a corporate action.";
 			maxOccurs = 1;
 			minOccurs = 1;
 			opposite_lazy = () -> com.tools20022.repository.entity.ProceedsDefinition.mmCorporateAction;
-			aggregation = com.tools20022.metamodel.MMAggregation.NONE;
+			aggregation = MMAggregation.NONE;
 			type_lazy = () -> com.tools20022.repository.entity.ProceedsDefinition.mmObject();
 		}
 	};
@@ -6831,8 +6621,8 @@ public class CorporateActionEvent {
 	static public MMBusinessComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMBusinessComponent() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "CorporateActionEvent";
 				definition = "An event determined by a corporation's board of directors, that changes the existing corporate capital structure or financial condition.";
 				associationDomain_lazy = () -> Arrays.asList(com.tools20022.repository.entity.Security.mmCorporateEvent, com.tools20022.repository.entity.ContactPoint.mmRelatedCorporateActionEvent,
@@ -6846,67 +6636,37 @@ public class CorporateActionEvent {
 						com.tools20022.repository.entity.Deadline.mmRelatedCorporateActionEvent, com.tools20022.repository.entity.CorporateActionFeesAndCharges.mmCorporateAction,
 						com.tools20022.repository.entity.MarketClaim.mmRelatedCorporateEvent, com.tools20022.repository.entity.SuspensionPeriod.mmCorporateActionEvent, com.tools20022.repository.entity.Lottery.mmRelatedCorporateEvent,
 						com.tools20022.repository.entity.Meeting.mmCorporateEvent, com.tools20022.repository.entity.CorporateActionPartyRole.mmCorporateActionEvent);
-				derivationElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.CorporateActionEventAndBalance1.mmGeneralInformation, com.tools20022.repository.msg.CorporateActionEventAndBalance2.mmGeneralInformation,
-						com.tools20022.repository.msg.CorporateActionEventAndBalance3.mmGeneralInformation, com.tools20022.repository.msg.CorporateActionEventAndBalance4.mmGeneralInformation,
-						com.tools20022.repository.msg.CorporateActionEventAndBalance5.mmGeneralInformation, com.tools20022.repository.msg.CorporateActionEventAndBalance6.mmGeneralInformation,
-						com.tools20022.repository.msg.CorporateActionEventAndBalance7.mmGeneralInformation, com.tools20022.repository.msg.CorporateActionEventAndBalance8.mmGeneralInformation,
-						com.tools20022.repository.msg.SecuritiesOption3.mmRateDetails, com.tools20022.repository.msg.SecuritiesOption8.mmRateDetails, com.tools20022.repository.msg.SecuritiesOption18.mmRateDetails,
-						com.tools20022.repository.msg.SecuritiesOption20.mmRateDetails, com.tools20022.repository.msg.SecuritiesOption26.mmRateDetails, com.tools20022.repository.msg.SecuritiesOption31.mmRateDetails,
-						com.tools20022.repository.msg.SecuritiesOption35.mmRateDetails, com.tools20022.repository.msg.SecuritiesOption36.mmRateDetails, com.tools20022.repository.msg.SecuritiesOption4.mmRateDetails,
-						com.tools20022.repository.msg.SecuritiesOption10.mmRateDetails, com.tools20022.repository.msg.SecuritiesOption13.mmRateDetails, com.tools20022.repository.msg.SecuritiesOption17.mmRateDetails,
-						com.tools20022.repository.msg.SecuritiesOption24.mmRateDetails, com.tools20022.repository.msg.SecuritiesOption29.mmRateDetails, com.tools20022.repository.msg.SecuritiesOption33.mmRateDetails,
-						com.tools20022.repository.msg.SecuritiesOption38.mmRateDetails, com.tools20022.repository.msg.SecuritiesOption37.mmRateDetails, com.tools20022.repository.msg.SecuritiesOption39.mmRateDetails,
-						com.tools20022.repository.msg.CorporateAction3.mmDateDetails, com.tools20022.repository.msg.CorporateAction3.mmPeriodDetails, com.tools20022.repository.msg.CorporateAction3.mmRateAndAmountDetails,
-						com.tools20022.repository.msg.SecuritiesOption6.mmRateDetails, com.tools20022.repository.msg.CorporateAction4.mmDateDetails, com.tools20022.repository.msg.CorporateAction4.mmPeriodDetails,
-						com.tools20022.repository.msg.CorporateAction4.mmRateAndAmountDetails, com.tools20022.repository.msg.SecuritiesOption12.mmRateDetails, com.tools20022.repository.msg.CorporateAction5.mmDateDetails,
-						com.tools20022.repository.msg.CorporateAction5.mmPeriodDetails, com.tools20022.repository.msg.CorporateAction5.mmRateAndAmountDetails, com.tools20022.repository.msg.SecuritiesOption14.mmRateDetails,
-						com.tools20022.repository.msg.CorporateAction6.mmDateDetails, com.tools20022.repository.msg.CorporateAction6.mmPeriodDetails, com.tools20022.repository.msg.CorporateAction6.mmRateAndAmountDetails,
-						com.tools20022.repository.msg.SecuritiesOption22.mmRateDetails, com.tools20022.repository.msg.CorporateAction7.mmDateDetails, com.tools20022.repository.msg.CorporateAction7.mmPeriodDetails,
-						com.tools20022.repository.msg.CorporateAction7.mmRateAndAmountDetails, com.tools20022.repository.msg.SecuritiesOption25.mmRateDetails, com.tools20022.repository.msg.CorporateAction8.mmDateDetails,
-						com.tools20022.repository.msg.CorporateAction8.mmPeriodDetails, com.tools20022.repository.msg.CorporateAction8.mmRateAndAmountDetails, com.tools20022.repository.msg.SecuritiesOption30.mmRateDetails,
-						com.tools20022.repository.msg.CorporateAction10.mmDateDetails, com.tools20022.repository.msg.CorporateAction10.mmPeriodDetails, com.tools20022.repository.msg.CorporateAction10.mmRateAndAmountDetails,
-						com.tools20022.repository.msg.CorporateAction11.mmDateDetails, com.tools20022.repository.msg.CorporateAction11.mmPeriodDetails, com.tools20022.repository.msg.CorporateAction11.mmRateAndAmountDetails,
-						com.tools20022.repository.msg.CorporateAction2.mmDateDetails, com.tools20022.repository.msg.CorporateAction2.mmPeriodDetails, com.tools20022.repository.msg.CorporateAction2.mmRateAndAmountDetails,
-						com.tools20022.repository.msg.CorporateAction13.mmDateDetails, com.tools20022.repository.msg.CorporateAction12.mmDateDetails, com.tools20022.repository.msg.CorporateAction12.mmPeriodDetails,
-						com.tools20022.repository.msg.CorporateAction12.mmRateAndAmountDetails, com.tools20022.repository.msg.CorporateAction14.mmDateDetails, com.tools20022.repository.msg.SecuritiesOption42.mmRateDetails,
-						com.tools20022.repository.msg.SecuritiesOption40.mmRateDetails, com.tools20022.repository.msg.CorporateAction20.mmDateDetails, com.tools20022.repository.msg.CorporateAction18.mmDateDetails,
-						com.tools20022.repository.msg.CorporateAction17.mmDateDetails, com.tools20022.repository.msg.CorporateAction17.mmPeriodDetails, com.tools20022.repository.msg.CorporateAction17.mmRateAndAmountDetails,
-						com.tools20022.repository.msg.SecuritiesOption48.mmRateDetails, com.tools20022.repository.msg.SecuritiesOption45.mmRateDetails, com.tools20022.repository.msg.CorporateActionSD12.mmEventStage,
-						com.tools20022.repository.msg.CorporateAction24.mmDateDetails, com.tools20022.repository.msg.CorporateAction30.mmDateDetails, com.tools20022.repository.msg.CorporateAction28.mmDateDetails,
-						com.tools20022.repository.msg.CorporateAction29.mmDateDetails, com.tools20022.repository.msg.CorporateAction33.mmDateDetails, com.tools20022.repository.msg.CorporateAction32.mmDateDetails,
-						com.tools20022.repository.msg.CorporateAction31.mmDateDetails, com.tools20022.repository.msg.CorporateAction31.mmPeriodDetails, com.tools20022.repository.msg.CorporateAction31.mmRateAndAmountDetails,
-						com.tools20022.repository.msg.SecuritiesOption49.mmRateDetails, com.tools20022.repository.msg.CorporateActionEventAndBalance9.mmGeneralInformation, com.tools20022.repository.msg.SecuritiesOption50.mmRateDetails,
-						com.tools20022.repository.msg.CorporateAction34.mmDateDetails, com.tools20022.repository.msg.CorporateAction35.mmDateDetails, com.tools20022.repository.msg.CorporateAction36.mmDateDetails,
-						com.tools20022.repository.msg.CorporateAction38.mmDateDetails, com.tools20022.repository.msg.CorporateAction40.mmDateDetails, com.tools20022.repository.msg.CorporateAction40.mmPeriodDetails,
-						com.tools20022.repository.msg.CorporateAction40.mmRateAndAmountDetails, com.tools20022.repository.msg.SecuritiesOption55.mmRateDetails, com.tools20022.repository.msg.SecuritiesOption57.mmRateDetails,
-						com.tools20022.repository.msg.CorporateActionEventAndBalance10.mmGeneralInformation, com.tools20022.repository.msg.SecuritiesOption60.mmRateDetails, com.tools20022.repository.msg.SecuritiesOption59.mmRateDetails,
-						com.tools20022.repository.msg.CorporateActionEventAndBalance11.mmGeneralInformation, com.tools20022.repository.msg.SecuritiesOption61.mmRateDetails,
-						com.tools20022.repository.msg.CorporateActionEventAndBalance12.mmGeneralInformation, com.tools20022.repository.msg.SecuritiesOption63.mmRateDetails);
+				derivationElement_lazy = () -> Arrays.asList(CorporateActionEventAndBalance1.mmGeneralInformation, CorporateActionEventAndBalance2.mmGeneralInformation, CorporateActionEventAndBalance3.mmGeneralInformation,
+						CorporateActionEventAndBalance4.mmGeneralInformation, CorporateActionEventAndBalance5.mmGeneralInformation, CorporateActionEventAndBalance6.mmGeneralInformation, CorporateActionEventAndBalance7.mmGeneralInformation,
+						CorporateActionEventAndBalance8.mmGeneralInformation, SecuritiesOption3.mmRateDetails, SecuritiesOption8.mmRateDetails, SecuritiesOption18.mmRateDetails, SecuritiesOption20.mmRateDetails,
+						SecuritiesOption26.mmRateDetails, SecuritiesOption31.mmRateDetails, SecuritiesOption35.mmRateDetails, SecuritiesOption36.mmRateDetails, SecuritiesOption4.mmRateDetails, SecuritiesOption10.mmRateDetails,
+						SecuritiesOption13.mmRateDetails, SecuritiesOption17.mmRateDetails, SecuritiesOption24.mmRateDetails, SecuritiesOption29.mmRateDetails, SecuritiesOption33.mmRateDetails, SecuritiesOption38.mmRateDetails,
+						SecuritiesOption37.mmRateDetails, SecuritiesOption39.mmRateDetails, CorporateAction3.mmDateDetails, CorporateAction3.mmPeriodDetails, CorporateAction3.mmRateAndAmountDetails, SecuritiesOption6.mmRateDetails,
+						CorporateAction4.mmDateDetails, CorporateAction4.mmPeriodDetails, CorporateAction4.mmRateAndAmountDetails, SecuritiesOption12.mmRateDetails, CorporateAction5.mmDateDetails, CorporateAction5.mmPeriodDetails,
+						CorporateAction5.mmRateAndAmountDetails, SecuritiesOption14.mmRateDetails, CorporateAction6.mmDateDetails, CorporateAction6.mmPeriodDetails, CorporateAction6.mmRateAndAmountDetails, SecuritiesOption22.mmRateDetails,
+						CorporateAction7.mmDateDetails, CorporateAction7.mmPeriodDetails, CorporateAction7.mmRateAndAmountDetails, SecuritiesOption25.mmRateDetails, CorporateAction8.mmDateDetails, CorporateAction8.mmPeriodDetails,
+						CorporateAction8.mmRateAndAmountDetails, SecuritiesOption30.mmRateDetails, CorporateAction10.mmDateDetails, CorporateAction10.mmPeriodDetails, CorporateAction10.mmRateAndAmountDetails,
+						CorporateAction11.mmDateDetails, CorporateAction11.mmPeriodDetails, CorporateAction11.mmRateAndAmountDetails, CorporateAction2.mmDateDetails, CorporateAction2.mmPeriodDetails,
+						CorporateAction2.mmRateAndAmountDetails, CorporateAction13.mmDateDetails, CorporateAction12.mmDateDetails, CorporateAction12.mmPeriodDetails, CorporateAction12.mmRateAndAmountDetails,
+						CorporateAction14.mmDateDetails, SecuritiesOption42.mmRateDetails, SecuritiesOption40.mmRateDetails, CorporateAction20.mmDateDetails, CorporateAction18.mmDateDetails, CorporateAction17.mmDateDetails,
+						CorporateAction17.mmPeriodDetails, CorporateAction17.mmRateAndAmountDetails, SecuritiesOption48.mmRateDetails, SecuritiesOption45.mmRateDetails, CorporateActionSD12.mmEventStage, CorporateAction24.mmDateDetails,
+						CorporateAction30.mmDateDetails, CorporateAction28.mmDateDetails, CorporateAction29.mmDateDetails, CorporateAction33.mmDateDetails, CorporateAction32.mmDateDetails, CorporateAction31.mmDateDetails,
+						CorporateAction31.mmPeriodDetails, CorporateAction31.mmRateAndAmountDetails, SecuritiesOption49.mmRateDetails, CorporateActionEventAndBalance9.mmGeneralInformation, SecuritiesOption50.mmRateDetails,
+						CorporateAction34.mmDateDetails, CorporateAction35.mmDateDetails, CorporateAction36.mmDateDetails, CorporateAction38.mmDateDetails, CorporateAction40.mmDateDetails, CorporateAction40.mmPeriodDetails,
+						CorporateAction40.mmRateAndAmountDetails, SecuritiesOption55.mmRateDetails, SecuritiesOption57.mmRateDetails, CorporateActionEventAndBalance10.mmGeneralInformation, SecuritiesOption60.mmRateDetails,
+						SecuritiesOption59.mmRateDetails, CorporateActionEventAndBalance11.mmGeneralInformation, SecuritiesOption61.mmRateDetails, CorporateActionEventAndBalance12.mmGeneralInformation, SecuritiesOption63.mmRateDetails);
 				subType_lazy = () -> Arrays.asList(VoluntaryCorporateAction.mmObject(), MandatoryCorporateAction.mmObject());
-				element_lazy = () -> Arrays
-						.asList(com.tools20022.repository.entity.CorporateActionEvent.mmType, com.tools20022.repository.entity.CorporateActionEvent.mmMandatoryVoluntaryEventType,
-								com.tools20022.repository.entity.CorporateActionEvent.mmUnderlyingSecurity, com.tools20022.repository.entity.CorporateActionEvent.mmCorporateActionPrice,
-								com.tools20022.repository.entity.CorporateActionEvent.mmExchangeRate, com.tools20022.repository.entity.CorporateActionEvent.mmRegistrationDetails,
-								com.tools20022.repository.entity.CorporateActionEvent.mmBasketOrIndexInformation, com.tools20022.repository.entity.CorporateActionEvent.mmDeadline,
-								com.tools20022.repository.entity.CorporateActionEvent.mmAdditionalBusinessProcess, com.tools20022.repository.entity.CorporateActionEvent.mmTradingDate,
-								com.tools20022.repository.entity.CorporateActionEvent.mmCorporateActionCharge, com.tools20022.repository.entity.CorporateActionEvent.mmPariPassuDate,
-								com.tools20022.repository.entity.CorporateActionEvent.mmInformationConditions, com.tools20022.repository.entity.CorporateActionEvent.mmFractionalQuantity,
-								com.tools20022.repository.entity.CorporateActionEvent.mmEventProcessingType, com.tools20022.repository.entity.CorporateActionEvent.mmCorporateActionStatus,
-								com.tools20022.repository.entity.CorporateActionEvent.mmAnnouncementDate, com.tools20022.repository.entity.CorporateActionEvent.mmEffectiveDate,
-								com.tools20022.repository.entity.CorporateActionEvent.mmFurtherDetailsAnnouncementDate, com.tools20022.repository.entity.CorporateActionEvent.mmMarginFixingDate,
-								com.tools20022.repository.entity.CorporateActionEvent.mmResultPublicationDate, com.tools20022.repository.entity.CorporateActionEvent.mmUnconditionalDate,
-								com.tools20022.repository.entity.CorporateActionEvent.mmWhollyUnconditionalDate, com.tools20022.repository.entity.CorporateActionEvent.mmLapsedDate,
-								com.tools20022.repository.entity.CorporateActionEvent.mmBookClosurePeriod, com.tools20022.repository.entity.CorporateActionEvent.mmSecuritiesQuantity,
-								com.tools20022.repository.entity.CorporateActionEvent.mmRestrictionIndicator, com.tools20022.repository.entity.CorporateActionEvent.mmEventStage,
-								com.tools20022.repository.entity.CorporateActionEvent.mmDocumentationLocation, com.tools20022.repository.entity.CorporateActionEvent.mmSecuritiesQuantitySought,
-								com.tools20022.repository.entity.CorporateActionEvent.mmPartialElectionIndicator, com.tools20022.repository.entity.CorporateActionEvent.mmCorporateActionPartyRole,
-								com.tools20022.repository.entity.CorporateActionEvent.mmMarketClaim, com.tools20022.repository.entity.CorporateActionEvent.mmBiddingConditions,
-								com.tools20022.repository.entity.CorporateActionEvent.mmRelatedClassAction, com.tools20022.repository.entity.CorporateActionEvent.mmCorporateActionEventRegistration,
-								com.tools20022.repository.entity.CorporateActionEvent.mmSuspensionPeriod, com.tools20022.repository.entity.CorporateActionEvent.mmLottery, com.tools20022.repository.entity.CorporateActionEvent.mmMarginType,
-								com.tools20022.repository.entity.CorporateActionEvent.mmRelatedMeeting, com.tools20022.repository.entity.CorporateActionEvent.mmServices, com.tools20022.repository.entity.CorporateActionEvent.mmIssuance,
-								com.tools20022.repository.entity.CorporateActionEvent.mmSecuritiesModification, com.tools20022.repository.entity.CorporateActionEvent.mmTradingPeriod,
-								com.tools20022.repository.entity.CorporateActionEvent.mmTransactionTax, com.tools20022.repository.entity.CorporateActionEvent.mmConsentType,
-								com.tools20022.repository.entity.CorporateActionEvent.mmProceedsDefinition);
+				element_lazy = () -> Arrays.asList(CorporateActionEvent.mmType, CorporateActionEvent.mmMandatoryVoluntaryEventType, CorporateActionEvent.mmUnderlyingSecurity, CorporateActionEvent.mmCorporateActionPrice,
+						CorporateActionEvent.mmExchangeRate, CorporateActionEvent.mmRegistrationDetails, CorporateActionEvent.mmBasketOrIndexInformation, CorporateActionEvent.mmDeadline, CorporateActionEvent.mmAdditionalBusinessProcess,
+						CorporateActionEvent.mmTradingDate, CorporateActionEvent.mmCorporateActionCharge, CorporateActionEvent.mmPariPassuDate, CorporateActionEvent.mmInformationConditions, CorporateActionEvent.mmFractionalQuantity,
+						CorporateActionEvent.mmEventProcessingType, CorporateActionEvent.mmCorporateActionStatus, CorporateActionEvent.mmAnnouncementDate, CorporateActionEvent.mmEffectiveDate,
+						CorporateActionEvent.mmFurtherDetailsAnnouncementDate, CorporateActionEvent.mmMarginFixingDate, CorporateActionEvent.mmResultPublicationDate, CorporateActionEvent.mmUnconditionalDate,
+						CorporateActionEvent.mmWhollyUnconditionalDate, CorporateActionEvent.mmLapsedDate, CorporateActionEvent.mmBookClosurePeriod, CorporateActionEvent.mmSecuritiesQuantity, CorporateActionEvent.mmRestrictionIndicator,
+						CorporateActionEvent.mmEventStage, CorporateActionEvent.mmDocumentationLocation, CorporateActionEvent.mmSecuritiesQuantitySought, CorporateActionEvent.mmPartialElectionIndicator,
+						CorporateActionEvent.mmCorporateActionPartyRole, CorporateActionEvent.mmMarketClaim, CorporateActionEvent.mmBiddingConditions, CorporateActionEvent.mmRelatedClassAction,
+						CorporateActionEvent.mmCorporateActionEventRegistration, CorporateActionEvent.mmSuspensionPeriod, CorporateActionEvent.mmLottery, CorporateActionEvent.mmMarginType, CorporateActionEvent.mmRelatedMeeting,
+						CorporateActionEvent.mmServices, CorporateActionEvent.mmIssuance, CorporateActionEvent.mmSecuritiesModification, CorporateActionEvent.mmTradingPeriod, CorporateActionEvent.mmTransactionTax,
+						CorporateActionEvent.mmConsentType, CorporateActionEvent.mmProceedsDefinition);
 				derivationComponent_lazy = () -> ListBuilderForCorporateActionEvent_00.addElems(new ArrayList<>());
 			}
 		});

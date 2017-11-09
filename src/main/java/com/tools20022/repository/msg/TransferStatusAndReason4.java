@@ -20,11 +20,14 @@ package com.tools20022.repository.msg;
 import com.tools20022.metamodel.MMMessageAssociationEnd;
 import com.tools20022.metamodel.MMMessageAttribute;
 import com.tools20022.metamodel.MMMessageComponent;
+import com.tools20022.metamodel.MMRegistrationStatus;
+import com.tools20022.repository.area.sese.TransferInstructionStatusReportV05;
 import com.tools20022.repository.choice.PartyIdentification70Choice;
 import com.tools20022.repository.choice.TransferStatus2Choice;
 import com.tools20022.repository.datatype.ISODate;
 import com.tools20022.repository.datatype.Max35Text;
-import com.tools20022.repository.entity.SecuritiesTradeStatus;
+import com.tools20022.repository.entity.*;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -142,14 +145,14 @@ public class TransferStatusAndReason4 {
 	 */
 	public static final MMMessageAttribute mmMasterReference = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Order.mmMasterIdentification;
+			businessElementTrace_lazy = () -> Order.mmMasterIdentification;
 			componentContext_lazy = () -> TransferStatusAndReason4.mmObject();
 			isDerived = false;
 			xmlTag = "MstrRef";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "MasterReference";
 			definition = "Unique and unambiguous identifier for a group of individual transfers as assigned by the instructing party. This identifier links the individual transfers together.";
-			previousVersion_lazy = () -> com.tools20022.repository.msg.TransferStatusAndReason3.mmMasterReference;
+			previousVersion_lazy = () -> TransferStatusAndReason3.mmMasterReference;
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> Max35Text.mmObject();
@@ -198,14 +201,14 @@ public class TransferStatusAndReason4 {
 	 */
 	public static final MMMessageAttribute mmTransferReference = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.SecuritiesTransfer.mmIdentification;
+			businessElementTrace_lazy = () -> SecuritiesTransfer.mmIdentification;
 			componentContext_lazy = () -> TransferStatusAndReason4.mmObject();
 			isDerived = false;
 			xmlTag = "TrfRef";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "TransferReference";
 			definition = "Unique and unambiguous identification of a transfer, as assigned by the instructing party.";
-			previousVersion_lazy = () -> com.tools20022.repository.msg.TransferStatusAndReason3.mmTransferReference;
+			previousVersion_lazy = () -> TransferStatusAndReason3.mmTransferReference;
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> Max35Text.mmObject();
@@ -256,14 +259,14 @@ public class TransferStatusAndReason4 {
 	 */
 	public static final MMMessageAttribute mmClientReference = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.SecuritiesOrder.mmClientOrderIdentification;
+			businessElementTrace_lazy = () -> SecuritiesOrder.mmClientOrderIdentification;
 			componentContext_lazy = () -> TransferStatusAndReason4.mmObject();
 			isDerived = false;
 			xmlTag = "ClntRef";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ClientReference";
 			definition = "Unique and unambiguous investor's identification of a transfer. This reference can typically be used in a hub scenario to give the reference of the transfer as assigned by the underlying client.";
-			previousVersion_lazy = () -> com.tools20022.repository.msg.TransferStatusAndReason3.mmClientReference;
+			previousVersion_lazy = () -> TransferStatusAndReason3.mmClientReference;
 			maxOccurs = 1;
 			minOccurs = 0;
 			complexType_lazy = () -> com.tools20022.repository.msg.AdditionalReference7.mmObject();
@@ -310,10 +313,10 @@ public class TransferStatusAndReason4 {
 			componentContext_lazy = () -> TransferStatusAndReason4.mmObject();
 			isDerived = false;
 			xmlTag = "CxlRef";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CancellationReference";
 			definition = "Unique and unambiguous identifier for a transfer cancellation, as assigned by the instructing party.";
-			previousVersion_lazy = () -> com.tools20022.repository.msg.TransferStatusAndReason3.mmCancellationReference;
+			previousVersion_lazy = () -> TransferStatusAndReason3.mmCancellationReference;
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> Max35Text.mmObject();
@@ -359,14 +362,14 @@ public class TransferStatusAndReason4 {
 	 */
 	public static final MMMessageAssociationEnd mmTransferStatus = new MMMessageAssociationEnd() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.SecuritiesTradeStatus.mmTransferStatus;
+			businessElementTrace_lazy = () -> SecuritiesTradeStatus.mmTransferStatus;
 			componentContext_lazy = () -> TransferStatusAndReason4.mmObject();
 			isDerived = false;
 			xmlTag = "TrfSts";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "TransferStatus";
 			definition = "Status of the transfer instruction.";
-			previousVersion_lazy = () -> com.tools20022.repository.msg.TransferStatusAndReason3.mmTransferStatus;
+			previousVersion_lazy = () -> TransferStatusAndReason3.mmTransferStatus;
 			maxOccurs = 1;
 			minOccurs = 1;
 			isComposite = true;
@@ -413,14 +416,14 @@ public class TransferStatusAndReason4 {
 	 */
 	public static final MMMessageAttribute mmTradeDate = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Trade.mmTradeDateTime;
+			businessElementTrace_lazy = () -> Trade.mmTradeDateTime;
 			componentContext_lazy = () -> TransferStatusAndReason4.mmObject();
 			isDerived = false;
 			xmlTag = "TradDt";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "TradeDate";
 			definition = "Date and time at which the transfer was executed.";
-			previousVersion_lazy = () -> com.tools20022.repository.msg.TransferStatusAndReason3.mmTradeDate;
+			previousVersion_lazy = () -> TransferStatusAndReason3.mmTradeDate;
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> ISODate.mmObject();
@@ -466,10 +469,10 @@ public class TransferStatusAndReason4 {
 			componentContext_lazy = () -> TransferStatusAndReason4.mmObject();
 			isDerived = false;
 			xmlTag = "SndOutDt";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SendOutDate";
 			definition = "Date on which the document, for example, the application form, was sent.";
-			previousVersion_lazy = () -> com.tools20022.repository.msg.TransferStatusAndReason3.mmSendOutDate;
+			previousVersion_lazy = () -> TransferStatusAndReason3.mmSendOutDate;
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> ISODate.mmObject();
@@ -515,14 +518,14 @@ public class TransferStatusAndReason4 {
 	 */
 	public static final MMMessageAssociationEnd mmStatusInitiator = new MMMessageAssociationEnd() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Party.mmIdentification;
+			businessElementTrace_lazy = () -> Party.mmIdentification;
 			componentContext_lazy = () -> TransferStatusAndReason4.mmObject();
 			isDerived = false;
 			xmlTag = "StsInitr";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "StatusInitiator";
 			definition = "Party that initiates the status.";
-			previousVersion_lazy = () -> com.tools20022.repository.msg.TransferStatusAndReason3.mmStatusInitiator;
+			previousVersion_lazy = () -> TransferStatusAndReason3.mmStatusInitiator;
 			maxOccurs = 1;
 			minOccurs = 0;
 			isComposite = true;
@@ -533,14 +536,12 @@ public class TransferStatusAndReason4 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.TransferStatusAndReason4.mmMasterReference, com.tools20022.repository.msg.TransferStatusAndReason4.mmTransferReference,
-						com.tools20022.repository.msg.TransferStatusAndReason4.mmClientReference, com.tools20022.repository.msg.TransferStatusAndReason4.mmCancellationReference,
-						com.tools20022.repository.msg.TransferStatusAndReason4.mmTransferStatus, com.tools20022.repository.msg.TransferStatusAndReason4.mmTradeDate, com.tools20022.repository.msg.TransferStatusAndReason4.mmSendOutDate,
-						com.tools20022.repository.msg.TransferStatusAndReason4.mmStatusInitiator);
-				messageBuildingBlock_lazy = () -> Arrays.asList(com.tools20022.repository.area.sese.TransferInstructionStatusReportV05.mmStatusReport);
+				messageElement_lazy = () -> Arrays.asList(TransferStatusAndReason4.mmMasterReference, TransferStatusAndReason4.mmTransferReference, TransferStatusAndReason4.mmClientReference,
+						TransferStatusAndReason4.mmCancellationReference, TransferStatusAndReason4.mmTransferStatus, TransferStatusAndReason4.mmTradeDate, TransferStatusAndReason4.mmSendOutDate, TransferStatusAndReason4.mmStatusInitiator);
+				messageBuildingBlock_lazy = () -> Arrays.asList(TransferInstructionStatusReportV05.mmStatusReport);
 				trace_lazy = () -> SecuritiesTradeStatus.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "TransferStatusAndReason4";
 				definition = "Information about the status of a transfer instruction and its reason.";
 				previousVersion_lazy = () -> TransferStatusAndReason3.mmObject();

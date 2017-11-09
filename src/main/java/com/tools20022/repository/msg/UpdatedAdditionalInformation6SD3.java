@@ -19,7 +19,9 @@ package com.tools20022.repository.msg;
 
 import com.tools20022.metamodel.MMMessageAttribute;
 import com.tools20022.metamodel.MMMessageComponent;
+import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.datatype.*;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -105,7 +107,7 @@ public class UpdatedAdditionalInformation6SD3 {
 			componentContext_lazy = () -> UpdatedAdditionalInformation6SD3.mmObject();
 			isDerived = false;
 			xmlTag = "PlcAndNm";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PlaceAndName";
 			definition = "Unambiguous reference to the location where the supplementary data must be inserted in the message instance. \r\n\r\nIn the case of XML, this is expressed by a valid XPath.";
 			maxOccurs = 1;
@@ -149,7 +151,7 @@ public class UpdatedAdditionalInformation6SD3 {
 			componentContext_lazy = () -> UpdatedAdditionalInformation6SD3.mmObject();
 			isDerived = false;
 			xmlTag = "SctiesCdtAcctId";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SecuritiesCreditAccountIdentification";
 			definition = "Specifies the securities account to be credited.\r\n会社法制の見直し要綱の、22ページ第３－１－①をご参照ください。";
 			maxOccurs = 1;
@@ -194,7 +196,7 @@ public class UpdatedAdditionalInformation6SD3 {
 			componentContext_lazy = () -> UpdatedAdditionalInformation6SD3.mmObject();
 			isDerived = false;
 			xmlTag = "OfferrShr";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "OfferorShare";
 			definition = "ISIN of Offeror's share when the corporate action event type code is TEND.";
 			maxOccurs = 1;
@@ -240,7 +242,7 @@ public class UpdatedAdditionalInformation6SD3 {
 			componentContext_lazy = () -> UpdatedAdditionalInformation6SD3.mmObject();
 			isDerived = false;
 			xmlTag = "OfferrShrLclCd";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "OfferorShareLocalCode";
 			definition = "Local code of Offeror's share when the corporate action event type code is TEND.\r\n買付者 銘柄コード";
 			maxOccurs = 1;
@@ -284,7 +286,7 @@ public class UpdatedAdditionalInformation6SD3 {
 			componentContext_lazy = () -> UpdatedAdditionalInformation6SD3.mmObject();
 			isDerived = false;
 			xmlTag = "LclLangNm";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "LocalLanguageName";
 			definition = "Name in the local language by which a party is known and which is usually used to identify that party.";
 			maxOccurs = 1;
@@ -296,11 +298,10 @@ public class UpdatedAdditionalInformation6SD3 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.UpdatedAdditionalInformation6SD3.mmPlaceAndName,
-						com.tools20022.repository.msg.UpdatedAdditionalInformation6SD3.mmSecuritiesCreditAccountIdentification, com.tools20022.repository.msg.UpdatedAdditionalInformation6SD3.mmOfferorShare,
-						com.tools20022.repository.msg.UpdatedAdditionalInformation6SD3.mmOfferorShareLocalCode, com.tools20022.repository.msg.UpdatedAdditionalInformation6SD3.mmLocalLanguageName);
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				messageElement_lazy = () -> Arrays.asList(UpdatedAdditionalInformation6SD3.mmPlaceAndName, UpdatedAdditionalInformation6SD3.mmSecuritiesCreditAccountIdentification, UpdatedAdditionalInformation6SD3.mmOfferorShare,
+						UpdatedAdditionalInformation6SD3.mmOfferorShareLocalCode, UpdatedAdditionalInformation6SD3.mmLocalLanguageName);
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "UpdatedAdditionalInformation6SD3";
 				definition = "Extension for additional information.";
 			}

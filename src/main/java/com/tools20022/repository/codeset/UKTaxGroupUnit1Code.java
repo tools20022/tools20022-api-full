@@ -19,7 +19,9 @@ package com.tools20022.repository.codeset;
 
 import com.tools20022.metamodel.MMCode;
 import com.tools20022.metamodel.MMCodeSet;
+import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.codeset.UKTaxGroupUnitCode;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -82,7 +84,7 @@ public class UKTaxGroupUnit1Code extends UKTaxGroupUnitCode {
 	 */
 	public static final MMCode mmGroup1 = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Group1";
 			owner_lazy = () -> UKTaxGroupUnit1Code.mmObject();
 		}
@@ -105,7 +107,7 @@ public class UKTaxGroupUnit1Code extends UKTaxGroupUnitCode {
 	 */
 	public static final MMCode mmGroup2 = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Group2";
 			owner_lazy = () -> UKTaxGroupUnit1Code.mmObject();
 		}
@@ -114,11 +116,11 @@ public class UKTaxGroupUnit1Code extends UKTaxGroupUnitCode {
 	static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "UKTaxGroupUnit1Code";
 				definition = "Specifies the UK tax group to which units belong. For UK tax, the first dividend that an investor receives from a funds investment is deemed to be part income and part return of capital. The capital element is 'equalisation', and is exempt from income tax.";
-				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.UKTaxGroupUnit1Code.mmGroup1, com.tools20022.repository.codeset.UKTaxGroupUnit1Code.mmGroup2);
+				code_lazy = () -> Arrays.asList(UKTaxGroupUnit1Code.mmGroup1, UKTaxGroupUnit1Code.mmGroup2);
 				trace_lazy = () -> UKTaxGroupUnitCode.mmObject();
 			}
 		});

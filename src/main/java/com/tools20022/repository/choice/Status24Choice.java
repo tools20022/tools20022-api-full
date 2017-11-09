@@ -19,6 +19,9 @@ package com.tools20022.repository.choice;
 
 import com.tools20022.metamodel.MMChoiceComponent;
 import com.tools20022.metamodel.MMMessageAssociationEnd;
+import com.tools20022.metamodel.MMRegistrationStatus;
+import com.tools20022.repository.area.setr.OrderInstructionStatusReportV04;
+import com.tools20022.repository.GeneratedRepository;
 import com.tools20022.repository.msg.IndividualOrderStatusAndReason7;
 import com.tools20022.repository.msg.OrderStatusAndReason10;
 import com.tools20022.repository.msg.SwitchOrderStatusAndReason2;
@@ -109,7 +112,7 @@ public class Status24Choice {
 			componentContext_lazy = () -> Status24Choice.mmObject();
 			isDerived = false;
 			xmlTag = "OrdrDtlsRpt";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "OrderDetailsReport";
 			definition = "Status report details of all the individual orders conveyed in a bulk or multiple order message. Can be used if all the individual orders conveyed in a bulk or multiple order message have the same status.";
 			maxOccurs = 1;
@@ -151,7 +154,7 @@ public class Status24Choice {
 			componentContext_lazy = () -> Status24Choice.mmObject();
 			isDerived = false;
 			xmlTag = "IndvOrdrDtlsRpt";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "IndividualOrderDetailsReport";
 			definition = "Status report details of an individual order.";
 			minOccurs = 1;
@@ -192,7 +195,7 @@ public class Status24Choice {
 			componentContext_lazy = () -> Status24Choice.mmObject();
 			isDerived = false;
 			xmlTag = "SwtchOrdrDtlsRpt";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SwitchOrderDetailsReport";
 			definition = "Status report details of a switch order.";
 			minOccurs = 1;
@@ -204,11 +207,10 @@ public class Status24Choice {
 	final static public MMChoiceComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMChoiceComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.choice.Status24Choice.mmOrderDetailsReport, com.tools20022.repository.choice.Status24Choice.mmIndividualOrderDetailsReport,
-						com.tools20022.repository.choice.Status24Choice.mmSwitchOrderDetailsReport);
-				messageBuildingBlock_lazy = () -> Arrays.asList(com.tools20022.repository.area.setr.OrderInstructionStatusReportV04.mmStatusReport);
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				messageElement_lazy = () -> Arrays.asList(Status24Choice.mmOrderDetailsReport, Status24Choice.mmIndividualOrderDetailsReport, Status24Choice.mmSwitchOrderDetailsReport);
+				messageBuildingBlock_lazy = () -> Arrays.asList(OrderInstructionStatusReportV04.mmStatusReport);
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "Status24Choice";
 				definition = "Choice of status.";
 			}

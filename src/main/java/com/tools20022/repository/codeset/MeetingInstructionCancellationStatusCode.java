@@ -19,6 +19,8 @@ package com.tools20022.repository.codeset;
 
 import com.tools20022.metamodel.MMCode;
 import com.tools20022.metamodel.MMCodeSet;
+import com.tools20022.metamodel.MMRegistrationStatus;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -27,6 +29,14 @@ import java.util.concurrent.atomic.AtomicReference;
  * <p>
  * <strong>Constant fields:</strong>
  * <ul>
+ * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getDerivation derivation}
+ * =
+ * <ul>
+ * <li>
+ * {@linkplain com.tools20022.repository.codeset.MeetingInstructionCancellationStatus1Code
+ * MeetingInstructionCancellationStatus1Code}</li>
+ * </ul>
+ * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getCode code} =
  * <ul>
  * <li>
@@ -41,14 +51,6 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>
  * {@linkplain com.tools20022.repository.codeset.MeetingInstructionCancellationStatusCode#mmCancellationRejected
  * MeetingInstructionCancellationStatusCode.mmCancellationRejected}</li>
- * </ul>
- * </li>
- * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getDerivation derivation}
- * =
- * <ul>
- * <li>
- * {@linkplain com.tools20022.repository.codeset.MeetingInstructionCancellationStatus1Code
- * MeetingInstructionCancellationStatus1Code}</li>
  * </ul>
  * </li>
  * <li>
@@ -98,7 +100,7 @@ public class MeetingInstructionCancellationStatusCode {
 	 */
 	public static final MMCode mmCancellationCompleted = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CancellationCompleted";
 			definition = "Cancellation has been completed.";
 			owner_lazy = () -> MeetingInstructionCancellationStatusCode.mmObject();
@@ -131,7 +133,7 @@ public class MeetingInstructionCancellationStatusCode {
 	 */
 	public static final MMCode mmPendingCancellation = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PendingCancellation";
 			definition = "Cancellation is pending. It is not known at this time whether cancellation can be executed.";
 			owner_lazy = () -> MeetingInstructionCancellationStatusCode.mmObject();
@@ -162,7 +164,7 @@ public class MeetingInstructionCancellationStatusCode {
 	 */
 	public static final MMCode mmCancellationDenied = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CancellationDenied";
 			definition = "Cancellation will not be executed due to business reasons. ";
 			owner_lazy = () -> MeetingInstructionCancellationStatusCode.mmObject();
@@ -195,7 +197,7 @@ public class MeetingInstructionCancellationStatusCode {
 	 */
 	public static final MMCode mmCancellationRejected = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CancellationRejected";
 			definition = "Cancellation request has been rejected for further processing due to system (data) reasons.";
 			owner_lazy = () -> MeetingInstructionCancellationStatusCode.mmObject();
@@ -206,14 +208,13 @@ public class MeetingInstructionCancellationStatusCode {
 	static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
 				example = Arrays.asList("CAND");
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "MeetingInstructionCancellationStatusCode";
 				definition = "Status of a meeting instruction cancellation request.";
-				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.MeetingInstructionCancellationStatusCode.mmCancellationCompleted,
-						com.tools20022.repository.codeset.MeetingInstructionCancellationStatusCode.mmPendingCancellation, com.tools20022.repository.codeset.MeetingInstructionCancellationStatusCode.mmCancellationDenied,
-						com.tools20022.repository.codeset.MeetingInstructionCancellationStatusCode.mmCancellationRejected);
+				code_lazy = () -> Arrays.asList(MeetingInstructionCancellationStatusCode.mmCancellationCompleted, MeetingInstructionCancellationStatusCode.mmPendingCancellation,
+						MeetingInstructionCancellationStatusCode.mmCancellationDenied, MeetingInstructionCancellationStatusCode.mmCancellationRejected);
 				derivation_lazy = () -> Arrays.asList(MeetingInstructionCancellationStatus1Code.mmObject());
 			}
 		});

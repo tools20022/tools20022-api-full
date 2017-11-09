@@ -19,7 +19,9 @@ package com.tools20022.repository.codeset;
 
 import com.tools20022.metamodel.MMCode;
 import com.tools20022.metamodel.MMCodeSet;
+import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.codeset.PartyTypeCode;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -128,7 +130,7 @@ public class PartyType1Code extends PartyTypeCode {
 	 */
 	public static final MMCode mmExecutingFirm = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ExecutingFirm";
 			owner_lazy = () -> PartyType1Code.mmObject();
 		}
@@ -151,7 +153,7 @@ public class PartyType1Code extends PartyTypeCode {
 	 */
 	public static final MMCode mmBrokerOfCredit = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "BrokerOfCredit";
 			owner_lazy = () -> PartyType1Code.mmObject();
 		}
@@ -174,7 +176,7 @@ public class PartyType1Code extends PartyTypeCode {
 	 */
 	public static final MMCode mmCorrespondentClearingFirm = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CorrespondentClearingFirm";
 			owner_lazy = () -> PartyType1Code.mmObject();
 		}
@@ -197,7 +199,7 @@ public class PartyType1Code extends PartyTypeCode {
 	 */
 	public static final MMCode mmContraFirm = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ContraFirm";
 			owner_lazy = () -> PartyType1Code.mmObject();
 		}
@@ -220,7 +222,7 @@ public class PartyType1Code extends PartyTypeCode {
 	 */
 	public static final MMCode mmContraClearingFirm = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ContraClearingFirm";
 			owner_lazy = () -> PartyType1Code.mmObject();
 		}
@@ -243,7 +245,7 @@ public class PartyType1Code extends PartyTypeCode {
 	 */
 	public static final MMCode mmUnderlyingContraFirm = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "UnderlyingContraFirm";
 			owner_lazy = () -> PartyType1Code.mmObject();
 		}
@@ -266,7 +268,7 @@ public class PartyType1Code extends PartyTypeCode {
 	 */
 	public static final MMCode mmGiveUpClearingFirm = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "GiveUpClearingFirm";
 			owner_lazy = () -> PartyType1Code.mmObject();
 		}
@@ -289,7 +291,7 @@ public class PartyType1Code extends PartyTypeCode {
 	 */
 	public static final MMCode mmOrderOriginationFirm = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "OrderOriginationFirm";
 			owner_lazy = () -> PartyType1Code.mmObject();
 		}
@@ -312,7 +314,7 @@ public class PartyType1Code extends PartyTypeCode {
 	 */
 	public static final MMCode mmSponsoringFirm = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SponsoringFirm";
 			owner_lazy = () -> PartyType1Code.mmObject();
 		}
@@ -335,7 +337,7 @@ public class PartyType1Code extends PartyTypeCode {
 	 */
 	public static final MMCode mmClearingfirm = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Clearingfirm";
 			owner_lazy = () -> PartyType1Code.mmObject();
 		}
@@ -358,7 +360,7 @@ public class PartyType1Code extends PartyTypeCode {
 	 */
 	public static final MMCode mmIntroducingFirm = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "IntroducingFirm";
 			owner_lazy = () -> PartyType1Code.mmObject();
 		}
@@ -381,7 +383,7 @@ public class PartyType1Code extends PartyTypeCode {
 	 */
 	public static final MMCode mmEnteringFirm = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "EnteringFirm";
 			owner_lazy = () -> PartyType1Code.mmObject();
 		}
@@ -404,7 +406,7 @@ public class PartyType1Code extends PartyTypeCode {
 	 */
 	public static final MMCode mmClient = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Client";
 			owner_lazy = () -> PartyType1Code.mmObject();
 		}
@@ -427,7 +429,7 @@ public class PartyType1Code extends PartyTypeCode {
 	 */
 	public static final MMCode mmStepInBroker = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "StepInBroker";
 			owner_lazy = () -> PartyType1Code.mmObject();
 		}
@@ -450,7 +452,7 @@ public class PartyType1Code extends PartyTypeCode {
 	 */
 	public static final MMCode mmAffirmingParty = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AffirmingParty";
 			owner_lazy = () -> PartyType1Code.mmObject();
 		}
@@ -473,7 +475,7 @@ public class PartyType1Code extends PartyTypeCode {
 	 */
 	public static final MMCode mmETCServiceProvider1 = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ETCServiceProvider1";
 			owner_lazy = () -> PartyType1Code.mmObject();
 		}
@@ -496,7 +498,7 @@ public class PartyType1Code extends PartyTypeCode {
 	 */
 	public static final MMCode mmETCServiceProvider2 = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ETCServiceProvider2";
 			owner_lazy = () -> PartyType1Code.mmObject();
 		}
@@ -519,7 +521,7 @@ public class PartyType1Code extends PartyTypeCode {
 	 */
 	public static final MMCode mmInvestor = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Investor";
 			owner_lazy = () -> PartyType1Code.mmObject();
 		}
@@ -528,18 +530,15 @@ public class PartyType1Code extends PartyTypeCode {
 	static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
 				example = Arrays.asList("EXEC");
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "PartyType1Code";
 				definition = "Specifies the type of party involved in the transaction.";
-				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.PartyType1Code.mmExecutingFirm, com.tools20022.repository.codeset.PartyType1Code.mmBrokerOfCredit,
-						com.tools20022.repository.codeset.PartyType1Code.mmCorrespondentClearingFirm, com.tools20022.repository.codeset.PartyType1Code.mmContraFirm, com.tools20022.repository.codeset.PartyType1Code.mmContraClearingFirm,
-						com.tools20022.repository.codeset.PartyType1Code.mmUnderlyingContraFirm, com.tools20022.repository.codeset.PartyType1Code.mmGiveUpClearingFirm,
-						com.tools20022.repository.codeset.PartyType1Code.mmOrderOriginationFirm, com.tools20022.repository.codeset.PartyType1Code.mmSponsoringFirm, com.tools20022.repository.codeset.PartyType1Code.mmClearingfirm,
-						com.tools20022.repository.codeset.PartyType1Code.mmIntroducingFirm, com.tools20022.repository.codeset.PartyType1Code.mmEnteringFirm, com.tools20022.repository.codeset.PartyType1Code.mmClient,
-						com.tools20022.repository.codeset.PartyType1Code.mmStepInBroker, com.tools20022.repository.codeset.PartyType1Code.mmAffirmingParty, com.tools20022.repository.codeset.PartyType1Code.mmETCServiceProvider1,
-						com.tools20022.repository.codeset.PartyType1Code.mmETCServiceProvider2, com.tools20022.repository.codeset.PartyType1Code.mmInvestor);
+				code_lazy = () -> Arrays.asList(PartyType1Code.mmExecutingFirm, PartyType1Code.mmBrokerOfCredit, PartyType1Code.mmCorrespondentClearingFirm, PartyType1Code.mmContraFirm, PartyType1Code.mmContraClearingFirm,
+						PartyType1Code.mmUnderlyingContraFirm, PartyType1Code.mmGiveUpClearingFirm, PartyType1Code.mmOrderOriginationFirm, PartyType1Code.mmSponsoringFirm, PartyType1Code.mmClearingfirm, PartyType1Code.mmIntroducingFirm,
+						PartyType1Code.mmEnteringFirm, PartyType1Code.mmClient, PartyType1Code.mmStepInBroker, PartyType1Code.mmAffirmingParty, PartyType1Code.mmETCServiceProvider1, PartyType1Code.mmETCServiceProvider2,
+						PartyType1Code.mmInvestor);
 				trace_lazy = () -> PartyTypeCode.mmObject();
 			}
 		});

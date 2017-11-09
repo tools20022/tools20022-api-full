@@ -19,6 +19,8 @@ package com.tools20022.repository.choice;
 
 import com.tools20022.metamodel.MMChoiceComponent;
 import com.tools20022.metamodel.MMMessageAssociationEnd;
+import com.tools20022.metamodel.MMRegistrationStatus;
+import com.tools20022.repository.GeneratedRepository;
 import com.tools20022.repository.msg.ErrorHandling4;
 import com.tools20022.repository.msg.Limit4;
 import java.util.Arrays;
@@ -102,10 +104,10 @@ public class LimitOrError2Choice {
 			componentContext_lazy = () -> LimitOrError2Choice.mmObject();
 			isDerived = false;
 			xmlTag = "Lmt";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Limit";
 			definition = "Requested information on the limit.";
-			previousVersion_lazy = () -> com.tools20022.repository.choice.LimitOrError1Choice.mmLimit;
+			previousVersion_lazy = () -> LimitOrError1Choice.mmLimit;
 			maxOccurs = 1;
 			minOccurs = 1;
 			isComposite = true;
@@ -149,10 +151,10 @@ public class LimitOrError2Choice {
 			componentContext_lazy = () -> LimitOrError2Choice.mmObject();
 			isDerived = false;
 			xmlTag = "BizErr";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "BusinessError";
 			definition = "Reason the requested business information is not given.";
-			previousVersion_lazy = () -> com.tools20022.repository.choice.LimitOrError1Choice.mmBusinessError;
+			previousVersion_lazy = () -> LimitOrError1Choice.mmBusinessError;
 			minOccurs = 1;
 			isComposite = true;
 			type_lazy = () -> ErrorHandling4.mmObject();
@@ -162,9 +164,9 @@ public class LimitOrError2Choice {
 	final static public MMChoiceComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMChoiceComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.choice.LimitOrError2Choice.mmLimit, com.tools20022.repository.choice.LimitOrError2Choice.mmBusinessError);
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				messageElement_lazy = () -> Arrays.asList(LimitOrError2Choice.mmLimit, LimitOrError2Choice.mmBusinessError);
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "LimitOrError2Choice";
 				definition = "Choice between risk management limit details or a business error when the requested data cannot be retrieved.";
 				previousVersion_lazy = () -> LimitOrError1Choice.mmObject();

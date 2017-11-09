@@ -19,7 +19,9 @@ package com.tools20022.repository.codeset;
 
 import com.tools20022.metamodel.MMCode;
 import com.tools20022.metamodel.MMCodeSet;
+import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.codeset.CorporateActionPreliminaryAdviceTypeCode;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -83,7 +85,7 @@ public class CorporateActionPreliminaryAdviceType1Code extends CorporateActionPr
 	 */
 	public static final MMCode mmNew = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "New";
 			owner_lazy = () -> CorporateActionPreliminaryAdviceType1Code.mmObject();
 		}
@@ -106,7 +108,7 @@ public class CorporateActionPreliminaryAdviceType1Code extends CorporateActionPr
 	 */
 	public static final MMCode mmReplacement = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Replacement";
 			owner_lazy = () -> CorporateActionPreliminaryAdviceType1Code.mmObject();
 		}
@@ -115,12 +117,12 @@ public class CorporateActionPreliminaryAdviceType1Code extends CorporateActionPr
 	static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
 				example = Arrays.asList("NEWM");
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "CorporateActionPreliminaryAdviceType1Code";
 				definition = "Type of movement preliminary advice.";
-				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.CorporateActionPreliminaryAdviceType1Code.mmNew, com.tools20022.repository.codeset.CorporateActionPreliminaryAdviceType1Code.mmReplacement);
+				code_lazy = () -> Arrays.asList(CorporateActionPreliminaryAdviceType1Code.mmNew, CorporateActionPreliminaryAdviceType1Code.mmReplacement);
 				trace_lazy = () -> CorporateActionPreliminaryAdviceTypeCode.mmObject();
 			}
 		});

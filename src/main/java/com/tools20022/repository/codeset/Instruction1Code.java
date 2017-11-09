@@ -19,7 +19,9 @@ package com.tools20022.repository.codeset;
 
 import com.tools20022.metamodel.MMCode;
 import com.tools20022.metamodel.MMCodeSet;
+import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.codeset.InstructionCode;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -89,7 +91,7 @@ public class Instruction1Code extends InstructionCode {
 	 */
 	public static final MMCode mmPayTheBeneficiary = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PayTheBeneficiary";
 			owner_lazy = () -> Instruction1Code.mmObject();
 		}
@@ -112,7 +114,7 @@ public class Instruction1Code extends InstructionCode {
 	 */
 	public static final MMCode mmTimeTill = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "TimeTill";
 			owner_lazy = () -> Instruction1Code.mmObject();
 		}
@@ -135,7 +137,7 @@ public class Instruction1Code extends InstructionCode {
 	 */
 	public static final MMCode mmTimeFrom = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "TimeFrom";
 			owner_lazy = () -> Instruction1Code.mmObject();
 		}
@@ -144,13 +146,12 @@ public class Instruction1Code extends InstructionCode {
 	static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
 				example = Arrays.asList("PBEN");
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "Instruction1Code";
 				definition = "Specifies further instructions concerning the processing of a payment instruction, provided by the sending clearing agent to the next agent(s).";
-				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.Instruction1Code.mmPayTheBeneficiary, com.tools20022.repository.codeset.Instruction1Code.mmTimeTill,
-						com.tools20022.repository.codeset.Instruction1Code.mmTimeFrom);
+				code_lazy = () -> Arrays.asList(Instruction1Code.mmPayTheBeneficiary, Instruction1Code.mmTimeTill, Instruction1Code.mmTimeFrom);
 				trace_lazy = () -> InstructionCode.mmObject();
 			}
 		});

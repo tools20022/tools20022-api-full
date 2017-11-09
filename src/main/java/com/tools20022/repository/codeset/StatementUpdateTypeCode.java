@@ -19,6 +19,8 @@ package com.tools20022.repository.codeset;
 
 import com.tools20022.metamodel.MMCode;
 import com.tools20022.metamodel.MMCodeSet;
+import com.tools20022.metamodel.MMRegistrationStatus;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -86,7 +88,7 @@ public class StatementUpdateTypeCode {
 	 */
 	public static final MMCode mmComplete = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "Complete";
 			definition = "Statement is complete.";
 			owner_lazy = () -> StatementUpdateTypeCode.mmObject();
@@ -116,7 +118,7 @@ public class StatementUpdateTypeCode {
 	 */
 	public static final MMCode mmDelta = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "Delta";
 			definition = "Statement contains changes only.";
 			owner_lazy = () -> StatementUpdateTypeCode.mmObject();
@@ -127,12 +129,12 @@ public class StatementUpdateTypeCode {
 	static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
 				example = Arrays.asList("COMP");
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "StatementUpdateTypeCode";
 				definition = "Specifies the nature of a statement update, eg, it is a complete statement.";
-				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.StatementUpdateTypeCode.mmComplete, com.tools20022.repository.codeset.StatementUpdateTypeCode.mmDelta);
+				code_lazy = () -> Arrays.asList(StatementUpdateTypeCode.mmComplete, StatementUpdateTypeCode.mmDelta);
 			}
 		});
 		return mmObject_lazy.get();

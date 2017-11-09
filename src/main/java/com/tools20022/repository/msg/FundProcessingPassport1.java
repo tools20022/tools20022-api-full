@@ -19,7 +19,10 @@ package com.tools20022.repository.msg;
 
 import com.tools20022.metamodel.MMMessageAssociationEnd;
 import com.tools20022.metamodel.MMMessageComponent;
-import com.tools20022.repository.entity.InvestmentFund;
+import com.tools20022.metamodel.MMRegistrationStatus;
+import com.tools20022.repository.area.reda.FundProcessingPassportReportV02;
+import com.tools20022.repository.entity.*;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.List;
@@ -137,7 +140,7 @@ public class FundProcessingPassport1 {
 			componentContext_lazy = () -> FundProcessingPassport1.mmObject();
 			isDerived = false;
 			xmlTag = "UpdtdDt";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "UpdatedDate";
 			definition = "Date of last revision.";
 			maxOccurs = 1;
@@ -184,11 +187,11 @@ public class FundProcessingPassport1 {
 	 */
 	public static final MMMessageAssociationEnd mmSecurityIdentification = new MMMessageAssociationEnd() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Security.mmIdentification;
+			businessElementTrace_lazy = () -> Security.mmIdentification;
 			componentContext_lazy = () -> FundProcessingPassport1.mmObject();
 			isDerived = false;
 			xmlTag = "SctyId";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SecurityIdentification";
 			definition = "Financial instruments representing a sum of rights of the investor vis-a-vis the issuer.";
 			maxOccurs = 1;
@@ -234,11 +237,11 @@ public class FundProcessingPassport1 {
 	 */
 	public static final MMMessageAssociationEnd mmMainFundOrderDesk = new MMMessageAssociationEnd() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.InvestmentFund.mmOrderDesk;
+			businessElementTrace_lazy = () -> InvestmentFund.mmOrderDesk;
 			componentContext_lazy = () -> FundProcessingPassport1.mmObject();
 			isDerived = false;
 			xmlTag = "MainFndOrdrDsk";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "MainFundOrderDesk";
 			definition = "Principal entity appointed by the fund, to which orders should be submitted. Usually located in the country of domicile.";
 			maxOccurs = 1;
@@ -288,11 +291,11 @@ public class FundProcessingPassport1 {
 	 */
 	public static final MMMessageAssociationEnd mmFundManagementCompany = new MMMessageAssociationEnd() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Party.mmContactPoint;
+			businessElementTrace_lazy = () -> Party.mmContactPoint;
 			componentContext_lazy = () -> FundProcessingPassport1.mmObject();
 			isDerived = false;
 			xmlTag = "FndMgmtCpny";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "FundManagementCompany";
 			definition = "Company that is responsible for the management and operation of the fund, eg, determines the investment strategy, appoints\r\nthe service providers, and makes major decisions for the fund. It is usually responsible for the distribution and marketing\r\nof the fund. For self-managed funds, this wlll often be a separate promoter or sponsor of the fund.";
 			maxOccurs = 1;
@@ -338,11 +341,11 @@ public class FundProcessingPassport1 {
 	 */
 	public static final MMMessageAssociationEnd mmFundDetails = new MMMessageAssociationEnd() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.InvestmentFund.mmInvestmentFundClass;
+			businessElementTrace_lazy = () -> InvestmentFund.mmInvestmentFundClass;
 			componentContext_lazy = () -> FundProcessingPassport1.mmObject();
 			isDerived = false;
 			xmlTag = "FndDtls";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "FundDetails";
 			definition = "Security that is a sub-set of an investment fund, and is governed by the same investment fund policy, eg, dividend option or valuation currency.";
 			maxOccurs = 1;
@@ -389,11 +392,11 @@ public class FundProcessingPassport1 {
 	 */
 	public static final MMMessageAssociationEnd mmValuationDealingCharacteristics = new MMMessageAssociationEnd() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.InvestmentFundClass.mmProcessingCharacteristics;
+			businessElementTrace_lazy = () -> InvestmentFundClass.mmProcessingCharacteristics;
 			componentContext_lazy = () -> FundProcessingPassport1.mmObject();
 			isDerived = false;
 			xmlTag = "ValtnDealgChrtcs";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ValuationDealingCharacteristics";
 			definition = "Processing characteristics linked to the instrument, ie, not to  the market.";
 			maxOccurs = 1;
@@ -440,11 +443,11 @@ public class FundProcessingPassport1 {
 	 */
 	public static final MMMessageAssociationEnd mmInvestmentRestrictions = new MMMessageAssociationEnd() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.InvestmentFund.mmInvestmentFundClass;
+			businessElementTrace_lazy = () -> InvestmentFund.mmInvestmentFundClass;
 			componentContext_lazy = () -> FundProcessingPassport1.mmObject();
 			isDerived = false;
 			xmlTag = "InvstmtRstrctns";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "InvestmentRestrictions";
 			definition = "Processing characteristics linked to the instrument, ie, not to  the market.";
 			maxOccurs = 1;
@@ -491,11 +494,11 @@ public class FundProcessingPassport1 {
 	 */
 	public static final MMMessageAssociationEnd mmSubscriptionProcessingCharacteristics = new MMMessageAssociationEnd() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.InvestmentFundClass.mmProcessingCharacteristics;
+			businessElementTrace_lazy = () -> InvestmentFundClass.mmProcessingCharacteristics;
 			componentContext_lazy = () -> FundProcessingPassport1.mmObject();
 			isDerived = false;
 			xmlTag = "SbcptPrcgChrtcs";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SubscriptionProcessingCharacteristics";
 			definition = "Processing characteristics linked to the instrument, ie, not to  the market.";
 			maxOccurs = 1;
@@ -542,11 +545,11 @@ public class FundProcessingPassport1 {
 	 */
 	public static final MMMessageAssociationEnd mmRedemptionProcessingCharacteristics = new MMMessageAssociationEnd() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.InvestmentFundClass.mmProcessingCharacteristics;
+			businessElementTrace_lazy = () -> InvestmentFundClass.mmProcessingCharacteristics;
 			componentContext_lazy = () -> FundProcessingPassport1.mmObject();
 			isDerived = false;
 			xmlTag = "RedPrcgChrtcs";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "RedemptionProcessingCharacteristics";
 			definition = "Processing characteristics linked to the instrument, ie, not to  the market.";
 			maxOccurs = 1;
@@ -589,11 +592,11 @@ public class FundProcessingPassport1 {
 	 */
 	public static final MMMessageAssociationEnd mmSettlementDetails = new MMMessageAssociationEnd() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.InvestmentFundClassProcessingCharacteristics.mmSettlementAccount;
+			businessElementTrace_lazy = () -> InvestmentFundClassProcessingCharacteristics.mmSettlementAccount;
 			componentContext_lazy = () -> FundProcessingPassport1.mmObject();
 			isDerived = false;
 			xmlTag = "SttlmDtls";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SettlementDetails";
 			definition = "Account to or from which a cash entry is made.";
 			minOccurs = 1;
@@ -638,11 +641,11 @@ public class FundProcessingPassport1 {
 	 */
 	public static final MMMessageAssociationEnd mmLocalMarketAnnex = new MMMessageAssociationEnd() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Security.mmTradingMarket;
+			businessElementTrace_lazy = () -> Security.mmTradingMarket;
 			componentContext_lazy = () -> FundProcessingPassport1.mmObject();
 			isDerived = false;
 			xmlTag = "LclMktAnx";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "LocalMarketAnnex";
 			definition = "Context, or geographic environment, in which trading parties may meet in order to negotiate and execute trades among themselves.";
 			minOccurs = 0;
@@ -684,7 +687,7 @@ public class FundProcessingPassport1 {
 			componentContext_lazy = () -> FundProcessingPassport1.mmObject();
 			isDerived = false;
 			xmlTag = "Xtnsn";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Extension";
 			definition = "Additional information that cannot be captured in the structured elements and/or any other specific block.";
 			minOccurs = 0;
@@ -696,16 +699,14 @@ public class FundProcessingPassport1 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.FundProcessingPassport1.mmUpdatedDate, com.tools20022.repository.msg.FundProcessingPassport1.mmSecurityIdentification,
-						com.tools20022.repository.msg.FundProcessingPassport1.mmMainFundOrderDesk, com.tools20022.repository.msg.FundProcessingPassport1.mmFundManagementCompany,
-						com.tools20022.repository.msg.FundProcessingPassport1.mmFundDetails, com.tools20022.repository.msg.FundProcessingPassport1.mmValuationDealingCharacteristics,
-						com.tools20022.repository.msg.FundProcessingPassport1.mmInvestmentRestrictions, com.tools20022.repository.msg.FundProcessingPassport1.mmSubscriptionProcessingCharacteristics,
-						com.tools20022.repository.msg.FundProcessingPassport1.mmRedemptionProcessingCharacteristics, com.tools20022.repository.msg.FundProcessingPassport1.mmSettlementDetails,
-						com.tools20022.repository.msg.FundProcessingPassport1.mmLocalMarketAnnex, com.tools20022.repository.msg.FundProcessingPassport1.mmExtension);
-				messageBuildingBlock_lazy = () -> Arrays.asList(com.tools20022.repository.area.reda.FundProcessingPassportReportV02.mmFundProcessingPassport);
+				messageElement_lazy = () -> Arrays.asList(FundProcessingPassport1.mmUpdatedDate, FundProcessingPassport1.mmSecurityIdentification, FundProcessingPassport1.mmMainFundOrderDesk,
+						FundProcessingPassport1.mmFundManagementCompany, FundProcessingPassport1.mmFundDetails, FundProcessingPassport1.mmValuationDealingCharacteristics, FundProcessingPassport1.mmInvestmentRestrictions,
+						FundProcessingPassport1.mmSubscriptionProcessingCharacteristics, FundProcessingPassport1.mmRedemptionProcessingCharacteristics, FundProcessingPassport1.mmSettlementDetails,
+						FundProcessingPassport1.mmLocalMarketAnnex, FundProcessingPassport1.mmExtension);
+				messageBuildingBlock_lazy = () -> Arrays.asList(FundProcessingPassportReportV02.mmFundProcessingPassport);
 				trace_lazy = () -> InvestmentFund.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "FundProcessingPassport1";
 				definition = "Fund Processing Passsport (FPP) is a fully harmonised document with all key operational information that fund promoters should provide on their investment funds in order to facilitate their trading.";
 			}

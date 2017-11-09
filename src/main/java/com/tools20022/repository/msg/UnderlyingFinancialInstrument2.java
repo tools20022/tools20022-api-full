@@ -19,7 +19,11 @@ package com.tools20022.repository.msg;
 
 import com.tools20022.metamodel.MMMessageAssociationEnd;
 import com.tools20022.metamodel.MMMessageComponent;
+import com.tools20022.metamodel.MMRegistrationStatus;
+import com.tools20022.repository.area.setr.SecuritiesTradeConfirmationV02;
+import com.tools20022.repository.area.setr.SecuritiesTradeConfirmationV03;
 import com.tools20022.repository.entity.Security;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -112,11 +116,11 @@ public class UnderlyingFinancialInstrument2 {
 	 */
 	public static final MMMessageAssociationEnd mmIdentification = new MMMessageAssociationEnd() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Security.mmIdentification;
+			businessElementTrace_lazy = () -> Security.mmIdentification;
 			componentContext_lazy = () -> UnderlyingFinancialInstrument2.mmObject();
 			isDerived = false;
 			xmlTag = "Id";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Identification";
 			definition = "Identification of the underlying security by an ISIN.";
 			maxOccurs = 1;
@@ -166,7 +170,7 @@ public class UnderlyingFinancialInstrument2 {
 			componentContext_lazy = () -> UnderlyingFinancialInstrument2.mmObject();
 			isDerived = false;
 			xmlTag = "Attrbts";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Attributes";
 			definition = "Underlying financial instrument attributes to which an trade confirmation is related.";
 			maxOccurs = 1;
@@ -179,12 +183,11 @@ public class UnderlyingFinancialInstrument2 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.UnderlyingFinancialInstrument2.mmIdentification, com.tools20022.repository.msg.UnderlyingFinancialInstrument2.mmAttributes);
-				messageBuildingBlock_lazy = () -> Arrays.asList(com.tools20022.repository.area.setr.SecuritiesTradeConfirmationV02.mmUnderlyingFinancialInstrument,
-						com.tools20022.repository.area.setr.SecuritiesTradeConfirmationV03.mmUnderlyingFinancialInstrument);
+				messageElement_lazy = () -> Arrays.asList(UnderlyingFinancialInstrument2.mmIdentification, UnderlyingFinancialInstrument2.mmAttributes);
+				messageBuildingBlock_lazy = () -> Arrays.asList(SecuritiesTradeConfirmationV02.mmUnderlyingFinancialInstrument, SecuritiesTradeConfirmationV03.mmUnderlyingFinancialInstrument);
 				trace_lazy = () -> Security.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "UnderlyingFinancialInstrument2";
 				definition = "Underlying financial instrument to which an trade confirmation is related.";
 				previousVersion_lazy = () -> UnderlyingFinancialInstrument1.mmObject();

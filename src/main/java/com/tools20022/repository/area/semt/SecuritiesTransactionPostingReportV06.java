@@ -20,6 +20,7 @@ package com.tools20022.repository.area.semt;
 import com.tools20022.metamodel.MMMessageBuildingBlock;
 import com.tools20022.metamodel.MMMessageDefinition;
 import com.tools20022.metamodel.MMMessageDefinitionIdentifier;
+import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.area.SecuritiesManagementPreviousVersion;
 import com.tools20022.repository.msg.*;
 import com.tools20022.repository.msgset.SettlementAndReconciliationISOPreviousversion;
@@ -53,6 +54,9 @@ import java.util.List;
  * <p>
  * <strong>Constant fields:</strong>
  * <ul>
+ * <li>
+ * {@linkplain com.tools20022.metamodel.MMMessageDefinition#getMessageDefinitionIdentifier
+ * messageDefinitionIdentifier} = {@code semt.017.001.06}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMMessageDefinition#getBusinessArea
  * businessArea} =
  * {@linkplain com.tools20022.repository.area.SecuritiesManagementPreviousVersion
@@ -93,9 +97,6 @@ import java.util.List;
  * SecuritiesTransactionPostingReportV06.mmSubAccountDetails}</li>
  * </ul>
  * </li>
- * <li>
- * {@linkplain com.tools20022.metamodel.MMMessageDefinition#getMessageDefinitionIdentifier
- * messageDefinitionIdentifier} = {@code semt.017.001.06}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -166,11 +167,11 @@ public class SecuritiesTransactionPostingReportV06 {
 	public static final MMMessageBuildingBlock mmPagination = new MMMessageBuildingBlock() {
 		{
 			xmlTag = "Pgntn";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Pagination";
 			definition = "Page number of the message (within a statement) and continuation indicator to indicate that the statement is to continue or that the message is the last page of the statement.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.area.semt.SecuritiesTransactionPostingReportV07.mmPagination);
-			previousVersion_lazy = () -> com.tools20022.repository.area.semt.SecuritiesTransactionPostingReportV05.mmPagination;
+			nextVersions_lazy = () -> Arrays.asList(SecuritiesTransactionPostingReportV07.mmPagination);
+			previousVersion_lazy = () -> SecuritiesTransactionPostingReportV05.mmPagination;
 			maxOccurs = 1;
 			minOccurs = 1;
 			complexType_lazy = () -> Pagination.mmObject();
@@ -215,11 +216,11 @@ public class SecuritiesTransactionPostingReportV06 {
 	public static final MMMessageBuildingBlock mmStatementGeneralDetails = new MMMessageBuildingBlock() {
 		{
 			xmlTag = "StmtGnlDtls";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "StatementGeneralDetails";
 			definition = "Provides general information on the report.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.area.semt.SecuritiesTransactionPostingReportV07.mmStatementGeneralDetails);
-			previousVersion_lazy = () -> com.tools20022.repository.area.semt.SecuritiesTransactionPostingReportV05.mmStatementGeneralDetails;
+			nextVersions_lazy = () -> Arrays.asList(SecuritiesTransactionPostingReportV07.mmStatementGeneralDetails);
+			previousVersion_lazy = () -> SecuritiesTransactionPostingReportV05.mmStatementGeneralDetails;
 			maxOccurs = 1;
 			minOccurs = 1;
 			complexType_lazy = () -> Statement44.mmObject();
@@ -265,11 +266,11 @@ public class SecuritiesTransactionPostingReportV06 {
 	public static final MMMessageBuildingBlock mmAccountOwner = new MMMessageBuildingBlock() {
 		{
 			xmlTag = "AcctOwnr";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AccountOwner";
 			definition = "Party that legally owns the account.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.area.semt.SecuritiesTransactionPostingReportV07.mmAccountOwner);
-			previousVersion_lazy = () -> com.tools20022.repository.area.semt.SecuritiesTransactionPostingReportV05.mmAccountOwner;
+			nextVersions_lazy = () -> Arrays.asList(SecuritiesTransactionPostingReportV07.mmAccountOwner);
+			previousVersion_lazy = () -> SecuritiesTransactionPostingReportV05.mmAccountOwner;
 			maxOccurs = 1;
 			minOccurs = 0;
 			complexType_lazy = () -> PartyIdentification98.mmObject();
@@ -315,11 +316,11 @@ public class SecuritiesTransactionPostingReportV06 {
 	public static final MMMessageBuildingBlock mmSafekeepingAccount = new MMMessageBuildingBlock() {
 		{
 			xmlTag = "SfkpgAcct";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SafekeepingAccount";
 			definition = "Account to or from which a securities entry is made.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.area.semt.SecuritiesTransactionPostingReportV07.mmSafekeepingAccount);
-			previousVersion_lazy = () -> com.tools20022.repository.area.semt.SecuritiesTransactionPostingReportV05.mmSafekeepingAccount;
+			nextVersions_lazy = () -> Arrays.asList(SecuritiesTransactionPostingReportV07.mmSafekeepingAccount);
+			previousVersion_lazy = () -> SecuritiesTransactionPostingReportV05.mmSafekeepingAccount;
 			maxOccurs = 1;
 			minOccurs = 1;
 			complexType_lazy = () -> SecuritiesAccount24.mmObject();
@@ -365,11 +366,11 @@ public class SecuritiesTransactionPostingReportV06 {
 	public static final MMMessageBuildingBlock mmFinancialInstrumentDetails = new MMMessageBuildingBlock() {
 		{
 			xmlTag = "FinInstrmDtls";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "FinancialInstrumentDetails";
 			definition = "Reporting per financial instrument.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.area.semt.SecuritiesTransactionPostingReportV07.mmFinancialInstrumentDetails);
-			previousVersion_lazy = () -> com.tools20022.repository.area.semt.SecuritiesTransactionPostingReportV05.mmFinancialInstrumentDetails;
+			nextVersions_lazy = () -> Arrays.asList(SecuritiesTransactionPostingReportV07.mmFinancialInstrumentDetails);
+			previousVersion_lazy = () -> SecuritiesTransactionPostingReportV05.mmFinancialInstrumentDetails;
 			minOccurs = 0;
 			complexType_lazy = () -> FinancialInstrumentDetails20.mmObject();
 		}
@@ -414,11 +415,11 @@ public class SecuritiesTransactionPostingReportV06 {
 	public static final MMMessageBuildingBlock mmSubAccountDetails = new MMMessageBuildingBlock() {
 		{
 			xmlTag = "SubAcctDtls";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SubAccountDetails";
 			definition = "Details at sub-account level.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.area.semt.SecuritiesTransactionPostingReportV07.mmSubAccountDetails);
-			previousVersion_lazy = () -> com.tools20022.repository.area.semt.SecuritiesTransactionPostingReportV05.mmSubAccountDetails;
+			nextVersions_lazy = () -> Arrays.asList(SecuritiesTransactionPostingReportV07.mmSubAccountDetails);
+			previousVersion_lazy = () -> SecuritiesTransactionPostingReportV05.mmSubAccountDetails;
 			minOccurs = 0;
 			complexType_lazy = () -> SubAccountIdentification44.mmObject();
 		}
@@ -427,7 +428,7 @@ public class SecuritiesTransactionPostingReportV06 {
 	final static public MMMessageDefinition mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageDefinition() {
 			{
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "SecuritiesTransactionPostingReportV06";
 				definition = "Scope\r\nAn account servicer sends a SecuritiesTransactionPostingReport to an account owner to provide the details of increases and decreases of holdings which occurred during a specified period, for all or selected securities in the specified safekeeping account or sub-safekeeping account which the account servicer holds for the account owner. \r\nThe account servicer/owner relationship may be:\r\n- a central securities depository or another settlement market infrastructure acting on behalf of their participants\r\n- an agent (sub-custodian) acting on behalf of their global custodian customer, or \r\n- a custodian acting on behalf of an investment management institution or a broker/dealer.\r\n\r\nUsage\r\nThis message may be used as a trade date based or a settlement date based statement.\r\nThe message may also be used to: \r\n- re-send a message previously sent,\r\n- provide a third party with a copy of a message for information,\r\n- re-send to a third party a copy of a message for information\r\nusing the relevant elements in the Business Application Header.";
 				nextVersions_lazy = () -> Arrays.asList(SecuritiesTransactionPostingReportV07.mmObject());
@@ -436,10 +437,8 @@ public class SecuritiesTransactionPostingReportV06 {
 				rootElement = "Document";
 				xmlTag = "SctiesTxPstngRpt";
 				businessArea_lazy = () -> SecuritiesManagementPreviousVersion.mmObject();
-				messageBuildingBlock_lazy = () -> Arrays.asList(com.tools20022.repository.area.semt.SecuritiesTransactionPostingReportV06.mmPagination,
-						com.tools20022.repository.area.semt.SecuritiesTransactionPostingReportV06.mmStatementGeneralDetails, com.tools20022.repository.area.semt.SecuritiesTransactionPostingReportV06.mmAccountOwner,
-						com.tools20022.repository.area.semt.SecuritiesTransactionPostingReportV06.mmSafekeepingAccount, com.tools20022.repository.area.semt.SecuritiesTransactionPostingReportV06.mmFinancialInstrumentDetails,
-						com.tools20022.repository.area.semt.SecuritiesTransactionPostingReportV06.mmSubAccountDetails);
+				messageBuildingBlock_lazy = () -> Arrays.asList(SecuritiesTransactionPostingReportV06.mmPagination, SecuritiesTransactionPostingReportV06.mmStatementGeneralDetails, SecuritiesTransactionPostingReportV06.mmAccountOwner,
+						SecuritiesTransactionPostingReportV06.mmSafekeepingAccount, SecuritiesTransactionPostingReportV06.mmFinancialInstrumentDetails, SecuritiesTransactionPostingReportV06.mmSubAccountDetails);
 				messageDefinitionIdentifier_lazy = () -> new MMMessageDefinitionIdentifier() {
 					{
 						businessArea = "semt";

@@ -20,11 +20,13 @@ package com.tools20022.repository.msg;
 import com.tools20022.metamodel.MMMessageAssociationEnd;
 import com.tools20022.metamodel.MMMessageAttribute;
 import com.tools20022.metamodel.MMMessageComponent;
+import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.datatype.DecimalNumber;
 import com.tools20022.repository.datatype.GroupCancellationIndicator;
 import com.tools20022.repository.datatype.Max15NumericText;
 import com.tools20022.repository.datatype.Max35Text;
-import com.tools20022.repository.entity.Payment;
+import com.tools20022.repository.entity.*;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.List;
@@ -156,15 +158,15 @@ public class OriginalPaymentInstruction15 {
 	 */
 	public static final MMMessageAttribute mmPaymentCancellationIdentification = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.PaymentIdentification.mmExecutionIdentification;
+			businessElementTrace_lazy = () -> PaymentIdentification.mmExecutionIdentification;
 			componentContext_lazy = () -> OriginalPaymentInstruction15.mmObject();
 			isDerived = false;
 			xmlTag = "PmtCxlId";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PaymentCancellationIdentification";
 			definition = "Unique identification, as assigned by the assigner, to unambiguously identify the cancellation request.\n\nUsage: The cancellation request identification can be used for reconciliation or to link tasks relating to the cancellation request.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.OriginalPaymentInstruction20.mmPaymentCancellationIdentification);
-			previousVersion_lazy = () -> com.tools20022.repository.msg.OriginalPaymentInstruction13.mmPaymentCancellationIdentification;
+			nextVersions_lazy = () -> Arrays.asList(OriginalPaymentInstruction20.mmPaymentCancellationIdentification);
+			previousVersion_lazy = () -> OriginalPaymentInstruction13.mmPaymentCancellationIdentification;
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> Max35Text.mmObject();
@@ -216,15 +218,15 @@ public class OriginalPaymentInstruction15 {
 	 */
 	public static final MMMessageAssociationEnd mmCase = new MMMessageAssociationEnd() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.InvestigationCase.mmStatus;
+			businessElementTrace_lazy = () -> InvestigationCase.mmStatus;
 			componentContext_lazy = () -> OriginalPaymentInstruction15.mmObject();
 			isDerived = false;
 			xmlTag = "Case";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Case";
 			definition = "Identifies the case.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.OriginalPaymentInstruction20.mmCase);
-			previousVersion_lazy = () -> com.tools20022.repository.msg.OriginalPaymentInstruction13.mmCase;
+			nextVersions_lazy = () -> Arrays.asList(OriginalPaymentInstruction20.mmCase);
+			previousVersion_lazy = () -> OriginalPaymentInstruction13.mmCase;
 			maxOccurs = 1;
 			minOccurs = 0;
 			isComposite = true;
@@ -282,15 +284,15 @@ public class OriginalPaymentInstruction15 {
 	 */
 	public static final MMMessageAttribute mmOriginalPaymentInformationIdentification = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.TradeIdentification.mmIdentification;
+			businessElementTrace_lazy = () -> TradeIdentification.mmIdentification;
 			componentContext_lazy = () -> OriginalPaymentInstruction15.mmObject();
 			isDerived = false;
 			xmlTag = "OrgnlPmtInfId";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "OriginalPaymentInformationIdentification";
 			definition = "Unique and unambiguous identifier of the original payment information block, as assigned by the original sending party.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.OriginalPaymentInstruction20.mmOriginalPaymentInformationIdentification);
-			previousVersion_lazy = () -> com.tools20022.repository.msg.OriginalPaymentInstruction13.mmOriginalPaymentInformationIdentification;
+			nextVersions_lazy = () -> Arrays.asList(OriginalPaymentInstruction20.mmOriginalPaymentInformationIdentification);
+			previousVersion_lazy = () -> OriginalPaymentInstruction13.mmOriginalPaymentInformationIdentification;
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> Max35Text.mmObject();
@@ -350,11 +352,11 @@ public class OriginalPaymentInstruction15 {
 			componentContext_lazy = () -> OriginalPaymentInstruction15.mmObject();
 			isDerived = false;
 			xmlTag = "OrgnlGrpInf";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "OriginalGroupInformation";
 			definition = "Information concerning the original group of transactions, to which the message refers.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.OriginalPaymentInstruction20.mmOriginalGroupInformation);
-			previousVersion_lazy = () -> com.tools20022.repository.msg.OriginalPaymentInstruction13.mmOriginalGroupInformation;
+			nextVersions_lazy = () -> Arrays.asList(OriginalPaymentInstruction20.mmOriginalGroupInformation);
+			previousVersion_lazy = () -> OriginalPaymentInstruction13.mmOriginalGroupInformation;
 			maxOccurs = 1;
 			minOccurs = 0;
 			isComposite = true;
@@ -411,11 +413,11 @@ public class OriginalPaymentInstruction15 {
 			componentContext_lazy = () -> OriginalPaymentInstruction15.mmObject();
 			isDerived = false;
 			xmlTag = "NbOfTxs";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "NumberOfTransactions";
 			definition = "Number of individual transactions contained in the cancellation payment information group.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.OriginalPaymentInstruction20.mmNumberOfTransactions);
-			previousVersion_lazy = () -> com.tools20022.repository.msg.OriginalPaymentInstruction13.mmNumberOfTransactions;
+			nextVersions_lazy = () -> Arrays.asList(OriginalPaymentInstruction20.mmNumberOfTransactions);
+			previousVersion_lazy = () -> OriginalPaymentInstruction13.mmNumberOfTransactions;
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> Max15NumericText.mmObject();
@@ -471,11 +473,11 @@ public class OriginalPaymentInstruction15 {
 			componentContext_lazy = () -> OriginalPaymentInstruction15.mmObject();
 			isDerived = false;
 			xmlTag = "CtrlSum";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ControlSum";
 			definition = "Total of all individual amounts included in the cancellation payment information group, irrespective of currencies.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.OriginalPaymentInstruction20.mmControlSum);
-			previousVersion_lazy = () -> com.tools20022.repository.msg.OriginalPaymentInstruction13.mmControlSum;
+			nextVersions_lazy = () -> Arrays.asList(OriginalPaymentInstruction20.mmControlSum);
+			previousVersion_lazy = () -> OriginalPaymentInstruction13.mmControlSum;
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> DecimalNumber.mmObject();
@@ -531,11 +533,11 @@ public class OriginalPaymentInstruction15 {
 			componentContext_lazy = () -> OriginalPaymentInstruction15.mmObject();
 			isDerived = false;
 			xmlTag = "PmtInfCxl";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PaymentInformationCancellation";
 			definition = "Indicates whether or not the cancellation applies to a whole group of transactions or to individual transactions within the original group.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.OriginalPaymentInstruction20.mmPaymentInformationCancellation);
-			previousVersion_lazy = () -> com.tools20022.repository.msg.OriginalPaymentInstruction13.mmPaymentInformationCancellation;
+			nextVersions_lazy = () -> Arrays.asList(OriginalPaymentInstruction20.mmPaymentInformationCancellation);
+			previousVersion_lazy = () -> OriginalPaymentInstruction13.mmPaymentInformationCancellation;
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> GroupCancellationIndicator.mmObject();
@@ -589,15 +591,15 @@ public class OriginalPaymentInstruction15 {
 	 */
 	public static final MMMessageAssociationEnd mmCancellationReasonInformation = new MMMessageAssociationEnd() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Status.mmStatusReason;
+			businessElementTrace_lazy = () -> Status.mmStatusReason;
 			componentContext_lazy = () -> OriginalPaymentInstruction15.mmObject();
 			isDerived = false;
 			xmlTag = "CxlRsnInf";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CancellationReasonInformation";
 			definition = "Detailed information on the cancellation reason.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.OriginalPaymentInstruction20.mmCancellationReasonInformation);
-			previousVersion_lazy = () -> com.tools20022.repository.msg.OriginalPaymentInstruction13.mmCancellationReasonInformation;
+			nextVersions_lazy = () -> Arrays.asList(OriginalPaymentInstruction20.mmCancellationReasonInformation);
+			previousVersion_lazy = () -> OriginalPaymentInstruction13.mmCancellationReasonInformation;
 			minOccurs = 0;
 			isComposite = true;
 			type_lazy = () -> com.tools20022.repository.msg.PaymentCancellationReason2.mmObject();
@@ -656,11 +658,11 @@ public class OriginalPaymentInstruction15 {
 			componentContext_lazy = () -> OriginalPaymentInstruction15.mmObject();
 			isDerived = false;
 			xmlTag = "TxInf";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "TransactionInformation";
 			definition = "Information concerning the original transactions, to which the cancellation request message refers.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.OriginalPaymentInstruction20.mmTransactionInformation);
-			previousVersion_lazy = () -> com.tools20022.repository.msg.OriginalPaymentInstruction13.mmTransactionInformation;
+			nextVersions_lazy = () -> Arrays.asList(OriginalPaymentInstruction20.mmTransactionInformation);
+			previousVersion_lazy = () -> OriginalPaymentInstruction13.mmTransactionInformation;
 			minOccurs = 0;
 			isComposite = true;
 			type_lazy = () -> com.tools20022.repository.msg.PaymentTransaction61.mmObject();
@@ -670,14 +672,12 @@ public class OriginalPaymentInstruction15 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.OriginalPaymentInstruction15.mmPaymentCancellationIdentification, com.tools20022.repository.msg.OriginalPaymentInstruction15.mmCase,
-						com.tools20022.repository.msg.OriginalPaymentInstruction15.mmOriginalPaymentInformationIdentification, com.tools20022.repository.msg.OriginalPaymentInstruction15.mmOriginalGroupInformation,
-						com.tools20022.repository.msg.OriginalPaymentInstruction15.mmNumberOfTransactions, com.tools20022.repository.msg.OriginalPaymentInstruction15.mmControlSum,
-						com.tools20022.repository.msg.OriginalPaymentInstruction15.mmPaymentInformationCancellation, com.tools20022.repository.msg.OriginalPaymentInstruction15.mmCancellationReasonInformation,
-						com.tools20022.repository.msg.OriginalPaymentInstruction15.mmTransactionInformation);
+				messageElement_lazy = () -> Arrays.asList(OriginalPaymentInstruction15.mmPaymentCancellationIdentification, OriginalPaymentInstruction15.mmCase, OriginalPaymentInstruction15.mmOriginalPaymentInformationIdentification,
+						OriginalPaymentInstruction15.mmOriginalGroupInformation, OriginalPaymentInstruction15.mmNumberOfTransactions, OriginalPaymentInstruction15.mmControlSum, OriginalPaymentInstruction15.mmPaymentInformationCancellation,
+						OriginalPaymentInstruction15.mmCancellationReasonInformation, OriginalPaymentInstruction15.mmTransactionInformation);
 				trace_lazy = () -> Payment.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "OriginalPaymentInstruction15";
 				definition = "Provides details on the reference and status of the original transactions, included in the original instruction, to which the cancellation request message applies.";
 				nextVersions_lazy = () -> Arrays.asList(OriginalPaymentInstruction20.mmObject());

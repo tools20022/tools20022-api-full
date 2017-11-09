@@ -19,6 +19,8 @@ package com.tools20022.repository.codeset;
 
 import com.tools20022.metamodel.MMCode;
 import com.tools20022.metamodel.MMCodeSet;
+import com.tools20022.metamodel.MMRegistrationStatus;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -28,6 +30,13 @@ import java.util.concurrent.atomic.AtomicReference;
  * <p>
  * <strong>Constant fields:</strong>
  * <ul>
+ * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getDerivation derivation}
+ * =
+ * <ul>
+ * <li>{@linkplain com.tools20022.repository.codeset.ExtendedEventType1Code
+ * ExtendedEventType1Code}</li>
+ * </ul>
+ * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getCode code} =
  * <ul>
  * <li>
@@ -51,13 +60,6 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>
  * {@linkplain com.tools20022.repository.codeset.ExtendedEventTypeCode#mmPartialPrerefunding
  * ExtendedEventTypeCode.mmPartialPrerefunding}</li>
- * </ul>
- * </li>
- * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getDerivation derivation}
- * =
- * <ul>
- * <li>{@linkplain com.tools20022.repository.codeset.ExtendedEventType1Code
- * ExtendedEventType1Code}</li>
  * </ul>
  * </li>
  * <li>
@@ -113,7 +115,7 @@ public class ExtendedEventTypeCode {
 	 */
 	public static final MMCode mmMeeting = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Meeting";
 			definition = "Meeting of a company's share or bond holders to address resolutions put forth by the issuer. Note: this is information only event. Pending deprecation and migration to ISO Proxy Message suite.";
 			owner_lazy = () -> ExtendedEventTypeCode.mmObject();
@@ -146,7 +148,7 @@ public class ExtendedEventTypeCode {
 	 */
 	public static final MMCode mmRightsPlanAdoption = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "RightsPlanAdoption";
 			definition = "General information provided by the issuer that should not result in material changes to the security.";
 			owner_lazy = () -> ExtendedEventTypeCode.mmObject();
@@ -182,7 +184,7 @@ public class ExtendedEventTypeCode {
 	 */
 	public static final MMCode mmTermination = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Termination";
 			definition = "Security, usually a form of a derivative, for which the agent or issuer has decided to terminate the derivative based on a change to the underlying security(ies) or a change in strategy. Distinguishes from  Mandatory Exchange, Exchange Offer event types mapped to the same ISO event type code.";
 			owner_lazy = () -> ExtendedEventTypeCode.mmObject();
@@ -219,7 +221,7 @@ public class ExtendedEventTypeCode {
 	 */
 	public static final MMCode mmBonusRightsIssue = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "BonusRightsIssue";
 			definition = "Security holders are issued additional securities, free of payment, from the issuer in proportion to their holdings. A bonus issue is typically represented by shares or warrants. Nominal value does not change. The security holder may be offered choice of entitlement. Distinguishes from  Rights Subscription, Sale Of Rights event types mapped to the same ISO event type code.";
 			owner_lazy = () -> ExtendedEventTypeCode.mmObject();
@@ -255,7 +257,7 @@ public class ExtendedEventTypeCode {
 	 */
 	public static final MMCode mmFullPrerefunding = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "FullPrerefunding";
 			definition = "Exercise of a privilege by the issuer to repay, in full, any debt security prior to maturity when the issuer deposits assets in trust. This irrevocably restricts their use to satisfaction of the debt. Distinguishes from  \"partial defeasance\", \"partial prerefunding\" event types mapped to the same ISO event type code.";
 			owner_lazy = () -> ExtendedEventTypeCode.mmObject();
@@ -290,7 +292,7 @@ public class ExtendedEventTypeCode {
 	 */
 	public static final MMCode mmPartialDefeasance = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PartialDefeasance";
 			definition = "Issuer sets aside cash in escrow to pay off a portion of the issue before the maturity date. New securities are issued for the portion defeased. Distinguishes from  \"full prerefunding\", \"partial prerefunding\" event types mapped to the same ISO event type code.";
 			owner_lazy = () -> ExtendedEventTypeCode.mmObject();
@@ -328,7 +330,7 @@ public class ExtendedEventTypeCode {
 	 */
 	public static final MMCode mmPartialPrerefunding = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PartialPrerefunding";
 			definition = "Similar to a Full Prerefunding, a partial prerefunding is the exercise of a privilege by the issuer to repay, in part, any debt security prior to maturity when the issuer deposits assets in trust. This irrevocably restricts their use to satisfaction of the debt. New securities are issued for the portion prerefunded. Distinguishes from  \"full prerefunding\", \"partial defeasance\" event types mapped to the same ISO event type code.";
 			owner_lazy = () -> ExtendedEventTypeCode.mmObject();
@@ -339,15 +341,13 @@ public class ExtendedEventTypeCode {
 	static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
 				example = Arrays.asList("MEET");
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "ExtendedEventTypeCode";
 				definition = "Specifies DTCC (The Depository Trust and Clearing Corporation) defined corporate action event type.";
-				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.ExtendedEventTypeCode.mmMeeting, com.tools20022.repository.codeset.ExtendedEventTypeCode.mmRightsPlanAdoption,
-						com.tools20022.repository.codeset.ExtendedEventTypeCode.mmTermination, com.tools20022.repository.codeset.ExtendedEventTypeCode.mmBonusRightsIssue,
-						com.tools20022.repository.codeset.ExtendedEventTypeCode.mmFullPrerefunding, com.tools20022.repository.codeset.ExtendedEventTypeCode.mmPartialDefeasance,
-						com.tools20022.repository.codeset.ExtendedEventTypeCode.mmPartialPrerefunding);
+				code_lazy = () -> Arrays.asList(ExtendedEventTypeCode.mmMeeting, ExtendedEventTypeCode.mmRightsPlanAdoption, ExtendedEventTypeCode.mmTermination, ExtendedEventTypeCode.mmBonusRightsIssue,
+						ExtendedEventTypeCode.mmFullPrerefunding, ExtendedEventTypeCode.mmPartialDefeasance, ExtendedEventTypeCode.mmPartialPrerefunding);
 				derivation_lazy = () -> Arrays.asList(ExtendedEventType1Code.mmObject());
 			}
 		});

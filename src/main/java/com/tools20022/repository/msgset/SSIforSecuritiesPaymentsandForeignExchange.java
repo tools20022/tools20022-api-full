@@ -18,10 +18,12 @@
 package com.tools20022.repository.msgset;
 
 import com.tools20022.metamodel.MMMessageSet;
+import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.area.reda.StandingSettlementInstructionCancellationV01;
 import com.tools20022.repository.area.reda.StandingSettlementInstructionDeletionV01;
 import com.tools20022.repository.area.reda.StandingSettlementInstructionStatusAdviceV01;
 import com.tools20022.repository.area.reda.StandingSettlementInstructionV01;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -72,8 +74,8 @@ public class SSIforSecuritiesPaymentsandForeignExchange {
 	final static public MMMessageSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageSet() {
 			{
-				businessProcessCatalogue_lazy = () -> com.tools20022.repository.GeneratedRepository.mmcatalogue;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				businessProcessCatalogue_lazy = () -> GeneratedRepository.mmcatalogue;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "SSI for Securities, Payments and Foreign Exchange";
 				definition = "Messages that support the Global delivery of Standing Settlement Instructions (SSI) for Securities, Cash and Foreign Exchange.";
 				messageDefinition_lazy = () -> Arrays.asList(StandingSettlementInstructionV01.mmObject(), StandingSettlementInstructionCancellationV01.mmObject(), StandingSettlementInstructionStatusAdviceV01.mmObject(),

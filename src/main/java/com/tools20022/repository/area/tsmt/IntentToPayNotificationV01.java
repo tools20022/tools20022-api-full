@@ -20,6 +20,7 @@ package com.tools20022.repository.area.tsmt;
 import com.tools20022.metamodel.MMMessageBuildingBlock;
 import com.tools20022.metamodel.MMMessageDefinition;
 import com.tools20022.metamodel.MMMessageDefinitionIdentifier;
+import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.area.TradeServicesManagementPreviousVersion;
 import com.tools20022.repository.msg.BICIdentification1;
 import com.tools20022.repository.msg.IntentToPay1;
@@ -45,6 +46,9 @@ import java.util.concurrent.atomic.AtomicReference;
  * <p>
  * <strong>Constant fields:</strong>
  * <ul>
+ * <li>
+ * {@linkplain com.tools20022.metamodel.MMMessageDefinition#getMessageDefinitionIdentifier
+ * messageDefinitionIdentifier} = {@code tsmt.044.001.01}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMMessageDefinition#getBusinessArea
  * businessArea} =
  * {@linkplain com.tools20022.repository.area.TradeServicesManagementPreviousVersion
@@ -86,9 +90,6 @@ import java.util.concurrent.atomic.AtomicReference;
  * IntentToPayNotificationV01.mmIntentToPay}</li>
  * </ul>
  * </li>
- * <li>
- * {@linkplain com.tools20022.metamodel.MMMessageDefinition#getMessageDefinitionIdentifier
- * messageDefinitionIdentifier} = {@code tsmt.044.001.01}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -147,10 +148,10 @@ public class IntentToPayNotificationV01 {
 	public static final MMMessageBuildingBlock mmNotificationIdentification = new MMMessageBuildingBlock() {
 		{
 			xmlTag = "NtfctnId";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "NotificationIdentification";
 			definition = "Identifies the notification message.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.area.tsmt.IntentToPayNotificationV02.mmNotificationIdentification);
+			nextVersions_lazy = () -> Arrays.asList(IntentToPayNotificationV02.mmNotificationIdentification);
 			maxOccurs = 1;
 			minOccurs = 1;
 			complexType_lazy = () -> MessageIdentification1.mmObject();
@@ -195,10 +196,10 @@ public class IntentToPayNotificationV01 {
 	public static final MMMessageBuildingBlock mmTransactionIdentification = new MMMessageBuildingBlock() {
 		{
 			xmlTag = "TxId";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "TransactionIdentification";
 			definition = "Unique identification assigned by the matching application to the transaction.\nThis identification is to be used in any communication between the parties.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.area.tsmt.IntentToPayNotificationV02.mmTransactionIdentification);
+			nextVersions_lazy = () -> Arrays.asList(IntentToPayNotificationV02.mmTransactionIdentification);
 			maxOccurs = 1;
 			minOccurs = 1;
 			complexType_lazy = () -> SimpleIdentificationInformation.mmObject();
@@ -240,10 +241,10 @@ public class IntentToPayNotificationV01 {
 	public static final MMMessageBuildingBlock mmSubmitterTransactionReference = new MMMessageBuildingBlock() {
 		{
 			xmlTag = "SubmitrTxRef";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SubmitterTransactionReference";
 			definition = "Reference to the transaction for the requesting financial institution.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.area.tsmt.IntentToPayNotificationV02.mmSubmitterTransactionReference);
+			nextVersions_lazy = () -> Arrays.asList(IntentToPayNotificationV02.mmSubmitterTransactionReference);
 			maxOccurs = 1;
 			minOccurs = 0;
 			complexType_lazy = () -> SimpleIdentificationInformation.mmObject();
@@ -286,10 +287,10 @@ public class IntentToPayNotificationV01 {
 	public static final MMMessageBuildingBlock mmBuyerBank = new MMMessageBuildingBlock() {
 		{
 			xmlTag = "BuyrBk";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "BuyerBank";
 			definition = "The financial institution of the buyer, uniquely identified by its BIC. \n";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.area.tsmt.IntentToPayNotificationV02.mmBuyerBank);
+			nextVersions_lazy = () -> Arrays.asList(IntentToPayNotificationV02.mmBuyerBank);
 			maxOccurs = 1;
 			minOccurs = 1;
 			complexType_lazy = () -> BICIdentification1.mmObject();
@@ -332,10 +333,10 @@ public class IntentToPayNotificationV01 {
 	public static final MMMessageBuildingBlock mmSellerBank = new MMMessageBuildingBlock() {
 		{
 			xmlTag = "SellrBk";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SellerBank";
 			definition = "The financial institution of the seller, uniquely identified by its BIC. \n";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.area.tsmt.IntentToPayNotificationV02.mmSellerBank);
+			nextVersions_lazy = () -> Arrays.asList(IntentToPayNotificationV02.mmSellerBank);
 			maxOccurs = 1;
 			minOccurs = 1;
 			complexType_lazy = () -> BICIdentification1.mmObject();
@@ -375,10 +376,10 @@ public class IntentToPayNotificationV01 {
 	public static final MMMessageBuildingBlock mmIntentToPay = new MMMessageBuildingBlock() {
 		{
 			xmlTag = "InttToPay";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "IntentToPay";
 			definition = "Provides the details of the intention to pay.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.area.tsmt.IntentToPayNotificationV02.mmIntentToPay);
+			nextVersions_lazy = () -> Arrays.asList(IntentToPayNotificationV02.mmIntentToPay);
 			maxOccurs = 1;
 			minOccurs = 1;
 			complexType_lazy = () -> IntentToPay1.mmObject();
@@ -388,7 +389,7 @@ public class IntentToPayNotificationV01 {
 	final static public MMMessageDefinition mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageDefinition() {
 			{
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "IntentToPayNotificationV01";
 				definition = "Scope\r\nThe IntentToPayNotification message is sent by a party to the matching application in order to provide details about a future payment.\r\nThis message contains details about an intention to pay a certain amount, on a certain date, in relation to one or several transactions known to the matching application.\r\nUsage\r\nThe IntentToPayNotification message can be sent by a party to the transaction at any time as long as the transaction is established and not yet closed.\r\nThe message is unsolicited, that is, it is not sent in response to another message.";
 				nextVersions_lazy = () -> Arrays.asList(IntentToPayNotificationV02.mmObject());
@@ -396,10 +397,8 @@ public class IntentToPayNotificationV01 {
 				rootElement = "Document";
 				xmlTag = "InttToPayNtfctn";
 				businessArea_lazy = () -> TradeServicesManagementPreviousVersion.mmObject();
-				messageBuildingBlock_lazy = () -> Arrays.asList(com.tools20022.repository.area.tsmt.IntentToPayNotificationV01.mmNotificationIdentification,
-						com.tools20022.repository.area.tsmt.IntentToPayNotificationV01.mmTransactionIdentification, com.tools20022.repository.area.tsmt.IntentToPayNotificationV01.mmSubmitterTransactionReference,
-						com.tools20022.repository.area.tsmt.IntentToPayNotificationV01.mmBuyerBank, com.tools20022.repository.area.tsmt.IntentToPayNotificationV01.mmSellerBank,
-						com.tools20022.repository.area.tsmt.IntentToPayNotificationV01.mmIntentToPay);
+				messageBuildingBlock_lazy = () -> Arrays.asList(IntentToPayNotificationV01.mmNotificationIdentification, IntentToPayNotificationV01.mmTransactionIdentification, IntentToPayNotificationV01.mmSubmitterTransactionReference,
+						IntentToPayNotificationV01.mmBuyerBank, IntentToPayNotificationV01.mmSellerBank, IntentToPayNotificationV01.mmIntentToPay);
 				messageDefinitionIdentifier_lazy = () -> new MMMessageDefinitionIdentifier() {
 					{
 						businessArea = "tsmt";

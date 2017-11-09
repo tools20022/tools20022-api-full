@@ -17,11 +17,10 @@
 
 package com.tools20022.repository.entity;
 
-import com.tools20022.metamodel.MMBusinessAssociationEnd;
-import com.tools20022.metamodel.MMBusinessAttribute;
-import com.tools20022.metamodel.MMBusinessComponent;
+import com.tools20022.metamodel.*;
 import com.tools20022.repository.codeset.TradeCertificateTypeCode;
 import com.tools20022.repository.entity.Document;
+import com.tools20022.repository.GeneratedRepository;
 import com.tools20022.repository.msg.*;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
@@ -37,21 +36,26 @@ import java.util.List;
  * <p>
  * <strong>Constant fields:</strong>
  * <ul>
- * <li>{@linkplain com.tools20022.metamodel.MMBusinessComponent#getElement
- * element} =
+ * <li>
+ * {@linkplain com.tools20022.metamodel.MMBusinessComponent#getDerivationComponent
+ * derivationComponent} =
  * <ul>
- * <li>
- * {@linkplain com.tools20022.repository.entity.TradeCertificate#mmCertificateType
- * TradeCertificate.mmCertificateType}</li>
- * <li>
- * {@linkplain com.tools20022.repository.entity.TradeCertificate#mmInspectionDate
- * TradeCertificate.mmInspectionDate}</li>
- * <li>
- * {@linkplain com.tools20022.repository.entity.TradeCertificate#mmTradeCertificatePartyRole
- * TradeCertificate.mmTradeCertificatePartyRole}</li>
- * <li>
- * {@linkplain com.tools20022.repository.entity.TradeCertificate#mmProductDelivery
- * TradeCertificate.mmProductDelivery}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.RequiredSubmission4
+ * RequiredSubmission4}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.RequiredSubmission5
+ * RequiredSubmission5}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.CertificateDataSet1
+ * CertificateDataSet1}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.OtherCertificateDataSet1
+ * OtherCertificateDataSet1}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.CertificateDataSet2
+ * CertificateDataSet2}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.OtherCertificateDataSet2
+ * OtherCertificateDataSet2}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.RequiredSubmission6
+ * RequiredSubmission6}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.TransactionCertificate1
+ * TransactionCertificate1}</li>
  * </ul>
  * </li>
  * <li>
@@ -83,26 +87,21 @@ import java.util.List;
  * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMBusinessComponent#getSuperType
  * superType} = {@linkplain com.tools20022.repository.entity.Document Document}</li>
- * <li>
- * {@linkplain com.tools20022.metamodel.MMBusinessComponent#getDerivationComponent
- * derivationComponent} =
+ * <li>{@linkplain com.tools20022.metamodel.MMBusinessComponent#getElement
+ * element} =
  * <ul>
- * <li>{@linkplain com.tools20022.repository.msg.RequiredSubmission4
- * RequiredSubmission4}</li>
- * <li>{@linkplain com.tools20022.repository.msg.RequiredSubmission5
- * RequiredSubmission5}</li>
- * <li>{@linkplain com.tools20022.repository.msg.CertificateDataSet1
- * CertificateDataSet1}</li>
- * <li>{@linkplain com.tools20022.repository.msg.OtherCertificateDataSet1
- * OtherCertificateDataSet1}</li>
- * <li>{@linkplain com.tools20022.repository.msg.CertificateDataSet2
- * CertificateDataSet2}</li>
- * <li>{@linkplain com.tools20022.repository.msg.OtherCertificateDataSet2
- * OtherCertificateDataSet2}</li>
- * <li>{@linkplain com.tools20022.repository.msg.RequiredSubmission6
- * RequiredSubmission6}</li>
- * <li>{@linkplain com.tools20022.repository.msg.TransactionCertificate1
- * TransactionCertificate1}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.entity.TradeCertificate#mmCertificateType
+ * TradeCertificate.mmCertificateType}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.entity.TradeCertificate#mmInspectionDate
+ * TradeCertificate.mmInspectionDate}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.entity.TradeCertificate#mmTradeCertificatePartyRole
+ * TradeCertificate.mmTradeCertificatePartyRole}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.entity.TradeCertificate#mmProductDelivery
+ * TradeCertificate.mmProductDelivery}</li>
  * </ul>
  * </li>
  * <li>
@@ -180,12 +179,11 @@ public class TradeCertificate extends Document {
 	 */
 	public static final MMBusinessAttribute mmCertificateType = new MMBusinessAttribute() {
 		{
-			derivation_lazy = () -> Arrays.asList(com.tools20022.repository.msg.RequiredSubmission4.mmCertificateType, com.tools20022.repository.msg.RequiredSubmission5.mmCertificateType,
-					com.tools20022.repository.msg.CertificateDataSet1.mmCertificateType, com.tools20022.repository.msg.OtherCertificateDataSet1.mmCertificateType, com.tools20022.repository.msg.CertificateDataSet2.mmCertificateType,
-					com.tools20022.repository.msg.OtherCertificateDataSet2.mmCertificateType, com.tools20022.repository.msg.RequiredSubmission6.mmCertificateType);
+			derivation_lazy = () -> Arrays.asList(RequiredSubmission4.mmCertificateType, RequiredSubmission5.mmCertificateType, CertificateDataSet1.mmCertificateType, OtherCertificateDataSet1.mmCertificateType,
+					CertificateDataSet2.mmCertificateType, OtherCertificateDataSet2.mmCertificateType, RequiredSubmission6.mmCertificateType);
 			elementContext_lazy = () -> TradeCertificate.mmObject();
 			isDerived = false;
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "CertificateType";
 			definition = "Specifies the type of the certificate.";
 			maxOccurs = 1;
@@ -240,16 +238,16 @@ public class TradeCertificate extends Document {
 	 */
 	public static final MMBusinessAssociationEnd mmInspectionDate = new MMBusinessAssociationEnd() {
 		{
-			derivation_lazy = () -> Arrays.asList(com.tools20022.repository.msg.CertificateDataSet1.mmInspectionDate, com.tools20022.repository.msg.CertificateDataSet2.mmInspectionDate);
+			derivation_lazy = () -> Arrays.asList(CertificateDataSet1.mmInspectionDate, CertificateDataSet2.mmInspectionDate);
 			elementContext_lazy = () -> TradeCertificate.mmObject();
 			isDerived = false;
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "InspectionDate";
 			definition = "Date(s) at which inspection of the goods took place.";
 			maxOccurs = 1;
 			minOccurs = 1;
 			opposite_lazy = () -> com.tools20022.repository.entity.DateTimePeriod.mmTradeCertificate;
-			aggregation = com.tools20022.metamodel.MMAggregation.NONE;
+			aggregation = MMAggregation.NONE;
 			type_lazy = () -> com.tools20022.repository.entity.DateTimePeriod.mmObject();
 		}
 	};
@@ -293,12 +291,12 @@ public class TradeCertificate extends Document {
 		{
 			elementContext_lazy = () -> TradeCertificate.mmObject();
 			isDerived = false;
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "TradeCertificatePartyRole";
 			definition = "Role played by a party in the context of issuing a trade certificate.";
 			minOccurs = 0;
 			opposite_lazy = () -> com.tools20022.repository.entity.TradeCertificatePartyRole.mmTradeCertificate;
-			aggregation = com.tools20022.metamodel.MMAggregation.NONE;
+			aggregation = MMAggregation.NONE;
 			type_lazy = () -> com.tools20022.repository.entity.TradeCertificatePartyRole.mmObject();
 		}
 	};
@@ -340,13 +338,13 @@ public class TradeCertificate extends Document {
 		{
 			elementContext_lazy = () -> TradeCertificate.mmObject();
 			isDerived = false;
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "ProductDelivery";
 			definition = "Delivery parameters of a trade.";
 			maxOccurs = 1;
 			minOccurs = 0;
 			opposite_lazy = () -> com.tools20022.repository.entity.ProductDelivery.mmTradeCertificate;
-			aggregation = com.tools20022.metamodel.MMAggregation.NONE;
+			aggregation = MMAggregation.NONE;
 			type_lazy = () -> com.tools20022.repository.entity.ProductDelivery.mmObject();
 		}
 	};
@@ -354,16 +352,15 @@ public class TradeCertificate extends Document {
 	static public MMBusinessComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMBusinessComponent() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "TradeCertificate";
 				definition = "Formal document used to record a fact and used as proof of the fact, in the context of a commercial trade transaction.";
 				associationDomain_lazy = () -> Arrays.asList(com.tools20022.repository.entity.DateTimePeriod.mmTradeCertificate, com.tools20022.repository.entity.ProductDelivery.mmTradeCertificate,
 						com.tools20022.repository.entity.TradeCertificatePartyRole.mmTradeCertificate);
-				derivationElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.CertificateDataSet1.mmDataSetIdentification, com.tools20022.repository.msg.CertificateDataSet1.mmCertifiedCharacteristics);
+				derivationElement_lazy = () -> Arrays.asList(CertificateDataSet1.mmDataSetIdentification, CertificateDataSet1.mmCertifiedCharacteristics);
 				superType_lazy = () -> Document.mmObject();
-				element_lazy = () -> Arrays.asList(com.tools20022.repository.entity.TradeCertificate.mmCertificateType, com.tools20022.repository.entity.TradeCertificate.mmInspectionDate,
-						com.tools20022.repository.entity.TradeCertificate.mmTradeCertificatePartyRole, com.tools20022.repository.entity.TradeCertificate.mmProductDelivery);
+				element_lazy = () -> Arrays.asList(TradeCertificate.mmCertificateType, TradeCertificate.mmInspectionDate, TradeCertificate.mmTradeCertificatePartyRole, TradeCertificate.mmProductDelivery);
 				derivationComponent_lazy = () -> Arrays.asList(RequiredSubmission4.mmObject(), RequiredSubmission5.mmObject(), CertificateDataSet1.mmObject(), OtherCertificateDataSet1.mmObject(), CertificateDataSet2.mmObject(),
 						OtherCertificateDataSet2.mmObject(), RequiredSubmission6.mmObject(), TransactionCertificate1.mmObject());
 			}

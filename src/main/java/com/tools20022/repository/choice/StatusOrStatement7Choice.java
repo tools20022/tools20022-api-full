@@ -19,7 +19,10 @@ package com.tools20022.repository.choice;
 
 import com.tools20022.metamodel.MMChoiceComponent;
 import com.tools20022.metamodel.MMMessageAssociationEnd;
+import com.tools20022.metamodel.MMRegistrationStatus;
+import com.tools20022.repository.area.sese.SecuritiesStatusOrStatementQueryStatusAdviceV04;
 import com.tools20022.repository.entity.Status;
+import com.tools20022.repository.GeneratedRepository;
 import com.tools20022.repository.msg.DocumentNumber12;
 import com.tools20022.repository.msg.DocumentNumber13;
 import java.util.Arrays;
@@ -119,10 +122,10 @@ public class StatusOrStatement7Choice {
 			componentContext_lazy = () -> StatusOrStatement7Choice.mmObject();
 			isDerived = false;
 			xmlTag = "StsAdvc";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "StatusAdvice";
 			definition = "Identify the status advice and the transaction for which the status advice was requested.";
-			previousVersion_lazy = () -> com.tools20022.repository.choice.StatusOrStatement5Choice.mmStatusAdvice;
+			previousVersion_lazy = () -> StatusOrStatement5Choice.mmStatusAdvice;
 			maxOccurs = 1;
 			minOccurs = 1;
 			isComposite = true;
@@ -166,10 +169,10 @@ public class StatusOrStatement7Choice {
 			componentContext_lazy = () -> StatusOrStatement7Choice.mmObject();
 			isDerived = false;
 			xmlTag = "Stmt";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Statement";
 			definition = "Identify the statement/report that was requested.";
-			previousVersion_lazy = () -> com.tools20022.repository.choice.StatusOrStatement5Choice.mmStatement;
+			previousVersion_lazy = () -> StatusOrStatement5Choice.mmStatement;
 			maxOccurs = 1;
 			minOccurs = 1;
 			isComposite = true;
@@ -180,10 +183,10 @@ public class StatusOrStatement7Choice {
 	final static public MMChoiceComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMChoiceComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.choice.StatusOrStatement7Choice.mmStatusAdvice, com.tools20022.repository.choice.StatusOrStatement7Choice.mmStatement);
-				messageBuildingBlock_lazy = () -> Arrays.asList(com.tools20022.repository.area.sese.SecuritiesStatusOrStatementQueryStatusAdviceV04.mmStatusOrStatementRequested);
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				messageElement_lazy = () -> Arrays.asList(StatusOrStatement7Choice.mmStatusAdvice, StatusOrStatement7Choice.mmStatement);
+				messageBuildingBlock_lazy = () -> Arrays.asList(SecuritiesStatusOrStatementQueryStatusAdviceV04.mmStatusOrStatementRequested);
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "StatusOrStatement7Choice";
 				definition = "Specifies the status or statement that is requested.";
 				previousVersion_lazy = () -> StatusOrStatement5Choice.mmObject();

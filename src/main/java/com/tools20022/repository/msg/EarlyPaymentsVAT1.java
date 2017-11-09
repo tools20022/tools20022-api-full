@@ -19,10 +19,12 @@ package com.tools20022.repository.msg;
 
 import com.tools20022.metamodel.MMMessageAttribute;
 import com.tools20022.metamodel.MMMessageComponent;
+import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.datatype.CurrencyAndAmount;
 import com.tools20022.repository.datatype.Max4Text;
 import com.tools20022.repository.datatype.PercentageRate;
 import com.tools20022.repository.entity.CommercialTradeSettlement;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -101,7 +103,7 @@ public class EarlyPaymentsVAT1 {
 			componentContext_lazy = () -> EarlyPaymentsVAT1.mmObject();
 			isDerived = false;
 			xmlTag = "TaxRate";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "TaxRate";
 			definition = "Tax rate to be applied for early payment.";
 			maxOccurs = 1;
@@ -142,7 +144,7 @@ public class EarlyPaymentsVAT1 {
 			componentContext_lazy = () -> EarlyPaymentsVAT1.mmObject();
 			isDerived = false;
 			xmlTag = "DscntTaxTp";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "DiscountTaxType";
 			definition = "Type of tax applied.";
 			maxOccurs = 1;
@@ -185,7 +187,7 @@ public class EarlyPaymentsVAT1 {
 			componentContext_lazy = () -> EarlyPaymentsVAT1.mmObject();
 			isDerived = false;
 			xmlTag = "DscntTaxAmt";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "DiscountTaxAmount";
 			definition = "Early payment discount tax amount calculated using defined tax rate.";
 			maxOccurs = 1;
@@ -197,11 +199,10 @@ public class EarlyPaymentsVAT1 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.EarlyPaymentsVAT1.mmTaxRate, com.tools20022.repository.msg.EarlyPaymentsVAT1.mmDiscountTaxType,
-						com.tools20022.repository.msg.EarlyPaymentsVAT1.mmDiscountTaxAmount);
+				messageElement_lazy = () -> Arrays.asList(EarlyPaymentsVAT1.mmTaxRate, EarlyPaymentsVAT1.mmDiscountTaxType, EarlyPaymentsVAT1.mmDiscountTaxAmount);
 				trace_lazy = () -> CommercialTradeSettlement.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "EarlyPaymentsVAT1";
 				definition = "Specifies the payment terms of the underlying transaction.";
 			}

@@ -19,8 +19,14 @@ package com.tools20022.repository.msg;
 
 import com.tools20022.metamodel.MMMessageAttribute;
 import com.tools20022.metamodel.MMMessageComponent;
+import com.tools20022.metamodel.MMRegistrationStatus;
+import com.tools20022.repository.area.acmt.AccountExcludedMandateMaintenanceRequestV01;
+import com.tools20022.repository.area.acmt.AccountExcludedMandateMaintenanceRequestV02;
+import com.tools20022.repository.area.acmt.AccountMandateMaintenanceRequestV01;
+import com.tools20022.repository.area.acmt.AccountMandateMaintenanceRequestV02;
 import com.tools20022.repository.datatype.Max256Text;
 import com.tools20022.repository.entity.SecuritiesSettlement;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.List;
@@ -111,7 +117,7 @@ public class AdditionalInformation5 {
 			componentContext_lazy = () -> AdditionalInformation5.mmObject();
 			isDerived = false;
 			xmlTag = "Inf";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Information";
 			definition = "Contains additional information related to the message.";
 			minOccurs = 1;
@@ -122,13 +128,12 @@ public class AdditionalInformation5 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.AdditionalInformation5.mmInformation);
-				messageBuildingBlock_lazy = () -> Arrays.asList(com.tools20022.repository.area.acmt.AccountExcludedMandateMaintenanceRequestV01.mmAdditionalMessageInformation,
-						com.tools20022.repository.area.acmt.AccountExcludedMandateMaintenanceRequestV02.mmAdditionalMessageInformation, com.tools20022.repository.area.acmt.AccountMandateMaintenanceRequestV01.mmAdditionalMessageInformation,
-						com.tools20022.repository.area.acmt.AccountMandateMaintenanceRequestV02.mmAdditionalMessageInformation);
+				messageElement_lazy = () -> Arrays.asList(AdditionalInformation5.mmInformation);
+				messageBuildingBlock_lazy = () -> Arrays.asList(AccountExcludedMandateMaintenanceRequestV01.mmAdditionalMessageInformation, AccountExcludedMandateMaintenanceRequestV02.mmAdditionalMessageInformation,
+						AccountMandateMaintenanceRequestV01.mmAdditionalMessageInformation, AccountMandateMaintenanceRequestV02.mmAdditionalMessageInformation);
 				trace_lazy = () -> SecuritiesSettlement.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "AdditionalInformation5";
 				definition = "Contains additional information related to the message.";
 			}

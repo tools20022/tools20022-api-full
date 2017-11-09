@@ -20,12 +20,14 @@ package com.tools20022.repository.msg;
 import com.tools20022.metamodel.MMMessageAssociationEnd;
 import com.tools20022.metamodel.MMMessageAttribute;
 import com.tools20022.metamodel.MMMessageComponent;
+import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.choice.DateAndDateTimeChoice;
 import com.tools20022.repository.choice.IsabelEbanking1Choice;
 import com.tools20022.repository.datatype.ISODateTime;
 import com.tools20022.repository.datatype.Max13AlphaNumericText;
 import com.tools20022.repository.datatype.Max64Text;
 import com.tools20022.repository.datatype.Max70Text;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -111,7 +113,7 @@ public class IsabelReportHeader3 {
 			componentContext_lazy = () -> IsabelReportHeader3.mmObject();
 			isDerived = false;
 			xmlTag = "ActlSndrId";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ActualSenderIdentification";
 			definition = "Unique identification of the actual sender of the file.";
 			maxOccurs = 1;
@@ -153,7 +155,7 @@ public class IsabelReportHeader3 {
 			componentContext_lazy = () -> IsabelReportHeader3.mmObject();
 			isDerived = false;
 			xmlTag = "PyldCreDt";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PayloadCreationDate";
 			definition = "Date and time at which the file in the payload was actually created.";
 			maxOccurs = 1;
@@ -194,7 +196,7 @@ public class IsabelReportHeader3 {
 			componentContext_lazy = () -> IsabelReportHeader3.mmObject();
 			isDerived = false;
 			xmlTag = "File";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "File";
 			definition = "Characteristics of the file contained in the payload.";
 			maxOccurs = 1;
@@ -236,7 +238,7 @@ public class IsabelReportHeader3 {
 			componentContext_lazy = () -> IsabelReportHeader3.mmObject();
 			isDerived = false;
 			xmlTag = "SndTmStmp";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SendTimeStamp";
 			definition = "Time stamp on when the file is sent.";
 			maxOccurs = 1;
@@ -277,7 +279,7 @@ public class IsabelReportHeader3 {
 			componentContext_lazy = () -> IsabelReportHeader3.mmObject();
 			isDerived = false;
 			xmlTag = "BkRef";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "BankReference";
 			definition = "Unique reference as assigned by the bank to the report.";
 			maxOccurs = 1;
@@ -321,7 +323,7 @@ public class IsabelReportHeader3 {
 			componentContext_lazy = () -> IsabelReportHeader3.mmObject();
 			isDerived = false;
 			xmlTag = "DIVFileDesc";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "DIVFileDescription";
 			definition = "Description of the file when provided in DIV format (Belgian proprietary file format).";
 			maxOccurs = 1;
@@ -362,7 +364,7 @@ public class IsabelReportHeader3 {
 			componentContext_lazy = () -> IsabelReportHeader3.mmObject();
 			isDerived = false;
 			xmlTag = "EBkg";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "EBanking";
 			definition = "Unique identification used for the e-banking module.";
 			maxOccurs = 1;
@@ -375,11 +377,10 @@ public class IsabelReportHeader3 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.IsabelReportHeader3.mmActualSenderIdentification, com.tools20022.repository.msg.IsabelReportHeader3.mmPayloadCreationDate,
-						com.tools20022.repository.msg.IsabelReportHeader3.mmFile, com.tools20022.repository.msg.IsabelReportHeader3.mmSendTimeStamp, com.tools20022.repository.msg.IsabelReportHeader3.mmBankReference,
-						com.tools20022.repository.msg.IsabelReportHeader3.mmDIVFileDescription, com.tools20022.repository.msg.IsabelReportHeader3.mmEBanking);
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+				messageElement_lazy = () -> Arrays.asList(IsabelReportHeader3.mmActualSenderIdentification, IsabelReportHeader3.mmPayloadCreationDate, IsabelReportHeader3.mmFile, IsabelReportHeader3.mmSendTimeStamp,
+						IsabelReportHeader3.mmBankReference, IsabelReportHeader3.mmDIVFileDescription, IsabelReportHeader3.mmEBanking);
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 				name = "IsabelReportHeader3";
 				definition = "Specifies the header information for a report file.";
 			}

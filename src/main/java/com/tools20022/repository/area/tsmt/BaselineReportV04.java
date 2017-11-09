@@ -20,6 +20,7 @@ package com.tools20022.repository.area.tsmt;
 import com.tools20022.metamodel.MMMessageBuildingBlock;
 import com.tools20022.metamodel.MMMessageDefinition;
 import com.tools20022.metamodel.MMMessageDefinitionIdentifier;
+import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.area.TradeServicesManagementLatestVersion;
 import com.tools20022.repository.msg.*;
 import com.tools20022.repository.msgset.TradeServicesManagementISOLatestversion;
@@ -65,6 +66,9 @@ import java.util.List;
  * <p>
  * <strong>Constant fields:</strong>
  * <ul>
+ * <li>
+ * {@linkplain com.tools20022.metamodel.MMMessageDefinition#getMessageDefinitionIdentifier
+ * messageDefinitionIdentifier} = {@code tsmt.011.001.04}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMMessageDefinition#getBusinessArea
  * businessArea} =
  * {@linkplain com.tools20022.repository.area.TradeServicesManagementLatestVersion
@@ -127,9 +131,6 @@ import java.util.List;
  * </ul>
  * </li>
  * <li>
- * {@linkplain com.tools20022.metamodel.MMMessageDefinition#getMessageDefinitionIdentifier
- * messageDefinitionIdentifier} = {@code tsmt.011.001.04}</li>
- * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
  * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
@@ -180,10 +181,10 @@ public class BaselineReportV04 {
 	public static final MMMessageBuildingBlock mmReportIdentification = new MMMessageBuildingBlock() {
 		{
 			xmlTag = "RptId";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ReportIdentification";
 			definition = "Identifies the report. ";
-			previousVersion_lazy = () -> com.tools20022.repository.area.tsmt.BaselineReportV03.mmReportIdentification;
+			previousVersion_lazy = () -> BaselineReportV03.mmReportIdentification;
 			maxOccurs = 1;
 			minOccurs = 1;
 			complexType_lazy = () -> MessageIdentification1.mmObject();
@@ -224,10 +225,10 @@ public class BaselineReportV04 {
 	public static final MMMessageBuildingBlock mmRelatedMessageReference = new MMMessageBuildingBlock() {
 		{
 			xmlTag = "RltdMsgRef";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "RelatedMessageReference";
 			definition = "Reference to the related message at the origin of the report or sent at the same time than the report.";
-			previousVersion_lazy = () -> com.tools20022.repository.area.tsmt.BaselineReportV03.mmRelatedMessageReference;
+			previousVersion_lazy = () -> BaselineReportV03.mmRelatedMessageReference;
 			maxOccurs = 1;
 			minOccurs = 0;
 			complexType_lazy = () -> MessageIdentification1.mmObject();
@@ -264,10 +265,10 @@ public class BaselineReportV04 {
 	public static final MMMessageBuildingBlock mmReportType = new MMMessageBuildingBlock() {
 		{
 			xmlTag = "RptTp";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ReportType";
 			definition = "Type of baseline report.";
-			previousVersion_lazy = () -> com.tools20022.repository.area.tsmt.BaselineReportV03.mmReportType;
+			previousVersion_lazy = () -> BaselineReportV03.mmReportType;
 			maxOccurs = 1;
 			minOccurs = 1;
 			complexType_lazy = () -> ReportType2.mmObject();
@@ -309,10 +310,10 @@ public class BaselineReportV04 {
 	public static final MMMessageBuildingBlock mmTransactionIdentification = new MMMessageBuildingBlock() {
 		{
 			xmlTag = "TxId";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "TransactionIdentification";
 			definition = "Unique identification assigned by the matching application to the transaction.\nThis identification is to be used in any communication between the parties.\n";
-			previousVersion_lazy = () -> com.tools20022.repository.area.tsmt.BaselineReportV03.mmTransactionIdentification;
+			previousVersion_lazy = () -> BaselineReportV03.mmTransactionIdentification;
 			maxOccurs = 1;
 			minOccurs = 1;
 			complexType_lazy = () -> SimpleIdentificationInformation.mmObject();
@@ -353,10 +354,10 @@ public class BaselineReportV04 {
 	public static final MMMessageBuildingBlock mmEstablishedBaselineIdentification = new MMMessageBuildingBlock() {
 		{
 			xmlTag = "EstblishdBaselnId";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "EstablishedBaselineIdentification";
 			definition = "Unique identification assigned by the matching application to the baseline when it is established.  ";
-			previousVersion_lazy = () -> com.tools20022.repository.area.tsmt.BaselineReportV03.mmEstablishedBaselineIdentification;
+			previousVersion_lazy = () -> BaselineReportV03.mmEstablishedBaselineIdentification;
 			maxOccurs = 1;
 			minOccurs = 1;
 			complexType_lazy = () -> DocumentIdentification6.mmObject();
@@ -395,10 +396,10 @@ public class BaselineReportV04 {
 	public static final MMMessageBuildingBlock mmTransactionStatus = new MMMessageBuildingBlock() {
 		{
 			xmlTag = "TxSts";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "TransactionStatus";
 			definition = "Identifies the status of the transaction by means of a code.";
-			previousVersion_lazy = () -> com.tools20022.repository.area.tsmt.BaselineReportV03.mmTransactionStatus;
+			previousVersion_lazy = () -> BaselineReportV03.mmTransactionStatus;
 			maxOccurs = 1;
 			minOccurs = 1;
 			complexType_lazy = () -> TransactionStatus4.mmObject();
@@ -439,10 +440,10 @@ public class BaselineReportV04 {
 	public static final MMMessageBuildingBlock mmUserTransactionReference = new MMMessageBuildingBlock() {
 		{
 			xmlTag = "UsrTxRef";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "UserTransactionReference";
 			definition = "Reference to the transaction for each financial institution which is a party to the transaction.";
-			previousVersion_lazy = () -> com.tools20022.repository.area.tsmt.BaselineReportV03.mmUserTransactionReference;
+			previousVersion_lazy = () -> BaselineReportV03.mmUserTransactionReference;
 			maxOccurs = 2;
 			minOccurs = 0;
 			complexType_lazy = () -> DocumentIdentification5.mmObject();
@@ -481,10 +482,10 @@ public class BaselineReportV04 {
 	public static final MMMessageBuildingBlock mmBuyer = new MMMessageBuildingBlock() {
 		{
 			xmlTag = "Buyr";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Buyer";
 			definition = "Party that buys goods or services, or a financial instrument. ";
-			previousVersion_lazy = () -> com.tools20022.repository.area.tsmt.BaselineReportV03.mmBuyer;
+			previousVersion_lazy = () -> BaselineReportV03.mmBuyer;
 			maxOccurs = 1;
 			minOccurs = 1;
 			complexType_lazy = () -> PartyIdentification26.mmObject();
@@ -523,10 +524,10 @@ public class BaselineReportV04 {
 	public static final MMMessageBuildingBlock mmSeller = new MMMessageBuildingBlock() {
 		{
 			xmlTag = "Sellr";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Seller";
 			definition = "Party that sells goods or services, or a financial instrument. ";
-			previousVersion_lazy = () -> com.tools20022.repository.area.tsmt.BaselineReportV03.mmSeller;
+			previousVersion_lazy = () -> BaselineReportV03.mmSeller;
 			maxOccurs = 1;
 			minOccurs = 1;
 			complexType_lazy = () -> PartyIdentification26.mmObject();
@@ -566,10 +567,10 @@ public class BaselineReportV04 {
 	public static final MMMessageBuildingBlock mmBuyerBank = new MMMessageBuildingBlock() {
 		{
 			xmlTag = "BuyrBk";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "BuyerBank";
 			definition = "The financial institution of the buyer, uniquely identified by its BIC. ";
-			previousVersion_lazy = () -> com.tools20022.repository.area.tsmt.BaselineReportV03.mmBuyerBank;
+			previousVersion_lazy = () -> BaselineReportV03.mmBuyerBank;
 			maxOccurs = 1;
 			minOccurs = 1;
 			complexType_lazy = () -> BICIdentification1.mmObject();
@@ -609,10 +610,10 @@ public class BaselineReportV04 {
 	public static final MMMessageBuildingBlock mmSellerBank = new MMMessageBuildingBlock() {
 		{
 			xmlTag = "SellrBk";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SellerBank";
 			definition = "The financial institution of the seller, uniquely identified by its BIC. ";
-			previousVersion_lazy = () -> com.tools20022.repository.area.tsmt.BaselineReportV03.mmSellerBank;
+			previousVersion_lazy = () -> BaselineReportV03.mmSellerBank;
 			maxOccurs = 1;
 			minOccurs = 1;
 			complexType_lazy = () -> BICIdentification1.mmObject();
@@ -649,10 +650,10 @@ public class BaselineReportV04 {
 	public static final MMMessageBuildingBlock mmReportedLineItem = new MMMessageBuildingBlock() {
 		{
 			xmlTag = "RptdLineItm";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ReportedLineItem";
 			definition = "Information on the goods";
-			previousVersion_lazy = () -> com.tools20022.repository.area.tsmt.BaselineReportV03.mmReportedLineItem;
+			previousVersion_lazy = () -> BaselineReportV03.mmReportedLineItem;
 			maxOccurs = 1;
 			minOccurs = 1;
 			complexType_lazy = () -> LineItem14.mmObject();
@@ -690,10 +691,10 @@ public class BaselineReportV04 {
 	public static final MMMessageBuildingBlock mmRequestForAction = new MMMessageBuildingBlock() {
 		{
 			xmlTag = "ReqForActn";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "RequestForAction";
 			definition = "Information on the next processing step required.";
-			previousVersion_lazy = () -> com.tools20022.repository.area.tsmt.BaselineReportV03.mmRequestForAction;
+			previousVersion_lazy = () -> BaselineReportV03.mmRequestForAction;
 			maxOccurs = 1;
 			minOccurs = 0;
 			complexType_lazy = () -> PendingActivity2.mmObject();
@@ -703,7 +704,7 @@ public class BaselineReportV04 {
 	final static public MMMessageDefinition mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageDefinition() {
 			{
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "BaselineReportV04";
 				definition = "Scope\r\nThe BaselineReport message is sent by the matching application to the parties involved in an amendment request or to the parties involved in a data set match.\r\nThe message is used to report either a pre-calculation or final calculation of the dynamic part of an established baseline.\r\nUsage\r\nThe BaselineReport message can be sent by the matching application to the parties involved in an amendment request for a transaction established in the push-through mode. In the outlined scenario, the message is sent\r\n- to the party requested to accept or reject an amendment request after the matching application has received a BaselineAmendmentRequest message. The message informs about the provisional status of the dynamic part of the baseline.\r\n- to the requester and the accepter of an amendment request after the matching application has received an AmendmentAcceptance message conveying the acceptance of the amendment request. The message informs about the actual status of the dynamic part of the baseline.\r\nor\r\nThe BaselineReport message can be sent by the matching application to the party which has sent an amendment request for a transaction established in the lodge mode. In the outlined scenario the message is used to inform about the actual status of the dynamic part of the baseline.\r\nor\r\nThe BaselineReport message can be sent by the matching application to the parties involved in a data set match. In the outlined scenario, the message is sent\r\n- to the submitter of the data set(s) in the case of a data set match for a transaction established in the lodge mode.\r\n- to the submitter of the data set(s) and to the counterparty in case of a data set match for a transaction established in the push-through mode.The message can be sent after a successful data-set match or after the acceptance of mis-matched data sets to inform about the actual status of the dynamic part of the baseline.";
 				previousVersion_lazy = () -> BaselineReportV03.mmObject();
@@ -711,12 +712,9 @@ public class BaselineReportV04 {
 				rootElement = "Document";
 				xmlTag = "BaselnRpt";
 				businessArea_lazy = () -> TradeServicesManagementLatestVersion.mmObject();
-				messageBuildingBlock_lazy = () -> Arrays.asList(com.tools20022.repository.area.tsmt.BaselineReportV04.mmReportIdentification, com.tools20022.repository.area.tsmt.BaselineReportV04.mmRelatedMessageReference,
-						com.tools20022.repository.area.tsmt.BaselineReportV04.mmReportType, com.tools20022.repository.area.tsmt.BaselineReportV04.mmTransactionIdentification,
-						com.tools20022.repository.area.tsmt.BaselineReportV04.mmEstablishedBaselineIdentification, com.tools20022.repository.area.tsmt.BaselineReportV04.mmTransactionStatus,
-						com.tools20022.repository.area.tsmt.BaselineReportV04.mmUserTransactionReference, com.tools20022.repository.area.tsmt.BaselineReportV04.mmBuyer, com.tools20022.repository.area.tsmt.BaselineReportV04.mmSeller,
-						com.tools20022.repository.area.tsmt.BaselineReportV04.mmBuyerBank, com.tools20022.repository.area.tsmt.BaselineReportV04.mmSellerBank, com.tools20022.repository.area.tsmt.BaselineReportV04.mmReportedLineItem,
-						com.tools20022.repository.area.tsmt.BaselineReportV04.mmRequestForAction);
+				messageBuildingBlock_lazy = () -> Arrays.asList(BaselineReportV04.mmReportIdentification, BaselineReportV04.mmRelatedMessageReference, BaselineReportV04.mmReportType, BaselineReportV04.mmTransactionIdentification,
+						BaselineReportV04.mmEstablishedBaselineIdentification, BaselineReportV04.mmTransactionStatus, BaselineReportV04.mmUserTransactionReference, BaselineReportV04.mmBuyer, BaselineReportV04.mmSeller,
+						BaselineReportV04.mmBuyerBank, BaselineReportV04.mmSellerBank, BaselineReportV04.mmReportedLineItem, BaselineReportV04.mmRequestForAction);
 				messageDefinitionIdentifier_lazy = () -> new MMMessageDefinitionIdentifier() {
 					{
 						businessArea = "tsmt";

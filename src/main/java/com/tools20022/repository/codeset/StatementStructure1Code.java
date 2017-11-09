@@ -19,7 +19,9 @@ package com.tools20022.repository.codeset;
 
 import com.tools20022.metamodel.MMCode;
 import com.tools20022.metamodel.MMCodeSet;
+import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.codeset.StatementStructureCode;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -84,7 +86,7 @@ public class StatementStructure1Code extends StatementStructureCode {
 	 */
 	public static final MMCode mmStatuses = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Statuses";
 			owner_lazy = () -> StatementStructure1Code.mmObject();
 		}
@@ -107,7 +109,7 @@ public class StatementStructure1Code extends StatementStructureCode {
 	 */
 	public static final MMCode mmTransactions = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Transactions";
 			owner_lazy = () -> StatementStructure1Code.mmObject();
 		}
@@ -116,12 +118,12 @@ public class StatementStructure1Code extends StatementStructureCode {
 	static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
 				example = Arrays.asList("STAT");
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "StatementStructure1Code";
 				definition = "Specifies the type of balances on which the statement is prepared.";
-				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.StatementStructure1Code.mmStatuses, com.tools20022.repository.codeset.StatementStructure1Code.mmTransactions);
+				code_lazy = () -> Arrays.asList(StatementStructure1Code.mmStatuses, StatementStructure1Code.mmTransactions);
 				trace_lazy = () -> StatementStructureCode.mmObject();
 			}
 		});

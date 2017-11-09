@@ -19,8 +19,10 @@ package com.tools20022.repository.choice;
 
 import com.tools20022.metamodel.MMChoiceComponent;
 import com.tools20022.metamodel.MMMessageAttribute;
+import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.datatype.YesNoIndicator;
 import com.tools20022.repository.entity.Settlement;
+import com.tools20022.repository.GeneratedRepository;
 import com.tools20022.repository.msg.GenericIdentification38;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
@@ -101,11 +103,11 @@ public class CentralCounterPartyEligibility3Choice {
 	 */
 	public static final MMMessageAttribute mmIndicator = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Settlement.mmCentralCounterpartyEligibilityIndicator;
+			businessElementTrace_lazy = () -> Settlement.mmCentralCounterpartyEligibilityIndicator;
 			componentContext_lazy = () -> CentralCounterPartyEligibility3Choice.mmObject();
 			isDerived = false;
 			xmlTag = "Ind";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Indicator";
 			definition = "Specifies whether the settlement transaction is CCP (Central Counterparty) eligible.";
 			maxOccurs = 1;
@@ -150,7 +152,7 @@ public class CentralCounterPartyEligibility3Choice {
 			componentContext_lazy = () -> CentralCounterPartyEligibility3Choice.mmObject();
 			isDerived = false;
 			xmlTag = "Prtry";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Proprietary";
 			definition = "Central counterparty eligibility information expressed as a proprietary code.";
 			maxOccurs = 1;
@@ -162,10 +164,10 @@ public class CentralCounterPartyEligibility3Choice {
 	final static public MMChoiceComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMChoiceComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.choice.CentralCounterPartyEligibility3Choice.mmIndicator, com.tools20022.repository.choice.CentralCounterPartyEligibility3Choice.mmProprietary);
+				messageElement_lazy = () -> Arrays.asList(CentralCounterPartyEligibility3Choice.mmIndicator, CentralCounterPartyEligibility3Choice.mmProprietary);
 				trace_lazy = () -> Settlement.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "CentralCounterPartyEligibility3Choice";
 				definition = "Choice of format for the CCP eligibility information.";
 			}

@@ -19,7 +19,9 @@ package com.tools20022.repository.codeset;
 
 import com.tools20022.metamodel.MMCode;
 import com.tools20022.metamodel.MMCodeSet;
+import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.codeset.TradeStatusCode;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -112,7 +114,7 @@ public class TradeStatus2Code extends TradeStatusCode {
 	 */
 	public static final MMCode mmValidated = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Validated";
 			owner_lazy = () -> TradeStatus2Code.mmObject();
 		}
@@ -135,7 +137,7 @@ public class TradeStatus2Code extends TradeStatusCode {
 	 */
 	public static final MMCode mmRegulatoryChecked = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "RegulatoryChecked";
 			owner_lazy = () -> TradeStatus2Code.mmObject();
 		}
@@ -158,7 +160,7 @@ public class TradeStatus2Code extends TradeStatusCode {
 	 */
 	public static final MMCode mmInvalid = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Invalid";
 			owner_lazy = () -> TradeStatus2Code.mmObject();
 		}
@@ -181,7 +183,7 @@ public class TradeStatus2Code extends TradeStatusCode {
 	 */
 	public static final MMCode mmSettlementRejected = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SettlementRejected";
 			owner_lazy = () -> TradeStatus2Code.mmObject();
 		}
@@ -204,7 +206,7 @@ public class TradeStatus2Code extends TradeStatusCode {
 	 */
 	public static final MMCode mmRegulatorySuspended = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "RegulatorySuspended";
 			owner_lazy = () -> TradeStatus2Code.mmObject();
 		}
@@ -227,7 +229,7 @@ public class TradeStatus2Code extends TradeStatusCode {
 	 */
 	public static final MMCode mmUnmatched = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Unmatched";
 			owner_lazy = () -> TradeStatus2Code.mmObject();
 		}
@@ -250,7 +252,7 @@ public class TradeStatus2Code extends TradeStatusCode {
 	 */
 	public static final MMCode mmMatched = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Matched";
 			owner_lazy = () -> TradeStatus2Code.mmObject();
 		}
@@ -273,7 +275,7 @@ public class TradeStatus2Code extends TradeStatusCode {
 	 */
 	public static final MMCode mmRescinded = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Rescinded";
 			owner_lazy = () -> TradeStatus2Code.mmObject();
 		}
@@ -296,7 +298,7 @@ public class TradeStatus2Code extends TradeStatusCode {
 	 */
 	public static final MMCode mmSettled = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Settled";
 			owner_lazy = () -> TradeStatus2Code.mmObject();
 		}
@@ -319,7 +321,7 @@ public class TradeStatus2Code extends TradeStatusCode {
 	 */
 	public static final MMCode mmPartiallySettled = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PartiallySettled";
 			owner_lazy = () -> TradeStatus2Code.mmObject();
 		}
@@ -342,7 +344,7 @@ public class TradeStatus2Code extends TradeStatusCode {
 	 */
 	public static final MMCode mmMatchedValued = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "MatchedValued";
 			owner_lazy = () -> TradeStatus2Code.mmObject();
 		}
@@ -365,7 +367,7 @@ public class TradeStatus2Code extends TradeStatusCode {
 	 */
 	public static final MMCode mmRejected = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Rejected";
 			owner_lazy = () -> TradeStatus2Code.mmObject();
 		}
@@ -374,16 +376,13 @@ public class TradeStatus2Code extends TradeStatusCode {
 	static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
 				example = Arrays.asList("VALI");
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "TradeStatus2Code";
 				definition = "Specifies the status of a trade in a central matching and settlement system.";
-				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.TradeStatus2Code.mmValidated, com.tools20022.repository.codeset.TradeStatus2Code.mmRegulatoryChecked,
-						com.tools20022.repository.codeset.TradeStatus2Code.mmInvalid, com.tools20022.repository.codeset.TradeStatus2Code.mmSettlementRejected, com.tools20022.repository.codeset.TradeStatus2Code.mmRegulatorySuspended,
-						com.tools20022.repository.codeset.TradeStatus2Code.mmUnmatched, com.tools20022.repository.codeset.TradeStatus2Code.mmMatched, com.tools20022.repository.codeset.TradeStatus2Code.mmRescinded,
-						com.tools20022.repository.codeset.TradeStatus2Code.mmSettled, com.tools20022.repository.codeset.TradeStatus2Code.mmPartiallySettled, com.tools20022.repository.codeset.TradeStatus2Code.mmMatchedValued,
-						com.tools20022.repository.codeset.TradeStatus2Code.mmRejected);
+				code_lazy = () -> Arrays.asList(TradeStatus2Code.mmValidated, TradeStatus2Code.mmRegulatoryChecked, TradeStatus2Code.mmInvalid, TradeStatus2Code.mmSettlementRejected, TradeStatus2Code.mmRegulatorySuspended,
+						TradeStatus2Code.mmUnmatched, TradeStatus2Code.mmMatched, TradeStatus2Code.mmRescinded, TradeStatus2Code.mmSettled, TradeStatus2Code.mmPartiallySettled, TradeStatus2Code.mmMatchedValued, TradeStatus2Code.mmRejected);
 				trace_lazy = () -> TradeStatusCode.mmObject();
 			}
 		});

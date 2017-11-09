@@ -19,7 +19,9 @@ package com.tools20022.repository.codeset;
 
 import com.tools20022.metamodel.MMCode;
 import com.tools20022.metamodel.MMCodeSet;
+import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.codeset.PhysicalTransferTypeV2Code;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -82,7 +84,7 @@ public class PhysicalTransferType4Code extends PhysicalTransferTypeV2Code {
 	 */
 	public static final MMCode mmPhysical = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Physical";
 			owner_lazy = () -> PhysicalTransferType4Code.mmObject();
 		}
@@ -105,7 +107,7 @@ public class PhysicalTransferType4Code extends PhysicalTransferTypeV2Code {
 	 */
 	public static final MMCode mmOptional = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Optional";
 			owner_lazy = () -> PhysicalTransferType4Code.mmObject();
 		}
@@ -128,7 +130,7 @@ public class PhysicalTransferType4Code extends PhysicalTransferTypeV2Code {
 	 */
 	public static final MMCode mmCash = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Cash";
 			owner_lazy = () -> PhysicalTransferType4Code.mmObject();
 		}
@@ -137,12 +139,11 @@ public class PhysicalTransferType4Code extends PhysicalTransferTypeV2Code {
 	static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "PhysicalTransferType4Code";
 				definition = "Specifies the asset delivery type when the financial instrument is settled.";
-				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.PhysicalTransferType4Code.mmPhysical, com.tools20022.repository.codeset.PhysicalTransferType4Code.mmOptional,
-						com.tools20022.repository.codeset.PhysicalTransferType4Code.mmCash);
+				code_lazy = () -> Arrays.asList(PhysicalTransferType4Code.mmPhysical, PhysicalTransferType4Code.mmOptional, PhysicalTransferType4Code.mmCash);
 				trace_lazy = () -> PhysicalTransferTypeV2Code.mmObject();
 			}
 		});

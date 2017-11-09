@@ -20,9 +20,11 @@ package com.tools20022.repository.msg;
 import com.tools20022.metamodel.MMMessageAssociationEnd;
 import com.tools20022.metamodel.MMMessageAttribute;
 import com.tools20022.metamodel.MMMessageComponent;
+import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.codeset.ATMMediaType2Code;
 import com.tools20022.repository.codeset.ATMMediaType3Code;
 import com.tools20022.repository.datatype.Number;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.List;
@@ -107,7 +109,7 @@ public class ATMDepositedMedia1 {
 			componentContext_lazy = () -> ATMDepositedMedia1.mmObject();
 			isDerived = false;
 			xmlTag = "AcctSeqNb";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AccountSequenceNumber";
 			definition = "Link to the account for multi-account deposit.";
 			maxOccurs = 1;
@@ -157,10 +159,10 @@ public class ATMDepositedMedia1 {
 			componentContext_lazy = () -> ATMDepositedMedia1.mmObject();
 			isDerived = false;
 			xmlTag = "MdiaTp";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "MediaType";
 			definition = "Type of deposited media.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.ATMDepositedMedia3.mmMediaType);
+			nextVersions_lazy = () -> Arrays.asList(ATMDepositedMedia3.mmMediaType);
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> ATMMediaType2Code.mmObject();
@@ -208,10 +210,10 @@ public class ATMDepositedMedia1 {
 			componentContext_lazy = () -> ATMDepositedMedia1.mmObject();
 			isDerived = false;
 			xmlTag = "MdiaCtgy";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "MediaCategory";
 			definition = "Category of deposited media items.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.ATMDepositedMedia3.mmMediaCategory);
+			nextVersions_lazy = () -> Arrays.asList(ATMDepositedMedia3.mmMediaCategory);
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> ATMMediaType3Code.mmObject();
@@ -257,10 +259,10 @@ public class ATMDepositedMedia1 {
 			componentContext_lazy = () -> ATMDepositedMedia1.mmObject();
 			isDerived = false;
 			xmlTag = "MdiaItms";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "MediaItems";
 			definition = "Media item that are deposited.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.ATMDepositedMedia3.mmMediaItems);
+			nextVersions_lazy = () -> Arrays.asList(ATMDepositedMedia3.mmMediaItems);
 			minOccurs = 1;
 			isComposite = true;
 			type_lazy = () -> com.tools20022.repository.msg.ATMDepositedMedia2.mmObject();
@@ -270,10 +272,9 @@ public class ATMDepositedMedia1 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.ATMDepositedMedia1.mmAccountSequenceNumber, com.tools20022.repository.msg.ATMDepositedMedia1.mmMediaType,
-						com.tools20022.repository.msg.ATMDepositedMedia1.mmMediaCategory, com.tools20022.repository.msg.ATMDepositedMedia1.mmMediaItems);
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				messageElement_lazy = () -> Arrays.asList(ATMDepositedMedia1.mmAccountSequenceNumber, ATMDepositedMedia1.mmMediaType, ATMDepositedMedia1.mmMediaCategory, ATMDepositedMedia1.mmMediaItems);
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "ATMDepositedMedia1";
 				definition = "Deposited media put in the safe.";
 				nextVersions_lazy = () -> Arrays.asList(ATMDepositedMedia3.mmObject());

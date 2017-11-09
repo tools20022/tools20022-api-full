@@ -19,7 +19,9 @@ package com.tools20022.repository.msg;
 
 import com.tools20022.metamodel.MMMessageAssociationEnd;
 import com.tools20022.metamodel.MMMessageComponent;
+import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.choice.CorporateActionUnallocatedBalanceSD2Choice;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.List;
@@ -115,10 +117,10 @@ public class CorporateActionUnallocatedDetailsSD5 {
 			componentContext_lazy = () -> CorporateActionUnallocatedDetailsSD5.mmObject();
 			isDerived = false;
 			xmlTag = "UallctdDstrbtnBal";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "UnallocatedDistributionBalance";
 			definition = "Type of Participants positions distribution balance concerned in unallocated payment.";
-			previousVersion_lazy = () -> com.tools20022.repository.msg.CorporateActionUnallocatedDetailsSD4.mmUnallocatedDistributionBalance;
+			previousVersion_lazy = () -> CorporateActionUnallocatedDetailsSD4.mmUnallocatedDistributionBalance;
 			maxOccurs = 1;
 			minOccurs = 0;
 			isComposite = true;
@@ -166,10 +168,10 @@ public class CorporateActionUnallocatedDetailsSD5 {
 			componentContext_lazy = () -> CorporateActionUnallocatedDetailsSD5.mmObject();
 			isDerived = false;
 			xmlTag = "UallctdRedBal";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "UnallocatedRedemptionBalance";
 			definition = "Type of Participants positions redemption balance concerned in unallocated payment.";
-			previousVersion_lazy = () -> com.tools20022.repository.msg.CorporateActionUnallocatedDetailsSD4.mmUnallocatedRedemptionBalance;
+			previousVersion_lazy = () -> CorporateActionUnallocatedDetailsSD4.mmUnallocatedRedemptionBalance;
 			maxOccurs = 1;
 			minOccurs = 0;
 			isComposite = true;
@@ -212,7 +214,7 @@ public class CorporateActionUnallocatedDetailsSD5 {
 			componentContext_lazy = () -> CorporateActionUnallocatedDetailsSD5.mmObject();
 			isDerived = false;
 			xmlTag = "UallctdReorgBal";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "UnallocatedReorganisationBalance";
 			definition = "Type of participants positions reorganisation balance concerned in unallocated payment.";
 			maxOccurs = 1;
@@ -262,10 +264,10 @@ public class CorporateActionUnallocatedDetailsSD5 {
 			componentContext_lazy = () -> CorporateActionUnallocatedDetailsSD5.mmObject();
 			isDerived = false;
 			xmlTag = "UallctdSctiesTxDtls";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "UnallocatedSecuritiesTransactionDetails";
 			definition = "Details of the securities transactions concerned in unallocated payment.";
-			previousVersion_lazy = () -> com.tools20022.repository.msg.CorporateActionUnallocatedDetailsSD4.mmUnallocatedSecuritiesTransactionDetails;
+			previousVersion_lazy = () -> CorporateActionUnallocatedDetailsSD4.mmUnallocatedSecuritiesTransactionDetails;
 			minOccurs = 0;
 			isComposite = true;
 			type_lazy = () -> com.tools20022.repository.msg.CorporateActionUnallocatedSecuritiesTransactionDetailsSD6.mmObject();
@@ -311,10 +313,10 @@ public class CorporateActionUnallocatedDetailsSD5 {
 			componentContext_lazy = () -> CorporateActionUnallocatedDetailsSD5.mmObject();
 			isDerived = false;
 			xmlTag = "UallctdCshTxDtls";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "UnallocatedCashTransactionDetails";
 			definition = "Details of the cash transactions concerned in unallocated payment.";
-			previousVersion_lazy = () -> com.tools20022.repository.msg.CorporateActionUnallocatedDetailsSD4.mmUnallocatedCashTransactionDetails;
+			previousVersion_lazy = () -> CorporateActionUnallocatedDetailsSD4.mmUnallocatedCashTransactionDetails;
 			minOccurs = 0;
 			isComposite = true;
 			type_lazy = () -> com.tools20022.repository.msg.CorporateActionUnallocatedCashTransactionDetailsSD5.mmObject();
@@ -324,11 +326,11 @@ public class CorporateActionUnallocatedDetailsSD5 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.CorporateActionUnallocatedDetailsSD5.mmUnallocatedDistributionBalance,
-						com.tools20022.repository.msg.CorporateActionUnallocatedDetailsSD5.mmUnallocatedRedemptionBalance, com.tools20022.repository.msg.CorporateActionUnallocatedDetailsSD5.mmUnallocatedReorganisationBalance,
-						com.tools20022.repository.msg.CorporateActionUnallocatedDetailsSD5.mmUnallocatedSecuritiesTransactionDetails, com.tools20022.repository.msg.CorporateActionUnallocatedDetailsSD5.mmUnallocatedCashTransactionDetails);
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+				messageElement_lazy = () -> Arrays.asList(CorporateActionUnallocatedDetailsSD5.mmUnallocatedDistributionBalance, CorporateActionUnallocatedDetailsSD5.mmUnallocatedRedemptionBalance,
+						CorporateActionUnallocatedDetailsSD5.mmUnallocatedReorganisationBalance, CorporateActionUnallocatedDetailsSD5.mmUnallocatedSecuritiesTransactionDetails,
+						CorporateActionUnallocatedDetailsSD5.mmUnallocatedCashTransactionDetails);
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 				name = "CorporateActionUnallocatedDetailsSD5";
 				definition = "Provides additional information regarding the corporate action event.";
 				previousVersion_lazy = () -> CorporateActionUnallocatedDetailsSD4.mmObject();

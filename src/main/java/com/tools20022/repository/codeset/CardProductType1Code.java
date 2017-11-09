@@ -19,7 +19,9 @@ package com.tools20022.repository.codeset;
 
 import com.tools20022.metamodel.MMCode;
 import com.tools20022.metamodel.MMCodeSet;
+import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.codeset.CardProductTypeCode;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -77,7 +79,7 @@ public class CardProductType1Code extends CardProductTypeCode {
 	 */
 	public static final MMCode mmCommercialCard = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CommercialCard";
 			owner_lazy = () -> CardProductType1Code.mmObject();
 		}
@@ -100,7 +102,7 @@ public class CardProductType1Code extends CardProductTypeCode {
 	 */
 	public static final MMCode mmConsumerCard = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ConsumerCard";
 			owner_lazy = () -> CardProductType1Code.mmObject();
 		}
@@ -109,11 +111,11 @@ public class CardProductType1Code extends CardProductTypeCode {
 	static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "CardProductType1Code";
 				definition = "Type of card product.";
-				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.CardProductType1Code.mmCommercialCard, com.tools20022.repository.codeset.CardProductType1Code.mmConsumerCard);
+				code_lazy = () -> Arrays.asList(CardProductType1Code.mmCommercialCard, CardProductType1Code.mmConsumerCard);
 				trace_lazy = () -> CardProductTypeCode.mmObject();
 			}
 		});

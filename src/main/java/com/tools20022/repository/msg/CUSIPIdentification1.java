@@ -19,8 +19,10 @@ package com.tools20022.repository.msg;
 
 import com.tools20022.metamodel.MMMessageAttribute;
 import com.tools20022.metamodel.MMMessageComponent;
+import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.codeset.CountryCode;
 import com.tools20022.repository.datatype.CUSIPIdentifier;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -92,7 +94,7 @@ public class CUSIPIdentification1 {
 			componentContext_lazy = () -> CUSIPIdentification1.mmObject();
 			isDerived = false;
 			xmlTag = "CUSIPCtry";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CUSIPCountry";
 			definition = "Country in which the CUSIP has been assigned.";
 			maxOccurs = 1;
@@ -134,7 +136,7 @@ public class CUSIPIdentification1 {
 			componentContext_lazy = () -> CUSIPIdentification1.mmObject();
 			isDerived = false;
 			xmlTag = "CUSIPId";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CUSIPIdentification";
 			definition = "CUSIP identification of the security.";
 			maxOccurs = 1;
@@ -146,9 +148,9 @@ public class CUSIPIdentification1 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.CUSIPIdentification1.mmCUSIPCountry, com.tools20022.repository.msg.CUSIPIdentification1.mmCUSIPIdentification);
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+				messageElement_lazy = () -> Arrays.asList(CUSIPIdentification1.mmCUSIPCountry, CUSIPIdentification1.mmCUSIPIdentification);
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 				name = "CUSIPIdentification1";
 				definition = "Provides the CUSIP identification of a security.";
 			}

@@ -20,13 +20,15 @@ package com.tools20022.repository.msg;
 import com.tools20022.metamodel.MMMessageAssociationEnd;
 import com.tools20022.metamodel.MMMessageAttribute;
 import com.tools20022.metamodel.MMMessageComponent;
+import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.codeset.CardPaymentServiceType3Code;
 import com.tools20022.repository.codeset.CardPaymentServiceType5Code;
 import com.tools20022.repository.codeset.CardPaymentServiceType9Code;
 import com.tools20022.repository.codeset.CurrencyCode;
 import com.tools20022.repository.datatype.Max35Text;
 import com.tools20022.repository.datatype.Min3Max4Text;
-import com.tools20022.repository.entity.CardPayment;
+import com.tools20022.repository.entity.*;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.List;
@@ -143,11 +145,11 @@ public class CommonData5 {
 			componentContext_lazy = () -> CommonData5.mmObject();
 			isDerived = false;
 			xmlTag = "Envt";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Environment";
 			definition = "Data related to the environment of the transaction, common to a set of transaction.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.CommonData6.mmEnvironment);
-			previousVersion_lazy = () -> com.tools20022.repository.msg.CommonData4.mmEnvironment;
+			nextVersions_lazy = () -> Arrays.asList(CommonData6.mmEnvironment);
+			previousVersion_lazy = () -> CommonData4.mmEnvironment;
 			maxOccurs = 1;
 			minOccurs = 0;
 			isComposite = true;
@@ -202,15 +204,15 @@ public class CommonData5 {
 	 */
 	public static final MMMessageAssociationEnd mmContext = new MMMessageAssociationEnd() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.CardPayment.mmCardPaymentAcquiring;
+			businessElementTrace_lazy = () -> CardPayment.mmCardPaymentAcquiring;
 			componentContext_lazy = () -> CommonData5.mmObject();
 			isDerived = false;
 			xmlTag = "Cntxt";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Context";
 			definition = "Data related to the context of the transaction, common to a set of transaction.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.CommonData6.mmContext);
-			previousVersion_lazy = () -> com.tools20022.repository.msg.CommonData4.mmContext;
+			nextVersions_lazy = () -> Arrays.asList(CommonData6.mmContext);
+			previousVersion_lazy = () -> CommonData4.mmContext;
 			maxOccurs = 1;
 			minOccurs = 0;
 			isComposite = true;
@@ -268,15 +270,15 @@ public class CommonData5 {
 	 */
 	public static final MMMessageAttribute mmTransactionType = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.CardPaymentAcquiring.mmCardPaymentService;
+			businessElementTrace_lazy = () -> CardPaymentAcquiring.mmCardPaymentService;
 			componentContext_lazy = () -> CommonData5.mmObject();
 			isDerived = false;
 			xmlTag = "TxTp";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "TransactionType";
 			definition = "Type of transaction being undertaken for the main service, common to a set of transaction..";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.CommonData6.mmTransactionType);
-			previousVersion_lazy = () -> com.tools20022.repository.msg.CommonData4.mmTransactionType;
+			nextVersions_lazy = () -> Arrays.asList(CommonData6.mmTransactionType);
+			previousVersion_lazy = () -> CommonData4.mmTransactionType;
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> CardPaymentServiceType5Code.mmObject();
@@ -330,15 +332,15 @@ public class CommonData5 {
 	 */
 	public static final MMMessageAttribute mmAdditionalService = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.CardPaymentAcquiring.mmCardPaymentService;
+			businessElementTrace_lazy = () -> CardPaymentAcquiring.mmCardPaymentService;
 			componentContext_lazy = () -> CommonData5.mmObject();
 			isDerived = false;
 			xmlTag = "AddtlSvc";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AdditionalService";
 			definition = "Service in addition to the main service.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.CommonData6.mmAdditionalService);
-			previousVersion_lazy = () -> com.tools20022.repository.msg.CommonData4.mmAdditionalService;
+			nextVersions_lazy = () -> Arrays.asList(CommonData6.mmAdditionalService);
+			previousVersion_lazy = () -> CommonData4.mmAdditionalService;
 			minOccurs = 0;
 			simpleType_lazy = () -> CardPaymentServiceType9Code.mmObject();
 		}
@@ -391,15 +393,15 @@ public class CommonData5 {
 	 */
 	public static final MMMessageAttribute mmServiceAttribute = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.CardPaymentAcquiring.mmCardPaymentService;
+			businessElementTrace_lazy = () -> CardPaymentAcquiring.mmCardPaymentService;
 			componentContext_lazy = () -> CommonData5.mmObject();
 			isDerived = false;
 			xmlTag = "SvcAttr";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ServiceAttribute";
 			definition = "Additional attribute of the service type.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.CommonData6.mmServiceAttribute);
-			previousVersion_lazy = () -> com.tools20022.repository.msg.CommonData4.mmServiceAttribute;
+			nextVersions_lazy = () -> Arrays.asList(CommonData6.mmServiceAttribute);
+			previousVersion_lazy = () -> CommonData4.mmServiceAttribute;
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> CardPaymentServiceType3Code.mmObject();
@@ -456,15 +458,15 @@ public class CommonData5 {
 	 */
 	public static final MMMessageAttribute mmMerchantCategoryCode = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.MerchantRole.mmMerchantCategoryCode;
+			businessElementTrace_lazy = () -> MerchantRole.mmMerchantCategoryCode;
 			componentContext_lazy = () -> CommonData5.mmObject();
 			isDerived = false;
 			xmlTag = "MrchntCtgyCd";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "MerchantCategoryCode";
 			definition = "Category code conform to ISO 18245, related to the type of services or goods the merchant provides for the transaction.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.CommonData6.mmMerchantCategoryCode);
-			previousVersion_lazy = () -> com.tools20022.repository.msg.CommonData4.mmMerchantCategoryCode;
+			nextVersions_lazy = () -> Arrays.asList(CommonData6.mmMerchantCategoryCode);
+			previousVersion_lazy = () -> CommonData4.mmMerchantCategoryCode;
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> Min3Max4Text.mmObject();
@@ -522,15 +524,15 @@ public class CommonData5 {
 	 */
 	public static final MMMessageAttribute mmReconciliationIdentification = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.ReconciliationTransaction.mmReconciliationIdentification;
+			businessElementTrace_lazy = () -> ReconciliationTransaction.mmReconciliationIdentification;
 			componentContext_lazy = () -> CommonData5.mmObject();
 			isDerived = false;
 			xmlTag = "RcncltnId";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ReconciliationIdentification";
 			definition = "Unique identification of the reconciliation period between the acceptor and the acquirer. This identification might be linked to the identification of the settlement for further verification by the merchant.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.CommonData6.mmReconciliationIdentification);
-			previousVersion_lazy = () -> com.tools20022.repository.msg.CommonData4.mmReconciliationIdentification;
+			nextVersions_lazy = () -> Arrays.asList(CommonData6.mmReconciliationIdentification);
+			previousVersion_lazy = () -> CommonData4.mmReconciliationIdentification;
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> Max35Text.mmObject();
@@ -582,15 +584,15 @@ public class CommonData5 {
 	 */
 	public static final MMMessageAttribute mmCurrency = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Payment.mmCurrencyOfTransfer;
+			businessElementTrace_lazy = () -> Payment.mmCurrencyOfTransfer;
 			componentContext_lazy = () -> CommonData5.mmObject();
 			isDerived = false;
 			xmlTag = "Ccy";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Currency";
 			definition = "Currency associated with the set of transaction.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.CommonData6.mmCurrency);
-			previousVersion_lazy = () -> com.tools20022.repository.msg.CommonData4.mmCurrency;
+			nextVersions_lazy = () -> Arrays.asList(CommonData6.mmCurrency);
+			previousVersion_lazy = () -> CommonData4.mmCurrency;
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> CurrencyCode.mmObject();
@@ -600,12 +602,11 @@ public class CommonData5 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.CommonData5.mmEnvironment, com.tools20022.repository.msg.CommonData5.mmContext, com.tools20022.repository.msg.CommonData5.mmTransactionType,
-						com.tools20022.repository.msg.CommonData5.mmAdditionalService, com.tools20022.repository.msg.CommonData5.mmServiceAttribute, com.tools20022.repository.msg.CommonData5.mmMerchantCategoryCode,
-						com.tools20022.repository.msg.CommonData5.mmReconciliationIdentification, com.tools20022.repository.msg.CommonData5.mmCurrency);
+				messageElement_lazy = () -> Arrays.asList(CommonData5.mmEnvironment, CommonData5.mmContext, CommonData5.mmTransactionType, CommonData5.mmAdditionalService, CommonData5.mmServiceAttribute, CommonData5.mmMerchantCategoryCode,
+						CommonData5.mmReconciliationIdentification, CommonData5.mmCurrency);
 				trace_lazy = () -> CardPayment.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "CommonData5";
 				definition = "Data common to all transactions of a data set.";
 				nextVersions_lazy = () -> Arrays.asList(CommonData6.mmObject());

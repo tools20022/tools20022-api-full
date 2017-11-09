@@ -20,7 +20,9 @@ package com.tools20022.repository.choice;
 import com.tools20022.metamodel.MMChoiceComponent;
 import com.tools20022.metamodel.MMMessageAssociationEnd;
 import com.tools20022.metamodel.MMMessageAttribute;
+import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.datatype.Max35Text;
+import com.tools20022.repository.GeneratedRepository;
 import com.tools20022.repository.msg.BusinessDayInformationCriteria;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
@@ -99,7 +101,7 @@ public class BusinessDayInformationCriteriaDefinitionChoice {
 			componentContext_lazy = () -> BusinessDayInformationCriteriaDefinitionChoice.mmObject();
 			isDerived = false;
 			xmlTag = "QryNm";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "QueryName";
 			definition = "Recalls the criteria (search and return criteria) defined in a preceding query.";
 			maxOccurs = 1;
@@ -140,7 +142,7 @@ public class BusinessDayInformationCriteriaDefinitionChoice {
 			componentContext_lazy = () -> BusinessDayInformationCriteriaDefinitionChoice.mmObject();
 			isDerived = false;
 			xmlTag = "NewCrit";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "NewCriteria";
 			definition = "Explicitly defines the query criteria.";
 			maxOccurs = 1;
@@ -153,10 +155,9 @@ public class BusinessDayInformationCriteriaDefinitionChoice {
 	final static public MMChoiceComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMChoiceComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.choice.BusinessDayInformationCriteriaDefinitionChoice.mmQueryName,
-						com.tools20022.repository.choice.BusinessDayInformationCriteriaDefinitionChoice.mmNewCriteria);
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+				messageElement_lazy = () -> Arrays.asList(BusinessDayInformationCriteriaDefinitionChoice.mmQueryName, BusinessDayInformationCriteriaDefinitionChoice.mmNewCriteria);
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 				name = "BusinessDayInformationCriteriaDefinitionChoice";
 				definition = "Defines the information that is searched either implicitly by recalling a previous query or explicitly by defining the criteria.";
 			}

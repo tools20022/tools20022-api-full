@@ -20,8 +20,11 @@ package com.tools20022.repository.msg;
 import com.tools20022.metamodel.MMMessageAssociationEnd;
 import com.tools20022.metamodel.MMMessageAttribute;
 import com.tools20022.metamodel.MMMessageComponent;
+import com.tools20022.metamodel.MMRegistrationStatus;
+import com.tools20022.repository.area.auth.ContractRegistrationStatementRequestV01;
 import com.tools20022.repository.datatype.Max35Text;
 import com.tools20022.repository.entity.RegisteredContract;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.List;
@@ -124,7 +127,7 @@ public class ContractRegistrationStatementRequest1 {
 			componentContext_lazy = () -> ContractRegistrationStatementRequest1.mmObject();
 			isDerived = false;
 			xmlTag = "StmtReqId";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "StatementRequestIdentification";
 			definition = "Unique and unambiguous identification of the contract registration statement request.";
 			maxOccurs = 1;
@@ -165,7 +168,7 @@ public class ContractRegistrationStatementRequest1 {
 			componentContext_lazy = () -> ContractRegistrationStatementRequest1.mmObject();
 			isDerived = false;
 			xmlTag = "RptgPrd";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ReportingPeriod";
 			definition = "Specifies the period for which the statement is requested.";
 			maxOccurs = 1;
@@ -208,11 +211,11 @@ public class ContractRegistrationStatementRequest1 {
 	 */
 	public static final MMMessageAssociationEnd mmReportingParty = new MMMessageAssociationEnd() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.RegisteredContract.mmReportingParty;
+			businessElementTrace_lazy = () -> RegisteredContract.mmReportingParty;
 			componentContext_lazy = () -> ContractRegistrationStatementRequest1.mmObject();
 			isDerived = false;
 			xmlTag = "RptgPty";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ReportingParty";
 			definition = "Party registering the currency control contract.";
 			maxOccurs = 1;
@@ -256,11 +259,11 @@ public class ContractRegistrationStatementRequest1 {
 	 */
 	public static final MMMessageAssociationEnd mmRegistrationAgent = new MMMessageAssociationEnd() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.RegisteredContract.mmRegistrationAgent;
+			businessElementTrace_lazy = () -> RegisteredContract.mmRegistrationAgent;
 			componentContext_lazy = () -> ContractRegistrationStatementRequest1.mmObject();
 			isDerived = false;
 			xmlTag = "RegnAgt";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "RegistrationAgent";
 			definition = "Agent which registers the currency control contract.";
 			maxOccurs = 1;
@@ -304,11 +307,11 @@ public class ContractRegistrationStatementRequest1 {
 	 */
 	public static final MMMessageAttribute mmRegisteredContractIdentification = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.RegisteredContract.mmIdentification;
+			businessElementTrace_lazy = () -> RegisteredContract.mmIdentification;
 			componentContext_lazy = () -> ContractRegistrationStatementRequest1.mmObject();
 			isDerived = false;
 			xmlTag = "RegdCtrctId";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "RegisteredContractIdentification";
 			definition = "Identifies the requested registered contract.";
 			maxOccurs = 1;
@@ -352,7 +355,7 @@ public class ContractRegistrationStatementRequest1 {
 			componentContext_lazy = () -> ContractRegistrationStatementRequest1.mmObject();
 			isDerived = false;
 			xmlTag = "RtrCrit";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ReturnCriteria";
 			definition = "Defines the criteria to be returned in the statement in response to the request.";
 			maxOccurs = 1;
@@ -396,7 +399,7 @@ public class ContractRegistrationStatementRequest1 {
 			componentContext_lazy = () -> ContractRegistrationStatementRequest1.mmObject();
 			isDerived = false;
 			xmlTag = "SplmtryData";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SupplementaryData";
 			definition = "Additional information that cannot be captured in the structured elements and/or any other specific block.";
 			minOccurs = 0;
@@ -408,14 +411,13 @@ public class ContractRegistrationStatementRequest1 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.ContractRegistrationStatementRequest1.mmStatementRequestIdentification,
-						com.tools20022.repository.msg.ContractRegistrationStatementRequest1.mmReportingPeriod, com.tools20022.repository.msg.ContractRegistrationStatementRequest1.mmReportingParty,
-						com.tools20022.repository.msg.ContractRegistrationStatementRequest1.mmRegistrationAgent, com.tools20022.repository.msg.ContractRegistrationStatementRequest1.mmRegisteredContractIdentification,
-						com.tools20022.repository.msg.ContractRegistrationStatementRequest1.mmReturnCriteria, com.tools20022.repository.msg.ContractRegistrationStatementRequest1.mmSupplementaryData);
-				messageBuildingBlock_lazy = () -> Arrays.asList(com.tools20022.repository.area.auth.ContractRegistrationStatementRequestV01.mmStatementRequest);
+				messageElement_lazy = () -> Arrays.asList(ContractRegistrationStatementRequest1.mmStatementRequestIdentification, ContractRegistrationStatementRequest1.mmReportingPeriod,
+						ContractRegistrationStatementRequest1.mmReportingParty, ContractRegistrationStatementRequest1.mmRegistrationAgent, ContractRegistrationStatementRequest1.mmRegisteredContractIdentification,
+						ContractRegistrationStatementRequest1.mmReturnCriteria, ContractRegistrationStatementRequest1.mmSupplementaryData);
+				messageBuildingBlock_lazy = () -> Arrays.asList(ContractRegistrationStatementRequestV01.mmStatementRequest);
 				trace_lazy = () -> RegisteredContract.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "ContractRegistrationStatementRequest1";
 				definition = "Details on the statement requested elements.";
 			}

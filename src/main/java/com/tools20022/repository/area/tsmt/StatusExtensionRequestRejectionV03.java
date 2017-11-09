@@ -20,6 +20,7 @@ package com.tools20022.repository.area.tsmt;
 import com.tools20022.metamodel.MMMessageBuildingBlock;
 import com.tools20022.metamodel.MMMessageDefinition;
 import com.tools20022.metamodel.MMMessageDefinitionIdentifier;
+import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.area.TradeServicesManagementLatestVersion;
 import com.tools20022.repository.msg.MessageIdentification1;
 import com.tools20022.repository.msg.Reason2;
@@ -48,6 +49,9 @@ import java.util.concurrent.atomic.AtomicReference;
  * <p>
  * <strong>Constant fields:</strong>
  * <ul>
+ * <li>
+ * {@linkplain com.tools20022.metamodel.MMMessageDefinition#getMessageDefinitionIdentifier
+ * messageDefinitionIdentifier} = {@code tsmt.033.001.03}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMMessageDefinition#getBusinessArea
  * businessArea} =
  * {@linkplain com.tools20022.repository.area.TradeServicesManagementLatestVersion
@@ -88,9 +92,6 @@ import java.util.concurrent.atomic.AtomicReference;
  * StatusExtensionRequestRejectionV03.mmRejectionReason}</li>
  * </ul>
  * </li>
- * <li>
- * {@linkplain com.tools20022.metamodel.MMMessageDefinition#getMessageDefinitionIdentifier
- * messageDefinitionIdentifier} = {@code tsmt.033.001.03}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -133,7 +134,7 @@ public class StatusExtensionRequestRejectionV03 {
 	public static final MMMessageBuildingBlock mmRejectionIdentification = new MMMessageBuildingBlock() {
 		{
 			xmlTag = "RjctnId";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "RejectionIdentification";
 			definition = "Identifies the rejection message.";
 			maxOccurs = 1;
@@ -172,7 +173,7 @@ public class StatusExtensionRequestRejectionV03 {
 	public static final MMMessageBuildingBlock mmTransactionIdentification = new MMMessageBuildingBlock() {
 		{
 			xmlTag = "TxId";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "TransactionIdentification";
 			definition = "Unique identification assigned by the matching application to the transaction.\nThis identification is to be used in any communication between the parties.\n";
 			maxOccurs = 1;
@@ -208,7 +209,7 @@ public class StatusExtensionRequestRejectionV03 {
 	public static final MMMessageBuildingBlock mmSubmitterTransactionReference = new MMMessageBuildingBlock() {
 		{
 			xmlTag = "SubmitrTxRef";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SubmitterTransactionReference";
 			definition = "Reference to the transaction for the requesting financial institution.";
 			maxOccurs = 1;
@@ -244,7 +245,7 @@ public class StatusExtensionRequestRejectionV03 {
 	public static final MMMessageBuildingBlock mmStatusNotToBeExtended = new MMMessageBuildingBlock() {
 		{
 			xmlTag = "StsNotToBeXtnded";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "StatusNotToBeExtended";
 			definition = "Identifies the status that the submitter does not want to be extended.";
 			maxOccurs = 1;
@@ -278,7 +279,7 @@ public class StatusExtensionRequestRejectionV03 {
 	public static final MMMessageBuildingBlock mmRejectionReason = new MMMessageBuildingBlock() {
 		{
 			xmlTag = "RjctnRsn";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "RejectionReason";
 			definition = "Reason why the user cannot accept the request.";
 			maxOccurs = 1;
@@ -290,16 +291,15 @@ public class StatusExtensionRequestRejectionV03 {
 	final static public MMMessageDefinition mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageDefinition() {
 			{
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "StatusExtensionRequestRejectionV03";
 				definition = "Scope\r\nThe StatusExtensionRequestRejection message is sent by the party requested to accept or reject a request to extend the status of a transaction to the matching application.\r\nThis message is used to inform about the rejection of a request to extend the status of a transaction.\r\nUsage\r\nThe StatusExtensionRequestRejection message can be sent by the party requested to accept or reject the request to extend the status of a transaction to inform that it rejects the request.\r\nThe message can be sent in response to a StatusExtensionRequestNotification message.\r\nThe acceptance of a request to extend the status of a transaction can be achieved by sending a StatusExtensionRequestAcceptance message.";
 				messageSet_lazy = () -> Arrays.asList(TradeServicesManagementISOPreviousversion.mmObject(), TradeServicesManagementISOLatestversion.mmObject());
 				rootElement = "Document";
 				xmlTag = "StsXtnsnReqRjctn";
 				businessArea_lazy = () -> TradeServicesManagementLatestVersion.mmObject();
-				messageBuildingBlock_lazy = () -> Arrays.asList(com.tools20022.repository.area.tsmt.StatusExtensionRequestRejectionV03.mmRejectionIdentification,
-						com.tools20022.repository.area.tsmt.StatusExtensionRequestRejectionV03.mmTransactionIdentification, com.tools20022.repository.area.tsmt.StatusExtensionRequestRejectionV03.mmSubmitterTransactionReference,
-						com.tools20022.repository.area.tsmt.StatusExtensionRequestRejectionV03.mmStatusNotToBeExtended, com.tools20022.repository.area.tsmt.StatusExtensionRequestRejectionV03.mmRejectionReason);
+				messageBuildingBlock_lazy = () -> Arrays.asList(StatusExtensionRequestRejectionV03.mmRejectionIdentification, StatusExtensionRequestRejectionV03.mmTransactionIdentification,
+						StatusExtensionRequestRejectionV03.mmSubmitterTransactionReference, StatusExtensionRequestRejectionV03.mmStatusNotToBeExtended, StatusExtensionRequestRejectionV03.mmRejectionReason);
 				messageDefinitionIdentifier_lazy = () -> new MMMessageDefinitionIdentifier() {
 					{
 						businessArea = "tsmt";

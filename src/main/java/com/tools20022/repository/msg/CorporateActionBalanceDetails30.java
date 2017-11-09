@@ -20,9 +20,11 @@ package com.tools20022.repository.msg;
 import com.tools20022.metamodel.MMMessageAssociationEnd;
 import com.tools20022.metamodel.MMMessageAttribute;
 import com.tools20022.metamodel.MMMessageComponent;
+import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.choice.BalanceFormat5Choice;
 import com.tools20022.repository.choice.Quantity17Choice;
 import com.tools20022.repository.entity.CorporateActionEntitlement;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.List;
@@ -158,14 +160,14 @@ public class CorporateActionBalanceDetails30 {
 	 */
 	public static final MMMessageAttribute mmTotalEligibleBalance = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.CorporateActionEntitlement.mmEligibleBalance;
+			businessElementTrace_lazy = () -> CorporateActionEntitlement.mmEligibleBalance;
 			componentContext_lazy = () -> CorporateActionBalanceDetails30.mmObject();
 			isDerived = false;
 			xmlTag = "TtlElgblBal";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "TotalEligibleBalance";
 			definition = "Total quantity of financial instruments of the balance.";
-			previousVersion_lazy = () -> com.tools20022.repository.msg.CorporateActionBalanceDetails9.mmTotalEligibleBalance;
+			previousVersion_lazy = () -> CorporateActionBalanceDetails9.mmTotalEligibleBalance;
 			maxOccurs = 1;
 			minOccurs = 1;
 			complexType_lazy = () -> Quantity17Choice.mmObject();
@@ -212,14 +214,14 @@ public class CorporateActionBalanceDetails30 {
 	 */
 	public static final MMMessageAttribute mmUninstructedBalance = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.CorporateActionEntitlement.mmUninstructedBalance;
+			businessElementTrace_lazy = () -> CorporateActionEntitlement.mmUninstructedBalance;
 			componentContext_lazy = () -> CorporateActionBalanceDetails30.mmObject();
 			isDerived = false;
 			xmlTag = "UinstdBal";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "UninstructedBalance";
 			definition = "Quantity of securities in the sub-balance.";
-			previousVersion_lazy = () -> com.tools20022.repository.msg.CorporateActionBalanceDetails9.mmUninstructedBalance;
+			previousVersion_lazy = () -> CorporateActionBalanceDetails9.mmUninstructedBalance;
 			maxOccurs = 1;
 			minOccurs = 1;
 			complexType_lazy = () -> BalanceFormat5Choice.mmObject();
@@ -265,14 +267,14 @@ public class CorporateActionBalanceDetails30 {
 	 */
 	public static final MMMessageAssociationEnd mmTotalInstructedBalanceDetails = new MMMessageAssociationEnd() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.CorporateActionEntitlement.mmInstructedBalance;
+			businessElementTrace_lazy = () -> CorporateActionEntitlement.mmInstructedBalance;
 			componentContext_lazy = () -> CorporateActionBalanceDetails30.mmObject();
 			isDerived = false;
 			xmlTag = "TtlInstdBalDtls";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "TotalInstructedBalanceDetails";
 			definition = "Provides information about the total instructed balance.";
-			previousVersion_lazy = () -> com.tools20022.repository.msg.CorporateActionBalanceDetails9.mmTotalInstructedBalanceDetails;
+			previousVersion_lazy = () -> CorporateActionBalanceDetails9.mmTotalInstructedBalanceDetails;
 			maxOccurs = 1;
 			minOccurs = 1;
 			isComposite = true;
@@ -320,14 +322,14 @@ public class CorporateActionBalanceDetails30 {
 	 */
 	public static final MMMessageAttribute mmBlockedBalance = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.CorporateActionEntitlement.mmSecuritiesBalance;
+			businessElementTrace_lazy = () -> CorporateActionEntitlement.mmSecuritiesBalance;
 			componentContext_lazy = () -> CorporateActionBalanceDetails30.mmObject();
 			isDerived = false;
 			xmlTag = "BlckdBal";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "BlockedBalance";
 			definition = "Balance of financial instruments that are blocked.";
-			previousVersion_lazy = () -> com.tools20022.repository.msg.CorporateActionBalanceDetails9.mmBlockedBalance;
+			previousVersion_lazy = () -> CorporateActionBalanceDetails9.mmBlockedBalance;
 			maxOccurs = 1;
 			minOccurs = 0;
 			complexType_lazy = () -> com.tools20022.repository.msg.SignedQuantityFormat6.mmObject();
@@ -377,14 +379,14 @@ public class CorporateActionBalanceDetails30 {
 	 */
 	public static final MMMessageAttribute mmBorrowedBalance = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.CorporateActionEntitlement.mmSecuritiesBalance;
+			businessElementTrace_lazy = () -> CorporateActionEntitlement.mmSecuritiesBalance;
 			componentContext_lazy = () -> CorporateActionBalanceDetails30.mmObject();
 			isDerived = false;
 			xmlTag = "BrrwdBal";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "BorrowedBalance";
 			definition = "Balance of financial instruments that have been borrowed from another party.";
-			previousVersion_lazy = () -> com.tools20022.repository.msg.CorporateActionBalanceDetails9.mmBorrowedBalance;
+			previousVersion_lazy = () -> CorporateActionBalanceDetails9.mmBorrowedBalance;
 			maxOccurs = 1;
 			minOccurs = 0;
 			complexType_lazy = () -> com.tools20022.repository.msg.SignedQuantityFormat6.mmObject();
@@ -434,14 +436,14 @@ public class CorporateActionBalanceDetails30 {
 	 */
 	public static final MMMessageAttribute mmCollateralInBalance = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.CorporateActionEntitlement.mmSecuritiesBalance;
+			businessElementTrace_lazy = () -> CorporateActionEntitlement.mmSecuritiesBalance;
 			componentContext_lazy = () -> CorporateActionBalanceDetails30.mmObject();
 			isDerived = false;
 			xmlTag = "CollInBal";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CollateralInBalance";
 			definition = "Balance of securities that belong to a third party and that are held for the purpose of collateralisation.";
-			previousVersion_lazy = () -> com.tools20022.repository.msg.CorporateActionBalanceDetails9.mmCollateralInBalance;
+			previousVersion_lazy = () -> CorporateActionBalanceDetails9.mmCollateralInBalance;
 			maxOccurs = 1;
 			minOccurs = 0;
 			complexType_lazy = () -> com.tools20022.repository.msg.SignedQuantityFormat6.mmObject();
@@ -492,14 +494,14 @@ public class CorporateActionBalanceDetails30 {
 	 */
 	public static final MMMessageAttribute mmCollateralOutBalance = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.CorporateActionEntitlement.mmSecuritiesBalance;
+			businessElementTrace_lazy = () -> CorporateActionEntitlement.mmSecuritiesBalance;
 			componentContext_lazy = () -> CorporateActionBalanceDetails30.mmObject();
 			isDerived = false;
 			xmlTag = "CollOutBal";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CollateralOutBalance";
 			definition = "Balance of securities that belong to the safekeeping account indicated within this message, and are deposited with a third party for the purpose of collateralisation.";
-			previousVersion_lazy = () -> com.tools20022.repository.msg.CorporateActionBalanceDetails9.mmCollateralOutBalance;
+			previousVersion_lazy = () -> CorporateActionBalanceDetails9.mmCollateralOutBalance;
 			maxOccurs = 1;
 			minOccurs = 0;
 			complexType_lazy = () -> com.tools20022.repository.msg.SignedQuantityFormat6.mmObject();
@@ -548,14 +550,14 @@ public class CorporateActionBalanceDetails30 {
 	 */
 	public static final MMMessageAttribute mmOnLoanBalance = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.CorporateActionEntitlement.mmSecuritiesBalance;
+			businessElementTrace_lazy = () -> CorporateActionEntitlement.mmSecuritiesBalance;
 			componentContext_lazy = () -> CorporateActionBalanceDetails30.mmObject();
 			isDerived = false;
 			xmlTag = "OnLnBal";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "OnLoanBalance";
 			definition = "Balance of financial instruments that have been loaned to a third party.";
-			previousVersion_lazy = () -> com.tools20022.repository.msg.CorporateActionBalanceDetails9.mmOnLoanBalance;
+			previousVersion_lazy = () -> CorporateActionBalanceDetails9.mmOnLoanBalance;
 			maxOccurs = 1;
 			minOccurs = 0;
 			complexType_lazy = () -> com.tools20022.repository.msg.SignedQuantityFormat6.mmObject();
@@ -606,14 +608,14 @@ public class CorporateActionBalanceDetails30 {
 	 */
 	public static final MMMessageAttribute mmOutForRegistrationBalance = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.CorporateActionEntitlement.mmSecuritiesBalance;
+			businessElementTrace_lazy = () -> CorporateActionEntitlement.mmSecuritiesBalance;
 			componentContext_lazy = () -> CorporateActionBalanceDetails30.mmObject();
 			isDerived = false;
 			xmlTag = "OutForRegnBal";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "OutForRegistrationBalance";
 			definition = "Balance of financial instruments currently being processed by the institution responsible for registering the new beneficial owner (or nominee).";
-			previousVersion_lazy = () -> com.tools20022.repository.msg.CorporateActionBalanceDetails9.mmOutForRegistrationBalance;
+			previousVersion_lazy = () -> CorporateActionBalanceDetails9.mmOutForRegistrationBalance;
 			maxOccurs = 1;
 			minOccurs = 0;
 			complexType_lazy = () -> com.tools20022.repository.msg.SignedQuantityFormat6.mmObject();
@@ -663,14 +665,14 @@ public class CorporateActionBalanceDetails30 {
 	 */
 	public static final MMMessageAttribute mmSettlementPositionBalance = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.CorporateActionEntitlement.mmSecuritiesBalance;
+			businessElementTrace_lazy = () -> CorporateActionEntitlement.mmSecuritiesBalance;
 			componentContext_lazy = () -> CorporateActionBalanceDetails30.mmObject();
 			isDerived = false;
 			xmlTag = "SttlmPosBal";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SettlementPositionBalance";
 			definition = "Balance of securities representing only settled transactions; pending transactions not included.";
-			previousVersion_lazy = () -> com.tools20022.repository.msg.CorporateActionBalanceDetails9.mmSettlementPositionBalance;
+			previousVersion_lazy = () -> CorporateActionBalanceDetails9.mmSettlementPositionBalance;
 			maxOccurs = 1;
 			minOccurs = 0;
 			complexType_lazy = () -> com.tools20022.repository.msg.SignedQuantityFormat6.mmObject();
@@ -720,14 +722,14 @@ public class CorporateActionBalanceDetails30 {
 	 */
 	public static final MMMessageAttribute mmStreetPositionBalance = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.CorporateActionEntitlement.mmSecuritiesBalance;
+			businessElementTrace_lazy = () -> CorporateActionEntitlement.mmSecuritiesBalance;
 			componentContext_lazy = () -> CorporateActionBalanceDetails30.mmObject();
 			isDerived = false;
 			xmlTag = "StrtPosBal";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "StreetPositionBalance";
 			definition = "Balance of financial instruments that remain registered in the name of the prior beneficial owner.";
-			previousVersion_lazy = () -> com.tools20022.repository.msg.CorporateActionBalanceDetails9.mmStreetPositionBalance;
+			previousVersion_lazy = () -> CorporateActionBalanceDetails9.mmStreetPositionBalance;
 			maxOccurs = 1;
 			minOccurs = 0;
 			complexType_lazy = () -> com.tools20022.repository.msg.SignedQuantityFormat6.mmObject();
@@ -777,14 +779,14 @@ public class CorporateActionBalanceDetails30 {
 	 */
 	public static final MMMessageAttribute mmTradeDatePositionBalance = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.CorporateActionEntitlement.mmSecuritiesBalance;
+			businessElementTrace_lazy = () -> CorporateActionEntitlement.mmSecuritiesBalance;
 			componentContext_lazy = () -> CorporateActionBalanceDetails30.mmObject();
 			isDerived = false;
 			xmlTag = "TradDtPosBal";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "TradeDatePositionBalance";
 			definition = "Balance of securities based on trade date, for example, includes all pending transactions in addition to the balance of settled transactions.";
-			previousVersion_lazy = () -> com.tools20022.repository.msg.CorporateActionBalanceDetails9.mmTradeDatePositionBalance;
+			previousVersion_lazy = () -> CorporateActionBalanceDetails9.mmTradeDatePositionBalance;
 			maxOccurs = 1;
 			minOccurs = 0;
 			complexType_lazy = () -> com.tools20022.repository.msg.SignedQuantityFormat6.mmObject();
@@ -834,14 +836,14 @@ public class CorporateActionBalanceDetails30 {
 	 */
 	public static final MMMessageAttribute mmInTransshipmentBalance = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.CorporateActionEntitlement.mmSecuritiesBalance;
+			businessElementTrace_lazy = () -> CorporateActionEntitlement.mmSecuritiesBalance;
 			componentContext_lazy = () -> CorporateActionBalanceDetails30.mmObject();
 			isDerived = false;
 			xmlTag = "InTrnsShipmntBal";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "InTransshipmentBalance";
 			definition = "Balance of physical securities that are in the process of being transferred from one depository/agent to another.";
-			previousVersion_lazy = () -> com.tools20022.repository.msg.CorporateActionBalanceDetails9.mmInTransshipmentBalance;
+			previousVersion_lazy = () -> CorporateActionBalanceDetails9.mmInTransshipmentBalance;
 			maxOccurs = 1;
 			minOccurs = 0;
 			complexType_lazy = () -> com.tools20022.repository.msg.SignedQuantityFormat6.mmObject();
@@ -891,14 +893,14 @@ public class CorporateActionBalanceDetails30 {
 	 */
 	public static final MMMessageAttribute mmRegisteredBalance = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.CorporateActionEntitlement.mmSecuritiesBalance;
+			businessElementTrace_lazy = () -> CorporateActionEntitlement.mmSecuritiesBalance;
 			componentContext_lazy = () -> CorporateActionBalanceDetails30.mmObject();
 			isDerived = false;
 			xmlTag = "RegdBal";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "RegisteredBalance";
 			definition = "Balance of financial instruments that are registered (in the name of a nominee name or of the beneficial owner).";
-			previousVersion_lazy = () -> com.tools20022.repository.msg.CorporateActionBalanceDetails9.mmRegisteredBalance;
+			previousVersion_lazy = () -> CorporateActionBalanceDetails9.mmRegisteredBalance;
 			maxOccurs = 1;
 			minOccurs = 0;
 			complexType_lazy = () -> com.tools20022.repository.msg.SignedQuantityFormat6.mmObject();
@@ -950,14 +952,14 @@ public class CorporateActionBalanceDetails30 {
 	 */
 	public static final MMMessageAttribute mmObligatedBalance = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.CorporateActionEntitlement.mmSecuritiesBalance;
+			businessElementTrace_lazy = () -> CorporateActionEntitlement.mmSecuritiesBalance;
 			componentContext_lazy = () -> CorporateActionBalanceDetails30.mmObject();
 			isDerived = false;
 			xmlTag = "OblgtdBal";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ObligatedBalance";
 			definition = "Position that account holders should return to the account servicer to participate in the event or to fulfil their obligation for the event to be complete, for example, return of securities for late announced drawing.";
-			previousVersion_lazy = () -> com.tools20022.repository.msg.CorporateActionBalanceDetails9.mmObligatedBalance;
+			previousVersion_lazy = () -> CorporateActionBalanceDetails9.mmObligatedBalance;
 			maxOccurs = 1;
 			minOccurs = 0;
 			complexType_lazy = () -> com.tools20022.repository.msg.SignedQuantityFormat6.mmObject();
@@ -1003,14 +1005,14 @@ public class CorporateActionBalanceDetails30 {
 	 */
 	public static final MMMessageAssociationEnd mmPendingDeliveryBalance = new MMMessageAssociationEnd() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.CorporateActionEntitlement.mmSecuritiesBalance;
+			businessElementTrace_lazy = () -> CorporateActionEntitlement.mmSecuritiesBalance;
 			componentContext_lazy = () -> CorporateActionBalanceDetails30.mmObject();
 			isDerived = false;
 			xmlTag = "PdgDlvryBal";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PendingDeliveryBalance";
 			definition = "Balance of financial instruments that are pending delivery.";
-			previousVersion_lazy = () -> com.tools20022.repository.msg.CorporateActionBalanceDetails9.mmPendingDeliveryBalance;
+			previousVersion_lazy = () -> CorporateActionBalanceDetails9.mmPendingDeliveryBalance;
 			minOccurs = 0;
 			isComposite = true;
 			type_lazy = () -> com.tools20022.repository.msg.PendingBalance3.mmObject();
@@ -1056,14 +1058,14 @@ public class CorporateActionBalanceDetails30 {
 	 */
 	public static final MMMessageAssociationEnd mmPendingReceiptBalance = new MMMessageAssociationEnd() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.CorporateActionEntitlement.mmSecuritiesBalance;
+			businessElementTrace_lazy = () -> CorporateActionEntitlement.mmSecuritiesBalance;
 			componentContext_lazy = () -> CorporateActionBalanceDetails30.mmObject();
 			isDerived = false;
 			xmlTag = "PdgRctBal";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PendingReceiptBalance";
 			definition = "Balance of financial instruments that are pending receipt.";
-			previousVersion_lazy = () -> com.tools20022.repository.msg.CorporateActionBalanceDetails9.mmPendingReceiptBalance;
+			previousVersion_lazy = () -> CorporateActionBalanceDetails9.mmPendingReceiptBalance;
 			minOccurs = 0;
 			isComposite = true;
 			type_lazy = () -> com.tools20022.repository.msg.PendingBalance3.mmObject();
@@ -1073,18 +1075,15 @@ public class CorporateActionBalanceDetails30 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.CorporateActionBalanceDetails30.mmTotalEligibleBalance, com.tools20022.repository.msg.CorporateActionBalanceDetails30.mmUninstructedBalance,
-						com.tools20022.repository.msg.CorporateActionBalanceDetails30.mmTotalInstructedBalanceDetails, com.tools20022.repository.msg.CorporateActionBalanceDetails30.mmBlockedBalance,
-						com.tools20022.repository.msg.CorporateActionBalanceDetails30.mmBorrowedBalance, com.tools20022.repository.msg.CorporateActionBalanceDetails30.mmCollateralInBalance,
-						com.tools20022.repository.msg.CorporateActionBalanceDetails30.mmCollateralOutBalance, com.tools20022.repository.msg.CorporateActionBalanceDetails30.mmOnLoanBalance,
-						com.tools20022.repository.msg.CorporateActionBalanceDetails30.mmOutForRegistrationBalance, com.tools20022.repository.msg.CorporateActionBalanceDetails30.mmSettlementPositionBalance,
-						com.tools20022.repository.msg.CorporateActionBalanceDetails30.mmStreetPositionBalance, com.tools20022.repository.msg.CorporateActionBalanceDetails30.mmTradeDatePositionBalance,
-						com.tools20022.repository.msg.CorporateActionBalanceDetails30.mmInTransshipmentBalance, com.tools20022.repository.msg.CorporateActionBalanceDetails30.mmRegisteredBalance,
-						com.tools20022.repository.msg.CorporateActionBalanceDetails30.mmObligatedBalance, com.tools20022.repository.msg.CorporateActionBalanceDetails30.mmPendingDeliveryBalance,
-						com.tools20022.repository.msg.CorporateActionBalanceDetails30.mmPendingReceiptBalance);
+				messageElement_lazy = () -> Arrays.asList(CorporateActionBalanceDetails30.mmTotalEligibleBalance, CorporateActionBalanceDetails30.mmUninstructedBalance, CorporateActionBalanceDetails30.mmTotalInstructedBalanceDetails,
+						CorporateActionBalanceDetails30.mmBlockedBalance, CorporateActionBalanceDetails30.mmBorrowedBalance, CorporateActionBalanceDetails30.mmCollateralInBalance, CorporateActionBalanceDetails30.mmCollateralOutBalance,
+						CorporateActionBalanceDetails30.mmOnLoanBalance, CorporateActionBalanceDetails30.mmOutForRegistrationBalance, CorporateActionBalanceDetails30.mmSettlementPositionBalance,
+						CorporateActionBalanceDetails30.mmStreetPositionBalance, CorporateActionBalanceDetails30.mmTradeDatePositionBalance, CorporateActionBalanceDetails30.mmInTransshipmentBalance,
+						CorporateActionBalanceDetails30.mmRegisteredBalance, CorporateActionBalanceDetails30.mmObligatedBalance, CorporateActionBalanceDetails30.mmPendingDeliveryBalance,
+						CorporateActionBalanceDetails30.mmPendingReceiptBalance);
 				trace_lazy = () -> CorporateActionEntitlement.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "CorporateActionBalanceDetails30";
 				definition = "Eligible and not eligible balance of securities for a corporate action event.";
 				previousVersion_lazy = () -> CorporateActionBalanceDetails9.mmObject();

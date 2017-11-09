@@ -19,8 +19,12 @@ package com.tools20022.repository.choice;
 
 import com.tools20022.metamodel.MMChoiceComponent;
 import com.tools20022.metamodel.MMMessageAttribute;
+import com.tools20022.metamodel.MMRegistrationStatus;
+import com.tools20022.repository.area.sese.*;
 import com.tools20022.repository.datatype.AnyBICIdentifier;
+import com.tools20022.repository.entity.OrganisationIdentification;
 import com.tools20022.repository.entity.PartyIdentificationInformation;
+import com.tools20022.repository.GeneratedRepository;
 import com.tools20022.repository.msg.GenericIdentification1;
 import com.tools20022.repository.msg.NameAndAddress5;
 import com.tools20022.repository.msg.PartyIdentification113;
@@ -180,11 +184,11 @@ public class PartyIdentification2Choice {
 	 */
 	public static final MMMessageAttribute mmBICOrBEI = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.OrganisationIdentification.mmAnyBIC;
+			businessElementTrace_lazy = () -> OrganisationIdentification.mmAnyBIC;
 			componentContext_lazy = () -> PartyIdentification2Choice.mmObject();
 			isDerived = false;
 			xmlTag = "BICOrBEI";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "BICOrBEI";
 			definition = "Code allocated to a financial or non-financial institution by the ISO 9362 Registration Authority, as described in ISO 9362 \"Banking - Banking telecommunication messages - Business identifier code (BIC)\".";
 			maxOccurs = 1;
@@ -239,14 +243,14 @@ public class PartyIdentification2Choice {
 	 */
 	public static final MMMessageAttribute mmProprietaryIdentification = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.PartyIdentificationInformation.mmOtherIdentification;
+			businessElementTrace_lazy = () -> PartyIdentificationInformation.mmOtherIdentification;
 			componentContext_lazy = () -> PartyIdentification2Choice.mmObject();
 			isDerived = false;
 			xmlTag = "PrtryId";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ProprietaryIdentification";
 			definition = "Unique and unambiguous identifier, as assigned to a financial institution using a proprietary identification scheme.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.choice.PartyIdentification90Choice.mmProprietaryIdentification);
+			nextVersions_lazy = () -> Arrays.asList(PartyIdentification90Choice.mmProprietaryIdentification);
 			maxOccurs = 1;
 			minOccurs = 1;
 			complexType_lazy = () -> GenericIdentification1.mmObject();
@@ -299,10 +303,10 @@ public class PartyIdentification2Choice {
 			componentContext_lazy = () -> PartyIdentification2Choice.mmObject();
 			isDerived = false;
 			xmlTag = "NmAndAdr";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "NameAndAddress";
 			definition = "Name and address of a party.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.choice.PartyIdentification90Choice.mmNameAndAddress);
+			nextVersions_lazy = () -> Arrays.asList(PartyIdentification90Choice.mmNameAndAddress);
 			maxOccurs = 1;
 			minOccurs = 1;
 			complexType_lazy = () -> NameAndAddress5.mmObject();
@@ -312,20 +316,15 @@ public class PartyIdentification2Choice {
 	final static public MMChoiceComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMChoiceComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.choice.PartyIdentification2Choice.mmBICOrBEI, com.tools20022.repository.choice.PartyIdentification2Choice.mmProprietaryIdentification,
-						com.tools20022.repository.choice.PartyIdentification2Choice.mmNameAndAddress);
-				messageBuildingBlock_lazy = () -> Arrays.asList(com.tools20022.repository.area.sese.PEPOrISAOrPortfolioInformationV01.mmNewPlanManager, com.tools20022.repository.area.sese.AccountHoldingInformationV02.mmTransferee,
-						com.tools20022.repository.area.sese.AccountHoldingInformationV03.mmTransferee, com.tools20022.repository.area.sese.PEPOrISAOrPortfolioTransferConfirmationV02.mmNewPlanManager,
-						com.tools20022.repository.area.sese.PortfolioTransferConfirmationV03.mmTransferee, com.tools20022.repository.area.sese.PortfolioTransferConfirmationV04.mmTransferee,
-						com.tools20022.repository.area.sese.PEPOrISAOrPortfolioTransferInstructionV02.mmNewPlanManager, com.tools20022.repository.area.sese.PortfolioTransferInstructionV03.mmTransferee,
-						com.tools20022.repository.area.sese.PortfolioTransferInstructionV04.mmTransferee, com.tools20022.repository.area.sese.RequestForPEPOrISAOrPortfolioInformationV01.mmNewPlanManager,
-						com.tools20022.repository.area.sese.AccountHoldingInformationRequestV02.mmTransferee, com.tools20022.repository.area.sese.AccountHoldingInformationRequestV03.mmTransferee,
-						com.tools20022.repository.area.sese.AccountHoldingInformationV04.mmTransferee, com.tools20022.repository.area.sese.PortfolioTransferInstructionV05.mmTransferee,
-						com.tools20022.repository.area.sese.PortfolioTransferConfirmationV05.mmTransferee, com.tools20022.repository.area.sese.PortfolioTransferConfirmationV06.mmTransferee,
-						com.tools20022.repository.area.sese.PortfolioTransferInstructionV06.mmTransferee);
+				messageElement_lazy = () -> Arrays.asList(PartyIdentification2Choice.mmBICOrBEI, PartyIdentification2Choice.mmProprietaryIdentification, PartyIdentification2Choice.mmNameAndAddress);
+				messageBuildingBlock_lazy = () -> Arrays.asList(PEPOrISAOrPortfolioInformationV01.mmNewPlanManager, AccountHoldingInformationV02.mmTransferee, AccountHoldingInformationV03.mmTransferee,
+						PEPOrISAOrPortfolioTransferConfirmationV02.mmNewPlanManager, PortfolioTransferConfirmationV03.mmTransferee, PortfolioTransferConfirmationV04.mmTransferee, PEPOrISAOrPortfolioTransferInstructionV02.mmNewPlanManager,
+						PortfolioTransferInstructionV03.mmTransferee, PortfolioTransferInstructionV04.mmTransferee, RequestForPEPOrISAOrPortfolioInformationV01.mmNewPlanManager, AccountHoldingInformationRequestV02.mmTransferee,
+						AccountHoldingInformationRequestV03.mmTransferee, AccountHoldingInformationV04.mmTransferee, PortfolioTransferInstructionV05.mmTransferee, PortfolioTransferConfirmationV05.mmTransferee,
+						PortfolioTransferConfirmationV06.mmTransferee, PortfolioTransferInstructionV06.mmTransferee);
 				trace_lazy = () -> PartyIdentificationInformation.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.OBSOLETE;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.OBSOLETE;
 				removalDate = ((Supplier<Date>) (() -> {
 					try {
 						return DateFormat.getDateInstance(java.text.DateFormat.LONG).parse("September 9, 2016");

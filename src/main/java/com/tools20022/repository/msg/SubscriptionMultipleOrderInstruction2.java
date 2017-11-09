@@ -19,7 +19,11 @@ package com.tools20022.repository.msg;
 
 import com.tools20022.metamodel.MMMessageAssociationEnd;
 import com.tools20022.metamodel.MMMessageComponent;
+import com.tools20022.metamodel.MMRegistrationStatus;
+import com.tools20022.repository.area.setr.SubscriptionOrderCancellationRequestV03;
 import com.tools20022.repository.entity.SubscriptionOrder;
+import com.tools20022.repository.entity.Trade;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.List;
@@ -114,7 +118,7 @@ public class SubscriptionMultipleOrderInstruction2 {
 			componentContext_lazy = () -> SubscriptionMultipleOrderInstruction2.mmObject();
 			isDerived = false;
 			xmlTag = "MltplOrdrDtls";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "MultipleOrderDetails";
 			definition = "Common information related to all the orders to be cancelled.";
 			maxOccurs = 1;
@@ -157,11 +161,11 @@ public class SubscriptionMultipleOrderInstruction2 {
 	 */
 	public static final MMMessageAssociationEnd mmRelatedPartyDetails = new MMMessageAssociationEnd() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Trade.mmTradePartyRole;
+			businessElementTrace_lazy = () -> Trade.mmTradePartyRole;
 			componentContext_lazy = () -> SubscriptionMultipleOrderInstruction2.mmObject();
 			isDerived = false;
 			xmlTag = "RltdPtyDtls";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "RelatedPartyDetails";
 			definition = "Information about parties related to the transaction.";
 			maxOccurs = 10;
@@ -204,7 +208,7 @@ public class SubscriptionMultipleOrderInstruction2 {
 			componentContext_lazy = () -> SubscriptionMultipleOrderInstruction2.mmObject();
 			isDerived = false;
 			xmlTag = "Xtnsn";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Extension";
 			definition = "Additional information that cannot be captured in the structured elements and/or any other specific block.";
 			minOccurs = 0;
@@ -216,12 +220,11 @@ public class SubscriptionMultipleOrderInstruction2 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.SubscriptionMultipleOrderInstruction2.mmMultipleOrderDetails,
-						com.tools20022.repository.msg.SubscriptionMultipleOrderInstruction2.mmRelatedPartyDetails, com.tools20022.repository.msg.SubscriptionMultipleOrderInstruction2.mmExtension);
-				messageBuildingBlock_lazy = () -> Arrays.asList(com.tools20022.repository.area.setr.SubscriptionOrderCancellationRequestV03.mmCancellationByOrderDetails);
+				messageElement_lazy = () -> Arrays.asList(SubscriptionMultipleOrderInstruction2.mmMultipleOrderDetails, SubscriptionMultipleOrderInstruction2.mmRelatedPartyDetails, SubscriptionMultipleOrderInstruction2.mmExtension);
+				messageBuildingBlock_lazy = () -> Arrays.asList(SubscriptionOrderCancellationRequestV03.mmCancellationByOrderDetails);
 				trace_lazy = () -> SubscriptionOrder.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "SubscriptionMultipleOrderInstruction2";
 				definition = "Information about a subscription multiple order.";
 			}

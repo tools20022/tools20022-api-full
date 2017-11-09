@@ -17,11 +17,10 @@
 
 package com.tools20022.repository.entity;
 
-import com.tools20022.metamodel.MMBusinessAssociationEnd;
-import com.tools20022.metamodel.MMBusinessAttribute;
-import com.tools20022.metamodel.MMBusinessComponent;
+import com.tools20022.metamodel.*;
 import com.tools20022.repository.datatype.Number;
 import com.tools20022.repository.datatype.YesNoIndicator;
+import com.tools20022.repository.GeneratedRepository;
 import com.tools20022.repository.msg.*;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
@@ -36,6 +35,30 @@ import java.util.List;
  * <p>
  * <strong>Constant fields:</strong>
  * <ul>
+ * <li>
+ * {@linkplain com.tools20022.metamodel.MMBusinessComponent#getDerivationComponent
+ * derivationComponent} =
+ * <ul>
+ * <li>{@linkplain com.tools20022.repository.msg.Vote1 Vote1}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.Vote4 Vote4}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.Vote7 Vote7}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.Vote6 Vote6}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.Vote8 Vote8}</li>
+ * </ul>
+ * </li>
+ * <li>
+ * {@linkplain com.tools20022.metamodel.MMBusinessComponent#getAssociationDomain
+ * associationDomain} =
+ * <ul>
+ * <li>{@linkplain com.tools20022.repository.entity.Resolution#mmCastVotes
+ * Resolution.mmCastVotes}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.entity.VoteInstructionRequest#mmVotePerResolution
+ * VoteInstructionRequest.mmVotePerResolution}</li>
+ * <li>{@linkplain com.tools20022.repository.entity.VoteResult#mmVote
+ * VoteResult.mmVote}</li>
+ * </ul>
+ * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMBusinessComponent#getElement
  * element} =
  * <ul>
@@ -66,30 +89,6 @@ import java.util.List;
  * Vote.mmWithdrawn}</li>
  * <li>{@linkplain com.tools20022.repository.entity.Vote#mmThreeYears
  * Vote.mmThreeYears}</li>
- * </ul>
- * </li>
- * <li>
- * {@linkplain com.tools20022.metamodel.MMBusinessComponent#getAssociationDomain
- * associationDomain} =
- * <ul>
- * <li>{@linkplain com.tools20022.repository.entity.Resolution#mmCastVotes
- * Resolution.mmCastVotes}</li>
- * <li>
- * {@linkplain com.tools20022.repository.entity.VoteInstructionRequest#mmVotePerResolution
- * VoteInstructionRequest.mmVotePerResolution}</li>
- * <li>{@linkplain com.tools20022.repository.entity.VoteResult#mmVote
- * VoteResult.mmVote}</li>
- * </ul>
- * </li>
- * <li>
- * {@linkplain com.tools20022.metamodel.MMBusinessComponent#getDerivationComponent
- * derivationComponent} =
- * <ul>
- * <li>{@linkplain com.tools20022.repository.msg.Vote1 Vote1}</li>
- * <li>{@linkplain com.tools20022.repository.msg.Vote4 Vote4}</li>
- * <li>{@linkplain com.tools20022.repository.msg.Vote7 Vote7}</li>
- * <li>{@linkplain com.tools20022.repository.msg.Vote6 Vote6}</li>
- * <li>{@linkplain com.tools20022.repository.msg.Vote8 Vote8}</li>
  * </ul>
  * </li>
  * <li>
@@ -148,13 +147,13 @@ public class Vote {
 		{
 			elementContext_lazy = () -> Vote.mmObject();
 			isDerived = false;
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "VoteRequest";
 			definition = "Request which contains the vote instructions.";
 			maxOccurs = 1;
 			minOccurs = 0;
 			opposite_lazy = () -> com.tools20022.repository.entity.VoteInstructionRequest.mmVotePerResolution;
-			aggregation = com.tools20022.metamodel.MMAggregation.NONE;
+			aggregation = MMAggregation.NONE;
 			type_lazy = () -> com.tools20022.repository.entity.VoteInstructionRequest.mmObject();
 		}
 	};
@@ -197,11 +196,10 @@ public class Vote {
 	 */
 	public static final MMBusinessAttribute mmFor = new MMBusinessAttribute() {
 		{
-			derivation_lazy = () -> Arrays.asList(com.tools20022.repository.msg.Vote1.mmFor, com.tools20022.repository.msg.Vote4.mmFor, com.tools20022.repository.msg.Vote2.mmFor, com.tools20022.repository.msg.Vote5.mmFor,
-					com.tools20022.repository.msg.Vote7.mmFor, com.tools20022.repository.msg.Vote6.mmFor, com.tools20022.repository.msg.Vote8.mmFor);
+			derivation_lazy = () -> Arrays.asList(Vote1.mmFor, Vote4.mmFor, Vote2.mmFor, Vote5.mmFor, Vote7.mmFor, Vote6.mmFor, Vote8.mmFor);
 			elementContext_lazy = () -> Vote.mmObject();
 			isDerived = false;
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "For";
 			definition = "Number of votes in favour of one resolution";
 			maxOccurs = 1;
@@ -255,11 +253,10 @@ public class Vote {
 	 */
 	public static final MMBusinessAttribute mmAgainst = new MMBusinessAttribute() {
 		{
-			derivation_lazy = () -> Arrays.asList(com.tools20022.repository.msg.Vote1.mmAgainst, com.tools20022.repository.msg.Vote4.mmAgainst, com.tools20022.repository.msg.Vote2.mmAgainst, com.tools20022.repository.msg.Vote5.mmAgainst,
-					com.tools20022.repository.msg.Vote7.mmAgainst, com.tools20022.repository.msg.Vote6.mmAgainst, com.tools20022.repository.msg.Vote8.mmAgainst);
+			derivation_lazy = () -> Arrays.asList(Vote1.mmAgainst, Vote4.mmAgainst, Vote2.mmAgainst, Vote5.mmAgainst, Vote7.mmAgainst, Vote6.mmAgainst, Vote8.mmAgainst);
 			elementContext_lazy = () -> Vote.mmObject();
 			isDerived = false;
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "Against";
 			definition = "Number of votes against one resolution";
 			maxOccurs = 1;
@@ -313,11 +310,10 @@ public class Vote {
 	 */
 	public static final MMBusinessAttribute mmAbstain = new MMBusinessAttribute() {
 		{
-			derivation_lazy = () -> Arrays.asList(com.tools20022.repository.msg.Vote1.mmAbstain, com.tools20022.repository.msg.Vote4.mmAbstain, com.tools20022.repository.msg.Vote2.mmAbstain, com.tools20022.repository.msg.Vote5.mmAbstain,
-					com.tools20022.repository.msg.Vote7.mmAbstain, com.tools20022.repository.msg.Vote6.mmAbstain, com.tools20022.repository.msg.Vote8.mmAbstain);
+			derivation_lazy = () -> Arrays.asList(Vote1.mmAbstain, Vote4.mmAbstain, Vote2.mmAbstain, Vote5.mmAbstain, Vote7.mmAbstain, Vote6.mmAbstain, Vote8.mmAbstain);
 			elementContext_lazy = () -> Vote.mmObject();
 			isDerived = false;
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "Abstain";
 			definition = "Number of votes declared abstained for one resolution.";
 			maxOccurs = 1;
@@ -371,11 +367,10 @@ public class Vote {
 	 */
 	public static final MMBusinessAttribute mmWithhold = new MMBusinessAttribute() {
 		{
-			derivation_lazy = () -> Arrays.asList(com.tools20022.repository.msg.Vote1.mmWithhold, com.tools20022.repository.msg.Vote4.mmWithhold, com.tools20022.repository.msg.Vote2.mmWithhold,
-					com.tools20022.repository.msg.Vote5.mmWithhold, com.tools20022.repository.msg.Vote7.mmWithhold, com.tools20022.repository.msg.Vote6.mmWithhold, com.tools20022.repository.msg.Vote8.mmWithhold);
+			derivation_lazy = () -> Arrays.asList(Vote1.mmWithhold, Vote4.mmWithhold, Vote2.mmWithhold, Vote5.mmWithhold, Vote7.mmWithhold, Vote6.mmWithhold, Vote8.mmWithhold);
 			elementContext_lazy = () -> Vote.mmObject();
 			isDerived = false;
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "Withhold";
 			definition = "Number of votes withheld for one resolution";
 			maxOccurs = 1;
@@ -424,11 +419,10 @@ public class Vote {
 	 */
 	public static final MMBusinessAttribute mmWithManagement = new MMBusinessAttribute() {
 		{
-			derivation_lazy = () -> Arrays.asList(com.tools20022.repository.msg.Vote1.mmWithManagement, com.tools20022.repository.msg.Vote4.mmWithManagement, com.tools20022.repository.msg.Vote6.mmWithManagement,
-					com.tools20022.repository.msg.Vote8.mmWithManagement);
+			derivation_lazy = () -> Arrays.asList(Vote1.mmWithManagement, Vote4.mmWithManagement, Vote6.mmWithManagement, Vote8.mmWithManagement);
 			elementContext_lazy = () -> Vote.mmObject();
 			isDerived = false;
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "WithManagement";
 			definition = "Number of votes in line with the votes of the management.";
 			maxOccurs = 1;
@@ -477,11 +471,10 @@ public class Vote {
 	 */
 	public static final MMBusinessAttribute mmAgainstManagement = new MMBusinessAttribute() {
 		{
-			derivation_lazy = () -> Arrays.asList(com.tools20022.repository.msg.Vote1.mmAgainstManagement, com.tools20022.repository.msg.Vote4.mmAgainstManagement, com.tools20022.repository.msg.Vote6.mmAgainstManagement,
-					com.tools20022.repository.msg.Vote8.mmAgainstManagement);
+			derivation_lazy = () -> Arrays.asList(Vote1.mmAgainstManagement, Vote4.mmAgainstManagement, Vote6.mmAgainstManagement, Vote8.mmAgainstManagement);
 			elementContext_lazy = () -> Vote.mmObject();
 			isDerived = false;
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "AgainstManagement";
 			definition = "Number of votes against the voting recommendation of the management.";
 			maxOccurs = 1;
@@ -526,12 +519,12 @@ public class Vote {
 		{
 			elementContext_lazy = () -> Vote.mmObject();
 			isDerived = false;
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "Resolution";
 			definition = "Specifies the agenda item on which a vote is/was cast.";
 			minOccurs = 0;
 			opposite_lazy = () -> com.tools20022.repository.entity.Resolution.mmCastVotes;
-			aggregation = com.tools20022.metamodel.MMAggregation.NONE;
+			aggregation = MMAggregation.NONE;
 			type_lazy = () -> com.tools20022.repository.entity.Resolution.mmObject();
 		}
 	};
@@ -577,11 +570,10 @@ public class Vote {
 	 */
 	public static final MMBusinessAttribute mmNoAction = new MMBusinessAttribute() {
 		{
-			derivation_lazy = () -> Arrays.asList(com.tools20022.repository.msg.Vote4.mmNoAction, com.tools20022.repository.msg.Vote5.mmNoAction, com.tools20022.repository.msg.Vote7.mmNoAction,
-					com.tools20022.repository.msg.Vote6.mmNoAction, com.tools20022.repository.msg.Vote8.mmNoAction);
+			derivation_lazy = () -> Arrays.asList(Vote4.mmNoAction, Vote5.mmNoAction, Vote7.mmNoAction, Vote6.mmNoAction, Vote8.mmNoAction);
 			elementContext_lazy = () -> Vote.mmObject();
 			isDerived = false;
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "NoAction";
 			definition = "Number of votes for which no action has been taken.";
 			maxOccurs = 1;
@@ -627,13 +619,13 @@ public class Vote {
 		{
 			elementContext_lazy = () -> Vote.mmObject();
 			isDerived = false;
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "Result";
 			definition = "Information on the vote result for a specific resolution.";
 			maxOccurs = 1;
 			minOccurs = 0;
 			opposite_lazy = () -> com.tools20022.repository.entity.VoteResult.mmVote;
-			aggregation = com.tools20022.metamodel.MMAggregation.NONE;
+			aggregation = MMAggregation.NONE;
 			type_lazy = () -> com.tools20022.repository.entity.VoteResult.mmObject();
 		}
 	};
@@ -678,10 +670,10 @@ public class Vote {
 	 */
 	public static final MMBusinessAttribute mmTwoYears = new MMBusinessAttribute() {
 		{
-			derivation_lazy = () -> Arrays.asList(com.tools20022.repository.msg.Vote7.mmTwoYears, com.tools20022.repository.msg.Vote6.mmTwoYears, com.tools20022.repository.msg.Vote8.mmTwoYears);
+			derivation_lazy = () -> Arrays.asList(Vote7.mmTwoYears, Vote6.mmTwoYears, Vote8.mmTwoYears);
 			elementContext_lazy = () -> Vote.mmObject();
 			isDerived = false;
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "TwoYears";
 			definition = "Number of votes in favour of two years for \"say on pay\" type of resolution.";
 			maxOccurs = 1;
@@ -730,10 +722,10 @@ public class Vote {
 	 */
 	public static final MMBusinessAttribute mmOneYear = new MMBusinessAttribute() {
 		{
-			derivation_lazy = () -> Arrays.asList(com.tools20022.repository.msg.Vote7.mmOneYear, com.tools20022.repository.msg.Vote6.mmOneYear, com.tools20022.repository.msg.Vote8.mmOneYear);
+			derivation_lazy = () -> Arrays.asList(Vote7.mmOneYear, Vote6.mmOneYear, Vote8.mmOneYear);
 			elementContext_lazy = () -> Vote.mmObject();
 			isDerived = false;
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "OneYear";
 			definition = "Number of votes in favour for one year for \"say on pay\" type of resolution.";
 			maxOccurs = 1;
@@ -776,10 +768,10 @@ public class Vote {
 	 */
 	public static final MMBusinessAttribute mmWithdrawn = new MMBusinessAttribute() {
 		{
-			derivation_lazy = () -> Arrays.asList(com.tools20022.repository.msg.Vote6.mmWithdrawn);
+			derivation_lazy = () -> Arrays.asList(Vote6.mmWithdrawn);
 			elementContext_lazy = () -> Vote.mmObject();
 			isDerived = false;
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "Withdrawn";
 			definition = "Resolution withdrawn at the meeting.";
 			maxOccurs = 1;
@@ -828,10 +820,10 @@ public class Vote {
 	 */
 	public static final MMBusinessAttribute mmThreeYears = new MMBusinessAttribute() {
 		{
-			derivation_lazy = () -> Arrays.asList(com.tools20022.repository.msg.Vote7.mmThreeYears, com.tools20022.repository.msg.Vote6.mmThreeYears, com.tools20022.repository.msg.Vote8.mmThreeYears);
+			derivation_lazy = () -> Arrays.asList(Vote7.mmThreeYears, Vote6.mmThreeYears, Vote8.mmThreeYears);
 			elementContext_lazy = () -> Vote.mmObject();
 			isDerived = false;
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "ThreeYears";
 			definition = "Number of votes in favour of three years for \"say on pay\" type of resolution.";
 			maxOccurs = 1;
@@ -843,16 +835,14 @@ public class Vote {
 	static public MMBusinessComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMBusinessComponent() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "Vote";
 				definition = "Number of votes assigned to each voting option.";
 				associationDomain_lazy = () -> Arrays.asList(com.tools20022.repository.entity.Resolution.mmCastVotes, com.tools20022.repository.entity.VoteInstructionRequest.mmVotePerResolution,
 						com.tools20022.repository.entity.VoteResult.mmVote);
-				element_lazy = () -> Arrays.asList(com.tools20022.repository.entity.Vote.mmVoteRequest, com.tools20022.repository.entity.Vote.mmFor, com.tools20022.repository.entity.Vote.mmAgainst,
-						com.tools20022.repository.entity.Vote.mmAbstain, com.tools20022.repository.entity.Vote.mmWithhold, com.tools20022.repository.entity.Vote.mmWithManagement, com.tools20022.repository.entity.Vote.mmAgainstManagement,
-						com.tools20022.repository.entity.Vote.mmResolution, com.tools20022.repository.entity.Vote.mmNoAction, com.tools20022.repository.entity.Vote.mmResult, com.tools20022.repository.entity.Vote.mmTwoYears,
-						com.tools20022.repository.entity.Vote.mmOneYear, com.tools20022.repository.entity.Vote.mmWithdrawn, com.tools20022.repository.entity.Vote.mmThreeYears);
+				element_lazy = () -> Arrays.asList(Vote.mmVoteRequest, Vote.mmFor, Vote.mmAgainst, Vote.mmAbstain, Vote.mmWithhold, Vote.mmWithManagement, Vote.mmAgainstManagement, Vote.mmResolution, Vote.mmNoAction, Vote.mmResult,
+						Vote.mmTwoYears, Vote.mmOneYear, Vote.mmWithdrawn, Vote.mmThreeYears);
 				derivationComponent_lazy = () -> Arrays.asList(Vote1.mmObject(), Vote4.mmObject(), Vote7.mmObject(), Vote6.mmObject(), Vote8.mmObject());
 			}
 		});

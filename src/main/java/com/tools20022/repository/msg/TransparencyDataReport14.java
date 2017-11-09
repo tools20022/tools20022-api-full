@@ -20,10 +20,15 @@ package com.tools20022.repository.msg;
 import com.tools20022.metamodel.MMMessageAssociationEnd;
 import com.tools20022.metamodel.MMMessageAttribute;
 import com.tools20022.metamodel.MMMessageComponent;
+import com.tools20022.metamodel.MMRegistrationStatus;
+import com.tools20022.repository.area.auth.FinancialInstrumentReportingNonEquityTradingActivityResultV01;
 import com.tools20022.repository.choice.Period4Choice;
 import com.tools20022.repository.choice.TonsOrCurrency2Choice;
 import com.tools20022.repository.datatype.*;
+import com.tools20022.repository.entity.LocalName;
+import com.tools20022.repository.entity.SecuritiesIdentification;
 import com.tools20022.repository.entity.Security;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -143,7 +148,7 @@ public class TransparencyDataReport14 {
 			componentContext_lazy = () -> TransparencyDataReport14.mmObject();
 			isDerived = false;
 			xmlTag = "TechRcrdId";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "TechnicalRecordIdentification";
 			definition = "Unique identifier of a record in a message used as part of error management and status advice messages.\r\n\r\nUsage:\r\nThis identification will be used in the status advice report sent back.";
 			maxOccurs = 1;
@@ -187,11 +192,11 @@ public class TransparencyDataReport14 {
 	 */
 	public static final MMMessageAttribute mmIdentification = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.SecuritiesIdentification.mmSecurityIdentification;
+			businessElementTrace_lazy = () -> SecuritiesIdentification.mmSecurityIdentification;
 			componentContext_lazy = () -> TransparencyDataReport14.mmObject();
 			isDerived = false;
 			xmlTag = "Id";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Identification";
 			definition = "Identifies the financial instrument using an ISIN.";
 			maxOccurs = 1;
@@ -234,11 +239,11 @@ public class TransparencyDataReport14 {
 	 */
 	public static final MMMessageAttribute mmFullName = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.LocalName.mmFullName;
+			businessElementTrace_lazy = () -> LocalName.mmFullName;
 			componentContext_lazy = () -> TransparencyDataReport14.mmObject();
 			isDerived = false;
 			xmlTag = "FullNm";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "FullName";
 			definition = "Full name of the reporting entity.";
 			maxOccurs = 1;
@@ -285,11 +290,11 @@ public class TransparencyDataReport14 {
 	 */
 	public static final MMMessageAttribute mmTradingVenue = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Security.mmPlaceOfListing;
+			businessElementTrace_lazy = () -> Security.mmPlaceOfListing;
 			componentContext_lazy = () -> TransparencyDataReport14.mmObject();
 			isDerived = false;
 			xmlTag = "TradgVn";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "TradingVenue";
 			definition = "Segment MIC for the trading venue where applicable, otherwise the operational MIC.";
 			maxOccurs = 1;
@@ -329,7 +334,7 @@ public class TransparencyDataReport14 {
 			componentContext_lazy = () -> TransparencyDataReport14.mmObject();
 			isDerived = false;
 			xmlTag = "RptgPrd";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ReportingPeriod";
 			definition = "Period to which the quantitative data fields relate.";
 			maxOccurs = 1;
@@ -377,7 +382,7 @@ public class TransparencyDataReport14 {
 			componentContext_lazy = () -> TransparencyDataReport14.mmObject();
 			isDerived = false;
 			xmlTag = "Lqdty";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Liquidity";
 			definition = "Flag to say if this ISIN is liquid or not post calculations.\r\n\r\nUsage:\r\nWhen not present, this field should be treated as not applicable.";
 			maxOccurs = 1;
@@ -418,7 +423,7 @@ public class TransparencyDataReport14 {
 			componentContext_lazy = () -> TransparencyDataReport14.mmObject();
 			isDerived = false;
 			xmlTag = "PreTradLrgInScaleThrshld";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PreTradeLargeInScaleThreshold";
 			definition = "The pre-trade Large in Scale threshold.";
 			maxOccurs = 1;
@@ -460,7 +465,7 @@ public class TransparencyDataReport14 {
 			componentContext_lazy = () -> TransparencyDataReport14.mmObject();
 			isDerived = false;
 			xmlTag = "PstTradLrgInScaleThrshld";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PostTradeLargeInScaleThreshold";
 			definition = "The post-trade Large in Scale threshold.";
 			maxOccurs = 1;
@@ -502,7 +507,7 @@ public class TransparencyDataReport14 {
 			componentContext_lazy = () -> TransparencyDataReport14.mmObject();
 			isDerived = false;
 			xmlTag = "PreTradInstrmSzSpcfcThrshld";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PreTradeInstrumentSizeSpecificThreshold";
 			definition = "The pre-trade Size Specific to an Instrument threshold.";
 			maxOccurs = 1;
@@ -544,7 +549,7 @@ public class TransparencyDataReport14 {
 			componentContext_lazy = () -> TransparencyDataReport14.mmObject();
 			isDerived = false;
 			xmlTag = "PstTradInstrmSzSpcfcThrshld";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PostTradeInstrumentSizeSpecificThreshold";
 			definition = "The post-trade Size Specific to an Instrument threshold.";
 			maxOccurs = 1;
@@ -589,7 +594,7 @@ public class TransparencyDataReport14 {
 			componentContext_lazy = () -> TransparencyDataReport14.mmObject();
 			isDerived = false;
 			xmlTag = "Sttstcs";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Statistics";
 			definition = "Statistics for a financial instrument generated as part of transparency calculations.";
 			maxOccurs = 1;
@@ -602,15 +607,13 @@ public class TransparencyDataReport14 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.TransparencyDataReport14.mmTechnicalRecordIdentification, com.tools20022.repository.msg.TransparencyDataReport14.mmIdentification,
-						com.tools20022.repository.msg.TransparencyDataReport14.mmFullName, com.tools20022.repository.msg.TransparencyDataReport14.mmTradingVenue, com.tools20022.repository.msg.TransparencyDataReport14.mmReportingPeriod,
-						com.tools20022.repository.msg.TransparencyDataReport14.mmLiquidity, com.tools20022.repository.msg.TransparencyDataReport14.mmPreTradeLargeInScaleThreshold,
-						com.tools20022.repository.msg.TransparencyDataReport14.mmPostTradeLargeInScaleThreshold, com.tools20022.repository.msg.TransparencyDataReport14.mmPreTradeInstrumentSizeSpecificThreshold,
-						com.tools20022.repository.msg.TransparencyDataReport14.mmPostTradeInstrumentSizeSpecificThreshold, com.tools20022.repository.msg.TransparencyDataReport14.mmStatistics);
-				messageBuildingBlock_lazy = () -> Arrays.asList(com.tools20022.repository.area.auth.FinancialInstrumentReportingNonEquityTradingActivityResultV01.mmNonEquityTransparencyData);
+				messageElement_lazy = () -> Arrays.asList(TransparencyDataReport14.mmTechnicalRecordIdentification, TransparencyDataReport14.mmIdentification, TransparencyDataReport14.mmFullName, TransparencyDataReport14.mmTradingVenue,
+						TransparencyDataReport14.mmReportingPeriod, TransparencyDataReport14.mmLiquidity, TransparencyDataReport14.mmPreTradeLargeInScaleThreshold, TransparencyDataReport14.mmPostTradeLargeInScaleThreshold,
+						TransparencyDataReport14.mmPreTradeInstrumentSizeSpecificThreshold, TransparencyDataReport14.mmPostTradeInstrumentSizeSpecificThreshold, TransparencyDataReport14.mmStatistics);
+				messageBuildingBlock_lazy = () -> Arrays.asList(FinancialInstrumentReportingNonEquityTradingActivityResultV01.mmNonEquityTransparencyData);
 				trace_lazy = () -> Security.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "TransparencyDataReport14";
 				definition = "Provides for reporting calculation results of non equity instruments as part of transparency.";
 			}

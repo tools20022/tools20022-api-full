@@ -19,8 +19,10 @@ package com.tools20022.repository.msg;
 
 import com.tools20022.metamodel.MMMessageAttribute;
 import com.tools20022.metamodel.MMMessageComponent;
+import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.codeset.CardDataReading5Code;
 import com.tools20022.repository.datatype.Max35Text;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -94,7 +96,7 @@ public class Vehicle2 {
 			componentContext_lazy = () -> Vehicle2.mmObject();
 			isDerived = false;
 			xmlTag = "Tp";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Type";
 			definition = "Type of information related to the vehicle.";
 			maxOccurs = 1;
@@ -140,10 +142,10 @@ public class Vehicle2 {
 			componentContext_lazy = () -> Vehicle2.mmObject();
 			isDerived = false;
 			xmlTag = "NtryMd";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "EntryMode";
 			definition = "Entry mode of the information.";
-			previousVersion_lazy = () -> com.tools20022.repository.msg.Vehicle1.mmVehicleTagEntryMode;
+			previousVersion_lazy = () -> Vehicle1.mmVehicleTagEntryMode;
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> CardDataReading5Code.mmObject();
@@ -186,10 +188,10 @@ public class Vehicle2 {
 			componentContext_lazy = () -> Vehicle2.mmObject();
 			isDerived = false;
 			xmlTag = "Data";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Data";
 			definition = "Information related to the vehicle.";
-			previousVersion_lazy = () -> com.tools20022.repository.msg.Vehicle1.mmAdditionalVehicleData;
+			previousVersion_lazy = () -> Vehicle1.mmAdditionalVehicleData;
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> Max35Text.mmObject();
@@ -199,9 +201,9 @@ public class Vehicle2 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.Vehicle2.mmType, com.tools20022.repository.msg.Vehicle2.mmEntryMode, com.tools20022.repository.msg.Vehicle2.mmData);
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				messageElement_lazy = () -> Arrays.asList(Vehicle2.mmType, Vehicle2.mmEntryMode, Vehicle2.mmData);
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "Vehicle2";
 				definition = "Additional information related to a vehicle.";
 				previousVersion_lazy = () -> Vehicle1.mmObject();

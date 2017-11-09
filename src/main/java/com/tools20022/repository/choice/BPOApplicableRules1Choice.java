@@ -19,9 +19,11 @@ package com.tools20022.repository.choice;
 
 import com.tools20022.metamodel.MMChoiceComponent;
 import com.tools20022.metamodel.MMMessageAttribute;
+import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.datatype.DecimalNumber;
 import com.tools20022.repository.datatype.Max35Text;
 import com.tools20022.repository.entity.MasterAgreement;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -102,7 +104,7 @@ public class BPOApplicableRules1Choice {
 			componentContext_lazy = () -> BPOApplicableRules1Choice.mmObject();
 			isDerived = false;
 			xmlTag = "URBPOVrsn";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "URBPOVersion";
 			definition = "URBPO are rules that apply to a BPO when the Payment Obligation Segment within an Established Baseline expressly states that it is subject to these rules or when each Involved Bank agrees in a separate agreement that a BPO is subject to these rules. If an Established Baseline or separate agreement does not indicate the applicable version of URBPO, the BPO will be subject to the latest version in effect when the Baseline is established in accordance with sub-article 9 (d).";
 			maxOccurs = 1;
@@ -150,7 +152,7 @@ public class BPOApplicableRules1Choice {
 			componentContext_lazy = () -> BPOApplicableRules1Choice.mmObject();
 			isDerived = false;
 			xmlTag = "OthrRulesAndVrsn";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "OtherRulesAndVersion";
 			definition = "Applicable rules are not URBPO and are specified here with version.";
 			maxOccurs = 1;
@@ -162,9 +164,9 @@ public class BPOApplicableRules1Choice {
 	final static public MMChoiceComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMChoiceComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.choice.BPOApplicableRules1Choice.mmURBPOVersion, com.tools20022.repository.choice.BPOApplicableRules1Choice.mmOtherRulesAndVersion);
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				messageElement_lazy = () -> Arrays.asList(BPOApplicableRules1Choice.mmURBPOVersion, BPOApplicableRules1Choice.mmOtherRulesAndVersion);
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "BPOApplicableRules1Choice";
 				definition = "Rules which apply to the BPO (Bank Payment Obligation).";
 			}

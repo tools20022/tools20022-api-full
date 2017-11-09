@@ -19,7 +19,9 @@ package com.tools20022.repository.codeset;
 
 import com.tools20022.metamodel.MMCode;
 import com.tools20022.metamodel.MMCodeSet;
+import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.codeset.CustodianRecordAgreementTypeCode;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -89,7 +91,7 @@ public class CustodianRecordAgreementType1Code extends CustodianRecordAgreementT
 	 */
 	public static final MMCode mmAgree = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Agree";
 			owner_lazy = () -> CustodianRecordAgreementType1Code.mmObject();
 		}
@@ -112,7 +114,7 @@ public class CustodianRecordAgreementType1Code extends CustodianRecordAgreementT
 	 */
 	public static final MMCode mmDisagree = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Disagree";
 			owner_lazy = () -> CustodianRecordAgreementType1Code.mmObject();
 		}
@@ -135,7 +137,7 @@ public class CustodianRecordAgreementType1Code extends CustodianRecordAgreementT
 	 */
 	public static final MMCode mmNoComposite = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "NoComposite";
 			owner_lazy = () -> CustodianRecordAgreementType1Code.mmObject();
 		}
@@ -144,13 +146,12 @@ public class CustodianRecordAgreementType1Code extends CustodianRecordAgreementT
 	static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
 				example = Arrays.asList("AGRE");
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "CustodianRecordAgreementType1Code";
 				definition = "Specifies the state of the agreement of the custodian record when compared to composite record.";
-				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.CustodianRecordAgreementType1Code.mmAgree, com.tools20022.repository.codeset.CustodianRecordAgreementType1Code.mmDisagree,
-						com.tools20022.repository.codeset.CustodianRecordAgreementType1Code.mmNoComposite);
+				code_lazy = () -> Arrays.asList(CustodianRecordAgreementType1Code.mmAgree, CustodianRecordAgreementType1Code.mmDisagree, CustodianRecordAgreementType1Code.mmNoComposite);
 				trace_lazy = () -> CustodianRecordAgreementTypeCode.mmObject();
 			}
 		});

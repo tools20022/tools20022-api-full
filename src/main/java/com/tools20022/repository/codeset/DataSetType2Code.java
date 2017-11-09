@@ -19,7 +19,9 @@ package com.tools20022.repository.codeset;
 
 import com.tools20022.metamodel.MMCode;
 import com.tools20022.metamodel.MMCodeSet;
+import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.codeset.DataSetTypeCode;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -95,7 +97,7 @@ public class DataSetType2Code extends DataSetTypeCode {
 	 */
 	public static final MMCode mmBaseline = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Baseline";
 			owner_lazy = () -> DataSetType2Code.mmObject();
 		}
@@ -118,7 +120,7 @@ public class DataSetType2Code extends DataSetTypeCode {
 	 */
 	public static final MMCode mmTransportDataSet = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "TransportDataSet";
 			owner_lazy = () -> DataSetType2Code.mmObject();
 		}
@@ -141,7 +143,7 @@ public class DataSetType2Code extends DataSetTypeCode {
 	 */
 	public static final MMCode mmCommercialDataSet = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CommercialDataSet";
 			owner_lazy = () -> DataSetType2Code.mmObject();
 		}
@@ -164,7 +166,7 @@ public class DataSetType2Code extends DataSetTypeCode {
 	 */
 	public static final MMCode mmInsuranceDataSet = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "InsuranceDataSet";
 			owner_lazy = () -> DataSetType2Code.mmObject();
 		}
@@ -187,7 +189,7 @@ public class DataSetType2Code extends DataSetTypeCode {
 	 */
 	public static final MMCode mmCertificateDataSet = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CertificateDataSet";
 			owner_lazy = () -> DataSetType2Code.mmObject();
 		}
@@ -210,7 +212,7 @@ public class DataSetType2Code extends DataSetTypeCode {
 	 */
 	public static final MMCode mmOtherCertificateDataSet = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "OtherCertificateDataSet";
 			owner_lazy = () -> DataSetType2Code.mmObject();
 		}
@@ -219,14 +221,13 @@ public class DataSetType2Code extends DataSetTypeCode {
 	static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
 				example = Arrays.asList("BASE");
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "DataSetType2Code";
 				definition = "Specifies the type of data set that is matched.";
-				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.DataSetType2Code.mmBaseline, com.tools20022.repository.codeset.DataSetType2Code.mmTransportDataSet,
-						com.tools20022.repository.codeset.DataSetType2Code.mmCommercialDataSet, com.tools20022.repository.codeset.DataSetType2Code.mmInsuranceDataSet, com.tools20022.repository.codeset.DataSetType2Code.mmCertificateDataSet,
-						com.tools20022.repository.codeset.DataSetType2Code.mmOtherCertificateDataSet);
+				code_lazy = () -> Arrays.asList(DataSetType2Code.mmBaseline, DataSetType2Code.mmTransportDataSet, DataSetType2Code.mmCommercialDataSet, DataSetType2Code.mmInsuranceDataSet, DataSetType2Code.mmCertificateDataSet,
+						DataSetType2Code.mmOtherCertificateDataSet);
 				trace_lazy = () -> DataSetTypeCode.mmObject();
 			}
 		});

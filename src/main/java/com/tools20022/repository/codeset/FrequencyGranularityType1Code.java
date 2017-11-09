@@ -19,7 +19,9 @@ package com.tools20022.repository.codeset;
 
 import com.tools20022.metamodel.MMCode;
 import com.tools20022.metamodel.MMCodeSet;
+import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.codeset.FrequencyGranularityTypeCode;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -93,7 +95,7 @@ public class FrequencyGranularityType1Code extends FrequencyGranularityTypeCode 
 	 */
 	public static final MMCode mmEndOfMonth = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "EndOfMonth";
 			owner_lazy = () -> FrequencyGranularityType1Code.mmObject();
 		}
@@ -116,7 +118,7 @@ public class FrequencyGranularityType1Code extends FrequencyGranularityTypeCode 
 	 */
 	public static final MMCode mmEndOfWeek = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "EndOfWeek";
 			owner_lazy = () -> FrequencyGranularityType1Code.mmObject();
 		}
@@ -139,7 +141,7 @@ public class FrequencyGranularityType1Code extends FrequencyGranularityTypeCode 
 	 */
 	public static final MMCode mmEndOfSemester = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "EndOfSemester";
 			owner_lazy = () -> FrequencyGranularityType1Code.mmObject();
 		}
@@ -162,7 +164,7 @@ public class FrequencyGranularityType1Code extends FrequencyGranularityTypeCode 
 	 */
 	public static final MMCode mmEndOfQuarter = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "EndOfQuarter";
 			owner_lazy = () -> FrequencyGranularityType1Code.mmObject();
 		}
@@ -185,7 +187,7 @@ public class FrequencyGranularityType1Code extends FrequencyGranularityTypeCode 
 	 */
 	public static final MMCode mmEndOfFortnight = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "EndOfFortnight";
 			owner_lazy = () -> FrequencyGranularityType1Code.mmObject();
 		}
@@ -208,7 +210,7 @@ public class FrequencyGranularityType1Code extends FrequencyGranularityTypeCode 
 	 */
 	public static final MMCode mmEndOfDay = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "EndOfDay";
 			owner_lazy = () -> FrequencyGranularityType1Code.mmObject();
 		}
@@ -231,7 +233,7 @@ public class FrequencyGranularityType1Code extends FrequencyGranularityTypeCode 
 	 */
 	public static final MMCode mmEndOfYear = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "EndOfYear";
 			owner_lazy = () -> FrequencyGranularityType1Code.mmObject();
 		}
@@ -240,14 +242,12 @@ public class FrequencyGranularityType1Code extends FrequencyGranularityTypeCode 
 	static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "FrequencyGranularityType1Code";
 				definition = "Defines the granularity of the frequency used for the reporting.";
-				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.FrequencyGranularityType1Code.mmEndOfMonth, com.tools20022.repository.codeset.FrequencyGranularityType1Code.mmEndOfWeek,
-						com.tools20022.repository.codeset.FrequencyGranularityType1Code.mmEndOfSemester, com.tools20022.repository.codeset.FrequencyGranularityType1Code.mmEndOfQuarter,
-						com.tools20022.repository.codeset.FrequencyGranularityType1Code.mmEndOfFortnight, com.tools20022.repository.codeset.FrequencyGranularityType1Code.mmEndOfDay,
-						com.tools20022.repository.codeset.FrequencyGranularityType1Code.mmEndOfYear);
+				code_lazy = () -> Arrays.asList(FrequencyGranularityType1Code.mmEndOfMonth, FrequencyGranularityType1Code.mmEndOfWeek, FrequencyGranularityType1Code.mmEndOfSemester, FrequencyGranularityType1Code.mmEndOfQuarter,
+						FrequencyGranularityType1Code.mmEndOfFortnight, FrequencyGranularityType1Code.mmEndOfDay, FrequencyGranularityType1Code.mmEndOfYear);
 				trace_lazy = () -> FrequencyGranularityTypeCode.mmObject();
 			}
 		});

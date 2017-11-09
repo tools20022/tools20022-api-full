@@ -19,6 +19,8 @@ package com.tools20022.repository.codeset;
 
 import com.tools20022.metamodel.MMCode;
 import com.tools20022.metamodel.MMCodeSet;
+import com.tools20022.metamodel.MMRegistrationStatus;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -27,6 +29,13 @@ import java.util.concurrent.atomic.AtomicReference;
  * <p>
  * <strong>Constant fields:</strong>
  * <ul>
+ * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getDerivation derivation}
+ * =
+ * <ul>
+ * <li>{@linkplain com.tools20022.repository.codeset.EncryptionFormat1Code
+ * EncryptionFormat1Code}</li>
+ * </ul>
+ * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getCode code} =
  * <ul>
  * <li>
@@ -35,13 +44,6 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>
  * {@linkplain com.tools20022.repository.codeset.EncryptionFormatCode#mmTR34
  * EncryptionFormatCode.mmTR34}</li>
- * </ul>
- * </li>
- * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getDerivation derivation}
- * =
- * <ul>
- * <li>{@linkplain com.tools20022.repository.codeset.EncryptionFormat1Code
- * EncryptionFormat1Code}</li>
  * </ul>
  * </li>
  * <li>
@@ -94,7 +96,7 @@ public class EncryptionFormatCode {
 	 */
 	public static final MMCode mmTR31 = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "TR31";
 			definition = "Format of a cryptographic key specified by the ANSI X9 TR-31 standard.";
 			owner_lazy = () -> EncryptionFormatCode.mmObject();
@@ -125,7 +127,7 @@ public class EncryptionFormatCode {
 	 */
 	public static final MMCode mmTR34 = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "TR34";
 			definition = "Format of a cryptographic key specified by the ANSI X9 TR-34 standard.";
 			owner_lazy = () -> EncryptionFormatCode.mmObject();
@@ -136,12 +138,12 @@ public class EncryptionFormatCode {
 	static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
 				example = Arrays.asList("TR31");
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "EncryptionFormatCode";
 				definition = "Format of data before encryption, if the format is not plaintext or implicit.";
-				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.EncryptionFormatCode.mmTR31, com.tools20022.repository.codeset.EncryptionFormatCode.mmTR34);
+				code_lazy = () -> Arrays.asList(EncryptionFormatCode.mmTR31, EncryptionFormatCode.mmTR34);
 				derivation_lazy = () -> Arrays.asList(EncryptionFormat1Code.mmObject());
 			}
 		});

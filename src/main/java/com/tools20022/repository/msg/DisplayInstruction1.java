@@ -19,9 +19,11 @@ package com.tools20022.repository.msg;
 
 import com.tools20022.metamodel.MMMessageAttribute;
 import com.tools20022.metamodel.MMMessageComponent;
+import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.choice.FinancialInstrumentQuantityChoice;
 import com.tools20022.repository.codeset.DisplayMethod1Code;
 import com.tools20022.repository.codeset.RefreshTime1Code;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -110,7 +112,7 @@ public class DisplayInstruction1 {
 			componentContext_lazy = () -> DisplayInstruction1.mmObject();
 			isDerived = false;
 			xmlTag = "Qty";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Quantity";
 			definition = "Indicates the quantity to be displayed.";
 			maxOccurs = 1;
@@ -156,7 +158,7 @@ public class DisplayInstruction1 {
 			componentContext_lazy = () -> DisplayInstruction1.mmObject();
 			isDerived = false;
 			xmlTag = "ScndryQty";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SecondaryQuantity";
 			definition = "Used for reserve orders when Quantity applies to the primary execution market (e.g.an Electronic Communication Network) and another quantity is to be shown at other markets (e.g. the exchange).";
 			maxOccurs = 1;
@@ -198,7 +200,7 @@ public class DisplayInstruction1 {
 			componentContext_lazy = () -> DisplayInstruction1.mmObject();
 			isDerived = false;
 			xmlTag = "Mtd";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Method";
 			definition = "Instructions for the use of Quantity.";
 			maxOccurs = 1;
@@ -241,7 +243,7 @@ public class DisplayInstruction1 {
 			componentContext_lazy = () -> DisplayInstruction1.mmObject();
 			isDerived = false;
 			xmlTag = "LwQty";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "LowQuantity";
 			definition = "Defines the lower quantity limit to a randomized refresh of Quantity.";
 			maxOccurs = 1;
@@ -284,7 +286,7 @@ public class DisplayInstruction1 {
 			componentContext_lazy = () -> DisplayInstruction1.mmObject();
 			isDerived = false;
 			xmlTag = "HghQty";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "HighQuantity";
 			definition = "Defines the upper quantity limit to a randomized refresh of Quantity.";
 			maxOccurs = 1;
@@ -331,7 +333,7 @@ public class DisplayInstruction1 {
 			componentContext_lazy = () -> DisplayInstruction1.mmObject();
 			isDerived = false;
 			xmlTag = "MinIncrmt";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "MinimumIncrement";
 			definition = "Defines the minimum increment to be used when calculating a random refresh of Quantity. A user specifies this when he wants a larger increment than the standard provided by the market (e.g. the round lot size).";
 			maxOccurs = 1;
@@ -373,7 +375,7 @@ public class DisplayInstruction1 {
 			componentContext_lazy = () -> DisplayInstruction1.mmObject();
 			isDerived = false;
 			xmlTag = "RfrshQty";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "RefreshQuantity";
 			definition = "Defines the quantity used to refresh Quantity.";
 			maxOccurs = 1;
@@ -415,7 +417,7 @@ public class DisplayInstruction1 {
 			componentContext_lazy = () -> DisplayInstruction1.mmObject();
 			isDerived = false;
 			xmlTag = "RfrshTm";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "RefreshTime";
 			definition = "Defines when to refresh quantity (Immediate or Exhaust).";
 			maxOccurs = 1;
@@ -427,11 +429,10 @@ public class DisplayInstruction1 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.DisplayInstruction1.mmQuantity, com.tools20022.repository.msg.DisplayInstruction1.mmSecondaryQuantity,
-						com.tools20022.repository.msg.DisplayInstruction1.mmMethod, com.tools20022.repository.msg.DisplayInstruction1.mmLowQuantity, com.tools20022.repository.msg.DisplayInstruction1.mmHighQuantity,
-						com.tools20022.repository.msg.DisplayInstruction1.mmMinimumIncrement, com.tools20022.repository.msg.DisplayInstruction1.mmRefreshQuantity, com.tools20022.repository.msg.DisplayInstruction1.mmRefreshTime);
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+				messageElement_lazy = () -> Arrays.asList(DisplayInstruction1.mmQuantity, DisplayInstruction1.mmSecondaryQuantity, DisplayInstruction1.mmMethod, DisplayInstruction1.mmLowQuantity, DisplayInstruction1.mmHighQuantity,
+						DisplayInstruction1.mmMinimumIncrement, DisplayInstruction1.mmRefreshQuantity, DisplayInstruction1.mmRefreshTime);
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 				name = "DisplayInstruction1";
 				definition = "Provides details about strategy order/Iceberg orders.";
 			}

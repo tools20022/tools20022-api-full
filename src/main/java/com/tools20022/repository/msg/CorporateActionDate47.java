@@ -19,9 +19,14 @@ package com.tools20022.repository.msg;
 
 import com.tools20022.metamodel.MMMessageAssociationEnd;
 import com.tools20022.metamodel.MMMessageComponent;
+import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.choice.DateFormat31Choice;
 import com.tools20022.repository.choice.DateFormat33Choice;
+import com.tools20022.repository.entity.CorporateActionDistribution;
 import com.tools20022.repository.entity.CorporateActionEvent;
+import com.tools20022.repository.entity.FixingCondition;
+import com.tools20022.repository.entity.ProceedsDefinition;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -114,14 +119,14 @@ public class CorporateActionDate47 {
 	 */
 	public static final MMMessageAssociationEnd mmPaymentDate = new MMMessageAssociationEnd() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.CorporateActionDistribution.mmMovementDate;
+			businessElementTrace_lazy = () -> CorporateActionDistribution.mmMovementDate;
 			componentContext_lazy = () -> CorporateActionDate47.mmObject();
 			isDerived = false;
 			xmlTag = "PmtDt";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PaymentDate";
 			definition = "Date on which the movement is due to take place (cash and/or securities).";
-			previousVersion_lazy = () -> com.tools20022.repository.msg.CorporateActionDate23.mmPaymentDate;
+			previousVersion_lazy = () -> CorporateActionDate23.mmPaymentDate;
 			maxOccurs = 1;
 			minOccurs = 1;
 			isComposite = true;
@@ -168,14 +173,14 @@ public class CorporateActionDate47 {
 	 */
 	public static final MMMessageAssociationEnd mmValueDate = new MMMessageAssociationEnd() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.ProceedsDefinition.mmValueDate;
+			businessElementTrace_lazy = () -> ProceedsDefinition.mmValueDate;
 			componentContext_lazy = () -> CorporateActionDate47.mmObject();
 			isDerived = false;
 			xmlTag = "ValDt";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ValueDate";
 			definition = "Date/time when calculating economic benefit for a cash amount.";
-			previousVersion_lazy = () -> com.tools20022.repository.msg.CorporateActionDate23.mmValueDate;
+			previousVersion_lazy = () -> CorporateActionDate23.mmValueDate;
 			maxOccurs = 1;
 			minOccurs = 0;
 			isComposite = true;
@@ -222,14 +227,14 @@ public class CorporateActionDate47 {
 	 */
 	public static final MMMessageAssociationEnd mmForeignExchangeRateFixingDate = new MMMessageAssociationEnd() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.FixingCondition.mmFixingDateTime;
+			businessElementTrace_lazy = () -> FixingCondition.mmFixingDateTime;
 			componentContext_lazy = () -> CorporateActionDate47.mmObject();
 			isDerived = false;
 			xmlTag = "FXRateFxgDt";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ForeignExchangeRateFixingDate";
 			definition = "Date/time at which a foreign exchange rate will be determined.";
-			previousVersion_lazy = () -> com.tools20022.repository.msg.CorporateActionDate23.mmForeignExchangeRateFixingDate;
+			previousVersion_lazy = () -> CorporateActionDate23.mmForeignExchangeRateFixingDate;
 			maxOccurs = 1;
 			minOccurs = 0;
 			isComposite = true;
@@ -278,14 +283,14 @@ public class CorporateActionDate47 {
 	 */
 	public static final MMMessageAssociationEnd mmEarliestPaymentDate = new MMMessageAssociationEnd() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.ProceedsDefinition.mmEarliestPaymentDate;
+			businessElementTrace_lazy = () -> ProceedsDefinition.mmEarliestPaymentDate;
 			componentContext_lazy = () -> CorporateActionDate47.mmObject();
 			isDerived = false;
 			xmlTag = "EarlstPmtDt";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "EarliestPaymentDate";
 			definition = "Date on which a payment can be made, for example, if payment date is a non-business day or to indicate the first payment date of an offer.";
-			previousVersion_lazy = () -> com.tools20022.repository.msg.CorporateActionDate23.mmEarliestPaymentDate;
+			previousVersion_lazy = () -> CorporateActionDate23.mmEarliestPaymentDate;
 			maxOccurs = 1;
 			minOccurs = 0;
 			isComposite = true;
@@ -296,11 +301,10 @@ public class CorporateActionDate47 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.CorporateActionDate47.mmPaymentDate, com.tools20022.repository.msg.CorporateActionDate47.mmValueDate,
-						com.tools20022.repository.msg.CorporateActionDate47.mmForeignExchangeRateFixingDate, com.tools20022.repository.msg.CorporateActionDate47.mmEarliestPaymentDate);
+				messageElement_lazy = () -> Arrays.asList(CorporateActionDate47.mmPaymentDate, CorporateActionDate47.mmValueDate, CorporateActionDate47.mmForeignExchangeRateFixingDate, CorporateActionDate47.mmEarliestPaymentDate);
 				trace_lazy = () -> CorporateActionEvent.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "CorporateActionDate47";
 				definition = "Specifies corporate action dates.";
 				previousVersion_lazy = () -> CorporateActionDate23.mmObject();

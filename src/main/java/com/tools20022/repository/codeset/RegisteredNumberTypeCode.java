@@ -19,6 +19,8 @@ package com.tools20022.repository.codeset;
 
 import com.tools20022.metamodel.MMCode;
 import com.tools20022.metamodel.MMCodeSet;
+import com.tools20022.metamodel.MMRegistrationStatus;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -27,6 +29,13 @@ import java.util.concurrent.atomic.AtomicReference;
  * <p>
  * <strong>Constant fields:</strong>
  * <ul>
+ * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getDerivation derivation}
+ * =
+ * <ul>
+ * <li>{@linkplain com.tools20022.repository.codeset.RegisteredNumberType1Code
+ * RegisteredNumberType1Code}</li>
+ * </ul>
+ * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getCode code} =
  * <ul>
  * <li>
@@ -44,13 +53,6 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>
  * {@linkplain com.tools20022.repository.codeset.RegisteredNumberTypeCode#mmOther
  * RegisteredNumberTypeCode.mmOther}</li>
- * </ul>
- * </li>
- * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getDerivation derivation}
- * =
- * <ul>
- * <li>{@linkplain com.tools20022.repository.codeset.RegisteredNumberType1Code
- * RegisteredNumberType1Code}</li>
  * </ul>
  * </li>
  * <li>
@@ -98,7 +100,7 @@ public class RegisteredNumberTypeCode {
 	 */
 	public static final MMCode mmAustralianBusinessNumber = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AustralianBusinessNumber";
 			definition = "Australian Business Number (ABN) is a single identifier for use in business dealings with the Australian Taxation Office (ATO) and with other government agencies.";
 			owner_lazy = () -> RegisteredNumberTypeCode.mmObject();
@@ -131,7 +133,7 @@ public class RegisteredNumberTypeCode {
 	 */
 	public static final MMCode mmAustralianCompanyNumber = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AustralianCompanyNumber";
 			definition = "Number identifying a company, issued by the Australian Securities & Investments Commission (ASIC) upon registration.";
 			owner_lazy = () -> RegisteredNumberTypeCode.mmObject();
@@ -164,7 +166,7 @@ public class RegisteredNumberTypeCode {
 	 */
 	public static final MMCode mmAustralianRegisteredBodyNumber = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AustralianRegisteredBodyNumber";
 			definition = "ARBNs are issued to registrable Australian bodies and foreign companies. The ARBN is a unique identifier and no two bodies can have the same ARBN. ";
 			owner_lazy = () -> RegisteredNumberTypeCode.mmObject();
@@ -197,7 +199,7 @@ public class RegisteredNumberTypeCode {
 	 */
 	public static final MMCode mmAustralianRegisteredSchemeNumber = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AustralianRegisteredSchemeNumber";
 			definition = "ARSNs are issued to Managed Investment Schemes. The ARSN is a unique identifier and no two bodies can have the same ARSN. ";
 			owner_lazy = () -> RegisteredNumberTypeCode.mmObject();
@@ -227,7 +229,7 @@ public class RegisteredNumberTypeCode {
 	 */
 	public static final MMCode mmOther = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Other";
 			definition = "Other registered number type.";
 			owner_lazy = () -> RegisteredNumberTypeCode.mmObject();
@@ -238,13 +240,12 @@ public class RegisteredNumberTypeCode {
 	static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "RegisteredNumberTypeCode";
 				definition = "Code values for the registered number type.";
-				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.RegisteredNumberTypeCode.mmAustralianBusinessNumber, com.tools20022.repository.codeset.RegisteredNumberTypeCode.mmAustralianCompanyNumber,
-						com.tools20022.repository.codeset.RegisteredNumberTypeCode.mmAustralianRegisteredBodyNumber, com.tools20022.repository.codeset.RegisteredNumberTypeCode.mmAustralianRegisteredSchemeNumber,
-						com.tools20022.repository.codeset.RegisteredNumberTypeCode.mmOther);
+				code_lazy = () -> Arrays.asList(RegisteredNumberTypeCode.mmAustralianBusinessNumber, RegisteredNumberTypeCode.mmAustralianCompanyNumber, RegisteredNumberTypeCode.mmAustralianRegisteredBodyNumber,
+						RegisteredNumberTypeCode.mmAustralianRegisteredSchemeNumber, RegisteredNumberTypeCode.mmOther);
 				derivation_lazy = () -> Arrays.asList(RegisteredNumberType1Code.mmObject());
 			}
 		});

@@ -19,7 +19,9 @@ package com.tools20022.repository.codeset;
 
 import com.tools20022.metamodel.MMCode;
 import com.tools20022.metamodel.MMCodeSet;
+import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.codeset.AssetClassDetailedSubProductTypeCode;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -87,7 +89,7 @@ public class AssetClassDetailedSubProductType6Code extends AssetClassDetailedSub
 	 */
 	public static final MMCode mmGasPool = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "GasPool";
 			owner_lazy = () -> AssetClassDetailedSubProductType6Code.mmObject();
 		}
@@ -110,7 +112,7 @@ public class AssetClassDetailedSubProductType6Code extends AssetClassDetailedSub
 	 */
 	public static final MMCode mmLNG = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "LNG";
 			owner_lazy = () -> AssetClassDetailedSubProductType6Code.mmObject();
 		}
@@ -133,7 +135,7 @@ public class AssetClassDetailedSubProductType6Code extends AssetClassDetailedSub
 	 */
 	public static final MMCode mmNCG = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "NCG";
 			owner_lazy = () -> AssetClassDetailedSubProductType6Code.mmObject();
 		}
@@ -156,7 +158,7 @@ public class AssetClassDetailedSubProductType6Code extends AssetClassDetailedSub
 	 */
 	public static final MMCode mmTTF = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "TTF";
 			owner_lazy = () -> AssetClassDetailedSubProductType6Code.mmObject();
 		}
@@ -179,7 +181,7 @@ public class AssetClassDetailedSubProductType6Code extends AssetClassDetailedSub
 	 */
 	public static final MMCode mmNBP = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "NBP";
 			owner_lazy = () -> AssetClassDetailedSubProductType6Code.mmObject();
 		}
@@ -188,13 +190,12 @@ public class AssetClassDetailedSubProductType6Code extends AssetClassDetailedSub
 	static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "AssetClassDetailedSubProductType6Code";
 				definition = "Further sub product code list for commodity derivative Natural Gas.";
-				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.AssetClassDetailedSubProductType6Code.mmGasPool, com.tools20022.repository.codeset.AssetClassDetailedSubProductType6Code.mmLNG,
-						com.tools20022.repository.codeset.AssetClassDetailedSubProductType6Code.mmNCG, com.tools20022.repository.codeset.AssetClassDetailedSubProductType6Code.mmTTF,
-						com.tools20022.repository.codeset.AssetClassDetailedSubProductType6Code.mmNBP);
+				code_lazy = () -> Arrays.asList(AssetClassDetailedSubProductType6Code.mmGasPool, AssetClassDetailedSubProductType6Code.mmLNG, AssetClassDetailedSubProductType6Code.mmNCG, AssetClassDetailedSubProductType6Code.mmTTF,
+						AssetClassDetailedSubProductType6Code.mmNBP);
 				trace_lazy = () -> AssetClassDetailedSubProductTypeCode.mmObject();
 			}
 		});

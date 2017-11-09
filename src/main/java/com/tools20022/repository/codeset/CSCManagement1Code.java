@@ -19,7 +19,9 @@ package com.tools20022.repository.codeset;
 
 import com.tools20022.metamodel.MMCode;
 import com.tools20022.metamodel.MMCodeSet;
+import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.codeset.CSCManagementCode;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -89,7 +91,7 @@ public class CSCManagement1Code extends CSCManagementCode {
 	 */
 	public static final MMCode mmCSCPresent = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CSCPresent";
 			owner_lazy = () -> CSCManagement1Code.mmObject();
 		}
@@ -112,7 +114,7 @@ public class CSCManagement1Code extends CSCManagementCode {
 	 */
 	public static final MMCode mmCSCByPass = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CSCByPass";
 			owner_lazy = () -> CSCManagement1Code.mmObject();
 		}
@@ -135,7 +137,7 @@ public class CSCManagement1Code extends CSCManagementCode {
 	 */
 	public static final MMCode mmCSCUnread = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CSCUnread";
 			owner_lazy = () -> CSCManagement1Code.mmObject();
 		}
@@ -158,7 +160,7 @@ public class CSCManagement1Code extends CSCManagementCode {
 	 */
 	public static final MMCode mmNoCSC = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "NoCSC";
 			owner_lazy = () -> CSCManagement1Code.mmObject();
 		}
@@ -167,13 +169,12 @@ public class CSCManagement1Code extends CSCManagementCode {
 	static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
 				example = Arrays.asList("PRST");
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "CSCManagement1Code";
 				definition = "CSC (Card Security Code) management associated with the transaction.";
-				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.CSCManagement1Code.mmCSCPresent, com.tools20022.repository.codeset.CSCManagement1Code.mmCSCByPass,
-						com.tools20022.repository.codeset.CSCManagement1Code.mmCSCUnread, com.tools20022.repository.codeset.CSCManagement1Code.mmNoCSC);
+				code_lazy = () -> Arrays.asList(CSCManagement1Code.mmCSCPresent, CSCManagement1Code.mmCSCByPass, CSCManagement1Code.mmCSCUnread, CSCManagement1Code.mmNoCSC);
 				trace_lazy = () -> CSCManagementCode.mmObject();
 			}
 		});

@@ -19,6 +19,8 @@ package com.tools20022.repository.codeset;
 
 import com.tools20022.metamodel.MMCode;
 import com.tools20022.metamodel.MMCodeSet;
+import com.tools20022.metamodel.MMRegistrationStatus;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -27,6 +29,19 @@ import java.util.concurrent.atomic.AtomicReference;
  * <p>
  * <strong>Constant fields:</strong>
  * <ul>
+ * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getDerivation derivation}
+ * =
+ * <ul>
+ * <li>{@linkplain com.tools20022.repository.codeset.POIComponentType1Code
+ * POIComponentType1Code}</li>
+ * <li>{@linkplain com.tools20022.repository.codeset.POIComponentType2Code
+ * POIComponentType2Code}</li>
+ * <li>{@linkplain com.tools20022.repository.codeset.POIComponentType3Code
+ * POIComponentType3Code}</li>
+ * <li>{@linkplain com.tools20022.repository.codeset.POIComponentType4Code
+ * POIComponentType4Code}</li>
+ * </ul>
+ * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getCode code} =
  * <ul>
  * <li>
@@ -100,19 +115,6 @@ import java.util.concurrent.atomic.AtomicReference;
  * POIComponentTypeCode.mmTMSProtocolParameters}</li>
  * </ul>
  * </li>
- * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getDerivation derivation}
- * =
- * <ul>
- * <li>{@linkplain com.tools20022.repository.codeset.POIComponentType1Code
- * POIComponentType1Code}</li>
- * <li>{@linkplain com.tools20022.repository.codeset.POIComponentType2Code
- * POIComponentType2Code}</li>
- * <li>{@linkplain com.tools20022.repository.codeset.POIComponentType3Code
- * POIComponentType3Code}</li>
- * <li>{@linkplain com.tools20022.repository.codeset.POIComponentType4Code
- * POIComponentType4Code}</li>
- * </ul>
- * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
@@ -161,7 +163,7 @@ public class POIComponentTypeCode {
 	 */
 	public static final MMCode mmSoft = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "Soft";
 			definition = "Payment or other software application.";
 			owner_lazy = () -> POIComponentTypeCode.mmObject();
@@ -194,7 +196,7 @@ public class POIComponentTypeCode {
 	 */
 	public static final MMCode mmEMVKernel = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "EMVKernel";
 			definition = "EMV application kernel  (EMV is the chip card specifications initially defined by Eurocard, Mastercard and Visa).";
 			owner_lazy = () -> POIComponentTypeCode.mmObject();
@@ -227,7 +229,7 @@ public class POIComponentTypeCode {
 	 */
 	public static final MMCode mmEMVLevel1 = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "EMVLevel1";
 			definition = "EMV physical interface (EMV is the chip card specifications initially defined by Eurocard, Mastercard and Visa).";
 			owner_lazy = () -> POIComponentTypeCode.mmObject();
@@ -257,7 +259,7 @@ public class POIComponentTypeCode {
 	 */
 	public static final MMCode mmMerchantInterface = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "MerchantInterface";
 			definition = "Merchant interface.";
 			owner_lazy = () -> POIComponentTypeCode.mmObject();
@@ -287,7 +289,7 @@ public class POIComponentTypeCode {
 	 */
 	public static final MMCode mmCardholderInterface = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "CardholderInterface";
 			definition = "Cardholder Interface.";
 			owner_lazy = () -> POIComponentTypeCode.mmObject();
@@ -317,7 +319,7 @@ public class POIComponentTypeCode {
 	 */
 	public static final MMCode mmSecureModule = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "SecureModule";
 			definition = "Security module.";
 			owner_lazy = () -> POIComponentTypeCode.mmObject();
@@ -348,7 +350,7 @@ public class POIComponentTypeCode {
 	 */
 	public static final MMCode mmPINEntryDevice = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "PINEntryDevice";
 			definition = "Personal identification number (or PIN) entry device (PED).";
 			owner_lazy = () -> POIComponentTypeCode.mmObject();
@@ -381,7 +383,7 @@ public class POIComponentTypeCode {
 	 */
 	public static final MMCode mmAcquirerParameters = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "AcquirerParameters";
 			definition = "Acquirer specific configuration parameters for the point of interaction (POI) system.";
 			owner_lazy = () -> POIComponentTypeCode.mmObject();
@@ -412,7 +414,7 @@ public class POIComponentTypeCode {
 	 */
 	public static final MMCode mmMerchantParameters = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "MerchantParameters";
 			definition = "Merchant configuration parameters for the point of interaction (POI).";
 			owner_lazy = () -> POIComponentTypeCode.mmObject();
@@ -445,7 +447,7 @@ public class POIComponentTypeCode {
 	 */
 	public static final MMCode mmVendorParameters = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "VendorParameters";
 			definition = "Point of interaction parameters defined by the manufacturer for instance the PIN verification capabilities.";
 			owner_lazy = () -> POIComponentTypeCode.mmObject();
@@ -478,7 +480,7 @@ public class POIComponentTypeCode {
 	 */
 	public static final MMCode mmAcquirerProtocolParameters = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "AcquirerProtocolParameters";
 			definition = "Parameters for acquirer interface of the point of interaction, including acquirer host configuration parameters.";
 			owner_lazy = () -> POIComponentTypeCode.mmObject();
@@ -510,7 +512,7 @@ public class POIComponentTypeCode {
 	 */
 	public static final MMCode mmApplicationParameters = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "ApplicationParameters";
 			definition = "Parameters of a payment application running on the point of interaction.";
 			owner_lazy = () -> POIComponentTypeCode.mmObject();
@@ -541,7 +543,7 @@ public class POIComponentTypeCode {
 	 */
 	public static final MMCode mmDevice = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "Device";
 			definition = "Device sub-component of a component of the point of interaction.";
 			owner_lazy = () -> POIComponentTypeCode.mmObject();
@@ -571,7 +573,7 @@ public class POIComponentTypeCode {
 	 */
 	public static final MMCode mmDriver = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "Driver";
 			definition = "Driver module of the point of interaction.";
 			owner_lazy = () -> POIComponentTypeCode.mmObject();
@@ -601,7 +603,7 @@ public class POIComponentTypeCode {
 	 */
 	public static final MMCode mmMiddleware = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "Middleware";
 			definition = "Software module of the point of interaction.";
 			owner_lazy = () -> POIComponentTypeCode.mmObject();
@@ -634,7 +636,7 @@ public class POIComponentTypeCode {
 	 */
 	public static final MMCode mmOperatingSystem = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "OperatingSystem";
 			definition = "Software that manages hardware to provide common services to the applications.";
 			owner_lazy = () -> POIComponentTypeCode.mmObject();
@@ -664,7 +666,7 @@ public class POIComponentTypeCode {
 	 */
 	public static final MMCode mmPaymentApplication = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "PaymentApplication";
 			definition = "Payment application software.";
 			owner_lazy = () -> POIComponentTypeCode.mmObject();
@@ -694,7 +696,7 @@ public class POIComponentTypeCode {
 	 */
 	public static final MMCode mmSecurityParameters = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "SecurityParameters";
 			definition = "Security parameters of the point of interaction.";
 			owner_lazy = () -> POIComponentTypeCode.mmObject();
@@ -724,7 +726,7 @@ public class POIComponentTypeCode {
 	 */
 	public static final MMCode mmServer = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "Server";
 			definition = "Payment server of a point of interaction system.";
 			owner_lazy = () -> POIComponentTypeCode.mmObject();
@@ -754,7 +756,7 @@ public class POIComponentTypeCode {
 	 */
 	public static final MMCode mmTerminal = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "Terminal";
 			definition = "Payment terminal point of interaction.";
 			owner_lazy = () -> POIComponentTypeCode.mmObject();
@@ -785,7 +787,7 @@ public class POIComponentTypeCode {
 	 */
 	public static final MMCode mmTerminalParameters = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "TerminalParameters";
 			definition = "Manufacturer configuration parameters of the point of interaction.";
 			owner_lazy = () -> POIComponentTypeCode.mmObject();
@@ -815,7 +817,7 @@ public class POIComponentTypeCode {
 	 */
 	public static final MMCode mmCertificateParameters = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CertificateParameters";
 			definition = "Certificate provided by a terminal manager.";
 			owner_lazy = () -> POIComponentTypeCode.mmObject();
@@ -845,7 +847,7 @@ public class POIComponentTypeCode {
 	 */
 	public static final MMCode mmTMSProtocolParameters = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "TMSProtocolParameters";
 			definition = "Configuration parameters for the TMS protocol.";
 			owner_lazy = () -> POIComponentTypeCode.mmObject();
@@ -856,22 +858,16 @@ public class POIComponentTypeCode {
 	static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
 				example = Arrays.asList("SOFT");
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "POIComponentTypeCode";
 				definition = "Generic component type belonging to a POI (Point of Interaction) Terminal.";
-				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.POIComponentTypeCode.mmSoft, com.tools20022.repository.codeset.POIComponentTypeCode.mmEMVKernel,
-						com.tools20022.repository.codeset.POIComponentTypeCode.mmEMVLevel1, com.tools20022.repository.codeset.POIComponentTypeCode.mmMerchantInterface,
-						com.tools20022.repository.codeset.POIComponentTypeCode.mmCardholderInterface, com.tools20022.repository.codeset.POIComponentTypeCode.mmSecureModule,
-						com.tools20022.repository.codeset.POIComponentTypeCode.mmPINEntryDevice, com.tools20022.repository.codeset.POIComponentTypeCode.mmAcquirerParameters,
-						com.tools20022.repository.codeset.POIComponentTypeCode.mmMerchantParameters, com.tools20022.repository.codeset.POIComponentTypeCode.mmVendorParameters,
-						com.tools20022.repository.codeset.POIComponentTypeCode.mmAcquirerProtocolParameters, com.tools20022.repository.codeset.POIComponentTypeCode.mmApplicationParameters,
-						com.tools20022.repository.codeset.POIComponentTypeCode.mmDevice, com.tools20022.repository.codeset.POIComponentTypeCode.mmDriver, com.tools20022.repository.codeset.POIComponentTypeCode.mmMiddleware,
-						com.tools20022.repository.codeset.POIComponentTypeCode.mmOperatingSystem, com.tools20022.repository.codeset.POIComponentTypeCode.mmPaymentApplication,
-						com.tools20022.repository.codeset.POIComponentTypeCode.mmSecurityParameters, com.tools20022.repository.codeset.POIComponentTypeCode.mmServer, com.tools20022.repository.codeset.POIComponentTypeCode.mmTerminal,
-						com.tools20022.repository.codeset.POIComponentTypeCode.mmTerminalParameters, com.tools20022.repository.codeset.POIComponentTypeCode.mmCertificateParameters,
-						com.tools20022.repository.codeset.POIComponentTypeCode.mmTMSProtocolParameters);
+				code_lazy = () -> Arrays.asList(POIComponentTypeCode.mmSoft, POIComponentTypeCode.mmEMVKernel, POIComponentTypeCode.mmEMVLevel1, POIComponentTypeCode.mmMerchantInterface, POIComponentTypeCode.mmCardholderInterface,
+						POIComponentTypeCode.mmSecureModule, POIComponentTypeCode.mmPINEntryDevice, POIComponentTypeCode.mmAcquirerParameters, POIComponentTypeCode.mmMerchantParameters, POIComponentTypeCode.mmVendorParameters,
+						POIComponentTypeCode.mmAcquirerProtocolParameters, POIComponentTypeCode.mmApplicationParameters, POIComponentTypeCode.mmDevice, POIComponentTypeCode.mmDriver, POIComponentTypeCode.mmMiddleware,
+						POIComponentTypeCode.mmOperatingSystem, POIComponentTypeCode.mmPaymentApplication, POIComponentTypeCode.mmSecurityParameters, POIComponentTypeCode.mmServer, POIComponentTypeCode.mmTerminal,
+						POIComponentTypeCode.mmTerminalParameters, POIComponentTypeCode.mmCertificateParameters, POIComponentTypeCode.mmTMSProtocolParameters);
 				derivation_lazy = () -> Arrays.asList(POIComponentType1Code.mmObject(), POIComponentType2Code.mmObject(), POIComponentType3Code.mmObject(), POIComponentType4Code.mmObject());
 			}
 		});

@@ -19,7 +19,9 @@ package com.tools20022.repository.codeset;
 
 import com.tools20022.metamodel.MMCode;
 import com.tools20022.metamodel.MMCodeSet;
+import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.codeset.TradeTransactionConditionCode;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -79,7 +81,7 @@ public class TradeTransactionCondition5Code extends TradeTransactionConditionCod
 	 */
 	public static final MMCode mmExCoupon = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ExCoupon";
 			owner_lazy = () -> TradeTransactionCondition5Code.mmObject();
 		}
@@ -102,7 +104,7 @@ public class TradeTransactionCondition5Code extends TradeTransactionConditionCod
 	 */
 	public static final MMCode mmCumCoupon = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CumCoupon";
 			owner_lazy = () -> TradeTransactionCondition5Code.mmObject();
 		}
@@ -111,11 +113,11 @@ public class TradeTransactionCondition5Code extends TradeTransactionConditionCod
 	static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "TradeTransactionCondition5Code";
 				definition = "Specifies the conditions under which the order/trade is to be/was executed.";
-				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.TradeTransactionCondition5Code.mmExCoupon, com.tools20022.repository.codeset.TradeTransactionCondition5Code.mmCumCoupon);
+				code_lazy = () -> Arrays.asList(TradeTransactionCondition5Code.mmExCoupon, TradeTransactionCondition5Code.mmCumCoupon);
 				trace_lazy = () -> TradeTransactionConditionCode.mmObject();
 			}
 		});

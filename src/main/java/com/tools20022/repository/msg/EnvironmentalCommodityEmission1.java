@@ -19,9 +19,11 @@ package com.tools20022.repository.msg;
 
 import com.tools20022.metamodel.MMMessageAttribute;
 import com.tools20022.metamodel.MMMessageComponent;
+import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.codeset.AssetClassDetailedSubProductType8Code;
 import com.tools20022.repository.codeset.AssetClassProductType3Code;
 import com.tools20022.repository.codeset.AssetClassSubProductType10Code;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -103,7 +105,7 @@ public class EnvironmentalCommodityEmission1 {
 			componentContext_lazy = () -> EnvironmentalCommodityEmission1.mmObject();
 			isDerived = false;
 			xmlTag = "BasePdct";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "BaseProduct";
 			definition = "Base product for the underlying asset class as specified in the classification of commodities derivatives table.";
 			maxOccurs = 1;
@@ -145,7 +147,7 @@ public class EnvironmentalCommodityEmission1 {
 			componentContext_lazy = () -> EnvironmentalCommodityEmission1.mmObject();
 			isDerived = false;
 			xmlTag = "SubPdct";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SubProduct";
 			definition = "Sub-product for the underlying asset class.";
 			maxOccurs = 1;
@@ -190,7 +192,7 @@ public class EnvironmentalCommodityEmission1 {
 			componentContext_lazy = () -> EnvironmentalCommodityEmission1.mmObject();
 			isDerived = false;
 			xmlTag = "AddtlSubPdct";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AdditionalSubProduct";
 			definition = "Further subproduct type related to instruments that have a non-financial instrument or commodity as underlying.";
 			maxOccurs = 1;
@@ -202,10 +204,9 @@ public class EnvironmentalCommodityEmission1 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.EnvironmentalCommodityEmission1.mmBaseProduct, com.tools20022.repository.msg.EnvironmentalCommodityEmission1.mmSubProduct,
-						com.tools20022.repository.msg.EnvironmentalCommodityEmission1.mmAdditionalSubProduct);
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				messageElement_lazy = () -> Arrays.asList(EnvironmentalCommodityEmission1.mmBaseProduct, EnvironmentalCommodityEmission1.mmSubProduct, EnvironmentalCommodityEmission1.mmAdditionalSubProduct);
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "EnvironmentalCommodityEmission1";
 				definition = "Defines commodity sub-product attributes of an environmental derivative of type emission.";
 			}

@@ -19,9 +19,13 @@ package com.tools20022.repository.msg;
 
 import com.tools20022.metamodel.MMMessageAttribute;
 import com.tools20022.metamodel.MMMessageComponent;
+import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.datatype.ISINIdentifier;
 import com.tools20022.repository.datatype.Number;
+import com.tools20022.repository.entity.Index;
+import com.tools20022.repository.entity.Spread;
 import com.tools20022.repository.entity.VariableInterest;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -122,14 +126,14 @@ public class FloatingRateNote1 {
 	 */
 	public static final MMMessageAttribute mmReferenceRateIndex = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Index.mmIdentification;
+			businessElementTrace_lazy = () -> Index.mmIdentification;
 			componentContext_lazy = () -> FloatingRateNote1.mmObject();
 			isDerived = false;
 			xmlTag = "RefRateIndx";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ReferenceRateIndex";
 			definition = "Underlying reference rate on the basis on which the periodic interest payments are calculated.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.FloatingRateNote2.mmReferenceRateIndex);
+			nextVersions_lazy = () -> Arrays.asList(FloatingRateNote2.mmReferenceRateIndex);
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> ISINIdentifier.mmObject();
@@ -186,14 +190,14 @@ public class FloatingRateNote1 {
 	 */
 	public static final MMMessageAttribute mmBasisPointSpread = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Spread.mmBasisPointSpread;
+			businessElementTrace_lazy = () -> Spread.mmBasisPointSpread;
 			componentContext_lazy = () -> FloatingRateNote1.mmObject();
 			isDerived = false;
 			xmlTag = "BsisPtSprd";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "BasisPointSpread";
 			definition = "Number of basis points added to (if positive) or deducted from (if negative) the underlying reference rate to calculate the actual interest rate applicable for a given period at issuance of the floating rate instrument.\r\n\r\nUsed to express differences in interest rates, for example, a difference of 0.10% is equivalent to a change of 10 basis points.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.FloatingRateNote2.mmBasisPointSpread);
+			nextVersions_lazy = () -> Arrays.asList(FloatingRateNote2.mmBasisPointSpread);
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> Number.mmObject();
@@ -203,10 +207,10 @@ public class FloatingRateNote1 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.FloatingRateNote1.mmReferenceRateIndex, com.tools20022.repository.msg.FloatingRateNote1.mmBasisPointSpread);
+				messageElement_lazy = () -> Arrays.asList(FloatingRateNote1.mmReferenceRateIndex, FloatingRateNote1.mmBasisPointSpread);
 				trace_lazy = () -> VariableInterest.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "FloatingRateNote1";
 				definition = "Provides the details of a debt instrument in which the periodic interest payments are calculated on the basis of the value (that is, fixing of an underlying reference rate such as the Euribor) on predefined dates (that is, fixing dates) and which has a maturity of no more than one year.";
 				nextVersions_lazy = () -> Arrays.asList(FloatingRateNote2.mmObject());

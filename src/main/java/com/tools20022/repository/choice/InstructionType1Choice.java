@@ -19,6 +19,11 @@ package com.tools20022.repository.choice;
 
 import com.tools20022.metamodel.MMChoiceComponent;
 import com.tools20022.metamodel.MMMessageAssociationEnd;
+import com.tools20022.metamodel.MMRegistrationStatus;
+import com.tools20022.repository.area.seev.MeetingInstructionStatusV03;
+import com.tools20022.repository.area.seev.MeetingInstructionStatusV04;
+import com.tools20022.repository.area.seev.MeetingInstructionStatusV05;
+import com.tools20022.repository.GeneratedRepository;
 import com.tools20022.repository.msg.MessageIdentification;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
@@ -108,7 +113,7 @@ public class InstructionType1Choice {
 			componentContext_lazy = () -> InstructionType1Choice.mmObject();
 			isDerived = false;
 			xmlTag = "InstrId";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "InstructionIdentification";
 			definition = "Identifies the meeting instruction message for which the status is provided.";
 			maxOccurs = 1;
@@ -152,7 +157,7 @@ public class InstructionType1Choice {
 			componentContext_lazy = () -> InstructionType1Choice.mmObject();
 			isDerived = false;
 			xmlTag = "InstrCxlId";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "InstructionCancellationIdentification";
 			definition = "Identifies the meeting instruction cancellation request message for which the status is provided.";
 			maxOccurs = 1;
@@ -165,11 +170,10 @@ public class InstructionType1Choice {
 	final static public MMChoiceComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMChoiceComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.choice.InstructionType1Choice.mmInstructionIdentification, com.tools20022.repository.choice.InstructionType1Choice.mmInstructionCancellationIdentification);
-				messageBuildingBlock_lazy = () -> Arrays.asList(com.tools20022.repository.area.seev.MeetingInstructionStatusV03.mmInstructionType, com.tools20022.repository.area.seev.MeetingInstructionStatusV04.mmInstructionType,
-						com.tools20022.repository.area.seev.MeetingInstructionStatusV05.mmInstructionType);
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				messageElement_lazy = () -> Arrays.asList(InstructionType1Choice.mmInstructionIdentification, InstructionType1Choice.mmInstructionCancellationIdentification);
+				messageBuildingBlock_lazy = () -> Arrays.asList(MeetingInstructionStatusV03.mmInstructionType, MeetingInstructionStatusV04.mmInstructionType, MeetingInstructionStatusV05.mmInstructionType);
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "InstructionType1Choice";
 				definition = "Type of instruction.";
 			}

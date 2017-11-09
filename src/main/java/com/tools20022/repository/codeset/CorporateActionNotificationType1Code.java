@@ -19,7 +19,9 @@ package com.tools20022.repository.codeset;
 
 import com.tools20022.metamodel.MMCode;
 import com.tools20022.metamodel.MMCodeSet;
+import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.codeset.CorporateActionNotificationTypeCode;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -86,7 +88,7 @@ public class CorporateActionNotificationType1Code extends CorporateActionNotific
 	 */
 	public static final MMCode mmNew = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "New";
 			owner_lazy = () -> CorporateActionNotificationType1Code.mmObject();
 		}
@@ -109,7 +111,7 @@ public class CorporateActionNotificationType1Code extends CorporateActionNotific
 	 */
 	public static final MMCode mmReplacement = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Replacement";
 			owner_lazy = () -> CorporateActionNotificationType1Code.mmObject();
 		}
@@ -132,7 +134,7 @@ public class CorporateActionNotificationType1Code extends CorporateActionNotific
 	 */
 	public static final MMCode mmReminder = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Reminder";
 			owner_lazy = () -> CorporateActionNotificationType1Code.mmObject();
 		}
@@ -141,13 +143,12 @@ public class CorporateActionNotificationType1Code extends CorporateActionNotific
 	static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
 				example = Arrays.asList("NEWM");
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "CorporateActionNotificationType1Code";
 				definition = "Type of notification advice.";
-				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.CorporateActionNotificationType1Code.mmNew, com.tools20022.repository.codeset.CorporateActionNotificationType1Code.mmReplacement,
-						com.tools20022.repository.codeset.CorporateActionNotificationType1Code.mmReminder);
+				code_lazy = () -> Arrays.asList(CorporateActionNotificationType1Code.mmNew, CorporateActionNotificationType1Code.mmReplacement, CorporateActionNotificationType1Code.mmReminder);
 				trace_lazy = () -> CorporateActionNotificationTypeCode.mmObject();
 			}
 		});

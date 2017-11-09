@@ -19,10 +19,14 @@ package com.tools20022.repository.msg;
 
 import com.tools20022.metamodel.MMMessageAssociationEnd;
 import com.tools20022.metamodel.MMMessageComponent;
+import com.tools20022.metamodel.MMRegistrationStatus;
+import com.tools20022.repository.area.sese.SecuritiesFinancingConfirmationV02;
+import com.tools20022.repository.area.sese.SecuritiesFinancingConfirmationV03;
+import com.tools20022.repository.area.sese.SecuritiesFinancingConfirmationV04;
+import com.tools20022.repository.area.sese.SecuritiesFinancingConfirmationV05;
 import com.tools20022.repository.choice.*;
-import com.tools20022.repository.entity.SafekeepingPlace;
-import com.tools20022.repository.entity.SecuritiesAccount;
-import com.tools20022.repository.entity.SecuritiesSettlement;
+import com.tools20022.repository.entity.*;
+import com.tools20022.repository.GeneratedRepository;
 import java.text.DateFormat;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
@@ -159,14 +163,14 @@ public class QuantityAndAccount18 {
 	 */
 	public static final MMMessageAssociationEnd mmSettledQuantity = new MMMessageAssociationEnd() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.SecuritiesSettlement.mmSettlementQuantity;
+			businessElementTrace_lazy = () -> SecuritiesSettlement.mmSettlementQuantity;
 			componentContext_lazy = () -> QuantityAndAccount18.mmObject();
 			isDerived = false;
 			xmlTag = "SttldQty";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SettledQuantity";
 			definition = "Quantity of financial instrument effectively settled.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.QuantityAndAccount40.mmSettledQuantity);
+			nextVersions_lazy = () -> Arrays.asList(QuantityAndAccount40.mmSettledQuantity);
 			maxOccurs = 1;
 			minOccurs = 1;
 			isComposite = true;
@@ -216,14 +220,14 @@ public class QuantityAndAccount18 {
 	 */
 	public static final MMMessageAssociationEnd mmPreviouslySettledQuantity = new MMMessageAssociationEnd() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.SecuritiesSettlement.mmSettlementQuantity;
+			businessElementTrace_lazy = () -> SecuritiesSettlement.mmSettlementQuantity;
 			componentContext_lazy = () -> QuantityAndAccount18.mmObject();
 			isDerived = false;
 			xmlTag = "PrevslySttldQty";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PreviouslySettledQuantity";
 			definition = "Quantity of financial instrument previously settled.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.QuantityAndAccount40.mmPreviouslySettledQuantity);
+			nextVersions_lazy = () -> Arrays.asList(QuantityAndAccount40.mmPreviouslySettledQuantity);
 			maxOccurs = 1;
 			minOccurs = 0;
 			isComposite = true;
@@ -274,14 +278,14 @@ public class QuantityAndAccount18 {
 	 */
 	public static final MMMessageAssociationEnd mmRemainingToBeSettledQuantity = new MMMessageAssociationEnd() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.SecuritiesSettlement.mmSettlementQuantity;
+			businessElementTrace_lazy = () -> SecuritiesSettlement.mmSettlementQuantity;
 			componentContext_lazy = () -> QuantityAndAccount18.mmObject();
 			isDerived = false;
 			xmlTag = "RmngToBeSttldQty";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "RemainingToBeSettledQuantity";
 			definition = "Quantity of financial instrument remaining to be settled.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.QuantityAndAccount40.mmRemainingToBeSettledQuantity);
+			nextVersions_lazy = () -> Arrays.asList(QuantityAndAccount40.mmRemainingToBeSettledQuantity);
 			maxOccurs = 1;
 			minOccurs = 0;
 			isComposite = true;
@@ -330,14 +334,14 @@ public class QuantityAndAccount18 {
 	 */
 	public static final MMMessageAssociationEnd mmPreviouslySettledAmount = new MMMessageAssociationEnd() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.SecuritiesSettlement.mmSettlementAmount;
+			businessElementTrace_lazy = () -> SecuritiesSettlement.mmSettlementAmount;
 			componentContext_lazy = () -> QuantityAndAccount18.mmObject();
 			isDerived = false;
 			xmlTag = "PrevslySttldAmt";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PreviouslySettledAmount";
 			definition = "Amount of money previously settled.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.QuantityAndAccount40.mmPreviouslySettledAmount);
+			nextVersions_lazy = () -> Arrays.asList(QuantityAndAccount40.mmPreviouslySettledAmount);
 			maxOccurs = 1;
 			minOccurs = 0;
 			isComposite = true;
@@ -386,14 +390,14 @@ public class QuantityAndAccount18 {
 	 */
 	public static final MMMessageAssociationEnd mmRemainingToBeSettledAmount = new MMMessageAssociationEnd() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.SecuritiesSettlement.mmSettlementAmount;
+			businessElementTrace_lazy = () -> SecuritiesSettlement.mmSettlementAmount;
 			componentContext_lazy = () -> QuantityAndAccount18.mmObject();
 			isDerived = false;
 			xmlTag = "RmngToBeSttldAmt";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "RemainingToBeSettledAmount";
 			definition = "Amount of money remaining to be settled.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.QuantityAndAccount40.mmRemainingToBeSettledAmount);
+			nextVersions_lazy = () -> Arrays.asList(QuantityAndAccount40.mmRemainingToBeSettledAmount);
 			maxOccurs = 1;
 			minOccurs = 0;
 			isComposite = true;
@@ -443,14 +447,14 @@ public class QuantityAndAccount18 {
 	 */
 	public static final MMMessageAssociationEnd mmAccountOwner = new MMMessageAssociationEnd() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Party.mmIdentification;
+			businessElementTrace_lazy = () -> Party.mmIdentification;
 			componentContext_lazy = () -> QuantityAndAccount18.mmObject();
 			isDerived = false;
 			xmlTag = "AcctOwnr";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AccountOwner";
 			definition = "Party that legally owns the account.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.QuantityAndAccount40.mmAccountOwner);
+			nextVersions_lazy = () -> Arrays.asList(QuantityAndAccount40.mmAccountOwner);
 			maxOccurs = 1;
 			minOccurs = 0;
 			isComposite = true;
@@ -503,10 +507,10 @@ public class QuantityAndAccount18 {
 			componentContext_lazy = () -> QuantityAndAccount18.mmObject();
 			isDerived = false;
 			xmlTag = "SfkpgAcct";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SafekeepingAccount";
 			definition = "Account to or from which a securities entry is made.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.QuantityAndAccount40.mmSafekeepingAccount);
+			nextVersions_lazy = () -> Arrays.asList(QuantityAndAccount40.mmSafekeepingAccount);
 			maxOccurs = 1;
 			minOccurs = 1;
 			isComposite = true;
@@ -556,14 +560,14 @@ public class QuantityAndAccount18 {
 	 */
 	public static final MMMessageAssociationEnd mmCashAccount = new MMMessageAssociationEnd() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Account.mmIdentification;
+			businessElementTrace_lazy = () -> Account.mmIdentification;
 			componentContext_lazy = () -> QuantityAndAccount18.mmObject();
 			isDerived = false;
 			xmlTag = "CshAcct";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CashAccount";
 			definition = "Account to or from which a cash entry is made.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.QuantityAndAccount40.mmCashAccount);
+			nextVersions_lazy = () -> Arrays.asList(QuantityAndAccount40.mmCashAccount);
 			maxOccurs = 1;
 			minOccurs = 0;
 			isComposite = true;
@@ -622,10 +626,10 @@ public class QuantityAndAccount18 {
 			componentContext_lazy = () -> QuantityAndAccount18.mmObject();
 			isDerived = false;
 			xmlTag = "SfkpgPlc";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SafekeepingPlace";
 			definition = "Place where the securities are safe-kept, physically or notionally.  This place can be, for example, a local custodian, a Central Securities Depository (CSD) or an International Central Securities Depository (ICSD).";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.QuantityAndAccount40.mmSafekeepingPlace);
+			nextVersions_lazy = () -> Arrays.asList(QuantityAndAccount40.mmSafekeepingPlace);
 			maxOccurs = 1;
 			minOccurs = 0;
 			isComposite = true;
@@ -636,16 +640,14 @@ public class QuantityAndAccount18 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.QuantityAndAccount18.mmSettledQuantity, com.tools20022.repository.msg.QuantityAndAccount18.mmPreviouslySettledQuantity,
-						com.tools20022.repository.msg.QuantityAndAccount18.mmRemainingToBeSettledQuantity, com.tools20022.repository.msg.QuantityAndAccount18.mmPreviouslySettledAmount,
-						com.tools20022.repository.msg.QuantityAndAccount18.mmRemainingToBeSettledAmount, com.tools20022.repository.msg.QuantityAndAccount18.mmAccountOwner,
-						com.tools20022.repository.msg.QuantityAndAccount18.mmSafekeepingAccount, com.tools20022.repository.msg.QuantityAndAccount18.mmCashAccount, com.tools20022.repository.msg.QuantityAndAccount18.mmSafekeepingPlace);
-				messageBuildingBlock_lazy = () -> Arrays.asList(com.tools20022.repository.area.sese.SecuritiesFinancingConfirmationV02.mmQuantityAndAccountDetails,
-						com.tools20022.repository.area.sese.SecuritiesFinancingConfirmationV03.mmQuantityAndAccountDetails, com.tools20022.repository.area.sese.SecuritiesFinancingConfirmationV04.mmQuantityAndAccountDetails,
-						com.tools20022.repository.area.sese.SecuritiesFinancingConfirmationV05.mmQuantityAndAccountDetails);
+				messageElement_lazy = () -> Arrays.asList(QuantityAndAccount18.mmSettledQuantity, QuantityAndAccount18.mmPreviouslySettledQuantity, QuantityAndAccount18.mmRemainingToBeSettledQuantity,
+						QuantityAndAccount18.mmPreviouslySettledAmount, QuantityAndAccount18.mmRemainingToBeSettledAmount, QuantityAndAccount18.mmAccountOwner, QuantityAndAccount18.mmSafekeepingAccount, QuantityAndAccount18.mmCashAccount,
+						QuantityAndAccount18.mmSafekeepingPlace);
+				messageBuildingBlock_lazy = () -> Arrays.asList(SecuritiesFinancingConfirmationV02.mmQuantityAndAccountDetails, SecuritiesFinancingConfirmationV03.mmQuantityAndAccountDetails,
+						SecuritiesFinancingConfirmationV04.mmQuantityAndAccountDetails, SecuritiesFinancingConfirmationV05.mmQuantityAndAccountDetails);
 				trace_lazy = () -> SecuritiesSettlement.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.OBSOLETE;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.OBSOLETE;
 				removalDate = ((Supplier<Date>) (() -> {
 					try {
 						return DateFormat.getDateInstance(java.text.DateFormat.LONG).parse("May 5, 2016");

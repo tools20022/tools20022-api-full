@@ -19,7 +19,9 @@ package com.tools20022.repository.codeset;
 
 import com.tools20022.metamodel.MMCode;
 import com.tools20022.metamodel.MMCodeSet;
+import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.codeset.ConditionallyAcceptedStatusReasonCode;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -92,7 +94,7 @@ public class ConditionallyAcceptedStatusReason2Code extends ConditionallyAccepte
 	 */
 	public static final MMCode mmAwaitingDocuments = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AwaitingDocuments";
 			owner_lazy = () -> ConditionallyAcceptedStatusReason2Code.mmObject();
 		}
@@ -115,7 +117,7 @@ public class ConditionallyAcceptedStatusReason2Code extends ConditionallyAccepte
 	 */
 	public static final MMCode mmAwaitingRedemptionMoney = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AwaitingRedemptionMoney";
 			owner_lazy = () -> ConditionallyAcceptedStatusReason2Code.mmObject();
 		}
@@ -138,7 +140,7 @@ public class ConditionallyAcceptedStatusReason2Code extends ConditionallyAccepte
 	 */
 	public static final MMCode mmAwaitingSubscriptionMoney = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AwaitingSubscriptionMoney";
 			owner_lazy = () -> ConditionallyAcceptedStatusReason2Code.mmObject();
 		}
@@ -161,7 +163,7 @@ public class ConditionallyAcceptedStatusReason2Code extends ConditionallyAccepte
 	 */
 	public static final MMCode mmPossibleDuplicate = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PossibleDuplicate";
 			owner_lazy = () -> ConditionallyAcceptedStatusReason2Code.mmObject();
 		}
@@ -184,7 +186,7 @@ public class ConditionallyAcceptedStatusReason2Code extends ConditionallyAccepte
 	 */
 	public static final MMCode mmTradingLimitExceeded = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "TradingLimitExceeded";
 			owner_lazy = () -> ConditionallyAcceptedStatusReason2Code.mmObject();
 		}
@@ -193,14 +195,13 @@ public class ConditionallyAcceptedStatusReason2Code extends ConditionallyAccepte
 	static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
 				example = Arrays.asList("DOCC");
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "ConditionallyAcceptedStatusReason2Code";
 				definition = "Specifies the reason for a conditionally accepted status.";
-				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.ConditionallyAcceptedStatusReason2Code.mmAwaitingDocuments,
-						com.tools20022.repository.codeset.ConditionallyAcceptedStatusReason2Code.mmAwaitingRedemptionMoney, com.tools20022.repository.codeset.ConditionallyAcceptedStatusReason2Code.mmAwaitingSubscriptionMoney,
-						com.tools20022.repository.codeset.ConditionallyAcceptedStatusReason2Code.mmPossibleDuplicate, com.tools20022.repository.codeset.ConditionallyAcceptedStatusReason2Code.mmTradingLimitExceeded);
+				code_lazy = () -> Arrays.asList(ConditionallyAcceptedStatusReason2Code.mmAwaitingDocuments, ConditionallyAcceptedStatusReason2Code.mmAwaitingRedemptionMoney,
+						ConditionallyAcceptedStatusReason2Code.mmAwaitingSubscriptionMoney, ConditionallyAcceptedStatusReason2Code.mmPossibleDuplicate, ConditionallyAcceptedStatusReason2Code.mmTradingLimitExceeded);
 				trace_lazy = () -> ConditionallyAcceptedStatusReasonCode.mmObject();
 			}
 		});

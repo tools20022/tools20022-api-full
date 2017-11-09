@@ -19,7 +19,9 @@ package com.tools20022.repository.choice;
 
 import com.tools20022.metamodel.MMChoiceComponent;
 import com.tools20022.metamodel.MMMessageAssociationEnd;
+import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.entity.SecuritiesQuantity;
+import com.tools20022.repository.GeneratedRepository;
 import com.tools20022.repository.msg.ProprietaryQuantity9;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
@@ -94,7 +96,7 @@ public class Quantity21Choice {
 			componentContext_lazy = () -> Quantity21Choice.mmObject();
 			isDerived = false;
 			xmlTag = "Qty";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Quantity";
 			definition = "Quantity of security.";
 			maxOccurs = 1;
@@ -135,7 +137,7 @@ public class Quantity21Choice {
 			componentContext_lazy = () -> Quantity21Choice.mmObject();
 			isDerived = false;
 			xmlTag = "PrtryQty";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ProprietaryQuantity";
 			definition = "Proprietary quantity of security format.";
 			maxOccurs = 1;
@@ -148,10 +150,10 @@ public class Quantity21Choice {
 	final static public MMChoiceComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMChoiceComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.choice.Quantity21Choice.mmQuantity, com.tools20022.repository.choice.Quantity21Choice.mmProprietaryQuantity);
+				messageElement_lazy = () -> Arrays.asList(Quantity21Choice.mmQuantity, Quantity21Choice.mmProprietaryQuantity);
 				trace_lazy = () -> SecuritiesQuantity.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "Quantity21Choice";
 				definition = "Choice between different quantity of security formats.";
 			}

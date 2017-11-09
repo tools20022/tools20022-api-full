@@ -17,9 +17,14 @@
 
 package com.tools20022.repository.entity;
 
+import com.tools20022.metamodel.MMAggregation;
 import com.tools20022.metamodel.MMBusinessAssociationEnd;
 import com.tools20022.metamodel.MMBusinessComponent;
+import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.entity.UndertakingPartyRole;
+import com.tools20022.repository.GeneratedRepository;
+import com.tools20022.repository.msg.Undertaking1;
+import com.tools20022.repository.msg.UndertakingAdvice2;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -33,14 +38,6 @@ import java.util.concurrent.atomic.AtomicReference;
  * <p>
  * <strong>Constant fields:</strong>
  * <ul>
- * <li>{@linkplain com.tools20022.metamodel.MMBusinessComponent#getElement
- * element} =
- * <ul>
- * <li>
- * {@linkplain com.tools20022.repository.entity.UndertakingUltimateObligor#mmCashAccount
- * UndertakingUltimateObligor.mmCashAccount}</li>
- * </ul>
- * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMBusinessComponent#getAssociationDomain
  * associationDomain} =
@@ -64,6 +61,14 @@ import java.util.concurrent.atomic.AtomicReference;
  * superType} =
  * {@linkplain com.tools20022.repository.entity.UndertakingPartyRole
  * UndertakingPartyRole}</li>
+ * <li>{@linkplain com.tools20022.metamodel.MMBusinessComponent#getElement
+ * element} =
+ * <ul>
+ * <li>
+ * {@linkplain com.tools20022.repository.entity.UndertakingUltimateObligor#mmCashAccount
+ * UndertakingUltimateObligor.mmCashAccount}</li>
+ * </ul>
+ * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
@@ -136,17 +141,16 @@ public class UndertakingUltimateObligor extends UndertakingPartyRole {
 	 */
 	public static final MMBusinessAssociationEnd mmCashAccount = new MMBusinessAssociationEnd() {
 		{
-			derivation_lazy = () -> Arrays.asList(com.tools20022.repository.msg.Undertaking1.mmObligorLiabilityAccount, com.tools20022.repository.msg.Undertaking1.mmObligorChargeAccount,
-					com.tools20022.repository.msg.Undertaking1.mmObligorSettlementAccount);
+			derivation_lazy = () -> Arrays.asList(Undertaking1.mmObligorLiabilityAccount, Undertaking1.mmObligorChargeAccount, Undertaking1.mmObligorSettlementAccount);
 			elementContext_lazy = () -> UndertakingUltimateObligor.mmObject();
 			isDerived = false;
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "CashAccount";
 			definition = "Accounts nominated by the obligor for the settlement of the amount claimed, or for the settlement of charges or to record the liability amount related to the undertaking. ";
 			maxOccurs = 1;
 			minOccurs = 0;
 			opposite_lazy = () -> com.tools20022.repository.entity.CashAccount.mmUltimateObligor;
-			aggregation = com.tools20022.metamodel.MMAggregation.NONE;
+			aggregation = MMAggregation.NONE;
 			type_lazy = () -> com.tools20022.repository.entity.CashAccount.mmObject();
 		}
 	};
@@ -154,14 +158,14 @@ public class UndertakingUltimateObligor extends UndertakingPartyRole {
 	static public MMBusinessComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMBusinessComponent() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "UndertakingUltimateObligor";
 				definition = "Party that takes responsibility for indemnifying the issuer.";
 				associationDomain_lazy = () -> Arrays.asList(com.tools20022.repository.entity.CashAccount.mmUltimateObligor);
-				derivationElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.Undertaking1.mmObligor, com.tools20022.repository.msg.UndertakingAdvice2.mmObligor);
+				derivationElement_lazy = () -> Arrays.asList(Undertaking1.mmObligor, UndertakingAdvice2.mmObligor);
 				superType_lazy = () -> UndertakingPartyRole.mmObject();
-				element_lazy = () -> Arrays.asList(com.tools20022.repository.entity.UndertakingUltimateObligor.mmCashAccount);
+				element_lazy = () -> Arrays.asList(UndertakingUltimateObligor.mmCashAccount);
 			}
 		});
 		return mmObject_lazy.get();

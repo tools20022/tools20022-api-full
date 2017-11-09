@@ -19,6 +19,9 @@ package com.tools20022.repository.msg;
 
 import com.tools20022.metamodel.MMMessageAssociationEnd;
 import com.tools20022.metamodel.MMMessageComponent;
+import com.tools20022.metamodel.MMRegistrationStatus;
+import com.tools20022.repository.area.cain.AcquirerFinancialInitiation;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -102,7 +105,7 @@ public class AcquirerFinancialInitiation1 {
 			componentContext_lazy = () -> AcquirerFinancialInitiation1.mmObject();
 			isDerived = false;
 			xmlTag = "Envt";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Environment";
 			definition = "Environment of the transaction.";
 			maxOccurs = 1;
@@ -144,7 +147,7 @@ public class AcquirerFinancialInitiation1 {
 			componentContext_lazy = () -> AcquirerFinancialInitiation1.mmObject();
 			isDerived = false;
 			xmlTag = "Cntxt";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Context";
 			definition = "Context in which the transaction is performed.";
 			maxOccurs = 1;
@@ -188,7 +191,7 @@ public class AcquirerFinancialInitiation1 {
 			componentContext_lazy = () -> AcquirerFinancialInitiation1.mmObject();
 			isDerived = false;
 			xmlTag = "Tx";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Transaction";
 			definition = "Card transaction for which the financial authorisation has been requested.";
 			maxOccurs = 1;
@@ -201,11 +204,10 @@ public class AcquirerFinancialInitiation1 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.AcquirerFinancialInitiation1.mmEnvironment, com.tools20022.repository.msg.AcquirerFinancialInitiation1.mmContext,
-						com.tools20022.repository.msg.AcquirerFinancialInitiation1.mmTransaction);
-				messageBuildingBlock_lazy = () -> Arrays.asList(com.tools20022.repository.area.cain.AcquirerFinancialInitiation.mmFinancialInitiation);
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				messageElement_lazy = () -> Arrays.asList(AcquirerFinancialInitiation1.mmEnvironment, AcquirerFinancialInitiation1.mmContext, AcquirerFinancialInitiation1.mmTransaction);
+				messageBuildingBlock_lazy = () -> Arrays.asList(AcquirerFinancialInitiation.mmFinancialInitiation);
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "AcquirerFinancialInitiation1";
 				definition = "Information related to financial authorisation.";
 			}

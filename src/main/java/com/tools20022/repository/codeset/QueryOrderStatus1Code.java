@@ -19,7 +19,9 @@ package com.tools20022.repository.codeset;
 
 import com.tools20022.metamodel.MMCode;
 import com.tools20022.metamodel.MMCodeSet;
+import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.codeset.QueryOrderStatusCode;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -86,7 +88,7 @@ public class QueryOrderStatus1Code extends QueryOrderStatusCode {
 	 */
 	public static final MMCode mmQueryUnconfirmedOrder = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "QueryUnconfirmedOrder";
 			owner_lazy = () -> QueryOrderStatus1Code.mmObject();
 		}
@@ -109,7 +111,7 @@ public class QueryOrderStatus1Code extends QueryOrderStatusCode {
 	 */
 	public static final MMCode mmQueryOrdersForTheParty = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "QueryOrdersForTheParty";
 			owner_lazy = () -> QueryOrderStatus1Code.mmObject();
 		}
@@ -132,7 +134,7 @@ public class QueryOrderStatus1Code extends QueryOrderStatusCode {
 	 */
 	public static final MMCode mmQueryFullyExecutedOrder = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "QueryFullyExecutedOrder";
 			owner_lazy = () -> QueryOrderStatus1Code.mmObject();
 		}
@@ -155,7 +157,7 @@ public class QueryOrderStatus1Code extends QueryOrderStatusCode {
 	 */
 	public static final MMCode mmQueryPartiallyExecutedOrder = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "QueryPartiallyExecutedOrder";
 			owner_lazy = () -> QueryOrderStatus1Code.mmObject();
 		}
@@ -178,7 +180,7 @@ public class QueryOrderStatus1Code extends QueryOrderStatusCode {
 	 */
 	public static final MMCode mmQueryAllOrders = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "QueryAllOrders";
 			owner_lazy = () -> QueryOrderStatus1Code.mmObject();
 		}
@@ -187,13 +189,12 @@ public class QueryOrderStatus1Code extends QueryOrderStatusCode {
 	static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "QueryOrderStatus1Code";
 				definition = "Specifies the inquiry status of order.";
-				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.QueryOrderStatus1Code.mmQueryUnconfirmedOrder, com.tools20022.repository.codeset.QueryOrderStatus1Code.mmQueryOrdersForTheParty,
-						com.tools20022.repository.codeset.QueryOrderStatus1Code.mmQueryFullyExecutedOrder, com.tools20022.repository.codeset.QueryOrderStatus1Code.mmQueryPartiallyExecutedOrder,
-						com.tools20022.repository.codeset.QueryOrderStatus1Code.mmQueryAllOrders);
+				code_lazy = () -> Arrays.asList(QueryOrderStatus1Code.mmQueryUnconfirmedOrder, QueryOrderStatus1Code.mmQueryOrdersForTheParty, QueryOrderStatus1Code.mmQueryFullyExecutedOrder,
+						QueryOrderStatus1Code.mmQueryPartiallyExecutedOrder, QueryOrderStatus1Code.mmQueryAllOrders);
 				trace_lazy = () -> QueryOrderStatusCode.mmObject();
 			}
 		});

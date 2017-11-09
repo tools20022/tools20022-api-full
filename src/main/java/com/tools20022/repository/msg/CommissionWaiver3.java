@@ -19,11 +19,13 @@ package com.tools20022.repository.msg;
 
 import com.tools20022.metamodel.MMMessageAttribute;
 import com.tools20022.metamodel.MMMessageComponent;
+import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.metamodel.MMXor;
 import com.tools20022.repository.codeset.WaivingInstruction1Code;
 import com.tools20022.repository.datatype.Extended350Code;
 import com.tools20022.repository.datatype.PercentageRate;
 import com.tools20022.repository.entity.CommissionWaiver;
+import com.tools20022.repository.GeneratedRepository;
 import java.text.DateFormat;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
@@ -124,11 +126,11 @@ public class CommissionWaiver3 {
 	 */
 	public static final MMMessageAttribute mmInstructionBasis = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.CommissionWaiver.mmInstructionBasis;
+			businessElementTrace_lazy = () -> CommissionWaiver.mmInstructionBasis;
 			componentContext_lazy = () -> CommissionWaiver3.mmObject();
 			isDerived = false;
 			xmlTag = "InstrBsis";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "InstructionBasis";
 			definition = "Form of the rebate, eg, cash.";
 			maxOccurs = 1;
@@ -172,11 +174,11 @@ public class CommissionWaiver3 {
 	 */
 	public static final MMMessageAttribute mmExtendedInstructionBasis = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.CommissionWaiver.mmInstructionBasis;
+			businessElementTrace_lazy = () -> CommissionWaiver.mmInstructionBasis;
 			componentContext_lazy = () -> CommissionWaiver3.mmObject();
 			isDerived = false;
 			xmlTag = "XtndedInstrBsis";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ExtendedInstructionBasis";
 			definition = "Form of the rebate, eg, cash.";
 			maxOccurs = 1;
@@ -231,14 +233,14 @@ public class CommissionWaiver3 {
 	 */
 	public static final MMMessageAttribute mmWaivedRate = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.CommissionWaiver.mmWaivedRate;
+			businessElementTrace_lazy = () -> CommissionWaiver.mmWaivedRate;
 			componentContext_lazy = () -> CommissionWaiver3.mmObject();
 			isDerived = false;
 			xmlTag = "WvdRate";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "WaivedRate";
 			definition = "Proportion of the commission that is waived, ie, if  the commission is 5% and half is waived, 2.5% should be stated in this field.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.CommissionWaiver4.mmWaivedRate);
+			nextVersions_lazy = () -> Arrays.asList(CommissionWaiver4.mmWaivedRate);
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> PercentageRate.mmObject();
@@ -250,6 +252,10 @@ public class CommissionWaiver3 {
 	 * <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
+	 * <li>{@linkplain com.tools20022.metamodel.MMXor#getMessageComponent
+	 * messageComponent} =
+	 * {@linkplain com.tools20022.repository.msg.CommissionWaiver3
+	 * CommissionWaiver3}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMXor#getImpactedElements
 	 * impactedElements} =
 	 * <ul>
@@ -261,10 +267,6 @@ public class CommissionWaiver3 {
 	 * CommissionWaiver3.mmExtendedInstructionBasis}</li>
 	 * </ul>
 	 * </li>
-	 * <li>{@linkplain com.tools20022.metamodel.MMXor#getMessageComponent
-	 * messageComponent} =
-	 * {@linkplain com.tools20022.repository.msg.CommissionWaiver3
-	 * CommissionWaiver3}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
@@ -280,22 +282,21 @@ public class CommissionWaiver3 {
 	 */
 	public static final MMXor mmInstructionBasisOrExtendedInstructionBasisRule = new MMXor() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "InstructionBasisOrExtendedInstructionBasisRule";
 			definition = "Either InstructionBasis or ExtendedInstructionBasis must be present, but not both.";
 			messageComponent_lazy = () -> CommissionWaiver3.mmObject();
-			impactedElements_lazy = () -> Arrays.asList(com.tools20022.repository.msg.CommissionWaiver3.mmInstructionBasis, com.tools20022.repository.msg.CommissionWaiver3.mmExtendedInstructionBasis);
+			impactedElements_lazy = () -> Arrays.asList(CommissionWaiver3.mmInstructionBasis, CommissionWaiver3.mmExtendedInstructionBasis);
 		}
 	};
 
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.CommissionWaiver3.mmInstructionBasis, com.tools20022.repository.msg.CommissionWaiver3.mmExtendedInstructionBasis,
-						com.tools20022.repository.msg.CommissionWaiver3.mmWaivedRate);
+				messageElement_lazy = () -> Arrays.asList(CommissionWaiver3.mmInstructionBasis, CommissionWaiver3.mmExtendedInstructionBasis, CommissionWaiver3.mmWaivedRate);
 				trace_lazy = () -> CommissionWaiver.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.OBSOLETE;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.OBSOLETE;
 				removalDate = ((Supplier<Date>) (() -> {
 					try {
 						return DateFormat.getDateInstance(java.text.DateFormat.LONG).parse("September 9, 2016");
@@ -306,7 +307,7 @@ public class CommissionWaiver3 {
 				name = "CommissionWaiver3";
 				definition = "Non-enforcement of the right to all or part of a commission by the party entitled to the commission.";
 				nextVersions_lazy = () -> Arrays.asList(CommissionWaiver4.mmObject());
-				xors_lazy = () -> Arrays.asList(com.tools20022.repository.msg.CommissionWaiver3.mmInstructionBasisOrExtendedInstructionBasisRule);
+				xors_lazy = () -> Arrays.asList(CommissionWaiver3.mmInstructionBasisOrExtendedInstructionBasisRule);
 			}
 		});
 		return mmObject_lazy.get();

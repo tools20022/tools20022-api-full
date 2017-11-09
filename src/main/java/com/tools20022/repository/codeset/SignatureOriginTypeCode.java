@@ -19,6 +19,8 @@ package com.tools20022.repository.codeset;
 
 import com.tools20022.metamodel.MMCode;
 import com.tools20022.metamodel.MMCodeSet;
+import com.tools20022.metamodel.MMRegistrationStatus;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -27,6 +29,13 @@ import java.util.concurrent.atomic.AtomicReference;
  * <p>
  * <strong>Constant fields:</strong>
  * <ul>
+ * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getDerivation derivation}
+ * =
+ * <ul>
+ * <li>{@linkplain com.tools20022.repository.codeset.SignatureOriginType1Code
+ * SignatureOriginType1Code}</li>
+ * </ul>
+ * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getCode code} =
  * <ul>
  * <li>
@@ -41,13 +50,6 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>
  * {@linkplain com.tools20022.repository.codeset.SignatureOriginTypeCode#mmBank
  * SignatureOriginTypeCode.mmBank}</li>
- * </ul>
- * </li>
- * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getDerivation derivation}
- * =
- * <ul>
- * <li>{@linkplain com.tools20022.repository.codeset.SignatureOriginType1Code
- * SignatureOriginType1Code}</li>
  * </ul>
  * </li>
  * <li>
@@ -92,7 +94,7 @@ public class SignatureOriginTypeCode {
 	 */
 	public static final MMCode mmContract = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Contract";
 			definition = "Signature is provided for the contract validation of the file.";
 			owner_lazy = () -> SignatureOriginTypeCode.mmObject();
@@ -123,7 +125,7 @@ public class SignatureOriginTypeCode {
 	 */
 	public static final MMCode mmTechnical = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Technical";
 			definition = "Signature is provided for the technical validation of the file.";
 			owner_lazy = () -> SignatureOriginTypeCode.mmObject();
@@ -154,7 +156,7 @@ public class SignatureOriginTypeCode {
 	 */
 	public static final MMCode mmValue = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Value";
 			definition = "Signature is provided for the value validation of the file.";
 			owner_lazy = () -> SignatureOriginTypeCode.mmObject();
@@ -185,7 +187,7 @@ public class SignatureOriginTypeCode {
 	 */
 	public static final MMCode mmBank = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Bank";
 			definition = "Signature is provided for the bank validation of the file.";
 			owner_lazy = () -> SignatureOriginTypeCode.mmObject();
@@ -196,12 +198,11 @@ public class SignatureOriginTypeCode {
 	static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "SignatureOriginTypeCode";
 				definition = "Specifies the origin of the signature.";
-				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.SignatureOriginTypeCode.mmContract, com.tools20022.repository.codeset.SignatureOriginTypeCode.mmTechnical,
-						com.tools20022.repository.codeset.SignatureOriginTypeCode.mmValue, com.tools20022.repository.codeset.SignatureOriginTypeCode.mmBank);
+				code_lazy = () -> Arrays.asList(SignatureOriginTypeCode.mmContract, SignatureOriginTypeCode.mmTechnical, SignatureOriginTypeCode.mmValue, SignatureOriginTypeCode.mmBank);
 				derivation_lazy = () -> Arrays.asList(SignatureOriginType1Code.mmObject());
 			}
 		});

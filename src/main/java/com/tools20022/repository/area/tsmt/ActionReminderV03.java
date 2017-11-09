@@ -20,6 +20,7 @@ package com.tools20022.repository.area.tsmt;
 import com.tools20022.metamodel.MMMessageBuildingBlock;
 import com.tools20022.metamodel.MMMessageDefinition;
 import com.tools20022.metamodel.MMMessageDefinitionIdentifier;
+import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.area.TradeServicesManagementLatestVersion;
 import com.tools20022.repository.msg.*;
 import com.tools20022.repository.msgset.TradeServicesManagementISOLatestversion;
@@ -57,6 +58,9 @@ import java.util.List;
  * <p>
  * <strong>Constant fields:</strong>
  * <ul>
+ * <li>
+ * {@linkplain com.tools20022.metamodel.MMMessageDefinition#getMessageDefinitionIdentifier
+ * messageDefinitionIdentifier} = {@code tsmt.024.001.03}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMMessageDefinition#getBusinessArea
  * businessArea} =
  * {@linkplain com.tools20022.repository.area.TradeServicesManagementLatestVersion
@@ -104,9 +108,6 @@ import java.util.List;
  * </ul>
  * </li>
  * <li>
- * {@linkplain com.tools20022.metamodel.MMMessageDefinition#getMessageDefinitionIdentifier
- * messageDefinitionIdentifier} = {@code tsmt.024.001.03}</li>
- * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
  * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
@@ -148,7 +149,7 @@ public class ActionReminderV03 {
 	public static final MMMessageBuildingBlock mmReminderIdentification = new MMMessageBuildingBlock() {
 		{
 			xmlTag = "RmndrId";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ReminderIdentification";
 			definition = "Identifies the reminder message.";
 			maxOccurs = 1;
@@ -187,7 +188,7 @@ public class ActionReminderV03 {
 	public static final MMMessageBuildingBlock mmTransactionIdentification = new MMMessageBuildingBlock() {
 		{
 			xmlTag = "TxId";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "TransactionIdentification";
 			definition = "Unique identification assigned by the matching application to the transaction.\nThis identification is to be used in any communication between the parties.";
 			maxOccurs = 1;
@@ -225,7 +226,7 @@ public class ActionReminderV03 {
 	public static final MMMessageBuildingBlock mmEstablishedBaselineIdentification = new MMMessageBuildingBlock() {
 		{
 			xmlTag = "EstblishdBaselnId";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "EstablishedBaselineIdentification";
 			definition = "Unique identification assigned by the matching application to the baseline when it is established. ";
 			maxOccurs = 1;
@@ -261,7 +262,7 @@ public class ActionReminderV03 {
 	public static final MMMessageBuildingBlock mmTransactionStatus = new MMMessageBuildingBlock() {
 		{
 			xmlTag = "TxSts";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "TransactionStatus";
 			definition = "Identifies the status of the transaction by means of a code.";
 			maxOccurs = 1;
@@ -299,7 +300,7 @@ public class ActionReminderV03 {
 	public static final MMMessageBuildingBlock mmUserTransactionReference = new MMMessageBuildingBlock() {
 		{
 			xmlTag = "UsrTxRef";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "UserTransactionReference";
 			definition = "Reference to the transaction for each financial institution which is a party to the transaction.";
 			maxOccurs = 2;
@@ -334,7 +335,7 @@ public class ActionReminderV03 {
 	public static final MMMessageBuildingBlock mmMessageRequiringAction = new MMMessageBuildingBlock() {
 		{
 			xmlTag = "MsgReqrngActn";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "MessageRequiringAction";
 			definition = "Identifies the message for which an action is required.";
 			maxOccurs = 1;
@@ -369,7 +370,7 @@ public class ActionReminderV03 {
 	public static final MMMessageBuildingBlock mmPendingRequestForAction = new MMMessageBuildingBlock() {
 		{
 			xmlTag = "PdgReqForActn";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PendingRequestForAction";
 			definition = "Next processing step required.";
 			maxOccurs = 1;
@@ -381,17 +382,15 @@ public class ActionReminderV03 {
 	final static public MMMessageDefinition mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageDefinition() {
 			{
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "ActionReminderV03";
 				definition = "Scope\r\nThe ActionReminder message is sent by the matching application to a party involved in a transaction that it is expecting to take an action.\r\nThis message is used to remind a party of an action that it is expected to take.\r\nUsage\r\nThe ActionReminder message can be sent by the matching application to remind a party that it is waiting for\r\n- the submission of a transaction initiation message (BaselineReSubmission message),\r\nor\r\n- the acceptance or rejection of mis-matched data sets (MisMatchAcceptance or MisMatchRejection message),\r\nor\r\n- the acceptance or rejection of an amendment request (AmendmentAcceptance or AmendmentRejection message),\r\nor\r\n- the acceptance or rejection of a status change request (StatusChangeRequestAcceptance or StatusChangeRequestRejection message),\r\nor\r\n- the acceptance or rejection of a status extension request (StatusExtensionAcceptance or StatusExtensionRejection message).\r\n- or\r\n- the acceptance or rejection of a request to accept role and baseline (RoleAndBaselineAcceptance or RoleAndBaselineRejection message).";
 				messageSet_lazy = () -> Arrays.asList(TradeServicesManagementISOPreviousversion.mmObject(), TradeServicesManagementISOLatestversion.mmObject());
 				rootElement = "Document";
 				xmlTag = "ActnRmndr";
 				businessArea_lazy = () -> TradeServicesManagementLatestVersion.mmObject();
-				messageBuildingBlock_lazy = () -> Arrays.asList(com.tools20022.repository.area.tsmt.ActionReminderV03.mmReminderIdentification, com.tools20022.repository.area.tsmt.ActionReminderV03.mmTransactionIdentification,
-						com.tools20022.repository.area.tsmt.ActionReminderV03.mmEstablishedBaselineIdentification, com.tools20022.repository.area.tsmt.ActionReminderV03.mmTransactionStatus,
-						com.tools20022.repository.area.tsmt.ActionReminderV03.mmUserTransactionReference, com.tools20022.repository.area.tsmt.ActionReminderV03.mmMessageRequiringAction,
-						com.tools20022.repository.area.tsmt.ActionReminderV03.mmPendingRequestForAction);
+				messageBuildingBlock_lazy = () -> Arrays.asList(ActionReminderV03.mmReminderIdentification, ActionReminderV03.mmTransactionIdentification, ActionReminderV03.mmEstablishedBaselineIdentification,
+						ActionReminderV03.mmTransactionStatus, ActionReminderV03.mmUserTransactionReference, ActionReminderV03.mmMessageRequiringAction, ActionReminderV03.mmPendingRequestForAction);
 				messageDefinitionIdentifier_lazy = () -> new MMMessageDefinitionIdentifier() {
 					{
 						businessArea = "tsmt";

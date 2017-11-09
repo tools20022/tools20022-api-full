@@ -19,7 +19,9 @@ package com.tools20022.repository.codeset;
 
 import com.tools20022.metamodel.MMCode;
 import com.tools20022.metamodel.MMCodeSet;
+import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.codeset.CorporateActionEventProcessingStatusCode;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -87,7 +89,7 @@ public class CorporateActionEventProcessingStatus1Code extends CorporateActionEv
 	 */
 	public static final MMCode mmComplete = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Complete";
 			owner_lazy = () -> CorporateActionEventProcessingStatus1Code.mmObject();
 		}
@@ -110,7 +112,7 @@ public class CorporateActionEventProcessingStatus1Code extends CorporateActionEv
 	 */
 	public static final MMCode mmPending = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Pending";
 			owner_lazy = () -> CorporateActionEventProcessingStatus1Code.mmObject();
 		}
@@ -133,7 +135,7 @@ public class CorporateActionEventProcessingStatus1Code extends CorporateActionEv
 	 */
 	public static final MMCode mmReconciled = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Reconciled";
 			owner_lazy = () -> CorporateActionEventProcessingStatus1Code.mmObject();
 		}
@@ -142,13 +144,12 @@ public class CorporateActionEventProcessingStatus1Code extends CorporateActionEv
 	static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
 				example = Arrays.asList("COMP");
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "CorporateActionEventProcessingStatus1Code";
 				definition = "Specifies the stage in the corporate action event life cycle.";
-				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.CorporateActionEventProcessingStatus1Code.mmComplete, com.tools20022.repository.codeset.CorporateActionEventProcessingStatus1Code.mmPending,
-						com.tools20022.repository.codeset.CorporateActionEventProcessingStatus1Code.mmReconciled);
+				code_lazy = () -> Arrays.asList(CorporateActionEventProcessingStatus1Code.mmComplete, CorporateActionEventProcessingStatus1Code.mmPending, CorporateActionEventProcessingStatus1Code.mmReconciled);
 				trace_lazy = () -> CorporateActionEventProcessingStatusCode.mmObject();
 			}
 		});

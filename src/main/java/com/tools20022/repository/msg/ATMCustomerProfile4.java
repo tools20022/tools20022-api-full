@@ -19,8 +19,10 @@ package com.tools20022.repository.msg;
 
 import com.tools20022.metamodel.MMMessageAttribute;
 import com.tools20022.metamodel.MMMessageComponent;
+import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.codeset.ATMCustomerProfile1Code;
 import com.tools20022.repository.datatype.Max35Text;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -99,7 +101,7 @@ public class ATMCustomerProfile4 {
 			componentContext_lazy = () -> ATMCustomerProfile4.mmObject();
 			isDerived = false;
 			xmlTag = "RtrvlMd";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "RetrievalMode";
 			definition = "Describes the main way customer information was collected to build up the customer menu and to provide the service.";
 			maxOccurs = 1;
@@ -140,7 +142,7 @@ public class ATMCustomerProfile4 {
 			componentContext_lazy = () -> ATMCustomerProfile4.mmObject();
 			isDerived = false;
 			xmlTag = "PrflRef";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ProfileReference";
 			definition = "Reference of the customer profile.";
 			maxOccurs = 1;
@@ -181,7 +183,7 @@ public class ATMCustomerProfile4 {
 			componentContext_lazy = () -> ATMCustomerProfile4.mmObject();
 			isDerived = false;
 			xmlTag = "CstmrId";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CustomerIdentification";
 			definition = "Identification of the customer for the bank.";
 			maxOccurs = 1;
@@ -193,10 +195,9 @@ public class ATMCustomerProfile4 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.ATMCustomerProfile4.mmRetrievalMode, com.tools20022.repository.msg.ATMCustomerProfile4.mmProfileReference,
-						com.tools20022.repository.msg.ATMCustomerProfile4.mmCustomerIdentification);
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				messageElement_lazy = () -> Arrays.asList(ATMCustomerProfile4.mmRetrievalMode, ATMCustomerProfile4.mmProfileReference, ATMCustomerProfile4.mmCustomerIdentification);
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "ATMCustomerProfile4";
 				definition = "Profile of the customer selected by an ATM.";
 			}

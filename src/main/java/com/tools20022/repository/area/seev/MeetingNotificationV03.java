@@ -20,6 +20,7 @@ package com.tools20022.repository.area.seev;
 import com.tools20022.metamodel.MMMessageBuildingBlock;
 import com.tools20022.metamodel.MMMessageDefinition;
 import com.tools20022.metamodel.MMMessageDefinitionIdentifier;
+import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.area.SecuritiesEventsArchive;
 import com.tools20022.repository.choice.PartyIdentification9Choice;
 import com.tools20022.repository.msg.*;
@@ -48,6 +49,9 @@ import java.util.List;
  * <p>
  * <strong>Constant fields:</strong>
  * <ul>
+ * <li>
+ * {@linkplain com.tools20022.metamodel.MMMessageDefinition#getMessageDefinitionIdentifier
+ * messageDefinitionIdentifier} = {@code seev.001.001.03}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMMessageDefinition#getBusinessArea
  * businessArea} =
  * {@linkplain com.tools20022.repository.area.SecuritiesEventsArchive
@@ -108,9 +112,6 @@ import java.util.List;
  * </ul>
  * </li>
  * <li>
- * {@linkplain com.tools20022.metamodel.MMMessageDefinition#getMessageDefinitionIdentifier
- * messageDefinitionIdentifier} = {@code seev.001.001.03}</li>
- * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
  * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
@@ -163,7 +164,7 @@ public class MeetingNotificationV03 {
 	public static final MMMessageBuildingBlock mmIdentification = new MMMessageBuildingBlock() {
 		{
 			xmlTag = "Id";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Identification";
 			definition = "Identifies the meeting notification message.";
 			maxOccurs = 1;
@@ -198,7 +199,7 @@ public class MeetingNotificationV03 {
 	public static final MMMessageBuildingBlock mmAmendment = new MMMessageBuildingBlock() {
 		{
 			xmlTag = "Amdmnt";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Amendment";
 			definition = "Information specific to an amendment.";
 			maxOccurs = 1;
@@ -234,7 +235,7 @@ public class MeetingNotificationV03 {
 	public static final MMMessageBuildingBlock mmNotificationStatus = new MMMessageBuildingBlock() {
 		{
 			xmlTag = "NtfctnSts";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "NotificationStatus";
 			definition = "Defines the global status of the event contained in the notification.";
 			maxOccurs = 1;
@@ -273,7 +274,7 @@ public class MeetingNotificationV03 {
 	public static final MMMessageBuildingBlock mmMeeting = new MMMessageBuildingBlock() {
 		{
 			xmlTag = "Mtg";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Meeting";
 			definition = "Specifies information about the meeting. This component contains meeting identifications, various deadlines, contact persons, electronic and postal locations for accessing information and proxy assignment parameters.";
 			maxOccurs = 1;
@@ -307,7 +308,7 @@ public class MeetingNotificationV03 {
 	public static final MMMessageBuildingBlock mmMeetingDetails = new MMMessageBuildingBlock() {
 		{
 			xmlTag = "MtgDtls";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "MeetingDetails";
 			definition = "Dates and details of the shareholders meeting.";
 			maxOccurs = 5;
@@ -342,7 +343,7 @@ public class MeetingNotificationV03 {
 	public static final MMMessageBuildingBlock mmNotifyingParty = new MMMessageBuildingBlock() {
 		{
 			xmlTag = "NtifngPty";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "NotifyingParty";
 			definition = "Party notifying the meeting.";
 			maxOccurs = 1;
@@ -380,7 +381,7 @@ public class MeetingNotificationV03 {
 	public static final MMMessageBuildingBlock mmIssuer = new MMMessageBuildingBlock() {
 		{
 			xmlTag = "Issr";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Issuer";
 			definition = "Specifies the institution that is the issuer of the security to which the meeting applies.";
 			maxOccurs = 1;
@@ -414,7 +415,7 @@ public class MeetingNotificationV03 {
 	public static final MMMessageBuildingBlock mmIssuerAgent = new MMMessageBuildingBlock() {
 		{
 			xmlTag = "IssrAgt";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "IssuerAgent";
 			definition = "Agents of the issuer.";
 			maxOccurs = 10;
@@ -452,7 +453,7 @@ public class MeetingNotificationV03 {
 	public static final MMMessageBuildingBlock mmSecurity = new MMMessageBuildingBlock() {
 		{
 			xmlTag = "Scty";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Security";
 			definition = "Net position of a segregated holding, in a single security, within the overall position held in a securities account.";
 			maxOccurs = 200;
@@ -487,7 +488,7 @@ public class MeetingNotificationV03 {
 	public static final MMMessageBuildingBlock mmResolution = new MMMessageBuildingBlock() {
 		{
 			xmlTag = "Rsltn";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Resolution";
 			definition = "Detailed information of a resolution proposed to the vote.";
 			maxOccurs = 1000;
@@ -525,7 +526,7 @@ public class MeetingNotificationV03 {
 	public static final MMMessageBuildingBlock mmVote = new MMMessageBuildingBlock() {
 		{
 			xmlTag = "Vote";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Vote";
 			definition = "Specifies the conditions to be allowed to vote, the different voting methods and options, the voting deadlines and the parameters of the incentive premium.";
 			maxOccurs = 1;
@@ -563,7 +564,7 @@ public class MeetingNotificationV03 {
 	public static final MMMessageBuildingBlock mmEntitlementSpecification = new MMMessageBuildingBlock() {
 		{
 			xmlTag = "EntitlmntSpcfctn";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "EntitlementSpecification";
 			definition = "Specifies the entitlement ratio and the different deadlines for calculating the entitlement.";
 			maxOccurs = 1;
@@ -599,7 +600,7 @@ public class MeetingNotificationV03 {
 	public static final MMMessageBuildingBlock mmPowerOfAttorneyRequirements = new MMMessageBuildingBlock() {
 		{
 			xmlTag = "PwrOfAttnyRqrmnts";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PowerOfAttorneyRequirements";
 			definition = "Specifies requirements relative to the use of Power of Attorney.";
 			maxOccurs = 1;
@@ -611,7 +612,7 @@ public class MeetingNotificationV03 {
 	final static public MMMessageDefinition mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageDefinition() {
 			{
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "MeetingNotificationV03";
 				definition = "Scope\r\nA notifying party, eg, an issuer, its agent or an intermediary, sends the MeetingNotification message to a party holding the right to vote, to announce a shareholders meeting.\r\nUsage\r\nThe MeetingNotification message is used to announce a shareholders meeting, for example, it provides information on the participation details and requirements for the meeting, the vote parameters and the resolutions. The MeetingNotification message may also be used to announce an update.\r\nTo notify an update, the Amendment building block must be filled in. Any building block that is modified must be included in the amendment message. The information previously notified and not repeated in the amendment message remains valid.\r\nTo update the resolutions of the agenda, the complete list of resolutions must be repeated in the amendment message. The resolutions that are deleted should be assigned the status Withdrawn.";
 				nextVersions_lazy = () -> Arrays.asList(MeetingNotificationV04.mmObject());
@@ -620,12 +621,9 @@ public class MeetingNotificationV03 {
 				rootElement = "Document";
 				xmlTag = "MtgNtfctn";
 				businessArea_lazy = () -> SecuritiesEventsArchive.mmObject();
-				messageBuildingBlock_lazy = () -> Arrays.asList(com.tools20022.repository.area.seev.MeetingNotificationV03.mmIdentification, com.tools20022.repository.area.seev.MeetingNotificationV03.mmAmendment,
-						com.tools20022.repository.area.seev.MeetingNotificationV03.mmNotificationStatus, com.tools20022.repository.area.seev.MeetingNotificationV03.mmMeeting,
-						com.tools20022.repository.area.seev.MeetingNotificationV03.mmMeetingDetails, com.tools20022.repository.area.seev.MeetingNotificationV03.mmNotifyingParty,
-						com.tools20022.repository.area.seev.MeetingNotificationV03.mmIssuer, com.tools20022.repository.area.seev.MeetingNotificationV03.mmIssuerAgent, com.tools20022.repository.area.seev.MeetingNotificationV03.mmSecurity,
-						com.tools20022.repository.area.seev.MeetingNotificationV03.mmResolution, com.tools20022.repository.area.seev.MeetingNotificationV03.mmVote,
-						com.tools20022.repository.area.seev.MeetingNotificationV03.mmEntitlementSpecification, com.tools20022.repository.area.seev.MeetingNotificationV03.mmPowerOfAttorneyRequirements);
+				messageBuildingBlock_lazy = () -> Arrays.asList(MeetingNotificationV03.mmIdentification, MeetingNotificationV03.mmAmendment, MeetingNotificationV03.mmNotificationStatus, MeetingNotificationV03.mmMeeting,
+						MeetingNotificationV03.mmMeetingDetails, MeetingNotificationV03.mmNotifyingParty, MeetingNotificationV03.mmIssuer, MeetingNotificationV03.mmIssuerAgent, MeetingNotificationV03.mmSecurity,
+						MeetingNotificationV03.mmResolution, MeetingNotificationV03.mmVote, MeetingNotificationV03.mmEntitlementSpecification, MeetingNotificationV03.mmPowerOfAttorneyRequirements);
 				messageDefinitionIdentifier_lazy = () -> new MMMessageDefinitionIdentifier() {
 					{
 						businessArea = "seev";

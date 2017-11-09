@@ -19,8 +19,10 @@ package com.tools20022.repository.msg;
 
 import com.tools20022.metamodel.MMMessageAttribute;
 import com.tools20022.metamodel.MMMessageComponent;
+import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.datatype.ImpliedCurrencyAndAmount;
 import com.tools20022.repository.datatype.Number;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -97,7 +99,7 @@ public class ATMMediaMix1 {
 			componentContext_lazy = () -> ATMMediaMix1.mmObject();
 			isDerived = false;
 			xmlTag = "CshUnitNb";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CashUnitNumber";
 			definition = "Logical unit number of the cash dispenser.";
 			maxOccurs = 1;
@@ -144,10 +146,10 @@ public class ATMMediaMix1 {
 			componentContext_lazy = () -> ATMMediaMix1.mmObject();
 			isDerived = false;
 			xmlTag = "Nb";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Number";
 			definition = "Number of notes or coins.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.ATMMediaMix2.mmNumber);
+			nextVersions_lazy = () -> Arrays.asList(ATMMediaMix2.mmNumber);
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> Number.mmObject();
@@ -193,10 +195,10 @@ public class ATMMediaMix1 {
 			componentContext_lazy = () -> ATMMediaMix1.mmObject();
 			isDerived = false;
 			xmlTag = "UnitVal";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "UnitValue";
 			definition = "Unit value.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.ATMMediaMix2.mmUnitValue);
+			nextVersions_lazy = () -> Arrays.asList(ATMMediaMix2.mmUnitValue);
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> ImpliedCurrencyAndAmount.mmObject();
@@ -206,9 +208,9 @@ public class ATMMediaMix1 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.ATMMediaMix1.mmCashUnitNumber, com.tools20022.repository.msg.ATMMediaMix1.mmNumber, com.tools20022.repository.msg.ATMMediaMix1.mmUnitValue);
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				messageElement_lazy = () -> Arrays.asList(ATMMediaMix1.mmCashUnitNumber, ATMMediaMix1.mmNumber, ATMMediaMix1.mmUnitValue);
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "ATMMediaMix1";
 				definition = "Media mix selected.";
 				nextVersions_lazy = () -> Arrays.asList(ATMMediaMix2.mmObject());

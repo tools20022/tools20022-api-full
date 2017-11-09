@@ -20,10 +20,13 @@ package com.tools20022.repository.msg;
 import com.tools20022.metamodel.MMMessageAssociationEnd;
 import com.tools20022.metamodel.MMMessageAttribute;
 import com.tools20022.metamodel.MMMessageComponent;
+import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.choice.CashAvailabilityDate1Choice;
 import com.tools20022.repository.codeset.CreditDebitCode;
 import com.tools20022.repository.datatype.ActiveOrHistoricCurrencyAndAmount;
+import com.tools20022.repository.entity.Balance;
 import com.tools20022.repository.entity.CashAvailability;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -114,14 +117,14 @@ public class CashAvailability1 {
 	 */
 	public static final MMMessageAssociationEnd mmDate = new MMMessageAssociationEnd() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.CashAvailability.mmDate;
+			businessElementTrace_lazy = () -> CashAvailability.mmDate;
 			componentContext_lazy = () -> CashAvailability1.mmObject();
 			isDerived = false;
 			xmlTag = "Dt";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Date";
 			definition = "Indicates when the amount of money will become available.";
-			previousVersion_lazy = () -> com.tools20022.repository.msg.CashBalanceAvailability2.mmDate;
+			previousVersion_lazy = () -> CashBalanceAvailability2.mmDate;
 			maxOccurs = 1;
 			minOccurs = 1;
 			isComposite = true;
@@ -169,14 +172,14 @@ public class CashAvailability1 {
 	 */
 	public static final MMMessageAttribute mmAmount = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.CashAvailability.mmAmount;
+			businessElementTrace_lazy = () -> CashAvailability.mmAmount;
 			componentContext_lazy = () -> CashAvailability1.mmObject();
 			isDerived = false;
 			xmlTag = "Amt";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Amount";
 			definition = "Identifies the available amount.";
-			previousVersion_lazy = () -> com.tools20022.repository.msg.CashBalanceAvailability2.mmAmount;
+			previousVersion_lazy = () -> CashBalanceAvailability2.mmAmount;
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> ActiveOrHistoricCurrencyAndAmount.mmObject();
@@ -226,14 +229,14 @@ public class CashAvailability1 {
 	 */
 	public static final MMMessageAttribute mmCreditDebitIndicator = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Balance.mmCreditDebitIndicator;
+			businessElementTrace_lazy = () -> Balance.mmCreditDebitIndicator;
 			componentContext_lazy = () -> CashAvailability1.mmObject();
 			isDerived = false;
 			xmlTag = "CdtDbtInd";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CreditDebitIndicator";
 			definition = "Indicates whether the availability balance is a credit or a debit balance. \nUsage: A zero balance is considered to be a credit balance.";
-			previousVersion_lazy = () -> com.tools20022.repository.msg.CashBalanceAvailability2.mmCreditDebitIndicator;
+			previousVersion_lazy = () -> CashBalanceAvailability2.mmCreditDebitIndicator;
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> CreditDebitCode.mmObject();
@@ -243,11 +246,10 @@ public class CashAvailability1 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.CashAvailability1.mmDate, com.tools20022.repository.msg.CashAvailability1.mmAmount,
-						com.tools20022.repository.msg.CashAvailability1.mmCreditDebitIndicator);
+				messageElement_lazy = () -> Arrays.asList(CashAvailability1.mmDate, CashAvailability1.mmAmount, CashAvailability1.mmCreditDebitIndicator);
 				trace_lazy = () -> CashAvailability.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "CashAvailability1";
 				definition = "Indicates when the amount of money will become available, that is can be accessed and start generating interest.";
 				previousVersion_lazy = () -> CashBalanceAvailability2.mmObject();

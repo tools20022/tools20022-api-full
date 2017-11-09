@@ -19,6 +19,8 @@ package com.tools20022.repository.codeset;
 
 import com.tools20022.metamodel.MMCode;
 import com.tools20022.metamodel.MMCodeSet;
+import com.tools20022.metamodel.MMRegistrationStatus;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -82,7 +84,7 @@ public class SecuritiesAccountType1Code {
 	 */
 	public static final MMCode mmSafekeeping = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.OBSOLETE;
+			registrationStatus = MMRegistrationStatus.OBSOLETE;
 			name = "Safekeeping";
 			definition = "Account is used for safekeeping, ie, the receipt/delivery of securities.";
 			owner_lazy = () -> SecuritiesAccountType1Code.mmObject();
@@ -93,12 +95,12 @@ public class SecuritiesAccountType1Code {
 	static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
 				example = Arrays.asList("SAFE");
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.OBSOLETE;
+				registrationStatus = MMRegistrationStatus.OBSOLETE;
 				name = "SecuritiesAccountType1Code";
 				definition = "Specifies the type of securities account.";
-				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.SecuritiesAccountType1Code.mmSafekeeping);
+				code_lazy = () -> Arrays.asList(SecuritiesAccountType1Code.mmSafekeeping);
 			}
 		});
 		return mmObject_lazy.get();

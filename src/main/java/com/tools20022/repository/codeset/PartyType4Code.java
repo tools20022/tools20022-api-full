@@ -19,7 +19,9 @@ package com.tools20022.repository.codeset;
 
 import com.tools20022.metamodel.MMCode;
 import com.tools20022.metamodel.MMCodeSet;
+import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.codeset.PartyTypeCode;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -94,7 +96,7 @@ public class PartyType4Code extends PartyTypeCode {
 	 */
 	public static final MMCode mmMerchant = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Merchant";
 			owner_lazy = () -> PartyType4Code.mmObject();
 		}
@@ -117,7 +119,7 @@ public class PartyType4Code extends PartyTypeCode {
 	 */
 	public static final MMCode mmAcceptor = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Acceptor";
 			owner_lazy = () -> PartyType4Code.mmObject();
 		}
@@ -140,7 +142,7 @@ public class PartyType4Code extends PartyTypeCode {
 	 */
 	public static final MMCode mmIntermediaryAgent = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "IntermediaryAgent";
 			owner_lazy = () -> PartyType4Code.mmObject();
 		}
@@ -163,7 +165,7 @@ public class PartyType4Code extends PartyTypeCode {
 	 */
 	public static final MMCode mmAcquirer = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Acquirer";
 			owner_lazy = () -> PartyType4Code.mmObject();
 		}
@@ -186,7 +188,7 @@ public class PartyType4Code extends PartyTypeCode {
 	 */
 	public static final MMCode mmCardIssuer = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CardIssuer";
 			owner_lazy = () -> PartyType4Code.mmObject();
 		}
@@ -209,7 +211,7 @@ public class PartyType4Code extends PartyTypeCode {
 	 */
 	public static final MMCode mmTaxAuthority = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "TaxAuthority";
 			owner_lazy = () -> PartyType4Code.mmObject();
 		}
@@ -218,13 +220,12 @@ public class PartyType4Code extends PartyTypeCode {
 	static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
 				example = Arrays.asList("MERC");
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "PartyType4Code";
 				definition = "Entity assigning an identification  (for example merchant, acceptor, acquirer, tax authority, etc.).";
-				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.PartyType4Code.mmMerchant, com.tools20022.repository.codeset.PartyType4Code.mmAcceptor, com.tools20022.repository.codeset.PartyType4Code.mmIntermediaryAgent,
-						com.tools20022.repository.codeset.PartyType4Code.mmAcquirer, com.tools20022.repository.codeset.PartyType4Code.mmCardIssuer, com.tools20022.repository.codeset.PartyType4Code.mmTaxAuthority);
+				code_lazy = () -> Arrays.asList(PartyType4Code.mmMerchant, PartyType4Code.mmAcceptor, PartyType4Code.mmIntermediaryAgent, PartyType4Code.mmAcquirer, PartyType4Code.mmCardIssuer, PartyType4Code.mmTaxAuthority);
 				trace_lazy = () -> PartyTypeCode.mmObject();
 			}
 		});

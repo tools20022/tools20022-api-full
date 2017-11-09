@@ -20,6 +20,7 @@ package com.tools20022.repository.msg;
 import com.tools20022.metamodel.MMMessageAssociationEnd;
 import com.tools20022.metamodel.MMMessageAttribute;
 import com.tools20022.metamodel.MMMessageComponent;
+import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.choice.DateAndDateTimeChoice;
 import com.tools20022.repository.choice.PriceRateOrAmountOrUnknownChoice;
 import com.tools20022.repository.choice.PriceSourceFormatChoice;
@@ -27,6 +28,7 @@ import com.tools20022.repository.choice.UnitPriceType1Choice;
 import com.tools20022.repository.datatype.YesNoIndicator;
 import com.tools20022.repository.entity.SecuritiesPricing;
 import com.tools20022.repository.entity.SourceOfPrice;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -116,7 +118,7 @@ public class PriceInformation3 {
 			componentContext_lazy = () -> PriceInformation3.mmObject();
 			isDerived = false;
 			xmlTag = "Val";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Value";
 			definition = "Value of the price, eg, as a currency and value.";
 			maxOccurs = 1;
@@ -165,7 +167,7 @@ public class PriceInformation3 {
 			componentContext_lazy = () -> PriceInformation3.mmObject();
 			isDerived = false;
 			xmlTag = "PricTp";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PriceType";
 			definition = "Amount of money for which goods or services are offered, sold, or bought.";
 			maxOccurs = 1;
@@ -214,7 +216,7 @@ public class PriceInformation3 {
 			componentContext_lazy = () -> PriceInformation3.mmObject();
 			isDerived = false;
 			xmlTag = "SrcOfPric";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SourceOfPrice";
 			definition = "Place from which the price was obtained.";
 			maxOccurs = 1;
@@ -261,11 +263,11 @@ public class PriceInformation3 {
 	 */
 	public static final MMMessageAttribute mmQuotationDate = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.SecuritiesPricing.mmQuotationDate;
+			businessElementTrace_lazy = () -> SecuritiesPricing.mmQuotationDate;
 			componentContext_lazy = () -> PriceInformation3.mmObject();
 			isDerived = false;
 			xmlTag = "QtnDt";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "QuotationDate";
 			definition = "Date on which the price is obtained. With an investment fund, this is as stated in the prospectus.";
 			maxOccurs = 1;
@@ -312,11 +314,11 @@ public class PriceInformation3 {
 	 */
 	public static final MMMessageAttribute mmYieldedIndicator = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.SecuritiesPricing.mmYielded;
+			businessElementTrace_lazy = () -> SecuritiesPricing.mmYielded;
 			componentContext_lazy = () -> PriceInformation3.mmObject();
 			isDerived = false;
 			xmlTag = "YlddInd";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "YieldedIndicator";
 			definition = "Indicates whether the price is expressed as a yield. The absence of Yielded means it is not applicable.";
 			maxOccurs = 1;
@@ -328,11 +330,10 @@ public class PriceInformation3 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.PriceInformation3.mmValue, com.tools20022.repository.msg.PriceInformation3.mmPriceType,
-						com.tools20022.repository.msg.PriceInformation3.mmSourceOfPrice, com.tools20022.repository.msg.PriceInformation3.mmQuotationDate, com.tools20022.repository.msg.PriceInformation3.mmYieldedIndicator);
+				messageElement_lazy = () -> Arrays.asList(PriceInformation3.mmValue, PriceInformation3.mmPriceType, PriceInformation3.mmSourceOfPrice, PriceInformation3.mmQuotationDate, PriceInformation3.mmYieldedIndicator);
 				trace_lazy = () -> SecuritiesPricing.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 				name = "PriceInformation3";
 				definition = "Amount of money for which goods or services are offered, sold, or bought.";
 			}

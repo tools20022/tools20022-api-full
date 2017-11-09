@@ -19,7 +19,10 @@ package com.tools20022.repository.msg;
 
 import com.tools20022.metamodel.MMMessageAssociationEnd;
 import com.tools20022.metamodel.MMMessageComponent;
+import com.tools20022.metamodel.MMRegistrationStatus;
+import com.tools20022.repository.area.caaa.AcceptorCancellationAdviceV05;
 import com.tools20022.repository.entity.CardPayment;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -136,11 +139,11 @@ public class AcceptorCancellationAdvice5 {
 			componentContext_lazy = () -> AcceptorCancellationAdvice5.mmObject();
 			isDerived = false;
 			xmlTag = "Envt";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Environment";
 			definition = "Environment of the transaction.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.AcceptorCancellationAdvice6.mmEnvironment);
-			previousVersion_lazy = () -> com.tools20022.repository.msg.AcceptorCancellationAdvice4.mmEnvironment;
+			nextVersions_lazy = () -> Arrays.asList(AcceptorCancellationAdvice6.mmEnvironment);
+			previousVersion_lazy = () -> AcceptorCancellationAdvice4.mmEnvironment;
 			maxOccurs = 1;
 			minOccurs = 1;
 			isComposite = true;
@@ -195,15 +198,15 @@ public class AcceptorCancellationAdvice5 {
 	 */
 	public static final MMMessageAssociationEnd mmContext = new MMMessageAssociationEnd() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.CardPayment.mmCardPaymentAcquiring;
+			businessElementTrace_lazy = () -> CardPayment.mmCardPaymentAcquiring;
 			componentContext_lazy = () -> AcceptorCancellationAdvice5.mmObject();
 			isDerived = false;
 			xmlTag = "Cntxt";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Context";
 			definition = "Context in which the transaction is performed (payment and sale).";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.AcceptorCancellationAdvice6.mmContext);
-			previousVersion_lazy = () -> com.tools20022.repository.msg.AcceptorCancellationAdvice4.mmContext;
+			nextVersions_lazy = () -> Arrays.asList(AcceptorCancellationAdvice6.mmContext);
+			previousVersion_lazy = () -> AcceptorCancellationAdvice4.mmContext;
 			maxOccurs = 1;
 			minOccurs = 0;
 			isComposite = true;
@@ -262,11 +265,11 @@ public class AcceptorCancellationAdvice5 {
 			componentContext_lazy = () -> AcceptorCancellationAdvice5.mmObject();
 			isDerived = false;
 			xmlTag = "Tx";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Transaction";
 			definition = "Cancellation transaction between an acceptor and an acquirer.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.AcceptorCancellationAdvice6.mmTransaction);
-			previousVersion_lazy = () -> com.tools20022.repository.msg.AcceptorCancellationAdvice4.mmTransaction;
+			nextVersions_lazy = () -> Arrays.asList(AcceptorCancellationAdvice6.mmTransaction);
+			previousVersion_lazy = () -> AcceptorCancellationAdvice4.mmTransaction;
 			maxOccurs = 1;
 			minOccurs = 1;
 			isComposite = true;
@@ -277,12 +280,11 @@ public class AcceptorCancellationAdvice5 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.AcceptorCancellationAdvice5.mmEnvironment, com.tools20022.repository.msg.AcceptorCancellationAdvice5.mmContext,
-						com.tools20022.repository.msg.AcceptorCancellationAdvice5.mmTransaction);
-				messageBuildingBlock_lazy = () -> Arrays.asList(com.tools20022.repository.area.caaa.AcceptorCancellationAdviceV05.mmCancellationAdvice);
+				messageElement_lazy = () -> Arrays.asList(AcceptorCancellationAdvice5.mmEnvironment, AcceptorCancellationAdvice5.mmContext, AcceptorCancellationAdvice5.mmTransaction);
+				messageBuildingBlock_lazy = () -> Arrays.asList(AcceptorCancellationAdviceV05.mmCancellationAdvice);
 				trace_lazy = () -> CardPayment.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "AcceptorCancellationAdvice5";
 				definition = "Cancellation transaction between an acceptor and an acquirer.";
 				nextVersions_lazy = () -> Arrays.asList(AcceptorCancellationAdvice6.mmObject());

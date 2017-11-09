@@ -19,7 +19,10 @@ package com.tools20022.repository.choice;
 
 import com.tools20022.metamodel.MMChoiceComponent;
 import com.tools20022.metamodel.MMMessageAssociationEnd;
+import com.tools20022.metamodel.MMRegistrationStatus;
+import com.tools20022.repository.entity.Price;
 import com.tools20022.repository.entity.SecuritiesPricing;
+import com.tools20022.repository.GeneratedRepository;
 import com.tools20022.repository.msg.AmountPrice3;
 import com.tools20022.repository.msg.PercentagePrice1;
 import java.util.Arrays;
@@ -106,14 +109,14 @@ public class PriceFormat50Choice {
 	 */
 	public static final MMMessageAssociationEnd mmPercentagePrice = new MMMessageAssociationEnd() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.SecuritiesPricing.mmRate;
+			businessElementTrace_lazy = () -> SecuritiesPricing.mmRate;
 			componentContext_lazy = () -> PriceFormat50Choice.mmObject();
 			isDerived = false;
 			xmlTag = "PctgPric";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PercentagePrice";
 			definition = "Price expressed as a percentage.";
-			previousVersion_lazy = () -> com.tools20022.repository.choice.PriceFormat5Choice.mmPercentagePrice;
+			previousVersion_lazy = () -> PriceFormat5Choice.mmPercentagePrice;
 			maxOccurs = 1;
 			minOccurs = 1;
 			isComposite = true;
@@ -159,14 +162,14 @@ public class PriceFormat50Choice {
 	 */
 	public static final MMMessageAssociationEnd mmAmountPrice = new MMMessageAssociationEnd() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Price.mmAmount;
+			businessElementTrace_lazy = () -> Price.mmAmount;
 			componentContext_lazy = () -> PriceFormat50Choice.mmObject();
 			isDerived = false;
 			xmlTag = "AmtPric";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AmountPrice";
 			definition = "Price expressed as a currency and amount.";
-			previousVersion_lazy = () -> com.tools20022.repository.choice.PriceFormat5Choice.mmAmountPrice;
+			previousVersion_lazy = () -> PriceFormat5Choice.mmAmountPrice;
 			maxOccurs = 1;
 			minOccurs = 1;
 			isComposite = true;
@@ -177,10 +180,10 @@ public class PriceFormat50Choice {
 	final static public MMChoiceComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMChoiceComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.choice.PriceFormat50Choice.mmPercentagePrice, com.tools20022.repository.choice.PriceFormat50Choice.mmAmountPrice);
+				messageElement_lazy = () -> Arrays.asList(PriceFormat50Choice.mmPercentagePrice, PriceFormat50Choice.mmAmountPrice);
 				trace_lazy = () -> SecuritiesPricing.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "PriceFormat50Choice";
 				definition = "Choice between a percentage price or an amount price.";
 				previousVersion_lazy = () -> PriceFormat5Choice.mmObject();

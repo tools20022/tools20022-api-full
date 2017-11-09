@@ -19,7 +19,9 @@ package com.tools20022.repository.codeset;
 
 import com.tools20022.metamodel.MMCode;
 import com.tools20022.metamodel.MMCodeSet;
+import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.codeset.CustomerHandlingInstructionsCode;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -112,7 +114,7 @@ public class CustomerHandlingInstructions1Code extends CustomerHandlingInstructi
 	 */
 	public static final MMCode mmFillOrKill = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "FillOrKill";
 			owner_lazy = () -> CustomerHandlingInstructions1Code.mmObject();
 		}
@@ -135,7 +137,7 @@ public class CustomerHandlingInstructions1Code extends CustomerHandlingInstructi
 	 */
 	public static final MMCode mmImmediateOrCancel = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ImmediateOrCancel";
 			owner_lazy = () -> CustomerHandlingInstructions1Code.mmObject();
 		}
@@ -158,7 +160,7 @@ public class CustomerHandlingInstructions1Code extends CustomerHandlingInstructi
 	 */
 	public static final MMCode mmAllOrNone = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AllOrNone";
 			owner_lazy = () -> CustomerHandlingInstructions1Code.mmObject();
 		}
@@ -181,7 +183,7 @@ public class CustomerHandlingInstructions1Code extends CustomerHandlingInstructi
 	 */
 	public static final MMCode mmScale = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Scale";
 			owner_lazy = () -> CustomerHandlingInstructions1Code.mmObject();
 		}
@@ -204,7 +206,7 @@ public class CustomerHandlingInstructions1Code extends CustomerHandlingInstructi
 	 */
 	public static final MMCode mmWork = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Work";
 			owner_lazy = () -> CustomerHandlingInstructions1Code.mmObject();
 		}
@@ -227,7 +229,7 @@ public class CustomerHandlingInstructions1Code extends CustomerHandlingInstructi
 	 */
 	public static final MMCode mmAddOnOrder = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AddOnOrder";
 			owner_lazy = () -> CustomerHandlingInstructions1Code.mmObject();
 		}
@@ -250,7 +252,7 @@ public class CustomerHandlingInstructions1Code extends CustomerHandlingInstructi
 	 */
 	public static final MMCode mmExchangeForPhysicalTransaction = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ExchangeForPhysicalTransaction";
 			owner_lazy = () -> CustomerHandlingInstructions1Code.mmObject();
 		}
@@ -273,7 +275,7 @@ public class CustomerHandlingInstructions1Code extends CustomerHandlingInstructi
 	 */
 	public static final MMCode mmImbalanceOnly = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ImbalanceOnly";
 			owner_lazy = () -> CustomerHandlingInstructions1Code.mmObject();
 		}
@@ -296,7 +298,7 @@ public class CustomerHandlingInstructions1Code extends CustomerHandlingInstructi
 	 */
 	public static final MMCode mmPegged = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Pegged";
 			owner_lazy = () -> CustomerHandlingInstructions1Code.mmObject();
 		}
@@ -319,7 +321,7 @@ public class CustomerHandlingInstructions1Code extends CustomerHandlingInstructi
 	 */
 	public static final MMCode mmNotHeld = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "NotHeld";
 			owner_lazy = () -> CustomerHandlingInstructions1Code.mmObject();
 		}
@@ -328,16 +330,14 @@ public class CustomerHandlingInstructions1Code extends CustomerHandlingInstructi
 	static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
 				example = Arrays.asList("FIKI");
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "CustomerHandlingInstructions1Code";
 				definition = "Firms that are taking in orders manually but routing for execution electronically and for reporting to OATS must capture the client's handling instructions.This is intended for compliance reporting only ( OATS Phase III regulatory requirement).";
-				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.CustomerHandlingInstructions1Code.mmFillOrKill, com.tools20022.repository.codeset.CustomerHandlingInstructions1Code.mmImmediateOrCancel,
-						com.tools20022.repository.codeset.CustomerHandlingInstructions1Code.mmAllOrNone, com.tools20022.repository.codeset.CustomerHandlingInstructions1Code.mmScale,
-						com.tools20022.repository.codeset.CustomerHandlingInstructions1Code.mmWork, com.tools20022.repository.codeset.CustomerHandlingInstructions1Code.mmAddOnOrder,
-						com.tools20022.repository.codeset.CustomerHandlingInstructions1Code.mmExchangeForPhysicalTransaction, com.tools20022.repository.codeset.CustomerHandlingInstructions1Code.mmImbalanceOnly,
-						com.tools20022.repository.codeset.CustomerHandlingInstructions1Code.mmPegged, com.tools20022.repository.codeset.CustomerHandlingInstructions1Code.mmNotHeld);
+				code_lazy = () -> Arrays.asList(CustomerHandlingInstructions1Code.mmFillOrKill, CustomerHandlingInstructions1Code.mmImmediateOrCancel, CustomerHandlingInstructions1Code.mmAllOrNone,
+						CustomerHandlingInstructions1Code.mmScale, CustomerHandlingInstructions1Code.mmWork, CustomerHandlingInstructions1Code.mmAddOnOrder, CustomerHandlingInstructions1Code.mmExchangeForPhysicalTransaction,
+						CustomerHandlingInstructions1Code.mmImbalanceOnly, CustomerHandlingInstructions1Code.mmPegged, CustomerHandlingInstructions1Code.mmNotHeld);
 				trace_lazy = () -> CustomerHandlingInstructionsCode.mmObject();
 			}
 		});

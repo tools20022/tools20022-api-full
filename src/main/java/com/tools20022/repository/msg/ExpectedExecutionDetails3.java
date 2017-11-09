@@ -20,12 +20,14 @@ package com.tools20022.repository.msg;
 import com.tools20022.metamodel.MMMessageAssociationEnd;
 import com.tools20022.metamodel.MMMessageAttribute;
 import com.tools20022.metamodel.MMMessageComponent;
+import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.choice.DateAndDateTimeChoice;
 import com.tools20022.repository.datatype.ActiveCurrencyAndAmount;
 import com.tools20022.repository.datatype.ISODate;
 import com.tools20022.repository.datatype.Max35Text;
 import com.tools20022.repository.datatype.YesNoIndicator;
-import com.tools20022.repository.entity.InvestmentFundOrderExecution;
+import com.tools20022.repository.entity.*;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -129,11 +131,11 @@ public class ExpectedExecutionDetails3 {
 	 */
 	public static final MMMessageAttribute mmExpectedTradeDateTime = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Trade.mmTradeDateTime;
+			businessElementTrace_lazy = () -> Trade.mmTradeDateTime;
 			componentContext_lazy = () -> ExpectedExecutionDetails3.mmObject();
 			isDerived = false;
 			xmlTag = "XpctdTradDtTm";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ExpectedTradeDateTime";
 			definition = "Expected date and time at which the price is applied, ie, the expected execution date for the order.";
 			maxOccurs = 1;
@@ -176,11 +178,11 @@ public class ExpectedExecutionDetails3 {
 	 */
 	public static final MMMessageAttribute mmExpectedCashSettlementDate = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Obligation.mmRequestedSettlementDate;
+			businessElementTrace_lazy = () -> Obligation.mmRequestedSettlementDate;
 			componentContext_lazy = () -> ExpectedExecutionDetails3.mmObject();
 			isDerived = false;
 			xmlTag = "XpctdCshSttlmDt";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ExpectedCashSettlementDate";
 			definition = "Expected date on which the cash will be available.";
 			maxOccurs = 1;
@@ -224,11 +226,11 @@ public class ExpectedExecutionDetails3 {
 	 */
 	public static final MMMessageAttribute mmExpectedExecutedAmount = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Obligation.mmRequestedSettlementAmount;
+			businessElementTrace_lazy = () -> Obligation.mmRequestedSettlementAmount;
 			componentContext_lazy = () -> ExpectedExecutionDetails3.mmObject();
 			isDerived = false;
 			xmlTag = "XpctdExctdAmt";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ExpectedExecutedAmount";
 			definition = "Expected execution amount.";
 			maxOccurs = 1;
@@ -273,7 +275,7 @@ public class ExpectedExecutionDetails3 {
 			componentContext_lazy = () -> ExpectedExecutionDetails3.mmObject();
 			isDerived = false;
 			xmlTag = "PmtInInd";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PaymentInIndicator";
 			definition = "Indicates, for the status of a subscription, whether payment has been received by the executing party.";
 			maxOccurs = 1;
@@ -320,11 +322,11 @@ public class ExpectedExecutionDetails3 {
 	 */
 	public static final MMMessageAttribute mmPaymentReference = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.PaymentIdentification.mmEndToEndIdentification;
+			businessElementTrace_lazy = () -> PaymentIdentification.mmEndToEndIdentification;
 			componentContext_lazy = () -> ExpectedExecutionDetails3.mmObject();
 			isDerived = false;
 			xmlTag = "PmtRef";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PaymentReference";
 			definition = "Unique and unambiguous identifier for a payment transaction, as assigned by the originator. The payment transaction reference is used for reconciliation or to link tasks relating to the payment transaction.";
 			maxOccurs = 1;
@@ -367,11 +369,11 @@ public class ExpectedExecutionDetails3 {
 	 */
 	public static final MMMessageAttribute mmPrepaymentDate = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.ObligationFulfilment.mmDate;
+			businessElementTrace_lazy = () -> ObligationFulfilment.mmDate;
 			componentContext_lazy = () -> ExpectedExecutionDetails3.mmObject();
 			isDerived = false;
 			xmlTag = "PrepmtDt";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PrepaymentDate";
 			definition = "Date of the prepayment, if applicable.";
 			maxOccurs = 1;
@@ -418,11 +420,11 @@ public class ExpectedExecutionDetails3 {
 	 */
 	public static final MMMessageAttribute mmTopUpAmount = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.InvestmentFundClass.mmTopUpAmount;
+			businessElementTrace_lazy = () -> InvestmentFundClass.mmTopUpAmount;
 			componentContext_lazy = () -> ExpectedExecutionDetails3.mmObject();
 			isDerived = false;
 			xmlTag = "TopUpAmt";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "TopUpAmount";
 			definition = "Additional amount of money (top-up amount) required to meet the minimum subscription amount.";
 			maxOccurs = 1;
@@ -464,11 +466,11 @@ public class ExpectedExecutionDetails3 {
 	 */
 	public static final MMMessageAssociationEnd mmHoldBackDetails = new MMMessageAssociationEnd() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.InvestmentFundTransaction.mmInvestmentFundClass;
+			businessElementTrace_lazy = () -> InvestmentFundTransaction.mmInvestmentFundClass;
 			componentContext_lazy = () -> ExpectedExecutionDetails3.mmObject();
 			isDerived = false;
 			xmlTag = "HldBckDtls";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "HoldBackDetails";
 			definition = "Information about hold back of redemption proceeds.";
 			maxOccurs = 1;
@@ -512,11 +514,11 @@ public class ExpectedExecutionDetails3 {
 	 */
 	public static final MMMessageAssociationEnd mmSidePocketQuantity = new MMMessageAssociationEnd() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.SecuritiesQuantity.mmSidePocket;
+			businessElementTrace_lazy = () -> SecuritiesQuantity.mmSidePocket;
 			componentContext_lazy = () -> ExpectedExecutionDetails3.mmObject();
 			isDerived = false;
 			xmlTag = "SdPcktQty";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SidePocketQuantity";
 			definition = "Quantity of the side pocket.";
 			maxOccurs = 1;
@@ -529,14 +531,12 @@ public class ExpectedExecutionDetails3 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.ExpectedExecutionDetails3.mmExpectedTradeDateTime, com.tools20022.repository.msg.ExpectedExecutionDetails3.mmExpectedCashSettlementDate,
-						com.tools20022.repository.msg.ExpectedExecutionDetails3.mmExpectedExecutedAmount, com.tools20022.repository.msg.ExpectedExecutionDetails3.mmPaymentInIndicator,
-						com.tools20022.repository.msg.ExpectedExecutionDetails3.mmPaymentReference, com.tools20022.repository.msg.ExpectedExecutionDetails3.mmPrepaymentDate,
-						com.tools20022.repository.msg.ExpectedExecutionDetails3.mmTopUpAmount, com.tools20022.repository.msg.ExpectedExecutionDetails3.mmHoldBackDetails,
-						com.tools20022.repository.msg.ExpectedExecutionDetails3.mmSidePocketQuantity);
+				messageElement_lazy = () -> Arrays.asList(ExpectedExecutionDetails3.mmExpectedTradeDateTime, ExpectedExecutionDetails3.mmExpectedCashSettlementDate, ExpectedExecutionDetails3.mmExpectedExecutedAmount,
+						ExpectedExecutionDetails3.mmPaymentInIndicator, ExpectedExecutionDetails3.mmPaymentReference, ExpectedExecutionDetails3.mmPrepaymentDate, ExpectedExecutionDetails3.mmTopUpAmount,
+						ExpectedExecutionDetails3.mmHoldBackDetails, ExpectedExecutionDetails3.mmSidePocketQuantity);
 				trace_lazy = () -> InvestmentFundOrderExecution.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 				name = "ExpectedExecutionDetails3";
 				definition = "Expected trade date and expected settlement date of the order execution.";
 			}

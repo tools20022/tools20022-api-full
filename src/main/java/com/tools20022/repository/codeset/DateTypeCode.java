@@ -19,6 +19,8 @@ package com.tools20022.repository.codeset;
 
 import com.tools20022.metamodel.MMCode;
 import com.tools20022.metamodel.MMCodeSet;
+import com.tools20022.metamodel.MMRegistrationStatus;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -28,18 +30,6 @@ import java.util.concurrent.atomic.AtomicReference;
  * <p>
  * <strong>Constant fields:</strong>
  * <ul>
- * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getCode code} =
- * <ul>
- * <li>{@linkplain com.tools20022.repository.codeset.DateTypeCode#mmOpen
- * DateTypeCode.mmOpen}</li>
- * <li>{@linkplain com.tools20022.repository.codeset.DateTypeCode#mmUnknown
- * DateTypeCode.mmUnknown}</li>
- * <li>{@linkplain com.tools20022.repository.codeset.DateTypeCode#mmOngoing
- * DateTypeCode.mmOngoing}</li>
- * <li>{@linkplain com.tools20022.repository.codeset.DateTypeCode#mmVarious
- * DateTypeCode.mmVarious}</li>
- * </ul>
- * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getDerivation derivation}
  * =
  * <ul>
@@ -59,6 +49,18 @@ import java.util.concurrent.atomic.AtomicReference;
  * DateType4Code}</li>
  * <li>{@linkplain com.tools20022.repository.codeset.DateType2Code
  * DateType2Code}</li>
+ * </ul>
+ * </li>
+ * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getCode code} =
+ * <ul>
+ * <li>{@linkplain com.tools20022.repository.codeset.DateTypeCode#mmOpen
+ * DateTypeCode.mmOpen}</li>
+ * <li>{@linkplain com.tools20022.repository.codeset.DateTypeCode#mmUnknown
+ * DateTypeCode.mmUnknown}</li>
+ * <li>{@linkplain com.tools20022.repository.codeset.DateTypeCode#mmOngoing
+ * DateTypeCode.mmOngoing}</li>
+ * <li>{@linkplain com.tools20022.repository.codeset.DateTypeCode#mmVarious
+ * DateTypeCode.mmVarious}</li>
  * </ul>
  * </li>
  * <li>
@@ -110,7 +112,7 @@ public class DateTypeCode {
 	 */
 	public static final MMCode mmOpen = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "Open";
 			definition = "Open-dated, which indicates that the date has not been established.";
 			owner_lazy = () -> DateTypeCode.mmObject();
@@ -140,7 +142,7 @@ public class DateTypeCode {
 	 */
 	public static final MMCode mmUnknown = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "Unknown";
 			definition = "Date is unknown by the sender or has not been established.";
 			owner_lazy = () -> DateTypeCode.mmObject();
@@ -172,7 +174,7 @@ public class DateTypeCode {
 	 */
 	public static final MMCode mmOngoing = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "Ongoing";
 			definition = "Ongoing basis,  which indicates that the date is determined by \"ongoing basis\" process, for example \"au fil de l'eau\".";
 			owner_lazy = () -> DateTypeCode.mmObject();
@@ -202,7 +204,7 @@ public class DateTypeCode {
 	 */
 	public static final MMCode mmVarious = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "Various";
 			definition = "Partial trades have occurred over a period of two or more days.";
 			owner_lazy = () -> DateTypeCode.mmObject();
@@ -213,13 +215,12 @@ public class DateTypeCode {
 	static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
 				example = Arrays.asList("OPEN");
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "DateTypeCode";
 				definition = "Ongoing basis,  which indicates that the date is determined by \"ongoing basis\" process, for example \"au fil de l'eau\".";
-				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.DateTypeCode.mmOpen, com.tools20022.repository.codeset.DateTypeCode.mmUnknown, com.tools20022.repository.codeset.DateTypeCode.mmOngoing,
-						com.tools20022.repository.codeset.DateTypeCode.mmVarious);
+				code_lazy = () -> Arrays.asList(DateTypeCode.mmOpen, DateTypeCode.mmUnknown, DateTypeCode.mmOngoing, DateTypeCode.mmVarious);
 				derivation_lazy = () -> Arrays.asList(DateType3Code.mmObject(), DateType6Code.mmObject(), DateType8Code.mmObject(), DateType7Code.mmObject(), DateType1Code.mmObject(), DateType5Code.mmObject(), DateType4Code.mmObject(),
 						DateType2Code.mmObject());
 			}

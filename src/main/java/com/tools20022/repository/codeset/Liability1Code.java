@@ -19,7 +19,9 @@ package com.tools20022.repository.codeset;
 
 import com.tools20022.metamodel.MMCode;
 import com.tools20022.metamodel.MMCodeSet;
+import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.codeset.LiabilityCode;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -74,7 +76,7 @@ public class Liability1Code extends LiabilityCode {
 	 */
 	public static final MMCode mmInvestor = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Investor";
 			owner_lazy = () -> Liability1Code.mmObject();
 		}
@@ -97,7 +99,7 @@ public class Liability1Code extends LiabilityCode {
 	 */
 	public static final MMCode mmBroker = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Broker";
 			owner_lazy = () -> Liability1Code.mmObject();
 		}
@@ -106,11 +108,11 @@ public class Liability1Code extends LiabilityCode {
 	static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "Liability1Code";
 				definition = "Specifies the party responsible for the liability.";
-				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.Liability1Code.mmInvestor, com.tools20022.repository.codeset.Liability1Code.mmBroker);
+				code_lazy = () -> Arrays.asList(Liability1Code.mmInvestor, Liability1Code.mmBroker);
 				trace_lazy = () -> LiabilityCode.mmObject();
 			}
 		});

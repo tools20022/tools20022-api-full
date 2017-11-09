@@ -20,9 +20,13 @@ package com.tools20022.repository.msg;
 import com.tools20022.metamodel.MMMessageAssociationEnd;
 import com.tools20022.metamodel.MMMessageAttribute;
 import com.tools20022.metamodel.MMMessageComponent;
+import com.tools20022.metamodel.MMRegistrationStatus;
+import com.tools20022.repository.area.semt.*;
+import com.tools20022.repository.area.sese.*;
 import com.tools20022.repository.choice.PartyIdentification114Choice;
 import com.tools20022.repository.datatype.LEIIdentifier;
 import com.tools20022.repository.entity.PartyIdentificationInformation;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -182,11 +186,11 @@ public class PartyIdentification109 {
 			componentContext_lazy = () -> PartyIdentification109.mmObject();
 			isDerived = false;
 			xmlTag = "Id";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Identification";
 			definition = "Unique identification of the party.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.PartyIdentification119.mmIdentification);
-			previousVersion_lazy = () -> com.tools20022.repository.msg.PartyIdentification98.mmIdentification;
+			nextVersions_lazy = () -> Arrays.asList(PartyIdentification119.mmIdentification);
+			previousVersion_lazy = () -> PartyIdentification98.mmIdentification;
 			maxOccurs = 1;
 			minOccurs = 1;
 			isComposite = true;
@@ -242,11 +246,11 @@ public class PartyIdentification109 {
 			componentContext_lazy = () -> PartyIdentification109.mmObject();
 			isDerived = false;
 			xmlTag = "LEI";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "LEI";
 			definition = "Legal entity identification as an alternate identification for a party.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.PartyIdentification119.mmLEI);
-			previousVersion_lazy = () -> com.tools20022.repository.msg.PartyIdentification98.mmLEI;
+			nextVersions_lazy = () -> Arrays.asList(PartyIdentification119.mmLEI);
+			previousVersion_lazy = () -> PartyIdentification98.mmLEI;
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> LEIIdentifier.mmObject();
@@ -256,19 +260,16 @@ public class PartyIdentification109 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.PartyIdentification109.mmIdentification, com.tools20022.repository.msg.PartyIdentification109.mmLEI);
-				messageBuildingBlock_lazy = () -> Arrays.asList(com.tools20022.repository.area.sese.SecuritiesSettlementTransactionModificationRequestStatusAdvice002V04.mmAccountOwner,
-						com.tools20022.repository.area.semt.SecuritiesSettlementTransactionAllegementReport002V05.mmAccountOwner, com.tools20022.repository.area.sese.PortfolioTransferNotification002V04.mmAccountOwner,
-						com.tools20022.repository.area.semt.SecuritiesTransactionPostingReport002V06.mmAccountOwner, com.tools20022.repository.area.semt.SecuritiesSettlementTransactionAuditTrailReport002V03.mmAccountOwner,
-						com.tools20022.repository.area.sese.SecuritiesSettlementAllegementRemovalAdvice002V04.mmAccountOwner, com.tools20022.repository.area.sese.SecuritiesSettlementConditionsModificationRequest002V06.mmAccountOwner,
-						com.tools20022.repository.area.sese.SecuritiesTransactionStatusQuery002V04.mmAccountOwner, com.tools20022.repository.area.semt.SecuritiesMessageCancellationAdvice002V05.mmAccountOwner,
-						com.tools20022.repository.area.semt.SecuritiesBalanceAccountingReport002V09.mmAccountOwner, com.tools20022.repository.area.semt.SecuritiesTransactionPendingReport002V07.mmAccountOwner,
-						com.tools20022.repository.area.semt.SecuritiesStatementQuery002V06.mmAccountOwner, com.tools20022.repository.area.semt.SecuritiesBalanceCustodyReport002V09.mmAccountOwner,
-						com.tools20022.repository.area.sese.SecuritiesStatusOrStatementQueryStatusAdvice002V04.mmAccountOwner, com.tools20022.repository.area.sese.SecuritiesTransactionCancellationRequest002V05.mmAccountOwner,
-						com.tools20022.repository.area.sese.SecuritiesSettlementConditionModificationStatusAdvice002V07.mmAccountOwner);
+				messageElement_lazy = () -> Arrays.asList(PartyIdentification109.mmIdentification, PartyIdentification109.mmLEI);
+				messageBuildingBlock_lazy = () -> Arrays.asList(SecuritiesSettlementTransactionModificationRequestStatusAdvice002V04.mmAccountOwner, SecuritiesSettlementTransactionAllegementReport002V05.mmAccountOwner,
+						PortfolioTransferNotification002V04.mmAccountOwner, SecuritiesTransactionPostingReport002V06.mmAccountOwner, SecuritiesSettlementTransactionAuditTrailReport002V03.mmAccountOwner,
+						SecuritiesSettlementAllegementRemovalAdvice002V04.mmAccountOwner, SecuritiesSettlementConditionsModificationRequest002V06.mmAccountOwner, SecuritiesTransactionStatusQuery002V04.mmAccountOwner,
+						SecuritiesMessageCancellationAdvice002V05.mmAccountOwner, SecuritiesBalanceAccountingReport002V09.mmAccountOwner, SecuritiesTransactionPendingReport002V07.mmAccountOwner,
+						SecuritiesStatementQuery002V06.mmAccountOwner, SecuritiesBalanceCustodyReport002V09.mmAccountOwner, SecuritiesStatusOrStatementQueryStatusAdvice002V04.mmAccountOwner,
+						SecuritiesTransactionCancellationRequest002V05.mmAccountOwner, SecuritiesSettlementConditionModificationStatusAdvice002V07.mmAccountOwner);
 				trace_lazy = () -> PartyIdentificationInformation.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "PartyIdentification109";
 				definition = "Identification of the party.";
 				nextVersions_lazy = () -> Arrays.asList(PartyIdentification119.mmObject());

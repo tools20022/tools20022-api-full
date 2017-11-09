@@ -20,8 +20,13 @@ package com.tools20022.repository.choice;
 import com.tools20022.metamodel.MMChoiceComponent;
 import com.tools20022.metamodel.MMMessageAssociationEnd;
 import com.tools20022.metamodel.MMMessageAttribute;
+import com.tools20022.metamodel.MMRegistrationStatus;
+import com.tools20022.repository.area.semt.*;
+import com.tools20022.repository.area.sese.*;
 import com.tools20022.repository.datatype.AnyBICIdentifier;
+import com.tools20022.repository.entity.OrganisationIdentification;
 import com.tools20022.repository.entity.PartyIdentificationInformation;
+import com.tools20022.repository.GeneratedRepository;
 import com.tools20022.repository.msg.GenericIdentification19;
 import java.text.DateFormat;
 import java.util.Arrays;
@@ -305,11 +310,11 @@ public class PartyIdentification36Choice {
 	 */
 	public static final MMMessageAttribute mmAnyBIC = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.OrganisationIdentification.mmAnyBIC;
+			businessElementTrace_lazy = () -> OrganisationIdentification.mmAnyBIC;
 			componentContext_lazy = () -> PartyIdentification36Choice.mmObject();
 			isDerived = false;
 			xmlTag = "AnyBIC";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AnyBIC";
 			definition = "Code allocated to a financial or non-financial institution by the ISO 9362 Registration Authority, as described in ISO 9362 \"Banking - Banking telecommunication messages - Business identifier code (BIC)\".";
 			maxOccurs = 1;
@@ -355,11 +360,11 @@ public class PartyIdentification36Choice {
 	 */
 	public static final MMMessageAssociationEnd mmProprietaryIdentification = new MMMessageAssociationEnd() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.PartyIdentificationInformation.mmOtherIdentification;
+			businessElementTrace_lazy = () -> PartyIdentificationInformation.mmOtherIdentification;
 			componentContext_lazy = () -> PartyIdentification36Choice.mmObject();
 			isDerived = false;
 			xmlTag = "PrtryId";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ProprietaryIdentification";
 			definition = "Unique and unambiguous identifier, as assigned to a financial institution using a proprietary identification scheme.";
 			maxOccurs = 1;
@@ -372,43 +377,29 @@ public class PartyIdentification36Choice {
 	final static public MMChoiceComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMChoiceComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.choice.PartyIdentification36Choice.mmAnyBIC, com.tools20022.repository.choice.PartyIdentification36Choice.mmProprietaryIdentification);
-				messageBuildingBlock_lazy = () -> Arrays.asList(com.tools20022.repository.area.semt.SecuritiesSettlementTransactionAuditTrailReportV01.mmAccountOwner,
-						com.tools20022.repository.area.semt.IntraPositionMovementConfirmationV02.mmAccountOwner, com.tools20022.repository.area.semt.IntraPositionMovementConfirmationV03.mmAccountOwner,
-						com.tools20022.repository.area.semt.IntraPositionMovementConfirmationV04.mmAccountOwner, com.tools20022.repository.area.semt.IntraPositionMovementPostingReportV02.mmAccountOwner,
-						com.tools20022.repository.area.semt.IntraPositionMovementPostingReportV03.mmAccountOwner, com.tools20022.repository.area.semt.IntraPositionMovementPostingReportV04.mmAccountOwner,
-						com.tools20022.repository.area.semt.SecuritiesBalanceAccountingReportV04.mmAccountOwner, com.tools20022.repository.area.semt.SecuritiesBalanceAccountingReportV05.mmAccountOwner,
-						com.tools20022.repository.area.semt.SecuritiesBalanceAccountingReportV06.mmAccountOwner, com.tools20022.repository.area.semt.SecuritiesBalanceCustodyReportV04.mmAccountOwner,
-						com.tools20022.repository.area.semt.SecuritiesBalanceCustodyReportV05.mmAccountOwner, com.tools20022.repository.area.semt.SecuritiesBalanceCustodyReportV06.mmAccountOwner,
-						com.tools20022.repository.area.semt.SecuritiesMessageCancellationAdviceV02.mmAccountOwner, com.tools20022.repository.area.semt.SecuritiesMessageCancellationAdviceV03.mmAccountOwner,
-						com.tools20022.repository.area.semt.SecuritiesMessageCancellationAdviceV04.mmAccountOwner, com.tools20022.repository.area.sese.SecuritiesSettlementConditionModificationStatusAdviceV02.mmAccountOwner,
-						com.tools20022.repository.area.sese.SecuritiesSettlementConditionModificationStatusAdviceV03.mmAccountOwner,
-						com.tools20022.repository.area.sese.SecuritiesSettlementConditionModificationStatusAdviceV04.mmAccountOwner, com.tools20022.repository.area.sese.SecuritiesSettlementConditionsModificationRequestV02.mmAccountOwner,
-						com.tools20022.repository.area.sese.SecuritiesSettlementConditionsModificationRequestV03.mmAccountOwner, com.tools20022.repository.area.sese.SecuritiesSettlementConditionsModificationRequestV04.mmAccountOwner,
-						com.tools20022.repository.area.semt.SecuritiesTransactionPendingReportV02.mmAccountOwner, com.tools20022.repository.area.semt.SecuritiesTransactionPendingReportV03.mmAccountOwner,
-						com.tools20022.repository.area.semt.SecuritiesTransactionPendingReportV04.mmAccountOwner, com.tools20022.repository.area.semt.SecuritiesTransactionPostingReportV02.mmAccountOwner,
-						com.tools20022.repository.area.semt.SecuritiesTransactionPostingReportV03.mmAccountOwner, com.tools20022.repository.area.semt.SecuritiesTransactionPostingReportV04.mmAccountOwner,
-						com.tools20022.repository.area.semt.IntraPositionMovementInstructionV02.mmAccountOwner, com.tools20022.repository.area.sese.PortfolioTransferNotificationV02.mmAccountOwner,
-						com.tools20022.repository.area.sese.SecuritiesSettlementAllegementRemovalAdviceV02.mmAccountOwner, com.tools20022.repository.area.semt.SecuritiesSettlementTransactionAllegementReportV02.mmAccountOwner,
-						com.tools20022.repository.area.semt.SecuritiesStatementQueryV02.mmAccountOwner, com.tools20022.repository.area.sese.SecuritiesStatusOrStatementQueryStatusAdviceV02.mmAccountOwner,
-						com.tools20022.repository.area.sese.SecuritiesTransactionCancellationRequestV02.mmAccountOwner, com.tools20022.repository.area.sese.SecuritiesTransactionStatusQueryV02.mmAccountOwner,
-						com.tools20022.repository.area.sese.SecuritiesSettlementAllegementRemovalAdviceV03.mmAccountOwner, com.tools20022.repository.area.semt.SecuritiesSettlementTransactionAllegementReportV03.mmAccountOwner,
-						com.tools20022.repository.area.semt.SecuritiesStatementQueryV03.mmAccountOwner, com.tools20022.repository.area.sese.SecuritiesStatusOrStatementQueryStatusAdviceV03.mmAccountOwner,
-						com.tools20022.repository.area.sese.SecuritiesTransactionCancellationRequestV03.mmAccountOwner, com.tools20022.repository.area.sese.SecuritiesTransactionStatusQueryV03.mmAccountOwner,
-						com.tools20022.repository.area.semt.IntraPositionMovementInstructionV03.mmAccountOwner, com.tools20022.repository.area.sese.PortfolioTransferNotificationV03.mmAccountOwner,
-						com.tools20022.repository.area.sese.SecuritiesSettlementTransactionModificationRequestStatusAdviceV01.mmAccountOwner, com.tools20022.repository.area.sese.SecuritiesTransactionCancellationRequestV04.mmAccountOwner,
-						com.tools20022.repository.area.sese.SecuritiesSettlementConditionModificationStatusAdviceV05.mmAccountOwner, com.tools20022.repository.area.semt.SecuritiesTransactionPendingReportV05.mmAccountOwner,
-						com.tools20022.repository.area.semt.SecuritiesTransactionPostingReportV05.mmAccountOwner, com.tools20022.repository.area.sese.SecuritiesSettlementTransactionModificationRequestStatusAdviceV02.mmAccountOwner,
-						com.tools20022.repository.area.sese.SecuritiesSettlementConditionsModificationRequestV05.mmAccountOwner, com.tools20022.repository.area.semt.SecuritiesBalanceCustodyReportV07.mmAccountOwner,
-						com.tools20022.repository.area.semt.SecuritiesBalanceAccountingReportV07.mmAccountOwner, com.tools20022.repository.area.semt.SecuritiesSettlementTransactionAllegementReportV04.mmAccountOwner,
-						com.tools20022.repository.area.semt.SecuritiesStatementQueryV04.mmAccountOwner, com.tools20022.repository.area.semt.SecuritiesBalanceCustodyReportV08.mmAccountOwner,
-						com.tools20022.repository.area.semt.SecuritiesTransactionPendingReportV06.mmAccountOwner, com.tools20022.repository.area.semt.SecuritiesStatementQueryV05.mmAccountOwner,
-						com.tools20022.repository.area.semt.SecuritiesBalanceAccountingReportV08.mmAccountOwner, com.tools20022.repository.area.sese.SecuritiesSettlementConditionModificationStatusAdviceV06.mmAccountOwner,
-						com.tools20022.repository.area.sese.SecuritiesSettlementTransactionModificationRequestStatusAdviceV03.mmAccountOwner,
-						com.tools20022.repository.area.semt.SecuritiesSettlementTransactionAuditTrailReportV02.mmAccountOwner);
+				messageElement_lazy = () -> Arrays.asList(PartyIdentification36Choice.mmAnyBIC, PartyIdentification36Choice.mmProprietaryIdentification);
+				messageBuildingBlock_lazy = () -> Arrays.asList(SecuritiesSettlementTransactionAuditTrailReportV01.mmAccountOwner, IntraPositionMovementConfirmationV02.mmAccountOwner, IntraPositionMovementConfirmationV03.mmAccountOwner,
+						IntraPositionMovementConfirmationV04.mmAccountOwner, IntraPositionMovementPostingReportV02.mmAccountOwner, IntraPositionMovementPostingReportV03.mmAccountOwner, IntraPositionMovementPostingReportV04.mmAccountOwner,
+						SecuritiesBalanceAccountingReportV04.mmAccountOwner, SecuritiesBalanceAccountingReportV05.mmAccountOwner, SecuritiesBalanceAccountingReportV06.mmAccountOwner, SecuritiesBalanceCustodyReportV04.mmAccountOwner,
+						SecuritiesBalanceCustodyReportV05.mmAccountOwner, SecuritiesBalanceCustodyReportV06.mmAccountOwner, SecuritiesMessageCancellationAdviceV02.mmAccountOwner, SecuritiesMessageCancellationAdviceV03.mmAccountOwner,
+						SecuritiesMessageCancellationAdviceV04.mmAccountOwner, SecuritiesSettlementConditionModificationStatusAdviceV02.mmAccountOwner, SecuritiesSettlementConditionModificationStatusAdviceV03.mmAccountOwner,
+						SecuritiesSettlementConditionModificationStatusAdviceV04.mmAccountOwner, SecuritiesSettlementConditionsModificationRequestV02.mmAccountOwner, SecuritiesSettlementConditionsModificationRequestV03.mmAccountOwner,
+						SecuritiesSettlementConditionsModificationRequestV04.mmAccountOwner, SecuritiesTransactionPendingReportV02.mmAccountOwner, SecuritiesTransactionPendingReportV03.mmAccountOwner,
+						SecuritiesTransactionPendingReportV04.mmAccountOwner, SecuritiesTransactionPostingReportV02.mmAccountOwner, SecuritiesTransactionPostingReportV03.mmAccountOwner, SecuritiesTransactionPostingReportV04.mmAccountOwner,
+						IntraPositionMovementInstructionV02.mmAccountOwner, PortfolioTransferNotificationV02.mmAccountOwner, SecuritiesSettlementAllegementRemovalAdviceV02.mmAccountOwner,
+						SecuritiesSettlementTransactionAllegementReportV02.mmAccountOwner, SecuritiesStatementQueryV02.mmAccountOwner, SecuritiesStatusOrStatementQueryStatusAdviceV02.mmAccountOwner,
+						SecuritiesTransactionCancellationRequestV02.mmAccountOwner, SecuritiesTransactionStatusQueryV02.mmAccountOwner, SecuritiesSettlementAllegementRemovalAdviceV03.mmAccountOwner,
+						SecuritiesSettlementTransactionAllegementReportV03.mmAccountOwner, SecuritiesStatementQueryV03.mmAccountOwner, SecuritiesStatusOrStatementQueryStatusAdviceV03.mmAccountOwner,
+						SecuritiesTransactionCancellationRequestV03.mmAccountOwner, SecuritiesTransactionStatusQueryV03.mmAccountOwner, IntraPositionMovementInstructionV03.mmAccountOwner, PortfolioTransferNotificationV03.mmAccountOwner,
+						SecuritiesSettlementTransactionModificationRequestStatusAdviceV01.mmAccountOwner, SecuritiesTransactionCancellationRequestV04.mmAccountOwner, SecuritiesSettlementConditionModificationStatusAdviceV05.mmAccountOwner,
+						SecuritiesTransactionPendingReportV05.mmAccountOwner, SecuritiesTransactionPostingReportV05.mmAccountOwner, SecuritiesSettlementTransactionModificationRequestStatusAdviceV02.mmAccountOwner,
+						SecuritiesSettlementConditionsModificationRequestV05.mmAccountOwner, SecuritiesBalanceCustodyReportV07.mmAccountOwner, SecuritiesBalanceAccountingReportV07.mmAccountOwner,
+						SecuritiesSettlementTransactionAllegementReportV04.mmAccountOwner, SecuritiesStatementQueryV04.mmAccountOwner, SecuritiesBalanceCustodyReportV08.mmAccountOwner, SecuritiesTransactionPendingReportV06.mmAccountOwner,
+						SecuritiesStatementQueryV05.mmAccountOwner, SecuritiesBalanceAccountingReportV08.mmAccountOwner, SecuritiesSettlementConditionModificationStatusAdviceV06.mmAccountOwner,
+						SecuritiesSettlementTransactionModificationRequestStatusAdviceV03.mmAccountOwner, SecuritiesSettlementTransactionAuditTrailReportV02.mmAccountOwner);
 				trace_lazy = () -> PartyIdentificationInformation.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.OBSOLETE;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.OBSOLETE;
 				removalDate = ((Supplier<Date>) (() -> {
 					try {
 						return DateFormat.getDateInstance(java.text.DateFormat.LONG).parse("May 5, 2016");

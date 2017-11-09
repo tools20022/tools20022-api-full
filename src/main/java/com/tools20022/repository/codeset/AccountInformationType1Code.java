@@ -19,7 +19,9 @@ package com.tools20022.repository.codeset;
 
 import com.tools20022.metamodel.MMCode;
 import com.tools20022.metamodel.MMCodeSet;
+import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.codeset.AccountInformationTypeCode;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -200,7 +202,7 @@ public class AccountInformationType1Code extends AccountInformationTypeCode {
 	 */
 	public static final MMCode mmIntermediaryBankNameOfDealtCurrency = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "IntermediaryBankNameOfDealtCurrency";
 			owner_lazy = () -> AccountInformationType1Code.mmObject();
 		}
@@ -223,7 +225,7 @@ public class AccountInformationType1Code extends AccountInformationTypeCode {
 	 */
 	public static final MMCode mmIntermediaryBankNumberOfContraCurrency = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "IntermediaryBankNumberOfContraCurrency";
 			owner_lazy = () -> AccountInformationType1Code.mmObject();
 		}
@@ -246,7 +248,7 @@ public class AccountInformationType1Code extends AccountInformationTypeCode {
 	 */
 	public static final MMCode mmIntermediaryBankNumberOfDealtCurrency = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "IntermediaryBankNumberOfDealtCurrency";
 			owner_lazy = () -> AccountInformationType1Code.mmObject();
 		}
@@ -269,7 +271,7 @@ public class AccountInformationType1Code extends AccountInformationTypeCode {
 	 */
 	public static final MMCode mmBeneficiaryInstitutionBICCodeOfContraCurrency = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "BeneficiaryInstitutionBICCodeOfContraCurrency";
 			owner_lazy = () -> AccountInformationType1Code.mmObject();
 		}
@@ -292,7 +294,7 @@ public class AccountInformationType1Code extends AccountInformationTypeCode {
 	 */
 	public static final MMCode mmBeneficiaryInstitutionBICCodeOfDealtCurrency = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "BeneficiaryInstitutionBICCodeOfDealtCurrency";
 			owner_lazy = () -> AccountInformationType1Code.mmObject();
 		}
@@ -315,7 +317,7 @@ public class AccountInformationType1Code extends AccountInformationTypeCode {
 	 */
 	public static final MMCode mmBeneficiaryInstitutionNameOfContraCurrency = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "BeneficiaryInstitutionNameOfContraCurrency";
 			owner_lazy = () -> AccountInformationType1Code.mmObject();
 		}
@@ -338,7 +340,7 @@ public class AccountInformationType1Code extends AccountInformationTypeCode {
 	 */
 	public static final MMCode mmBeneficiaryInstitutionNameOfDealtCurrency = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "BeneficiaryInstitutionNameOfDealtCurrency";
 			owner_lazy = () -> AccountInformationType1Code.mmObject();
 		}
@@ -361,7 +363,7 @@ public class AccountInformationType1Code extends AccountInformationTypeCode {
 	 */
 	public static final MMCode mmBeneficiaryInstitutionNumberOfContraCurrency = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "BeneficiaryInstitutionNumberOfContraCurrency";
 			owner_lazy = () -> AccountInformationType1Code.mmObject();
 		}
@@ -384,7 +386,7 @@ public class AccountInformationType1Code extends AccountInformationTypeCode {
 	 */
 	public static final MMCode mmBeneficiaryInstitutionNumberOfDealtCurrency = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "BeneficiaryInstitutionNumberOfDealtCurrency";
 			owner_lazy = () -> AccountInformationType1Code.mmObject();
 		}
@@ -407,7 +409,7 @@ public class AccountInformationType1Code extends AccountInformationTypeCode {
 	 */
 	public static final MMCode mmCFETSMarginSettlementAccountNumber = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CFETSMarginSettlementAccountNumber";
 			owner_lazy = () -> AccountInformationType1Code.mmObject();
 		}
@@ -430,7 +432,7 @@ public class AccountInformationType1Code extends AccountInformationTypeCode {
 	 */
 	public static final MMCode mmCorrespondentBankBICCodeOfContraCurrency = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CorrespondentBankBICCodeOfContraCurrency";
 			owner_lazy = () -> AccountInformationType1Code.mmObject();
 		}
@@ -453,7 +455,7 @@ public class AccountInformationType1Code extends AccountInformationTypeCode {
 	 */
 	public static final MMCode mmCorrespondentBankBICCodeOfDealtCurrency = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CorrespondentBankBICCodeOfDealtCurrency";
 			owner_lazy = () -> AccountInformationType1Code.mmObject();
 		}
@@ -476,7 +478,7 @@ public class AccountInformationType1Code extends AccountInformationTypeCode {
 	 */
 	public static final MMCode mmCorrespondentBankNameOfContraCurrency = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CorrespondentBankNameOfContraCurrency";
 			owner_lazy = () -> AccountInformationType1Code.mmObject();
 		}
@@ -499,7 +501,7 @@ public class AccountInformationType1Code extends AccountInformationTypeCode {
 	 */
 	public static final MMCode mmCorrespondentBankNameOfDealtCurrency = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CorrespondentBankNameOfDealtCurrency";
 			owner_lazy = () -> AccountInformationType1Code.mmObject();
 		}
@@ -522,7 +524,7 @@ public class AccountInformationType1Code extends AccountInformationTypeCode {
 	 */
 	public static final MMCode mmCorrespondentBankNumberOfContraCurrency = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CorrespondentBankNumberOfContraCurrency";
 			owner_lazy = () -> AccountInformationType1Code.mmObject();
 		}
@@ -545,7 +547,7 @@ public class AccountInformationType1Code extends AccountInformationTypeCode {
 	 */
 	public static final MMCode mmCorrespondentBankNumberOfDealtCurrency = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CorrespondentBankNumberOfDealtCurrency";
 			owner_lazy = () -> AccountInformationType1Code.mmObject();
 		}
@@ -568,7 +570,7 @@ public class AccountInformationType1Code extends AccountInformationTypeCode {
 	 */
 	public static final MMCode mmCurrentAccount = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CurrentAccount";
 			owner_lazy = () -> AccountInformationType1Code.mmObject();
 		}
@@ -591,7 +593,7 @@ public class AccountInformationType1Code extends AccountInformationTypeCode {
 	 */
 	public static final MMCode mmDepositAccount = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "DepositAccount";
 			owner_lazy = () -> AccountInformationType1Code.mmObject();
 		}
@@ -614,7 +616,7 @@ public class AccountInformationType1Code extends AccountInformationTypeCode {
 	 */
 	public static final MMCode mmFundCustodianAccountName = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "FundCustodianAccountName";
 			owner_lazy = () -> AccountInformationType1Code.mmObject();
 		}
@@ -637,7 +639,7 @@ public class AccountInformationType1Code extends AccountInformationTypeCode {
 	 */
 	public static final MMCode mmFundCustodianAccountNumber = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "FundCustodianAccountNumber";
 			owner_lazy = () -> AccountInformationType1Code.mmObject();
 		}
@@ -660,7 +662,7 @@ public class AccountInformationType1Code extends AccountInformationTypeCode {
 	 */
 	public static final MMCode mmFundCustodianBankName = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "FundCustodianBankName";
 			owner_lazy = () -> AccountInformationType1Code.mmObject();
 		}
@@ -683,7 +685,7 @@ public class AccountInformationType1Code extends AccountInformationTypeCode {
 	 */
 	public static final MMCode mmIntermediaryBankBICCodeOfContraCurrency = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "IntermediaryBankBICCodeOfContraCurrency";
 			owner_lazy = () -> AccountInformationType1Code.mmObject();
 		}
@@ -706,7 +708,7 @@ public class AccountInformationType1Code extends AccountInformationTypeCode {
 	 */
 	public static final MMCode mmIntermediaryBankBICCodeOfDealtCurrency = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "IntermediaryBankBICCodeOfDealtCurrency";
 			owner_lazy = () -> AccountInformationType1Code.mmObject();
 		}
@@ -729,7 +731,7 @@ public class AccountInformationType1Code extends AccountInformationTypeCode {
 	 */
 	public static final MMCode mmIntermediaryBankNameOfContraCurrency = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "IntermediaryBankNameOfContraCurrency";
 			owner_lazy = () -> AccountInformationType1Code.mmObject();
 		}
@@ -752,7 +754,7 @@ public class AccountInformationType1Code extends AccountInformationTypeCode {
 	 */
 	public static final MMCode mmMarginCustodianAccountName = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "MarginCustodianAccountName";
 			owner_lazy = () -> AccountInformationType1Code.mmObject();
 		}
@@ -775,7 +777,7 @@ public class AccountInformationType1Code extends AccountInformationTypeCode {
 	 */
 	public static final MMCode mmMarginCustodianAccountNumber = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "MarginCustodianAccountNumber";
 			owner_lazy = () -> AccountInformationType1Code.mmObject();
 		}
@@ -798,7 +800,7 @@ public class AccountInformationType1Code extends AccountInformationTypeCode {
 	 */
 	public static final MMCode mmMarginCustodianInstitutionCode = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "MarginCustodianInstitutionCode";
 			owner_lazy = () -> AccountInformationType1Code.mmObject();
 		}
@@ -821,7 +823,7 @@ public class AccountInformationType1Code extends AccountInformationTypeCode {
 	 */
 	public static final MMCode mmMarginCustodianInstitutionName = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "MarginCustodianInstitutionName";
 			owner_lazy = () -> AccountInformationType1Code.mmObject();
 		}
@@ -844,7 +846,7 @@ public class AccountInformationType1Code extends AccountInformationTypeCode {
 	 */
 	public static final MMCode mmMarginSettlementAccountName = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "MarginSettlementAccountName";
 			owner_lazy = () -> AccountInformationType1Code.mmObject();
 		}
@@ -867,7 +869,7 @@ public class AccountInformationType1Code extends AccountInformationTypeCode {
 	 */
 	public static final MMCode mmMarginSettlementBankName = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "MarginSettlementBankName";
 			owner_lazy = () -> AccountInformationType1Code.mmObject();
 		}
@@ -890,7 +892,7 @@ public class AccountInformationType1Code extends AccountInformationTypeCode {
 	 */
 	public static final MMCode mmMultiCurrencyAccountDescription = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "MultiCurrencyAccountDescription";
 			owner_lazy = () -> AccountInformationType1Code.mmObject();
 		}
@@ -913,7 +915,7 @@ public class AccountInformationType1Code extends AccountInformationTypeCode {
 	 */
 	public static final MMCode mmNoteOfDealtCurrency = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "NoteOfDealtCurrency";
 			owner_lazy = () -> AccountInformationType1Code.mmObject();
 		}
@@ -936,7 +938,7 @@ public class AccountInformationType1Code extends AccountInformationTypeCode {
 	 */
 	public static final MMCode mmSecuritiesCustodianAccountChineseName = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SecuritiesCustodianAccountChineseName";
 			owner_lazy = () -> AccountInformationType1Code.mmObject();
 		}
@@ -959,7 +961,7 @@ public class AccountInformationType1Code extends AccountInformationTypeCode {
 	 */
 	public static final MMCode mmSecuritiesCustodianAccountName = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SecuritiesCustodianAccountName";
 			owner_lazy = () -> AccountInformationType1Code.mmObject();
 		}
@@ -982,7 +984,7 @@ public class AccountInformationType1Code extends AccountInformationTypeCode {
 	 */
 	public static final MMCode mmOtherMarginSettlementAccountNumber = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "OtherMarginSettlementAccountNumber";
 			owner_lazy = () -> AccountInformationType1Code.mmObject();
 		}
@@ -1005,7 +1007,7 @@ public class AccountInformationType1Code extends AccountInformationTypeCode {
 	 */
 	public static final MMCode mmNoteOfContraCurrency = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "NoteOfContraCurrency";
 			owner_lazy = () -> AccountInformationType1Code.mmObject();
 		}
@@ -1028,7 +1030,7 @@ public class AccountInformationType1Code extends AccountInformationTypeCode {
 	 */
 	public static final MMCode mmMarginSettlementBankSortCode = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "MarginSettlementBankSortCode";
 			owner_lazy = () -> AccountInformationType1Code.mmObject();
 		}
@@ -1051,7 +1053,7 @@ public class AccountInformationType1Code extends AccountInformationTypeCode {
 	 */
 	public static final MMCode mmMarginSettlementAccountNumber = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "MarginSettlementAccountNumber";
 			owner_lazy = () -> AccountInformationType1Code.mmObject();
 		}
@@ -1074,7 +1076,7 @@ public class AccountInformationType1Code extends AccountInformationTypeCode {
 	 */
 	public static final MMCode mmSecuritiesCustodianAccountNumber = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SecuritiesCustodianAccountNumber";
 			owner_lazy = () -> AccountInformationType1Code.mmObject();
 		}
@@ -1097,7 +1099,7 @@ public class AccountInformationType1Code extends AccountInformationTypeCode {
 	 */
 	public static final MMCode mmSecuritiesCustodianInstitutionCode = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SecuritiesCustodianInstitutionCode";
 			owner_lazy = () -> AccountInformationType1Code.mmObject();
 		}
@@ -1120,7 +1122,7 @@ public class AccountInformationType1Code extends AccountInformationTypeCode {
 	 */
 	public static final MMCode mmSecuritiesCustodianInstitutionName = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SecuritiesCustodianInstitutionName";
 			owner_lazy = () -> AccountInformationType1Code.mmObject();
 		}
@@ -1143,7 +1145,7 @@ public class AccountInformationType1Code extends AccountInformationTypeCode {
 	 */
 	public static final MMCode mmStatusOfCashAccount = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "StatusOfCashAccount";
 			owner_lazy = () -> AccountInformationType1Code.mmObject();
 		}
@@ -1166,7 +1168,7 @@ public class AccountInformationType1Code extends AccountInformationTypeCode {
 	 */
 	public static final MMCode mmStatusOfSecuritiesCustodianAccount = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "StatusOfSecuritiesCustodianAccount";
 			owner_lazy = () -> AccountInformationType1Code.mmObject();
 		}
@@ -1175,34 +1177,26 @@ public class AccountInformationType1Code extends AccountInformationTypeCode {
 	static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "AccountInformationType1Code";
 				definition = "Specifies the type of account information.";
-				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.AccountInformationType1Code.mmIntermediaryBankNameOfDealtCurrency,
-						com.tools20022.repository.codeset.AccountInformationType1Code.mmIntermediaryBankNumberOfContraCurrency, com.tools20022.repository.codeset.AccountInformationType1Code.mmIntermediaryBankNumberOfDealtCurrency,
-						com.tools20022.repository.codeset.AccountInformationType1Code.mmBeneficiaryInstitutionBICCodeOfContraCurrency,
-						com.tools20022.repository.codeset.AccountInformationType1Code.mmBeneficiaryInstitutionBICCodeOfDealtCurrency,
-						com.tools20022.repository.codeset.AccountInformationType1Code.mmBeneficiaryInstitutionNameOfContraCurrency, com.tools20022.repository.codeset.AccountInformationType1Code.mmBeneficiaryInstitutionNameOfDealtCurrency,
-						com.tools20022.repository.codeset.AccountInformationType1Code.mmBeneficiaryInstitutionNumberOfContraCurrency,
-						com.tools20022.repository.codeset.AccountInformationType1Code.mmBeneficiaryInstitutionNumberOfDealtCurrency, com.tools20022.repository.codeset.AccountInformationType1Code.mmCFETSMarginSettlementAccountNumber,
-						com.tools20022.repository.codeset.AccountInformationType1Code.mmCorrespondentBankBICCodeOfContraCurrency, com.tools20022.repository.codeset.AccountInformationType1Code.mmCorrespondentBankBICCodeOfDealtCurrency,
-						com.tools20022.repository.codeset.AccountInformationType1Code.mmCorrespondentBankNameOfContraCurrency, com.tools20022.repository.codeset.AccountInformationType1Code.mmCorrespondentBankNameOfDealtCurrency,
-						com.tools20022.repository.codeset.AccountInformationType1Code.mmCorrespondentBankNumberOfContraCurrency, com.tools20022.repository.codeset.AccountInformationType1Code.mmCorrespondentBankNumberOfDealtCurrency,
-						com.tools20022.repository.codeset.AccountInformationType1Code.mmCurrentAccount, com.tools20022.repository.codeset.AccountInformationType1Code.mmDepositAccount,
-						com.tools20022.repository.codeset.AccountInformationType1Code.mmFundCustodianAccountName, com.tools20022.repository.codeset.AccountInformationType1Code.mmFundCustodianAccountNumber,
-						com.tools20022.repository.codeset.AccountInformationType1Code.mmFundCustodianBankName, com.tools20022.repository.codeset.AccountInformationType1Code.mmIntermediaryBankBICCodeOfContraCurrency,
-						com.tools20022.repository.codeset.AccountInformationType1Code.mmIntermediaryBankBICCodeOfDealtCurrency, com.tools20022.repository.codeset.AccountInformationType1Code.mmIntermediaryBankNameOfContraCurrency,
-						com.tools20022.repository.codeset.AccountInformationType1Code.mmMarginCustodianAccountName, com.tools20022.repository.codeset.AccountInformationType1Code.mmMarginCustodianAccountNumber,
-						com.tools20022.repository.codeset.AccountInformationType1Code.mmMarginCustodianInstitutionCode, com.tools20022.repository.codeset.AccountInformationType1Code.mmMarginCustodianInstitutionName,
-						com.tools20022.repository.codeset.AccountInformationType1Code.mmMarginSettlementAccountName, com.tools20022.repository.codeset.AccountInformationType1Code.mmMarginSettlementBankName,
-						com.tools20022.repository.codeset.AccountInformationType1Code.mmMultiCurrencyAccountDescription, com.tools20022.repository.codeset.AccountInformationType1Code.mmNoteOfDealtCurrency,
-						com.tools20022.repository.codeset.AccountInformationType1Code.mmSecuritiesCustodianAccountChineseName, com.tools20022.repository.codeset.AccountInformationType1Code.mmSecuritiesCustodianAccountName,
-						com.tools20022.repository.codeset.AccountInformationType1Code.mmOtherMarginSettlementAccountNumber, com.tools20022.repository.codeset.AccountInformationType1Code.mmNoteOfContraCurrency,
-						com.tools20022.repository.codeset.AccountInformationType1Code.mmMarginSettlementBankSortCode, com.tools20022.repository.codeset.AccountInformationType1Code.mmMarginSettlementAccountNumber,
-						com.tools20022.repository.codeset.AccountInformationType1Code.mmSecuritiesCustodianAccountNumber, com.tools20022.repository.codeset.AccountInformationType1Code.mmSecuritiesCustodianInstitutionCode,
-						com.tools20022.repository.codeset.AccountInformationType1Code.mmSecuritiesCustodianInstitutionName, com.tools20022.repository.codeset.AccountInformationType1Code.mmStatusOfCashAccount,
-						com.tools20022.repository.codeset.AccountInformationType1Code.mmStatusOfSecuritiesCustodianAccount);
+				code_lazy = () -> Arrays.asList(AccountInformationType1Code.mmIntermediaryBankNameOfDealtCurrency, AccountInformationType1Code.mmIntermediaryBankNumberOfContraCurrency,
+						AccountInformationType1Code.mmIntermediaryBankNumberOfDealtCurrency, AccountInformationType1Code.mmBeneficiaryInstitutionBICCodeOfContraCurrency,
+						AccountInformationType1Code.mmBeneficiaryInstitutionBICCodeOfDealtCurrency, AccountInformationType1Code.mmBeneficiaryInstitutionNameOfContraCurrency,
+						AccountInformationType1Code.mmBeneficiaryInstitutionNameOfDealtCurrency, AccountInformationType1Code.mmBeneficiaryInstitutionNumberOfContraCurrency,
+						AccountInformationType1Code.mmBeneficiaryInstitutionNumberOfDealtCurrency, AccountInformationType1Code.mmCFETSMarginSettlementAccountNumber, AccountInformationType1Code.mmCorrespondentBankBICCodeOfContraCurrency,
+						AccountInformationType1Code.mmCorrespondentBankBICCodeOfDealtCurrency, AccountInformationType1Code.mmCorrespondentBankNameOfContraCurrency, AccountInformationType1Code.mmCorrespondentBankNameOfDealtCurrency,
+						AccountInformationType1Code.mmCorrespondentBankNumberOfContraCurrency, AccountInformationType1Code.mmCorrespondentBankNumberOfDealtCurrency, AccountInformationType1Code.mmCurrentAccount,
+						AccountInformationType1Code.mmDepositAccount, AccountInformationType1Code.mmFundCustodianAccountName, AccountInformationType1Code.mmFundCustodianAccountNumber, AccountInformationType1Code.mmFundCustodianBankName,
+						AccountInformationType1Code.mmIntermediaryBankBICCodeOfContraCurrency, AccountInformationType1Code.mmIntermediaryBankBICCodeOfDealtCurrency, AccountInformationType1Code.mmIntermediaryBankNameOfContraCurrency,
+						AccountInformationType1Code.mmMarginCustodianAccountName, AccountInformationType1Code.mmMarginCustodianAccountNumber, AccountInformationType1Code.mmMarginCustodianInstitutionCode,
+						AccountInformationType1Code.mmMarginCustodianInstitutionName, AccountInformationType1Code.mmMarginSettlementAccountName, AccountInformationType1Code.mmMarginSettlementBankName,
+						AccountInformationType1Code.mmMultiCurrencyAccountDescription, AccountInformationType1Code.mmNoteOfDealtCurrency, AccountInformationType1Code.mmSecuritiesCustodianAccountChineseName,
+						AccountInformationType1Code.mmSecuritiesCustodianAccountName, AccountInformationType1Code.mmOtherMarginSettlementAccountNumber, AccountInformationType1Code.mmNoteOfContraCurrency,
+						AccountInformationType1Code.mmMarginSettlementBankSortCode, AccountInformationType1Code.mmMarginSettlementAccountNumber, AccountInformationType1Code.mmSecuritiesCustodianAccountNumber,
+						AccountInformationType1Code.mmSecuritiesCustodianInstitutionCode, AccountInformationType1Code.mmSecuritiesCustodianInstitutionName, AccountInformationType1Code.mmStatusOfCashAccount,
+						AccountInformationType1Code.mmStatusOfSecuritiesCustodianAccount);
 				trace_lazy = () -> AccountInformationTypeCode.mmObject();
 			}
 		});

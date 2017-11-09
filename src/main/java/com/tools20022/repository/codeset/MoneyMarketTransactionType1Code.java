@@ -19,7 +19,9 @@ package com.tools20022.repository.codeset;
 
 import com.tools20022.metamodel.MMCode;
 import com.tools20022.metamodel.MMCodeSet;
+import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.codeset.MoneyMarketTransactionTypeCode;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -80,7 +82,7 @@ public class MoneyMarketTransactionType1Code extends MoneyMarketTransactionTypeC
 	 */
 	public static final MMCode mmCashBorrowing = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CashBorrowing";
 			owner_lazy = () -> MoneyMarketTransactionType1Code.mmObject();
 		}
@@ -103,7 +105,7 @@ public class MoneyMarketTransactionType1Code extends MoneyMarketTransactionTypeC
 	 */
 	public static final MMCode mmCashLending = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CashLending";
 			owner_lazy = () -> MoneyMarketTransactionType1Code.mmObject();
 		}
@@ -112,11 +114,11 @@ public class MoneyMarketTransactionType1Code extends MoneyMarketTransactionTypeC
 	static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "MoneyMarketTransactionType1Code";
 				definition = "Specifies the transaction type used in the money market statistical reporting for the secured market.";
-				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.MoneyMarketTransactionType1Code.mmCashBorrowing, com.tools20022.repository.codeset.MoneyMarketTransactionType1Code.mmCashLending);
+				code_lazy = () -> Arrays.asList(MoneyMarketTransactionType1Code.mmCashBorrowing, MoneyMarketTransactionType1Code.mmCashLending);
 				trace_lazy = () -> MoneyMarketTransactionTypeCode.mmObject();
 			}
 		});

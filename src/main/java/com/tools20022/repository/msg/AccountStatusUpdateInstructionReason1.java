@@ -20,8 +20,10 @@ package com.tools20022.repository.msg;
 import com.tools20022.metamodel.MMMessageAssociationEnd;
 import com.tools20022.metamodel.MMMessageAttribute;
 import com.tools20022.metamodel.MMMessageComponent;
+import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.choice.AccountStatusUpdateInstructionReason2Choice;
 import com.tools20022.repository.datatype.Max350Text;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -102,10 +104,10 @@ public class AccountStatusUpdateInstructionReason1 {
 			componentContext_lazy = () -> AccountStatusUpdateInstructionReason1.mmObject();
 			isDerived = false;
 			xmlTag = "Cd";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Code";
 			definition = "Reason for the instruction to change the account status.";
-			previousVersion_lazy = () -> com.tools20022.repository.msg.EnabledStatusReason1.mmCode;
+			previousVersion_lazy = () -> EnabledStatusReason1.mmCode;
 			maxOccurs = 1;
 			minOccurs = 0;
 			isComposite = true;
@@ -153,10 +155,10 @@ public class AccountStatusUpdateInstructionReason1 {
 			componentContext_lazy = () -> AccountStatusUpdateInstructionReason1.mmObject();
 			isDerived = false;
 			xmlTag = "AddtlInf";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AdditionalInformation";
 			definition = "Additional information about the reason for the instruction to change the account status.";
-			previousVersion_lazy = () -> com.tools20022.repository.msg.EnabledStatusReason1.mmAdditionalInformation;
+			previousVersion_lazy = () -> EnabledStatusReason1.mmAdditionalInformation;
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> Max350Text.mmObject();
@@ -166,9 +168,9 @@ public class AccountStatusUpdateInstructionReason1 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.AccountStatusUpdateInstructionReason1.mmCode, com.tools20022.repository.msg.AccountStatusUpdateInstructionReason1.mmAdditionalInformation);
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				messageElement_lazy = () -> Arrays.asList(AccountStatusUpdateInstructionReason1.mmCode, AccountStatusUpdateInstructionReason1.mmAdditionalInformation);
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "AccountStatusUpdateInstructionReason1";
 				definition = "Reason for an update to an account status.";
 				previousVersion_lazy = () -> EnabledStatusReason1.mmObject();

@@ -20,6 +20,7 @@ package com.tools20022.repository.msg;
 import com.tools20022.metamodel.MMMessageAssociationEnd;
 import com.tools20022.metamodel.MMMessageAttribute;
 import com.tools20022.metamodel.MMMessageComponent;
+import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.choice.Amount2Choice;
 import com.tools20022.repository.choice.DateAndDateTimeChoice;
 import com.tools20022.repository.choice.PriorityNumeric1Choice;
@@ -27,6 +28,9 @@ import com.tools20022.repository.datatype.ISODateTime;
 import com.tools20022.repository.datatype.Max350Text;
 import com.tools20022.repository.datatype.Max35Text;
 import com.tools20022.repository.entity.BookEntry;
+import com.tools20022.repository.entity.Entry;
+import com.tools20022.repository.entity.Payment;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.List;
@@ -154,11 +158,11 @@ public class IntraBalancePending2 {
 	 */
 	public static final MMMessageAssociationEnd mmStatusAndReason = new MMMessageAssociationEnd() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Payment.mmPaymentStatus;
+			businessElementTrace_lazy = () -> Payment.mmPaymentStatus;
 			componentContext_lazy = () -> IntraBalancePending2.mmObject();
 			isDerived = false;
 			xmlTag = "StsAndRsn";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "StatusAndReason";
 			definition = "Status and status reason of the transaction.";
 			maxOccurs = 1;
@@ -205,11 +209,11 @@ public class IntraBalancePending2 {
 	 */
 	public static final MMMessageAttribute mmAccountOwnerTransactionIdentification = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Entry.mmAccountOwnerTransactionIdentification;
+			businessElementTrace_lazy = () -> Entry.mmAccountOwnerTransactionIdentification;
 			componentContext_lazy = () -> IntraBalancePending2.mmObject();
 			isDerived = false;
 			xmlTag = "AcctOwnrTxId";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AccountOwnerTransactionIdentification";
 			definition = "Unambiguous identification of the transaction as known by the account owner (or the instructing party managing the account).";
 			maxOccurs = 1;
@@ -255,11 +259,11 @@ public class IntraBalancePending2 {
 	 */
 	public static final MMMessageAttribute mmAccountServicerTransactionIdentification = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Entry.mmAccountServicerTransactionIdentification;
+			businessElementTrace_lazy = () -> Entry.mmAccountServicerTransactionIdentification;
 			componentContext_lazy = () -> IntraBalancePending2.mmObject();
 			isDerived = false;
 			xmlTag = "AcctSvcrTxId";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AccountServicerTransactionIdentification";
 			definition = "Unambiguous identification of the transaction as known by the account servicer.";
 			maxOccurs = 1;
@@ -303,7 +307,7 @@ public class IntraBalancePending2 {
 			componentContext_lazy = () -> IntraBalancePending2.mmObject();
 			isDerived = false;
 			xmlTag = "MktInfrstrctrTxId";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "MarketInfrastructureTransactionIdentification";
 			definition = "Identification of a transaction assigned by a market infrastructure other than a central securities depository, for example, Target2-Securities.";
 			maxOccurs = 1;
@@ -345,7 +349,7 @@ public class IntraBalancePending2 {
 			componentContext_lazy = () -> IntraBalancePending2.mmObject();
 			isDerived = false;
 			xmlTag = "PrcrTxId";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ProcessorTransactionIdentification";
 			definition = "Identification of the transaction as assigned by the processor.";
 			maxOccurs = 1;
@@ -386,7 +390,7 @@ public class IntraBalancePending2 {
 			componentContext_lazy = () -> IntraBalancePending2.mmObject();
 			isDerived = false;
 			xmlTag = "PoolId";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PoolIdentification";
 			definition = "Collective reference identifying a set of messages.";
 			maxOccurs = 1;
@@ -430,7 +434,7 @@ public class IntraBalancePending2 {
 			componentContext_lazy = () -> IntraBalancePending2.mmObject();
 			isDerived = false;
 			xmlTag = "CorpActnEvtId";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CorporateActionEventIdentification";
 			definition = "Identification assigned by the account servicer to unambiguously identify a corporate action event.";
 			maxOccurs = 1;
@@ -471,7 +475,7 @@ public class IntraBalancePending2 {
 			componentContext_lazy = () -> IntraBalancePending2.mmObject();
 			isDerived = false;
 			xmlTag = "BalFr";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "BalanceFrom";
 			definition = "Balance from which the amount of money is moved.";
 			maxOccurs = 1;
@@ -513,7 +517,7 @@ public class IntraBalancePending2 {
 			componentContext_lazy = () -> IntraBalancePending2.mmObject();
 			isDerived = false;
 			xmlTag = "BalTo";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "BalanceTo";
 			definition = "Balance to which the amount of money is moved.";
 			maxOccurs = 1;
@@ -560,7 +564,7 @@ public class IntraBalancePending2 {
 			componentContext_lazy = () -> IntraBalancePending2.mmObject();
 			isDerived = false;
 			xmlTag = "SttlmAmt";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SettlementAmount";
 			definition = "Amount of money effectively settled and which will be credited to/debited from the account owner's cash account. It may differ from the instructed settlement amount based on market tolerance level.";
 			maxOccurs = 1;
@@ -603,7 +607,7 @@ public class IntraBalancePending2 {
 			componentContext_lazy = () -> IntraBalancePending2.mmObject();
 			isDerived = false;
 			xmlTag = "IntnddSttlmDt";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "IntendedSettlementDate";
 			definition = "Date and time at which the amount of money is intended to be moved.";
 			maxOccurs = 1;
@@ -644,7 +648,7 @@ public class IntraBalancePending2 {
 			componentContext_lazy = () -> IntraBalancePending2.mmObject();
 			isDerived = false;
 			xmlTag = "StsDt";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "StatusDate";
 			definition = "Date and time at which the status was assigned.";
 			maxOccurs = 1;
@@ -685,7 +689,7 @@ public class IntraBalancePending2 {
 			componentContext_lazy = () -> IntraBalancePending2.mmObject();
 			isDerived = false;
 			xmlTag = "CshSubBalId";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CashSubBalanceIdentification";
 			definition = "Number identifying a lot constituting the sub-balance.";
 			maxOccurs = 1;
@@ -730,7 +734,7 @@ public class IntraBalancePending2 {
 			componentContext_lazy = () -> IntraBalancePending2.mmObject();
 			isDerived = false;
 			xmlTag = "Lnkgs";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Linkages";
 			definition = "Link to another transaction that must be processed after, before or at the same time.";
 			minOccurs = 0;
@@ -773,7 +777,7 @@ public class IntraBalancePending2 {
 			componentContext_lazy = () -> IntraBalancePending2.mmObject();
 			isDerived = false;
 			xmlTag = "Prty";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Priority";
 			definition = "Specifies whether the transaction is to be executed with a high priority.";
 			maxOccurs = 1;
@@ -815,7 +819,7 @@ public class IntraBalancePending2 {
 			componentContext_lazy = () -> IntraBalancePending2.mmObject();
 			isDerived = false;
 			xmlTag = "MsgOrgtr";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "MessageOriginator";
 			definition = "Party that originated the message, if other than the sender.";
 			maxOccurs = 1;
@@ -857,7 +861,7 @@ public class IntraBalancePending2 {
 			componentContext_lazy = () -> IntraBalancePending2.mmObject();
 			isDerived = false;
 			xmlTag = "CreDtTm";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CreationDateTime";
 			definition = "Specifies the date/time on which the trade was executed.";
 			maxOccurs = 1;
@@ -901,7 +905,7 @@ public class IntraBalancePending2 {
 			componentContext_lazy = () -> IntraBalancePending2.mmObject();
 			isDerived = false;
 			xmlTag = "InstrPrcgAddtlDtls";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "InstructionProcessingAdditionalDetails";
 			definition = "Provides additional settlement processing information which can not be included within the structured fields of the message.";
 			maxOccurs = 1;
@@ -944,7 +948,7 @@ public class IntraBalancePending2 {
 			componentContext_lazy = () -> IntraBalancePending2.mmObject();
 			isDerived = false;
 			xmlTag = "SplmtryData";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SupplementaryData";
 			definition = "Additional information that cannot be captured in the structured elements and/or any other specific block.";
 			minOccurs = 0;
@@ -956,17 +960,14 @@ public class IntraBalancePending2 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.IntraBalancePending2.mmStatusAndReason, com.tools20022.repository.msg.IntraBalancePending2.mmAccountOwnerTransactionIdentification,
-						com.tools20022.repository.msg.IntraBalancePending2.mmAccountServicerTransactionIdentification, com.tools20022.repository.msg.IntraBalancePending2.mmMarketInfrastructureTransactionIdentification,
-						com.tools20022.repository.msg.IntraBalancePending2.mmProcessorTransactionIdentification, com.tools20022.repository.msg.IntraBalancePending2.mmPoolIdentification,
-						com.tools20022.repository.msg.IntraBalancePending2.mmCorporateActionEventIdentification, com.tools20022.repository.msg.IntraBalancePending2.mmBalanceFrom,
-						com.tools20022.repository.msg.IntraBalancePending2.mmBalanceTo, com.tools20022.repository.msg.IntraBalancePending2.mmSettlementAmount, com.tools20022.repository.msg.IntraBalancePending2.mmIntendedSettlementDate,
-						com.tools20022.repository.msg.IntraBalancePending2.mmStatusDate, com.tools20022.repository.msg.IntraBalancePending2.mmCashSubBalanceIdentification, com.tools20022.repository.msg.IntraBalancePending2.mmLinkages,
-						com.tools20022.repository.msg.IntraBalancePending2.mmPriority, com.tools20022.repository.msg.IntraBalancePending2.mmMessageOriginator, com.tools20022.repository.msg.IntraBalancePending2.mmCreationDateTime,
-						com.tools20022.repository.msg.IntraBalancePending2.mmInstructionProcessingAdditionalDetails, com.tools20022.repository.msg.IntraBalancePending2.mmSupplementaryData);
+				messageElement_lazy = () -> Arrays.asList(IntraBalancePending2.mmStatusAndReason, IntraBalancePending2.mmAccountOwnerTransactionIdentification, IntraBalancePending2.mmAccountServicerTransactionIdentification,
+						IntraBalancePending2.mmMarketInfrastructureTransactionIdentification, IntraBalancePending2.mmProcessorTransactionIdentification, IntraBalancePending2.mmPoolIdentification,
+						IntraBalancePending2.mmCorporateActionEventIdentification, IntraBalancePending2.mmBalanceFrom, IntraBalancePending2.mmBalanceTo, IntraBalancePending2.mmSettlementAmount,
+						IntraBalancePending2.mmIntendedSettlementDate, IntraBalancePending2.mmStatusDate, IntraBalancePending2.mmCashSubBalanceIdentification, IntraBalancePending2.mmLinkages, IntraBalancePending2.mmPriority,
+						IntraBalancePending2.mmMessageOriginator, IntraBalancePending2.mmCreationDateTime, IntraBalancePending2.mmInstructionProcessingAdditionalDetails, IntraBalancePending2.mmSupplementaryData);
 				trace_lazy = () -> BookEntry.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 				name = "IntraBalancePending2";
 				definition = "Identifies the details of the transaction.";
 			}

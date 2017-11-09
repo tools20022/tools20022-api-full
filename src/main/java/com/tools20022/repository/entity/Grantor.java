@@ -18,7 +18,10 @@
 package com.tools20022.repository.entity;
 
 import com.tools20022.metamodel.MMBusinessComponent;
+import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.entity.InvestmentFundPartyRole;
+import com.tools20022.repository.GeneratedRepository;
+import com.tools20022.repository.msg.*;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -89,15 +92,12 @@ public class Grantor extends InvestmentFundPartyRole {
 	static public MMBusinessComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMBusinessComponent() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "Grantor";
 				definition = "Grantor role in the hedge funds industry.";
-				derivationElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.AccountParties5.mmGranter, com.tools20022.repository.msg.AccountParties6.mmGranter, com.tools20022.repository.msg.AccountParties4.mmGranter,
-						com.tools20022.repository.msg.AccountParties7.mmGranter, com.tools20022.repository.msg.AccountParties9.mmGranter, com.tools20022.repository.msg.AccountParties8.mmGranter,
-						com.tools20022.repository.msg.AccountParties11.mmGranter, com.tools20022.repository.msg.AccountParties10.mmGranter, com.tools20022.repository.msg.AccountParties12.mmGranter,
-						com.tools20022.repository.msg.AccountParties13.mmGranter, com.tools20022.repository.msg.AccountParties14.mmGranter, com.tools20022.repository.msg.AccountParties15.mmGranter,
-						com.tools20022.repository.msg.AccountParties16.mmGranter);
+				derivationElement_lazy = () -> Arrays.asList(AccountParties5.mmGranter, AccountParties6.mmGranter, AccountParties4.mmGranter, AccountParties7.mmGranter, AccountParties9.mmGranter, AccountParties8.mmGranter,
+						AccountParties11.mmGranter, AccountParties10.mmGranter, AccountParties12.mmGranter, AccountParties13.mmGranter, AccountParties14.mmGranter, AccountParties15.mmGranter, AccountParties16.mmGranter);
 				superType_lazy = () -> InvestmentFundPartyRole.mmObject();
 			}
 		});

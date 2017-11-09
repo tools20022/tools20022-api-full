@@ -19,7 +19,9 @@ package com.tools20022.repository.codeset;
 
 import com.tools20022.metamodel.MMCode;
 import com.tools20022.metamodel.MMCodeSet;
+import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.codeset.QueryTypeCode;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -86,7 +88,7 @@ public class QueryType3Code extends QueryTypeCode {
 	 */
 	public static final MMCode mmAll = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "All";
 			owner_lazy = () -> QueryType3Code.mmObject();
 		}
@@ -109,7 +111,7 @@ public class QueryType3Code extends QueryTypeCode {
 	 */
 	public static final MMCode mmChanged = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Changed";
 			owner_lazy = () -> QueryType3Code.mmObject();
 		}
@@ -132,7 +134,7 @@ public class QueryType3Code extends QueryTypeCode {
 	 */
 	public static final MMCode mmModified = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Modified";
 			owner_lazy = () -> QueryType3Code.mmObject();
 		}
@@ -141,12 +143,12 @@ public class QueryType3Code extends QueryTypeCode {
 	static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
 				example = Arrays.asList("ALLL");
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "QueryType3Code";
 				definition = "Specifyies the nature of the request, that is whether all information be returned or only information that has changed since the last similar request was returned.";
-				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.QueryType3Code.mmAll, com.tools20022.repository.codeset.QueryType3Code.mmChanged, com.tools20022.repository.codeset.QueryType3Code.mmModified);
+				code_lazy = () -> Arrays.asList(QueryType3Code.mmAll, QueryType3Code.mmChanged, QueryType3Code.mmModified);
 				trace_lazy = () -> QueryTypeCode.mmObject();
 			}
 		});

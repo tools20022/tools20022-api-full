@@ -19,6 +19,8 @@ package com.tools20022.repository.codeset;
 
 import com.tools20022.metamodel.MMCode;
 import com.tools20022.metamodel.MMCodeSet;
+import com.tools20022.metamodel.MMRegistrationStatus;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -27,6 +29,13 @@ import java.util.concurrent.atomic.AtomicReference;
  * <p>
  * <strong>Constant fields:</strong>
  * <ul>
+ * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getDerivation derivation}
+ * =
+ * <ul>
+ * <li>{@linkplain com.tools20022.repository.codeset.StatusResponse1Code
+ * StatusResponse1Code}</li>
+ * </ul>
+ * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getCode code} =
  * <ul>
  * <li>
@@ -38,13 +47,6 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>
  * {@linkplain com.tools20022.repository.codeset.StatusResponseCode#mmCompleteResponse
  * StatusResponseCode.mmCompleteResponse}</li>
- * </ul>
- * </li>
- * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getDerivation derivation}
- * =
- * <ul>
- * <li>{@linkplain com.tools20022.repository.codeset.StatusResponse1Code
- * StatusResponse1Code}</li>
  * </ul>
  * </li>
  * <li>
@@ -94,7 +96,7 @@ public class StatusResponseCode {
 	 */
 	public static final MMCode mmNoResponseYet = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "NoResponseYet";
 			definition = "Response not provided yet.";
 			owner_lazy = () -> StatusResponseCode.mmObject();
@@ -124,7 +126,7 @@ public class StatusResponseCode {
 	 */
 	public static final MMCode mmPartialResponse = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PartialResponse";
 			definition = "Response is partially provided.";
 			owner_lazy = () -> StatusResponseCode.mmObject();
@@ -154,7 +156,7 @@ public class StatusResponseCode {
 	 */
 	public static final MMCode mmCompleteResponse = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CompleteResponse";
 			definition = "Response is complete.";
 			owner_lazy = () -> StatusResponseCode.mmObject();
@@ -165,13 +167,12 @@ public class StatusResponseCode {
 	static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
 				example = Arrays.asList("NRES");
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "StatusResponseCode";
 				definition = "Specifies the status of the response.";
-				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.StatusResponseCode.mmNoResponseYet, com.tools20022.repository.codeset.StatusResponseCode.mmPartialResponse,
-						com.tools20022.repository.codeset.StatusResponseCode.mmCompleteResponse);
+				code_lazy = () -> Arrays.asList(StatusResponseCode.mmNoResponseYet, StatusResponseCode.mmPartialResponse, StatusResponseCode.mmCompleteResponse);
 				derivation_lazy = () -> Arrays.asList(StatusResponse1Code.mmObject());
 			}
 		});

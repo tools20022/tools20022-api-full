@@ -19,7 +19,9 @@ package com.tools20022.repository.codeset;
 
 import com.tools20022.metamodel.MMCode;
 import com.tools20022.metamodel.MMCodeSet;
+import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.codeset.DeliveryTypeV2Code;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -90,7 +92,7 @@ public class DeliveryType2Code extends DeliveryTypeV2Code {
 	 */
 	public static final MMCode mmAgainstPayment = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AgainstPayment";
 			owner_lazy = () -> DeliveryType2Code.mmObject();
 		}
@@ -113,7 +115,7 @@ public class DeliveryType2Code extends DeliveryTypeV2Code {
 	 */
 	public static final MMCode mmFree = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Free";
 			owner_lazy = () -> DeliveryType2Code.mmObject();
 		}
@@ -136,7 +138,7 @@ public class DeliveryType2Code extends DeliveryTypeV2Code {
 	 */
 	public static final MMCode mmTriparty = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Triparty";
 			owner_lazy = () -> DeliveryType2Code.mmObject();
 		}
@@ -159,7 +161,7 @@ public class DeliveryType2Code extends DeliveryTypeV2Code {
 	 */
 	public static final MMCode mmHoldInCustody = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "HoldInCustody";
 			owner_lazy = () -> DeliveryType2Code.mmObject();
 		}
@@ -168,13 +170,12 @@ public class DeliveryType2Code extends DeliveryTypeV2Code {
 	static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
 				example = Arrays.asList("APMT");
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "DeliveryType2Code";
 				definition = "Describes the delivery or custody arrangement for the underlying securities.";
-				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.DeliveryType2Code.mmAgainstPayment, com.tools20022.repository.codeset.DeliveryType2Code.mmFree,
-						com.tools20022.repository.codeset.DeliveryType2Code.mmTriparty, com.tools20022.repository.codeset.DeliveryType2Code.mmHoldInCustody);
+				code_lazy = () -> Arrays.asList(DeliveryType2Code.mmAgainstPayment, DeliveryType2Code.mmFree, DeliveryType2Code.mmTriparty, DeliveryType2Code.mmHoldInCustody);
 				trace_lazy = () -> DeliveryTypeV2Code.mmObject();
 			}
 		});

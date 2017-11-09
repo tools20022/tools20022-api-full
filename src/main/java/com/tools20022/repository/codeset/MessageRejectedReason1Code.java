@@ -19,7 +19,9 @@ package com.tools20022.repository.codeset;
 
 import com.tools20022.metamodel.MMCode;
 import com.tools20022.metamodel.MMCodeSet;
+import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.codeset.RejectedStatusReasonCode;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -83,7 +85,7 @@ public class MessageRejectedReason1Code extends RejectedStatusReasonCode {
 	 */
 	public static final MMCode mmInvalidOrUnrecognisedReference = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "InvalidOrUnrecognisedReference";
 			owner_lazy = () -> MessageRejectedReason1Code.mmObject();
 		}
@@ -106,7 +108,7 @@ public class MessageRejectedReason1Code extends RejectedStatusReasonCode {
 	 */
 	public static final MMCode mmNotAllowedRequest = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "NotAllowedRequest";
 			owner_lazy = () -> MessageRejectedReason1Code.mmObject();
 		}
@@ -115,12 +117,12 @@ public class MessageRejectedReason1Code extends RejectedStatusReasonCode {
 	static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
 				example = Arrays.asList("REFE");
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "MessageRejectedReason1Code";
 				definition = "Specifies the reason for a message rejected status.";
-				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.MessageRejectedReason1Code.mmInvalidOrUnrecognisedReference, com.tools20022.repository.codeset.MessageRejectedReason1Code.mmNotAllowedRequest);
+				code_lazy = () -> Arrays.asList(MessageRejectedReason1Code.mmInvalidOrUnrecognisedReference, MessageRejectedReason1Code.mmNotAllowedRequest);
 				trace_lazy = () -> RejectedStatusReasonCode.mmObject();
 			}
 		});

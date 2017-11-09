@@ -20,6 +20,7 @@ package com.tools20022.repository.area.fxtr;
 import com.tools20022.metamodel.MMMessageBuildingBlock;
 import com.tools20022.metamodel.MMMessageDefinition;
 import com.tools20022.metamodel.MMMessageDefinitionIdentifier;
+import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.area.ForeignExchangeTradeLatestVersion;
 import com.tools20022.repository.msg.*;
 import com.tools20022.repository.msgset.PostTradeForeignExchangeISOLatestversion;
@@ -41,6 +42,9 @@ import java.util.List;
  * <p>
  * <strong>Constant fields:</strong>
  * <ul>
+ * <li>
+ * {@linkplain com.tools20022.metamodel.MMMessageDefinition#getMessageDefinitionIdentifier
+ * messageDefinitionIdentifier} = {@code fxtr.014.001.04}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMMessageDefinition#getBusinessArea
  * businessArea} =
  * {@linkplain com.tools20022.repository.area.ForeignExchangeTradeLatestVersion
@@ -103,9 +107,6 @@ import java.util.List;
  * </ul>
  * </li>
  * <li>
- * {@linkplain com.tools20022.metamodel.MMMessageDefinition#getMessageDefinitionIdentifier
- * messageDefinitionIdentifier} = {@code fxtr.014.001.04}</li>
- * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
  * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
@@ -147,7 +148,7 @@ public class ForeignExchangeTradeInstructionV04 {
 	public static final MMMessageBuildingBlock mmTradeInformation = new MMMessageBuildingBlock() {
 		{
 			xmlTag = "TradInf";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "TradeInformation";
 			definition = "General information related to the trade.";
 			maxOccurs = 1;
@@ -182,7 +183,7 @@ public class ForeignExchangeTradeInstructionV04 {
 	public static final MMMessageBuildingBlock mmTradingSideIdentification = new MMMessageBuildingBlock() {
 		{
 			xmlTag = "TradgSdId";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "TradingSideIdentification";
 			definition = "Party(ies) on the trading side of the trade.";
 			maxOccurs = 1;
@@ -217,7 +218,7 @@ public class ForeignExchangeTradeInstructionV04 {
 	public static final MMMessageBuildingBlock mmCounterpartySideIdentification = new MMMessageBuildingBlock() {
 		{
 			xmlTag = "CtrPtySdId";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CounterpartySideIdentification";
 			definition = "Party(ies) on the counterparty side of the trade.";
 			maxOccurs = 1;
@@ -252,7 +253,7 @@ public class ForeignExchangeTradeInstructionV04 {
 	public static final MMMessageBuildingBlock mmTradeAmounts = new MMMessageBuildingBlock() {
 		{
 			xmlTag = "TradAmts";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "TradeAmounts";
 			definition = "Amounts of the trade.";
 			maxOccurs = 1;
@@ -286,7 +287,7 @@ public class ForeignExchangeTradeInstructionV04 {
 	public static final MMMessageBuildingBlock mmAgreedRate = new MMMessageBuildingBlock() {
 		{
 			xmlTag = "AgrdRate";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AgreedRate";
 			definition = "Exchange rate as agreed by the traders.";
 			maxOccurs = 1;
@@ -324,7 +325,7 @@ public class ForeignExchangeTradeInstructionV04 {
 	public static final MMMessageBuildingBlock mmNonDeliverableForwardConditions = new MMMessageBuildingBlock() {
 		{
 			xmlTag = "NDFConds";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "NonDeliverableForwardConditions";
 			definition = "Specifies the conditions for a non deliverable opening or fixing confirmation.";
 			maxOccurs = 1;
@@ -360,7 +361,7 @@ public class ForeignExchangeTradeInstructionV04 {
 	public static final MMMessageBuildingBlock mmTradingSideSettlementInstructions = new MMMessageBuildingBlock() {
 		{
 			xmlTag = "TradgSdSttlmInstrs";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "TradingSideSettlementInstructions";
 			definition = "Settlement instructions for the amounts received by the trading side.";
 			maxOccurs = 1;
@@ -396,7 +397,7 @@ public class ForeignExchangeTradeInstructionV04 {
 	public static final MMMessageBuildingBlock mmCounterpartySideSettlementInstructions = new MMMessageBuildingBlock() {
 		{
 			xmlTag = "CtrPtySdSttlmInstrs";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CounterpartySideSettlementInstructions";
 			definition = "Settlement instructions for the amounts received by the counterparty.";
 			maxOccurs = 1;
@@ -435,7 +436,7 @@ public class ForeignExchangeTradeInstructionV04 {
 	public static final MMMessageBuildingBlock mmOptionalGeneralInformation = new MMMessageBuildingBlock() {
 		{
 			xmlTag = "OptnlGnlInf";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "OptionalGeneralInformation";
 			definition = "Specifies whether the trade is a block or an individual trade. It also contains supplementary information such as free format information, broker's identification, dealing branches and references.";
 			maxOccurs = 1;
@@ -474,7 +475,7 @@ public class ForeignExchangeTradeInstructionV04 {
 	public static final MMMessageBuildingBlock mmRegulatoryReporting = new MMMessageBuildingBlock() {
 		{
 			xmlTag = "RgltryRptg";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "RegulatoryReporting";
 			definition = "Information that is to be provided to trade repositories in the context of the regulatory standards around over-the-counter (OTC) derivatives, central counterparties and trade repositories.";
 			maxOccurs = 1;
@@ -512,7 +513,7 @@ public class ForeignExchangeTradeInstructionV04 {
 	public static final MMMessageBuildingBlock mmSupplementaryData = new MMMessageBuildingBlock() {
 		{
 			xmlTag = "SplmtryData";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SupplementaryData";
 			definition = "Additional information that cannot be captured in the structured elements and/or any other specific block.";
 			minOccurs = 0;
@@ -523,19 +524,18 @@ public class ForeignExchangeTradeInstructionV04 {
 	final static public MMMessageDefinition mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageDefinition() {
 			{
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "ForeignExchangeTradeInstructionV04";
 				definition = "Scope\r\r\nThe ForeignExchangeTradeInstruction message is sent by a participant to a central settlement system to notify the creation of the foreign exchange trade agreed by both trading parties.\r\r\nUsage\r\r\nThe ForeignExchangeTradeInstruction message is sent from a participant to a central settlement system to advise of the creation of a foreign exchange trade.";
 				messageSet_lazy = () -> Arrays.asList(PostTradeForeignExchangeISOLatestversion.mmObject(), PostTradeForeignExchangeMaintenance20162017.mmObject(), PostTradeForeignExchangeMaintenance20162017andSupplement.mmObject());
 				rootElement = "Document";
 				xmlTag = "FXTradInstr";
 				businessArea_lazy = () -> ForeignExchangeTradeLatestVersion.mmObject();
-				messageBuildingBlock_lazy = () -> Arrays.asList(com.tools20022.repository.area.fxtr.ForeignExchangeTradeInstructionV04.mmTradeInformation,
-						com.tools20022.repository.area.fxtr.ForeignExchangeTradeInstructionV04.mmTradingSideIdentification, com.tools20022.repository.area.fxtr.ForeignExchangeTradeInstructionV04.mmCounterpartySideIdentification,
-						com.tools20022.repository.area.fxtr.ForeignExchangeTradeInstructionV04.mmTradeAmounts, com.tools20022.repository.area.fxtr.ForeignExchangeTradeInstructionV04.mmAgreedRate,
-						com.tools20022.repository.area.fxtr.ForeignExchangeTradeInstructionV04.mmNonDeliverableForwardConditions, com.tools20022.repository.area.fxtr.ForeignExchangeTradeInstructionV04.mmTradingSideSettlementInstructions,
-						com.tools20022.repository.area.fxtr.ForeignExchangeTradeInstructionV04.mmCounterpartySideSettlementInstructions, com.tools20022.repository.area.fxtr.ForeignExchangeTradeInstructionV04.mmOptionalGeneralInformation,
-						com.tools20022.repository.area.fxtr.ForeignExchangeTradeInstructionV04.mmRegulatoryReporting, com.tools20022.repository.area.fxtr.ForeignExchangeTradeInstructionV04.mmSupplementaryData);
+				messageBuildingBlock_lazy = () -> Arrays.asList(ForeignExchangeTradeInstructionV04.mmTradeInformation, ForeignExchangeTradeInstructionV04.mmTradingSideIdentification,
+						ForeignExchangeTradeInstructionV04.mmCounterpartySideIdentification, ForeignExchangeTradeInstructionV04.mmTradeAmounts, ForeignExchangeTradeInstructionV04.mmAgreedRate,
+						ForeignExchangeTradeInstructionV04.mmNonDeliverableForwardConditions, ForeignExchangeTradeInstructionV04.mmTradingSideSettlementInstructions,
+						ForeignExchangeTradeInstructionV04.mmCounterpartySideSettlementInstructions, ForeignExchangeTradeInstructionV04.mmOptionalGeneralInformation, ForeignExchangeTradeInstructionV04.mmRegulatoryReporting,
+						ForeignExchangeTradeInstructionV04.mmSupplementaryData);
 				messageDefinitionIdentifier_lazy = () -> new MMMessageDefinitionIdentifier() {
 					{
 						businessArea = "fxtr";

@@ -20,8 +20,10 @@ package com.tools20022.repository.choice;
 import com.tools20022.metamodel.MMChoiceComponent;
 import com.tools20022.metamodel.MMMessageAssociationEnd;
 import com.tools20022.metamodel.MMMessageAttribute;
+import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.codeset.IntermediateSecurityDistributionType5Code;
 import com.tools20022.repository.entity.SecuritiesProceedsDefinition;
+import com.tools20022.repository.GeneratedRepository;
 import com.tools20022.repository.msg.GenericIdentification20;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
@@ -126,14 +128,14 @@ public class IntermediateSecuritiesDistributionTypeFormat9Choice {
 	 */
 	public static final MMMessageAttribute mmCode = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.SecuritiesProceedsDefinition.mmIntermediateSecuritiesDistributionType;
+			businessElementTrace_lazy = () -> SecuritiesProceedsDefinition.mmIntermediateSecuritiesDistributionType;
 			componentContext_lazy = () -> IntermediateSecuritiesDistributionTypeFormat9Choice.mmObject();
 			isDerived = false;
 			xmlTag = "Cd";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Code";
 			definition = "Standard code to specify the type of intermediate security distribution.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.choice.IntermediateSecuritiesDistributionTypeFormat15Choice.mmCode);
+			nextVersions_lazy = () -> Arrays.asList(IntermediateSecuritiesDistributionTypeFormat15Choice.mmCode);
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> IntermediateSecurityDistributionType5Code.mmObject();
@@ -185,14 +187,14 @@ public class IntermediateSecuritiesDistributionTypeFormat9Choice {
 	 */
 	public static final MMMessageAssociationEnd mmProprietary = new MMMessageAssociationEnd() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.SecuritiesProceedsDefinition.mmIntermediateSecuritiesDistributionType;
+			businessElementTrace_lazy = () -> SecuritiesProceedsDefinition.mmIntermediateSecuritiesDistributionType;
 			componentContext_lazy = () -> IntermediateSecuritiesDistributionTypeFormat9Choice.mmObject();
 			isDerived = false;
 			xmlTag = "Prtry";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Proprietary";
 			definition = "Proprietary identification of the type of intermediate security distribution.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.choice.IntermediateSecuritiesDistributionTypeFormat15Choice.mmProprietary);
+			nextVersions_lazy = () -> Arrays.asList(IntermediateSecuritiesDistributionTypeFormat15Choice.mmProprietary);
 			maxOccurs = 1;
 			minOccurs = 1;
 			isComposite = true;
@@ -203,11 +205,10 @@ public class IntermediateSecuritiesDistributionTypeFormat9Choice {
 	final static public MMChoiceComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMChoiceComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.choice.IntermediateSecuritiesDistributionTypeFormat9Choice.mmCode,
-						com.tools20022.repository.choice.IntermediateSecuritiesDistributionTypeFormat9Choice.mmProprietary);
+				messageElement_lazy = () -> Arrays.asList(IntermediateSecuritiesDistributionTypeFormat9Choice.mmCode, IntermediateSecuritiesDistributionTypeFormat9Choice.mmProprietary);
 				trace_lazy = () -> SecuritiesProceedsDefinition.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "IntermediateSecuritiesDistributionTypeFormat9Choice";
 				definition = "Choice between a standard code or proprietary code to specify the type of intermediate securities distribution.";
 				nextVersions_lazy = () -> Arrays.asList(IntermediateSecuritiesDistributionTypeFormat15Choice.mmObject());

@@ -19,6 +19,8 @@ package com.tools20022.repository.codeset;
 
 import com.tools20022.metamodel.MMCode;
 import com.tools20022.metamodel.MMCodeSet;
+import com.tools20022.metamodel.MMRegistrationStatus;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -27,6 +29,13 @@ import java.util.concurrent.atomic.AtomicReference;
  * <p>
  * <strong>Constant fields:</strong>
  * <ul>
+ * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getDerivation derivation}
+ * =
+ * <ul>
+ * <li>{@linkplain com.tools20022.repository.codeset.ClearingAccountType1Code
+ * ClearingAccountType1Code}</li>
+ * </ul>
+ * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getCode code} =
  * <ul>
  * <li>
@@ -38,13 +47,6 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>
  * {@linkplain com.tools20022.repository.codeset.ClearingAccountTypeCode#mmLiquidityProvider
  * ClearingAccountTypeCode.mmLiquidityProvider}</li>
- * </ul>
- * </li>
- * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getDerivation derivation}
- * =
- * <ul>
- * <li>{@linkplain com.tools20022.repository.codeset.ClearingAccountType1Code
- * ClearingAccountType1Code}</li>
  * </ul>
  * </li>
  * <li>
@@ -97,7 +99,7 @@ public class ClearingAccountTypeCode {
 	 */
 	public static final MMCode mmHouse = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "House";
 			definition = "Specifies that the account is used to register trades executed for either the clearing member or its subsidiaries.";
 			owner_lazy = () -> ClearingAccountTypeCode.mmObject();
@@ -130,7 +132,7 @@ public class ClearingAccountTypeCode {
 	 */
 	public static final MMCode mmClient = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Client";
 			definition = "Specifies that the account is used to register trades executed for the clearing member's customers.";
 			owner_lazy = () -> ClearingAccountTypeCode.mmObject();
@@ -163,7 +165,7 @@ public class ClearingAccountTypeCode {
 	 */
 	public static final MMCode mmLiquidityProvider = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "LiquidityProvider";
 			definition = "Specifies that the account is used to register trades executed for liquidity providers (also known as market maker) activities.";
 			owner_lazy = () -> ClearingAccountTypeCode.mmObject();
@@ -174,13 +176,12 @@ public class ClearingAccountTypeCode {
 	static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
 				example = Arrays.asList("HOUS");
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "ClearingAccountTypeCode";
 				definition = "Specifies the clearing account type.";
-				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.ClearingAccountTypeCode.mmHouse, com.tools20022.repository.codeset.ClearingAccountTypeCode.mmClient,
-						com.tools20022.repository.codeset.ClearingAccountTypeCode.mmLiquidityProvider);
+				code_lazy = () -> Arrays.asList(ClearingAccountTypeCode.mmHouse, ClearingAccountTypeCode.mmClient, ClearingAccountTypeCode.mmLiquidityProvider);
 				derivation_lazy = () -> Arrays.asList(ClearingAccountType1Code.mmObject());
 			}
 		});

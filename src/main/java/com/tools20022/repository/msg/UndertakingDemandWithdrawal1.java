@@ -20,8 +20,11 @@ package com.tools20022.repository.msg;
 import com.tools20022.metamodel.MMMessageAssociationEnd;
 import com.tools20022.metamodel.MMMessageAttribute;
 import com.tools20022.metamodel.MMMessageComponent;
+import com.tools20022.metamodel.MMRegistrationStatus;
+import com.tools20022.repository.area.tsrv.DemandWithdrawalNotificationV01;
 import com.tools20022.repository.datatype.Max35Text;
 import com.tools20022.repository.entity.Demand;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -112,11 +115,11 @@ public class UndertakingDemandWithdrawal1 {
 	 */
 	public static final MMMessageAssociationEnd mmUndertakingIdentification = new MMMessageAssociationEnd() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Demand.mmUndertaking;
+			businessElementTrace_lazy = () -> Demand.mmUndertaking;
 			componentContext_lazy = () -> UndertakingDemandWithdrawal1.mmObject();
 			isDerived = false;
 			xmlTag = "UdrtkgId";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "UndertakingIdentification";
 			definition = "Details related to the identification of the undertaking.";
 			maxOccurs = 1;
@@ -161,7 +164,7 @@ public class UndertakingDemandWithdrawal1 {
 			componentContext_lazy = () -> UndertakingDemandWithdrawal1.mmObject();
 			isDerived = false;
 			xmlTag = "AdvsgPtyRefNb";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AdvisingPartyReferenceNumber";
 			definition = "Unique and unambiguous identifier assigned by the advising party to the undertaking.";
 			maxOccurs = 1;
@@ -205,7 +208,7 @@ public class UndertakingDemandWithdrawal1 {
 			componentContext_lazy = () -> UndertakingDemandWithdrawal1.mmObject();
 			isDerived = false;
 			xmlTag = "DmndDtls";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "DemandDetails";
 			definition = "Details related to the demand.";
 			maxOccurs = 1;
@@ -250,7 +253,7 @@ public class UndertakingDemandWithdrawal1 {
 			componentContext_lazy = () -> UndertakingDemandWithdrawal1.mmObject();
 			isDerived = false;
 			xmlTag = "CnfrmrRefNb";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ConfirmerReferenceNumber";
 			definition = "Unique and unambiguous identifier assigned by the confirmer to the undertaking.";
 			maxOccurs = 1;
@@ -262,12 +265,12 @@ public class UndertakingDemandWithdrawal1 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.UndertakingDemandWithdrawal1.mmUndertakingIdentification, com.tools20022.repository.msg.UndertakingDemandWithdrawal1.mmAdvisingPartyReferenceNumber,
-						com.tools20022.repository.msg.UndertakingDemandWithdrawal1.mmDemandDetails, com.tools20022.repository.msg.UndertakingDemandWithdrawal1.mmConfirmerReferenceNumber);
-				messageBuildingBlock_lazy = () -> Arrays.asList(com.tools20022.repository.area.tsrv.DemandWithdrawalNotificationV01.mmDemandWithdrawalNotificationDetails);
+				messageElement_lazy = () -> Arrays.asList(UndertakingDemandWithdrawal1.mmUndertakingIdentification, UndertakingDemandWithdrawal1.mmAdvisingPartyReferenceNumber, UndertakingDemandWithdrawal1.mmDemandDetails,
+						UndertakingDemandWithdrawal1.mmConfirmerReferenceNumber);
+				messageBuildingBlock_lazy = () -> Arrays.asList(DemandWithdrawalNotificationV01.mmDemandWithdrawalNotificationDetails);
 				trace_lazy = () -> Demand.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "UndertakingDemandWithdrawal1";
 				definition = "Details of the demand withdrawal notification.";
 			}

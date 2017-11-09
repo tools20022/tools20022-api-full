@@ -19,7 +19,10 @@ package com.tools20022.repository.msg;
 
 import com.tools20022.metamodel.MMMessageAssociationEnd;
 import com.tools20022.metamodel.MMMessageComponent;
+import com.tools20022.metamodel.MMRegistrationStatus;
+import com.tools20022.repository.area.caaa.AcceptorCompletionAdviceV06;
 import com.tools20022.repository.entity.CardPayment;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.List;
@@ -127,10 +130,10 @@ public class AcceptorCompletionAdvice6 {
 			componentContext_lazy = () -> AcceptorCompletionAdvice6.mmObject();
 			isDerived = false;
 			xmlTag = "Envt";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Environment";
 			definition = "Environment of the transaction.";
-			previousVersion_lazy = () -> com.tools20022.repository.msg.AcceptorCompletionAdvice5.mmEnvironment;
+			previousVersion_lazy = () -> AcceptorCompletionAdvice5.mmEnvironment;
 			maxOccurs = 1;
 			minOccurs = 1;
 			isComposite = true;
@@ -177,14 +180,14 @@ public class AcceptorCompletionAdvice6 {
 	 */
 	public static final MMMessageAssociationEnd mmContext = new MMMessageAssociationEnd() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.CardPayment.mmCardPaymentAcquiring;
+			businessElementTrace_lazy = () -> CardPayment.mmCardPaymentAcquiring;
 			componentContext_lazy = () -> AcceptorCompletionAdvice6.mmObject();
 			isDerived = false;
 			xmlTag = "Cntxt";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Context";
 			definition = "Context in which the transaction is performed (payment and sale).";
-			previousVersion_lazy = () -> com.tools20022.repository.msg.AcceptorCompletionAdvice5.mmContext;
+			previousVersion_lazy = () -> AcceptorCompletionAdvice5.mmContext;
 			maxOccurs = 1;
 			minOccurs = 0;
 			isComposite = true;
@@ -235,10 +238,10 @@ public class AcceptorCompletionAdvice6 {
 			componentContext_lazy = () -> AcceptorCompletionAdvice6.mmObject();
 			isDerived = false;
 			xmlTag = "Tx";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Transaction";
 			definition = "Card payment transaction between an acceptor and an acquirer.";
-			previousVersion_lazy = () -> com.tools20022.repository.msg.AcceptorCompletionAdvice5.mmTransaction;
+			previousVersion_lazy = () -> AcceptorCompletionAdvice5.mmTransaction;
 			maxOccurs = 1;
 			minOccurs = 1;
 			isComposite = true;
@@ -283,10 +286,10 @@ public class AcceptorCompletionAdvice6 {
 			componentContext_lazy = () -> AcceptorCompletionAdvice6.mmObject();
 			isDerived = false;
 			xmlTag = "SplmtryData";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SupplementaryData";
 			definition = "Additional information incorporated as an extension to the message.";
-			previousVersion_lazy = () -> com.tools20022.repository.msg.AcceptorCompletionAdvice5.mmSupplementaryData;
+			previousVersion_lazy = () -> AcceptorCompletionAdvice5.mmSupplementaryData;
 			minOccurs = 0;
 			isComposite = true;
 			type_lazy = () -> com.tools20022.repository.msg.SupplementaryData1.mmObject();
@@ -296,12 +299,11 @@ public class AcceptorCompletionAdvice6 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.AcceptorCompletionAdvice6.mmEnvironment, com.tools20022.repository.msg.AcceptorCompletionAdvice6.mmContext,
-						com.tools20022.repository.msg.AcceptorCompletionAdvice6.mmTransaction, com.tools20022.repository.msg.AcceptorCompletionAdvice6.mmSupplementaryData);
-				messageBuildingBlock_lazy = () -> Arrays.asList(com.tools20022.repository.area.caaa.AcceptorCompletionAdviceV06.mmCompletionAdvice);
+				messageElement_lazy = () -> Arrays.asList(AcceptorCompletionAdvice6.mmEnvironment, AcceptorCompletionAdvice6.mmContext, AcceptorCompletionAdvice6.mmTransaction, AcceptorCompletionAdvice6.mmSupplementaryData);
+				messageBuildingBlock_lazy = () -> Arrays.asList(AcceptorCompletionAdviceV06.mmCompletionAdvice);
 				trace_lazy = () -> CardPayment.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "AcceptorCompletionAdvice6";
 				definition = "Notification to the acquirer of the completion of the card payment at the acceptor.";
 				previousVersion_lazy = () -> AcceptorCompletionAdvice5.mmObject();

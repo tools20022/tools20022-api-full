@@ -19,7 +19,9 @@ package com.tools20022.repository.codeset;
 
 import com.tools20022.metamodel.MMCode;
 import com.tools20022.metamodel.MMCodeSet;
+import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.codeset.RepoCallAcknowledgementReasonCode;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -89,7 +91,7 @@ public class RepoCallAcknowledgementReason2Code extends RepoCallAcknowledgementR
 	 */
 	public static final MMCode mmInProcess = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "InProcess";
 			owner_lazy = () -> RepoCallAcknowledgementReason2Code.mmObject();
 		}
@@ -112,7 +114,7 @@ public class RepoCallAcknowledgementReason2Code extends RepoCallAcknowledgementR
 	 */
 	public static final MMCode mmProcessed = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Processed";
 			owner_lazy = () -> RepoCallAcknowledgementReason2Code.mmObject();
 		}
@@ -135,7 +137,7 @@ public class RepoCallAcknowledgementReason2Code extends RepoCallAcknowledgementR
 	 */
 	public static final MMCode mmAccountServicerDeadlineMissed = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AccountServicerDeadlineMissed";
 			owner_lazy = () -> RepoCallAcknowledgementReason2Code.mmObject();
 		}
@@ -144,13 +146,12 @@ public class RepoCallAcknowledgementReason2Code extends RepoCallAcknowledgementR
 	static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
 				example = Arrays.asList("CALD");
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "RepoCallAcknowledgementReason2Code";
 				definition = "Specifies additional information about the repurchase agreement call processed instruction";
-				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.RepoCallAcknowledgementReason2Code.mmInProcess, com.tools20022.repository.codeset.RepoCallAcknowledgementReason2Code.mmProcessed,
-						com.tools20022.repository.codeset.RepoCallAcknowledgementReason2Code.mmAccountServicerDeadlineMissed);
+				code_lazy = () -> Arrays.asList(RepoCallAcknowledgementReason2Code.mmInProcess, RepoCallAcknowledgementReason2Code.mmProcessed, RepoCallAcknowledgementReason2Code.mmAccountServicerDeadlineMissed);
 				trace_lazy = () -> RepoCallAcknowledgementReasonCode.mmObject();
 			}
 		});

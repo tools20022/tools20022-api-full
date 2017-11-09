@@ -19,7 +19,9 @@ package com.tools20022.repository.codeset;
 
 import com.tools20022.metamodel.MMCode;
 import com.tools20022.metamodel.MMCodeSet;
+import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.codeset.TerminalManagementAdditionalProcessCode;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -89,7 +91,7 @@ public class TerminalManagementAdditionalProcess1Code extends TerminalManagement
 	 */
 	public static final MMCode mmManualConfirmation = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ManualConfirmation";
 			owner_lazy = () -> TerminalManagementAdditionalProcess1Code.mmObject();
 		}
@@ -112,7 +114,7 @@ public class TerminalManagementAdditionalProcess1Code extends TerminalManagement
 	 */
 	public static final MMCode mmReconciliation = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Reconciliation";
 			owner_lazy = () -> TerminalManagementAdditionalProcess1Code.mmObject();
 		}
@@ -135,7 +137,7 @@ public class TerminalManagementAdditionalProcess1Code extends TerminalManagement
 	 */
 	public static final MMCode mmRestartSystem = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "RestartSystem";
 			owner_lazy = () -> TerminalManagementAdditionalProcess1Code.mmObject();
 		}
@@ -144,13 +146,12 @@ public class TerminalManagementAdditionalProcess1Code extends TerminalManagement
 	static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
 				example = Arrays.asList("MANC");
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "TerminalManagementAdditionalProcess1Code";
 				definition = "Additional process to perform before starting or after a terminal management action by the point of interaction (POI).";
-				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.TerminalManagementAdditionalProcess1Code.mmManualConfirmation, com.tools20022.repository.codeset.TerminalManagementAdditionalProcess1Code.mmReconciliation,
-						com.tools20022.repository.codeset.TerminalManagementAdditionalProcess1Code.mmRestartSystem);
+				code_lazy = () -> Arrays.asList(TerminalManagementAdditionalProcess1Code.mmManualConfirmation, TerminalManagementAdditionalProcess1Code.mmReconciliation, TerminalManagementAdditionalProcess1Code.mmRestartSystem);
 				trace_lazy = () -> TerminalManagementAdditionalProcessCode.mmObject();
 			}
 		});

@@ -20,9 +20,12 @@ package com.tools20022.repository.msg;
 import com.tools20022.metamodel.MMMessageAssociationEnd;
 import com.tools20022.metamodel.MMMessageAttribute;
 import com.tools20022.metamodel.MMMessageComponent;
+import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.datatype.ISODate;
 import com.tools20022.repository.datatype.Max35Text;
 import com.tools20022.repository.entity.Document;
+import com.tools20022.repository.entity.GenericIdentification;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -113,14 +116,14 @@ public class ReferredMandateDocument1 {
 	 */
 	public static final MMMessageAssociationEnd mmType = new MMMessageAssociationEnd() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Document.mmType;
+			businessElementTrace_lazy = () -> Document.mmType;
 			componentContext_lazy = () -> ReferredMandateDocument1.mmObject();
 			isDerived = false;
 			xmlTag = "Tp";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Type";
 			definition = "Specifies the type of referred document.";
-			previousVersion_lazy = () -> com.tools20022.repository.msg.ReferredDocumentInformation6.mmType;
+			previousVersion_lazy = () -> ReferredDocumentInformation6.mmType;
 			maxOccurs = 1;
 			minOccurs = 0;
 			isComposite = true;
@@ -168,14 +171,14 @@ public class ReferredMandateDocument1 {
 	 */
 	public static final MMMessageAttribute mmNumber = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.GenericIdentification.mmIdentification;
+			businessElementTrace_lazy = () -> GenericIdentification.mmIdentification;
 			componentContext_lazy = () -> ReferredMandateDocument1.mmObject();
 			isDerived = false;
 			xmlTag = "Nb";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Number";
 			definition = "Unique and unambiguous identification of the referred document.";
-			previousVersion_lazy = () -> com.tools20022.repository.msg.ReferredDocumentInformation6.mmNumber;
+			previousVersion_lazy = () -> ReferredDocumentInformation6.mmNumber;
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> Max35Text.mmObject();
@@ -219,11 +222,11 @@ public class ReferredMandateDocument1 {
 	 */
 	public static final MMMessageAttribute mmCreditorReference = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Document.mmDocumentIdentification;
+			businessElementTrace_lazy = () -> Document.mmDocumentIdentification;
 			componentContext_lazy = () -> ReferredMandateDocument1.mmObject();
 			isDerived = false;
 			xmlTag = "CdtrRef";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CreditorReference";
 			definition = "Unique and unambiguous identification as assigned by the creditor to the referred document shared with the debtor for its own reference.";
 			maxOccurs = 1;
@@ -271,14 +274,14 @@ public class ReferredMandateDocument1 {
 	 */
 	public static final MMMessageAttribute mmRelatedDate = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Document.mmIssueDate;
+			businessElementTrace_lazy = () -> Document.mmIssueDate;
 			componentContext_lazy = () -> ReferredMandateDocument1.mmObject();
 			isDerived = false;
 			xmlTag = "RltdDt";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "RelatedDate";
 			definition = "Date associated with the referred document.";
-			previousVersion_lazy = () -> com.tools20022.repository.msg.ReferredDocumentInformation6.mmRelatedDate;
+			previousVersion_lazy = () -> ReferredDocumentInformation6.mmRelatedDate;
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> ISODate.mmObject();
@@ -288,11 +291,10 @@ public class ReferredMandateDocument1 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.ReferredMandateDocument1.mmType, com.tools20022.repository.msg.ReferredMandateDocument1.mmNumber,
-						com.tools20022.repository.msg.ReferredMandateDocument1.mmCreditorReference, com.tools20022.repository.msg.ReferredMandateDocument1.mmRelatedDate);
+				messageElement_lazy = () -> Arrays.asList(ReferredMandateDocument1.mmType, ReferredMandateDocument1.mmNumber, ReferredMandateDocument1.mmCreditorReference, ReferredMandateDocument1.mmRelatedDate);
 				trace_lazy = () -> Document.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "ReferredMandateDocument1";
 				definition = "Identifies the documents referred to in the remittance information.";
 				previousVersion_lazy = () -> ReferredDocumentInformation6.mmObject();

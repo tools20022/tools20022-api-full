@@ -20,11 +20,13 @@ package com.tools20022.repository.msg;
 import com.tools20022.metamodel.MMMessageAssociationEnd;
 import com.tools20022.metamodel.MMMessageAttribute;
 import com.tools20022.metamodel.MMMessageComponent;
+import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.codeset.DTCCorporateActionInstructionType2Code;
 import com.tools20022.repository.codeset.DTCCSubEventType1Code;
 import com.tools20022.repository.codeset.DTCServiceType1Code;
 import com.tools20022.repository.codeset.ExtendedEventType1Code;
 import com.tools20022.repository.datatype.*;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.List;
@@ -179,7 +181,7 @@ public class CorporateActionInstructionExtension2 {
 			componentContext_lazy = () -> CorporateActionInstructionExtension2.mmObject();
 			isDerived = false;
 			xmlTag = "PlcAndNm";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PlaceAndName";
 			definition = "xPath to the element that is being extended.";
 			maxOccurs = 1;
@@ -221,7 +223,7 @@ public class CorporateActionInstructionExtension2 {
 			componentContext_lazy = () -> CorporateActionInstructionExtension2.mmObject();
 			isDerived = false;
 			xmlTag = "InstrTp";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "InstructionType";
 			definition = "Type of instruction.";
 			maxOccurs = 1;
@@ -263,7 +265,7 @@ public class CorporateActionInstructionExtension2 {
 			componentContext_lazy = () -> CorporateActionInstructionExtension2.mmObject();
 			isDerived = false;
 			xmlTag = "SvcTpInd";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ServiceTypeIndicator";
 			definition = "Type of specific DTC service.";
 			maxOccurs = 1;
@@ -313,7 +315,7 @@ public class CorporateActionInstructionExtension2 {
 			componentContext_lazy = () -> CorporateActionInstructionExtension2.mmObject();
 			isDerived = false;
 			xmlTag = "EvtTp";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "EventType";
 			definition = "DTCC  (The Depository Trust and Clearing Corporation) native corporate action event type name. Used in place for the events that cannot be classified by ISO Code and are marked as OTHR. Can be used in combination with DTCC sub event type (when provided) to identify the event. For an example: a distribution based on recapitalisation event will be presented as event type: OTHR in standard message. DTCC native event type would be Distribution (DIST) and DTCC sub event type would be Recapitalisation. ";
 			maxOccurs = 1;
@@ -361,7 +363,7 @@ public class CorporateActionInstructionExtension2 {
 			componentContext_lazy = () -> CorporateActionInstructionExtension2.mmObject();
 			isDerived = false;
 			xmlTag = "SubEvtTp";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SubEventType";
 			definition = "DTCC  (The Depository Trust and Clearing Corporation) native corporate action sub event type name further defines the event type. For an example: a cash dividend event with currency election will be noted as event type: Cash Dividend (DVCA) and DTCC sub event type: Currency Election(CURR).";
 			maxOccurs = 1;
@@ -409,7 +411,7 @@ public class CorporateActionInstructionExtension2 {
 			componentContext_lazy = () -> CorporateActionInstructionExtension2.mmObject();
 			isDerived = false;
 			xmlTag = "DTCCOptnTp";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "DTCCOptionType";
 			definition = "Used for the option types that cannot be classified in ISO and marked as Option Type: OTHR. Options like convert and dividend reinvestment, or DTC (The Depository Trust Corporation)  special option types for the instances where the event and security are eligible for DTC (The Depository Trust Corporation) services like Foreign Tax, Foreign Currency Payments, etc.";
 			maxOccurs = 1;
@@ -456,7 +458,7 @@ public class CorporateActionInstructionExtension2 {
 			componentContext_lazy = () -> CorporateActionInstructionExtension2.mmObject();
 			isDerived = false;
 			xmlTag = "PrtctId";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ProtectIdentification";
 			definition = "Identifies the protect that was submitted. Required when instruction type is Cover Protect. This identification is either from DTC system which was assigned upon the submission of the protect instruction or is an identification that pertains to a cover protect submitted directly to the agent (indicated by instruction type).";
 			maxOccurs = 1;
@@ -497,7 +499,7 @@ public class CorporateActionInstructionExtension2 {
 			componentContext_lazy = () -> CorporateActionInstructionExtension2.mmObject();
 			isDerived = false;
 			xmlTag = "PrtctDt";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ProtectDate";
 			definition = "Date at which the protect was created.";
 			maxOccurs = 1;
@@ -540,7 +542,7 @@ public class CorporateActionInstructionExtension2 {
 			componentContext_lazy = () -> CorporateActionInstructionExtension2.mmObject();
 			isDerived = false;
 			xmlTag = "AckFlg";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AcknowledgementFlag";
 			definition = "Indicates that submitter has agreed to all terms and conditions.";
 			maxOccurs = 1;
@@ -585,7 +587,7 @@ public class CorporateActionInstructionExtension2 {
 			componentContext_lazy = () -> CorporateActionInstructionExtension2.mmObject();
 			isDerived = false;
 			xmlTag = "SlctnDealrFeeFlg";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SolicitationDealerFeeFlag";
 			definition = "Indicates whether there is a solicitation fee on the event. This fee is paid by the soliciting dealer.";
 			maxOccurs = 1;
@@ -626,7 +628,7 @@ public class CorporateActionInstructionExtension2 {
 			componentContext_lazy = () -> CorporateActionInstructionExtension2.mmObject();
 			isDerived = false;
 			xmlTag = "CondsAccptnc";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ConditionsAcceptance";
 			definition = "Provides an acceptance flag for the identified conditions.";
 			maxOccurs = 9;
@@ -670,7 +672,7 @@ public class CorporateActionInstructionExtension2 {
 			componentContext_lazy = () -> CorporateActionInstructionExtension2.mmObject();
 			isDerived = false;
 			xmlTag = "OddLotFlg";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "OddLotFlag";
 			definition = "Indicates whether the odd lot is accepted for tender offers.";
 			maxOccurs = 1;
@@ -713,7 +715,7 @@ public class CorporateActionInstructionExtension2 {
 			componentContext_lazy = () -> CorporateActionInstructionExtension2.mmObject();
 			isDerived = false;
 			xmlTag = "XmptFrIntrstPnltyFlg";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ExemptFromInterestPenaltyFlag";
 			definition = "Indicates whether the instruction is exempt from interest penalties.";
 			maxOccurs = 1;
@@ -757,7 +759,7 @@ public class CorporateActionInstructionExtension2 {
 			componentContext_lazy = () -> CorporateActionInstructionExtension2.mmObject();
 			isDerived = false;
 			xmlTag = "DclrdPyblDt";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "DeclaredPayableDate";
 			definition = "Date at which the movement has been declared payable by the issuer to take place (cash and/or securities).";
 			maxOccurs = 1;
@@ -803,7 +805,7 @@ public class CorporateActionInstructionExtension2 {
 			componentContext_lazy = () -> CorporateActionInstructionExtension2.mmObject();
 			isDerived = false;
 			xmlTag = "RcrdDt";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "RecordDate";
 			definition = "Date at which positions are stuck at the end of the day to note which parties will receive the relevant amount of entitlement, due to be distributed on payment date. DTC  (The Depository Trust Corporation) uses a reference match. This is why it is extended to general Information.";
 			maxOccurs = 1;
@@ -844,7 +846,7 @@ public class CorporateActionInstructionExtension2 {
 			componentContext_lazy = () -> CorporateActionInstructionExtension2.mmObject();
 			isDerived = false;
 			xmlTag = "FrgnCcyPmt";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ForeignCurrencyPayment";
 			definition = "Foreign currency payment information.";
 			minOccurs = 0;
@@ -885,7 +887,7 @@ public class CorporateActionInstructionExtension2 {
 			componentContext_lazy = () -> CorporateActionInstructionExtension2.mmObject();
 			isDerived = false;
 			xmlTag = "OptnlDvdd";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "OptionalDividend";
 			definition = "Optional dividend payment information.";
 			minOccurs = 0;
@@ -925,7 +927,7 @@ public class CorporateActionInstructionExtension2 {
 			componentContext_lazy = () -> CorporateActionInstructionExtension2.mmObject();
 			isDerived = false;
 			xmlTag = "TaxXmpt";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "TaxExempt";
 			definition = "Tax exempt payment information.";
 			minOccurs = 0;
@@ -965,7 +967,7 @@ public class CorporateActionInstructionExtension2 {
 			componentContext_lazy = () -> CorporateActionInstructionExtension2.mmObject();
 			isDerived = false;
 			xmlTag = "WireInstr";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "WireInstruction";
 			definition = "Provides details of the wire payment instruction.";
 			minOccurs = 0;
@@ -1008,7 +1010,7 @@ public class CorporateActionInstructionExtension2 {
 			componentContext_lazy = () -> CorporateActionInstructionExtension2.mmObject();
 			isDerived = false;
 			xmlTag = "DTCTaxRlf";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "DTCTaxRelief";
 			definition = "Provides details on DTC (The Depository Trust Corporation) Tax Relief service instruction.";
 			minOccurs = 0;
@@ -1051,7 +1053,7 @@ public class CorporateActionInstructionExtension2 {
 			componentContext_lazy = () -> CorporateActionInstructionExtension2.mmObject();
 			isDerived = false;
 			xmlTag = "CtctPrsn";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ContactPerson";
 			definition = "Identifies a contact person by a name, a given name and an address.";
 			maxOccurs = 1;
@@ -1097,7 +1099,7 @@ public class CorporateActionInstructionExtension2 {
 			componentContext_lazy = () -> CorporateActionInstructionExtension2.mmObject();
 			isDerived = false;
 			xmlTag = "AddtlTxt";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AdditionalText";
 			definition = "Provides additional information or specifies in more detail the content of a message. This field may only be used when the information to be transmitted, cannot be coded.";
 			maxOccurs = 1;
@@ -1139,7 +1141,7 @@ public class CorporateActionInstructionExtension2 {
 			componentContext_lazy = () -> CorporateActionInstructionExtension2.mmObject();
 			isDerived = false;
 			xmlTag = "ContraCUSIP";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ContraCUSIP";
 			definition = "Provides the CUSIP identification of a security.";
 			maxOccurs = 1;
@@ -1185,7 +1187,7 @@ public class CorporateActionInstructionExtension2 {
 			componentContext_lazy = () -> CorporateActionInstructionExtension2.mmObject();
 			isDerived = false;
 			xmlTag = "CondlQty";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ConditionalQuantity";
 			definition = "Minimum quantity of securities to be accepted (used in the framework of conditional privilege on election).\nIn case of proration, if this minimum quantity is not reached then the instruction is void.";
 			maxOccurs = 1;
@@ -1227,7 +1229,7 @@ public class CorporateActionInstructionExtension2 {
 			componentContext_lazy = () -> CorporateActionInstructionExtension2.mmObject();
 			isDerived = false;
 			xmlTag = "InstdPric";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "InstructedPrice";
 			definition = "Price that is submitted. Must fall between max/min price";
 			maxOccurs = 1;
@@ -1268,7 +1270,7 @@ public class CorporateActionInstructionExtension2 {
 			componentContext_lazy = () -> CorporateActionInstructionExtension2.mmObject();
 			isDerived = false;
 			xmlTag = "CstmrId";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CustomerIdentification";
 			definition = "Customer identification. ";
 			maxOccurs = 1;
@@ -1309,7 +1311,7 @@ public class CorporateActionInstructionExtension2 {
 			componentContext_lazy = () -> CorporateActionInstructionExtension2.mmObject();
 			isDerived = false;
 			xmlTag = "CstmrCmnts";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CustomerComments";
 			definition = "Free form comments.";
 			maxOccurs = 1;
@@ -1351,7 +1353,7 @@ public class CorporateActionInstructionExtension2 {
 			componentContext_lazy = () -> CorporateActionInstructionExtension2.mmObject();
 			isDerived = false;
 			xmlTag = "USTaxWhldg";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "USTaxWithholding";
 			definition = "U.S. Tax Withholding elections.";
 			minOccurs = 0;
@@ -1390,7 +1392,7 @@ public class CorporateActionInstructionExtension2 {
 			componentContext_lazy = () -> CorporateActionInstructionExtension2.mmObject();
 			isDerived = false;
 			xmlTag = "CshInLieu";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CashInLieu";
 			definition = "Cash In Lieu election instructions.";
 			minOccurs = 0;
@@ -1402,23 +1404,18 @@ public class CorporateActionInstructionExtension2 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.CorporateActionInstructionExtension2.mmPlaceAndName, com.tools20022.repository.msg.CorporateActionInstructionExtension2.mmInstructionType,
-						com.tools20022.repository.msg.CorporateActionInstructionExtension2.mmServiceTypeIndicator, com.tools20022.repository.msg.CorporateActionInstructionExtension2.mmEventType,
-						com.tools20022.repository.msg.CorporateActionInstructionExtension2.mmSubEventType, com.tools20022.repository.msg.CorporateActionInstructionExtension2.mmDTCCOptionType,
-						com.tools20022.repository.msg.CorporateActionInstructionExtension2.mmProtectIdentification, com.tools20022.repository.msg.CorporateActionInstructionExtension2.mmProtectDate,
-						com.tools20022.repository.msg.CorporateActionInstructionExtension2.mmAcknowledgementFlag, com.tools20022.repository.msg.CorporateActionInstructionExtension2.mmSolicitationDealerFeeFlag,
-						com.tools20022.repository.msg.CorporateActionInstructionExtension2.mmConditionsAcceptance, com.tools20022.repository.msg.CorporateActionInstructionExtension2.mmOddLotFlag,
-						com.tools20022.repository.msg.CorporateActionInstructionExtension2.mmExemptFromInterestPenaltyFlag, com.tools20022.repository.msg.CorporateActionInstructionExtension2.mmDeclaredPayableDate,
-						com.tools20022.repository.msg.CorporateActionInstructionExtension2.mmRecordDate, com.tools20022.repository.msg.CorporateActionInstructionExtension2.mmForeignCurrencyPayment,
-						com.tools20022.repository.msg.CorporateActionInstructionExtension2.mmOptionalDividend, com.tools20022.repository.msg.CorporateActionInstructionExtension2.mmTaxExempt,
-						com.tools20022.repository.msg.CorporateActionInstructionExtension2.mmWireInstruction, com.tools20022.repository.msg.CorporateActionInstructionExtension2.mmDTCTaxRelief,
-						com.tools20022.repository.msg.CorporateActionInstructionExtension2.mmContactPerson, com.tools20022.repository.msg.CorporateActionInstructionExtension2.mmAdditionalText,
-						com.tools20022.repository.msg.CorporateActionInstructionExtension2.mmContraCUSIP, com.tools20022.repository.msg.CorporateActionInstructionExtension2.mmConditionalQuantity,
-						com.tools20022.repository.msg.CorporateActionInstructionExtension2.mmInstructedPrice, com.tools20022.repository.msg.CorporateActionInstructionExtension2.mmCustomerIdentification,
-						com.tools20022.repository.msg.CorporateActionInstructionExtension2.mmCustomerComments, com.tools20022.repository.msg.CorporateActionInstructionExtension2.mmUSTaxWithholding,
-						com.tools20022.repository.msg.CorporateActionInstructionExtension2.mmCashInLieu);
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+				messageElement_lazy = () -> Arrays.asList(CorporateActionInstructionExtension2.mmPlaceAndName, CorporateActionInstructionExtension2.mmInstructionType, CorporateActionInstructionExtension2.mmServiceTypeIndicator,
+						CorporateActionInstructionExtension2.mmEventType, CorporateActionInstructionExtension2.mmSubEventType, CorporateActionInstructionExtension2.mmDTCCOptionType,
+						CorporateActionInstructionExtension2.mmProtectIdentification, CorporateActionInstructionExtension2.mmProtectDate, CorporateActionInstructionExtension2.mmAcknowledgementFlag,
+						CorporateActionInstructionExtension2.mmSolicitationDealerFeeFlag, CorporateActionInstructionExtension2.mmConditionsAcceptance, CorporateActionInstructionExtension2.mmOddLotFlag,
+						CorporateActionInstructionExtension2.mmExemptFromInterestPenaltyFlag, CorporateActionInstructionExtension2.mmDeclaredPayableDate, CorporateActionInstructionExtension2.mmRecordDate,
+						CorporateActionInstructionExtension2.mmForeignCurrencyPayment, CorporateActionInstructionExtension2.mmOptionalDividend, CorporateActionInstructionExtension2.mmTaxExempt,
+						CorporateActionInstructionExtension2.mmWireInstruction, CorporateActionInstructionExtension2.mmDTCTaxRelief, CorporateActionInstructionExtension2.mmContactPerson,
+						CorporateActionInstructionExtension2.mmAdditionalText, CorporateActionInstructionExtension2.mmContraCUSIP, CorporateActionInstructionExtension2.mmConditionalQuantity,
+						CorporateActionInstructionExtension2.mmInstructedPrice, CorporateActionInstructionExtension2.mmCustomerIdentification, CorporateActionInstructionExtension2.mmCustomerComments,
+						CorporateActionInstructionExtension2.mmUSTaxWithholding, CorporateActionInstructionExtension2.mmCashInLieu);
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 				name = "CorporateActionInstructionExtension2";
 				definition = "Provides additional information regarding corporate action instruction.";
 			}

@@ -19,9 +19,13 @@ package com.tools20022.repository.msg;
 
 import com.tools20022.metamodel.MMMessageAttribute;
 import com.tools20022.metamodel.MMMessageComponent;
+import com.tools20022.metamodel.MMRegistrationStatus;
+import com.tools20022.repository.area.acmt.*;
 import com.tools20022.repository.datatype.ISODate;
 import com.tools20022.repository.datatype.YesNoIndicator;
+import com.tools20022.repository.entity.AccountContract;
 import com.tools20022.repository.entity.CashAccountContract;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -149,11 +153,11 @@ public class AccountContract2 {
 	 */
 	public static final MMMessageAttribute mmTargetGoLiveDate = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.AccountContract.mmTargetGoLiveDate;
+			businessElementTrace_lazy = () -> AccountContract.mmTargetGoLiveDate;
 			componentContext_lazy = () -> AccountContract2.mmObject();
 			isDerived = false;
 			xmlTag = "TrgtGoLiveDt";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "TargetGoLiveDate";
 			definition = "Date on which the account and related basic services  are expected to be operational for the account owner.";
 			maxOccurs = 1;
@@ -199,11 +203,11 @@ public class AccountContract2 {
 	 */
 	public static final MMMessageAttribute mmTargetClosingDate = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.AccountContract.mmTargetClosingDate;
+			businessElementTrace_lazy = () -> AccountContract.mmTargetClosingDate;
 			componentContext_lazy = () -> AccountContract2.mmObject();
 			isDerived = false;
 			xmlTag = "TrgtClsgDt";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "TargetClosingDate";
 			definition = "Date on which the account and related services are expected to cease to be operational for the account owner.";
 			maxOccurs = 1;
@@ -252,11 +256,11 @@ public class AccountContract2 {
 	 */
 	public static final MMMessageAttribute mmUrgencyFlag = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.AccountContract.mmUrgencyFlag;
+			businessElementTrace_lazy = () -> AccountContract.mmUrgencyFlag;
 			componentContext_lazy = () -> AccountContract2.mmObject();
 			isDerived = false;
 			xmlTag = "UrgcyFlg";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "UrgencyFlag";
 			definition = "Indicator that the account opening/maintenance/closing process needs to be treated urgently, that is, sooner than the terms established by the service level agreed between the account holder customer and the account servicing institution.";
 			maxOccurs = 1;
@@ -268,18 +272,15 @@ public class AccountContract2 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.AccountContract2.mmTargetGoLiveDate, com.tools20022.repository.msg.AccountContract2.mmTargetClosingDate,
-						com.tools20022.repository.msg.AccountContract2.mmUrgencyFlag);
-				messageBuildingBlock_lazy = () -> Arrays.asList(com.tools20022.repository.area.acmt.AccountExcludedMandateMaintenanceAmendmentRequestV01.mmContractDates,
-						com.tools20022.repository.area.acmt.AccountExcludedMandateMaintenanceAmendmentRequestV02.mmContractDates, com.tools20022.repository.area.acmt.AccountExcludedMandateMaintenanceRequestV01.mmContractDates,
-						com.tools20022.repository.area.acmt.AccountExcludedMandateMaintenanceRequestV02.mmContractDates, com.tools20022.repository.area.acmt.AccountMandateMaintenanceAmendmentRequestV01.mmContractDates,
-						com.tools20022.repository.area.acmt.AccountMandateMaintenanceAmendmentRequestV02.mmContractDates, com.tools20022.repository.area.acmt.AccountMandateMaintenanceRequestV01.mmContractDates,
-						com.tools20022.repository.area.acmt.AccountMandateMaintenanceRequestV02.mmContractDates, com.tools20022.repository.area.acmt.AccountOpeningAmendmentRequestV01.mmContractDates,
-						com.tools20022.repository.area.acmt.AccountOpeningAmendmentRequestV02.mmContractDates, com.tools20022.repository.area.acmt.AccountOpeningRequestV01.mmContractDates,
-						com.tools20022.repository.area.acmt.AccountOpeningRequestV02.mmContractDates, com.tools20022.repository.area.acmt.AccountReportRequestV01.mmContractDates);
+				messageElement_lazy = () -> Arrays.asList(AccountContract2.mmTargetGoLiveDate, AccountContract2.mmTargetClosingDate, AccountContract2.mmUrgencyFlag);
+				messageBuildingBlock_lazy = () -> Arrays.asList(AccountExcludedMandateMaintenanceAmendmentRequestV01.mmContractDates, AccountExcludedMandateMaintenanceAmendmentRequestV02.mmContractDates,
+						AccountExcludedMandateMaintenanceRequestV01.mmContractDates, AccountExcludedMandateMaintenanceRequestV02.mmContractDates, AccountMandateMaintenanceAmendmentRequestV01.mmContractDates,
+						AccountMandateMaintenanceAmendmentRequestV02.mmContractDates, AccountMandateMaintenanceRequestV01.mmContractDates, AccountMandateMaintenanceRequestV02.mmContractDates,
+						AccountOpeningAmendmentRequestV01.mmContractDates, AccountOpeningAmendmentRequestV02.mmContractDates, AccountOpeningRequestV01.mmContractDates, AccountOpeningRequestV02.mmContractDates,
+						AccountReportRequestV01.mmContractDates);
 				trace_lazy = () -> CashAccountContract.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "AccountContract2";
 				definition = "Specifies target dates dates related to account opening and closing.";
 			}

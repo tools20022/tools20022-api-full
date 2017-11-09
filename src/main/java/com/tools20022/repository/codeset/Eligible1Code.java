@@ -19,7 +19,9 @@ package com.tools20022.repository.codeset;
 
 import com.tools20022.metamodel.MMCode;
 import com.tools20022.metamodel.MMCodeSet;
+import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.codeset.EligibleCode;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -75,7 +77,7 @@ public class Eligible1Code extends EligibleCode {
 	 */
 	public static final MMCode mmEligible = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Eligible";
 			owner_lazy = () -> Eligible1Code.mmObject();
 		}
@@ -98,7 +100,7 @@ public class Eligible1Code extends EligibleCode {
 	 */
 	public static final MMCode mmNotEligible = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "NotEligible";
 			owner_lazy = () -> Eligible1Code.mmObject();
 		}
@@ -107,11 +109,11 @@ public class Eligible1Code extends EligibleCode {
 	static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "Eligible1Code";
 				definition = "Specifies whether the item is eligible or not eligible.";
-				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.Eligible1Code.mmEligible, com.tools20022.repository.codeset.Eligible1Code.mmNotEligible);
+				code_lazy = () -> Arrays.asList(Eligible1Code.mmEligible, Eligible1Code.mmNotEligible);
 				trace_lazy = () -> EligibleCode.mmObject();
 			}
 		});

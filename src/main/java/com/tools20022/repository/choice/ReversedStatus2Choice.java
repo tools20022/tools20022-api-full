@@ -20,10 +20,13 @@ package com.tools20022.repository.choice;
 import com.tools20022.metamodel.MMChoiceComponent;
 import com.tools20022.metamodel.MMMessageAssociationEnd;
 import com.tools20022.metamodel.MMMessageAttribute;
+import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.codeset.NoReasonCode;
 import com.tools20022.repository.datatype.Max350Text;
 import com.tools20022.repository.entity.GenericIdentification;
 import com.tools20022.repository.entity.SecuritiesTradeStatusReason;
+import com.tools20022.repository.entity.StatusReason;
+import com.tools20022.repository.GeneratedRepository;
 import com.tools20022.repository.msg.GenericIdentification1;
 import com.tools20022.repository.msg.ReversedStatus1;
 import java.util.Arrays;
@@ -112,10 +115,10 @@ public class ReversedStatus2Choice {
 			componentContext_lazy = () -> ReversedStatus2Choice.mmObject();
 			isDerived = false;
 			xmlTag = "Rsn";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Reason";
 			definition = "Reason for the reversal status.";
-			previousVersion_lazy = () -> com.tools20022.repository.msg.ReversedStatus1.mmReason;
+			previousVersion_lazy = () -> ReversedStatus1.mmReason;
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> Max350Text.mmObject();
@@ -165,10 +168,10 @@ public class ReversedStatus2Choice {
 			componentContext_lazy = () -> ReversedStatus2Choice.mmObject();
 			isDerived = false;
 			xmlTag = "DataSrcSchme";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "DataSourceScheme";
 			definition = "Proprietary identification of the reason for the reversed status.";
-			previousVersion_lazy = () -> com.tools20022.repository.msg.ReversedStatus1.mmDataSourceScheme;
+			previousVersion_lazy = () -> ReversedStatus1.mmDataSourceScheme;
 			maxOccurs = 1;
 			minOccurs = 1;
 			isComposite = true;
@@ -216,14 +219,14 @@ public class ReversedStatus2Choice {
 	 */
 	public static final MMMessageAttribute mmNoSpecifiedReason = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.StatusReason.mmNoSpecifiedReason;
+			businessElementTrace_lazy = () -> StatusReason.mmNoSpecifiedReason;
 			componentContext_lazy = () -> ReversedStatus2Choice.mmObject();
 			isDerived = false;
 			xmlTag = "NoSpcfdRsn";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "NoSpecifiedReason";
 			definition = "Indicates that there is no reason available or to report.";
-			previousVersion_lazy = () -> com.tools20022.repository.msg.ReversedStatus1.mmNoSpecifiedReason;
+			previousVersion_lazy = () -> ReversedStatus1.mmNoSpecifiedReason;
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> NoReasonCode.mmObject();
@@ -233,11 +236,10 @@ public class ReversedStatus2Choice {
 	final static public MMChoiceComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMChoiceComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.choice.ReversedStatus2Choice.mmReason, com.tools20022.repository.choice.ReversedStatus2Choice.mmDataSourceScheme,
-						com.tools20022.repository.choice.ReversedStatus2Choice.mmNoSpecifiedReason);
+				messageElement_lazy = () -> Arrays.asList(ReversedStatus2Choice.mmReason, ReversedStatus2Choice.mmDataSourceScheme, ReversedStatus2Choice.mmNoSpecifiedReason);
 				trace_lazy = () -> SecuritiesTradeStatusReason.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "ReversedStatus2Choice";
 				definition = "Reason for the reversed status.";
 				previousVersion_lazy = () -> ReversedStatus1.mmObject();

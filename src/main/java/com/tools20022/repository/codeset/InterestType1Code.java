@@ -19,7 +19,9 @@ package com.tools20022.repository.codeset;
 
 import com.tools20022.metamodel.MMCode;
 import com.tools20022.metamodel.MMCodeSet;
+import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.codeset.InterestCode;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -84,7 +86,7 @@ public class InterestType1Code extends InterestCode {
 	 */
 	public static final MMCode mmIntraDay = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "IntraDay";
 			owner_lazy = () -> InterestType1Code.mmObject();
 		}
@@ -107,7 +109,7 @@ public class InterestType1Code extends InterestCode {
 	 */
 	public static final MMCode mmOverNight = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "OverNight";
 			owner_lazy = () -> InterestType1Code.mmObject();
 		}
@@ -116,12 +118,12 @@ public class InterestType1Code extends InterestCode {
 	static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
 				example = Arrays.asList("INDY");
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "InterestType1Code";
 				definition = "Indicates which type of interest is applied to a balance left on an account.";
-				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.InterestType1Code.mmIntraDay, com.tools20022.repository.codeset.InterestType1Code.mmOverNight);
+				code_lazy = () -> Arrays.asList(InterestType1Code.mmIntraDay, InterestType1Code.mmOverNight);
 				trace_lazy = () -> InterestCode.mmObject();
 			}
 		});

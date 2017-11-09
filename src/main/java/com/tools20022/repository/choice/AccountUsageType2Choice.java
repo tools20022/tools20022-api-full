@@ -19,8 +19,10 @@ package com.tools20022.repository.choice;
 
 import com.tools20022.metamodel.MMChoiceComponent;
 import com.tools20022.metamodel.MMMessageAttribute;
+import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.codeset.AccountUsageType2Code;
 import com.tools20022.repository.entity.InvestmentAccount;
+import com.tools20022.repository.GeneratedRepository;
 import com.tools20022.repository.msg.GenericIdentification47;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
@@ -113,10 +115,10 @@ public class AccountUsageType2Choice {
 			componentContext_lazy = () -> AccountUsageType2Choice.mmObject();
 			isDerived = false;
 			xmlTag = "Cd";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Code";
 			definition = "Type of account usage expressed as a code.";
-			previousVersion_lazy = () -> com.tools20022.repository.choice.AccountUsageType1Choice.mmCode;
+			previousVersion_lazy = () -> AccountUsageType1Choice.mmCode;
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> AccountUsageType2Code.mmObject();
@@ -167,10 +169,10 @@ public class AccountUsageType2Choice {
 			componentContext_lazy = () -> AccountUsageType2Choice.mmObject();
 			isDerived = false;
 			xmlTag = "Prtry";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Proprietary";
 			definition = "Type of account usage expressed as a proprietary code.";
-			previousVersion_lazy = () -> com.tools20022.repository.choice.AccountUsageType1Choice.mmProprietary;
+			previousVersion_lazy = () -> AccountUsageType1Choice.mmProprietary;
 			maxOccurs = 1;
 			minOccurs = 1;
 			complexType_lazy = () -> GenericIdentification47.mmObject();
@@ -180,10 +182,10 @@ public class AccountUsageType2Choice {
 	final static public MMChoiceComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMChoiceComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.choice.AccountUsageType2Choice.mmCode, com.tools20022.repository.choice.AccountUsageType2Choice.mmProprietary);
+				messageElement_lazy = () -> Arrays.asList(AccountUsageType2Choice.mmCode, AccountUsageType2Choice.mmProprietary);
 				trace_lazy = () -> InvestmentAccount.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "AccountUsageType2Choice";
 				definition = "Choice of formats for the specification of the type of account usage.";
 				previousVersion_lazy = () -> AccountUsageType1Choice.mmObject();

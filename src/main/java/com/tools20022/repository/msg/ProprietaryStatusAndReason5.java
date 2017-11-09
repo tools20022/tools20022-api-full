@@ -20,8 +20,10 @@ package com.tools20022.repository.msg;
 import com.tools20022.metamodel.MMMessageAssociationEnd;
 import com.tools20022.metamodel.MMMessageAttribute;
 import com.tools20022.metamodel.MMMessageComponent;
+import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.choice.ProprietaryReason1Choice;
 import com.tools20022.repository.datatype.Max210Text;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -110,10 +112,10 @@ public class ProprietaryStatusAndReason5 {
 			componentContext_lazy = () -> ProprietaryStatusAndReason5.mmObject();
 			isDerived = false;
 			xmlTag = "Sts";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Status";
 			definition = "Proprietary identification of the status of the instruction.";
-			previousVersion_lazy = () -> com.tools20022.repository.msg.ProprietaryStatusAndReason3.mmProprietaryStatus;
+			previousVersion_lazy = () -> ProprietaryStatusAndReason3.mmProprietaryStatus;
 			maxOccurs = 1;
 			minOccurs = 1;
 			complexType_lazy = () -> com.tools20022.repository.msg.GenericIdentification36.mmObject();
@@ -157,10 +159,10 @@ public class ProprietaryStatusAndReason5 {
 			componentContext_lazy = () -> ProprietaryStatusAndReason5.mmObject();
 			isDerived = false;
 			xmlTag = "Rsn";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Reason";
 			definition = "Proprietary identification of the reason for the status.";
-			previousVersion_lazy = () -> com.tools20022.repository.msg.ProprietaryStatusAndReason3.mmProprietaryReason;
+			previousVersion_lazy = () -> ProprietaryStatusAndReason3.mmProprietaryReason;
 			maxOccurs = 1;
 			minOccurs = 1;
 			isComposite = true;
@@ -200,7 +202,7 @@ public class ProprietaryStatusAndReason5 {
 			componentContext_lazy = () -> ProprietaryStatusAndReason5.mmObject();
 			isDerived = false;
 			xmlTag = "AddtlRsnInf";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AdditionalReasonInformation";
 			definition = "Additional information about the processed instruction.";
 			maxOccurs = 1;
@@ -212,10 +214,9 @@ public class ProprietaryStatusAndReason5 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.ProprietaryStatusAndReason5.mmStatus, com.tools20022.repository.msg.ProprietaryStatusAndReason5.mmReason,
-						com.tools20022.repository.msg.ProprietaryStatusAndReason5.mmAdditionalReasonInformation);
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				messageElement_lazy = () -> Arrays.asList(ProprietaryStatusAndReason5.mmStatus, ProprietaryStatusAndReason5.mmReason, ProprietaryStatusAndReason5.mmAdditionalReasonInformation);
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "ProprietaryStatusAndReason5";
 				definition = "Proprietary status and reason of an instruction or an instruction cancellation.";
 				previousVersion_lazy = () -> ProprietaryStatusAndReason3.mmObject();

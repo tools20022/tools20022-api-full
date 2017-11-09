@@ -19,8 +19,11 @@ package com.tools20022.repository.msg;
 
 import com.tools20022.metamodel.MMMessageAttribute;
 import com.tools20022.metamodel.MMMessageComponent;
+import com.tools20022.metamodel.MMRegistrationStatus;
+import com.tools20022.repository.area.auth.InformationRequestOpeningV01;
 import com.tools20022.repository.datatype.Max350Text;
 import com.tools20022.repository.datatype.Max35Text;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -101,7 +104,7 @@ public class LegalMandate1 {
 			componentContext_lazy = () -> LegalMandate1.mmObject();
 			isDerived = false;
 			xmlTag = "Prgrph";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Paragraph";
 			definition = "Identifies the legal mandate paragraph in law which gives power to the authority's request.";
 			maxOccurs = 1;
@@ -144,7 +147,7 @@ public class LegalMandate1 {
 			componentContext_lazy = () -> LegalMandate1.mmObject();
 			isDerived = false;
 			xmlTag = "Dsclmr";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Disclaimer";
 			definition = "Specifies any additional information describing how or why the paragraph of law should be applied.";
 			maxOccurs = 1;
@@ -156,10 +159,10 @@ public class LegalMandate1 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.LegalMandate1.mmParagraph, com.tools20022.repository.msg.LegalMandate1.mmDisclaimer);
-				messageBuildingBlock_lazy = () -> Arrays.asList(com.tools20022.repository.area.auth.InformationRequestOpeningV01.mmLegalMandateBasis);
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				messageElement_lazy = () -> Arrays.asList(LegalMandate1.mmParagraph, LegalMandate1.mmDisclaimer);
+				messageBuildingBlock_lazy = () -> Arrays.asList(InformationRequestOpeningV01.mmLegalMandateBasis);
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "LegalMandate1";
 				definition = "Provides details on the legal basis of the request.";
 			}

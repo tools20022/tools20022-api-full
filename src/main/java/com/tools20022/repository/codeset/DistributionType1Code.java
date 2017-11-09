@@ -19,7 +19,9 @@ package com.tools20022.repository.codeset;
 
 import com.tools20022.metamodel.MMCode;
 import com.tools20022.metamodel.MMCodeSet;
+import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.codeset.DistributionTypeCode;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -90,7 +92,7 @@ public class DistributionType1Code extends DistributionTypeCode {
 	 */
 	public static final MMCode mmRollingBasis = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "RollingBasis";
 			owner_lazy = () -> DistributionType1Code.mmObject();
 		}
@@ -99,13 +101,13 @@ public class DistributionType1Code extends DistributionTypeCode {
 	static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
 				example = Arrays.asList("ROLL");
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "DistributionType1Code";
 				definition = "Specifies whether the proceeds of the event will be distributed on a rolling basis rather than on a specific date.";
 				nextVersions_lazy = () -> Arrays.asList(DistributionType2Code.mmObject());
-				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.DistributionType1Code.mmRollingBasis);
+				code_lazy = () -> Arrays.asList(DistributionType1Code.mmRollingBasis);
 				trace_lazy = () -> DistributionTypeCode.mmObject();
 			}
 		});

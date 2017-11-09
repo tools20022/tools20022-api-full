@@ -20,12 +20,13 @@ package com.tools20022.repository.msg;
 import com.tools20022.metamodel.MMMessageAssociationEnd;
 import com.tools20022.metamodel.MMMessageAttribute;
 import com.tools20022.metamodel.MMMessageComponent;
+import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.choice.InflationIndex1Choice;
 import com.tools20022.repository.choice.InterestRateDerivative2Choice;
 import com.tools20022.repository.codeset.ActiveCurrencyCode;
 import com.tools20022.repository.datatype.ISODate;
-import com.tools20022.repository.entity.Debt;
-import com.tools20022.repository.entity.Derivative;
+import com.tools20022.repository.entity.*;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -118,11 +119,11 @@ public class InterestRateDerivative5 {
 	 */
 	public static final MMMessageAssociationEnd mmUnderlyingType = new MMMessageAssociationEnd() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Derivative.mmUnderlyingAsset;
+			businessElementTrace_lazy = () -> Derivative.mmUnderlyingAsset;
 			componentContext_lazy = () -> InterestRateDerivative5.mmObject();
 			isDerived = false;
 			xmlTag = "UndrlygTp";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "UnderlyingType";
 			definition = "Specific details on the underlying type of the interest rate derivative.";
 			maxOccurs = 1;
@@ -171,7 +172,7 @@ public class InterestRateDerivative5 {
 			componentContext_lazy = () -> InterestRateDerivative5.mmObject();
 			isDerived = false;
 			xmlTag = "UndrlygBd";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "UnderlyingBond";
 			definition = "Populated when the underlying type is a bond or a bond future.  Details the issuer and maturity date of the bond.";
 			maxOccurs = 1;
@@ -214,7 +215,7 @@ public class InterestRateDerivative5 {
 			componentContext_lazy = () -> InterestRateDerivative5.mmObject();
 			isDerived = false;
 			xmlTag = "SwptnNtnlCcy";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SwaptionNotionalCurrency";
 			definition = "Notional currency of a swaption.";
 			maxOccurs = 1;
@@ -260,11 +261,11 @@ public class InterestRateDerivative5 {
 	 */
 	public static final MMMessageAttribute mmUnderlyingSwapMaturityDate = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Asset.mmMaturityDate;
+			businessElementTrace_lazy = () -> Asset.mmMaturityDate;
 			componentContext_lazy = () -> InterestRateDerivative5.mmObject();
 			isDerived = false;
 			xmlTag = "UndrlygSwpMtrtyDt";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "UnderlyingSwapMaturityDate";
 			definition = "Maturity date of the underlying swap, populated for swaptions, futures on swaps and forwards on a swap only.";
 			maxOccurs = 1;
@@ -307,11 +308,11 @@ public class InterestRateDerivative5 {
 	 */
 	public static final MMMessageAssociationEnd mmInflationIndex = new MMMessageAssociationEnd() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.AssetHolding.mmInterest;
+			businessElementTrace_lazy = () -> AssetHolding.mmInterest;
 			componentContext_lazy = () -> InterestRateDerivative5.mmObject();
 			isDerived = false;
 			xmlTag = "InfltnIndx";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "InflationIndex";
 			definition = "Populated to define the inflation index.";
 			maxOccurs = 1;
@@ -357,11 +358,11 @@ public class InterestRateDerivative5 {
 	 */
 	public static final MMMessageAssociationEnd mmInterestRateReference = new MMMessageAssociationEnd() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Interest.mmRate;
+			businessElementTrace_lazy = () -> Interest.mmRate;
 			componentContext_lazy = () -> InterestRateDerivative5.mmObject();
 			isDerived = false;
 			xmlTag = "IntrstRateRef";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "InterestRateReference";
 			definition = "Provides the interest rate against a reference rate and term in number of days, weeks, months or years.";
 			maxOccurs = 1;
@@ -374,12 +375,11 @@ public class InterestRateDerivative5 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.InterestRateDerivative5.mmUnderlyingType, com.tools20022.repository.msg.InterestRateDerivative5.mmUnderlyingBond,
-						com.tools20022.repository.msg.InterestRateDerivative5.mmSwaptionNotionalCurrency, com.tools20022.repository.msg.InterestRateDerivative5.mmUnderlyingSwapMaturityDate,
-						com.tools20022.repository.msg.InterestRateDerivative5.mmInflationIndex, com.tools20022.repository.msg.InterestRateDerivative5.mmInterestRateReference);
+				messageElement_lazy = () -> Arrays.asList(InterestRateDerivative5.mmUnderlyingType, InterestRateDerivative5.mmUnderlyingBond, InterestRateDerivative5.mmSwaptionNotionalCurrency,
+						InterestRateDerivative5.mmUnderlyingSwapMaturityDate, InterestRateDerivative5.mmInflationIndex, InterestRateDerivative5.mmInterestRateReference);
 				trace_lazy = () -> Derivative.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "InterestRateDerivative5";
 				definition = "Specifies the interest rate derivative specific elements for interest rate derivatives as defined in the local regulation.";
 			}

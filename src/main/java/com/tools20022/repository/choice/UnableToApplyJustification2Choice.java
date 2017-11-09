@@ -20,8 +20,12 @@ package com.tools20022.repository.choice;
 import com.tools20022.metamodel.MMChoiceComponent;
 import com.tools20022.metamodel.MMMessageAssociationEnd;
 import com.tools20022.metamodel.MMMessageAttribute;
+import com.tools20022.metamodel.MMRegistrationStatus;
+import com.tools20022.repository.area.camt.UnableToApplyV03;
+import com.tools20022.repository.area.camt.UnableToApplyV04;
 import com.tools20022.repository.datatype.TrueFalseIndicator;
 import com.tools20022.repository.datatype.YesNoIndicator;
+import com.tools20022.repository.GeneratedRepository;
 import com.tools20022.repository.msg.MissingOrIncorrectInformation2;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
@@ -132,10 +136,10 @@ public class UnableToApplyJustification2Choice {
 			componentContext_lazy = () -> UnableToApplyJustification2Choice.mmObject();
 			isDerived = false;
 			xmlTag = "AnyInf";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AnyInformation";
 			definition = "Indicates whether or not all available information on the underlying payment instruction is requested.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.choice.UnableToApplyJustification3Choice.mmAnyInformation);
+			nextVersions_lazy = () -> Arrays.asList(UnableToApplyJustification3Choice.mmAnyInformation);
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> YesNoIndicator.mmObject();
@@ -185,10 +189,10 @@ public class UnableToApplyJustification2Choice {
 			componentContext_lazy = () -> UnableToApplyJustification2Choice.mmObject();
 			isDerived = false;
 			xmlTag = "MssngOrIncrrctInf";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "MissingOrIncorrectInformation";
 			definition = "Set of elements used to indicate which information is missing or incorrect.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.choice.UnableToApplyJustification3Choice.mmMissingOrIncorrectInformation);
+			nextVersions_lazy = () -> Arrays.asList(UnableToApplyJustification3Choice.mmMissingOrIncorrectInformation);
 			maxOccurs = 1;
 			minOccurs = 1;
 			isComposite = true;
@@ -240,10 +244,10 @@ public class UnableToApplyJustification2Choice {
 			componentContext_lazy = () -> UnableToApplyJustification2Choice.mmObject();
 			isDerived = false;
 			xmlTag = "PssblDplctInstr";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PossibleDuplicateInstruction";
 			definition = "Indicates whether or not the referred item is a possible duplicate of a previous instruction or entry.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.choice.UnableToApplyJustification3Choice.mmPossibleDuplicateInstruction);
+			nextVersions_lazy = () -> Arrays.asList(UnableToApplyJustification3Choice.mmPossibleDuplicateInstruction);
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> TrueFalseIndicator.mmObject();
@@ -253,11 +257,11 @@ public class UnableToApplyJustification2Choice {
 	final static public MMChoiceComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMChoiceComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.choice.UnableToApplyJustification2Choice.mmAnyInformation,
-						com.tools20022.repository.choice.UnableToApplyJustification2Choice.mmMissingOrIncorrectInformation, com.tools20022.repository.choice.UnableToApplyJustification2Choice.mmPossibleDuplicateInstruction);
-				messageBuildingBlock_lazy = () -> Arrays.asList(com.tools20022.repository.area.camt.UnableToApplyV03.mmJustification, com.tools20022.repository.area.camt.UnableToApplyV04.mmJustification);
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				messageElement_lazy = () -> Arrays.asList(UnableToApplyJustification2Choice.mmAnyInformation, UnableToApplyJustification2Choice.mmMissingOrIncorrectInformation,
+						UnableToApplyJustification2Choice.mmPossibleDuplicateInstruction);
+				messageBuildingBlock_lazy = () -> Arrays.asList(UnableToApplyV03.mmJustification, UnableToApplyV04.mmJustification);
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "UnableToApplyJustification2Choice";
 				definition = "Specifies the details of missing information or the complete set of available information.";
 				nextVersions_lazy = () -> Arrays.asList(UnableToApplyJustification3Choice.mmObject());

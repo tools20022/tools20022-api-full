@@ -19,10 +19,14 @@ package com.tools20022.repository.msg;
 
 import com.tools20022.metamodel.MMMessageAttribute;
 import com.tools20022.metamodel.MMMessageComponent;
+import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.choice.PreferenceToIncome4Choice;
 import com.tools20022.repository.datatype.ActiveCurrencyAndAmount;
 import com.tools20022.repository.datatype.ISODateTime;
 import com.tools20022.repository.datatype.Number;
+import com.tools20022.repository.entity.Asset;
+import com.tools20022.repository.entity.Equity;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -113,11 +117,11 @@ public class Equity2 {
 	 */
 	public static final MMMessageAttribute mmPreferenceToIncome = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Equity.mmPreferenceToIncome;
+			businessElementTrace_lazy = () -> Equity.mmPreferenceToIncome;
 			componentContext_lazy = () -> Equity2.mmObject();
 			isDerived = false;
 			xmlTag = "PrefToIncm";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PreferenceToIncome";
 			definition = "Indicates the  level of priority to claim on income and assets of the company in case of the payment of dividends and in the event of a bankruptcy, for example, ordinary/common stocks, preferred stocks, subordinated debt, etc.";
 			maxOccurs = 1;
@@ -162,11 +166,11 @@ public class Equity2 {
 	 */
 	public static final MMMessageAttribute mmMaturityDate = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Asset.mmMaturityDate;
+			businessElementTrace_lazy = () -> Asset.mmMaturityDate;
 			componentContext_lazy = () -> Equity2.mmObject();
 			isDerived = false;
 			xmlTag = "MtrtyDt";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "MaturityDate";
 			definition = "Date/time at which the security will no longer exist, for example, redeemable preference shares.";
 			maxOccurs = 1;
@@ -209,11 +213,11 @@ public class Equity2 {
 	 */
 	public static final MMMessageAttribute mmNonPaidAmount = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Equity.mmNonPaidAmount;
+			businessElementTrace_lazy = () -> Equity.mmNonPaidAmount;
 			componentContext_lazy = () -> Equity2.mmObject();
 			isDerived = false;
 			xmlTag = "NonPdAmt";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "NonPaidAmount";
 			definition = "Nominal amount which is not paid yet.";
 			maxOccurs = 1;
@@ -256,11 +260,11 @@ public class Equity2 {
 	 */
 	public static final MMMessageAttribute mmParValue = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Equity.mmParValue;
+			businessElementTrace_lazy = () -> Equity.mmParValue;
 			componentContext_lazy = () -> Equity2.mmObject();
 			isDerived = false;
 			xmlTag = "ParVal";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ParValue";
 			definition = "Nominal value of an equity security.";
 			maxOccurs = 1;
@@ -302,11 +306,11 @@ public class Equity2 {
 	 */
 	public static final MMMessageAttribute mmVotingRightsPerShare = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Equity.mmVotingRightsPerShare;
+			businessElementTrace_lazy = () -> Equity.mmVotingRightsPerShare;
 			componentContext_lazy = () -> Equity2.mmObject();
 			isDerived = false;
 			xmlTag = "VtngRghtsPerShr";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "VotingRightsPerShare";
 			definition = "Number of voting rights per share.";
 			maxOccurs = 1;
@@ -318,10 +322,9 @@ public class Equity2 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.Equity2.mmPreferenceToIncome, com.tools20022.repository.msg.Equity2.mmMaturityDate, com.tools20022.repository.msg.Equity2.mmNonPaidAmount,
-						com.tools20022.repository.msg.Equity2.mmParValue, com.tools20022.repository.msg.Equity2.mmVotingRightsPerShare);
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+				messageElement_lazy = () -> Arrays.asList(Equity2.mmPreferenceToIncome, Equity2.mmMaturityDate, Equity2.mmNonPaidAmount, Equity2.mmParValue, Equity2.mmVotingRightsPerShare);
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 				name = "Equity2";
 				definition = "Financial instrument which represents a title of ownership  in a company, ie,  the shareholder is entitled to a part of the company's profit - usually by payment of a dividend - and to voting rights, if any. Each company issues generally different classes of shares, eg, ordinary or common shares, which have no guaranteed amount of dividend but carry voting rights, or preferred shares, which receive dividends before ordinary shares but have no voting right.";
 			}

@@ -19,11 +19,15 @@ package com.tools20022.repository.msg;
 
 import com.tools20022.metamodel.MMMessageAttribute;
 import com.tools20022.metamodel.MMMessageComponent;
+import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.datatype.ISODate;
 import com.tools20022.repository.datatype.Max350Text;
 import com.tools20022.repository.datatype.Max35Text;
 import com.tools20022.repository.datatype.YesNoIndicator;
 import com.tools20022.repository.entity.InvestmentFundClass;
+import com.tools20022.repository.entity.LocalName;
+import com.tools20022.repository.entity.Security;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -118,11 +122,11 @@ public class FinancialInstrument18 {
 	 */
 	public static final MMMessageAttribute mmIdentification = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Security.mmIdentification;
+			businessElementTrace_lazy = () -> Security.mmIdentification;
 			componentContext_lazy = () -> FinancialInstrument18.mmObject();
 			isDerived = false;
 			xmlTag = "Id";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Identification";
 			definition = "Identification of a security, as assigned under a formal or proprietary identification scheme.";
 			maxOccurs = 1;
@@ -165,11 +169,11 @@ public class FinancialInstrument18 {
 	 */
 	public static final MMMessageAttribute mmName = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.LocalName.mmFullName;
+			businessElementTrace_lazy = () -> LocalName.mmFullName;
 			componentContext_lazy = () -> FinancialInstrument18.mmObject();
 			isDerived = false;
 			xmlTag = "Nm";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Name";
 			definition = "Name of the financial instrument in free format text.";
 			maxOccurs = 1;
@@ -217,11 +221,11 @@ public class FinancialInstrument18 {
 	 */
 	public static final MMMessageAttribute mmSeriesIssueIdentificationDate = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.InvestmentFundClass.mmSeriesIssueIdentificationDate;
+			businessElementTrace_lazy = () -> InvestmentFundClass.mmSeriesIssueIdentificationDate;
 			componentContext_lazy = () -> FinancialInstrument18.mmObject();
 			isDerived = false;
 			xmlTag = "SrsIsseIdDt";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SeriesIssueIdentificationDate";
 			definition = "Date that identifies the issue of a fund series. It is typically applicable to a redemption order, subscription order confirmation or redemption order confirmation, but may be specified in the subscription order, if known.";
 			maxOccurs = 1;
@@ -268,11 +272,11 @@ public class FinancialInstrument18 {
 	 */
 	public static final MMMessageAttribute mmSeriesName = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.InvestmentFundClass.mmSeriesName;
+			businessElementTrace_lazy = () -> InvestmentFundClass.mmSeriesName;
 			componentContext_lazy = () -> FinancialInstrument18.mmObject();
 			isDerived = false;
 			xmlTag = "SrsNm";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SeriesName";
 			definition = "Identifies the name of a fund series. It is typically applicable to a redemption order, subscription order confirmation or redemption order confirmation, but may be specified in the subscription, if known.";
 			maxOccurs = 1;
@@ -319,11 +323,11 @@ public class FinancialInstrument18 {
 	 */
 	public static final MMMessageAttribute mmNewIssueIndicator = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.InvestmentFundClass.mmNewIssueIndicator;
+			businessElementTrace_lazy = () -> InvestmentFundClass.mmNewIssueIndicator;
 			componentContext_lazy = () -> FinancialInstrument18.mmObject();
 			isDerived = false;
 			xmlTag = "NewIsseInd";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "NewIssueIndicator";
 			definition = "Indicates that the financial instrument and/or series included in the message is a new issue.";
 			maxOccurs = 1;
@@ -367,7 +371,7 @@ public class FinancialInstrument18 {
 			componentContext_lazy = () -> FinancialInstrument18.mmObject();
 			isDerived = false;
 			xmlTag = "SplmtryId";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SupplementaryIdentification";
 			definition = "Additional information about a financial instrument to help identify the instrument.";
 			maxOccurs = 1;
@@ -379,12 +383,11 @@ public class FinancialInstrument18 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.FinancialInstrument18.mmIdentification, com.tools20022.repository.msg.FinancialInstrument18.mmName,
-						com.tools20022.repository.msg.FinancialInstrument18.mmSeriesIssueIdentificationDate, com.tools20022.repository.msg.FinancialInstrument18.mmSeriesName,
-						com.tools20022.repository.msg.FinancialInstrument18.mmNewIssueIndicator, com.tools20022.repository.msg.FinancialInstrument18.mmSupplementaryIdentification);
+				messageElement_lazy = () -> Arrays.asList(FinancialInstrument18.mmIdentification, FinancialInstrument18.mmName, FinancialInstrument18.mmSeriesIssueIdentificationDate, FinancialInstrument18.mmSeriesName,
+						FinancialInstrument18.mmNewIssueIndicator, FinancialInstrument18.mmSupplementaryIdentification);
 				trace_lazy = () -> InvestmentFundClass.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 				name = "FinancialInstrument18";
 				definition = "Security that is a sub-set of an investment fund, and is governed by the same investment fund policy, eg, dividend option or valuation currency.";
 			}

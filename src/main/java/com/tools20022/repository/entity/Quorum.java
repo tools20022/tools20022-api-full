@@ -17,13 +17,16 @@
 
 package com.tools20022.repository.entity;
 
-import com.tools20022.metamodel.MMBusinessAssociationEnd;
-import com.tools20022.metamodel.MMBusinessAttribute;
-import com.tools20022.metamodel.MMBusinessComponent;
+import com.tools20022.metamodel.*;
 import com.tools20022.repository.choice.QuorumQuantity1Choice;
 import com.tools20022.repository.datatype.Max35Text;
 import com.tools20022.repository.datatype.PercentageRate;
 import com.tools20022.repository.datatype.YesNoIndicator;
+import com.tools20022.repository.GeneratedRepository;
+import com.tools20022.repository.msg.Meeting1;
+import com.tools20022.repository.msg.Meeting2;
+import com.tools20022.repository.msg.Meeting3;
+import com.tools20022.repository.msg.Meeting4;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -37,6 +40,22 @@ import java.util.concurrent.atomic.AtomicReference;
  * <p>
  * <strong>Constant fields:</strong>
  * <ul>
+ * <li>
+ * {@linkplain com.tools20022.metamodel.MMBusinessComponent#getDerivationComponent
+ * derivationComponent} =
+ * <ul>
+ * <li>{@linkplain com.tools20022.repository.choice.QuorumQuantity1Choice
+ * QuorumQuantity1Choice}</li>
+ * </ul>
+ * </li>
+ * <li>
+ * {@linkplain com.tools20022.metamodel.MMBusinessComponent#getAssociationDomain
+ * associationDomain} =
+ * <ul>
+ * <li>{@linkplain com.tools20022.repository.entity.Meeting#mmQuorum
+ * Meeting.mmQuorum}</li>
+ * </ul>
+ * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMBusinessComponent#getElement
  * element} =
  * <ul>
@@ -48,22 +67,6 @@ import java.util.concurrent.atomic.AtomicReference;
  * Quorum.mmQuorumRequired}</li>
  * <li>{@linkplain com.tools20022.repository.entity.Quorum#mmMeeting
  * Quorum.mmMeeting}</li>
- * </ul>
- * </li>
- * <li>
- * {@linkplain com.tools20022.metamodel.MMBusinessComponent#getAssociationDomain
- * associationDomain} =
- * <ul>
- * <li>{@linkplain com.tools20022.repository.entity.Meeting#mmQuorum
- * Meeting.mmQuorum}</li>
- * </ul>
- * </li>
- * <li>
- * {@linkplain com.tools20022.metamodel.MMBusinessComponent#getDerivationComponent
- * derivationComponent} =
- * <ul>
- * <li>{@linkplain com.tools20022.repository.choice.QuorumQuantity1Choice
- * QuorumQuantity1Choice}</li>
  * </ul>
  * </li>
  * <li>
@@ -130,11 +133,10 @@ public class Quorum {
 	 */
 	public static final MMBusinessAttribute mmQuantity = new MMBusinessAttribute() {
 		{
-			derivation_lazy = () -> Arrays.asList(com.tools20022.repository.msg.Meeting1.mmQuorumQuantity, com.tools20022.repository.msg.Meeting2.mmQuorumQuantity, com.tools20022.repository.choice.QuorumQuantity1Choice.mmQuorumQuantity,
-					com.tools20022.repository.msg.Meeting3.mmQuorumQuantity, com.tools20022.repository.msg.Meeting4.mmQuorumQuantity);
+			derivation_lazy = () -> Arrays.asList(Meeting1.mmQuorumQuantity, Meeting2.mmQuorumQuantity, QuorumQuantity1Choice.mmQuorumQuantity, Meeting3.mmQuorumQuantity, Meeting4.mmQuorumQuantity);
 			elementContext_lazy = () -> Quorum.mmObject();
 			isDerived = false;
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "Quantity";
 			definition = "Minimum quantity of securities required to hold a meeting.";
 			maxOccurs = 1;
@@ -187,11 +189,10 @@ public class Quorum {
 	 */
 	public static final MMBusinessAttribute mmPercentage = new MMBusinessAttribute() {
 		{
-			derivation_lazy = () -> Arrays.asList(com.tools20022.repository.msg.Meeting1.mmQuorumQuantityPercentage, com.tools20022.repository.msg.Meeting2.mmQuorumQuantityPercentage,
-					com.tools20022.repository.choice.QuorumQuantity1Choice.mmQuorumQuantityPercentage);
+			derivation_lazy = () -> Arrays.asList(Meeting1.mmQuorumQuantityPercentage, Meeting2.mmQuorumQuantityPercentage, QuorumQuantity1Choice.mmQuorumQuantityPercentage);
 			elementContext_lazy = () -> Quorum.mmObject();
 			isDerived = false;
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "Percentage";
 			definition = "Minimum quantity of securities, expressed as a percentage, required to hold a meeting.";
 			maxOccurs = 1;
@@ -243,11 +244,10 @@ public class Quorum {
 	 */
 	public static final MMBusinessAttribute mmQuorumRequired = new MMBusinessAttribute() {
 		{
-			derivation_lazy = () -> Arrays.asList(com.tools20022.repository.msg.Meeting1.mmQuorumRequired, com.tools20022.repository.msg.Meeting2.mmQuorumRequired, com.tools20022.repository.msg.Meeting3.mmQuorumRequired,
-					com.tools20022.repository.msg.Meeting4.mmQuorumRequired);
+			derivation_lazy = () -> Arrays.asList(Meeting1.mmQuorumRequired, Meeting2.mmQuorumRequired, Meeting3.mmQuorumRequired, Meeting4.mmQuorumRequired);
 			elementContext_lazy = () -> Quorum.mmObject();
 			isDerived = false;
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "QuorumRequired";
 			definition = "Specifies whether a minimum number of security representation is required to hold a meeting.";
 			maxOccurs = 1;
@@ -291,13 +291,13 @@ public class Quorum {
 		{
 			elementContext_lazy = () -> Quorum.mmObject();
 			isDerived = false;
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "Meeting";
 			definition = "Meeting for which a quorum is specified.";
 			maxOccurs = 1;
 			minOccurs = 0;
 			opposite_lazy = () -> com.tools20022.repository.entity.Meeting.mmQuorum;
-			aggregation = com.tools20022.metamodel.MMAggregation.NONE;
+			aggregation = MMAggregation.NONE;
 			type_lazy = () -> com.tools20022.repository.entity.Meeting.mmObject();
 		}
 	};
@@ -305,13 +305,12 @@ public class Quorum {
 	static public MMBusinessComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMBusinessComponent() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "Quorum";
 				definition = "Specifies whether a quorum is required or not together with the quorum parameters.";
 				associationDomain_lazy = () -> Arrays.asList(com.tools20022.repository.entity.Meeting.mmQuorum);
-				element_lazy = () -> Arrays.asList(com.tools20022.repository.entity.Quorum.mmQuantity, com.tools20022.repository.entity.Quorum.mmPercentage, com.tools20022.repository.entity.Quorum.mmQuorumRequired,
-						com.tools20022.repository.entity.Quorum.mmMeeting);
+				element_lazy = () -> Arrays.asList(Quorum.mmQuantity, Quorum.mmPercentage, Quorum.mmQuorumRequired, Quorum.mmMeeting);
 				derivationComponent_lazy = () -> Arrays.asList(QuorumQuantity1Choice.mmObject());
 			}
 		});

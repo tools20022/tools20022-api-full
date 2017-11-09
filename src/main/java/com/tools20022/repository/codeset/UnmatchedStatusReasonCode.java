@@ -19,6 +19,8 @@ package com.tools20022.repository.codeset;
 
 import com.tools20022.metamodel.MMCode;
 import com.tools20022.metamodel.MMCodeSet;
+import com.tools20022.metamodel.MMRegistrationStatus;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -28,6 +30,17 @@ import java.util.concurrent.atomic.AtomicReference;
  * <p>
  * <strong>Constant fields:</strong>
  * <ul>
+ * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getDerivation derivation}
+ * =
+ * <ul>
+ * <li>
+ * {@linkplain com.tools20022.repository.codeset.TransferUnmatchedReason1Code
+ * TransferUnmatchedReason1Code}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.codeset.TransferUnmatchedReason2Code
+ * TransferUnmatchedReason2Code}</li>
+ * </ul>
+ * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getCode code} =
  * <ul>
  * <li>
@@ -146,17 +159,6 @@ import java.util.concurrent.atomic.AtomicReference;
  * UnmatchedStatusReasonCode.mmOther}</li>
  * </ul>
  * </li>
- * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getDerivation derivation}
- * =
- * <ul>
- * <li>
- * {@linkplain com.tools20022.repository.codeset.TransferUnmatchedReason1Code
- * TransferUnmatchedReason1Code}</li>
- * <li>
- * {@linkplain com.tools20022.repository.codeset.TransferUnmatchedReason2Code
- * TransferUnmatchedReason2Code}</li>
- * </ul>
- * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
@@ -206,7 +208,7 @@ public class UnmatchedStatusReasonCode {
 	 */
 	public static final MMCode mmNoMatch = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "NoMatch";
 			definition = "No potential match has been found.";
 			owner_lazy = () -> UnmatchedStatusReasonCode.mmObject();
@@ -236,7 +238,7 @@ public class UnmatchedStatusReasonCode {
 	 */
 	public static final MMCode mmSettlementDate = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "SettlementDate";
 			definition = "Settlement date or transfer date does not match.";
 			owner_lazy = () -> UnmatchedStatusReasonCode.mmObject();
@@ -269,7 +271,7 @@ public class UnmatchedStatusReasonCode {
 	 */
 	public static final MMCode mmTransactionDirection = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "TransactionDirection";
 			definition = "Direction of transaction does not match: delivery instead of receipt or vice versa.";
 			owner_lazy = () -> UnmatchedStatusReasonCode.mmObject();
@@ -299,7 +301,7 @@ public class UnmatchedStatusReasonCode {
 	 */
 	public static final MMCode mmSettlementPlace = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "SettlementPlace";
 			definition = "Place of settlement does not match.";
 			owner_lazy = () -> UnmatchedStatusReasonCode.mmObject();
@@ -329,7 +331,7 @@ public class UnmatchedStatusReasonCode {
 	 */
 	public static final MMCode mmSettlementAmount = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "SettlementAmount";
 			definition = "Settlement amount does not match.";
 			owner_lazy = () -> UnmatchedStatusReasonCode.mmObject();
@@ -359,7 +361,7 @@ public class UnmatchedStatusReasonCode {
 	 */
 	public static final MMCode mmDealPrice = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "DealPrice";
 			definition = "Deal price does not match.";
 			owner_lazy = () -> UnmatchedStatusReasonCode.mmObject();
@@ -389,7 +391,7 @@ public class UnmatchedStatusReasonCode {
 	 */
 	public static final MMCode mmFinancialInstrumentQuantity = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "FinancialInstrumentQuantity";
 			definition = "Financial instrument quantity does not match.";
 			owner_lazy = () -> UnmatchedStatusReasonCode.mmObject();
@@ -419,7 +421,7 @@ public class UnmatchedStatusReasonCode {
 	 */
 	public static final MMCode mmRepurchaseCallDelay = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "RepurchaseCallDelay";
 			definition = "Repurchase call delay does not match.";
 			owner_lazy = () -> UnmatchedStatusReasonCode.mmObject();
@@ -449,7 +451,7 @@ public class UnmatchedStatusReasonCode {
 	 */
 	public static final MMCode mmSettlementTransaction = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "SettlementTransaction";
 			definition = "Settlement transaction type does not match.";
 			owner_lazy = () -> UnmatchedStatusReasonCode.mmObject();
@@ -482,7 +484,7 @@ public class UnmatchedStatusReasonCode {
 	 */
 	public static final MMCode mmFinancialInstrument = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "FinancialInstrument";
 			definition = "Financial instrument identification does not match or a financial instrument attribute differs.";
 			owner_lazy = () -> UnmatchedStatusReasonCode.mmObject();
@@ -512,7 +514,7 @@ public class UnmatchedStatusReasonCode {
 	 */
 	public static final MMCode mmVariableRateSupport = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "VariableRateSupport";
 			definition = "Variable rate support does not match.";
 			owner_lazy = () -> UnmatchedStatusReasonCode.mmObject();
@@ -542,7 +544,7 @@ public class UnmatchedStatusReasonCode {
 	 */
 	public static final MMCode mmNotRecognised = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "NotRecognised";
 			definition = "Counterparty does not recognise the transaction.";
 			owner_lazy = () -> UnmatchedStatusReasonCode.mmObject();
@@ -572,7 +574,7 @@ public class UnmatchedStatusReasonCode {
 	 */
 	public static final MMCode mmRepurchaseSpreadRate = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "RepurchaseSpreadRate";
 			definition = "Repurchase spread rate does not match.";
 			owner_lazy = () -> UnmatchedStatusReasonCode.mmObject();
@@ -602,7 +604,7 @@ public class UnmatchedStatusReasonCode {
 	 */
 	public static final MMCode mmRepurchaseRate = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "RepurchaseRate";
 			definition = "Repurchase rate does not match.";
 			owner_lazy = () -> UnmatchedStatusReasonCode.mmObject();
@@ -632,7 +634,7 @@ public class UnmatchedStatusReasonCode {
 	 */
 	public static final MMCode mmCounterpartyTooLateForMatching = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "CounterpartyTooLateForMatching";
 			definition = "Counterparty's instruction was too late for matching.";
 			owner_lazy = () -> UnmatchedStatusReasonCode.mmObject();
@@ -662,7 +664,7 @@ public class UnmatchedStatusReasonCode {
 	 */
 	public static final MMCode mmRepurchaseRateType = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "RepurchaseRateType";
 			definition = "Repurchase rate type does not match.";
 			owner_lazy = () -> UnmatchedStatusReasonCode.mmObject();
@@ -692,7 +694,7 @@ public class UnmatchedStatusReasonCode {
 	 */
 	public static final MMCode mmRepurchaseAmount = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "RepurchaseAmount";
 			definition = "Repurchase amount does not match.";
 			owner_lazy = () -> UnmatchedStatusReasonCode.mmObject();
@@ -722,7 +724,7 @@ public class UnmatchedStatusReasonCode {
 	 */
 	public static final MMCode mmRepurchasePremiumAmount = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "RepurchasePremiumAmount";
 			definition = "Repurchase premium amount does not match.";
 			owner_lazy = () -> UnmatchedStatusReasonCode.mmObject();
@@ -755,7 +757,7 @@ public class UnmatchedStatusReasonCode {
 	 */
 	public static final MMCode mmPhysicalSettlement = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "PhysicalSettlement";
 			definition = "Settlement does not match: counterparty's instruction is for physical settlement, your instruction is not, or vice versa.";
 			owner_lazy = () -> UnmatchedStatusReasonCode.mmObject();
@@ -785,7 +787,7 @@ public class UnmatchedStatusReasonCode {
 	 */
 	public static final MMCode mmCommonReference = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "CommonReference";
 			definition = "Common reference does not match.";
 			owner_lazy = () -> UnmatchedStatusReasonCode.mmObject();
@@ -818,7 +820,7 @@ public class UnmatchedStatusReasonCode {
 	 */
 	public static final MMCode mmPaymentCode = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "PaymentCode";
 			definition = "Payment code does not match. The counterparty's instruction is for free settlement, and yours is for settlement against payment, or vice versa.";
 			owner_lazy = () -> UnmatchedStatusReasonCode.mmObject();
@@ -848,7 +850,7 @@ public class UnmatchedStatusReasonCode {
 	 */
 	public static final MMCode mmPlaceOfTrade = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "PlaceOfTrade";
 			definition = "Place of trade does not match.";
 			owner_lazy = () -> UnmatchedStatusReasonCode.mmObject();
@@ -880,7 +882,7 @@ public class UnmatchedStatusReasonCode {
 	 */
 	public static final MMCode mmDuplicate = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "Duplicate";
 			definition = "Instruction has not been matched: it is a possible duplicate instruction.";
 			owner_lazy = () -> UnmatchedStatusReasonCode.mmObject();
@@ -910,7 +912,7 @@ public class UnmatchedStatusReasonCode {
 	 */
 	public static final MMCode mmForfeitRepurchaseAmount = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "ForfeitRepurchaseAmount";
 			definition = "Repurchase forfeit amount does not match.";
 			owner_lazy = () -> UnmatchedStatusReasonCode.mmObject();
@@ -943,7 +945,7 @@ public class UnmatchedStatusReasonCode {
 	 */
 	public static final MMCode mmRegistrationDetails = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "RegistrationDetails";
 			definition = "Registration details do not match. A discrepancy exists in the registration details linked to the transaction.";
 			owner_lazy = () -> UnmatchedStatusReasonCode.mmObject();
@@ -976,7 +978,7 @@ public class UnmatchedStatusReasonCode {
 	 */
 	public static final MMCode mmRTGSSystem = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "RTGSSystem";
 			definition = "RTGS system does not match. Counterparty indicates a settlement via RTGS system and you indicate non-RTGS settlement, or vice versa.";
 			owner_lazy = () -> UnmatchedStatusReasonCode.mmObject();
@@ -1006,7 +1008,7 @@ public class UnmatchedStatusReasonCode {
 	 */
 	public static final MMCode mmIncorrectAgent = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "IncorrectAgent";
 			definition = "Delivery or receiving agent does not match.";
 			owner_lazy = () -> UnmatchedStatusReasonCode.mmObject();
@@ -1036,7 +1038,7 @@ public class UnmatchedStatusReasonCode {
 	 */
 	public static final MMCode mmCounterpartyCancelled = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "CounterpartyCancelled";
 			definition = "Counterparty has cancelled the transaction/instruction.";
 			owner_lazy = () -> UnmatchedStatusReasonCode.mmObject();
@@ -1066,7 +1068,7 @@ public class UnmatchedStatusReasonCode {
 	 */
 	public static final MMCode mmChargesAmount = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "ChargesAmount";
 			definition = "Charges amount does not match.";
 			owner_lazy = () -> UnmatchedStatusReasonCode.mmObject();
@@ -1096,7 +1098,7 @@ public class UnmatchedStatusReasonCode {
 	 */
 	public static final MMCode mmBuyerOrSeller = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "BuyerOrSeller";
 			definition = "Buyer (receiver) or seller (deliverer) does not match.";
 			owner_lazy = () -> UnmatchedStatusReasonCode.mmObject();
@@ -1126,7 +1128,7 @@ public class UnmatchedStatusReasonCode {
 	 */
 	public static final MMCode mmCurrencySettlementAmount = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "CurrencySettlementAmount";
 			definition = "Currency of settlement amount does not match.";
 			owner_lazy = () -> UnmatchedStatusReasonCode.mmObject();
@@ -1156,7 +1158,7 @@ public class UnmatchedStatusReasonCode {
 	 */
 	public static final MMCode mmNoMatchingStarted = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "NoMatchingStarted";
 			definition = "Matching process has not yet started.";
 			owner_lazy = () -> UnmatchedStatusReasonCode.mmObject();
@@ -1189,7 +1191,7 @@ public class UnmatchedStatusReasonCode {
 	 */
 	public static final MMCode mmSafekeepingAccount = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "SafekeepingAccount";
 			definition = "Safekeeping account used as a matching criteria on the market concerned does not match.";
 			owner_lazy = () -> UnmatchedStatusReasonCode.mmObject();
@@ -1219,7 +1221,7 @@ public class UnmatchedStatusReasonCode {
 	 */
 	public static final MMCode mmTradeDate = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "TradeDate";
 			definition = "Trade date does not match.";
 			owner_lazy = () -> UnmatchedStatusReasonCode.mmObject();
@@ -1249,7 +1251,7 @@ public class UnmatchedStatusReasonCode {
 	 */
 	public static final MMCode mmTooLateForMatching = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "TooLateForMatching";
 			definition = "Instruction received too late for matching.";
 			owner_lazy = () -> UnmatchedStatusReasonCode.mmObject();
@@ -1279,7 +1281,7 @@ public class UnmatchedStatusReasonCode {
 	 */
 	public static final MMCode mmClosingDateTime = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "ClosingDateTime";
 			definition = "Closing date/time does not match.";
 			owner_lazy = () -> UnmatchedStatusReasonCode.mmObject();
@@ -1309,7 +1311,7 @@ public class UnmatchedStatusReasonCode {
 	 */
 	public static final MMCode mmReceivingOrDeliveringCustodian = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "ReceivingOrDeliveringCustodian";
 			definition = "Delivering or receiving custodian does not match.";
 			owner_lazy = () -> UnmatchedStatusReasonCode.mmObject();
@@ -1339,7 +1341,7 @@ public class UnmatchedStatusReasonCode {
 	 */
 	public static final MMCode mmOther = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "Other";
 			definition = "Another unmatched reason.";
 			owner_lazy = () -> UnmatchedStatusReasonCode.mmObject();
@@ -1350,30 +1352,21 @@ public class UnmatchedStatusReasonCode {
 	static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
 				example = Arrays.asList("CMIS");
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "UnmatchedStatusReasonCode";
 				definition = "Specifies the reason the transaction, transfer or settlement instruction is unmatched.";
-				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.UnmatchedStatusReasonCode.mmNoMatch, com.tools20022.repository.codeset.UnmatchedStatusReasonCode.mmSettlementDate,
-						com.tools20022.repository.codeset.UnmatchedStatusReasonCode.mmTransactionDirection, com.tools20022.repository.codeset.UnmatchedStatusReasonCode.mmSettlementPlace,
-						com.tools20022.repository.codeset.UnmatchedStatusReasonCode.mmSettlementAmount, com.tools20022.repository.codeset.UnmatchedStatusReasonCode.mmDealPrice,
-						com.tools20022.repository.codeset.UnmatchedStatusReasonCode.mmFinancialInstrumentQuantity, com.tools20022.repository.codeset.UnmatchedStatusReasonCode.mmRepurchaseCallDelay,
-						com.tools20022.repository.codeset.UnmatchedStatusReasonCode.mmSettlementTransaction, com.tools20022.repository.codeset.UnmatchedStatusReasonCode.mmFinancialInstrument,
-						com.tools20022.repository.codeset.UnmatchedStatusReasonCode.mmVariableRateSupport, com.tools20022.repository.codeset.UnmatchedStatusReasonCode.mmNotRecognised,
-						com.tools20022.repository.codeset.UnmatchedStatusReasonCode.mmRepurchaseSpreadRate, com.tools20022.repository.codeset.UnmatchedStatusReasonCode.mmRepurchaseRate,
-						com.tools20022.repository.codeset.UnmatchedStatusReasonCode.mmCounterpartyTooLateForMatching, com.tools20022.repository.codeset.UnmatchedStatusReasonCode.mmRepurchaseRateType,
-						com.tools20022.repository.codeset.UnmatchedStatusReasonCode.mmRepurchaseAmount, com.tools20022.repository.codeset.UnmatchedStatusReasonCode.mmRepurchasePremiumAmount,
-						com.tools20022.repository.codeset.UnmatchedStatusReasonCode.mmPhysicalSettlement, com.tools20022.repository.codeset.UnmatchedStatusReasonCode.mmCommonReference,
-						com.tools20022.repository.codeset.UnmatchedStatusReasonCode.mmPaymentCode, com.tools20022.repository.codeset.UnmatchedStatusReasonCode.mmPlaceOfTrade,
-						com.tools20022.repository.codeset.UnmatchedStatusReasonCode.mmDuplicate, com.tools20022.repository.codeset.UnmatchedStatusReasonCode.mmForfeitRepurchaseAmount,
-						com.tools20022.repository.codeset.UnmatchedStatusReasonCode.mmRegistrationDetails, com.tools20022.repository.codeset.UnmatchedStatusReasonCode.mmRTGSSystem,
-						com.tools20022.repository.codeset.UnmatchedStatusReasonCode.mmIncorrectAgent, com.tools20022.repository.codeset.UnmatchedStatusReasonCode.mmCounterpartyCancelled,
-						com.tools20022.repository.codeset.UnmatchedStatusReasonCode.mmChargesAmount, com.tools20022.repository.codeset.UnmatchedStatusReasonCode.mmBuyerOrSeller,
-						com.tools20022.repository.codeset.UnmatchedStatusReasonCode.mmCurrencySettlementAmount, com.tools20022.repository.codeset.UnmatchedStatusReasonCode.mmNoMatchingStarted,
-						com.tools20022.repository.codeset.UnmatchedStatusReasonCode.mmSafekeepingAccount, com.tools20022.repository.codeset.UnmatchedStatusReasonCode.mmTradeDate,
-						com.tools20022.repository.codeset.UnmatchedStatusReasonCode.mmTooLateForMatching, com.tools20022.repository.codeset.UnmatchedStatusReasonCode.mmClosingDateTime,
-						com.tools20022.repository.codeset.UnmatchedStatusReasonCode.mmReceivingOrDeliveringCustodian, com.tools20022.repository.codeset.UnmatchedStatusReasonCode.mmOther);
+				code_lazy = () -> Arrays.asList(UnmatchedStatusReasonCode.mmNoMatch, UnmatchedStatusReasonCode.mmSettlementDate, UnmatchedStatusReasonCode.mmTransactionDirection, UnmatchedStatusReasonCode.mmSettlementPlace,
+						UnmatchedStatusReasonCode.mmSettlementAmount, UnmatchedStatusReasonCode.mmDealPrice, UnmatchedStatusReasonCode.mmFinancialInstrumentQuantity, UnmatchedStatusReasonCode.mmRepurchaseCallDelay,
+						UnmatchedStatusReasonCode.mmSettlementTransaction, UnmatchedStatusReasonCode.mmFinancialInstrument, UnmatchedStatusReasonCode.mmVariableRateSupport, UnmatchedStatusReasonCode.mmNotRecognised,
+						UnmatchedStatusReasonCode.mmRepurchaseSpreadRate, UnmatchedStatusReasonCode.mmRepurchaseRate, UnmatchedStatusReasonCode.mmCounterpartyTooLateForMatching, UnmatchedStatusReasonCode.mmRepurchaseRateType,
+						UnmatchedStatusReasonCode.mmRepurchaseAmount, UnmatchedStatusReasonCode.mmRepurchasePremiumAmount, UnmatchedStatusReasonCode.mmPhysicalSettlement, UnmatchedStatusReasonCode.mmCommonReference,
+						UnmatchedStatusReasonCode.mmPaymentCode, UnmatchedStatusReasonCode.mmPlaceOfTrade, UnmatchedStatusReasonCode.mmDuplicate, UnmatchedStatusReasonCode.mmForfeitRepurchaseAmount,
+						UnmatchedStatusReasonCode.mmRegistrationDetails, UnmatchedStatusReasonCode.mmRTGSSystem, UnmatchedStatusReasonCode.mmIncorrectAgent, UnmatchedStatusReasonCode.mmCounterpartyCancelled,
+						UnmatchedStatusReasonCode.mmChargesAmount, UnmatchedStatusReasonCode.mmBuyerOrSeller, UnmatchedStatusReasonCode.mmCurrencySettlementAmount, UnmatchedStatusReasonCode.mmNoMatchingStarted,
+						UnmatchedStatusReasonCode.mmSafekeepingAccount, UnmatchedStatusReasonCode.mmTradeDate, UnmatchedStatusReasonCode.mmTooLateForMatching, UnmatchedStatusReasonCode.mmClosingDateTime,
+						UnmatchedStatusReasonCode.mmReceivingOrDeliveringCustodian, UnmatchedStatusReasonCode.mmOther);
 				derivation_lazy = () -> Arrays.asList(TransferUnmatchedReason1Code.mmObject(), TransferUnmatchedReason2Code.mmObject());
 			}
 		});

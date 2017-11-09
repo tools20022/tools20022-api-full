@@ -20,12 +20,16 @@ package com.tools20022.repository.msg;
 import com.tools20022.metamodel.MMMessageAssociationEnd;
 import com.tools20022.metamodel.MMMessageAttribute;
 import com.tools20022.metamodel.MMMessageComponent;
+import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.datatype.ISODate;
 import com.tools20022.repository.datatype.Max1025Text;
 import com.tools20022.repository.datatype.Max35Text;
 import com.tools20022.repository.datatype.TrueFalseIndicator;
+import com.tools20022.repository.entity.Agreement;
 import com.tools20022.repository.entity.DirectDebitMandate;
 import com.tools20022.repository.entity.ElectronicSignature;
+import com.tools20022.repository.entity.Mandate;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -117,11 +121,11 @@ public class MandateRelatedInformation4 {
 	 */
 	public static final MMMessageAttribute mmMandateIdentification = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Mandate.mmMandateIdentification;
+			businessElementTrace_lazy = () -> Mandate.mmMandateIdentification;
 			componentContext_lazy = () -> MandateRelatedInformation4.mmObject();
 			isDerived = false;
 			xmlTag = "MndtId";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "MandateIdentification";
 			definition = "Reference of the direct debit mandate that has been signed between by the debtor and the creditor.";
 			maxOccurs = 1;
@@ -165,11 +169,11 @@ public class MandateRelatedInformation4 {
 	 */
 	public static final MMMessageAttribute mmDateOfSignature = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Agreement.mmDateSigned;
+			businessElementTrace_lazy = () -> Agreement.mmDateSigned;
 			componentContext_lazy = () -> MandateRelatedInformation4.mmObject();
 			isDerived = false;
 			xmlTag = "DtOfSgntr";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "DateOfSignature";
 			definition = "Date on which the direct debit mandate has been signed by the debtor.";
 			maxOccurs = 1;
@@ -214,11 +218,11 @@ public class MandateRelatedInformation4 {
 	 */
 	public static final MMMessageAttribute mmAmendmentIndicator = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Mandate.mmAmendment;
+			businessElementTrace_lazy = () -> Mandate.mmAmendment;
 			componentContext_lazy = () -> MandateRelatedInformation4.mmObject();
 			isDerived = false;
 			xmlTag = "AmdmntInd";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AmendmentIndicator";
 			definition = "Indicator notifying whether the underlying mandate is amended or not.";
 			maxOccurs = 1;
@@ -266,7 +270,7 @@ public class MandateRelatedInformation4 {
 			componentContext_lazy = () -> MandateRelatedInformation4.mmObject();
 			isDerived = false;
 			xmlTag = "AmdmntInfDtls";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AmendmentInformationDetails";
 			definition = "List of direct debit mandate elements that have been modified.";
 			maxOccurs = 1;
@@ -317,7 +321,7 @@ public class MandateRelatedInformation4 {
 			componentContext_lazy = () -> MandateRelatedInformation4.mmObject();
 			isDerived = false;
 			xmlTag = "ElctrncSgntr";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ElectronicSignature";
 			definition = "Additional security provisions, such as a digital signature, as provided by the debtor.";
 			maxOccurs = 1;
@@ -329,12 +333,11 @@ public class MandateRelatedInformation4 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.MandateRelatedInformation4.mmMandateIdentification, com.tools20022.repository.msg.MandateRelatedInformation4.mmDateOfSignature,
-						com.tools20022.repository.msg.MandateRelatedInformation4.mmAmendmentIndicator, com.tools20022.repository.msg.MandateRelatedInformation4.mmAmendmentInformationDetails,
-						com.tools20022.repository.msg.MandateRelatedInformation4.mmElectronicSignature);
+				messageElement_lazy = () -> Arrays.asList(MandateRelatedInformation4.mmMandateIdentification, MandateRelatedInformation4.mmDateOfSignature, MandateRelatedInformation4.mmAmendmentIndicator,
+						MandateRelatedInformation4.mmAmendmentInformationDetails, MandateRelatedInformation4.mmElectronicSignature);
 				trace_lazy = () -> DirectDebitMandate.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 				name = "MandateRelatedInformation4";
 				definition = "Set of elements used to provide further details related to a direct debit mandate signed between the creditor and the debtor.";
 			}

@@ -19,7 +19,9 @@ package com.tools20022.repository.codeset;
 
 import com.tools20022.metamodel.MMCode;
 import com.tools20022.metamodel.MMCodeSet;
+import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.codeset.TypeOfAmountCode;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -91,7 +93,7 @@ public class TypeOfAmount2Code extends TypeOfAmountCode {
 	 */
 	public static final MMCode mmCashback = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Cashback";
 			owner_lazy = () -> TypeOfAmount2Code.mmObject();
 		}
@@ -114,7 +116,7 @@ public class TypeOfAmount2Code extends TypeOfAmountCode {
 	 */
 	public static final MMCode mmGratuity = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Gratuity";
 			owner_lazy = () -> TypeOfAmount2Code.mmObject();
 		}
@@ -137,7 +139,7 @@ public class TypeOfAmount2Code extends TypeOfAmountCode {
 	 */
 	public static final MMCode mmFees = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Fees";
 			owner_lazy = () -> TypeOfAmount2Code.mmObject();
 		}
@@ -160,7 +162,7 @@ public class TypeOfAmount2Code extends TypeOfAmountCode {
 	 */
 	public static final MMCode mmRebates = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Rebates";
 			owner_lazy = () -> TypeOfAmount2Code.mmObject();
 		}
@@ -183,7 +185,7 @@ public class TypeOfAmount2Code extends TypeOfAmountCode {
 	 */
 	public static final MMCode mmValueAddedTax = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ValueAddedTax";
 			owner_lazy = () -> TypeOfAmount2Code.mmObject();
 		}
@@ -192,13 +194,12 @@ public class TypeOfAmount2Code extends TypeOfAmountCode {
 	static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
 				example = Arrays.asList("CSHB");
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "TypeOfAmount2Code";
 				definition = "Identification of the type of amount.";
-				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.TypeOfAmount2Code.mmCashback, com.tools20022.repository.codeset.TypeOfAmount2Code.mmGratuity, com.tools20022.repository.codeset.TypeOfAmount2Code.mmFees,
-						com.tools20022.repository.codeset.TypeOfAmount2Code.mmRebates, com.tools20022.repository.codeset.TypeOfAmount2Code.mmValueAddedTax);
+				code_lazy = () -> Arrays.asList(TypeOfAmount2Code.mmCashback, TypeOfAmount2Code.mmGratuity, TypeOfAmount2Code.mmFees, TypeOfAmount2Code.mmRebates, TypeOfAmount2Code.mmValueAddedTax);
 				trace_lazy = () -> TypeOfAmountCode.mmObject();
 			}
 		});

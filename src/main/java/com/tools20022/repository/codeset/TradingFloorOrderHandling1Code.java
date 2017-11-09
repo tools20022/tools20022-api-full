@@ -19,7 +19,9 @@ package com.tools20022.repository.codeset;
 
 import com.tools20022.metamodel.MMCode;
 import com.tools20022.metamodel.MMCodeSet;
+import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.codeset.TradingFloorOrderHandlingCode;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -89,7 +91,7 @@ public class TradingFloorOrderHandling1Code extends TradingFloorOrderHandlingCod
 	 */
 	public static final MMCode mmAutomatedPrivate = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AutomatedPrivate";
 			owner_lazy = () -> TradingFloorOrderHandling1Code.mmObject();
 		}
@@ -112,7 +114,7 @@ public class TradingFloorOrderHandling1Code extends TradingFloorOrderHandlingCod
 	 */
 	public static final MMCode mmAutomatedPublic = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AutomatedPublic";
 			owner_lazy = () -> TradingFloorOrderHandling1Code.mmObject();
 		}
@@ -135,7 +137,7 @@ public class TradingFloorOrderHandling1Code extends TradingFloorOrderHandlingCod
 	 */
 	public static final MMCode mmManual = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Manual";
 			owner_lazy = () -> TradingFloorOrderHandling1Code.mmObject();
 		}
@@ -144,13 +146,12 @@ public class TradingFloorOrderHandling1Code extends TradingFloorOrderHandlingCod
 	static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
 				example = Arrays.asList("ATPR");
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "TradingFloorOrderHandling1Code";
 				definition = "Description of the parameters under which an order must be handled on the floor.";
-				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.TradingFloorOrderHandling1Code.mmAutomatedPrivate, com.tools20022.repository.codeset.TradingFloorOrderHandling1Code.mmAutomatedPublic,
-						com.tools20022.repository.codeset.TradingFloorOrderHandling1Code.mmManual);
+				code_lazy = () -> Arrays.asList(TradingFloorOrderHandling1Code.mmAutomatedPrivate, TradingFloorOrderHandling1Code.mmAutomatedPublic, TradingFloorOrderHandling1Code.mmManual);
 				trace_lazy = () -> TradingFloorOrderHandlingCode.mmObject();
 			}
 		});

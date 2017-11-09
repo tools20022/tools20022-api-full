@@ -19,7 +19,9 @@ package com.tools20022.repository.codeset;
 
 import com.tools20022.metamodel.MMCode;
 import com.tools20022.metamodel.MMCodeSet;
+import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.codeset.ServiceLevelCode;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -87,7 +89,7 @@ public class ServiceLevel1Code extends ServiceLevelCode {
 	 */
 	public static final MMCode mmSingleEuroPaymentsArea = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SingleEuroPaymentsArea";
 			owner_lazy = () -> ServiceLevel1Code.mmObject();
 		}
@@ -110,7 +112,7 @@ public class ServiceLevel1Code extends ServiceLevelCode {
 	 */
 	public static final MMCode mmSameDayValue = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SameDayValue";
 			owner_lazy = () -> ServiceLevel1Code.mmObject();
 		}
@@ -133,7 +135,7 @@ public class ServiceLevel1Code extends ServiceLevelCode {
 	 */
 	public static final MMCode mmEBAPriorityService = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "EBAPriorityService";
 			owner_lazy = () -> ServiceLevel1Code.mmObject();
 		}
@@ -142,13 +144,12 @@ public class ServiceLevel1Code extends ServiceLevelCode {
 	static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
 				example = Arrays.asList("SEPA");
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "ServiceLevel1Code";
 				definition = "Specifies the pre-agreed level of service between the parties.";
-				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.ServiceLevel1Code.mmSingleEuroPaymentsArea, com.tools20022.repository.codeset.ServiceLevel1Code.mmSameDayValue,
-						com.tools20022.repository.codeset.ServiceLevel1Code.mmEBAPriorityService);
+				code_lazy = () -> Arrays.asList(ServiceLevel1Code.mmSingleEuroPaymentsArea, ServiceLevel1Code.mmSameDayValue, ServiceLevel1Code.mmEBAPriorityService);
 				trace_lazy = () -> ServiceLevelCode.mmObject();
 			}
 		});

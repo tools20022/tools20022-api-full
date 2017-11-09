@@ -20,9 +20,11 @@ package com.tools20022.repository.msg;
 import com.tools20022.metamodel.MMMessageAssociationEnd;
 import com.tools20022.metamodel.MMMessageAttribute;
 import com.tools20022.metamodel.MMMessageComponent;
+import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.choice.UnitsOrAmountOrPercentage1Choice;
 import com.tools20022.repository.codeset.CurrencyCode;
 import com.tools20022.repository.entity.InvestmentFundClass;
+import com.tools20022.repository.GeneratedRepository;
 import java.text.DateFormat;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
@@ -128,11 +130,11 @@ public class Repartition3 {
 			componentContext_lazy = () -> Repartition3.mmObject();
 			isDerived = false;
 			xmlTag = "Qty";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Quantity";
 			definition = "Amount, units or percentage of financial instrument invested or withdrawn.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.Repartition4.mmQuantity);
-			previousVersion_lazy = () -> com.tools20022.repository.msg.Repartition2.mmPercentage;
+			nextVersions_lazy = () -> Arrays.asList(Repartition4.mmQuantity);
+			previousVersion_lazy = () -> Repartition2.mmPercentage;
 			maxOccurs = 1;
 			minOccurs = 1;
 			complexType_lazy = () -> UnitsOrAmountOrPercentage1Choice.mmObject();
@@ -191,11 +193,11 @@ public class Repartition3 {
 			componentContext_lazy = () -> Repartition3.mmObject();
 			isDerived = false;
 			xmlTag = "FinInstrm";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "FinancialInstrument";
 			definition = "Security that is a sub-set of an investment fund, and is governed by the same investment fund policy, eg, dividend option or valuation currency.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.Repartition4.mmFinancialInstrument);
-			previousVersion_lazy = () -> com.tools20022.repository.msg.Repartition2.mmFinancialInstrument;
+			nextVersions_lazy = () -> Arrays.asList(Repartition4.mmFinancialInstrument);
+			previousVersion_lazy = () -> Repartition2.mmFinancialInstrument;
 			maxOccurs = 1;
 			minOccurs = 1;
 			isComposite = true;
@@ -250,11 +252,11 @@ public class Repartition3 {
 			componentContext_lazy = () -> Repartition3.mmObject();
 			isDerived = false;
 			xmlTag = "CcyOfPlan";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CurrencyOfPlan";
 			definition = "When a fund has multiple currencies within same ISIN, this indicates the currency of the savings or withdrawal plan.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.Repartition4.mmCurrencyOfPlan);
-			previousVersion_lazy = () -> com.tools20022.repository.msg.Repartition2.mmCurrencyOfPlan;
+			nextVersions_lazy = () -> Arrays.asList(Repartition4.mmCurrencyOfPlan);
+			previousVersion_lazy = () -> Repartition2.mmCurrencyOfPlan;
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> CurrencyCode.mmObject();
@@ -264,10 +266,10 @@ public class Repartition3 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.Repartition3.mmQuantity, com.tools20022.repository.msg.Repartition3.mmFinancialInstrument, com.tools20022.repository.msg.Repartition3.mmCurrencyOfPlan);
+				messageElement_lazy = () -> Arrays.asList(Repartition3.mmQuantity, Repartition3.mmFinancialInstrument, Repartition3.mmCurrencyOfPlan);
 				trace_lazy = () -> InvestmentFundClass.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.OBSOLETE;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.OBSOLETE;
 				removalDate = ((Supplier<Date>) (() -> {
 					try {
 						return DateFormat.getDateInstance(java.text.DateFormat.LONG).parse("September 9, 2016");

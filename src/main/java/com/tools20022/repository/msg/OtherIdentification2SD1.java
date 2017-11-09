@@ -19,9 +19,12 @@ package com.tools20022.repository.msg;
 
 import com.tools20022.metamodel.MMMessageAttribute;
 import com.tools20022.metamodel.MMMessageComponent;
+import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.datatype.Max240Text;
 import com.tools20022.repository.datatype.Max350Text;
+import com.tools20022.repository.entity.GenericIdentification;
 import com.tools20022.repository.entity.SecuritiesIdentification;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -108,7 +111,7 @@ public class OtherIdentification2SD1 {
 			componentContext_lazy = () -> OtherIdentification2SD1.mmObject();
 			isDerived = false;
 			xmlTag = "PlcAndNm";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PlaceAndName";
 			definition = "Unambiguous reference to the location where the supplementary data must be inserted in the message instance. \r\n\r\nIn the case of XML, this is expressed by a valid XPath.";
 			maxOccurs = 1;
@@ -152,11 +155,11 @@ public class OtherIdentification2SD1 {
 	 */
 	public static final MMMessageAttribute mmLocalLanguageSecurityName = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.GenericIdentification.mmIdentification;
+			businessElementTrace_lazy = () -> GenericIdentification.mmIdentification;
 			componentContext_lazy = () -> OtherIdentification2SD1.mmObject();
 			isDerived = false;
 			xmlTag = "LclLangSctyNm";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "LocalLanguageSecurityName";
 			definition = "Full and formal name of underlying securities in the local language.";
 			maxOccurs = 1;
@@ -202,7 +205,7 @@ public class OtherIdentification2SD1 {
 			componentContext_lazy = () -> OtherIdentification2SD1.mmObject();
 			isDerived = false;
 			xmlTag = "AbbrvtdLclLangSctyNm";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AbbreviatedLocalLanguageSecurityName";
 			definition = "Abbreviated name of underlying securities in the local language. \r\nIn case of non-listed securities, it will be a full local language security name.\r\n 銘柄名（銘柄略称";
 			maxOccurs = 1;
@@ -214,11 +217,10 @@ public class OtherIdentification2SD1 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.OtherIdentification2SD1.mmPlaceAndName, com.tools20022.repository.msg.OtherIdentification2SD1.mmLocalLanguageSecurityName,
-						com.tools20022.repository.msg.OtherIdentification2SD1.mmAbbreviatedLocalLanguageSecurityName);
+				messageElement_lazy = () -> Arrays.asList(OtherIdentification2SD1.mmPlaceAndName, OtherIdentification2SD1.mmLocalLanguageSecurityName, OtherIdentification2SD1.mmAbbreviatedLocalLanguageSecurityName);
 				trace_lazy = () -> SecuritiesIdentification.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "OtherIdentification2SD1";
 				definition = "Extension to  identify an underlying security by proprietary or domestic identification scheme";
 			}

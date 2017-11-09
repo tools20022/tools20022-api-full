@@ -20,8 +20,10 @@ package com.tools20022.repository.choice;
 import com.tools20022.metamodel.MMChoiceComponent;
 import com.tools20022.metamodel.MMMessageAssociationEnd;
 import com.tools20022.metamodel.MMMessageAttribute;
+import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.codeset.CRSSourceStatus1Code;
 import com.tools20022.repository.entity.FATCAStatus;
+import com.tools20022.repository.GeneratedRepository;
 import com.tools20022.repository.msg.GenericIdentification47;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
@@ -107,14 +109,14 @@ public class CRSSource1Choice {
 	 */
 	public static final MMMessageAttribute mmCode = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.FATCAStatus.mmFATCASourceStatus;
+			businessElementTrace_lazy = () -> FATCAStatus.mmFATCASourceStatus;
 			componentContext_lazy = () -> CRSSource1Choice.mmObject();
 			isDerived = false;
 			xmlTag = "Cd";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Code";
 			definition = "Source of the Common Reporting Standard (CRS) status expressed as a code.";
-			previousVersion_lazy = () -> com.tools20022.repository.choice.FATCASource1Choice.mmCode;
+			previousVersion_lazy = () -> FATCASource1Choice.mmCode;
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> CRSSourceStatus1Code.mmObject();
@@ -161,10 +163,10 @@ public class CRSSource1Choice {
 			componentContext_lazy = () -> CRSSource1Choice.mmObject();
 			isDerived = false;
 			xmlTag = "Prtry";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Proprietary";
 			definition = "Source of Common Reporting Standard (CRS) status expressed as a proprietary code.";
-			previousVersion_lazy = () -> com.tools20022.repository.choice.FATCASource1Choice.mmProprietary;
+			previousVersion_lazy = () -> FATCASource1Choice.mmProprietary;
 			maxOccurs = 1;
 			minOccurs = 1;
 			isComposite = true;
@@ -175,10 +177,10 @@ public class CRSSource1Choice {
 	final static public MMChoiceComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMChoiceComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.choice.CRSSource1Choice.mmCode, com.tools20022.repository.choice.CRSSource1Choice.mmProprietary);
+				messageElement_lazy = () -> Arrays.asList(CRSSource1Choice.mmCode, CRSSource1Choice.mmProprietary);
 				trace_lazy = () -> FATCAStatus.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "CRSSource1Choice";
 				definition = "Choice of formats for the source of the Common Reporting Standard (CRS).";
 			}

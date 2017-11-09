@@ -19,8 +19,10 @@ package com.tools20022.repository.msg;
 
 import com.tools20022.metamodel.MMMessageAttribute;
 import com.tools20022.metamodel.MMMessageComponent;
+import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.codeset.InstitutionalClassificationCode;
 import com.tools20022.repository.datatype.Max240Text;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -100,7 +102,7 @@ public class CounterpartyDetailsType1 {
 			componentContext_lazy = () -> CounterpartyDetailsType1.mmObject();
 			isDerived = false;
 			xmlTag = "FinInstrmId";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "FinancialInstrumentIdentification";
 			definition = "Identifies the financial instrument.";
 			maxOccurs = 1;
@@ -147,7 +149,7 @@ public class CounterpartyDetailsType1 {
 			componentContext_lazy = () -> CounterpartyDetailsType1.mmObject();
 			isDerived = false;
 			xmlTag = "PstFctvDtClssfctn";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PostEffectiveDateClassification";
 			definition = "Classification of the Issuer or the Counterparty institution in case of a merger.\r\n存続/消滅/親会社/子会社/未定の区分\r\n※イベントタイプがMRGRの場合に、存続会社or消滅会社、親会社or子会社の通知を見分けるために必要。";
 			maxOccurs = 1;
@@ -193,7 +195,7 @@ public class CounterpartyDetailsType1 {
 			componentContext_lazy = () -> CounterpartyDetailsType1.mmObject();
 			isDerived = false;
 			xmlTag = "AbbrvtdLclLangSctyNm";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AbbreviatedLocalLanguageSecurityName";
 			definition = "Abbreviated name of underlying securities in the local language.\r\nNote that in case of non-listed securities, it will be a full local language security name.\r\n銘柄名（銘柄略称）";
 			maxOccurs = 1;
@@ -205,10 +207,10 @@ public class CounterpartyDetailsType1 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.CounterpartyDetailsType1.mmFinancialInstrumentIdentification, com.tools20022.repository.msg.CounterpartyDetailsType1.mmPostEffectiveDateClassification,
-						com.tools20022.repository.msg.CounterpartyDetailsType1.mmAbbreviatedLocalLanguageSecurityName);
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				messageElement_lazy = () -> Arrays.asList(CounterpartyDetailsType1.mmFinancialInstrumentIdentification, CounterpartyDetailsType1.mmPostEffectiveDateClassification,
+						CounterpartyDetailsType1.mmAbbreviatedLocalLanguageSecurityName);
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "CounterpartyDetailsType1";
 				definition = "Information of the counterparty in case of [sankaku] gappei (a third party is involved as one of the counterparties in the merger but there is no security movement from the third party).";
 			}

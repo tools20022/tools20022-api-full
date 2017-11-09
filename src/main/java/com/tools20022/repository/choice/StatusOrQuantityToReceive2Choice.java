@@ -19,6 +19,9 @@ package com.tools20022.repository.choice;
 
 import com.tools20022.metamodel.MMChoiceComponent;
 import com.tools20022.metamodel.MMMessageAssociationEnd;
+import com.tools20022.metamodel.MMRegistrationStatus;
+import com.tools20022.repository.entity.SecuritiesProceedsDefinition;
+import com.tools20022.repository.GeneratedRepository;
 import java.text.DateFormat;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
@@ -99,11 +102,11 @@ public class StatusOrQuantityToReceive2Choice {
 	 */
 	public static final MMMessageAssociationEnd mmStatusQuantity = new MMMessageAssociationEnd() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.SecuritiesProceedsDefinition.mmStatusQuantity;
+			businessElementTrace_lazy = () -> SecuritiesProceedsDefinition.mmStatusQuantity;
 			componentContext_lazy = () -> StatusOrQuantityToReceive2Choice.mmObject();
 			isDerived = false;
 			xmlTag = "StsQty";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "StatusQuantity";
 			definition = "Quantity of securities that has been assigned the status indicated.";
 			maxOccurs = 1;
@@ -149,11 +152,11 @@ public class StatusOrQuantityToReceive2Choice {
 	 */
 	public static final MMMessageAssociationEnd mmQuantityToReceive = new MMMessageAssociationEnd() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.SecuritiesProceedsDefinition.mmQuantityToReceive;
+			businessElementTrace_lazy = () -> SecuritiesProceedsDefinition.mmQuantityToReceive;
 			componentContext_lazy = () -> StatusOrQuantityToReceive2Choice.mmObject();
 			isDerived = false;
 			xmlTag = "QtyToRcv";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "QuantityToReceive";
 			definition = "Quantity of the benefits that the account owner wants to receive, for example, as a result of dividend reinvestment.";
 			maxOccurs = 1;
@@ -166,9 +169,9 @@ public class StatusOrQuantityToReceive2Choice {
 	final static public MMChoiceComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMChoiceComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.choice.StatusOrQuantityToReceive2Choice.mmStatusQuantity, com.tools20022.repository.choice.StatusOrQuantityToReceive2Choice.mmQuantityToReceive);
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.OBSOLETE;
+				messageElement_lazy = () -> Arrays.asList(StatusOrQuantityToReceive2Choice.mmStatusQuantity, StatusOrQuantityToReceive2Choice.mmQuantityToReceive);
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.OBSOLETE;
 				removalDate = ((Supplier<Date>) (() -> {
 					try {
 						return DateFormat.getDateInstance(java.text.DateFormat.LONG).parse("May 5, 2016");

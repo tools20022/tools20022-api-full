@@ -20,12 +20,14 @@ package com.tools20022.repository.msg;
 import com.tools20022.metamodel.MMMessageAssociationEnd;
 import com.tools20022.metamodel.MMMessageAttribute;
 import com.tools20022.metamodel.MMMessageComponent;
+import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.choice.AccountIdentification4Choice;
 import com.tools20022.repository.choice.CashAccountType2Choice;
 import com.tools20022.repository.codeset.AccountStatus3Code;
 import com.tools20022.repository.codeset.ActiveCurrencyCode;
 import com.tools20022.repository.datatype.*;
-import com.tools20022.repository.entity.CashAccount;
+import com.tools20022.repository.entity.*;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.List;
@@ -147,11 +149,11 @@ public class CustomerAccount5 {
 	 */
 	public static final MMMessageAttribute mmIdentification = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Account.mmIdentification;
+			businessElementTrace_lazy = () -> Account.mmIdentification;
 			componentContext_lazy = () -> CustomerAccount5.mmObject();
 			isDerived = false;
 			xmlTag = "Id";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Identification";
 			definition = "Identification of the account.";
 			minOccurs = 1;
@@ -197,11 +199,11 @@ public class CustomerAccount5 {
 	 */
 	public static final MMMessageAttribute mmName = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.AccountIdentification.mmName;
+			businessElementTrace_lazy = () -> AccountIdentification.mmName;
 			componentContext_lazy = () -> CustomerAccount5.mmObject();
 			isDerived = false;
 			xmlTag = "Nm";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Name";
 			definition = "Name of the account. It provides an additional means of identification, and is designated by the account servicer in agreement with the account owner.";
 			maxOccurs = 1;
@@ -246,11 +248,11 @@ public class CustomerAccount5 {
 	 */
 	public static final MMMessageAttribute mmStatus = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.AccountStatus.mmStatus;
+			businessElementTrace_lazy = () -> AccountStatus.mmStatus;
 			componentContext_lazy = () -> CustomerAccount5.mmObject();
 			isDerived = false;
 			xmlTag = "Sts";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Status";
 			definition = "Specifies the current state of an account, eg, enabled or deleted.";
 			maxOccurs = 1;
@@ -297,7 +299,7 @@ public class CustomerAccount5 {
 			componentContext_lazy = () -> CustomerAccount5.mmObject();
 			isDerived = false;
 			xmlTag = "Tp";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Type";
 			definition = "Type of the account.";
 			maxOccurs = 1;
@@ -341,11 +343,11 @@ public class CustomerAccount5 {
 	 */
 	public static final MMMessageAttribute mmCurrency = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Account.mmBaseCurrency;
+			businessElementTrace_lazy = () -> Account.mmBaseCurrency;
 			componentContext_lazy = () -> CustomerAccount5.mmObject();
 			isDerived = false;
 			xmlTag = "Ccy";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Currency";
 			definition = "Medium of exchange of value.";
 			maxOccurs = 1;
@@ -392,11 +394,11 @@ public class CustomerAccount5 {
 	 */
 	public static final MMMessageAttribute mmMonthlyPaymentValue = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.AccountReportedMovement.mmMonthlyPaymentValue;
+			businessElementTrace_lazy = () -> AccountReportedMovement.mmMonthlyPaymentValue;
 			componentContext_lazy = () -> CustomerAccount5.mmObject();
 			isDerived = false;
 			xmlTag = "MnthlyPmtVal";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "MonthlyPaymentValue";
 			definition = "Monthly average of the payment amounts (that is, payments going out) over a year.";
 			maxOccurs = 1;
@@ -443,11 +445,11 @@ public class CustomerAccount5 {
 	 */
 	public static final MMMessageAttribute mmMonthlyReceivedValue = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.AccountReportedMovement.mmMonthlyReceivedValue;
+			businessElementTrace_lazy = () -> AccountReportedMovement.mmMonthlyReceivedValue;
 			componentContext_lazy = () -> CustomerAccount5.mmObject();
 			isDerived = false;
 			xmlTag = "MnthlyRcvdVal";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "MonthlyReceivedValue";
 			definition = "Monthly average of the received amounts over a year (that is, payments coming in).";
 			maxOccurs = 1;
@@ -494,11 +496,11 @@ public class CustomerAccount5 {
 	 */
 	public static final MMMessageAttribute mmMonthlyTransactionNumber = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.AccountReportedMovement.mmMonthlyTransactionNumber;
+			businessElementTrace_lazy = () -> AccountReportedMovement.mmMonthlyTransactionNumber;
 			componentContext_lazy = () -> CustomerAccount5.mmObject();
 			isDerived = false;
 			xmlTag = "MnthlyTxNb";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "MonthlyTransactionNumber";
 			definition = "Monthly average of the number of payments (coming in and going out) over a year.";
 			maxOccurs = 1;
@@ -545,11 +547,11 @@ public class CustomerAccount5 {
 	 */
 	public static final MMMessageAttribute mmAverageBalance = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.AccountReportedMovement.mmAverageBalance;
+			businessElementTrace_lazy = () -> AccountReportedMovement.mmAverageBalance;
 			componentContext_lazy = () -> CustomerAccount5.mmObject();
 			isDerived = false;
 			xmlTag = "AvrgBal";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AverageBalance";
 			definition = "Sum of the end of day balances over a month divided by the number of business days in the month.";
 			maxOccurs = 1;
@@ -592,11 +594,11 @@ public class CustomerAccount5 {
 	 */
 	public static final MMMessageAttribute mmAccountPurpose = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Account.mmPurpose;
+			businessElementTrace_lazy = () -> Account.mmPurpose;
 			componentContext_lazy = () -> CustomerAccount5.mmObject();
 			isDerived = false;
 			xmlTag = "AcctPurp";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AccountPurpose";
 			definition = "Specifies the purpose of the account.";
 			maxOccurs = 1;
@@ -643,11 +645,11 @@ public class CustomerAccount5 {
 	 */
 	public static final MMMessageAttribute mmFloorNotificationAmount = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.ReportingService.mmFloorNotificationAmount;
+			businessElementTrace_lazy = () -> ReportingService.mmFloorNotificationAmount;
 			componentContext_lazy = () -> CustomerAccount5.mmObject();
 			isDerived = false;
 			xmlTag = "FlrNtfctnAmt";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "FloorNotificationAmount";
 			definition = "Specifies the value of the balance under which a notification will be sent to the account owner.";
 			maxOccurs = 1;
@@ -694,11 +696,11 @@ public class CustomerAccount5 {
 	 */
 	public static final MMMessageAttribute mmCeilingNotificationAmount = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.ReportingService.mmCeilingNotificationAmount;
+			businessElementTrace_lazy = () -> ReportingService.mmCeilingNotificationAmount;
 			componentContext_lazy = () -> CustomerAccount5.mmObject();
 			isDerived = false;
 			xmlTag = "ClngNtfctnAmt";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CeilingNotificationAmount";
 			definition = "Specifies the value of the balance above which a notification will be sent to the account owner.";
 			maxOccurs = 1;
@@ -745,11 +747,11 @@ public class CustomerAccount5 {
 	 */
 	public static final MMMessageAttribute mmStatementFrequencyAndFormat = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.ReportingService.mmStatementFrequency;
+			businessElementTrace_lazy = () -> ReportingService.mmStatementFrequency;
 			componentContext_lazy = () -> CustomerAccount5.mmObject();
 			isDerived = false;
 			xmlTag = "StmtFrqcyAndFrmt";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "StatementFrequencyAndFormat";
 			definition = "Specifies how often statements (for audit purposes) will be sent, in which format, to which address.";
 			minOccurs = 0;
@@ -791,11 +793,11 @@ public class CustomerAccount5 {
 	 */
 	public static final MMMessageAttribute mmClosingDate = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Account.mmClosingDate;
+			businessElementTrace_lazy = () -> Account.mmClosingDate;
 			componentContext_lazy = () -> CustomerAccount5.mmObject();
 			isDerived = false;
 			xmlTag = "ClsgDt";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ClosingDate";
 			definition = "Date when the account will be or was closed.";
 			maxOccurs = 1;
@@ -837,11 +839,11 @@ public class CustomerAccount5 {
 	 */
 	public static final MMMessageAssociationEnd mmRestriction = new MMMessageAssociationEnd() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Account.mmAccountRestriction;
+			businessElementTrace_lazy = () -> Account.mmAccountRestriction;
 			componentContext_lazy = () -> CustomerAccount5.mmObject();
 			isDerived = false;
 			xmlTag = "Rstrctn";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Restriction";
 			definition = "Restriction on capability or operations allowed.";
 			minOccurs = 0;
@@ -853,14 +855,12 @@ public class CustomerAccount5 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.CustomerAccount5.mmIdentification, com.tools20022.repository.msg.CustomerAccount5.mmName, com.tools20022.repository.msg.CustomerAccount5.mmStatus,
-						com.tools20022.repository.msg.CustomerAccount5.mmType, com.tools20022.repository.msg.CustomerAccount5.mmCurrency, com.tools20022.repository.msg.CustomerAccount5.mmMonthlyPaymentValue,
-						com.tools20022.repository.msg.CustomerAccount5.mmMonthlyReceivedValue, com.tools20022.repository.msg.CustomerAccount5.mmMonthlyTransactionNumber, com.tools20022.repository.msg.CustomerAccount5.mmAverageBalance,
-						com.tools20022.repository.msg.CustomerAccount5.mmAccountPurpose, com.tools20022.repository.msg.CustomerAccount5.mmFloorNotificationAmount, com.tools20022.repository.msg.CustomerAccount5.mmCeilingNotificationAmount,
-						com.tools20022.repository.msg.CustomerAccount5.mmStatementFrequencyAndFormat, com.tools20022.repository.msg.CustomerAccount5.mmClosingDate, com.tools20022.repository.msg.CustomerAccount5.mmRestriction);
+				messageElement_lazy = () -> Arrays.asList(CustomerAccount5.mmIdentification, CustomerAccount5.mmName, CustomerAccount5.mmStatus, CustomerAccount5.mmType, CustomerAccount5.mmCurrency, CustomerAccount5.mmMonthlyPaymentValue,
+						CustomerAccount5.mmMonthlyReceivedValue, CustomerAccount5.mmMonthlyTransactionNumber, CustomerAccount5.mmAverageBalance, CustomerAccount5.mmAccountPurpose, CustomerAccount5.mmFloorNotificationAmount,
+						CustomerAccount5.mmCeilingNotificationAmount, CustomerAccount5.mmStatementFrequencyAndFormat, CustomerAccount5.mmClosingDate, CustomerAccount5.mmRestriction);
 				trace_lazy = () -> CashAccount.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "CustomerAccount5";
 				definition = "Account owned by a customer.";
 				nextVersions_lazy = () -> Arrays.asList(CustomerAccountModification1.mmObject());

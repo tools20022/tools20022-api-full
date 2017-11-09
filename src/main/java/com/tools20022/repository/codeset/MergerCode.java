@@ -19,6 +19,8 @@ package com.tools20022.repository.codeset;
 
 import com.tools20022.metamodel.MMCode;
 import com.tools20022.metamodel.MMCodeSet;
+import com.tools20022.metamodel.MMRegistrationStatus;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -80,7 +82,7 @@ public class MergerCode {
 	 */
 	public static final MMCode mmMergerClassificationIsUnknown = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "MergerClassificationIsUnknown";
 			definition = "The merger regulatory condition is unknown.";
 			owner_lazy = () -> MergerCode.mmObject();
@@ -112,7 +114,7 @@ public class MergerCode {
 	 */
 	public static final MMCode mmNoGeneralShareholdersMeeting = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "NoGeneralShareholdersMeeting";
 			definition = "The merger regulatory condition is: no general shareholders meeting at discontinued company or subsidiary to be acquired.";
 			owner_lazy = () -> MergerCode.mmObject();
@@ -123,11 +125,11 @@ public class MergerCode {
 	static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "MergerCode";
 				definition = "Classification of the regulatory condition of a merger for the TSE/JASDEC extension.";
-				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.MergerCode.mmMergerClassificationIsUnknown, com.tools20022.repository.codeset.MergerCode.mmNoGeneralShareholdersMeeting);
+				code_lazy = () -> Arrays.asList(MergerCode.mmMergerClassificationIsUnknown, MergerCode.mmNoGeneralShareholdersMeeting);
 			}
 		});
 		return mmObject_lazy.get();

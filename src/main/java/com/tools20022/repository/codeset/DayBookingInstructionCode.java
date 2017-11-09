@@ -19,6 +19,8 @@ package com.tools20022.repository.codeset;
 
 import com.tools20022.metamodel.MMCode;
 import com.tools20022.metamodel.MMCodeSet;
+import com.tools20022.metamodel.MMRegistrationStatus;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -27,6 +29,13 @@ import java.util.concurrent.atomic.AtomicReference;
  * <p>
  * <strong>Constant fields:</strong>
  * <ul>
+ * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getDerivation derivation}
+ * =
+ * <ul>
+ * <li>{@linkplain com.tools20022.repository.codeset.DayBookingInstruction1Code
+ * DayBookingInstruction1Code}</li>
+ * </ul>
+ * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getCode code} =
  * <ul>
  * <li>
@@ -35,13 +44,6 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>
  * {@linkplain com.tools20022.repository.codeset.DayBookingInstructionCode#mmSpeakFirst
  * DayBookingInstructionCode.mmSpeakFirst}</li>
- * </ul>
- * </li>
- * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getDerivation derivation}
- * =
- * <ul>
- * <li>{@linkplain com.tools20022.repository.codeset.DayBookingInstruction1Code
- * DayBookingInstruction1Code}</li>
  * </ul>
  * </li>
  * <li>
@@ -92,7 +94,7 @@ public class DayBookingInstructionCode {
 	 */
 	public static final MMCode mmAuto = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Auto";
 			definition = "Can trigger booking without reference to the order initiator.";
 			owner_lazy = () -> DayBookingInstructionCode.mmObject();
@@ -122,7 +124,7 @@ public class DayBookingInstructionCode {
 	 */
 	public static final MMCode mmSpeakFirst = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SpeakFirst";
 			definition = "Speak with order initiator before booking.";
 			owner_lazy = () -> DayBookingInstructionCode.mmObject();
@@ -133,12 +135,12 @@ public class DayBookingInstructionCode {
 	static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
 				example = Arrays.asList("AUTO");
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "DayBookingInstructionCode";
 				definition = "Description of the nature of execution booking process.";
-				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.DayBookingInstructionCode.mmAuto, com.tools20022.repository.codeset.DayBookingInstructionCode.mmSpeakFirst);
+				code_lazy = () -> Arrays.asList(DayBookingInstructionCode.mmAuto, DayBookingInstructionCode.mmSpeakFirst);
 				derivation_lazy = () -> Arrays.asList(DayBookingInstruction1Code.mmObject());
 			}
 		});

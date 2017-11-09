@@ -20,8 +20,10 @@ package com.tools20022.repository.msg;
 import com.tools20022.metamodel.MMMessageAssociationEnd;
 import com.tools20022.metamodel.MMMessageAttribute;
 import com.tools20022.metamodel.MMMessageComponent;
+import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.codeset.CountryCode;
 import com.tools20022.repository.datatype.Max35Text;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -96,7 +98,7 @@ public class RestrictionDetailsSD1 {
 			componentContext_lazy = () -> RestrictionDetailsSD1.mmObject();
 			isDerived = false;
 			xmlTag = "RstrctnTp";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "RestrictionType";
 			definition = "Type of restriction.";
 			maxOccurs = 1;
@@ -139,7 +141,7 @@ public class RestrictionDetailsSD1 {
 			componentContext_lazy = () -> RestrictionDetailsSD1.mmObject();
 			isDerived = false;
 			xmlTag = "FsclDmcl";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "FiscalDomicile";
 			definition = "Country in which the account owner has one's fiscal domicile.";
 			maxOccurs = 1;
@@ -180,7 +182,7 @@ public class RestrictionDetailsSD1 {
 			componentContext_lazy = () -> RestrictionDetailsSD1.mmObject();
 			isDerived = false;
 			xmlTag = "Id";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Identification";
 			definition = "Reference to the applicable restriction.";
 			maxOccurs = 1;
@@ -192,10 +194,9 @@ public class RestrictionDetailsSD1 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.RestrictionDetailsSD1.mmRestrictionType, com.tools20022.repository.msg.RestrictionDetailsSD1.mmFiscalDomicile,
-						com.tools20022.repository.msg.RestrictionDetailsSD1.mmIdentification);
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+				messageElement_lazy = () -> Arrays.asList(RestrictionDetailsSD1.mmRestrictionType, RestrictionDetailsSD1.mmFiscalDomicile, RestrictionDetailsSD1.mmIdentification);
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 				name = "RestrictionDetailsSD1";
 				definition = "Restriction information details.";
 			}

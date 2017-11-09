@@ -20,6 +20,8 @@ package com.tools20022.repository.msg;
 import com.tools20022.metamodel.MMMessageAssociationEnd;
 import com.tools20022.metamodel.MMMessageAttribute;
 import com.tools20022.metamodel.MMMessageComponent;
+import com.tools20022.metamodel.MMRegistrationStatus;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -113,7 +115,7 @@ public class CorporateActionUnallocatedBalanceSD1 {
 			componentContext_lazy = () -> CorporateActionUnallocatedBalanceSD1.mmObject();
 			isDerived = false;
 			xmlTag = "TtlElgblBal";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "TotalEligibleBalance";
 			definition = "Total quantity of financial instruments of the balance.";
 			maxOccurs = 1;
@@ -157,7 +159,7 @@ public class CorporateActionUnallocatedBalanceSD1 {
 			componentContext_lazy = () -> CorporateActionUnallocatedBalanceSD1.mmObject();
 			isDerived = false;
 			xmlTag = "AfctdBal";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AffectedBalance";
 			definition = "The quantity that has been determined to be redeemed if the participant had\r\nposition in a redemption security.";
 			maxOccurs = 1;
@@ -198,7 +200,7 @@ public class CorporateActionUnallocatedBalanceSD1 {
 			componentContext_lazy = () -> CorporateActionUnallocatedBalanceSD1.mmObject();
 			isDerived = false;
 			xmlTag = "UafctdBal";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "UnaffectedBalance";
 			definition = "Positions balance remaining after lottery is run.";
 			maxOccurs = 1;
@@ -244,7 +246,7 @@ public class CorporateActionUnallocatedBalanceSD1 {
 			componentContext_lazy = () -> CorporateActionUnallocatedBalanceSD1.mmObject();
 			isDerived = false;
 			xmlTag = "OblgtdBal";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ObligatedBalance";
 			definition = "Position that account holders should return to the account servicer to participate in the event or to fulfill their obligation for the event to be complete, for example, return of securities for late announced drawing.";
 			maxOccurs = 1;
@@ -291,7 +293,7 @@ public class CorporateActionUnallocatedBalanceSD1 {
 			componentContext_lazy = () -> CorporateActionUnallocatedBalanceSD1.mmObject();
 			isDerived = false;
 			xmlTag = "OrgnlBal";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "OriginalBalance";
 			definition = "Position held in a security as of the day prior to publication date. This position is subject to a redemption lottery call when this is the first lottery. This balance will not be adjusted for the supplemental or concurrent lotteries and will remain constant to report the original position.\r\n";
 			maxOccurs = 1;
@@ -336,7 +338,7 @@ public class CorporateActionUnallocatedBalanceSD1 {
 			componentContext_lazy = () -> CorporateActionUnallocatedBalanceSD1.mmObject();
 			isDerived = false;
 			xmlTag = "PldgdBal";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PledgedBalance";
 			definition = "Portion of the Original Balance position held in DTC General Free account as of day prior to Publication Date. Position held in this account is subject to redemption lottery call.";
 			maxOccurs = 1;
@@ -381,7 +383,7 @@ public class CorporateActionUnallocatedBalanceSD1 {
 			componentContext_lazy = () -> CorporateActionUnallocatedBalanceSD1.mmObject();
 			isDerived = false;
 			xmlTag = "UpldgdBal";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "UnpledgedBalance";
 			definition = "Portion of the Original Balance position held in DTC General Free account as of day prior to Publication Date. Position held in this account is subject to redemption lottery call.";
 			maxOccurs = 1;
@@ -427,7 +429,7 @@ public class CorporateActionUnallocatedBalanceSD1 {
 			componentContext_lazy = () -> CorporateActionUnallocatedBalanceSD1.mmObject();
 			isDerived = false;
 			xmlTag = "InvstmtPldgdBal";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "InvestmentPledgedBalance";
 			definition = "Portion of the Original Balance position held in DTC Investment account as of day prior to Publication Date. Position held in this account is subject to redemption lottery call and must be released to allow allocation.";
 			maxOccurs = 1;
@@ -473,7 +475,7 @@ public class CorporateActionUnallocatedBalanceSD1 {
 			componentContext_lazy = () -> CorporateActionUnallocatedBalanceSD1.mmObject();
 			isDerived = false;
 			xmlTag = "InvstmtUpldgdBal";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "InvestmentUnpledgedBalance";
 			definition = "Portion of the Original Balance position held in DTC Segregated account as of day prior to Publication Date. Position held in this account is subject to redemption lottery call and must be released to allow allocation.\r\n";
 			maxOccurs = 1;
@@ -486,13 +488,11 @@ public class CorporateActionUnallocatedBalanceSD1 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.CorporateActionUnallocatedBalanceSD1.mmTotalEligibleBalance, com.tools20022.repository.msg.CorporateActionUnallocatedBalanceSD1.mmAffectedBalance,
-						com.tools20022.repository.msg.CorporateActionUnallocatedBalanceSD1.mmUnaffectedBalance, com.tools20022.repository.msg.CorporateActionUnallocatedBalanceSD1.mmObligatedBalance,
-						com.tools20022.repository.msg.CorporateActionUnallocatedBalanceSD1.mmOriginalBalance, com.tools20022.repository.msg.CorporateActionUnallocatedBalanceSD1.mmPledgedBalance,
-						com.tools20022.repository.msg.CorporateActionUnallocatedBalanceSD1.mmUnpledgedBalance, com.tools20022.repository.msg.CorporateActionUnallocatedBalanceSD1.mmInvestmentPledgedBalance,
-						com.tools20022.repository.msg.CorporateActionUnallocatedBalanceSD1.mmInvestmentUnpledgedBalance);
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				messageElement_lazy = () -> Arrays.asList(CorporateActionUnallocatedBalanceSD1.mmTotalEligibleBalance, CorporateActionUnallocatedBalanceSD1.mmAffectedBalance, CorporateActionUnallocatedBalanceSD1.mmUnaffectedBalance,
+						CorporateActionUnallocatedBalanceSD1.mmObligatedBalance, CorporateActionUnallocatedBalanceSD1.mmOriginalBalance, CorporateActionUnallocatedBalanceSD1.mmPledgedBalance,
+						CorporateActionUnallocatedBalanceSD1.mmUnpledgedBalance, CorporateActionUnallocatedBalanceSD1.mmInvestmentPledgedBalance, CorporateActionUnallocatedBalanceSD1.mmInvestmentUnpledgedBalance);
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "CorporateActionUnallocatedBalanceSD1";
 				definition = "Balance types related to an unallocated redemption payment.";
 			}

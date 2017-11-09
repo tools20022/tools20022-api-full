@@ -19,6 +19,8 @@ package com.tools20022.repository.codeset;
 
 import com.tools20022.metamodel.MMCode;
 import com.tools20022.metamodel.MMCodeSet;
+import com.tools20022.metamodel.MMRegistrationStatus;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -27,6 +29,14 @@ import java.util.concurrent.atomic.AtomicReference;
  * <p>
  * <strong>Constant fields:</strong>
  * <ul>
+ * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getDerivation derivation}
+ * =
+ * <ul>
+ * <li>
+ * {@linkplain com.tools20022.repository.codeset.AuthorityExchangeReason1Code
+ * AuthorityExchangeReason1Code}</li>
+ * </ul>
+ * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getCode code} =
  * <ul>
  * <li>
@@ -68,14 +78,6 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>
  * {@linkplain com.tools20022.repository.codeset.AuthorityExchangeReasonCode#mmCompetentAuthorityForIndex
  * AuthorityExchangeReasonCode.mmCompetentAuthorityForIndex}</li>
- * </ul>
- * </li>
- * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getDerivation derivation}
- * =
- * <ul>
- * <li>
- * {@linkplain com.tools20022.repository.codeset.AuthorityExchangeReason1Code
- * AuthorityExchangeReason1Code}</li>
  * </ul>
  * </li>
  * <li>
@@ -121,7 +123,7 @@ public class AuthorityExchangeReasonCode {
 	 */
 	public static final MMCode mmCompetentAuthorityForInstrument = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CompetentAuthorityForInstrument";
 			definition = "Competent Authority for Instrument.";
 			owner_lazy = () -> AuthorityExchangeReasonCode.mmObject();
@@ -151,7 +153,7 @@ public class AuthorityExchangeReasonCode {
 	 */
 	public static final MMCode mmCompetentAuthorityForHeadquarter = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CompetentAuthorityForHeadquarter";
 			definition = "Competent Authority for Headquarter.";
 			owner_lazy = () -> AuthorityExchangeReasonCode.mmObject();
@@ -181,7 +183,7 @@ public class AuthorityExchangeReasonCode {
 	 */
 	public static final MMCode mmAdHocRequest = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AdHocRequest";
 			definition = "Ad Hoc Request.";
 			owner_lazy = () -> AuthorityExchangeReasonCode.mmObject();
@@ -211,7 +213,7 @@ public class AuthorityExchangeReasonCode {
 	 */
 	public static final MMCode mmOther = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Other";
 			definition = "Where reason code is not previously defined.";
 			owner_lazy = () -> AuthorityExchangeReasonCode.mmObject();
@@ -241,7 +243,7 @@ public class AuthorityExchangeReasonCode {
 	 */
 	public static final MMCode mmCompetentAuthorityForDirectUnderlying = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CompetentAuthorityForDirectUnderlying";
 			definition = "Competent Authority for Direct Underlying.";
 			owner_lazy = () -> AuthorityExchangeReasonCode.mmObject();
@@ -271,7 +273,7 @@ public class AuthorityExchangeReasonCode {
 	 */
 	public static final MMCode mmCompetentAuthorityForBasketConstituent = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CompetentAuthorityForBasketConstituent";
 			definition = "Competent Authority for Basket Constituent.";
 			owner_lazy = () -> AuthorityExchangeReasonCode.mmObject();
@@ -301,7 +303,7 @@ public class AuthorityExchangeReasonCode {
 	 */
 	public static final MMCode mmCompetentAuthorityForBuyerBranch = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CompetentAuthorityForBuyerBranch";
 			definition = "Competent Authority for Buyer Branch.";
 			owner_lazy = () -> AuthorityExchangeReasonCode.mmObject();
@@ -331,7 +333,7 @@ public class AuthorityExchangeReasonCode {
 	 */
 	public static final MMCode mmCompetentAuthorityForSellerBranch = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CompetentAuthorityForSellerBranch";
 			definition = "Competent Authority for Seller Branch.";
 			owner_lazy = () -> AuthorityExchangeReasonCode.mmObject();
@@ -361,7 +363,7 @@ public class AuthorityExchangeReasonCode {
 	 */
 	public static final MMCode mmCompetentAuthorityForMembershipBranch = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CompetentAuthorityForMembershipBranch";
 			definition = "Competent Authority for Membership Branch.";
 			owner_lazy = () -> AuthorityExchangeReasonCode.mmObject();
@@ -391,7 +393,7 @@ public class AuthorityExchangeReasonCode {
 	 */
 	public static final MMCode mmCompetentAuthorityForDecisionMakingBranch = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CompetentAuthorityForDecisionMakingBranch";
 			definition = "Competent Authority for Decision Making Branch.";
 			owner_lazy = () -> AuthorityExchangeReasonCode.mmObject();
@@ -421,7 +423,7 @@ public class AuthorityExchangeReasonCode {
 	 */
 	public static final MMCode mmCompetentAuthorityForExecutingBranch = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CompetentAuthorityForExecutingBranch";
 			definition = "Competent Authority for Executing Branch.";
 			owner_lazy = () -> AuthorityExchangeReasonCode.mmObject();
@@ -451,7 +453,7 @@ public class AuthorityExchangeReasonCode {
 	 */
 	public static final MMCode mmCompetentAuthorityForTradingVenue = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CompetentAuthorityForTradingVenue";
 			definition = "Competent Authority for Trading Venue.";
 			owner_lazy = () -> AuthorityExchangeReasonCode.mmObject();
@@ -481,7 +483,7 @@ public class AuthorityExchangeReasonCode {
 	 */
 	public static final MMCode mmCompetentAuthorityForIndex = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CompetentAuthorityForIndex";
 			definition = "Competent Authority for Index.";
 			owner_lazy = () -> AuthorityExchangeReasonCode.mmObject();
@@ -492,17 +494,15 @@ public class AuthorityExchangeReasonCode {
 	static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "AuthorityExchangeReasonCode";
 				definition = "Specifies the reason for the exchange with the national competent authority.";
-				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.AuthorityExchangeReasonCode.mmCompetentAuthorityForInstrument,
-						com.tools20022.repository.codeset.AuthorityExchangeReasonCode.mmCompetentAuthorityForHeadquarter, com.tools20022.repository.codeset.AuthorityExchangeReasonCode.mmAdHocRequest,
-						com.tools20022.repository.codeset.AuthorityExchangeReasonCode.mmOther, com.tools20022.repository.codeset.AuthorityExchangeReasonCode.mmCompetentAuthorityForDirectUnderlying,
-						com.tools20022.repository.codeset.AuthorityExchangeReasonCode.mmCompetentAuthorityForBasketConstituent, com.tools20022.repository.codeset.AuthorityExchangeReasonCode.mmCompetentAuthorityForBuyerBranch,
-						com.tools20022.repository.codeset.AuthorityExchangeReasonCode.mmCompetentAuthorityForSellerBranch, com.tools20022.repository.codeset.AuthorityExchangeReasonCode.mmCompetentAuthorityForMembershipBranch,
-						com.tools20022.repository.codeset.AuthorityExchangeReasonCode.mmCompetentAuthorityForDecisionMakingBranch, com.tools20022.repository.codeset.AuthorityExchangeReasonCode.mmCompetentAuthorityForExecutingBranch,
-						com.tools20022.repository.codeset.AuthorityExchangeReasonCode.mmCompetentAuthorityForTradingVenue, com.tools20022.repository.codeset.AuthorityExchangeReasonCode.mmCompetentAuthorityForIndex);
+				code_lazy = () -> Arrays.asList(AuthorityExchangeReasonCode.mmCompetentAuthorityForInstrument, AuthorityExchangeReasonCode.mmCompetentAuthorityForHeadquarter, AuthorityExchangeReasonCode.mmAdHocRequest,
+						AuthorityExchangeReasonCode.mmOther, AuthorityExchangeReasonCode.mmCompetentAuthorityForDirectUnderlying, AuthorityExchangeReasonCode.mmCompetentAuthorityForBasketConstituent,
+						AuthorityExchangeReasonCode.mmCompetentAuthorityForBuyerBranch, AuthorityExchangeReasonCode.mmCompetentAuthorityForSellerBranch, AuthorityExchangeReasonCode.mmCompetentAuthorityForMembershipBranch,
+						AuthorityExchangeReasonCode.mmCompetentAuthorityForDecisionMakingBranch, AuthorityExchangeReasonCode.mmCompetentAuthorityForExecutingBranch, AuthorityExchangeReasonCode.mmCompetentAuthorityForTradingVenue,
+						AuthorityExchangeReasonCode.mmCompetentAuthorityForIndex);
 				derivation_lazy = () -> Arrays.asList(AuthorityExchangeReason1Code.mmObject());
 			}
 		});

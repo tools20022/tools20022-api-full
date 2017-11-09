@@ -19,7 +19,11 @@ package com.tools20022.repository.msg;
 
 import com.tools20022.metamodel.MMMessageAssociationEnd;
 import com.tools20022.metamodel.MMMessageComponent;
+import com.tools20022.metamodel.MMRegistrationStatus;
+import com.tools20022.repository.area.camt.ResolutionOfInvestigationV03;
+import com.tools20022.repository.entity.PaymentExecution;
 import com.tools20022.repository.entity.PaymentInstruction;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.List;
@@ -119,7 +123,7 @@ public class UnderlyingTransaction3 {
 			componentContext_lazy = () -> UnderlyingTransaction3.mmObject();
 			isDerived = false;
 			xmlTag = "OrgnlGrpInfAndSts";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "OriginalGroupInformationAndStatus";
 			definition = "Set of elements used to provide information on the original cancellation message, to which the resolution refers.";
 			maxOccurs = 1;
@@ -170,7 +174,7 @@ public class UnderlyingTransaction3 {
 			componentContext_lazy = () -> UnderlyingTransaction3.mmObject();
 			isDerived = false;
 			xmlTag = "OrgnlPmtInfAndSts";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "OriginalPaymentInformationAndStatus";
 			definition = "Set of elements used to provide information on the original (group of) transactions, to which the cancellation status refers.";
 			minOccurs = 0;
@@ -216,11 +220,11 @@ public class UnderlyingTransaction3 {
 	 */
 	public static final MMMessageAssociationEnd mmTransactionInformationAndStatus = new MMMessageAssociationEnd() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.PaymentExecution.mmPayment;
+			businessElementTrace_lazy = () -> PaymentExecution.mmPayment;
 			componentContext_lazy = () -> UnderlyingTransaction3.mmObject();
 			isDerived = false;
 			xmlTag = "TxInfAndSts";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "TransactionInformationAndStatus";
 			definition = "Set of elements used to provide information on the original transactions to which the cancellation request message refers.";
 			minOccurs = 0;
@@ -232,12 +236,11 @@ public class UnderlyingTransaction3 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.UnderlyingTransaction3.mmOriginalGroupInformationAndStatus, com.tools20022.repository.msg.UnderlyingTransaction3.mmOriginalPaymentInformationAndStatus,
-						com.tools20022.repository.msg.UnderlyingTransaction3.mmTransactionInformationAndStatus);
-				messageBuildingBlock_lazy = () -> Arrays.asList(com.tools20022.repository.area.camt.ResolutionOfInvestigationV03.mmCancellationDetails);
+				messageElement_lazy = () -> Arrays.asList(UnderlyingTransaction3.mmOriginalGroupInformationAndStatus, UnderlyingTransaction3.mmOriginalPaymentInformationAndStatus, UnderlyingTransaction3.mmTransactionInformationAndStatus);
+				messageBuildingBlock_lazy = () -> Arrays.asList(ResolutionOfInvestigationV03.mmCancellationDetails);
 				trace_lazy = () -> PaymentInstruction.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "UnderlyingTransaction3";
 				definition = "Set of elements used to identify the underlying (group of) transaction(s) to which the resolution of investigation applies.";
 			}

@@ -19,12 +19,14 @@ package com.tools20022.repository.msg;
 
 import com.tools20022.metamodel.MMMessageAttribute;
 import com.tools20022.metamodel.MMMessageComponent;
+import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.codeset.ActiveCurrencyCode;
 import com.tools20022.repository.codeset.ATMCounterType2Code;
 import com.tools20022.repository.datatype.ImpliedCurrencyAndAmount;
 import com.tools20022.repository.datatype.Max70Text;
 import com.tools20022.repository.datatype.Number;
 import com.tools20022.repository.entity.ATMTotal;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -109,7 +111,7 @@ public class ATMTotals3 {
 			componentContext_lazy = () -> ATMTotals3.mmObject();
 			isDerived = false;
 			xmlTag = "Id";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Identification";
 			definition = "Identification of the type of transaction. The following values are predefined: Withdrawal, QuickWithdrawal, WithdrawalForDisabledPerson, CashDeposit, Transfer, InternationalTransfer, PeriodicTransfer, CheckCommand, MobileTopUp, Moneo.";
 			maxOccurs = 1;
@@ -152,7 +154,7 @@ public class ATMTotals3 {
 			componentContext_lazy = () -> ATMTotals3.mmObject();
 			isDerived = false;
 			xmlTag = "AddtlId";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AdditionalIdentification";
 			definition = "Additional identification of the type of transaction. The following values are predefined:  Vodaphone, TMobile, Verizon.";
 			maxOccurs = 1;
@@ -198,7 +200,7 @@ public class ATMTotals3 {
 			componentContext_lazy = () -> ATMTotals3.mmObject();
 			isDerived = false;
 			xmlTag = "Prd";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Period";
 			definition = "Period of computation for the counters.";
 			maxOccurs = 1;
@@ -241,11 +243,11 @@ public class ATMTotals3 {
 	 */
 	public static final MMMessageAttribute mmCurrency = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.ATMTotal.mmCurrency;
+			businessElementTrace_lazy = () -> ATMTotal.mmCurrency;
 			componentContext_lazy = () -> ATMTotals3.mmObject();
 			isDerived = false;
 			xmlTag = "Ccy";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Currency";
 			definition = "Currency of the totals.";
 			maxOccurs = 1;
@@ -287,11 +289,11 @@ public class ATMTotals3 {
 	 */
 	public static final MMMessageAttribute mmCount = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.ATMTotal.mmATMCurrentNumber;
+			businessElementTrace_lazy = () -> ATMTotal.mmATMCurrentNumber;
 			componentContext_lazy = () -> ATMTotals3.mmObject();
 			isDerived = false;
 			xmlTag = "Cnt";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Count";
 			definition = "Number of transaction with the defined currency.";
 			maxOccurs = 1;
@@ -334,11 +336,11 @@ public class ATMTotals3 {
 	 */
 	public static final MMMessageAttribute mmAmount = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.ATMTotal.mmATMCurrent;
+			businessElementTrace_lazy = () -> ATMTotal.mmATMCurrent;
 			componentContext_lazy = () -> ATMTotals3.mmObject();
 			isDerived = false;
 			xmlTag = "Amt";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Amount";
 			definition = "Amount of transaction with the defined currency.";
 			maxOccurs = 1;
@@ -350,11 +352,10 @@ public class ATMTotals3 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.ATMTotals3.mmIdentification, com.tools20022.repository.msg.ATMTotals3.mmAdditionalIdentification, com.tools20022.repository.msg.ATMTotals3.mmPeriod,
-						com.tools20022.repository.msg.ATMTotals3.mmCurrency, com.tools20022.repository.msg.ATMTotals3.mmCount, com.tools20022.repository.msg.ATMTotals3.mmAmount);
+				messageElement_lazy = () -> Arrays.asList(ATMTotals3.mmIdentification, ATMTotals3.mmAdditionalIdentification, ATMTotals3.mmPeriod, ATMTotals3.mmCurrency, ATMTotals3.mmCount, ATMTotals3.mmAmount);
 				trace_lazy = () -> ATMTotal.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "ATMTotals3";
 				definition = "Totals of the ATM.";
 			}

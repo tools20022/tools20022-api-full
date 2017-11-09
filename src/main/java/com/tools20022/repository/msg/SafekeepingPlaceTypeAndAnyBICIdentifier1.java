@@ -19,9 +19,12 @@ package com.tools20022.repository.msg;
 
 import com.tools20022.metamodel.MMMessageAttribute;
 import com.tools20022.metamodel.MMMessageComponent;
+import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.codeset.SafekeepingPlace1Code;
 import com.tools20022.repository.datatype.AnyBICIdentifier;
+import com.tools20022.repository.entity.OrganisationIdentification;
 import com.tools20022.repository.entity.SafekeepingPlace;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -102,11 +105,11 @@ public class SafekeepingPlaceTypeAndAnyBICIdentifier1 {
 	 */
 	public static final MMMessageAttribute mmSafekeepingPlaceType = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.SafekeepingPlace.mmSafekeepingPlaceType;
+			businessElementTrace_lazy = () -> SafekeepingPlace.mmSafekeepingPlaceType;
 			componentContext_lazy = () -> SafekeepingPlaceTypeAndAnyBICIdentifier1.mmObject();
 			isDerived = false;
 			xmlTag = "SfkpgPlcTp";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SafekeepingPlaceType";
 			definition = "Place of safekeeping as a code.";
 			maxOccurs = 1;
@@ -150,11 +153,11 @@ public class SafekeepingPlaceTypeAndAnyBICIdentifier1 {
 	 */
 	public static final MMMessageAttribute mmIdentification = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.OrganisationIdentification.mmAnyBIC;
+			businessElementTrace_lazy = () -> OrganisationIdentification.mmAnyBIC;
 			componentContext_lazy = () -> SafekeepingPlaceTypeAndAnyBICIdentifier1.mmObject();
 			isDerived = false;
 			xmlTag = "Id";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Identification";
 			definition = "Place of safekeeping.";
 			maxOccurs = 1;
@@ -166,11 +169,10 @@ public class SafekeepingPlaceTypeAndAnyBICIdentifier1 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.SafekeepingPlaceTypeAndAnyBICIdentifier1.mmSafekeepingPlaceType,
-						com.tools20022.repository.msg.SafekeepingPlaceTypeAndAnyBICIdentifier1.mmIdentification);
+				messageElement_lazy = () -> Arrays.asList(SafekeepingPlaceTypeAndAnyBICIdentifier1.mmSafekeepingPlaceType, SafekeepingPlaceTypeAndAnyBICIdentifier1.mmIdentification);
 				trace_lazy = () -> SafekeepingPlace.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "SafekeepingPlaceTypeAndAnyBICIdentifier1";
 				definition = "Place identification of the place of safekeeping expressed as a code and a BIC.";
 			}

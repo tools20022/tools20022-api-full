@@ -19,7 +19,9 @@ package com.tools20022.repository.codeset;
 
 import com.tools20022.metamodel.MMCode;
 import com.tools20022.metamodel.MMCodeSet;
+import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.codeset.FundIntentionCode;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -77,7 +79,7 @@ public class FundIntention1Code extends FundIntentionCode {
 	 */
 	public static final MMCode mmQualified = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Qualified";
 			owner_lazy = () -> FundIntention1Code.mmObject();
 		}
@@ -100,7 +102,7 @@ public class FundIntention1Code extends FundIntentionCode {
 	 */
 	public static final MMCode mmNotQualified = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "NotQualified";
 			owner_lazy = () -> FundIntention1Code.mmObject();
 		}
@@ -109,11 +111,11 @@ public class FundIntention1Code extends FundIntentionCode {
 	static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "FundIntention1Code";
 				definition = "Specifies if the fund is intended for qualified investors.";
-				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.FundIntention1Code.mmQualified, com.tools20022.repository.codeset.FundIntention1Code.mmNotQualified);
+				code_lazy = () -> Arrays.asList(FundIntention1Code.mmQualified, FundIntention1Code.mmNotQualified);
 				trace_lazy = () -> FundIntentionCode.mmObject();
 			}
 		});

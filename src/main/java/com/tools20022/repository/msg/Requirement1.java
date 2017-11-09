@@ -19,7 +19,10 @@ package com.tools20022.repository.msg;
 
 import com.tools20022.metamodel.MMMessageAssociationEnd;
 import com.tools20022.metamodel.MMMessageComponent;
+import com.tools20022.metamodel.MMRegistrationStatus;
+import com.tools20022.repository.entity.ExposureCalculation;
 import com.tools20022.repository.entity.MarginAmountRequirement;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -100,11 +103,11 @@ public class Requirement1 {
 	 */
 	public static final MMMessageAssociationEnd mmVariationMarginRequirement = new MMMessageAssociationEnd() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.ExposureCalculation.mmVariationMarginAmountRequirement;
+			businessElementTrace_lazy = () -> ExposureCalculation.mmVariationMarginAmountRequirement;
 			componentContext_lazy = () -> Requirement1.mmObject();
 			isDerived = false;
 			xmlTag = "VartnMrgnRqrmnt";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "VariationMarginRequirement";
 			definition = "Provides details about the margin requirements for the variation margin.";
 			maxOccurs = 1;
@@ -149,11 +152,11 @@ public class Requirement1 {
 	 */
 	public static final MMMessageAssociationEnd mmSegregatedIndependentAmountRequirement = new MMMessageAssociationEnd() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.ExposureCalculation.mmSegregatedAmountRequirement;
+			businessElementTrace_lazy = () -> ExposureCalculation.mmSegregatedAmountRequirement;
 			componentContext_lazy = () -> Requirement1.mmObject();
 			isDerived = false;
 			xmlTag = "SgrtdIndpdntAmtRqrmnt";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SegregatedIndependentAmountRequirement";
 			definition = "Provides details about the margin requirements for the segregated independent amount.";
 			maxOccurs = 1;
@@ -166,10 +169,10 @@ public class Requirement1 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.Requirement1.mmVariationMarginRequirement, com.tools20022.repository.msg.Requirement1.mmSegregatedIndependentAmountRequirement);
+				messageElement_lazy = () -> Arrays.asList(Requirement1.mmVariationMarginRequirement, Requirement1.mmSegregatedIndependentAmountRequirement);
 				trace_lazy = () -> MarginAmountRequirement.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "Requirement1";
 				definition = "Provides details about the margin requirements for the variation margin and optionally the segregated independent amount.";
 			}

@@ -19,6 +19,8 @@ package com.tools20022.repository.codeset;
 
 import com.tools20022.metamodel.MMCode;
 import com.tools20022.metamodel.MMCodeSet;
+import com.tools20022.metamodel.MMRegistrationStatus;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -28,6 +30,13 @@ import java.util.concurrent.atomic.AtomicReference;
  * <p>
  * <strong>Constant fields:</strong>
  * <ul>
+ * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getDerivation derivation}
+ * =
+ * <ul>
+ * <li>{@linkplain com.tools20022.repository.codeset.Eligibility1Code
+ * Eligibility1Code}</li>
+ * </ul>
+ * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getCode code} =
  * <ul>
  * <li>
@@ -39,13 +48,6 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>
  * {@linkplain com.tools20022.repository.codeset.EligibilityCode#mmProfessionalClient
  * EligibilityCode.mmProfessionalClient}</li>
- * </ul>
- * </li>
- * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getDerivation derivation}
- * =
- * <ul>
- * <li>{@linkplain com.tools20022.repository.codeset.Eligibility1Code
- * Eligibility1Code}</li>
  * </ul>
  * </li>
  * <li>
@@ -100,7 +102,7 @@ public class EligibilityCode {
 	 */
 	public static final MMCode mmEligibleCounterparty = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "EligibleCounterparty";
 			definition = "Eligible customers are the most sophisticated level of investor, able to opt out of some the protections afforded by conduct of business rules.";
 			owner_lazy = () -> EligibilityCode.mmObject();
@@ -131,7 +133,7 @@ public class EligibilityCode {
 	 */
 	public static final MMCode mmRetailClient = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "RetailClient";
 			definition = "Retail customers are the least sophisticated level of investor.";
 			owner_lazy = () -> EligibilityCode.mmObject();
@@ -164,7 +166,7 @@ public class EligibilityCode {
 	 */
 	public static final MMCode mmProfessionalClient = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "ProfessionalClient";
 			definition = "Professional customers are, for example, investment firms, credit institutions, insurance companies.";
 			owner_lazy = () -> EligibilityCode.mmObject();
@@ -175,13 +177,12 @@ public class EligibilityCode {
 	static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
 				example = Arrays.asList("ELIG");
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "EligibilityCode";
 				definition = "Identifies  the type of investor. The rules that apply to each type of client are different.";
-				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.EligibilityCode.mmEligibleCounterparty, com.tools20022.repository.codeset.EligibilityCode.mmRetailClient,
-						com.tools20022.repository.codeset.EligibilityCode.mmProfessionalClient);
+				code_lazy = () -> Arrays.asList(EligibilityCode.mmEligibleCounterparty, EligibilityCode.mmRetailClient, EligibilityCode.mmProfessionalClient);
 				derivation_lazy = () -> Arrays.asList(Eligibility1Code.mmObject());
 			}
 		});

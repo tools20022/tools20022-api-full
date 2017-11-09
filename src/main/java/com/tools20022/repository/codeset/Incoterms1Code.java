@@ -19,7 +19,9 @@ package com.tools20022.repository.codeset;
 
 import com.tools20022.metamodel.MMCode;
 import com.tools20022.metamodel.MMCodeSet;
+import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.codeset.IncotermsCode;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -118,7 +120,7 @@ public class Incoterms1Code extends IncotermsCode {
 	 */
 	public static final MMCode mmExWorks = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ExWorks";
 			owner_lazy = () -> Incoterms1Code.mmObject();
 		}
@@ -141,7 +143,7 @@ public class Incoterms1Code extends IncotermsCode {
 	 */
 	public static final MMCode mmFreeCarrier = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "FreeCarrier";
 			owner_lazy = () -> Incoterms1Code.mmObject();
 		}
@@ -164,7 +166,7 @@ public class Incoterms1Code extends IncotermsCode {
 	 */
 	public static final MMCode mmFreeAlongsideShip = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "FreeAlongsideShip";
 			owner_lazy = () -> Incoterms1Code.mmObject();
 		}
@@ -187,7 +189,7 @@ public class Incoterms1Code extends IncotermsCode {
 	 */
 	public static final MMCode mmFreeOnBoard = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "FreeOnBoard";
 			owner_lazy = () -> Incoterms1Code.mmObject();
 		}
@@ -210,7 +212,7 @@ public class Incoterms1Code extends IncotermsCode {
 	 */
 	public static final MMCode mmCostAndFreight = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CostAndFreight";
 			owner_lazy = () -> Incoterms1Code.mmObject();
 		}
@@ -233,7 +235,7 @@ public class Incoterms1Code extends IncotermsCode {
 	 */
 	public static final MMCode mmCostInsuranceAndFreight = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CostInsuranceAndFreight";
 			owner_lazy = () -> Incoterms1Code.mmObject();
 		}
@@ -256,7 +258,7 @@ public class Incoterms1Code extends IncotermsCode {
 	 */
 	public static final MMCode mmCarriagePaid = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CarriagePaid";
 			owner_lazy = () -> Incoterms1Code.mmObject();
 		}
@@ -279,7 +281,7 @@ public class Incoterms1Code extends IncotermsCode {
 	 */
 	public static final MMCode mmCarriageAndInsurancePaid = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CarriageAndInsurancePaid";
 			owner_lazy = () -> Incoterms1Code.mmObject();
 		}
@@ -302,7 +304,7 @@ public class Incoterms1Code extends IncotermsCode {
 	 */
 	public static final MMCode mmDeliveredAtFrontier = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "DeliveredAtFrontier";
 			owner_lazy = () -> Incoterms1Code.mmObject();
 		}
@@ -325,7 +327,7 @@ public class Incoterms1Code extends IncotermsCode {
 	 */
 	public static final MMCode mmDeliveredExShip = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "DeliveredExShip";
 			owner_lazy = () -> Incoterms1Code.mmObject();
 		}
@@ -348,7 +350,7 @@ public class Incoterms1Code extends IncotermsCode {
 	 */
 	public static final MMCode mmDeliveredExQuay = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "DeliveredExQuay";
 			owner_lazy = () -> Incoterms1Code.mmObject();
 		}
@@ -371,7 +373,7 @@ public class Incoterms1Code extends IncotermsCode {
 	 */
 	public static final MMCode mmDeliveredDutyUnpaid = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "DeliveredDutyUnpaid";
 			owner_lazy = () -> Incoterms1Code.mmObject();
 		}
@@ -394,7 +396,7 @@ public class Incoterms1Code extends IncotermsCode {
 	 */
 	public static final MMCode mmDeliveredDutyPaid = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "DeliveredDutyPaid";
 			owner_lazy = () -> Incoterms1Code.mmObject();
 		}
@@ -403,17 +405,14 @@ public class Incoterms1Code extends IncotermsCode {
 	static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
 				example = Arrays.asList("EXW");
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "Incoterms1Code";
 				definition = "A set of international standard trade terms (delivery terms) used to designate a point at which the costs and risks of transport are divided between the buyer and the seller.";
-				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.Incoterms1Code.mmExWorks, com.tools20022.repository.codeset.Incoterms1Code.mmFreeCarrier,
-						com.tools20022.repository.codeset.Incoterms1Code.mmFreeAlongsideShip, com.tools20022.repository.codeset.Incoterms1Code.mmFreeOnBoard, com.tools20022.repository.codeset.Incoterms1Code.mmCostAndFreight,
-						com.tools20022.repository.codeset.Incoterms1Code.mmCostInsuranceAndFreight, com.tools20022.repository.codeset.Incoterms1Code.mmCarriagePaid,
-						com.tools20022.repository.codeset.Incoterms1Code.mmCarriageAndInsurancePaid, com.tools20022.repository.codeset.Incoterms1Code.mmDeliveredAtFrontier,
-						com.tools20022.repository.codeset.Incoterms1Code.mmDeliveredExShip, com.tools20022.repository.codeset.Incoterms1Code.mmDeliveredExQuay, com.tools20022.repository.codeset.Incoterms1Code.mmDeliveredDutyUnpaid,
-						com.tools20022.repository.codeset.Incoterms1Code.mmDeliveredDutyPaid);
+				code_lazy = () -> Arrays.asList(Incoterms1Code.mmExWorks, Incoterms1Code.mmFreeCarrier, Incoterms1Code.mmFreeAlongsideShip, Incoterms1Code.mmFreeOnBoard, Incoterms1Code.mmCostAndFreight,
+						Incoterms1Code.mmCostInsuranceAndFreight, Incoterms1Code.mmCarriagePaid, Incoterms1Code.mmCarriageAndInsurancePaid, Incoterms1Code.mmDeliveredAtFrontier, Incoterms1Code.mmDeliveredExShip,
+						Incoterms1Code.mmDeliveredExQuay, Incoterms1Code.mmDeliveredDutyUnpaid, Incoterms1Code.mmDeliveredDutyPaid);
 				trace_lazy = () -> IncotermsCode.mmObject();
 			}
 		});

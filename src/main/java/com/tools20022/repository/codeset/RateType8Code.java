@@ -19,7 +19,9 @@ package com.tools20022.repository.codeset;
 
 import com.tools20022.metamodel.MMCode;
 import com.tools20022.metamodel.MMCodeSet;
+import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.codeset.RateTypeCode;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -84,7 +86,7 @@ public class RateType8Code extends RateTypeCode {
 	 */
 	public static final MMCode mmWithholdingOfLocalTax = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "WithholdingOfLocalTax";
 			owner_lazy = () -> RateType8Code.mmObject();
 		}
@@ -107,7 +109,7 @@ public class RateType8Code extends RateTypeCode {
 	 */
 	public static final MMCode mmWithholdingOfForeignTax = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "WithholdingOfForeignTax";
 			owner_lazy = () -> RateType8Code.mmObject();
 		}
@@ -130,7 +132,7 @@ public class RateType8Code extends RateTypeCode {
 	 */
 	public static final MMCode mmLocalTax = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "LocalTax";
 			owner_lazy = () -> RateType8Code.mmObject();
 		}
@@ -139,13 +141,12 @@ public class RateType8Code extends RateTypeCode {
 	static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
 				example = Arrays.asList("WITL");
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "RateType8Code";
 				definition = "Specifies the type of tax rate.";
-				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.RateType8Code.mmWithholdingOfLocalTax, com.tools20022.repository.codeset.RateType8Code.mmWithholdingOfForeignTax,
-						com.tools20022.repository.codeset.RateType8Code.mmLocalTax);
+				code_lazy = () -> Arrays.asList(RateType8Code.mmWithholdingOfLocalTax, RateType8Code.mmWithholdingOfForeignTax, RateType8Code.mmLocalTax);
 				trace_lazy = () -> RateTypeCode.mmObject();
 			}
 		});

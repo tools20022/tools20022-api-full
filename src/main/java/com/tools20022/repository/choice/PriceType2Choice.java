@@ -19,7 +19,9 @@ package com.tools20022.repository.choice;
 
 import com.tools20022.metamodel.MMChoiceComponent;
 import com.tools20022.metamodel.MMMessageAssociationEnd;
+import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.entity.SecuritiesPricing;
+import com.tools20022.repository.GeneratedRepository;
 import com.tools20022.repository.msg.Price3;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
@@ -101,7 +103,7 @@ public class PriceType2Choice {
 			componentContext_lazy = () -> PriceType2Choice.mmObject();
 			isDerived = false;
 			xmlTag = "Mkt";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Market";
 			definition = "Last reported price of a financial instrument in a market, determined by supply and demand.";
 			maxOccurs = 1;
@@ -147,7 +149,7 @@ public class PriceType2Choice {
 			componentContext_lazy = () -> PriceType2Choice.mmObject();
 			isDerived = false;
 			xmlTag = "Indctv";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Indicative";
 			definition = "Estimated price, for valuation purposes.";
 			maxOccurs = 1;
@@ -160,10 +162,10 @@ public class PriceType2Choice {
 	final static public MMChoiceComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMChoiceComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.choice.PriceType2Choice.mmMarket, com.tools20022.repository.choice.PriceType2Choice.mmIndicative);
+				messageElement_lazy = () -> Arrays.asList(PriceType2Choice.mmMarket, PriceType2Choice.mmIndicative);
 				trace_lazy = () -> SecuritiesPricing.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "PriceType2Choice";
 				definition = "Choice of price type.";
 			}

@@ -20,10 +20,12 @@ package com.tools20022.repository.msg;
 import com.tools20022.metamodel.MMMessageAssociationEnd;
 import com.tools20022.metamodel.MMMessageAttribute;
 import com.tools20022.metamodel.MMMessageComponent;
+import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.datatype.Max100KBinary;
 import com.tools20022.repository.datatype.Max16Text;
 import com.tools20022.repository.datatype.Max35Text;
 import com.tools20022.repository.entity.AcceptorConfiguration;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.List;
@@ -134,15 +136,15 @@ public class ApplicationParameters3 {
 	 */
 	public static final MMMessageAttribute mmApplicationIdentification = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.AcceptorConfiguration.mmApplicationIdentification;
+			businessElementTrace_lazy = () -> AcceptorConfiguration.mmApplicationIdentification;
 			componentContext_lazy = () -> ApplicationParameters3.mmObject();
 			isDerived = false;
 			xmlTag = "ApplId";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ApplicationIdentification";
 			definition = "Identification of the payment application.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.ApplicationParameters4.mmApplicationIdentification);
-			previousVersion_lazy = () -> com.tools20022.repository.msg.ApplicationParameters2.mmApplicationIdentification;
+			nextVersions_lazy = () -> Arrays.asList(ApplicationParameters4.mmApplicationIdentification);
+			previousVersion_lazy = () -> ApplicationParameters2.mmApplicationIdentification;
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> Max35Text.mmObject();
@@ -195,11 +197,11 @@ public class ApplicationParameters3 {
 			componentContext_lazy = () -> ApplicationParameters3.mmObject();
 			isDerived = false;
 			xmlTag = "Vrsn";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Version";
 			definition = "Version of the payment application configuration parameters.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.ApplicationParameters4.mmVersion);
-			previousVersion_lazy = () -> com.tools20022.repository.msg.ApplicationParameters2.mmVersion;
+			nextVersions_lazy = () -> Arrays.asList(ApplicationParameters4.mmVersion);
+			previousVersion_lazy = () -> ApplicationParameters2.mmVersion;
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> Max16Text.mmObject();
@@ -253,11 +255,11 @@ public class ApplicationParameters3 {
 			componentContext_lazy = () -> ApplicationParameters3.mmObject();
 			isDerived = false;
 			xmlTag = "Params";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Parameters";
 			definition = "Configuration parameters used by the related payment application.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.ApplicationParameters4.mmParameters);
-			previousVersion_lazy = () -> com.tools20022.repository.msg.ApplicationParameters2.mmParameters;
+			nextVersions_lazy = () -> Arrays.asList(ApplicationParameters4.mmParameters);
+			previousVersion_lazy = () -> ApplicationParameters2.mmParameters;
 			minOccurs = 0;
 			simpleType_lazy = () -> Max100KBinary.mmObject();
 		}
@@ -311,11 +313,11 @@ public class ApplicationParameters3 {
 			componentContext_lazy = () -> ApplicationParameters3.mmObject();
 			isDerived = false;
 			xmlTag = "NcrptdParams";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "EncryptedParameters";
 			definition = "Sensitive parameters (sequence of parameters including the enveloppes) encrypted with a cryptographic key.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.ApplicationParameters4.mmEncryptedParameters);
-			previousVersion_lazy = () -> com.tools20022.repository.msg.ApplicationParameters2.mmEncryptedParameters;
+			nextVersions_lazy = () -> Arrays.asList(ApplicationParameters4.mmEncryptedParameters);
+			previousVersion_lazy = () -> ApplicationParameters2.mmEncryptedParameters;
 			maxOccurs = 1;
 			minOccurs = 0;
 			isComposite = true;
@@ -326,11 +328,10 @@ public class ApplicationParameters3 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.ApplicationParameters3.mmApplicationIdentification, com.tools20022.repository.msg.ApplicationParameters3.mmVersion,
-						com.tools20022.repository.msg.ApplicationParameters3.mmParameters, com.tools20022.repository.msg.ApplicationParameters3.mmEncryptedParameters);
+				messageElement_lazy = () -> Arrays.asList(ApplicationParameters3.mmApplicationIdentification, ApplicationParameters3.mmVersion, ApplicationParameters3.mmParameters, ApplicationParameters3.mmEncryptedParameters);
 				trace_lazy = () -> AcceptorConfiguration.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "ApplicationParameters3";
 				definition = "Acceptor parameters dedicated to a payment application of the point of interaction.";
 				nextVersions_lazy = () -> Arrays.asList(ApplicationParameters4.mmObject());

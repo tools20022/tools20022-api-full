@@ -19,12 +19,14 @@ package com.tools20022.repository.msg;
 
 import com.tools20022.metamodel.MMMessageAttribute;
 import com.tools20022.metamodel.MMMessageComponent;
+import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.choice.DateFormat28Choice;
 import com.tools20022.repository.choice.FinancialInstrumentQuantity15Choice;
 import com.tools20022.repository.codeset.CreditDebitCode;
 import com.tools20022.repository.codeset.DTCAdjustmentPaymentType3Code;
 import com.tools20022.repository.codeset.DTCUnallocatedAdjustmentReason3Code;
 import com.tools20022.repository.datatype.Max8Text;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -124,10 +126,10 @@ public class CorporateActionUnallocatedSecuritiesTransactionDetailsSD6 {
 			componentContext_lazy = () -> CorporateActionUnallocatedSecuritiesTransactionDetailsSD6.mmObject();
 			isDerived = false;
 			xmlTag = "CdtDbtInd";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CreditDebitIndicator";
 			definition = "Indicates whether the value is a debit or a credit.";
-			previousVersion_lazy = () -> com.tools20022.repository.msg.CorporateActionUnallocatedSecuritiesTransactionDetailsSD5.mmCreditDebitIndicator;
+			previousVersion_lazy = () -> CorporateActionUnallocatedSecuritiesTransactionDetailsSD5.mmCreditDebitIndicator;
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> CreditDebitCode.mmObject();
@@ -172,10 +174,10 @@ public class CorporateActionUnallocatedSecuritiesTransactionDetailsSD6 {
 			componentContext_lazy = () -> CorporateActionUnallocatedSecuritiesTransactionDetailsSD6.mmObject();
 			isDerived = false;
 			xmlTag = "RsnCd";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ReasonCode";
 			definition = "Transaction reason.";
-			previousVersion_lazy = () -> com.tools20022.repository.msg.CorporateActionUnallocatedSecuritiesTransactionDetailsSD5.mmReasonCode;
+			previousVersion_lazy = () -> CorporateActionUnallocatedSecuritiesTransactionDetailsSD5.mmReasonCode;
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> DTCAdjustmentPaymentType3Code.mmObject();
@@ -222,10 +224,10 @@ public class CorporateActionUnallocatedSecuritiesTransactionDetailsSD6 {
 			componentContext_lazy = () -> CorporateActionUnallocatedSecuritiesTransactionDetailsSD6.mmObject();
 			isDerived = false;
 			xmlTag = "TxQty";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "TransactionQuantity";
 			definition = "Resulting quantity of securities concerned in this transaction.";
-			previousVersion_lazy = () -> com.tools20022.repository.msg.CorporateActionUnallocatedSecuritiesTransactionDetailsSD5.mmTransactionQuantity;
+			previousVersion_lazy = () -> CorporateActionUnallocatedSecuritiesTransactionDetailsSD5.mmTransactionQuantity;
 			maxOccurs = 1;
 			minOccurs = 0;
 			complexType_lazy = () -> FinancialInstrumentQuantity15Choice.mmObject();
@@ -271,10 +273,10 @@ public class CorporateActionUnallocatedSecuritiesTransactionDetailsSD6 {
 			componentContext_lazy = () -> CorporateActionUnallocatedSecuritiesTransactionDetailsSD6.mmObject();
 			isDerived = false;
 			xmlTag = "UallctdRsnCd";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "UnallocatedReasonCode";
 			definition = "Reason for the unallocation.";
-			previousVersion_lazy = () -> com.tools20022.repository.msg.CorporateActionUnallocatedSecuritiesTransactionDetailsSD5.mmUnallocatedReasonCode;
+			previousVersion_lazy = () -> CorporateActionUnallocatedSecuritiesTransactionDetailsSD5.mmUnallocatedReasonCode;
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> DTCUnallocatedAdjustmentReason3Code.mmObject();
@@ -322,10 +324,10 @@ public class CorporateActionUnallocatedSecuritiesTransactionDetailsSD6 {
 			componentContext_lazy = () -> CorporateActionUnallocatedSecuritiesTransactionDetailsSD6.mmObject();
 			isDerived = false;
 			xmlTag = "ContraPtcptNb";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ContraParticipantNumber";
 			definition = "Transaction contra participant identification when shares are distributed / delivered to / from another participant.";
-			previousVersion_lazy = () -> com.tools20022.repository.msg.CorporateActionUnallocatedSecuritiesTransactionDetailsSD5.mmContraParticipantNumber;
+			previousVersion_lazy = () -> CorporateActionUnallocatedSecuritiesTransactionDetailsSD5.mmContraParticipantNumber;
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> Max8Text.mmObject();
@@ -374,10 +376,10 @@ public class CorporateActionUnallocatedSecuritiesTransactionDetailsSD6 {
 			componentContext_lazy = () -> CorporateActionUnallocatedSecuritiesTransactionDetailsSD6.mmObject();
 			isDerived = false;
 			xmlTag = "EarlstPmtDt";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "EarliestPaymentDate";
 			definition = "Date/time at which the movement was due to take place (cash and/or securities).";
-			previousVersion_lazy = () -> com.tools20022.repository.msg.CorporateActionUnallocatedSecuritiesTransactionDetailsSD5.mmEarliestPaymentDate;
+			previousVersion_lazy = () -> CorporateActionUnallocatedSecuritiesTransactionDetailsSD5.mmEarliestPaymentDate;
 			maxOccurs = 1;
 			minOccurs = 0;
 			complexType_lazy = () -> DateFormat28Choice.mmObject();
@@ -387,13 +389,11 @@ public class CorporateActionUnallocatedSecuritiesTransactionDetailsSD6 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.CorporateActionUnallocatedSecuritiesTransactionDetailsSD6.mmCreditDebitIndicator,
-						com.tools20022.repository.msg.CorporateActionUnallocatedSecuritiesTransactionDetailsSD6.mmReasonCode, com.tools20022.repository.msg.CorporateActionUnallocatedSecuritiesTransactionDetailsSD6.mmTransactionQuantity,
-						com.tools20022.repository.msg.CorporateActionUnallocatedSecuritiesTransactionDetailsSD6.mmUnallocatedReasonCode,
-						com.tools20022.repository.msg.CorporateActionUnallocatedSecuritiesTransactionDetailsSD6.mmContraParticipantNumber,
-						com.tools20022.repository.msg.CorporateActionUnallocatedSecuritiesTransactionDetailsSD6.mmEarliestPaymentDate);
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+				messageElement_lazy = () -> Arrays.asList(CorporateActionUnallocatedSecuritiesTransactionDetailsSD6.mmCreditDebitIndicator, CorporateActionUnallocatedSecuritiesTransactionDetailsSD6.mmReasonCode,
+						CorporateActionUnallocatedSecuritiesTransactionDetailsSD6.mmTransactionQuantity, CorporateActionUnallocatedSecuritiesTransactionDetailsSD6.mmUnallocatedReasonCode,
+						CorporateActionUnallocatedSecuritiesTransactionDetailsSD6.mmContraParticipantNumber, CorporateActionUnallocatedSecuritiesTransactionDetailsSD6.mmEarliestPaymentDate);
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 				name = "CorporateActionUnallocatedSecuritiesTransactionDetailsSD6";
 				definition = "Breakdown of unallocated securities transactions.";
 				previousVersion_lazy = () -> CorporateActionUnallocatedSecuritiesTransactionDetailsSD5.mmObject();

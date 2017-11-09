@@ -20,10 +20,11 @@ package com.tools20022.repository.msg;
 import com.tools20022.metamodel.MMMessageAssociationEnd;
 import com.tools20022.metamodel.MMMessageAttribute;
 import com.tools20022.metamodel.MMMessageComponent;
+import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.choice.Amount2Choice;
 import com.tools20022.repository.datatype.ISODate;
-import com.tools20022.repository.entity.Organisation;
-import com.tools20022.repository.entity.Payment;
+import com.tools20022.repository.entity.*;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -115,7 +116,7 @@ public class LiquidityDebitTransfer1 {
 			componentContext_lazy = () -> LiquidityDebitTransfer1.mmObject();
 			isDerived = false;
 			xmlTag = "LqdtyTrfId";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "LiquidityTransferIdentification";
 			definition = "Used to uniquely identify the liquidity transfer.";
 			maxOccurs = 1;
@@ -162,7 +163,7 @@ public class LiquidityDebitTransfer1 {
 			componentContext_lazy = () -> LiquidityDebitTransfer1.mmObject();
 			isDerived = false;
 			xmlTag = "Cdtr";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Creditor";
 			definition = "Owner of the account to be credited.";
 			maxOccurs = 1;
@@ -206,11 +207,11 @@ public class LiquidityDebitTransfer1 {
 	 */
 	public static final MMMessageAssociationEnd mmCreditorAccount = new MMMessageAssociationEnd() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.PaymentPartyRole.mmCashAccount;
+			businessElementTrace_lazy = () -> PaymentPartyRole.mmCashAccount;
 			componentContext_lazy = () -> LiquidityDebitTransfer1.mmObject();
 			isDerived = false;
 			xmlTag = "CdtrAcct";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CreditorAccount";
 			definition = "Account to be credited as a result of a transfer of liquidity. ";
 			maxOccurs = 1;
@@ -256,11 +257,11 @@ public class LiquidityDebitTransfer1 {
 	 */
 	public static final MMMessageAssociationEnd mmTransferredAmount = new MMMessageAssociationEnd() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.CreditInstrument.mmNetAmount;
+			businessElementTrace_lazy = () -> CreditInstrument.mmNetAmount;
 			componentContext_lazy = () -> LiquidityDebitTransfer1.mmObject();
 			isDerived = false;
 			xmlTag = "TrfdAmt";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "TransferredAmount";
 			definition = "Amount of money that the transaction administrator transfers from one account to another.";
 			maxOccurs = 1;
@@ -307,7 +308,7 @@ public class LiquidityDebitTransfer1 {
 			componentContext_lazy = () -> LiquidityDebitTransfer1.mmObject();
 			isDerived = false;
 			xmlTag = "Dbtr";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Debtor";
 			definition = "Owner of the account to be debited.";
 			maxOccurs = 1;
@@ -351,11 +352,11 @@ public class LiquidityDebitTransfer1 {
 	 */
 	public static final MMMessageAssociationEnd mmDebtorAccount = new MMMessageAssociationEnd() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.PaymentPartyRole.mmCashAccount;
+			businessElementTrace_lazy = () -> PaymentPartyRole.mmCashAccount;
 			componentContext_lazy = () -> LiquidityDebitTransfer1.mmObject();
 			isDerived = false;
 			xmlTag = "DbtrAcct";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "DebtorAccount";
 			definition = "Account to be debited as a result of a transfer of liquidity. ";
 			maxOccurs = 1;
@@ -403,11 +404,11 @@ public class LiquidityDebitTransfer1 {
 	 */
 	public static final MMMessageAttribute mmSettlementDate = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Entry.mmValueDate;
+			businessElementTrace_lazy = () -> Entry.mmValueDate;
 			componentContext_lazy = () -> LiquidityDebitTransfer1.mmObject();
 			isDerived = false;
 			xmlTag = "SttlmDt";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SettlementDate";
 			definition = "Date on which the amount of money ceases to be available to the agent that owes it and when the amount of money becomes available to the agent to which it is due.";
 			maxOccurs = 1;
@@ -419,12 +420,11 @@ public class LiquidityDebitTransfer1 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.LiquidityDebitTransfer1.mmLiquidityTransferIdentification, com.tools20022.repository.msg.LiquidityDebitTransfer1.mmCreditor,
-						com.tools20022.repository.msg.LiquidityDebitTransfer1.mmCreditorAccount, com.tools20022.repository.msg.LiquidityDebitTransfer1.mmTransferredAmount, com.tools20022.repository.msg.LiquidityDebitTransfer1.mmDebtor,
-						com.tools20022.repository.msg.LiquidityDebitTransfer1.mmDebtorAccount, com.tools20022.repository.msg.LiquidityDebitTransfer1.mmSettlementDate);
+				messageElement_lazy = () -> Arrays.asList(LiquidityDebitTransfer1.mmLiquidityTransferIdentification, LiquidityDebitTransfer1.mmCreditor, LiquidityDebitTransfer1.mmCreditorAccount,
+						LiquidityDebitTransfer1.mmTransferredAmount, LiquidityDebitTransfer1.mmDebtor, LiquidityDebitTransfer1.mmDebtorAccount, LiquidityDebitTransfer1.mmSettlementDate);
 				trace_lazy = () -> Payment.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 				name = "LiquidityDebitTransfer1";
 				definition = "Provides details specific to the liquidity debit transfer, used to transfer an amount of money from the debtor to the creditor, where both are financial institutions.";
 			}

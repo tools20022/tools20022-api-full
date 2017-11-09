@@ -17,10 +17,9 @@
 
 package com.tools20022.repository.entity;
 
-import com.tools20022.metamodel.MMBusinessAssociationEnd;
-import com.tools20022.metamodel.MMBusinessAttribute;
-import com.tools20022.metamodel.MMBusinessComponent;
+import com.tools20022.metamodel.*;
 import com.tools20022.repository.datatype.CurrencyAndAmount;
+import com.tools20022.repository.GeneratedRepository;
 import com.tools20022.repository.msg.AmountAndPeriod1;
 import com.tools20022.repository.msg.DateAndAmount1;
 import java.util.Arrays;
@@ -35,13 +34,13 @@ import java.util.concurrent.atomic.AtomicReference;
  * <p>
  * <strong>Constant fields:</strong>
  * <ul>
- * <li>{@linkplain com.tools20022.metamodel.MMBusinessComponent#getElement
- * element} =
+ * <li>
+ * {@linkplain com.tools20022.metamodel.MMBusinessComponent#getDerivationComponent
+ * derivationComponent} =
  * <ul>
- * <li>{@linkplain com.tools20022.repository.entity.AmountAndPeriod#mmPeriod
- * AmountAndPeriod.mmPeriod}</li>
- * <li>{@linkplain com.tools20022.repository.entity.AmountAndPeriod#mmAmount
- * AmountAndPeriod.mmAmount}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.AmountAndPeriod1
+ * AmountAndPeriod1}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.DateAndAmount1 DateAndAmount1}</li>
  * </ul>
  * </li>
  * <li>
@@ -52,13 +51,13 @@ import java.util.concurrent.atomic.AtomicReference;
  * DateTimePeriod.mmAmount}</li>
  * </ul>
  * </li>
- * <li>
- * {@linkplain com.tools20022.metamodel.MMBusinessComponent#getDerivationComponent
- * derivationComponent} =
+ * <li>{@linkplain com.tools20022.metamodel.MMBusinessComponent#getElement
+ * element} =
  * <ul>
- * <li>{@linkplain com.tools20022.repository.msg.AmountAndPeriod1
- * AmountAndPeriod1}</li>
- * <li>{@linkplain com.tools20022.repository.msg.DateAndAmount1 DateAndAmount1}</li>
+ * <li>{@linkplain com.tools20022.repository.entity.AmountAndPeriod#mmPeriod
+ * AmountAndPeriod.mmPeriod}</li>
+ * <li>{@linkplain com.tools20022.repository.entity.AmountAndPeriod#mmAmount
+ * AmountAndPeriod.mmAmount}</li>
  * </ul>
  * </li>
  * <li>
@@ -117,13 +116,13 @@ public class AmountAndPeriod {
 		{
 			elementContext_lazy = () -> AmountAndPeriod.mmObject();
 			isDerived = false;
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "Period";
 			definition = "Period related to an amount.";
 			maxOccurs = 1;
 			minOccurs = 1;
 			opposite_lazy = () -> com.tools20022.repository.entity.DateTimePeriod.mmAmount;
-			aggregation = com.tools20022.metamodel.MMAggregation.NONE;
+			aggregation = MMAggregation.NONE;
 			type_lazy = () -> com.tools20022.repository.entity.DateTimePeriod.mmObject();
 		}
 	};
@@ -165,10 +164,10 @@ public class AmountAndPeriod {
 	 */
 	public static final MMBusinessAttribute mmAmount = new MMBusinessAttribute() {
 		{
-			derivation_lazy = () -> Arrays.asList(com.tools20022.repository.msg.AmountAndPeriod1.mmAmount, com.tools20022.repository.msg.DateAndAmount1.mmAmount);
+			derivation_lazy = () -> Arrays.asList(AmountAndPeriod1.mmAmount, DateAndAmount1.mmAmount);
 			elementContext_lazy = () -> AmountAndPeriod.mmObject();
 			isDerived = false;
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Amount";
 			definition = "Amount of this period.";
 			maxOccurs = 1;
@@ -180,12 +179,12 @@ public class AmountAndPeriod {
 	static public MMBusinessComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMBusinessComponent() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "AmountAndPeriod";
 				definition = "Relates an amount to a period of time.";
 				associationDomain_lazy = () -> Arrays.asList(com.tools20022.repository.entity.DateTimePeriod.mmAmount);
-				element_lazy = () -> Arrays.asList(com.tools20022.repository.entity.AmountAndPeriod.mmPeriod, com.tools20022.repository.entity.AmountAndPeriod.mmAmount);
+				element_lazy = () -> Arrays.asList(AmountAndPeriod.mmPeriod, AmountAndPeriod.mmAmount);
 				derivationComponent_lazy = () -> Arrays.asList(AmountAndPeriod1.mmObject(), DateAndAmount1.mmObject());
 			}
 		});

@@ -20,8 +20,10 @@ package com.tools20022.repository.msg;
 import com.tools20022.metamodel.MMMessageAssociationEnd;
 import com.tools20022.metamodel.MMMessageAttribute;
 import com.tools20022.metamodel.MMMessageComponent;
+import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.datatype.Max35Text;
 import com.tools20022.repository.entity.PortfolioTransfer;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.List;
@@ -122,11 +124,11 @@ public class ISATransfer20 {
 			componentContext_lazy = () -> ISATransfer20.mmObject();
 			isDerived = false;
 			xmlTag = "CxlRef";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CancellationReference";
 			definition = "Unique and unambiguous identifier for a transfer cancellation, as assigned by the instructing party.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.ISATransfer25.mmCancellationReference);
-			previousVersion_lazy = () -> com.tools20022.repository.msg.ISATransfer17.mmCancellationReference;
+			nextVersions_lazy = () -> Arrays.asList(ISATransfer25.mmCancellationReference);
+			previousVersion_lazy = () -> ISATransfer17.mmCancellationReference;
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> Max35Text.mmObject();
@@ -183,11 +185,11 @@ public class ISATransfer20 {
 			componentContext_lazy = () -> ISATransfer20.mmObject();
 			isDerived = false;
 			xmlTag = "PdctTrf";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ProductTransfer";
 			definition = "Provides information related to the asset(s) transferred.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.ISATransfer25.mmProductTransfer);
-			previousVersion_lazy = () -> com.tools20022.repository.msg.ISATransfer17.mmProductTransfer;
+			nextVersions_lazy = () -> Arrays.asList(ISATransfer25.mmProductTransfer);
+			previousVersion_lazy = () -> ISATransfer17.mmProductTransfer;
 			minOccurs = 1;
 			isComposite = true;
 			type_lazy = () -> com.tools20022.repository.msg.ISATransfer18.mmObject();
@@ -197,10 +199,10 @@ public class ISATransfer20 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.ISATransfer20.mmCancellationReference, com.tools20022.repository.msg.ISATransfer20.mmProductTransfer);
+				messageElement_lazy = () -> Arrays.asList(ISATransfer20.mmCancellationReference, ISATransfer20.mmProductTransfer);
 				trace_lazy = () -> PortfolioTransfer.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 				name = "ISATransfer20";
 				definition = "Describes the type of product and the assets to be transferred.";
 				nextVersions_lazy = () -> Arrays.asList(ISATransfer25.mmObject());

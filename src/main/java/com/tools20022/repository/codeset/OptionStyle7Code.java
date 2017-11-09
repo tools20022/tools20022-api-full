@@ -19,7 +19,9 @@ package com.tools20022.repository.codeset;
 
 import com.tools20022.metamodel.MMCode;
 import com.tools20022.metamodel.MMCodeSet;
+import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.codeset.OptionStyleCode;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -87,7 +89,7 @@ public class OptionStyle7Code extends OptionStyleCode {
 	 */
 	public static final MMCode mmAmerican = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "American";
 			owner_lazy = () -> OptionStyle7Code.mmObject();
 		}
@@ -110,7 +112,7 @@ public class OptionStyle7Code extends OptionStyleCode {
 	 */
 	public static final MMCode mmAsian = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Asian";
 			owner_lazy = () -> OptionStyle7Code.mmObject();
 		}
@@ -133,7 +135,7 @@ public class OptionStyle7Code extends OptionStyleCode {
 	 */
 	public static final MMCode mmBermudan = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Bermudan";
 			owner_lazy = () -> OptionStyle7Code.mmObject();
 		}
@@ -156,7 +158,7 @@ public class OptionStyle7Code extends OptionStyleCode {
 	 */
 	public static final MMCode mmEuropean = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "European";
 			owner_lazy = () -> OptionStyle7Code.mmObject();
 		}
@@ -179,7 +181,7 @@ public class OptionStyle7Code extends OptionStyleCode {
 	 */
 	public static final MMCode mmOther = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Other";
 			owner_lazy = () -> OptionStyle7Code.mmObject();
 		}
@@ -188,12 +190,11 @@ public class OptionStyle7Code extends OptionStyleCode {
 	static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "OptionStyle7Code";
 				definition = "Specifies how an option  for a derivative or securities derivative can be exercised.";
-				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.OptionStyle7Code.mmAmerican, com.tools20022.repository.codeset.OptionStyle7Code.mmAsian, com.tools20022.repository.codeset.OptionStyle7Code.mmBermudan,
-						com.tools20022.repository.codeset.OptionStyle7Code.mmEuropean, com.tools20022.repository.codeset.OptionStyle7Code.mmOther);
+				code_lazy = () -> Arrays.asList(OptionStyle7Code.mmAmerican, OptionStyle7Code.mmAsian, OptionStyle7Code.mmBermudan, OptionStyle7Code.mmEuropean, OptionStyle7Code.mmOther);
 				trace_lazy = () -> OptionStyleCode.mmObject();
 			}
 		});

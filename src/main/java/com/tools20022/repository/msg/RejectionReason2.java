@@ -19,11 +19,14 @@ package com.tools20022.repository.msg;
 
 import com.tools20022.metamodel.MMMessageAttribute;
 import com.tools20022.metamodel.MMMessageComponent;
+import com.tools20022.metamodel.MMRegistrationStatus;
+import com.tools20022.repository.area.admi.MessageRejectV01;
 import com.tools20022.repository.datatype.ISODateTime;
 import com.tools20022.repository.datatype.Max20000Text;
 import com.tools20022.repository.datatype.Max350Text;
 import com.tools20022.repository.datatype.Max35Text;
 import com.tools20022.repository.entity.StatusReason;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -116,7 +119,7 @@ public class RejectionReason2 {
 			componentContext_lazy = () -> RejectionReason2.mmObject();
 			isDerived = false;
 			xmlTag = "RjctgPtyRsn";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "RejectingPartyReason";
 			definition = "Reason of the rejection provided by the rejecting party.";
 			maxOccurs = 1;
@@ -157,7 +160,7 @@ public class RejectionReason2 {
 			componentContext_lazy = () -> RejectionReason2.mmObject();
 			isDerived = false;
 			xmlTag = "RjctnDtTm";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "RejectionDateTime";
 			definition = "Date and time at which the rejection was generated.";
 			maxOccurs = 1;
@@ -200,7 +203,7 @@ public class RejectionReason2 {
 			componentContext_lazy = () -> RejectionReason2.mmObject();
 			isDerived = false;
 			xmlTag = "ErrLctn";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ErrorLocation";
 			definition = "Description of the precise location of the potential error in a message.";
 			maxOccurs = 1;
@@ -241,7 +244,7 @@ public class RejectionReason2 {
 			componentContext_lazy = () -> RejectionReason2.mmObject();
 			isDerived = false;
 			xmlTag = "RsnDesc";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ReasonDescription";
 			definition = "Detailed description of the rejection reason.";
 			maxOccurs = 1;
@@ -287,7 +290,7 @@ public class RejectionReason2 {
 			componentContext_lazy = () -> RejectionReason2.mmObject();
 			isDerived = false;
 			xmlTag = "AddtlData";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AdditionalData";
 			definition = "Additional information related to the rejection and meant to allow for the precise identification of the rejection reason. This could include a copy of the rejected message in part or in full.";
 			maxOccurs = 1;
@@ -299,12 +302,12 @@ public class RejectionReason2 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.RejectionReason2.mmRejectingPartyReason, com.tools20022.repository.msg.RejectionReason2.mmRejectionDateTime,
-						com.tools20022.repository.msg.RejectionReason2.mmErrorLocation, com.tools20022.repository.msg.RejectionReason2.mmReasonDescription, com.tools20022.repository.msg.RejectionReason2.mmAdditionalData);
-				messageBuildingBlock_lazy = () -> Arrays.asList(com.tools20022.repository.area.admi.MessageRejectV01.mmReason);
+				messageElement_lazy = () -> Arrays.asList(RejectionReason2.mmRejectingPartyReason, RejectionReason2.mmRejectionDateTime, RejectionReason2.mmErrorLocation, RejectionReason2.mmReasonDescription,
+						RejectionReason2.mmAdditionalData);
+				messageBuildingBlock_lazy = () -> Arrays.asList(MessageRejectV01.mmReason);
 				trace_lazy = () -> StatusReason.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "RejectionReason2";
 				definition = "General information about the reason of the rejection.";
 			}

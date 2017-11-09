@@ -20,9 +20,12 @@ package com.tools20022.repository.msg;
 import com.tools20022.metamodel.MMMessageAssociationEnd;
 import com.tools20022.metamodel.MMMessageAttribute;
 import com.tools20022.metamodel.MMMessageComponent;
+import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.choice.DateTimePeriodChoice;
 import com.tools20022.repository.choice.SystemStatus2Choice;
+import com.tools20022.repository.entity.Status;
 import com.tools20022.repository.entity.SystemStatus;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -105,14 +108,14 @@ public class SystemStatus2 {
 	 */
 	public static final MMMessageAssociationEnd mmStatus = new MMMessageAssociationEnd() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.SystemStatus.mmStatus;
+			businessElementTrace_lazy = () -> SystemStatus.mmStatus;
 			componentContext_lazy = () -> SystemStatus2.mmObject();
 			isDerived = false;
 			xmlTag = "Sts";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Status";
 			definition = "Current status of a system.";
-			previousVersion_lazy = () -> com.tools20022.repository.msg.SystemStatus1.mmStatus;
+			previousVersion_lazy = () -> SystemStatus1.mmStatus;
 			maxOccurs = 1;
 			minOccurs = 1;
 			isComposite = true;
@@ -160,14 +163,14 @@ public class SystemStatus2 {
 	 */
 	public static final MMMessageAttribute mmValidityTime = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Status.mmValidityTime;
+			businessElementTrace_lazy = () -> Status.mmValidityTime;
 			componentContext_lazy = () -> SystemStatus2.mmObject();
 			isDerived = false;
 			xmlTag = "VldtyTm";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ValidityTime";
 			definition = "Period of time during which the status of the system is valid. ";
-			previousVersion_lazy = () -> com.tools20022.repository.msg.SystemStatus1.mmValidityTime;
+			previousVersion_lazy = () -> SystemStatus1.mmValidityTime;
 			maxOccurs = 1;
 			minOccurs = 0;
 			complexType_lazy = () -> DateTimePeriodChoice.mmObject();
@@ -177,10 +180,10 @@ public class SystemStatus2 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.SystemStatus2.mmStatus, com.tools20022.repository.msg.SystemStatus2.mmValidityTime);
+				messageElement_lazy = () -> Arrays.asList(SystemStatus2.mmStatus, SystemStatus2.mmValidityTime);
 				trace_lazy = () -> SystemStatus.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "SystemStatus2";
 				definition = "Status of a system and the period of time during which the status is valid.";
 				previousVersion_lazy = () -> SystemStatus1.mmObject();

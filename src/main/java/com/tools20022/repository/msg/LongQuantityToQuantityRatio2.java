@@ -19,8 +19,10 @@ package com.tools20022.repository.msg;
 
 import com.tools20022.metamodel.MMMessageAttribute;
 import com.tools20022.metamodel.MMMessageComponent;
+import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.datatype.LongDecimalNumber;
 import com.tools20022.repository.entity.QuantityRatio;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -98,11 +100,11 @@ public class LongQuantityToQuantityRatio2 {
 	 */
 	public static final MMMessageAttribute mmLongQuantity1 = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.QuantityRatio.mmQuantity1;
+			businessElementTrace_lazy = () -> QuantityRatio.mmQuantity1;
 			componentContext_lazy = () -> LongQuantityToQuantityRatio2.mmObject();
 			isDerived = false;
 			xmlTag = "LngQty1";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "LongQuantity1";
 			definition = "High precision numerator of the quotient of quantities.";
 			maxOccurs = 1;
@@ -147,11 +149,11 @@ public class LongQuantityToQuantityRatio2 {
 	 */
 	public static final MMMessageAttribute mmLongQuantity2 = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.QuantityRatio.mmQuantity2;
+			businessElementTrace_lazy = () -> QuantityRatio.mmQuantity2;
 			componentContext_lazy = () -> LongQuantityToQuantityRatio2.mmObject();
 			isDerived = false;
 			xmlTag = "LngQty2";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "LongQuantity2";
 			definition = "High precision denominator of the quotient of quantities.";
 			maxOccurs = 1;
@@ -163,10 +165,10 @@ public class LongQuantityToQuantityRatio2 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.LongQuantityToQuantityRatio2.mmLongQuantity1, com.tools20022.repository.msg.LongQuantityToQuantityRatio2.mmLongQuantity2);
+				messageElement_lazy = () -> Arrays.asList(LongQuantityToQuantityRatio2.mmLongQuantity1, LongQuantityToQuantityRatio2.mmLongQuantity2);
 				trace_lazy = () -> QuantityRatio.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "LongQuantityToQuantityRatio2";
 				definition = "Ratio expressed as a quotient of quantities.";
 			}

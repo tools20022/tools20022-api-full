@@ -19,10 +19,14 @@ package com.tools20022.repository.msg;
 
 import com.tools20022.metamodel.MMMessageAttribute;
 import com.tools20022.metamodel.MMMessageComponent;
+import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.datatype.ISODate;
 import com.tools20022.repository.datatype.Max140Text;
 import com.tools20022.repository.datatype.Max35Text;
+import com.tools20022.repository.entity.GenericIdentification;
 import com.tools20022.repository.entity.Organisation;
+import com.tools20022.repository.entity.PartyName;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -116,14 +120,14 @@ public class LegalOrganisation2 {
 	 */
 	public static final MMMessageAttribute mmIdentification = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.GenericIdentification.mmIdentification;
+			businessElementTrace_lazy = () -> GenericIdentification.mmIdentification;
 			componentContext_lazy = () -> LegalOrganisation2.mmObject();
 			isDerived = false;
 			xmlTag = "Id";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Identification";
 			definition = "Unique and unambiguous identifier for an organisation that is allocated by an institution.";
-			previousVersion_lazy = () -> com.tools20022.repository.msg.LegalOrganisation1.mmIdentification;
+			previousVersion_lazy = () -> LegalOrganisation1.mmIdentification;
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> Max35Text.mmObject();
@@ -169,14 +173,14 @@ public class LegalOrganisation2 {
 	 */
 	public static final MMMessageAttribute mmName = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.PartyName.mmName;
+			businessElementTrace_lazy = () -> PartyName.mmName;
 			componentContext_lazy = () -> LegalOrganisation2.mmObject();
 			isDerived = false;
 			xmlTag = "Nm";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Name";
 			definition = "Specifies the short name of the organisation.";
-			previousVersion_lazy = () -> com.tools20022.repository.msg.LegalOrganisation1.mmName;
+			previousVersion_lazy = () -> LegalOrganisation1.mmName;
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> Max140Text.mmObject();
@@ -217,11 +221,11 @@ public class LegalOrganisation2 {
 	 */
 	public static final MMMessageAttribute mmEstablishmentDate = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Organisation.mmEstablishmentDate;
+			businessElementTrace_lazy = () -> Organisation.mmEstablishmentDate;
 			componentContext_lazy = () -> LegalOrganisation2.mmObject();
 			isDerived = false;
 			xmlTag = "EstblishmtDt";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "EstablishmentDate";
 			definition = "Date when the organisation was established.";
 			maxOccurs = 1;
@@ -264,11 +268,11 @@ public class LegalOrganisation2 {
 	 */
 	public static final MMMessageAttribute mmRegistrationDate = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Organisation.mmRegistrationDate;
+			businessElementTrace_lazy = () -> Organisation.mmRegistrationDate;
 			componentContext_lazy = () -> LegalOrganisation2.mmObject();
 			isDerived = false;
 			xmlTag = "RegnDt";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "RegistrationDate";
 			definition = "Date when the organisation was registered.";
 			maxOccurs = 1;
@@ -280,11 +284,10 @@ public class LegalOrganisation2 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.LegalOrganisation2.mmIdentification, com.tools20022.repository.msg.LegalOrganisation2.mmName,
-						com.tools20022.repository.msg.LegalOrganisation2.mmEstablishmentDate, com.tools20022.repository.msg.LegalOrganisation2.mmRegistrationDate);
+				messageElement_lazy = () -> Arrays.asList(LegalOrganisation2.mmIdentification, LegalOrganisation2.mmName, LegalOrganisation2.mmEstablishmentDate, LegalOrganisation2.mmRegistrationDate);
 				trace_lazy = () -> Organisation.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "LegalOrganisation2";
 				definition = "Legally constituted organization specified for this party.";
 				previousVersion_lazy = () -> LegalOrganisation1.mmObject();

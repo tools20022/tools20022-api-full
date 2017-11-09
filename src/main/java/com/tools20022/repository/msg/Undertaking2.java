@@ -20,12 +20,15 @@ package com.tools20022.repository.msg;
 import com.tools20022.metamodel.MMMessageAssociationEnd;
 import com.tools20022.metamodel.MMMessageAttribute;
 import com.tools20022.metamodel.MMMessageComponent;
+import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.codeset.ExternalTypeOfParty1Code;
 import com.tools20022.repository.codeset.UndertakingName1Code;
 import com.tools20022.repository.datatype.Max2000Text;
 import com.tools20022.repository.datatype.YesNoIndicator;
+import com.tools20022.repository.entity.ModelForm;
 import com.tools20022.repository.entity.Undertaking;
 import com.tools20022.repository.entity.UndertakingBeneficiary;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.List;
@@ -122,11 +125,11 @@ public class Undertaking2 {
 	 */
 	public static final MMMessageAttribute mmName = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Undertaking.mmUndertakingName;
+			businessElementTrace_lazy = () -> Undertaking.mmUndertakingName;
 			componentContext_lazy = () -> Undertaking2.mmObject();
 			isDerived = false;
 			xmlTag = "Nm";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Name";
 			definition = "Undertaking name.";
 			maxOccurs = 1;
@@ -172,7 +175,7 @@ public class Undertaking2 {
 			componentContext_lazy = () -> Undertaking2.mmObject();
 			isDerived = false;
 			xmlTag = "Bnfcry";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Beneficiary";
 			definition = "Party in whose favour the counter-undertaking is issued. ";
 			maxOccurs = 1;
@@ -215,11 +218,11 @@ public class Undertaking2 {
 	 */
 	public static final MMMessageAssociationEnd mmExpiryDetails = new MMMessageAssociationEnd() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Undertaking.mmExpiry;
+			businessElementTrace_lazy = () -> Undertaking.mmExpiry;
 			componentContext_lazy = () -> Undertaking2.mmObject();
 			isDerived = false;
 			xmlTag = "XpryDtls";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ExpiryDetails";
 			definition = "Details related to the expiry terms of the counter-undertaking.";
 			maxOccurs = 1;
@@ -262,11 +265,11 @@ public class Undertaking2 {
 	 */
 	public static final MMMessageAssociationEnd mmCounterUndertakingAmount = new MMMessageAssociationEnd() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Undertaking.mmUndertakingAmount;
+			businessElementTrace_lazy = () -> Undertaking.mmUndertakingAmount;
 			componentContext_lazy = () -> Undertaking2.mmObject();
 			isDerived = false;
 			xmlTag = "CntrUdrtkgAmt";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CounterUndertakingAmount";
 			definition = "Details related to the amount of the counter-undertaking.";
 			maxOccurs = 1;
@@ -313,11 +316,11 @@ public class Undertaking2 {
 	 */
 	public static final MMMessageAttribute mmConfirmationChargesPayableBy = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Undertaking.mmRelatedChargesPayableBy;
+			businessElementTrace_lazy = () -> Undertaking.mmRelatedChargesPayableBy;
 			componentContext_lazy = () -> Undertaking2.mmObject();
 			isDerived = false;
 			xmlTag = "ConfChrgsPyblBy";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ConfirmationChargesPayableBy";
 			definition = "Indicates whether the applicant/obligor or beneficiary is responsible for payment of the confirmation charges.";
 			maxOccurs = 1;
@@ -358,11 +361,11 @@ public class Undertaking2 {
 	 */
 	public static final MMMessageAssociationEnd mmGovernanceRulesAndLaw = new MMMessageAssociationEnd() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.ModelForm.mmGovernanceRules;
+			businessElementTrace_lazy = () -> ModelForm.mmGovernanceRules;
 			componentContext_lazy = () -> Undertaking2.mmObject();
 			isDerived = false;
 			xmlTag = "GovncRulesAndLaw";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "GovernanceRulesAndLaw";
 			definition = "Rules and laws governing the counter-undertaking.";
 			maxOccurs = 1;
@@ -409,11 +412,11 @@ public class Undertaking2 {
 	 */
 	public static final MMMessageAttribute mmStandardClaimDocumentIndicator = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Undertaking.mmStandardClaimDocumentIndicator;
+			businessElementTrace_lazy = () -> Undertaking.mmStandardClaimDocumentIndicator;
 			componentContext_lazy = () -> Undertaking2.mmObject();
 			isDerived = false;
 			xmlTag = "StdClmDocInd";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "StandardClaimDocumentIndicator";
 			definition = "Indication as to whether a claim is to utilise a standard claim form of the issuing institution.";
 			maxOccurs = 1;
@@ -454,7 +457,7 @@ public class Undertaking2 {
 			componentContext_lazy = () -> Undertaking2.mmObject();
 			isDerived = false;
 			xmlTag = "AddtlInf";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AdditionalInformation";
 			definition = "Additional information related to the counter-undertaking.";
 			maxOccurs = 5;
@@ -466,12 +469,11 @@ public class Undertaking2 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.Undertaking2.mmName, com.tools20022.repository.msg.Undertaking2.mmBeneficiary, com.tools20022.repository.msg.Undertaking2.mmExpiryDetails,
-						com.tools20022.repository.msg.Undertaking2.mmCounterUndertakingAmount, com.tools20022.repository.msg.Undertaking2.mmConfirmationChargesPayableBy, com.tools20022.repository.msg.Undertaking2.mmGovernanceRulesAndLaw,
-						com.tools20022.repository.msg.Undertaking2.mmStandardClaimDocumentIndicator, com.tools20022.repository.msg.Undertaking2.mmAdditionalInformation);
+				messageElement_lazy = () -> Arrays.asList(Undertaking2.mmName, Undertaking2.mmBeneficiary, Undertaking2.mmExpiryDetails, Undertaking2.mmCounterUndertakingAmount, Undertaking2.mmConfirmationChargesPayableBy,
+						Undertaking2.mmGovernanceRulesAndLaw, Undertaking2.mmStandardClaimDocumentIndicator, Undertaking2.mmAdditionalInformation);
 				trace_lazy = () -> Undertaking.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "Undertaking2";
 				definition = "Independent undertaking, such as a demand guarantee or standby letter of credit, that provides financial assurance, to be honoured on the presentation of documents that comply with its terms and conditions.";
 			}

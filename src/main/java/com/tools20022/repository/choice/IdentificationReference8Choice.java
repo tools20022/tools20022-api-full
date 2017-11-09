@@ -19,8 +19,13 @@ package com.tools20022.repository.choice;
 
 import com.tools20022.metamodel.MMChoiceComponent;
 import com.tools20022.metamodel.MMMessageAttribute;
+import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.datatype.Max35Text;
+import com.tools20022.repository.entity.Index;
+import com.tools20022.repository.entity.SecuritiesOrder;
 import com.tools20022.repository.entity.SecuritiesTradeIdentification;
+import com.tools20022.repository.entity.TradeIdentification;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -135,11 +140,11 @@ public class IdentificationReference8Choice {
 	 */
 	public static final MMMessageAttribute mmInstructingPartyTransactionIdentification = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.TradeIdentification.mmIdentification;
+			businessElementTrace_lazy = () -> TradeIdentification.mmIdentification;
 			componentContext_lazy = () -> IdentificationReference8Choice.mmObject();
 			isDerived = false;
 			xmlTag = "InstgPtyTxId";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "InstructingPartyTransactionIdentification";
 			definition = "Unambiguous identification of the confirmation transaction as known by the instructing party.";
 			maxOccurs = 1;
@@ -185,11 +190,11 @@ public class IdentificationReference8Choice {
 	 */
 	public static final MMMessageAttribute mmExecutingPartyTransactionIdentification = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.TradeIdentification.mmIdentification;
+			businessElementTrace_lazy = () -> TradeIdentification.mmIdentification;
 			componentContext_lazy = () -> IdentificationReference8Choice.mmObject();
 			isDerived = false;
 			xmlTag = "ExctgPtyTxId";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ExecutingPartyTransactionIdentification";
 			definition = "Unambiguous identification of the confirmation transaction as known by the executing party.";
 			maxOccurs = 1;
@@ -236,11 +241,11 @@ public class IdentificationReference8Choice {
 	 */
 	public static final MMMessageAttribute mmMarketInfrastructureTransactionIdentification = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.SecuritiesTradeIdentification.mmMarketInfrastructureTransactionIdentification;
+			businessElementTrace_lazy = () -> SecuritiesTradeIdentification.mmMarketInfrastructureTransactionIdentification;
 			componentContext_lazy = () -> IdentificationReference8Choice.mmObject();
 			isDerived = false;
 			xmlTag = "MktInfrstrctrTxId";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "MarketInfrastructureTransactionIdentification";
 			definition = "Unambiguous identification of the confirmation transaction as known by the market infrastructure.";
 			maxOccurs = 1;
@@ -287,11 +292,11 @@ public class IdentificationReference8Choice {
 	 */
 	public static final MMMessageAttribute mmClientOrderLinkIdentification = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.SecuritiesOrder.mmIdentification;
+			businessElementTrace_lazy = () -> SecuritiesOrder.mmIdentification;
 			componentContext_lazy = () -> IdentificationReference8Choice.mmObject();
 			isDerived = false;
 			xmlTag = "ClntOrdrLkId";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ClientOrderLinkIdentification";
 			definition = "It permits order originators to tie together groups of orders in which trades resulting from orders are associated for a specific purpose, for example the calculation of average execution price for a customer.";
 			maxOccurs = 1;
@@ -334,11 +339,11 @@ public class IdentificationReference8Choice {
 	 */
 	public static final MMMessageAttribute mmPoolIdentification = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.SecuritiesTradeIdentification.mmPoolIdentification;
+			businessElementTrace_lazy = () -> SecuritiesTradeIdentification.mmPoolIdentification;
 			componentContext_lazy = () -> IdentificationReference8Choice.mmObject();
 			isDerived = false;
 			xmlTag = "PoolId";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PoolIdentification";
 			definition = "Collective reference identifying a set of messages.";
 			maxOccurs = 1;
@@ -384,11 +389,11 @@ public class IdentificationReference8Choice {
 	 */
 	public static final MMMessageAttribute mmBlockIdentification = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.SecuritiesTradeIdentification.mmBlockIdentification;
+			businessElementTrace_lazy = () -> SecuritiesTradeIdentification.mmBlockIdentification;
 			componentContext_lazy = () -> IdentificationReference8Choice.mmObject();
 			isDerived = false;
 			xmlTag = "BlckId";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "BlockIdentification";
 			definition = "Reference of the linked message at the trade/block level which identifies a centrally matched transaction.";
 			maxOccurs = 1;
@@ -434,11 +439,11 @@ public class IdentificationReference8Choice {
 	 */
 	public static final MMMessageAttribute mmAllocationIdentification = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.SecuritiesTradeIdentification.mmAllocationIdentification;
+			businessElementTrace_lazy = () -> SecuritiesTradeIdentification.mmAllocationIdentification;
 			componentContext_lazy = () -> IdentificationReference8Choice.mmObject();
 			isDerived = false;
 			xmlTag = "AllcnId";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AllocationIdentification";
 			definition = "Reference of the linked message at the allocation level which identifies a centrally matched transaction.";
 			maxOccurs = 1;
@@ -484,11 +489,11 @@ public class IdentificationReference8Choice {
 	 */
 	public static final MMMessageAttribute mmIndividualAllocationIdentification = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.SecuritiesTradeIdentification.mmAllocationIdentification;
+			businessElementTrace_lazy = () -> SecuritiesTradeIdentification.mmAllocationIdentification;
 			componentContext_lazy = () -> IdentificationReference8Choice.mmObject();
 			isDerived = false;
 			xmlTag = "IndvAllcnId";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "IndividualAllocationIdentification";
 			definition = "Reference of the linked message at the individual allocation level which identifies a centrally matched transaction.";
 			maxOccurs = 1;
@@ -537,11 +542,11 @@ public class IdentificationReference8Choice {
 	 */
 	public static final MMMessageAttribute mmSecondaryAllocationIdentification = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.SecuritiesTradeIdentification.mmAllocationIdentification;
+			businessElementTrace_lazy = () -> SecuritiesTradeIdentification.mmAllocationIdentification;
 			componentContext_lazy = () -> IdentificationReference8Choice.mmObject();
 			isDerived = false;
 			xmlTag = "ScndryAllcnId";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SecondaryAllocationIdentification";
 			definition = "Reference that can be shared across a number of allocation instruction or allocation report messages, thereby making it possible to pass an identifier for an original allocation message on multiple messages (for example from one party to a second to a third, across cancel and replace messages etc).";
 			maxOccurs = 1;
@@ -584,11 +589,11 @@ public class IdentificationReference8Choice {
 	 */
 	public static final MMMessageAttribute mmIndexIdentification = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Index.mmIdentification;
+			businessElementTrace_lazy = () -> Index.mmIdentification;
 			componentContext_lazy = () -> IdentificationReference8Choice.mmObject();
 			isDerived = false;
 			xmlTag = "IndxId";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "IndexIdentification";
 			definition = "Reference identifying a index trade.";
 			maxOccurs = 1;
@@ -634,11 +639,11 @@ public class IdentificationReference8Choice {
 	 */
 	public static final MMMessageAttribute mmCommonIdentification = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.TradeIdentification.mmCommonIdentification;
+			businessElementTrace_lazy = () -> TradeIdentification.mmCommonIdentification;
 			componentContext_lazy = () -> IdentificationReference8Choice.mmObject();
 			isDerived = false;
 			xmlTag = "CmonId";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CommonIdentification";
 			definition = "Unique reference agreed upon by the two trade counterparties to identify the trade.";
 			maxOccurs = 1;
@@ -684,11 +689,11 @@ public class IdentificationReference8Choice {
 	 */
 	public static final MMMessageAttribute mmComplianceIdentification = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.SecuritiesTradeIdentification.mmComplianceIdentification;
+			businessElementTrace_lazy = () -> SecuritiesTradeIdentification.mmComplianceIdentification;
 			componentContext_lazy = () -> IdentificationReference8Choice.mmObject();
 			isDerived = false;
 			xmlTag = "CmplcId";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ComplianceIdentification";
 			definition = "Identification used to represent this transaction for compliance purposes.";
 			maxOccurs = 1;
@@ -734,11 +739,11 @@ public class IdentificationReference8Choice {
 	 */
 	public static final MMMessageAttribute mmCollateralTransactionIdentification = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.SecuritiesTradeIdentification.mmCollateralTransactionIdentification;
+			businessElementTrace_lazy = () -> SecuritiesTradeIdentification.mmCollateralTransactionIdentification;
 			componentContext_lazy = () -> IdentificationReference8Choice.mmObject();
 			isDerived = false;
 			xmlTag = "CollTxId";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CollateralTransactionIdentification";
 			definition = "Unambiguous identification of a collateral transaction as assigned by the instructing party.";
 			maxOccurs = 1;
@@ -750,17 +755,14 @@ public class IdentificationReference8Choice {
 	final static public MMChoiceComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMChoiceComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.choice.IdentificationReference8Choice.mmInstructingPartyTransactionIdentification,
-						com.tools20022.repository.choice.IdentificationReference8Choice.mmExecutingPartyTransactionIdentification,
-						com.tools20022.repository.choice.IdentificationReference8Choice.mmMarketInfrastructureTransactionIdentification, com.tools20022.repository.choice.IdentificationReference8Choice.mmClientOrderLinkIdentification,
-						com.tools20022.repository.choice.IdentificationReference8Choice.mmPoolIdentification, com.tools20022.repository.choice.IdentificationReference8Choice.mmBlockIdentification,
-						com.tools20022.repository.choice.IdentificationReference8Choice.mmAllocationIdentification, com.tools20022.repository.choice.IdentificationReference8Choice.mmIndividualAllocationIdentification,
-						com.tools20022.repository.choice.IdentificationReference8Choice.mmSecondaryAllocationIdentification, com.tools20022.repository.choice.IdentificationReference8Choice.mmIndexIdentification,
-						com.tools20022.repository.choice.IdentificationReference8Choice.mmCommonIdentification, com.tools20022.repository.choice.IdentificationReference8Choice.mmComplianceIdentification,
-						com.tools20022.repository.choice.IdentificationReference8Choice.mmCollateralTransactionIdentification);
+				messageElement_lazy = () -> Arrays.asList(IdentificationReference8Choice.mmInstructingPartyTransactionIdentification, IdentificationReference8Choice.mmExecutingPartyTransactionIdentification,
+						IdentificationReference8Choice.mmMarketInfrastructureTransactionIdentification, IdentificationReference8Choice.mmClientOrderLinkIdentification, IdentificationReference8Choice.mmPoolIdentification,
+						IdentificationReference8Choice.mmBlockIdentification, IdentificationReference8Choice.mmAllocationIdentification, IdentificationReference8Choice.mmIndividualAllocationIdentification,
+						IdentificationReference8Choice.mmSecondaryAllocationIdentification, IdentificationReference8Choice.mmIndexIdentification, IdentificationReference8Choice.mmCommonIdentification,
+						IdentificationReference8Choice.mmComplianceIdentification, IdentificationReference8Choice.mmCollateralTransactionIdentification);
 				trace_lazy = () -> SecuritiesTradeIdentification.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "IdentificationReference8Choice";
 				definition = "Unique identifier of a document, message or transaction.";
 			}

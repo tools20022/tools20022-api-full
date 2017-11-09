@@ -19,11 +19,13 @@ package com.tools20022.repository.msg;
 
 import com.tools20022.metamodel.MMMessageAttribute;
 import com.tools20022.metamodel.MMMessageComponent;
+import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.metamodel.MMXor;
 import com.tools20022.repository.datatype.ISOYear;
 import com.tools20022.repository.datatype.PreviousAll;
 import com.tools20022.repository.datatype.YesNoIndicator;
 import com.tools20022.repository.entity.PortfolioTransfer;
+import com.tools20022.repository.GeneratedRepository;
 import java.text.DateFormat;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
@@ -121,7 +123,7 @@ public class PreviousYear1 {
 			componentContext_lazy = () -> PreviousYear1.mmObject();
 			isDerived = false;
 			xmlTag = "AllPrvsYrs";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AllPreviousYears";
 			definition = "Selection ot the entirety of the investment plans.";
 			maxOccurs = 1;
@@ -164,11 +166,11 @@ public class PreviousYear1 {
 	 */
 	public static final MMMessageAttribute mmSpecificPreviousYears = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.PortfolioTransfer.mmTransferredYear;
+			businessElementTrace_lazy = () -> PortfolioTransfer.mmTransferredYear;
 			componentContext_lazy = () -> PreviousYear1.mmObject();
 			isDerived = false;
 			xmlTag = "SpcfcPrvsYrs";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SpecificPreviousYears";
 			definition = "Selection of investment plans issued during previous years.";
 			minOccurs = 1;
@@ -212,11 +214,11 @@ public class PreviousYear1 {
 	 */
 	public static final MMMessageAttribute mmCashComponentIndicator = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.PortfolioTransfer.mmCashComponentIndicator;
+			businessElementTrace_lazy = () -> PortfolioTransfer.mmCashComponentIndicator;
 			componentContext_lazy = () -> PreviousYear1.mmObject();
 			isDerived = false;
 			xmlTag = "CshCmpntInd";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CashComponentIndicator";
 			definition = "Indicates whether the ISA contains a cash component asset for transfer.";
 			maxOccurs = 1;
@@ -230,6 +232,9 @@ public class PreviousYear1 {
 	 * <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
+	 * <li>{@linkplain com.tools20022.metamodel.MMXor#getMessageComponent
+	 * messageComponent} =
+	 * {@linkplain com.tools20022.repository.msg.PreviousYear1 PreviousYear1}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMXor#getImpactedElements
 	 * impactedElements} =
 	 * <ul>
@@ -241,9 +246,6 @@ public class PreviousYear1 {
 	 * PreviousYear1.mmSpecificPreviousYears}</li>
 	 * </ul>
 	 * </li>
-	 * <li>{@linkplain com.tools20022.metamodel.MMXor#getMessageComponent
-	 * messageComponent} =
-	 * {@linkplain com.tools20022.repository.msg.PreviousYear1 PreviousYear1}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
@@ -259,22 +261,21 @@ public class PreviousYear1 {
 	 */
 	public static final MMXor mmAllPreviousYearsOrSpecificPreviousYearsRule = new MMXor() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AllPreviousYearsOrSpecificPreviousYearsRule";
 			definition = "Either AllPreviousYears or one or more occurrences of SpecificPreviousYears must be present, but not both.";
 			messageComponent_lazy = () -> PreviousYear1.mmObject();
-			impactedElements_lazy = () -> Arrays.asList(com.tools20022.repository.msg.PreviousYear1.mmAllPreviousYears, com.tools20022.repository.msg.PreviousYear1.mmSpecificPreviousYears);
+			impactedElements_lazy = () -> Arrays.asList(PreviousYear1.mmAllPreviousYears, PreviousYear1.mmSpecificPreviousYears);
 		}
 	};
 
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.PreviousYear1.mmAllPreviousYears, com.tools20022.repository.msg.PreviousYear1.mmSpecificPreviousYears,
-						com.tools20022.repository.msg.PreviousYear1.mmCashComponentIndicator);
+				messageElement_lazy = () -> Arrays.asList(PreviousYear1.mmAllPreviousYears, PreviousYear1.mmSpecificPreviousYears, PreviousYear1.mmCashComponentIndicator);
 				trace_lazy = () -> PortfolioTransfer.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.OBSOLETE;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.OBSOLETE;
 				removalDate = ((Supplier<Date>) (() -> {
 					try {
 						return DateFormat.getDateInstance(java.text.DateFormat.LONG).parse("September 9, 2016");
@@ -284,7 +285,7 @@ public class PreviousYear1 {
 				})).get();
 				name = "PreviousYear1";
 				definition = "Choice between selected investment plans issued during previous years or the entirety of the investment plans.";
-				xors_lazy = () -> Arrays.asList(com.tools20022.repository.msg.PreviousYear1.mmAllPreviousYearsOrSpecificPreviousYearsRule);
+				xors_lazy = () -> Arrays.asList(PreviousYear1.mmAllPreviousYearsOrSpecificPreviousYearsRule);
 			}
 		});
 		return mmObject_lazy.get();

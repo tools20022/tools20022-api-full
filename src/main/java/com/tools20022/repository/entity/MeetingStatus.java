@@ -17,14 +17,13 @@
 
 package com.tools20022.repository.entity;
 
-import com.tools20022.metamodel.MMBusinessAssociationEnd;
-import com.tools20022.metamodel.MMBusinessAttribute;
-import com.tools20022.metamodel.MMBusinessComponent;
+import com.tools20022.metamodel.*;
 import com.tools20022.repository.choice.*;
 import com.tools20022.repository.codeset.CancellationStatusCode;
 import com.tools20022.repository.codeset.NotificationStatusCode;
 import com.tools20022.repository.codeset.ResolutionStatusCode;
 import com.tools20022.repository.entity.Status;
+import com.tools20022.repository.GeneratedRepository;
 import com.tools20022.repository.msg.*;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
@@ -39,67 +38,6 @@ import java.util.List;
  * <p>
  * <strong>Constant fields:</strong>
  * <ul>
- * <li>{@linkplain com.tools20022.metamodel.MMBusinessComponent#getElement
- * element} =
- * <ul>
- * <li>
- * {@linkplain com.tools20022.repository.entity.MeetingStatus#mmMeetingResolutionStatus
- * MeetingStatus.mmMeetingResolutionStatus}</li>
- * <li>
- * {@linkplain com.tools20022.repository.entity.MeetingStatus#mmInstructionCancellationStatus
- * MeetingStatus.mmInstructionCancellationStatus}</li>
- * <li>{@linkplain com.tools20022.repository.entity.MeetingStatus#mmReason
- * MeetingStatus.mmReason}</li>
- * <li>
- * {@linkplain com.tools20022.repository.entity.MeetingStatus#mmNotificationStatus
- * MeetingStatus.mmNotificationStatus}</li>
- * <li>{@linkplain com.tools20022.repository.entity.MeetingStatus#mmMeeting
- * MeetingStatus.mmMeeting}</li>
- * </ul>
- * </li>
- * <li>
- * {@linkplain com.tools20022.metamodel.MMBusinessComponent#getAssociationDomain
- * associationDomain} =
- * <ul>
- * <li>{@linkplain com.tools20022.repository.entity.Meeting#mmStatus
- * Meeting.mmStatus}</li>
- * <li>
- * {@linkplain com.tools20022.repository.entity.MeetingStatusReason#mmMeetingStatus
- * MeetingStatusReason.mmMeetingStatus}</li>
- * </ul>
- * </li>
- * <li>
- * {@linkplain com.tools20022.metamodel.MMBusinessComponent#getDerivationElement
- * derivationElement} =
- * <ul>
- * <li>
- * {@linkplain com.tools20022.repository.msg.MeetingInstructionGlobalStatus#mmRejectionStatus
- * MeetingInstructionGlobalStatus.mmRejectionStatus}</li>
- * <li>
- * {@linkplain com.tools20022.repository.msg.MeetingInstructionGlobalStatus#mmCancellationStatus
- * MeetingInstructionGlobalStatus.mmCancellationStatus}</li>
- * <li>
- * {@linkplain com.tools20022.repository.msg.DetailedInstructionConfirmation#mmStatus
- * DetailedInstructionConfirmation.mmStatus}</li>
- * <li>
- * {@linkplain com.tools20022.repository.msg.MeetingInstructionDetailedStatus#mmParticipationRegistrationConfirmation
- * MeetingInstructionDetailedStatus.mmParticipationRegistrationConfirmation}</li>
- * <li>
- * {@linkplain com.tools20022.repository.msg.MeetingInstructionDetailedStatus#mmVotingInstructionConfirmation
- * MeetingInstructionDetailedStatus.mmVotingInstructionConfirmation}</li>
- * <li>
- * {@linkplain com.tools20022.repository.msg.MeetingInstructionDetailedStatus#mmProxyAssignmentConfirmation
- * MeetingInstructionDetailedStatus.mmProxyAssignmentConfirmation}</li>
- * <li>
- * {@linkplain com.tools20022.repository.msg.MeetingInstructionDetailedStatus#mmMeetingAttendanceConfirmation
- * MeetingInstructionDetailedStatus.mmMeetingAttendanceConfirmation}</li>
- * <li>
- * {@linkplain com.tools20022.repository.msg.MeetingInstructionDetailedStatus#mmSecuritiesRegistrationConfirmation
- * MeetingInstructionDetailedStatus.mmSecuritiesRegistrationConfirmation}</li>
- * </ul>
- * </li>
- * <li>{@linkplain com.tools20022.metamodel.MMBusinessComponent#getSuperType
- * superType} = {@linkplain com.tools20022.repository.entity.Status Status}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMBusinessComponent#getDerivationComponent
  * derivationComponent} =
@@ -168,6 +106,67 @@ import java.util.List;
  * </ul>
  * </li>
  * <li>
+ * {@linkplain com.tools20022.metamodel.MMBusinessComponent#getAssociationDomain
+ * associationDomain} =
+ * <ul>
+ * <li>{@linkplain com.tools20022.repository.entity.Meeting#mmStatus
+ * Meeting.mmStatus}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.entity.MeetingStatusReason#mmMeetingStatus
+ * MeetingStatusReason.mmMeetingStatus}</li>
+ * </ul>
+ * </li>
+ * <li>
+ * {@linkplain com.tools20022.metamodel.MMBusinessComponent#getDerivationElement
+ * derivationElement} =
+ * <ul>
+ * <li>
+ * {@linkplain com.tools20022.repository.msg.MeetingInstructionGlobalStatus#mmRejectionStatus
+ * MeetingInstructionGlobalStatus.mmRejectionStatus}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.msg.MeetingInstructionGlobalStatus#mmCancellationStatus
+ * MeetingInstructionGlobalStatus.mmCancellationStatus}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.msg.DetailedInstructionConfirmation#mmStatus
+ * DetailedInstructionConfirmation.mmStatus}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.msg.MeetingInstructionDetailedStatus#mmParticipationRegistrationConfirmation
+ * MeetingInstructionDetailedStatus.mmParticipationRegistrationConfirmation}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.msg.MeetingInstructionDetailedStatus#mmVotingInstructionConfirmation
+ * MeetingInstructionDetailedStatus.mmVotingInstructionConfirmation}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.msg.MeetingInstructionDetailedStatus#mmProxyAssignmentConfirmation
+ * MeetingInstructionDetailedStatus.mmProxyAssignmentConfirmation}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.msg.MeetingInstructionDetailedStatus#mmMeetingAttendanceConfirmation
+ * MeetingInstructionDetailedStatus.mmMeetingAttendanceConfirmation}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.msg.MeetingInstructionDetailedStatus#mmSecuritiesRegistrationConfirmation
+ * MeetingInstructionDetailedStatus.mmSecuritiesRegistrationConfirmation}</li>
+ * </ul>
+ * </li>
+ * <li>{@linkplain com.tools20022.metamodel.MMBusinessComponent#getSuperType
+ * superType} = {@linkplain com.tools20022.repository.entity.Status Status}</li>
+ * <li>{@linkplain com.tools20022.metamodel.MMBusinessComponent#getElement
+ * element} =
+ * <ul>
+ * <li>
+ * {@linkplain com.tools20022.repository.entity.MeetingStatus#mmMeetingResolutionStatus
+ * MeetingStatus.mmMeetingResolutionStatus}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.entity.MeetingStatus#mmInstructionCancellationStatus
+ * MeetingStatus.mmInstructionCancellationStatus}</li>
+ * <li>{@linkplain com.tools20022.repository.entity.MeetingStatus#mmReason
+ * MeetingStatus.mmReason}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.entity.MeetingStatus#mmNotificationStatus
+ * MeetingStatus.mmNotificationStatus}</li>
+ * <li>{@linkplain com.tools20022.repository.entity.MeetingStatus#mmMeeting
+ * MeetingStatus.mmMeeting}</li>
+ * </ul>
+ * </li>
+ * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
  * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
@@ -227,11 +226,10 @@ public class MeetingStatus extends Status {
 	 */
 	public static final MMBusinessAttribute mmMeetingResolutionStatus = new MMBusinessAttribute() {
 		{
-			derivation_lazy = () -> Arrays.asList(com.tools20022.repository.msg.Resolution1.mmStatus, com.tools20022.repository.msg.Resolution2.mmStatus, com.tools20022.repository.msg.Vote7.mmResolutionStatus,
-					com.tools20022.repository.msg.Resolution3.mmStatus);
+			derivation_lazy = () -> Arrays.asList(Resolution1.mmStatus, Resolution2.mmStatus, Vote7.mmResolutionStatus, Resolution3.mmStatus);
 			elementContext_lazy = () -> MeetingStatus.mmObject();
 			isDerived = false;
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "MeetingResolutionStatus";
 			definition = "Indicates whether the resolution is active or withdrawn.";
 			maxOccurs = 1;
@@ -289,12 +287,11 @@ public class MeetingStatus extends Status {
 	 */
 	public static final MMBusinessAttribute mmInstructionCancellationStatus = new MMBusinessAttribute() {
 		{
-			derivation_lazy = () -> Arrays.asList(com.tools20022.repository.msg.CancellationProcessingStatus1.mmStatus, com.tools20022.repository.choice.CancellationStatus1Choice.mmProcessingStatus,
-					com.tools20022.repository.choice.CancellationStatus2Choice.mmProcessingStatus, com.tools20022.repository.choice.InstructionTypeStatus1Choice.mmCancellationStatus,
-					com.tools20022.repository.choice.InstructionTypeStatus2Choice.mmCancellationStatus);
+			derivation_lazy = () -> Arrays.asList(CancellationProcessingStatus1.mmStatus, CancellationStatus1Choice.mmProcessingStatus, CancellationStatus2Choice.mmProcessingStatus, InstructionTypeStatus1Choice.mmCancellationStatus,
+					InstructionTypeStatus2Choice.mmCancellationStatus);
 			elementContext_lazy = () -> MeetingStatus.mmObject();
 			isDerived = false;
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "InstructionCancellationStatus";
 			definition = "Status of the request for cancellation of an instruction.";
 			maxOccurs = 1;
@@ -352,15 +349,15 @@ public class MeetingStatus extends Status {
 	 */
 	public static final MMBusinessAssociationEnd mmReason = new MMBusinessAssociationEnd() {
 		{
-			derivation_lazy = () -> Arrays.asList(com.tools20022.repository.choice.CancellationStatus1Choice.mmRejectionStatus, com.tools20022.repository.choice.CancellationStatus2Choice.mmRejectionStatus);
+			derivation_lazy = () -> Arrays.asList(CancellationStatus1Choice.mmRejectionStatus, CancellationStatus2Choice.mmRejectionStatus);
 			elementContext_lazy = () -> MeetingStatus.mmObject();
 			isDerived = false;
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "Reason";
 			definition = "Specifies the underlying reason for a status of a meeting or related instructions.";
 			minOccurs = 0;
 			opposite_lazy = () -> com.tools20022.repository.entity.MeetingStatusReason.mmMeetingStatus;
-			aggregation = com.tools20022.metamodel.MMAggregation.NONE;
+			aggregation = MMAggregation.NONE;
 			type_lazy = () -> com.tools20022.repository.entity.MeetingStatusReason.mmObject();
 		}
 	};
@@ -407,10 +404,10 @@ public class MeetingStatus extends Status {
 	 */
 	public static final MMBusinessAttribute mmNotificationStatus = new MMBusinessAttribute() {
 		{
-			derivation_lazy = () -> Arrays.asList(com.tools20022.repository.msg.NotificationStatus.mmStatus, com.tools20022.repository.msg.NotificationStatus1.mmStatus, com.tools20022.repository.msg.NotificationStatus2.mmStatus);
+			derivation_lazy = () -> Arrays.asList(com.tools20022.repository.msg.NotificationStatus.mmStatus, NotificationStatus1.mmStatus, NotificationStatus2.mmStatus);
 			elementContext_lazy = () -> MeetingStatus.mmObject();
 			isDerived = false;
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "NotificationStatus";
 			definition = "Specifies the status of the related notification.";
 			maxOccurs = 1;
@@ -455,13 +452,13 @@ public class MeetingStatus extends Status {
 		{
 			elementContext_lazy = () -> MeetingStatus.mmObject();
 			isDerived = false;
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "Meeting";
 			definition = "Meeting for which a status is provided.";
 			maxOccurs = 1;
 			minOccurs = 0;
 			opposite_lazy = () -> com.tools20022.repository.entity.Meeting.mmStatus;
-			aggregation = com.tools20022.metamodel.MMAggregation.NONE;
+			aggregation = MMAggregation.NONE;
 			type_lazy = () -> com.tools20022.repository.entity.Meeting.mmObject();
 		}
 	};
@@ -469,18 +466,16 @@ public class MeetingStatus extends Status {
 	static public MMBusinessComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMBusinessComponent() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "MeetingStatus";
 				definition = "Status of the instructions related to a meeting.";
 				associationDomain_lazy = () -> Arrays.asList(com.tools20022.repository.entity.Meeting.mmStatus, com.tools20022.repository.entity.MeetingStatusReason.mmMeetingStatus);
-				derivationElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.MeetingInstructionGlobalStatus.mmRejectionStatus, com.tools20022.repository.msg.MeetingInstructionGlobalStatus.mmCancellationStatus,
-						com.tools20022.repository.msg.DetailedInstructionConfirmation.mmStatus, com.tools20022.repository.msg.MeetingInstructionDetailedStatus.mmParticipationRegistrationConfirmation,
-						com.tools20022.repository.msg.MeetingInstructionDetailedStatus.mmVotingInstructionConfirmation, com.tools20022.repository.msg.MeetingInstructionDetailedStatus.mmProxyAssignmentConfirmation,
-						com.tools20022.repository.msg.MeetingInstructionDetailedStatus.mmMeetingAttendanceConfirmation, com.tools20022.repository.msg.MeetingInstructionDetailedStatus.mmSecuritiesRegistrationConfirmation);
+				derivationElement_lazy = () -> Arrays.asList(MeetingInstructionGlobalStatus.mmRejectionStatus, MeetingInstructionGlobalStatus.mmCancellationStatus, DetailedInstructionConfirmation.mmStatus,
+						MeetingInstructionDetailedStatus.mmParticipationRegistrationConfirmation, MeetingInstructionDetailedStatus.mmVotingInstructionConfirmation, MeetingInstructionDetailedStatus.mmProxyAssignmentConfirmation,
+						MeetingInstructionDetailedStatus.mmMeetingAttendanceConfirmation, MeetingInstructionDetailedStatus.mmSecuritiesRegistrationConfirmation);
 				superType_lazy = () -> Status.mmObject();
-				element_lazy = () -> Arrays.asList(com.tools20022.repository.entity.MeetingStatus.mmMeetingResolutionStatus, com.tools20022.repository.entity.MeetingStatus.mmInstructionCancellationStatus,
-						com.tools20022.repository.entity.MeetingStatus.mmReason, com.tools20022.repository.entity.MeetingStatus.mmNotificationStatus, com.tools20022.repository.entity.MeetingStatus.mmMeeting);
+				element_lazy = () -> Arrays.asList(MeetingStatus.mmMeetingResolutionStatus, MeetingStatus.mmInstructionCancellationStatus, MeetingStatus.mmReason, MeetingStatus.mmNotificationStatus, MeetingStatus.mmMeeting);
 				derivationComponent_lazy = () -> Arrays.asList(com.tools20022.repository.msg.NotificationStatus.mmObject(), NotificationStatus1.mmObject(), MeetingInstructionGlobalStatus.mmObject(),
 						MeetingInstructionStatusDetails.mmObject(), DetailedInstructionConfirmation.mmObject(), MeetingInstructionDetailedStatus.mmObject(), InstructionProcessingStatus1.mmObject(), InstructionStatus2Choice.mmObject(),
 						DetailedInstructionStatus1.mmObject(), InstructionStatus1Choice.mmObject(), CancellationProcessingStatus1.mmObject(), CancellationStatus1Choice.mmObject(), AdditionalStatus1.mmObject(),

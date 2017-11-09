@@ -20,12 +20,19 @@ package com.tools20022.repository.msg;
 import com.tools20022.metamodel.MMMessageAssociationEnd;
 import com.tools20022.metamodel.MMMessageAttribute;
 import com.tools20022.metamodel.MMMessageComponent;
+import com.tools20022.metamodel.MMRegistrationStatus;
+import com.tools20022.repository.area.seev.AgentCAStandingInstructionCancellationRequestV01;
+import com.tools20022.repository.area.seev.AgentCAStandingInstructionRequestV01;
+import com.tools20022.repository.area.seev.AgentCAStandingInstructionStatusAdviceV01;
 import com.tools20022.repository.choice.CorporateActionEventType2FormatChoice;
 import com.tools20022.repository.choice.PartyIdentification2Choice;
 import com.tools20022.repository.codeset.StandingInstructionType1Code;
 import com.tools20022.repository.datatype.Max35Text;
 import com.tools20022.repository.entity.AgentCorporateActionStandingInstruction;
+import com.tools20022.repository.entity.CorporateActionEvent;
 import com.tools20022.repository.entity.SecuritiesAccount;
+import com.tools20022.repository.entity.StandingSettlementInstruction;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.List;
@@ -138,11 +145,11 @@ public class CorporateActionStandingInstructionGeneralInformation1 {
 	 */
 	public static final MMMessageAttribute mmStandingInstructionType = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.AgentCorporateActionStandingInstruction.mmStandingInstructionType;
+			businessElementTrace_lazy = () -> AgentCorporateActionStandingInstruction.mmStandingInstructionType;
 			componentContext_lazy = () -> CorporateActionStandingInstructionGeneralInformation1.mmObject();
 			isDerived = false;
 			xmlTag = "StgInstrTp";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "StandingInstructionType";
 			definition = "Type of standing instruction.";
 			maxOccurs = 1;
@@ -186,11 +193,11 @@ public class CorporateActionStandingInstructionGeneralInformation1 {
 	 */
 	public static final MMMessageAttribute mmEventType = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.CorporateActionEvent.mmType;
+			businessElementTrace_lazy = () -> CorporateActionEvent.mmType;
 			componentContext_lazy = () -> CorporateActionStandingInstructionGeneralInformation1.mmObject();
 			isDerived = false;
 			xmlTag = "EvtTp";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "EventType";
 			definition = "Type of coporpate action event.";
 			minOccurs = 0;
@@ -232,7 +239,7 @@ public class CorporateActionStandingInstructionGeneralInformation1 {
 			componentContext_lazy = () -> CorporateActionStandingInstructionGeneralInformation1.mmObject();
 			isDerived = false;
 			xmlTag = "InstgPtyId";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "InstructingPartyIdentification";
 			definition = "Identification of the instructing party, ie, the CSD client.";
 			maxOccurs = 1;
@@ -276,11 +283,11 @@ public class CorporateActionStandingInstructionGeneralInformation1 {
 	 */
 	public static final MMMessageAttribute mmClientStandingInstructionIdentification = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.StandingSettlementInstruction.mmIdentification;
+			businessElementTrace_lazy = () -> StandingSettlementInstruction.mmIdentification;
 			componentContext_lazy = () -> CorporateActionStandingInstructionGeneralInformation1.mmObject();
 			isDerived = false;
 			xmlTag = "ClntStgInstrId";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ClientStandingInstructionIdentification";
 			definition = "Reference of the standing instruction assigned by the client.";
 			maxOccurs = 1;
@@ -329,7 +336,7 @@ public class CorporateActionStandingInstructionGeneralInformation1 {
 			componentContext_lazy = () -> CorporateActionStandingInstructionGeneralInformation1.mmObject();
 			isDerived = false;
 			xmlTag = "AcctDtls";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AccountDetails";
 			definition = "Provides information about the account to which the standing instruction can apply.";
 			minOccurs = 0;
@@ -376,11 +383,11 @@ public class CorporateActionStandingInstructionGeneralInformation1 {
 	 */
 	public static final MMMessageAttribute mmUnderlyingSecurity = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.CorporateActionEvent.mmUnderlyingSecurity;
+			businessElementTrace_lazy = () -> CorporateActionEvent.mmUnderlyingSecurity;
 			componentContext_lazy = () -> CorporateActionStandingInstructionGeneralInformation1.mmObject();
 			isDerived = false;
 			xmlTag = "UndrlygScty";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "UnderlyingSecurity";
 			definition = "Identification of the underlying financial instrument, ie, the financial instrument affected by the corporate action event.";
 			maxOccurs = 1;
@@ -392,16 +399,14 @@ public class CorporateActionStandingInstructionGeneralInformation1 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.CorporateActionStandingInstructionGeneralInformation1.mmStandingInstructionType,
-						com.tools20022.repository.msg.CorporateActionStandingInstructionGeneralInformation1.mmEventType, com.tools20022.repository.msg.CorporateActionStandingInstructionGeneralInformation1.mmInstructingPartyIdentification,
-						com.tools20022.repository.msg.CorporateActionStandingInstructionGeneralInformation1.mmClientStandingInstructionIdentification,
-						com.tools20022.repository.msg.CorporateActionStandingInstructionGeneralInformation1.mmAccountDetails, com.tools20022.repository.msg.CorporateActionStandingInstructionGeneralInformation1.mmUnderlyingSecurity);
-				messageBuildingBlock_lazy = () -> Arrays.asList(com.tools20022.repository.area.seev.AgentCAStandingInstructionRequestV01.mmStandingInstructionGeneralInformation,
-						com.tools20022.repository.area.seev.AgentCAStandingInstructionCancellationRequestV01.mmStandingInstructionGeneralInformation,
-						com.tools20022.repository.area.seev.AgentCAStandingInstructionStatusAdviceV01.mmStandingInstructionGeneralInformation);
+				messageElement_lazy = () -> Arrays.asList(CorporateActionStandingInstructionGeneralInformation1.mmStandingInstructionType, CorporateActionStandingInstructionGeneralInformation1.mmEventType,
+						CorporateActionStandingInstructionGeneralInformation1.mmInstructingPartyIdentification, CorporateActionStandingInstructionGeneralInformation1.mmClientStandingInstructionIdentification,
+						CorporateActionStandingInstructionGeneralInformation1.mmAccountDetails, CorporateActionStandingInstructionGeneralInformation1.mmUnderlyingSecurity);
+				messageBuildingBlock_lazy = () -> Arrays.asList(AgentCAStandingInstructionRequestV01.mmStandingInstructionGeneralInformation, AgentCAStandingInstructionCancellationRequestV01.mmStandingInstructionGeneralInformation,
+						AgentCAStandingInstructionStatusAdviceV01.mmStandingInstructionGeneralInformation);
 				trace_lazy = () -> AgentCorporateActionStandingInstruction.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "CorporateActionStandingInstructionGeneralInformation1";
 				definition = "Provides information about the standing instruction.";
 			}

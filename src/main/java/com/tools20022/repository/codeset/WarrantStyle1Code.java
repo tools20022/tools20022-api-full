@@ -19,7 +19,9 @@ package com.tools20022.repository.codeset;
 
 import com.tools20022.metamodel.MMCode;
 import com.tools20022.metamodel.MMCodeSet;
+import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.codeset.WarrantStyleCode;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -86,7 +88,7 @@ public class WarrantStyle1Code extends WarrantStyleCode {
 	 */
 	public static final MMCode mmAmerican = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "American";
 			owner_lazy = () -> WarrantStyle1Code.mmObject();
 		}
@@ -109,7 +111,7 @@ public class WarrantStyle1Code extends WarrantStyleCode {
 	 */
 	public static final MMCode mmEuropean = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "European";
 			owner_lazy = () -> WarrantStyle1Code.mmObject();
 		}
@@ -132,7 +134,7 @@ public class WarrantStyle1Code extends WarrantStyleCode {
 	 */
 	public static final MMCode mmBermudan = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Bermudan";
 			owner_lazy = () -> WarrantStyle1Code.mmObject();
 		}
@@ -141,12 +143,12 @@ public class WarrantStyle1Code extends WarrantStyleCode {
 	static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
 				example = Arrays.asList("AMER");
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "WarrantStyle1Code";
 				definition = "Defines how an option can be exercised.";
-				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.WarrantStyle1Code.mmAmerican, com.tools20022.repository.codeset.WarrantStyle1Code.mmEuropean, com.tools20022.repository.codeset.WarrantStyle1Code.mmBermudan);
+				code_lazy = () -> Arrays.asList(WarrantStyle1Code.mmAmerican, WarrantStyle1Code.mmEuropean, WarrantStyle1Code.mmBermudan);
 				trace_lazy = () -> WarrantStyleCode.mmObject();
 			}
 		});

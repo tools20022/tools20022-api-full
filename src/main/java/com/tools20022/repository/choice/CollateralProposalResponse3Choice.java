@@ -19,7 +19,11 @@ package com.tools20022.repository.choice;
 
 import com.tools20022.metamodel.MMChoiceComponent;
 import com.tools20022.metamodel.MMMessageAssociationEnd;
+import com.tools20022.metamodel.MMRegistrationStatus;
+import com.tools20022.repository.area.colr.CollateralProposalResponseV05;
+import com.tools20022.repository.entity.CollateralMovement;
 import com.tools20022.repository.entity.CollateralProposal;
+import com.tools20022.repository.GeneratedRepository;
 import com.tools20022.repository.msg.CollateralProposalResponse3;
 import com.tools20022.repository.msg.CollateralProposalResponseType3;
 import java.util.Arrays;
@@ -122,14 +126,14 @@ public class CollateralProposalResponse3Choice {
 	 */
 	public static final MMMessageAssociationEnd mmCollateralProposal = new MMMessageAssociationEnd() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.CollateralProposal.mmProposedCollateralMovement;
+			businessElementTrace_lazy = () -> CollateralProposal.mmProposedCollateralMovement;
 			componentContext_lazy = () -> CollateralProposalResponse3Choice.mmObject();
 			isDerived = false;
 			xmlTag = "CollPrpsl";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CollateralProposal";
 			definition = "Provides the collateral proposal response for the variation margin and optionally the segregated independent amount.";
-			previousVersion_lazy = () -> com.tools20022.repository.choice.CollateralProposalResponse2Choice.mmCollateralProposal;
+			previousVersion_lazy = () -> CollateralProposalResponse2Choice.mmCollateralProposal;
 			maxOccurs = 1;
 			minOccurs = 1;
 			isComposite = true;
@@ -179,14 +183,14 @@ public class CollateralProposalResponse3Choice {
 	 */
 	public static final MMMessageAssociationEnd mmSegregatedIndependentAmount = new MMMessageAssociationEnd() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.CollateralMovement.mmSegregatedIndependentAmount;
+			businessElementTrace_lazy = () -> CollateralMovement.mmSegregatedIndependentAmount;
 			componentContext_lazy = () -> CollateralProposalResponse3Choice.mmObject();
 			isDerived = false;
 			xmlTag = "SgrtdIndpdntAmt";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SegregatedIndependentAmount";
 			definition = "Provides the collateral proposal response for the segregated independent amount only.";
-			previousVersion_lazy = () -> com.tools20022.repository.choice.CollateralProposalResponse2Choice.mmSegregatedIndependentAmount;
+			previousVersion_lazy = () -> CollateralProposalResponse2Choice.mmSegregatedIndependentAmount;
 			maxOccurs = 1;
 			minOccurs = 1;
 			isComposite = true;
@@ -197,12 +201,11 @@ public class CollateralProposalResponse3Choice {
 	final static public MMChoiceComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMChoiceComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.choice.CollateralProposalResponse3Choice.mmCollateralProposal,
-						com.tools20022.repository.choice.CollateralProposalResponse3Choice.mmSegregatedIndependentAmount);
-				messageBuildingBlock_lazy = () -> Arrays.asList(com.tools20022.repository.area.colr.CollateralProposalResponseV05.mmProposalResponse);
+				messageElement_lazy = () -> Arrays.asList(CollateralProposalResponse3Choice.mmCollateralProposal, CollateralProposalResponse3Choice.mmSegregatedIndependentAmount);
+				messageBuildingBlock_lazy = () -> Arrays.asList(CollateralProposalResponseV05.mmProposalResponse);
 				trace_lazy = () -> CollateralProposal.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "CollateralProposalResponse3Choice";
 				definition = "Provides the collateral proposal response for the variation margin and the segregated independent amount, or the segregated independent amount only.";
 				previousVersion_lazy = () -> CollateralProposalResponse2Choice.mmObject();

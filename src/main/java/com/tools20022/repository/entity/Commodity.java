@@ -19,11 +19,13 @@ package com.tools20022.repository.entity;
 
 import com.tools20022.metamodel.MMBusinessAttribute;
 import com.tools20022.metamodel.MMBusinessComponent;
+import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.choice.*;
 import com.tools20022.repository.codeset.AssetClassDetailedSubProductTypeCode;
 import com.tools20022.repository.codeset.AssetClassProductTypeCode;
 import com.tools20022.repository.codeset.AssetClassSubProductTypeCode;
 import com.tools20022.repository.entity.Asset;
+import com.tools20022.repository.GeneratedRepository;
 import com.tools20022.repository.msg.*;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
@@ -42,40 +44,6 @@ import java.util.concurrent.atomic.AtomicReference;
  * <p>
  * <strong>Constant fields:</strong>
  * <ul>
- * <li>{@linkplain com.tools20022.metamodel.MMBusinessComponent#getElement
- * element} =
- * <ul>
- * <li>{@linkplain com.tools20022.repository.entity.Commodity#mmBaseProduct
- * Commodity.mmBaseProduct}</li>
- * <li>
- * {@linkplain com.tools20022.repository.entity.Commodity#mmDetailedSubProduct
- * Commodity.mmDetailedSubProduct}</li>
- * <li>{@linkplain com.tools20022.repository.entity.Commodity#mmSubProduct
- * Commodity.mmSubProduct}</li>
- * </ul>
- * </li>
- * <li>
- * {@linkplain com.tools20022.metamodel.MMBusinessComponent#getDerivationElement
- * derivationElement} =
- * <ul>
- * <li>
- * {@linkplain com.tools20022.repository.msg.TransparencyDataReport10#mmEmissionAllowanceType
- * TransparencyDataReport10.mmEmissionAllowanceType}</li>
- * <li>{@linkplain com.tools20022.repository.msg.DerivativeCommodity2#mmProduct
- * DerivativeCommodity2.mmProduct}</li>
- * <li>
- * {@linkplain com.tools20022.repository.msg.CommodityDerivate4#mmClassSpecific
- * CommodityDerivate4.mmClassSpecific}</li>
- * <li>
- * {@linkplain com.tools20022.repository.choice.CommodityDerivate2Choice#mmFreight
- * CommodityDerivate2Choice.mmFreight}</li>
- * <li>
- * {@linkplain com.tools20022.repository.choice.CommodityDerivate2Choice#mmEnergy
- * CommodityDerivate2Choice.mmEnergy}</li>
- * </ul>
- * </li>
- * <li>{@linkplain com.tools20022.metamodel.MMBusinessComponent#getSuperType
- * superType} = {@linkplain com.tools20022.repository.entity.Asset Asset}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMBusinessComponent#getDerivationComponent
  * derivationComponent} =
@@ -199,6 +167,40 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>
  * {@linkplain com.tools20022.repository.msg.OtherC10CommodityNonDeliverable2
  * OtherC10CommodityNonDeliverable2}</li>
+ * </ul>
+ * </li>
+ * <li>
+ * {@linkplain com.tools20022.metamodel.MMBusinessComponent#getDerivationElement
+ * derivationElement} =
+ * <ul>
+ * <li>
+ * {@linkplain com.tools20022.repository.msg.TransparencyDataReport10#mmEmissionAllowanceType
+ * TransparencyDataReport10.mmEmissionAllowanceType}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.DerivativeCommodity2#mmProduct
+ * DerivativeCommodity2.mmProduct}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.msg.CommodityDerivate4#mmClassSpecific
+ * CommodityDerivate4.mmClassSpecific}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.choice.CommodityDerivate2Choice#mmFreight
+ * CommodityDerivate2Choice.mmFreight}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.choice.CommodityDerivate2Choice#mmEnergy
+ * CommodityDerivate2Choice.mmEnergy}</li>
+ * </ul>
+ * </li>
+ * <li>{@linkplain com.tools20022.metamodel.MMBusinessComponent#getSuperType
+ * superType} = {@linkplain com.tools20022.repository.entity.Asset Asset}</li>
+ * <li>{@linkplain com.tools20022.metamodel.MMBusinessComponent#getElement
+ * element} =
+ * <ul>
+ * <li>{@linkplain com.tools20022.repository.entity.Commodity#mmBaseProduct
+ * Commodity.mmBaseProduct}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.entity.Commodity#mmDetailedSubProduct
+ * Commodity.mmDetailedSubProduct}</li>
+ * <li>{@linkplain com.tools20022.repository.entity.Commodity#mmSubProduct
+ * Commodity.mmSubProduct}</li>
  * </ul>
  * </li>
  * <li>
@@ -420,33 +422,22 @@ public class Commodity extends Asset {
 	 */
 	public static final MMBusinessAttribute mmBaseProduct = new MMBusinessAttribute() {
 		{
-			derivation_lazy = () -> Arrays.asList(com.tools20022.repository.msg.MetalCommodityPrecious1.mmBaseProduct, com.tools20022.repository.msg.AgriculturalCommodityOliveOil1.mmBaseProduct,
-					com.tools20022.repository.msg.MetalCommodityNonPrecious1.mmBaseProduct, com.tools20022.repository.msg.AgriculturalCommodityGrain1.mmBaseProduct, com.tools20022.repository.msg.EnergyCommodityOil1.mmBaseProduct,
-					com.tools20022.repository.choice.AssetClassCommodityEnergy1Choice.mmNaturalGas, com.tools20022.repository.msg.EnergyCommodityNaturalGas1.mmBaseProduct,
-					com.tools20022.repository.msg.EnergyCommodityElectricity1.mmBaseProduct, com.tools20022.repository.msg.AgriculturalCommoditySoft1.mmBaseProduct, com.tools20022.repository.msg.AgriculturalCommodityOilSeed1.mmBaseProduct,
-					com.tools20022.repository.msg.EnergyCommodityDistillates1.mmBaseProduct, com.tools20022.repository.msg.EnergyCommodityInterEnergy1.mmBaseProduct,
-					com.tools20022.repository.msg.PolypropyleneCommodityPlastic1.mmBaseProduct, com.tools20022.repository.msg.PaperCommodityNewsprint1.mmBaseProduct, com.tools20022.repository.msg.AgriculturalCommodityDairy1.mmBaseProduct,
-					com.tools20022.repository.msg.FreightCommodityDry1.mmBaseProduct, com.tools20022.repository.msg.FreightCommodityContainerShip1.mmBaseProduct, com.tools20022.repository.msg.FreightCommodityWet1.mmBaseProduct,
-					com.tools20022.repository.msg.PaperCommodityPulp1.mmBaseProduct, com.tools20022.repository.msg.PaperCommodityContainerBoard1.mmBaseProduct, com.tools20022.repository.msg.PaperCommodityRecoveredPaper1.mmBaseProduct,
-					com.tools20022.repository.msg.AgriculturalCommoditySeafood1.mmBaseProduct, com.tools20022.repository.msg.AgriculturalCommodityForestry1.mmBaseProduct,
-					com.tools20022.repository.msg.FertilizerCommodityUreaAndAmmoniumNitrate1.mmBaseProduct, com.tools20022.repository.msg.AssetClassCommodityInflation1.mmBaseProduct,
-					com.tools20022.repository.msg.AgriculturalCommodityPotato1.mmBaseProduct, com.tools20022.repository.msg.AgriculturalCommodityLiveStock1.mmBaseProduct,
-					com.tools20022.repository.msg.FertilizerCommodityDiammoniumPhosphate1.mmBaseProduct, com.tools20022.repository.msg.FertilizerCommodityAmmonia1.mmBaseProduct,
-					com.tools20022.repository.msg.AssetClassCommodityOther1.mmBaseProduct, com.tools20022.repository.msg.EnergyCommodityRenewableEnergy1.mmBaseProduct,
-					com.tools20022.repository.msg.FertilizerCommoditySulphur1.mmBaseProduct, com.tools20022.repository.msg.EnergyCommodityLightEnd1.mmBaseProduct, com.tools20022.repository.msg.EnergyCommodityCoal1.mmBaseProduct,
-					com.tools20022.repository.choice.AssetClassCommodityFertilizer1Choice.mmAmmonia, com.tools20022.repository.msg.AssetClassCommodityMultiCommodityExotic1.mmBaseProduct,
-					com.tools20022.repository.msg.AssetClassCommodityOfficialEconomicStatistics1.mmBaseProduct, com.tools20022.repository.msg.FertilizerCommodityPotash1.mmBaseProduct,
-					com.tools20022.repository.msg.FertilizerCommodityUrea1.mmBaseProduct, com.tools20022.repository.msg.OtherC10CommodityDeliverable2.mmBaseProduct,
-					com.tools20022.repository.choice.AssetClassCommodity3Choice.mmAgricultural, com.tools20022.repository.choice.AssetClassCommodity3Choice.mmEnergy,
-					com.tools20022.repository.choice.AssetClassCommodity3Choice.mmEnvironmental, com.tools20022.repository.choice.AssetClassCommodity3Choice.mmFertilizer,
-					com.tools20022.repository.choice.AssetClassCommodity3Choice.mmFreight, com.tools20022.repository.choice.AssetClassCommodity3Choice.mmIndustrialProduct,
-					com.tools20022.repository.choice.AssetClassCommodity3Choice.mmMetal, com.tools20022.repository.choice.AssetClassCommodity3Choice.mmOtherC10, com.tools20022.repository.choice.AssetClassCommodity3Choice.mmPaper,
-					com.tools20022.repository.choice.AssetClassCommodity3Choice.mmPolypropylene, com.tools20022.repository.choice.AssetClassCommodity3Choice.mmInflation,
-					com.tools20022.repository.choice.AssetClassCommodity3Choice.mmMultiCommodityExotic, com.tools20022.repository.choice.AssetClassCommodity3Choice.mmOfficialEconomicStatistics,
-					com.tools20022.repository.choice.AssetClassCommodity3Choice.mmOther, com.tools20022.repository.msg.OtherC10CommodityNonDeliverable2.mmBaseProduct);
+			derivation_lazy = () -> Arrays.asList(MetalCommodityPrecious1.mmBaseProduct, AgriculturalCommodityOliveOil1.mmBaseProduct, MetalCommodityNonPrecious1.mmBaseProduct, AgriculturalCommodityGrain1.mmBaseProduct,
+					EnergyCommodityOil1.mmBaseProduct, AssetClassCommodityEnergy1Choice.mmNaturalGas, EnergyCommodityNaturalGas1.mmBaseProduct, EnergyCommodityElectricity1.mmBaseProduct, AgriculturalCommoditySoft1.mmBaseProduct,
+					AgriculturalCommodityOilSeed1.mmBaseProduct, EnergyCommodityDistillates1.mmBaseProduct, EnergyCommodityInterEnergy1.mmBaseProduct, PolypropyleneCommodityPlastic1.mmBaseProduct, PaperCommodityNewsprint1.mmBaseProduct,
+					AgriculturalCommodityDairy1.mmBaseProduct, FreightCommodityDry1.mmBaseProduct, FreightCommodityContainerShip1.mmBaseProduct, FreightCommodityWet1.mmBaseProduct, PaperCommodityPulp1.mmBaseProduct,
+					PaperCommodityContainerBoard1.mmBaseProduct, PaperCommodityRecoveredPaper1.mmBaseProduct, AgriculturalCommoditySeafood1.mmBaseProduct, AgriculturalCommodityForestry1.mmBaseProduct,
+					FertilizerCommodityUreaAndAmmoniumNitrate1.mmBaseProduct, AssetClassCommodityInflation1.mmBaseProduct, AgriculturalCommodityPotato1.mmBaseProduct, AgriculturalCommodityLiveStock1.mmBaseProduct,
+					FertilizerCommodityDiammoniumPhosphate1.mmBaseProduct, FertilizerCommodityAmmonia1.mmBaseProduct, AssetClassCommodityOther1.mmBaseProduct, EnergyCommodityRenewableEnergy1.mmBaseProduct,
+					FertilizerCommoditySulphur1.mmBaseProduct, EnergyCommodityLightEnd1.mmBaseProduct, EnergyCommodityCoal1.mmBaseProduct, AssetClassCommodityFertilizer1Choice.mmAmmonia,
+					AssetClassCommodityMultiCommodityExotic1.mmBaseProduct, AssetClassCommodityOfficialEconomicStatistics1.mmBaseProduct, FertilizerCommodityPotash1.mmBaseProduct, FertilizerCommodityUrea1.mmBaseProduct,
+					OtherC10CommodityDeliverable2.mmBaseProduct, AssetClassCommodity3Choice.mmAgricultural, AssetClassCommodity3Choice.mmEnergy, AssetClassCommodity3Choice.mmEnvironmental, AssetClassCommodity3Choice.mmFertilizer,
+					AssetClassCommodity3Choice.mmFreight, AssetClassCommodity3Choice.mmIndustrialProduct, AssetClassCommodity3Choice.mmMetal, AssetClassCommodity3Choice.mmOtherC10, AssetClassCommodity3Choice.mmPaper,
+					AssetClassCommodity3Choice.mmPolypropylene, AssetClassCommodity3Choice.mmInflation, AssetClassCommodity3Choice.mmMultiCommodityExotic, AssetClassCommodity3Choice.mmOfficialEconomicStatistics,
+					AssetClassCommodity3Choice.mmOther, OtherC10CommodityNonDeliverable2.mmBaseProduct);
 			elementContext_lazy = () -> Commodity.mmObject();
 			isDerived = false;
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "BaseProduct";
 			definition = "Basic category of the commodity, such as agricultural or metal.  ";
 			maxOccurs = 1;
@@ -493,10 +484,10 @@ public class Commodity extends Asset {
 	 */
 	public static final MMBusinessAttribute mmDetailedSubProduct = new MMBusinessAttribute() {
 		{
-			derivation_lazy = () -> Arrays.asList(com.tools20022.repository.msg.AgriculturalCommoditySoft1.mmAdditionalSubProduct);
+			derivation_lazy = () -> Arrays.asList(AgriculturalCommoditySoft1.mmAdditionalSubProduct);
 			elementContext_lazy = () -> Commodity.mmObject();
 			isDerived = false;
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "DetailedSubProduct";
 			definition = "Further detailed description of the basic resources, such as aluminium,  iron ore or wheat";
 			maxOccurs = 1;
@@ -762,42 +753,26 @@ public class Commodity extends Asset {
 	 */
 	public static final MMBusinessAttribute mmSubProduct = new MMBusinessAttribute() {
 		{
-			derivation_lazy = () -> Arrays.asList(com.tools20022.repository.choice.AssetClassCommodityEnvironmental1Choice.mmEmissions, com.tools20022.repository.choice.AssetClassCommodityEnvironmental1Choice.mmWeather,
-					com.tools20022.repository.choice.AssetClassCommodityEnvironmental1Choice.mmCarbonRelated, com.tools20022.repository.msg.MetalCommodityPrecious1.mmSubProduct,
-					com.tools20022.repository.msg.AgriculturalCommodityOliveOil1.mmSubProduct, com.tools20022.repository.choice.AssetClassCommodityMetal1Choice.mmNonPrecious,
-					com.tools20022.repository.choice.AssetClassCommodityMetal1Choice.mmPrecious, com.tools20022.repository.msg.MetalCommodityNonPrecious1.mmSubProduct, com.tools20022.repository.msg.AgriculturalCommodityGrain1.mmSubProduct,
-					com.tools20022.repository.msg.EnergyCommodityOil1.mmSubProduct, com.tools20022.repository.choice.AssetClassCommodityEnergy1Choice.mmElectricity, com.tools20022.repository.choice.AssetClassCommodityEnergy1Choice.mmOil,
-					com.tools20022.repository.choice.AssetClassCommodityEnergy1Choice.mmCoal, com.tools20022.repository.choice.AssetClassCommodityEnergy1Choice.mmInterEnergy,
-					com.tools20022.repository.choice.AssetClassCommodityEnergy1Choice.mmRenewableEnergy, com.tools20022.repository.choice.AssetClassCommodityEnergy1Choice.mmLightEnd,
-					com.tools20022.repository.choice.AssetClassCommodityEnergy1Choice.mmDistillates, com.tools20022.repository.choice.AssetClassCommodityAgricultural1Choice.mmGrainOilSeed,
-					com.tools20022.repository.choice.AssetClassCommodityAgricultural1Choice.mmSoft, com.tools20022.repository.choice.AssetClassCommodityAgricultural1Choice.mmPotato,
-					com.tools20022.repository.choice.AssetClassCommodityAgricultural1Choice.mmOliveOil, com.tools20022.repository.choice.AssetClassCommodityAgricultural1Choice.mmDairy,
-					com.tools20022.repository.choice.AssetClassCommodityAgricultural1Choice.mmForestry, com.tools20022.repository.choice.AssetClassCommodityAgricultural1Choice.mmSeafood,
-					com.tools20022.repository.choice.AssetClassCommodityAgricultural1Choice.mmLiveStock, com.tools20022.repository.choice.AssetClassCommodityAgricultural1Choice.mmGrain,
-					com.tools20022.repository.msg.EnergyCommodityNaturalGas1.mmSubProduct, com.tools20022.repository.msg.EnergyCommodityElectricity1.mmSubProduct, com.tools20022.repository.msg.AgriculturalCommoditySoft1.mmSubProduct,
-					com.tools20022.repository.msg.AgriculturalCommodityOilSeed1.mmSubProduct, com.tools20022.repository.msg.EnergyCommodityDistillates1.mmSubProduct, com.tools20022.repository.msg.EnergyCommodityInterEnergy1.mmSubProduct,
-					com.tools20022.repository.msg.PolypropyleneCommodityPlastic1.mmSubProduct, com.tools20022.repository.msg.PaperCommodityNewsprint1.mmSubProduct, com.tools20022.repository.msg.AgriculturalCommodityDairy1.mmSubProduct,
-					com.tools20022.repository.choice.AssetClassCommodityFreight1Choice.mmDry, com.tools20022.repository.choice.AssetClassCommodityFreight1Choice.mmWet,
-					com.tools20022.repository.choice.AssetClassCommodityFreight1Choice.mmContainerShip, com.tools20022.repository.msg.FreightCommodityDry1.mmSubProduct,
-					com.tools20022.repository.msg.FreightCommodityContainerShip1.mmSubProduct, com.tools20022.repository.msg.FreightCommodityWet1.mmSubProduct,
-					com.tools20022.repository.choice.AssetClassCommodityPaper1Choice.mmContainerBoard, com.tools20022.repository.choice.AssetClassCommodityPaper1Choice.mmNewsprint,
-					com.tools20022.repository.choice.AssetClassCommodityPaper1Choice.mmPulp, com.tools20022.repository.choice.AssetClassCommodityPaper1Choice.mmRecoveredPaper, com.tools20022.repository.msg.PaperCommodityPulp1.mmSubProduct,
-					com.tools20022.repository.msg.PaperCommodityContainerBoard1.mmSubProduct, com.tools20022.repository.msg.PaperCommodityRecoveredPaper1.mmSubProduct,
-					com.tools20022.repository.msg.AgriculturalCommoditySeafood1.mmSubProduct, com.tools20022.repository.msg.AgriculturalCommodityForestry1.mmSubProduct,
-					com.tools20022.repository.msg.FertilizerCommodityUreaAndAmmoniumNitrate1.mmSubProduct, com.tools20022.repository.msg.AgriculturalCommodityPotato1.mmSubProduct,
-					com.tools20022.repository.msg.AgriculturalCommodityLiveStock1.mmSubProduct, com.tools20022.repository.msg.FertilizerCommodityDiammoniumPhosphate1.mmSubProduct,
-					com.tools20022.repository.msg.FertilizerCommodityAmmonia1.mmSubProduct, com.tools20022.repository.msg.EnergyCommodityRenewableEnergy1.mmSubProduct, com.tools20022.repository.msg.FertilizerCommoditySulphur1.mmSubProduct,
-					com.tools20022.repository.msg.EnergyCommodityLightEnd1.mmSubProduct, com.tools20022.repository.msg.EnergyCommodityCoal1.mmSubProduct,
-					com.tools20022.repository.choice.AssetClassCommodityFertilizer1Choice.mmDiammoniumPhosphate, com.tools20022.repository.choice.AssetClassCommodityFertilizer1Choice.mmPotash,
-					com.tools20022.repository.choice.AssetClassCommodityFertilizer1Choice.mmSulphur, com.tools20022.repository.choice.AssetClassCommodityFertilizer1Choice.mmUrea,
-					com.tools20022.repository.choice.AssetClassCommodityFertilizer1Choice.mmUreaAndAmmoniumNitrate, com.tools20022.repository.choice.AssetClassCommodityIndustrialProduct1Choice.mmConstruction,
-					com.tools20022.repository.choice.AssetClassCommodityIndustrialProduct1Choice.mmManufacturing, com.tools20022.repository.choice.AssetClassCommodityPolypropylene1Choice.mmPlastic,
-					com.tools20022.repository.msg.FertilizerCommodityPotash1.mmSubProduct, com.tools20022.repository.msg.FertilizerCommodityUrea1.mmSubProduct, com.tools20022.repository.msg.ForeignExchangeDerivative2.mmContractSubType,
-					com.tools20022.repository.msg.OtherC10CommodityDeliverable2.mmSubProduct, com.tools20022.repository.choice.AssetClassCommodityOtherC102Choice.mmDeliverable,
-					com.tools20022.repository.choice.AssetClassCommodityOtherC102Choice.mmNonDeliverable, com.tools20022.repository.msg.OtherC10CommodityNonDeliverable2.mmSubProduct);
+			derivation_lazy = () -> Arrays.asList(AssetClassCommodityEnvironmental1Choice.mmEmissions, AssetClassCommodityEnvironmental1Choice.mmWeather, AssetClassCommodityEnvironmental1Choice.mmCarbonRelated,
+					MetalCommodityPrecious1.mmSubProduct, AgriculturalCommodityOliveOil1.mmSubProduct, AssetClassCommodityMetal1Choice.mmNonPrecious, AssetClassCommodityMetal1Choice.mmPrecious, MetalCommodityNonPrecious1.mmSubProduct,
+					AgriculturalCommodityGrain1.mmSubProduct, EnergyCommodityOil1.mmSubProduct, AssetClassCommodityEnergy1Choice.mmElectricity, AssetClassCommodityEnergy1Choice.mmOil, AssetClassCommodityEnergy1Choice.mmCoal,
+					AssetClassCommodityEnergy1Choice.mmInterEnergy, AssetClassCommodityEnergy1Choice.mmRenewableEnergy, AssetClassCommodityEnergy1Choice.mmLightEnd, AssetClassCommodityEnergy1Choice.mmDistillates,
+					AssetClassCommodityAgricultural1Choice.mmGrainOilSeed, AssetClassCommodityAgricultural1Choice.mmSoft, AssetClassCommodityAgricultural1Choice.mmPotato, AssetClassCommodityAgricultural1Choice.mmOliveOil,
+					AssetClassCommodityAgricultural1Choice.mmDairy, AssetClassCommodityAgricultural1Choice.mmForestry, AssetClassCommodityAgricultural1Choice.mmSeafood, AssetClassCommodityAgricultural1Choice.mmLiveStock,
+					AssetClassCommodityAgricultural1Choice.mmGrain, EnergyCommodityNaturalGas1.mmSubProduct, EnergyCommodityElectricity1.mmSubProduct, AgriculturalCommoditySoft1.mmSubProduct, AgriculturalCommodityOilSeed1.mmSubProduct,
+					EnergyCommodityDistillates1.mmSubProduct, EnergyCommodityInterEnergy1.mmSubProduct, PolypropyleneCommodityPlastic1.mmSubProduct, PaperCommodityNewsprint1.mmSubProduct, AgriculturalCommodityDairy1.mmSubProduct,
+					AssetClassCommodityFreight1Choice.mmDry, AssetClassCommodityFreight1Choice.mmWet, AssetClassCommodityFreight1Choice.mmContainerShip, FreightCommodityDry1.mmSubProduct, FreightCommodityContainerShip1.mmSubProduct,
+					FreightCommodityWet1.mmSubProduct, AssetClassCommodityPaper1Choice.mmContainerBoard, AssetClassCommodityPaper1Choice.mmNewsprint, AssetClassCommodityPaper1Choice.mmPulp, AssetClassCommodityPaper1Choice.mmRecoveredPaper,
+					PaperCommodityPulp1.mmSubProduct, PaperCommodityContainerBoard1.mmSubProduct, PaperCommodityRecoveredPaper1.mmSubProduct, AgriculturalCommoditySeafood1.mmSubProduct, AgriculturalCommodityForestry1.mmSubProduct,
+					FertilizerCommodityUreaAndAmmoniumNitrate1.mmSubProduct, AgriculturalCommodityPotato1.mmSubProduct, AgriculturalCommodityLiveStock1.mmSubProduct, FertilizerCommodityDiammoniumPhosphate1.mmSubProduct,
+					FertilizerCommodityAmmonia1.mmSubProduct, EnergyCommodityRenewableEnergy1.mmSubProduct, FertilizerCommoditySulphur1.mmSubProduct, EnergyCommodityLightEnd1.mmSubProduct, EnergyCommodityCoal1.mmSubProduct,
+					AssetClassCommodityFertilizer1Choice.mmDiammoniumPhosphate, AssetClassCommodityFertilizer1Choice.mmPotash, AssetClassCommodityFertilizer1Choice.mmSulphur, AssetClassCommodityFertilizer1Choice.mmUrea,
+					AssetClassCommodityFertilizer1Choice.mmUreaAndAmmoniumNitrate, AssetClassCommodityIndustrialProduct1Choice.mmConstruction, AssetClassCommodityIndustrialProduct1Choice.mmManufacturing,
+					AssetClassCommodityPolypropylene1Choice.mmPlastic, FertilizerCommodityPotash1.mmSubProduct, FertilizerCommodityUrea1.mmSubProduct, ForeignExchangeDerivative2.mmContractSubType,
+					OtherC10CommodityDeliverable2.mmSubProduct, AssetClassCommodityOtherC102Choice.mmDeliverable, AssetClassCommodityOtherC102Choice.mmNonDeliverable, OtherC10CommodityNonDeliverable2.mmSubProduct);
 			elementContext_lazy = () -> Commodity.mmObject();
 			isDerived = false;
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "SubProduct";
 			definition = "Basic resources and agricultural products such as non-precious metal or grain.";
 			maxOccurs = 1;
@@ -809,14 +784,14 @@ public class Commodity extends Asset {
 	static public MMBusinessComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMBusinessComponent() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "Commodity";
 				definition = "Basic good used in commerce that is interchangeable with other commodities of the same type. Commodities are most often used as inputs in the production of other goods or services. The quality of a given commodity may differ slightly, but it is essentially uniform across producers. When they are traded on an exchange, commodities must also meet specified minimum standards, also known as a basis grade.";
-				derivationElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.TransparencyDataReport10.mmEmissionAllowanceType, com.tools20022.repository.msg.DerivativeCommodity2.mmProduct,
-						com.tools20022.repository.msg.CommodityDerivate4.mmClassSpecific, com.tools20022.repository.choice.CommodityDerivate2Choice.mmFreight, com.tools20022.repository.choice.CommodityDerivate2Choice.mmEnergy);
+				derivationElement_lazy = () -> Arrays.asList(TransparencyDataReport10.mmEmissionAllowanceType, DerivativeCommodity2.mmProduct, CommodityDerivate4.mmClassSpecific, CommodityDerivate2Choice.mmFreight,
+						CommodityDerivate2Choice.mmEnergy);
 				superType_lazy = () -> Asset.mmObject();
-				element_lazy = () -> Arrays.asList(com.tools20022.repository.entity.Commodity.mmBaseProduct, com.tools20022.repository.entity.Commodity.mmDetailedSubProduct, com.tools20022.repository.entity.Commodity.mmSubProduct);
+				element_lazy = () -> Arrays.asList(Commodity.mmBaseProduct, Commodity.mmDetailedSubProduct, Commodity.mmSubProduct);
 				derivationComponent_lazy = () -> Arrays.asList(AssetClassCommodityEnvironmental1Choice.mmObject(), MetalCommodityPrecious1.mmObject(), AgriculturalCommodityOliveOil1.mmObject(), AssetClassCommodityMetal1Choice.mmObject(),
 						MetalCommodityNonPrecious1.mmObject(), AgriculturalCommodityGrain1.mmObject(), EnergyCommodityOil1.mmObject(), AssetClassCommodityEnergy1Choice.mmObject(), AssetClassCommodityAgricultural1Choice.mmObject(),
 						EnergyCommodityNaturalGas1.mmObject(), EnergyCommodityElectricity1.mmObject(), AgriculturalCommoditySoft1.mmObject(), AgriculturalCommodityOilSeed1.mmObject(), EnergyCommodityDistillates1.mmObject(),

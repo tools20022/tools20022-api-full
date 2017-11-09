@@ -19,6 +19,8 @@ package com.tools20022.repository.codeset;
 
 import com.tools20022.metamodel.MMCode;
 import com.tools20022.metamodel.MMCodeSet;
+import com.tools20022.metamodel.MMRegistrationStatus;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -27,6 +29,15 @@ import java.util.concurrent.atomic.AtomicReference;
  * <p>
  * <strong>Constant fields:</strong>
  * <ul>
+ * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getDerivation derivation}
+ * =
+ * <ul>
+ * <li>{@linkplain com.tools20022.repository.codeset.TypeTransactionTotals1Code
+ * TypeTransactionTotals1Code}</li>
+ * <li>{@linkplain com.tools20022.repository.codeset.TypeTransactionTotals2Code
+ * TypeTransactionTotals2Code}</li>
+ * </ul>
+ * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getCode code} =
  * <ul>
  * <li>
@@ -47,15 +58,6 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>
  * {@linkplain com.tools20022.repository.codeset.TypeTransactionTotalsCode#mmFailed
  * TypeTransactionTotalsCode.mmFailed}</li>
- * </ul>
- * </li>
- * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getDerivation derivation}
- * =
- * <ul>
- * <li>{@linkplain com.tools20022.repository.codeset.TypeTransactionTotals1Code
- * TypeTransactionTotals1Code}</li>
- * <li>{@linkplain com.tools20022.repository.codeset.TypeTransactionTotals2Code
- * TypeTransactionTotals2Code}</li>
  * </ul>
  * </li>
  * <li>
@@ -107,7 +109,7 @@ public class TypeTransactionTotalsCode {
 	 */
 	public static final MMCode mmDebit = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "Debit";
 			definition = "Debit transactions on the cardholder account .";
 			owner_lazy = () -> TypeTransactionTotalsCode.mmObject();
@@ -137,7 +139,7 @@ public class TypeTransactionTotalsCode {
 	 */
 	public static final MMCode mmDebitReverse = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "DebitReverse";
 			definition = "Reversal of debit transactions (cancellation).";
 			owner_lazy = () -> TypeTransactionTotalsCode.mmObject();
@@ -170,7 +172,7 @@ public class TypeTransactionTotalsCode {
 	 */
 	public static final MMCode mmCredit = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "Credit";
 			definition = "Credit transactions (refund, account, cash service, as defined  in the transaction service type).";
 			owner_lazy = () -> TypeTransactionTotalsCode.mmObject();
@@ -200,7 +202,7 @@ public class TypeTransactionTotalsCode {
 	 */
 	public static final MMCode mmCreditReverse = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "CreditReverse";
 			definition = "Reversal of credit transactions (cancellation).";
 			owner_lazy = () -> TypeTransactionTotalsCode.mmObject();
@@ -230,7 +232,7 @@ public class TypeTransactionTotalsCode {
 	 */
 	public static final MMCode mmDeclined = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "Declined";
 			definition = "Declined transactions.";
 			owner_lazy = () -> TypeTransactionTotalsCode.mmObject();
@@ -260,7 +262,7 @@ public class TypeTransactionTotalsCode {
 	 */
 	public static final MMCode mmFailed = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "Failed";
 			definition = "Failed transactions.";
 			owner_lazy = () -> TypeTransactionTotalsCode.mmObject();
@@ -271,14 +273,13 @@ public class TypeTransactionTotalsCode {
 	static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
 				example = Arrays.asList("DEBT");
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "TypeTransactionTotalsCode";
 				definition = "Identification of the type of transactions which are included in the totals.";
-				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.TypeTransactionTotalsCode.mmDebit, com.tools20022.repository.codeset.TypeTransactionTotalsCode.mmDebitReverse,
-						com.tools20022.repository.codeset.TypeTransactionTotalsCode.mmCredit, com.tools20022.repository.codeset.TypeTransactionTotalsCode.mmCreditReverse,
-						com.tools20022.repository.codeset.TypeTransactionTotalsCode.mmDeclined, com.tools20022.repository.codeset.TypeTransactionTotalsCode.mmFailed);
+				code_lazy = () -> Arrays.asList(TypeTransactionTotalsCode.mmDebit, TypeTransactionTotalsCode.mmDebitReverse, TypeTransactionTotalsCode.mmCredit, TypeTransactionTotalsCode.mmCreditReverse,
+						TypeTransactionTotalsCode.mmDeclined, TypeTransactionTotalsCode.mmFailed);
 				derivation_lazy = () -> Arrays.asList(TypeTransactionTotals1Code.mmObject(), TypeTransactionTotals2Code.mmObject());
 			}
 		});

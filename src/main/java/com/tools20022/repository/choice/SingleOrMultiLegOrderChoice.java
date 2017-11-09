@@ -19,7 +19,9 @@ package com.tools20022.repository.choice;
 
 import com.tools20022.metamodel.MMChoiceComponent;
 import com.tools20022.metamodel.MMMessageAssociationEnd;
+import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.entity.SecuritiesOrder;
+import com.tools20022.repository.GeneratedRepository;
 import com.tools20022.repository.msg.MultiLegOrder1;
 import com.tools20022.repository.msg.SingleOrder1;
 import java.util.Arrays;
@@ -98,7 +100,7 @@ public class SingleOrMultiLegOrderChoice {
 			componentContext_lazy = () -> SingleOrMultiLegOrderChoice.mmObject();
 			isDerived = false;
 			xmlTag = "SnglOrdrDtls";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SingleOrderDetails";
 			definition = "Provides details about the single order.";
 			maxOccurs = 1;
@@ -145,7 +147,7 @@ public class SingleOrMultiLegOrderChoice {
 			componentContext_lazy = () -> SingleOrMultiLegOrderChoice.mmObject();
 			isDerived = false;
 			xmlTag = "MltlgOrdrDtls";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "MultilegOrderDetails";
 			definition = "Provides details about the multileg order.";
 			maxOccurs = 1;
@@ -158,9 +160,9 @@ public class SingleOrMultiLegOrderChoice {
 	final static public MMChoiceComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMChoiceComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.choice.SingleOrMultiLegOrderChoice.mmSingleOrderDetails, com.tools20022.repository.choice.SingleOrMultiLegOrderChoice.mmMultilegOrderDetails);
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+				messageElement_lazy = () -> Arrays.asList(SingleOrMultiLegOrderChoice.mmSingleOrderDetails, SingleOrMultiLegOrderChoice.mmMultilegOrderDetails);
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 				name = "SingleOrMultiLegOrderChoice";
 				definition = "Choice between a single order or a multileg order.";
 			}

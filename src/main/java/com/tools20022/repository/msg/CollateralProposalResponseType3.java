@@ -20,9 +20,11 @@ package com.tools20022.repository.msg;
 import com.tools20022.metamodel.MMMessageAssociationEnd;
 import com.tools20022.metamodel.MMMessageAttribute;
 import com.tools20022.metamodel.MMMessageComponent;
+import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.codeset.CollateralProposalResponse1Code;
 import com.tools20022.repository.datatype.Max35Text;
 import com.tools20022.repository.entity.CollateralProposal;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -109,10 +111,10 @@ public class CollateralProposalResponseType3 {
 			componentContext_lazy = () -> CollateralProposalResponseType3.mmObject();
 			isDerived = false;
 			xmlTag = "CollPrpslId";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CollateralProposalIdentification";
 			definition = "Unique identifier for a collateral proposal.";
-			previousVersion_lazy = () -> com.tools20022.repository.msg.CollateralProposalResponseType2.mmCollateralProposalIdentification;
+			previousVersion_lazy = () -> CollateralProposalResponseType2.mmCollateralProposalIdentification;
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> Max35Text.mmObject();
@@ -162,14 +164,14 @@ public class CollateralProposalResponseType3 {
 	 */
 	public static final MMMessageAttribute mmType = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.CollateralProposal.mmResponseType;
+			businessElementTrace_lazy = () -> CollateralProposal.mmResponseType;
 			componentContext_lazy = () -> CollateralProposalResponseType3.mmObject();
 			isDerived = false;
 			xmlTag = "Tp";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Type";
 			definition = "Indicates whether the collateral proposal is an initial or a counter proposal.";
-			previousVersion_lazy = () -> com.tools20022.repository.msg.CollateralProposalResponseType2.mmType;
+			previousVersion_lazy = () -> CollateralProposalResponseType2.mmType;
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> CollateralProposalResponse1Code.mmObject();
@@ -215,14 +217,14 @@ public class CollateralProposalResponseType3 {
 	 */
 	public static final MMMessageAssociationEnd mmResponse = new MMMessageAssociationEnd() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.CollateralProposal.mmProposedCollateralMovement;
+			businessElementTrace_lazy = () -> CollateralProposal.mmProposedCollateralMovement;
 			componentContext_lazy = () -> CollateralProposalResponseType3.mmObject();
 			isDerived = false;
 			xmlTag = "Rspn";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Response";
 			definition = "Provides response details for each of the proposed collateral pieces.";
-			previousVersion_lazy = () -> com.tools20022.repository.msg.CollateralProposalResponseType2.mmResponse;
+			previousVersion_lazy = () -> CollateralProposalResponseType2.mmResponse;
 			maxOccurs = 1;
 			minOccurs = 1;
 			isComposite = true;
@@ -233,11 +235,10 @@ public class CollateralProposalResponseType3 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.CollateralProposalResponseType3.mmCollateralProposalIdentification, com.tools20022.repository.msg.CollateralProposalResponseType3.mmType,
-						com.tools20022.repository.msg.CollateralProposalResponseType3.mmResponse);
+				messageElement_lazy = () -> Arrays.asList(CollateralProposalResponseType3.mmCollateralProposalIdentification, CollateralProposalResponseType3.mmType, CollateralProposalResponseType3.mmResponse);
 				trace_lazy = () -> CollateralProposal.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "CollateralProposalResponseType3";
 				definition = "Provides details on the response for a collateral proposal.";
 				previousVersion_lazy = () -> CollateralProposalResponseType2.mmObject();

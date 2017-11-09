@@ -19,7 +19,9 @@ package com.tools20022.repository.codeset;
 
 import com.tools20022.metamodel.MMCode;
 import com.tools20022.metamodel.MMCodeSet;
+import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.codeset.MessageStatusCode;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -98,7 +100,7 @@ public class ReportingMessageStatus1Code extends MessageStatusCode {
 	 */
 	public static final MMCode mmAccepted = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Accepted";
 			owner_lazy = () -> ReportingMessageStatus1Code.mmObject();
 		}
@@ -121,7 +123,7 @@ public class ReportingMessageStatus1Code extends MessageStatusCode {
 	 */
 	public static final MMCode mmAcceptedTechnicalValidation = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AcceptedTechnicalValidation";
 			owner_lazy = () -> ReportingMessageStatus1Code.mmObject();
 		}
@@ -144,7 +146,7 @@ public class ReportingMessageStatus1Code extends MessageStatusCode {
 	 */
 	public static final MMCode mmPartiallyAccepted = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PartiallyAccepted";
 			owner_lazy = () -> ReportingMessageStatus1Code.mmObject();
 		}
@@ -167,7 +169,7 @@ public class ReportingMessageStatus1Code extends MessageStatusCode {
 	 */
 	public static final MMCode mmReceived = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Received";
 			owner_lazy = () -> ReportingMessageStatus1Code.mmObject();
 		}
@@ -190,7 +192,7 @@ public class ReportingMessageStatus1Code extends MessageStatusCode {
 	 */
 	public static final MMCode mmRejected = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Rejected";
 			owner_lazy = () -> ReportingMessageStatus1Code.mmObject();
 		}
@@ -213,7 +215,7 @@ public class ReportingMessageStatus1Code extends MessageStatusCode {
 	 */
 	public static final MMCode mmReminder = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Reminder";
 			owner_lazy = () -> ReportingMessageStatus1Code.mmObject();
 		}
@@ -236,7 +238,7 @@ public class ReportingMessageStatus1Code extends MessageStatusCode {
 	 */
 	public static final MMCode mmWarning = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Warning";
 			owner_lazy = () -> ReportingMessageStatus1Code.mmObject();
 		}
@@ -259,7 +261,7 @@ public class ReportingMessageStatus1Code extends MessageStatusCode {
 	 */
 	public static final MMCode mmIncorrectFilename = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "IncorrectFilename";
 			owner_lazy = () -> ReportingMessageStatus1Code.mmObject();
 		}
@@ -282,7 +284,7 @@ public class ReportingMessageStatus1Code extends MessageStatusCode {
 	 */
 	public static final MMCode mmCorruptedFile = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CorruptedFile";
 			owner_lazy = () -> ReportingMessageStatus1Code.mmObject();
 		}
@@ -291,15 +293,12 @@ public class ReportingMessageStatus1Code extends MessageStatusCode {
 	static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "ReportingMessageStatus1Code";
 				definition = "Specifies the status of a whole message processing.";
-				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.ReportingMessageStatus1Code.mmAccepted, com.tools20022.repository.codeset.ReportingMessageStatus1Code.mmAcceptedTechnicalValidation,
-						com.tools20022.repository.codeset.ReportingMessageStatus1Code.mmPartiallyAccepted, com.tools20022.repository.codeset.ReportingMessageStatus1Code.mmReceived,
-						com.tools20022.repository.codeset.ReportingMessageStatus1Code.mmRejected, com.tools20022.repository.codeset.ReportingMessageStatus1Code.mmReminder,
-						com.tools20022.repository.codeset.ReportingMessageStatus1Code.mmWarning, com.tools20022.repository.codeset.ReportingMessageStatus1Code.mmIncorrectFilename,
-						com.tools20022.repository.codeset.ReportingMessageStatus1Code.mmCorruptedFile);
+				code_lazy = () -> Arrays.asList(ReportingMessageStatus1Code.mmAccepted, ReportingMessageStatus1Code.mmAcceptedTechnicalValidation, ReportingMessageStatus1Code.mmPartiallyAccepted, ReportingMessageStatus1Code.mmReceived,
+						ReportingMessageStatus1Code.mmRejected, ReportingMessageStatus1Code.mmReminder, ReportingMessageStatus1Code.mmWarning, ReportingMessageStatus1Code.mmIncorrectFilename, ReportingMessageStatus1Code.mmCorruptedFile);
 				trace_lazy = () -> MessageStatusCode.mmObject();
 			}
 		});

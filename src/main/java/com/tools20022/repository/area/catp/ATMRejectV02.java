@@ -20,6 +20,7 @@ package com.tools20022.repository.area.catp;
 import com.tools20022.metamodel.MMMessageBuildingBlock;
 import com.tools20022.metamodel.MMMessageDefinition;
 import com.tools20022.metamodel.MMMessageDefinitionIdentifier;
+import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.area.ATMCardTransactionLatestVersion;
 import com.tools20022.repository.msg.ATMReject2;
 import com.tools20022.repository.msg.Header33;
@@ -32,6 +33,9 @@ import java.util.concurrent.atomic.AtomicReference;
  * <p>
  * <strong>Constant fields:</strong>
  * <ul>
+ * <li>
+ * {@linkplain com.tools20022.metamodel.MMMessageDefinition#getMessageDefinitionIdentifier
+ * messageDefinitionIdentifier} = {@code catp.005.001.02}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMMessageDefinition#getBusinessArea
  * businessArea} =
  * {@linkplain com.tools20022.repository.area.ATMCardTransactionLatestVersion
@@ -58,9 +62,6 @@ import java.util.concurrent.atomic.AtomicReference;
  * ATMRejectV02.mmATMReject}</li>
  * </ul>
  * </li>
- * <li>
- * {@linkplain com.tools20022.metamodel.MMMessageDefinition#getMessageDefinitionIdentifier
- * messageDefinitionIdentifier} = {@code catp.005.001.02}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -107,7 +108,7 @@ public class ATMRejectV02 {
 	public static final MMMessageBuildingBlock mmHeader = new MMMessageBuildingBlock() {
 		{
 			xmlTag = "Hdr";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Header";
 			definition = "Information related to the protocol management on a segment of the path from the ATM to the acquirer.";
 			maxOccurs = 1;
@@ -144,7 +145,7 @@ public class ATMRejectV02 {
 	public static final MMMessageBuildingBlock mmATMReject = new MMMessageBuildingBlock() {
 		{
 			xmlTag = "ATMRjct";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ATMReject";
 			definition = "Information related to the reject of a message from an ATM or an ATM manager.";
 			maxOccurs = 1;
@@ -156,7 +157,7 @@ public class ATMRejectV02 {
 	final static public MMMessageDefinition mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageDefinition() {
 			{
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "ATMRejectV02";
 				definition = "The ATMReject message is sent by any entity to reject a received message.";
 				previousVersion_lazy = () -> ATMRejectV01.mmObject();
@@ -164,7 +165,7 @@ public class ATMRejectV02 {
 				rootElement = "Document";
 				xmlTag = "ATMRjct";
 				businessArea_lazy = () -> ATMCardTransactionLatestVersion.mmObject();
-				messageBuildingBlock_lazy = () -> Arrays.asList(com.tools20022.repository.area.catp.ATMRejectV02.mmHeader, com.tools20022.repository.area.catp.ATMRejectV02.mmATMReject);
+				messageBuildingBlock_lazy = () -> Arrays.asList(ATMRejectV02.mmHeader, ATMRejectV02.mmATMReject);
 				messageDefinitionIdentifier_lazy = () -> new MMMessageDefinitionIdentifier() {
 					{
 						businessArea = "catp";

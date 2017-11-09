@@ -19,6 +19,8 @@ package com.tools20022.repository.codeset;
 
 import com.tools20022.metamodel.MMCode;
 import com.tools20022.metamodel.MMCodeSet;
+import com.tools20022.metamodel.MMRegistrationStatus;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -27,6 +29,13 @@ import java.util.concurrent.atomic.AtomicReference;
  * <p>
  * <strong>Constant fields:</strong>
  * <ul>
+ * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getDerivation derivation}
+ * =
+ * <ul>
+ * <li>{@linkplain com.tools20022.repository.codeset.MemberStatus1Code
+ * MemberStatus1Code}</li>
+ * </ul>
+ * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getCode code} =
  * <ul>
  * <li>{@linkplain com.tools20022.repository.codeset.MemberStatusCode#mmEnabled
@@ -38,13 +47,6 @@ import java.util.concurrent.atomic.AtomicReference;
  * MemberStatusCode.mmDeleted}</li>
  * <li>{@linkplain com.tools20022.repository.codeset.MemberStatusCode#mmJoining
  * MemberStatusCode.mmJoining}</li>
- * </ul>
- * </li>
- * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getDerivation derivation}
- * =
- * <ul>
- * <li>{@linkplain com.tools20022.repository.codeset.MemberStatus1Code
- * MemberStatus1Code}</li>
  * </ul>
  * </li>
  * <li>
@@ -94,7 +96,7 @@ public class MemberStatusCode {
 	 */
 	public static final MMCode mmEnabled = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Enabled";
 			definition = "Member is live on the system.";
 			owner_lazy = () -> MemberStatusCode.mmObject();
@@ -124,7 +126,7 @@ public class MemberStatusCode {
 	 */
 	public static final MMCode mmDisabled = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Disabled";
 			definition = "Member is temporarily not live on the system.";
 			owner_lazy = () -> MemberStatusCode.mmObject();
@@ -154,7 +156,7 @@ public class MemberStatusCode {
 	 */
 	public static final MMCode mmDeleted = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Deleted";
 			definition = "Member is no longer live on the system.";
 			owner_lazy = () -> MemberStatusCode.mmObject();
@@ -185,7 +187,7 @@ public class MemberStatusCode {
 	 */
 	public static final MMCode mmJoining = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Joining";
 			definition = "Member is joining and will soon be enabled on the system.";
 			owner_lazy = () -> MemberStatusCode.mmObject();
@@ -196,13 +198,12 @@ public class MemberStatusCode {
 	static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
 				example = Arrays.asList("ENBL");
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "MemberStatusCode";
 				definition = "Specifies the live status of a member of a system.";
-				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.MemberStatusCode.mmEnabled, com.tools20022.repository.codeset.MemberStatusCode.mmDisabled, com.tools20022.repository.codeset.MemberStatusCode.mmDeleted,
-						com.tools20022.repository.codeset.MemberStatusCode.mmJoining);
+				code_lazy = () -> Arrays.asList(MemberStatusCode.mmEnabled, MemberStatusCode.mmDisabled, MemberStatusCode.mmDeleted, MemberStatusCode.mmJoining);
 				derivation_lazy = () -> Arrays.asList(MemberStatus1Code.mmObject());
 			}
 		});

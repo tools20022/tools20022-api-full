@@ -20,10 +20,13 @@ package com.tools20022.repository.msg;
 import com.tools20022.metamodel.MMMessageAssociationEnd;
 import com.tools20022.metamodel.MMMessageAttribute;
 import com.tools20022.metamodel.MMMessageComponent;
+import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.datatype.Max35Text;
 import com.tools20022.repository.entity.Contract;
+import com.tools20022.repository.entity.GenericIdentification;
 import com.tools20022.repository.entity.Payment;
 import com.tools20022.repository.entity.RegisteredContract;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.List;
@@ -110,11 +113,11 @@ public class TransactionCertificateRecord1 {
 	 */
 	public static final MMMessageAttribute mmCertificateRecordIdentification = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.GenericIdentification.mmIdentification;
+			businessElementTrace_lazy = () -> GenericIdentification.mmIdentification;
 			componentContext_lazy = () -> TransactionCertificateRecord1.mmObject();
 			isDerived = false;
 			xmlTag = "CertRcrdId";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CertificateRecordIdentification";
 			definition = "Unique and unambiguous identification of the certificate record.";
 			maxOccurs = 1;
@@ -161,7 +164,7 @@ public class TransactionCertificateRecord1 {
 			componentContext_lazy = () -> TransactionCertificateRecord1.mmObject();
 			isDerived = false;
 			xmlTag = "Tx";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Transaction";
 			definition = "Details of the transaction for which the record has been generated.";
 			maxOccurs = 1;
@@ -209,7 +212,7 @@ public class TransactionCertificateRecord1 {
 			componentContext_lazy = () -> TransactionCertificateRecord1.mmObject();
 			isDerived = false;
 			xmlTag = "Ctrct";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Contract";
 			definition = "Contract registration details related to the certificate record.";
 			maxOccurs = 1;
@@ -254,11 +257,11 @@ public class TransactionCertificateRecord1 {
 	 */
 	public static final MMMessageAssociationEnd mmAttachment = new MMMessageAssociationEnd() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.RegisteredContract.mmAttachment;
+			businessElementTrace_lazy = () -> RegisteredContract.mmAttachment;
 			componentContext_lazy = () -> TransactionCertificateRecord1.mmObject();
 			isDerived = false;
 			xmlTag = "Attchmnt";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Attachment";
 			definition = "Documents provided as attachments to the registered contract.";
 			minOccurs = 0;
@@ -270,11 +273,11 @@ public class TransactionCertificateRecord1 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.TransactionCertificateRecord1.mmCertificateRecordIdentification, com.tools20022.repository.msg.TransactionCertificateRecord1.mmTransaction,
-						com.tools20022.repository.msg.TransactionCertificateRecord1.mmContract, com.tools20022.repository.msg.TransactionCertificateRecord1.mmAttachment);
+				messageElement_lazy = () -> Arrays.asList(TransactionCertificateRecord1.mmCertificateRecordIdentification, TransactionCertificateRecord1.mmTransaction, TransactionCertificateRecord1.mmContract,
+						TransactionCertificateRecord1.mmAttachment);
 				trace_lazy = () -> RegisteredContract.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "TransactionCertificateRecord1";
 				definition = "Certificate record in which all currency control transactions are registered.";
 			}

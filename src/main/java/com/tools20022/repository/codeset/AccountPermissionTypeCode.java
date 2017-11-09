@@ -19,6 +19,8 @@ package com.tools20022.repository.codeset;
 
 import com.tools20022.metamodel.MMCode;
 import com.tools20022.metamodel.MMCodeSet;
+import com.tools20022.metamodel.MMRegistrationStatus;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -27,6 +29,13 @@ import java.util.concurrent.atomic.AtomicReference;
  * <p>
  * <strong>Constant fields:</strong>
  * <ul>
+ * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getDerivation derivation}
+ * =
+ * <ul>
+ * <li>{@linkplain com.tools20022.repository.codeset.AccountPermissionType1Code
+ * AccountPermissionType1Code}</li>
+ * </ul>
+ * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getCode code} =
  * <ul>
  * <li>
@@ -38,13 +47,6 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>
  * {@linkplain com.tools20022.repository.codeset.AccountPermissionTypeCode#mmRightToUseWithOther
  * AccountPermissionTypeCode.mmRightToUseWithOther}</li>
- * </ul>
- * </li>
- * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getDerivation derivation}
- * =
- * <ul>
- * <li>{@linkplain com.tools20022.repository.codeset.AccountPermissionType1Code
- * AccountPermissionType1Code}</li>
  * </ul>
  * </li>
  * <li>
@@ -88,7 +90,7 @@ public class AccountPermissionTypeCode {
 	 */
 	public static final MMCode mmNoRight = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "NoRight";
 			definition = "No right to use the account.";
 			owner_lazy = () -> AccountPermissionTypeCode.mmObject();
@@ -118,7 +120,7 @@ public class AccountPermissionTypeCode {
 	 */
 	public static final MMCode mmRightToUseAlone = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "RightToUseAlone";
 			definition = "Right to use the account alone.";
 			owner_lazy = () -> AccountPermissionTypeCode.mmObject();
@@ -148,7 +150,7 @@ public class AccountPermissionTypeCode {
 	 */
 	public static final MMCode mmRightToUseWithOther = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "RightToUseWithOther";
 			definition = "Right to use the account together with another person.";
 			owner_lazy = () -> AccountPermissionTypeCode.mmObject();
@@ -159,12 +161,11 @@ public class AccountPermissionTypeCode {
 	static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "AccountPermissionTypeCode";
 				definition = "Specifies different levels of permission.";
-				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.AccountPermissionTypeCode.mmNoRight, com.tools20022.repository.codeset.AccountPermissionTypeCode.mmRightToUseAlone,
-						com.tools20022.repository.codeset.AccountPermissionTypeCode.mmRightToUseWithOther);
+				code_lazy = () -> Arrays.asList(AccountPermissionTypeCode.mmNoRight, AccountPermissionTypeCode.mmRightToUseAlone, AccountPermissionTypeCode.mmRightToUseWithOther);
 				derivation_lazy = () -> Arrays.asList(AccountPermissionType1Code.mmObject());
 			}
 		});

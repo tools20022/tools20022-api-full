@@ -19,7 +19,10 @@ package com.tools20022.repository.msg;
 
 import com.tools20022.metamodel.MMMessageAssociationEnd;
 import com.tools20022.metamodel.MMMessageComponent;
+import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.entity.PointOfInteraction;
+import com.tools20022.repository.entity.System;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -102,11 +105,11 @@ public class CardAcceptorTerminal1 {
 	 */
 	public static final MMMessageAssociationEnd mmIdentification = new MMMessageAssociationEnd() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.System.mmSystemIdentification;
+			businessElementTrace_lazy = () -> System.mmSystemIdentification;
 			componentContext_lazy = () -> CardAcceptorTerminal1.mmObject();
 			isDerived = false;
 			xmlTag = "Id";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Identification";
 			definition = "Identification of the terminal. \r\nIt correspond to the ISO 8583 field number 41.";
 			maxOccurs = 1;
@@ -149,11 +152,11 @@ public class CardAcceptorTerminal1 {
 	 */
 	public static final MMMessageAssociationEnd mmLocation = new MMMessageAssociationEnd() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.System.mmLocation;
+			businessElementTrace_lazy = () -> System.mmLocation;
 			componentContext_lazy = () -> CardAcceptorTerminal1.mmObject();
 			isDerived = false;
 			xmlTag = "Lctn";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Location";
 			definition = "Location of the terminal.";
 			maxOccurs = 1;
@@ -197,11 +200,11 @@ public class CardAcceptorTerminal1 {
 	 */
 	public static final MMMessageAssociationEnd mmCapabilities = new MMMessageAssociationEnd() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.PointOfInteraction.mmCardReadingCapabilities;
+			businessElementTrace_lazy = () -> PointOfInteraction.mmCardReadingCapabilities;
 			componentContext_lazy = () -> CardAcceptorTerminal1.mmObject();
 			isDerived = false;
 			xmlTag = "Cpblties";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Capabilities";
 			definition = "Capabilities of the terminal performing the transaction.";
 			maxOccurs = 1;
@@ -214,11 +217,10 @@ public class CardAcceptorTerminal1 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.CardAcceptorTerminal1.mmIdentification, com.tools20022.repository.msg.CardAcceptorTerminal1.mmLocation,
-						com.tools20022.repository.msg.CardAcceptorTerminal1.mmCapabilities);
+				messageElement_lazy = () -> Arrays.asList(CardAcceptorTerminal1.mmIdentification, CardAcceptorTerminal1.mmLocation, CardAcceptorTerminal1.mmCapabilities);
 				trace_lazy = () -> PointOfInteraction.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "CardAcceptorTerminal1";
 				definition = "Payment terminal or ATM performing the transaction.";
 			}

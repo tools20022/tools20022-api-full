@@ -17,17 +17,15 @@
 
 package com.tools20022.repository.entity;
 
-import com.tools20022.metamodel.MMBusinessAssociationEnd;
-import com.tools20022.metamodel.MMBusinessAttribute;
-import com.tools20022.metamodel.MMBusinessComponent;
-import com.tools20022.repository.choice.DerivativePartyIdentification1Choice;
-import com.tools20022.repository.choice.NameOrSector1Choice;
+import com.tools20022.metamodel.*;
+import com.tools20022.repository.choice.*;
 import com.tools20022.repository.codeset.LegalStructureCode;
 import com.tools20022.repository.datatype.ISODate;
 import com.tools20022.repository.datatype.ISODateTime;
 import com.tools20022.repository.datatype.Max350Text;
 import com.tools20022.repository.datatype.Max35Text;
 import com.tools20022.repository.entity.Party;
+import com.tools20022.repository.GeneratedRepository;
 import com.tools20022.repository.msg.*;
 import java.util.ArrayList;
 import java.util.Arrays;
@@ -44,61 +42,71 @@ import java.util.List;
  * <p>
  * <strong>Constant fields:</strong>
  * <ul>
- * <li>{@linkplain com.tools20022.metamodel.MMBusinessComponent#getElement
- * element} =
+ * <li>
+ * {@linkplain com.tools20022.metamodel.MMBusinessComponent#getDerivationComponent
+ * derivationComponent} =
  * <ul>
- * <li>{@linkplain com.tools20022.repository.entity.Organisation#mmPurpose
- * Organisation.mmPurpose}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.ContactDetails1
+ * ContactDetails1}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.Organisation2 Organisation2}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.Organisation13 Organisation13}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.Organisation4 Organisation4}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.Organisation3 Organisation3}</li>
  * <li>
- * {@linkplain com.tools20022.repository.entity.Organisation#mmRegistrationDate
- * Organisation.mmRegistrationDate}</li>
+ * {@linkplain com.tools20022.repository.msg.BranchAndFinancialInstitutionIdentification5
+ * BranchAndFinancialInstitutionIdentification5}</li>
  * <li>
- * {@linkplain com.tools20022.repository.entity.Organisation#mmOrganisationIdentification
- * Organisation.mmOrganisationIdentification}</li>
+ * {@linkplain com.tools20022.repository.msg.BranchAndFinancialInstitutionIdentification3
+ * BranchAndFinancialInstitutionIdentification3}</li>
  * <li>
- * {@linkplain com.tools20022.repository.entity.Organisation#mmParentOrganisation
- * Organisation.mmParentOrganisation}</li>
- * <li>{@linkplain com.tools20022.repository.entity.Organisation#mmBranch
- * Organisation.mmBranch}</li>
+ * {@linkplain com.tools20022.repository.msg.BranchAndFinancialInstitutionIdentification4
+ * BranchAndFinancialInstitutionIdentification4}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.Organisation6 Organisation6}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.Organisation12 Organisation12}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.Organisation14 Organisation14}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.OrganisationModification1
+ * OrganisationModification1}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.Organisation7 Organisation7}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.Organisation5 Organisation5}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.Organisation8 Organisation8}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.Organisation9 Organisation9}</li>
  * <li>
- * {@linkplain com.tools20022.repository.entity.Organisation#mmSecuritiesModification
- * Organisation.mmSecuritiesModification}</li>
+ * {@linkplain com.tools20022.repository.msg.BranchAndFinancialInstitutionIdentification
+ * BranchAndFinancialInstitutionIdentification}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.LegalOrganisation1
+ * LegalOrganisation1}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.FinancialInstitution2
+ * FinancialInstitution2}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.FinancialInstitution3
+ * FinancialInstitution3}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.Organisation15 Organisation15}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.Organisation16 Organisation16}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.Organisation17 Organisation17}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.SectorAndLocation1
+ * SectorAndLocation1}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.Organisation18 Organisation18}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.Organisation19 Organisation19}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.LegalOrganisation2
+ * LegalOrganisation2}</li>
  * <li>
- * {@linkplain com.tools20022.repository.entity.Organisation#mmPlaceOfOperation
- * Organisation.mmPlaceOfOperation}</li>
- * <li>
- * {@linkplain com.tools20022.repository.entity.Organisation#mmPlaceOfRegistration
- * Organisation.mmPlaceOfRegistration}</li>
- * <li>{@linkplain com.tools20022.repository.entity.Organisation#mmDescription
- * Organisation.mmDescription}</li>
- * <li>
- * {@linkplain com.tools20022.repository.entity.Organisation#mmLegalStructure
- * Organisation.mmLegalStructure}</li>
- * <li>{@linkplain com.tools20022.repository.entity.Organisation#mmSector
- * Organisation.mmSector}</li>
- * <li>
- * {@linkplain com.tools20022.repository.entity.Organisation#mmRelatedIndicationOfInterest
- * Organisation.mmRelatedIndicationOfInterest}</li>
- * <li>{@linkplain com.tools20022.repository.entity.Organisation#mmStrategy
- * Organisation.mmStrategy}</li>
- * <li>
- * {@linkplain com.tools20022.repository.entity.Organisation#mmOrganisationHierarchy
- * Organisation.mmOrganisationHierarchy}</li>
- * <li>
- * {@linkplain com.tools20022.repository.entity.Organisation#mmRepresentativeOfficer
- * Organisation.mmRepresentativeOfficer}</li>
- * <li>
- * {@linkplain com.tools20022.repository.entity.Organisation#mmEstablishmentDate
- * Organisation.mmEstablishmentDate}</li>
- * </ul>
- * </li>
- * <li>{@linkplain com.tools20022.metamodel.MMBusinessComponent#getSubType
- * subType} =
- * <ul>
- * <li>{@linkplain com.tools20022.repository.entity.FinancialInstitution
- * FinancialInstitution}</li>
- * <li>{@linkplain com.tools20022.repository.entity.NonFinancialInstitution
- * NonFinancialInstitution}</li>
+ * {@linkplain com.tools20022.repository.choice.DerivativePartyIdentification1Choice
+ * DerivativePartyIdentification1Choice}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.Organisation21 Organisation21}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.Organisation22 Organisation22}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.Organisation23 Organisation23}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.Organisation24 Organisation24}</li>
+ * <li>{@linkplain com.tools20022.repository.choice.NameOrSector1Choice
+ * NameOrSector1Choice}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.ReportedPartyIdentification1
+ * ReportedPartyIdentification1}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.Organisation25 Organisation25}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.Organisation26 Organisation26}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.OrganisationIdentification28
+ * OrganisationIdentification28}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.Organisation30 Organisation30}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.Organisation29 Organisation29}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.NameAndLocation1
+ * NameAndLocation1}</li>
  * </ul>
  * </li>
  * <li>
@@ -329,71 +337,61 @@ import java.util.List;
  * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMBusinessComponent#getSuperType
  * superType} = {@linkplain com.tools20022.repository.entity.Party Party}</li>
- * <li>
- * {@linkplain com.tools20022.metamodel.MMBusinessComponent#getDerivationComponent
- * derivationComponent} =
+ * <li>{@linkplain com.tools20022.metamodel.MMBusinessComponent#getSubType
+ * subType} =
  * <ul>
- * <li>{@linkplain com.tools20022.repository.msg.ContactDetails1
- * ContactDetails1}</li>
- * <li>{@linkplain com.tools20022.repository.msg.Organisation2 Organisation2}</li>
- * <li>{@linkplain com.tools20022.repository.msg.Organisation13 Organisation13}</li>
- * <li>{@linkplain com.tools20022.repository.msg.Organisation4 Organisation4}</li>
- * <li>{@linkplain com.tools20022.repository.msg.Organisation3 Organisation3}</li>
+ * <li>{@linkplain com.tools20022.repository.entity.FinancialInstitution
+ * FinancialInstitution}</li>
+ * <li>{@linkplain com.tools20022.repository.entity.NonFinancialInstitution
+ * NonFinancialInstitution}</li>
+ * </ul>
+ * </li>
+ * <li>{@linkplain com.tools20022.metamodel.MMBusinessComponent#getElement
+ * element} =
+ * <ul>
+ * <li>{@linkplain com.tools20022.repository.entity.Organisation#mmPurpose
+ * Organisation.mmPurpose}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.BranchAndFinancialInstitutionIdentification5
- * BranchAndFinancialInstitutionIdentification5}</li>
+ * {@linkplain com.tools20022.repository.entity.Organisation#mmRegistrationDate
+ * Organisation.mmRegistrationDate}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.BranchAndFinancialInstitutionIdentification3
- * BranchAndFinancialInstitutionIdentification3}</li>
+ * {@linkplain com.tools20022.repository.entity.Organisation#mmOrganisationIdentification
+ * Organisation.mmOrganisationIdentification}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.BranchAndFinancialInstitutionIdentification4
- * BranchAndFinancialInstitutionIdentification4}</li>
- * <li>{@linkplain com.tools20022.repository.msg.Organisation6 Organisation6}</li>
- * <li>{@linkplain com.tools20022.repository.msg.Organisation12 Organisation12}</li>
- * <li>{@linkplain com.tools20022.repository.msg.Organisation14 Organisation14}</li>
- * <li>{@linkplain com.tools20022.repository.msg.OrganisationModification1
- * OrganisationModification1}</li>
- * <li>{@linkplain com.tools20022.repository.msg.Organisation7 Organisation7}</li>
- * <li>{@linkplain com.tools20022.repository.msg.Organisation5 Organisation5}</li>
- * <li>{@linkplain com.tools20022.repository.msg.Organisation8 Organisation8}</li>
- * <li>{@linkplain com.tools20022.repository.msg.Organisation9 Organisation9}</li>
+ * {@linkplain com.tools20022.repository.entity.Organisation#mmParentOrganisation
+ * Organisation.mmParentOrganisation}</li>
+ * <li>{@linkplain com.tools20022.repository.entity.Organisation#mmBranch
+ * Organisation.mmBranch}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.BranchAndFinancialInstitutionIdentification
- * BranchAndFinancialInstitutionIdentification}</li>
- * <li>{@linkplain com.tools20022.repository.msg.LegalOrganisation1
- * LegalOrganisation1}</li>
- * <li>{@linkplain com.tools20022.repository.msg.FinancialInstitution2
- * FinancialInstitution2}</li>
- * <li>{@linkplain com.tools20022.repository.msg.FinancialInstitution3
- * FinancialInstitution3}</li>
- * <li>{@linkplain com.tools20022.repository.msg.Organisation15 Organisation15}</li>
- * <li>{@linkplain com.tools20022.repository.msg.Organisation16 Organisation16}</li>
- * <li>{@linkplain com.tools20022.repository.msg.Organisation17 Organisation17}</li>
- * <li>{@linkplain com.tools20022.repository.msg.SectorAndLocation1
- * SectorAndLocation1}</li>
- * <li>{@linkplain com.tools20022.repository.msg.Organisation18 Organisation18}</li>
- * <li>{@linkplain com.tools20022.repository.msg.Organisation19 Organisation19}</li>
- * <li>{@linkplain com.tools20022.repository.msg.LegalOrganisation2
- * LegalOrganisation2}</li>
+ * {@linkplain com.tools20022.repository.entity.Organisation#mmSecuritiesModification
+ * Organisation.mmSecuritiesModification}</li>
  * <li>
- * {@linkplain com.tools20022.repository.choice.DerivativePartyIdentification1Choice
- * DerivativePartyIdentification1Choice}</li>
- * <li>{@linkplain com.tools20022.repository.msg.Organisation21 Organisation21}</li>
- * <li>{@linkplain com.tools20022.repository.msg.Organisation22 Organisation22}</li>
- * <li>{@linkplain com.tools20022.repository.msg.Organisation23 Organisation23}</li>
- * <li>{@linkplain com.tools20022.repository.msg.Organisation24 Organisation24}</li>
- * <li>{@linkplain com.tools20022.repository.choice.NameOrSector1Choice
- * NameOrSector1Choice}</li>
- * <li>{@linkplain com.tools20022.repository.msg.ReportedPartyIdentification1
- * ReportedPartyIdentification1}</li>
- * <li>{@linkplain com.tools20022.repository.msg.Organisation25 Organisation25}</li>
- * <li>{@linkplain com.tools20022.repository.msg.Organisation26 Organisation26}</li>
- * <li>{@linkplain com.tools20022.repository.msg.OrganisationIdentification28
- * OrganisationIdentification28}</li>
- * <li>{@linkplain com.tools20022.repository.msg.Organisation30 Organisation30}</li>
- * <li>{@linkplain com.tools20022.repository.msg.Organisation29 Organisation29}</li>
- * <li>{@linkplain com.tools20022.repository.msg.NameAndLocation1
- * NameAndLocation1}</li>
+ * {@linkplain com.tools20022.repository.entity.Organisation#mmPlaceOfOperation
+ * Organisation.mmPlaceOfOperation}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.entity.Organisation#mmPlaceOfRegistration
+ * Organisation.mmPlaceOfRegistration}</li>
+ * <li>{@linkplain com.tools20022.repository.entity.Organisation#mmDescription
+ * Organisation.mmDescription}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.entity.Organisation#mmLegalStructure
+ * Organisation.mmLegalStructure}</li>
+ * <li>{@linkplain com.tools20022.repository.entity.Organisation#mmSector
+ * Organisation.mmSector}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.entity.Organisation#mmRelatedIndicationOfInterest
+ * Organisation.mmRelatedIndicationOfInterest}</li>
+ * <li>{@linkplain com.tools20022.repository.entity.Organisation#mmStrategy
+ * Organisation.mmStrategy}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.entity.Organisation#mmOrganisationHierarchy
+ * Organisation.mmOrganisationHierarchy}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.entity.Organisation#mmRepresentativeOfficer
+ * Organisation.mmRepresentativeOfficer}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.entity.Organisation#mmEstablishmentDate
+ * Organisation.mmEstablishmentDate}</li>
  * </ul>
  * </li>
  * <li>
@@ -472,13 +470,11 @@ public class Organisation extends Party {
 	 */
 	public static final MMBusinessAttribute mmPurpose = new MMBusinessAttribute() {
 		{
-			derivation_lazy = () -> Arrays.asList(com.tools20022.repository.msg.Organisation2.mmPurpose, com.tools20022.repository.msg.Organisation13.mmPurpose, com.tools20022.repository.msg.Organisation4.mmPurpose,
-					com.tools20022.repository.msg.Organisation3.mmPurpose, com.tools20022.repository.msg.Organisation15.mmPurpose, com.tools20022.repository.msg.Organisation16.mmPurpose,
-					com.tools20022.repository.msg.Organisation17.mmPurpose, com.tools20022.repository.msg.Organisation21.mmPurpose, com.tools20022.repository.msg.Organisation22.mmPurpose,
-					com.tools20022.repository.msg.Organisation24.mmPurpose, com.tools20022.repository.msg.Organisation30.mmPurpose, com.tools20022.repository.msg.Organisation29.mmPurpose);
+			derivation_lazy = () -> Arrays.asList(Organisation2.mmPurpose, Organisation13.mmPurpose, Organisation4.mmPurpose, Organisation3.mmPurpose, Organisation15.mmPurpose, Organisation16.mmPurpose, Organisation17.mmPurpose,
+					Organisation21.mmPurpose, Organisation22.mmPurpose, Organisation24.mmPurpose, Organisation30.mmPurpose, Organisation29.mmPurpose);
 			elementContext_lazy = () -> com.tools20022.repository.entity.Organisation.mmObject();
 			isDerived = false;
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "Purpose";
 			definition = "Purpose of the organisation, eg, charity.";
 			maxOccurs = 1;
@@ -570,15 +566,12 @@ public class Organisation extends Party {
 	 */
 	public static final MMBusinessAttribute mmRegistrationDate = new MMBusinessAttribute() {
 		{
-			derivation_lazy = () -> Arrays.asList(com.tools20022.repository.msg.Organisation2.mmRegistrationDate, com.tools20022.repository.msg.Organisation13.mmRegistrationDate,
-					com.tools20022.repository.msg.Organisation4.mmRegistrationDate, com.tools20022.repository.msg.Organisation3.mmRegistrationDate, com.tools20022.repository.msg.Organisation6.mmRegistrationDate,
-					com.tools20022.repository.msg.Organisation12.mmRegistrationDate, com.tools20022.repository.msg.OrganisationModification1.mmRegistrationDate, com.tools20022.repository.msg.Organisation7.mmRegistrationDate,
-					com.tools20022.repository.msg.Organisation15.mmRegistrationDate, com.tools20022.repository.msg.Organisation16.mmRegistrationDate, com.tools20022.repository.msg.Organisation17.mmRegistrationDate,
-					com.tools20022.repository.msg.LegalOrganisation2.mmRegistrationDate, com.tools20022.repository.msg.Organisation21.mmRegistrationDate, com.tools20022.repository.msg.Organisation22.mmRegistrationDate,
-					com.tools20022.repository.msg.Organisation24.mmRegistrationDate, com.tools20022.repository.msg.Organisation30.mmRegistrationDate, com.tools20022.repository.msg.Organisation29.mmRegistrationDate);
+			derivation_lazy = () -> Arrays.asList(Organisation2.mmRegistrationDate, Organisation13.mmRegistrationDate, Organisation4.mmRegistrationDate, Organisation3.mmRegistrationDate, Organisation6.mmRegistrationDate,
+					Organisation12.mmRegistrationDate, OrganisationModification1.mmRegistrationDate, Organisation7.mmRegistrationDate, Organisation15.mmRegistrationDate, Organisation16.mmRegistrationDate, Organisation17.mmRegistrationDate,
+					LegalOrganisation2.mmRegistrationDate, Organisation21.mmRegistrationDate, Organisation22.mmRegistrationDate, Organisation24.mmRegistrationDate, Organisation30.mmRegistrationDate, Organisation29.mmRegistrationDate);
 			elementContext_lazy = () -> com.tools20022.repository.entity.Organisation.mmObject();
 			isDerived = false;
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "RegistrationDate";
 			definition = "Date and time at which a given organisation was officially registered.";
 			maxOccurs = 1;
@@ -630,12 +623,12 @@ public class Organisation extends Party {
 			derivation_lazy = () -> ListBuilderForOrganisation_00.addElems(new ArrayList<>());
 			elementContext_lazy = () -> com.tools20022.repository.entity.Organisation.mmObject();
 			isDerived = false;
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "OrganisationIdentification";
 			definition = "Specific identification assigned to an organisation. It is derived from the association between Party and PartyIdentification.";
 			minOccurs = 0;
 			opposite_lazy = () -> com.tools20022.repository.entity.OrganisationIdentification.mmOrganisation;
-			aggregation = com.tools20022.metamodel.MMAggregation.NONE;
+			aggregation = MMAggregation.NONE;
 			type_lazy = () -> com.tools20022.repository.entity.OrganisationIdentification.mmObject();
 		}
 	};
@@ -676,13 +669,13 @@ public class Organisation extends Party {
 		{
 			elementContext_lazy = () -> com.tools20022.repository.entity.Organisation.mmObject();
 			isDerived = false;
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ParentOrganisation";
 			definition = "Organisation which is divided in branches.";
 			maxOccurs = 1;
 			minOccurs = 1;
 			opposite_lazy = () -> com.tools20022.repository.entity.Organisation.mmBranch;
-			aggregation = com.tools20022.metamodel.MMAggregation.NONE;
+			aggregation = MMAggregation.NONE;
 			type_lazy = () -> com.tools20022.repository.entity.Organisation.mmObject();
 		}
 	};
@@ -747,17 +740,16 @@ public class Organisation extends Party {
 	 */
 	public static final MMBusinessAssociationEnd mmBranch = new MMBusinessAssociationEnd() {
 		{
-			derivation_lazy = () -> Arrays.asList(com.tools20022.repository.msg.CashAccount4.mmAccountServicerBranch, com.tools20022.repository.msg.DirectDebitMandate4.mmDebtorAgentBranch,
-					com.tools20022.repository.msg.CashAccount26.mmAccountServicerBranch, com.tools20022.repository.msg.DirectDebitMandate5.mmDebtorAgentBranch, com.tools20022.repository.msg.CashAccount32.mmAccountServicerBranch,
-					com.tools20022.repository.msg.CashAccount33.mmAccountServicerBranch, com.tools20022.repository.msg.DirectDebitMandate6.mmDebtorAgentBranch);
+			derivation_lazy = () -> Arrays.asList(CashAccount4.mmAccountServicerBranch, DirectDebitMandate4.mmDebtorAgentBranch, CashAccount26.mmAccountServicerBranch, DirectDebitMandate5.mmDebtorAgentBranch,
+					CashAccount32.mmAccountServicerBranch, CashAccount33.mmAccountServicerBranch, DirectDebitMandate6.mmDebtorAgentBranch);
 			elementContext_lazy = () -> com.tools20022.repository.entity.Organisation.mmObject();
 			isDerived = false;
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "Branch";
 			definition = "Specifies an organisation which is not a head office.";
 			minOccurs = 0;
 			opposite_lazy = () -> com.tools20022.repository.entity.Organisation.mmParentOrganisation;
-			aggregation = com.tools20022.metamodel.MMAggregation.NONE;
+			aggregation = MMAggregation.NONE;
 			type_lazy = () -> com.tools20022.repository.entity.Organisation.mmObject();
 		}
 	};
@@ -800,13 +792,13 @@ public class Organisation extends Party {
 		{
 			elementContext_lazy = () -> com.tools20022.repository.entity.Organisation.mmObject();
 			isDerived = false;
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "SecuritiesModification";
 			definition = "Specifies the process which originates the changes to an organisation.";
 			maxOccurs = 1;
 			minOccurs = 1;
 			opposite_lazy = () -> com.tools20022.repository.entity.SecuritiesModification.mmNewOrganisationInformation;
-			aggregation = com.tools20022.metamodel.MMAggregation.NONE;
+			aggregation = MMAggregation.NONE;
 			type_lazy = () -> com.tools20022.repository.entity.SecuritiesModification.mmObject();
 		}
 	};
@@ -858,15 +850,15 @@ public class Organisation extends Party {
 	 */
 	public static final MMBusinessAssociationEnd mmPlaceOfOperation = new MMBusinessAssociationEnd() {
 		{
-			derivation_lazy = () -> Arrays.asList(com.tools20022.repository.msg.Organisation6.mmCountryOfOperation, com.tools20022.repository.msg.Organisation7.mmCountryOfOperation);
+			derivation_lazy = () -> Arrays.asList(Organisation6.mmCountryOfOperation, Organisation7.mmCountryOfOperation);
 			elementContext_lazy = () -> com.tools20022.repository.entity.Organisation.mmObject();
 			isDerived = false;
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "PlaceOfOperation";
 			definition = "Place (including country) in which the organisation has its business activity.";
 			minOccurs = 0;
 			opposite_lazy = () -> com.tools20022.repository.entity.Location.mmOperatingOrganisation;
-			aggregation = com.tools20022.metamodel.MMAggregation.NONE;
+			aggregation = MMAggregation.NONE;
 			type_lazy = () -> com.tools20022.repository.entity.Location.mmObject();
 		}
 	};
@@ -913,16 +905,16 @@ public class Organisation extends Party {
 	 */
 	public static final MMBusinessAssociationEnd mmPlaceOfRegistration = new MMBusinessAssociationEnd() {
 		{
-			derivation_lazy = () -> Arrays.asList(com.tools20022.repository.msg.OrganisationIdentification28.mmCountryOfResidence);
+			derivation_lazy = () -> Arrays.asList(OrganisationIdentification28.mmCountryOfResidence);
 			elementContext_lazy = () -> com.tools20022.repository.entity.Organisation.mmObject();
 			isDerived = false;
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "PlaceOfRegistration";
 			definition = "Place (including country) in which the organisation is registered.";
 			maxOccurs = 1;
 			minOccurs = 0;
 			opposite_lazy = () -> com.tools20022.repository.entity.Location.mmRegisteredOrganisation;
-			aggregation = com.tools20022.metamodel.MMAggregation.NONE;
+			aggregation = MMAggregation.NONE;
 			type_lazy = () -> com.tools20022.repository.entity.Location.mmObject();
 		}
 	};
@@ -955,7 +947,7 @@ public class Organisation extends Party {
 		{
 			elementContext_lazy = () -> com.tools20022.repository.entity.Organisation.mmObject();
 			isDerived = false;
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "Description";
 			definition = "Description of an organisation.";
 			maxOccurs = 1;
@@ -993,7 +985,7 @@ public class Organisation extends Party {
 		{
 			elementContext_lazy = () -> com.tools20022.repository.entity.Organisation.mmObject();
 			isDerived = false;
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "LegalStructure";
 			definition = "Legal standing of the organisation.";
 			maxOccurs = 1;
@@ -1047,16 +1039,16 @@ public class Organisation extends Party {
 	 */
 	public static final MMBusinessAssociationEnd mmSector = new MMBusinessAssociationEnd() {
 		{
-			derivation_lazy = () -> Arrays.asList(com.tools20022.repository.msg.CollateralValuation4.mmSector, com.tools20022.repository.msg.CollateralValuation7.mmSector);
+			derivation_lazy = () -> Arrays.asList(CollateralValuation4.mmSector, CollateralValuation7.mmSector);
 			elementContext_lazy = () -> com.tools20022.repository.entity.Organisation.mmObject();
 			isDerived = false;
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "Sector";
 			definition = "Sector of business of the organisation, for example, pharmaceutical.";
 			maxOccurs = 1;
 			minOccurs = 1;
 			opposite_lazy = () -> com.tools20022.repository.entity.Sector.mmOrganisation;
-			aggregation = com.tools20022.metamodel.MMAggregation.NONE;
+			aggregation = MMAggregation.NONE;
 			type_lazy = () -> com.tools20022.repository.entity.Sector.mmObject();
 		}
 	};
@@ -1101,13 +1093,13 @@ public class Organisation extends Party {
 		{
 			elementContext_lazy = () -> com.tools20022.repository.entity.Organisation.mmObject();
 			isDerived = false;
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "RelatedIndicationOfInterest";
 			definition = "Indication of interest process for which a list of organisations is specified.";
 			maxOccurs = 1;
 			minOccurs = 0;
 			opposite_lazy = () -> com.tools20022.repository.entity.BuyOrSellIndicationOfInterest.mmOrganisations;
-			aggregation = com.tools20022.metamodel.MMAggregation.NONE;
+			aggregation = MMAggregation.NONE;
 			type_lazy = () -> com.tools20022.repository.entity.BuyOrSellIndicationOfInterest.mmObject();
 		}
 	};
@@ -1149,13 +1141,13 @@ public class Organisation extends Party {
 		{
 			elementContext_lazy = () -> com.tools20022.repository.entity.Organisation.mmObject();
 			isDerived = false;
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "Strategy";
 			definition = "Strategy related to an organisation.";
 			maxOccurs = 1;
 			minOccurs = 0;
 			opposite_lazy = () -> com.tools20022.repository.entity.OrganisationStrategy.mmOrganisation;
-			aggregation = com.tools20022.metamodel.MMAggregation.NONE;
+			aggregation = MMAggregation.NONE;
 			type_lazy = () -> com.tools20022.repository.entity.OrganisationStrategy.mmObject();
 		}
 	};
@@ -1197,13 +1189,13 @@ public class Organisation extends Party {
 		{
 			elementContext_lazy = () -> com.tools20022.repository.entity.Organisation.mmObject();
 			isDerived = false;
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "OrganisationHierarchy";
 			definition = "Description of the structure of a company.";
 			maxOccurs = 1;
 			minOccurs = 1;
 			opposite_lazy = () -> com.tools20022.repository.entity.OrganisationHierarchy.mmOrganisation;
-			aggregation = com.tools20022.metamodel.MMAggregation.NONE;
+			aggregation = MMAggregation.NONE;
 			type_lazy = () -> com.tools20022.repository.entity.OrganisationHierarchy.mmObject();
 		}
 	};
@@ -1248,13 +1240,13 @@ public class Organisation extends Party {
 		{
 			elementContext_lazy = () -> com.tools20022.repository.entity.Organisation.mmObject();
 			isDerived = false;
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "RepresentativeOfficer";
 			definition = "Officer who has some rights to represent a given organisation. In account management, it is the person to be contacted by the account servicer.";
 			maxOccurs = 1;
 			minOccurs = 1;
 			opposite_lazy = () -> com.tools20022.repository.entity.RepresentativeOfficer.mmOrganisation;
-			aggregation = com.tools20022.metamodel.MMAggregation.NONE;
+			aggregation = MMAggregation.NONE;
 			type_lazy = () -> com.tools20022.repository.entity.RepresentativeOfficer.mmObject();
 		}
 	};
@@ -1293,10 +1285,10 @@ public class Organisation extends Party {
 	 */
 	public static final MMBusinessAttribute mmEstablishmentDate = new MMBusinessAttribute() {
 		{
-			derivation_lazy = () -> Arrays.asList(com.tools20022.repository.msg.LegalOrganisation2.mmEstablishmentDate);
+			derivation_lazy = () -> Arrays.asList(LegalOrganisation2.mmEstablishmentDate);
 			elementContext_lazy = () -> com.tools20022.repository.entity.Organisation.mmObject();
 			isDerived = false;
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "EstablishmentDate";
 			definition = "Date when the organisation was established.";
 			maxOccurs = 1;
@@ -1308,8 +1300,8 @@ public class Organisation extends Party {
 	static public MMBusinessComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMBusinessComponent() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "Organisation";
 				definition = "Organised structure that is set up for a particular purpose. For example, a business, government body, department, charity, or financial institution.";
 				associationDomain_lazy = () -> Arrays.asList(com.tools20022.repository.entity.Organisation.mmParentOrganisation, com.tools20022.repository.entity.Organisation.mmBranch,
@@ -1317,30 +1309,19 @@ public class Organisation extends Party {
 						com.tools20022.repository.entity.SecuritiesModification.mmNewOrganisationInformation, com.tools20022.repository.entity.Sector.mmOrganisation, com.tools20022.repository.entity.RepresentativeOfficer.mmOrganisation,
 						com.tools20022.repository.entity.BuyOrSellIndicationOfInterest.mmOrganisations, com.tools20022.repository.entity.OrganisationStrategy.mmOrganisation,
 						com.tools20022.repository.entity.OrganisationHierarchy.mmOrganisation);
-				derivationElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.InvestmentAccountOwnershipInformation5.mmOrganisation, com.tools20022.repository.msg.InvestmentAccountOwnershipInformation2.mmOrganisation,
-						com.tools20022.repository.choice.Party14Choice.mmOrganisation, com.tools20022.repository.msg.InvestmentAccountOwnershipInformation3.mmOrganisation,
-						com.tools20022.repository.msg.InvestmentAccountOwnershipInformation4.mmOrganisation, com.tools20022.repository.msg.LongPaymentIdentification1.mmInstructingAgent,
-						com.tools20022.repository.msg.LongPaymentIdentification1.mmInstructedAgent, com.tools20022.repository.msg.LiquidityCreditTransfer1.mmCreditor, com.tools20022.repository.msg.LiquidityCreditTransfer1.mmDebtor,
-						com.tools20022.repository.msg.LiquidityDebitTransfer1.mmCreditor, com.tools20022.repository.msg.LiquidityDebitTransfer1.mmDebtor, com.tools20022.repository.msg.PEPISATransfer7.mmPrimaryCorporateInvestor,
-						com.tools20022.repository.msg.PEPISATransfer7.mmSecondaryCorporateInvestor, com.tools20022.repository.msg.PEPISATransfer7.mmOtherCorporateInvestor,
-						com.tools20022.repository.msg.PEPISATransfer11.mmPrimaryCorporateInvestor, com.tools20022.repository.msg.PEPISATransfer11.mmSecondaryCorporateInvestor,
-						com.tools20022.repository.msg.PEPISATransfer11.mmOtherCorporateInvestor, com.tools20022.repository.msg.ISATransfer9.mmPrimaryCorporateInvestor,
-						com.tools20022.repository.msg.ISATransfer9.mmSecondaryCorporateInvestor, com.tools20022.repository.msg.ISATransfer9.mmOtherCorporateInvestor, com.tools20022.repository.msg.CardPaymentEnvironment1.mmMerchant,
-						com.tools20022.repository.msg.OriginalItemReference1.mmDebtorAgent, com.tools20022.repository.msg.OriginalItemReference1.mmIntermediaryAgent, com.tools20022.repository.msg.TradeParty1.mmLegalOrganisation,
-						com.tools20022.repository.msg.OriginalItemReference2.mmDebtorAgent, com.tools20022.repository.msg.OriginalItemReference2.mmIntermediaryAgent, com.tools20022.repository.msg.Routing1.mmFirm,
-						com.tools20022.repository.msg.Warrant2.mmWarrantAgent, com.tools20022.repository.msg.Issuance1.mmIssuerOrganisation, com.tools20022.repository.msg.QuoteStatus2.mmRelatedParties,
-						com.tools20022.repository.msg.SingleQuote1.mmRelatedParties, com.tools20022.repository.msg.InstrumentLeg3.mmTradingParties, com.tools20022.repository.msg.QuoteRequest1.mmTradingParties,
-						com.tools20022.repository.msg.RequestForQuote.mmTradingParties, com.tools20022.repository.choice.Party15Choice.mmOrganisation, com.tools20022.repository.choice.Party16Choice.mmOrganisation,
-						com.tools20022.repository.msg.ISATransfer12.mmPrimaryCorporateInvestor, com.tools20022.repository.msg.ISATransfer12.mmSecondaryCorporateInvestor, com.tools20022.repository.msg.ISATransfer12.mmOtherCorporateInvestor,
-						com.tools20022.repository.msg.OriginalPaymentInformation6.mmDebtorAgent, com.tools20022.repository.msg.OriginalPaymentInformation6.mmCreditorAgent,
-						com.tools20022.repository.msg.ISATransfer19.mmPrimaryCorporateInvestor, com.tools20022.repository.msg.ISATransfer19.mmSecondaryCorporateInvestor, com.tools20022.repository.msg.ISATransfer19.mmOtherCorporateInvestor,
-						com.tools20022.repository.msg.OriginalItemReference3.mmDebtorAgent, com.tools20022.repository.msg.OriginalItemReference3.mmIntermediaryAgent, com.tools20022.repository.choice.Party24Choice.mmOrganisation,
-						com.tools20022.repository.choice.Party23Choice.mmOrganisation, com.tools20022.repository.msg.TradeParty2.mmLegalOrganisation, com.tools20022.repository.msg.OriginalItemReference4.mmDebtorAgent,
-						com.tools20022.repository.msg.OriginalItemReference4.mmIntermediaryAgent, com.tools20022.repository.choice.Party30Choice.mmOrganisation, com.tools20022.repository.choice.Party31Choice.mmOrganisation,
-						com.tools20022.repository.msg.ISATransfer24.mmPrimaryCorporateInvestor, com.tools20022.repository.msg.ISATransfer24.mmSecondaryCorporateInvestor, com.tools20022.repository.msg.ISATransfer24.mmOtherCorporateInvestor,
-						com.tools20022.repository.msg.TradeParty3.mmLegalOrganisation, com.tools20022.repository.msg.OrganisationIdentification28.mmName, com.tools20022.repository.msg.OrganisationIdentification28.mmPostalAddress,
-						com.tools20022.repository.choice.Party33Choice.mmOrganisation, com.tools20022.repository.choice.Party32Choice.mmOrganisation, com.tools20022.repository.msg.OriginalPaymentInformation7.mmDebtorAgent,
-						com.tools20022.repository.msg.OriginalPaymentInformation7.mmCreditorAgent);
+				derivationElement_lazy = () -> Arrays.asList(InvestmentAccountOwnershipInformation5.mmOrganisation, InvestmentAccountOwnershipInformation2.mmOrganisation, Party14Choice.mmOrganisation,
+						InvestmentAccountOwnershipInformation3.mmOrganisation, InvestmentAccountOwnershipInformation4.mmOrganisation, LongPaymentIdentification1.mmInstructingAgent, LongPaymentIdentification1.mmInstructedAgent,
+						LiquidityCreditTransfer1.mmCreditor, LiquidityCreditTransfer1.mmDebtor, LiquidityDebitTransfer1.mmCreditor, LiquidityDebitTransfer1.mmDebtor, PEPISATransfer7.mmPrimaryCorporateInvestor,
+						PEPISATransfer7.mmSecondaryCorporateInvestor, PEPISATransfer7.mmOtherCorporateInvestor, PEPISATransfer11.mmPrimaryCorporateInvestor, PEPISATransfer11.mmSecondaryCorporateInvestor,
+						PEPISATransfer11.mmOtherCorporateInvestor, ISATransfer9.mmPrimaryCorporateInvestor, ISATransfer9.mmSecondaryCorporateInvestor, ISATransfer9.mmOtherCorporateInvestor, CardPaymentEnvironment1.mmMerchant,
+						OriginalItemReference1.mmDebtorAgent, OriginalItemReference1.mmIntermediaryAgent, TradeParty1.mmLegalOrganisation, OriginalItemReference2.mmDebtorAgent, OriginalItemReference2.mmIntermediaryAgent, Routing1.mmFirm,
+						Warrant2.mmWarrantAgent, Issuance1.mmIssuerOrganisation, QuoteStatus2.mmRelatedParties, SingleQuote1.mmRelatedParties, InstrumentLeg3.mmTradingParties, QuoteRequest1.mmTradingParties,
+						RequestForQuote.mmTradingParties, Party15Choice.mmOrganisation, Party16Choice.mmOrganisation, ISATransfer12.mmPrimaryCorporateInvestor, ISATransfer12.mmSecondaryCorporateInvestor,
+						ISATransfer12.mmOtherCorporateInvestor, OriginalPaymentInformation6.mmDebtorAgent, OriginalPaymentInformation6.mmCreditorAgent, ISATransfer19.mmPrimaryCorporateInvestor, ISATransfer19.mmSecondaryCorporateInvestor,
+						ISATransfer19.mmOtherCorporateInvestor, OriginalItemReference3.mmDebtorAgent, OriginalItemReference3.mmIntermediaryAgent, Party24Choice.mmOrganisation, Party23Choice.mmOrganisation, TradeParty2.mmLegalOrganisation,
+						OriginalItemReference4.mmDebtorAgent, OriginalItemReference4.mmIntermediaryAgent, Party30Choice.mmOrganisation, Party31Choice.mmOrganisation, ISATransfer24.mmPrimaryCorporateInvestor,
+						ISATransfer24.mmSecondaryCorporateInvestor, ISATransfer24.mmOtherCorporateInvestor, TradeParty3.mmLegalOrganisation, OrganisationIdentification28.mmName, OrganisationIdentification28.mmPostalAddress,
+						Party33Choice.mmOrganisation, Party32Choice.mmOrganisation, OriginalPaymentInformation7.mmDebtorAgent, OriginalPaymentInformation7.mmCreditorAgent);
 				subType_lazy = () -> Arrays.asList(FinancialInstitution.mmObject(), NonFinancialInstitution.mmObject());
 				superType_lazy = () -> Party.mmObject();
 				element_lazy = () -> Arrays.asList(com.tools20022.repository.entity.Organisation.mmPurpose, com.tools20022.repository.entity.Organisation.mmRegistrationDate,

@@ -19,8 +19,10 @@ package com.tools20022.repository.msg;
 
 import com.tools20022.metamodel.MMMessageAttribute;
 import com.tools20022.metamodel.MMMessageComponent;
+import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.datatype.Max100KBinary;
 import com.tools20022.repository.datatype.Max35Text;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -98,7 +100,7 @@ public class BinaryFile1 {
 			componentContext_lazy = () -> BinaryFile1.mmObject();
 			isDerived = false;
 			xmlTag = "MIMETp";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "MIMEType";
 			definition = "Code specifying the Multipurpose Internet Mail Extensions (MIME) type for this attached binary file. Reference IANA (Internet Assigned Numbers Authority) - MIME Media Types (www.iana.org/assignments/media-types).";
 			maxOccurs = 1;
@@ -142,7 +144,7 @@ public class BinaryFile1 {
 			componentContext_lazy = () -> BinaryFile1.mmObject();
 			isDerived = false;
 			xmlTag = "NcodgTp";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "EncodingType";
 			definition = "Specifies the encoding algorithm used for this attached binary file. Reference IANA (Internet Assigned Numbers Authority) - Transfer Encodings (www.iana.org/assignments/transfer-encodings).";
 			maxOccurs = 1;
@@ -186,7 +188,7 @@ public class BinaryFile1 {
 			componentContext_lazy = () -> BinaryFile1.mmObject();
 			isDerived = false;
 			xmlTag = "CharSet";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CharacterSet";
 			definition = "Specifies a code signifying the particular character set used for this attached binary file. Reference IANA (Internet Assigned Numbers Authority) - Character Sets (www.iana.org/assignments/character-sets).";
 			maxOccurs = 1;
@@ -227,7 +229,7 @@ public class BinaryFile1 {
 			componentContext_lazy = () -> BinaryFile1.mmObject();
 			isDerived = false;
 			xmlTag = "InclBinryObjct";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "IncludedBinaryObject";
 			definition = "Binary object included in this attached binary file.";
 			maxOccurs = 1;
@@ -239,10 +241,9 @@ public class BinaryFile1 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.BinaryFile1.mmMIMEType, com.tools20022.repository.msg.BinaryFile1.mmEncodingType, com.tools20022.repository.msg.BinaryFile1.mmCharacterSet,
-						com.tools20022.repository.msg.BinaryFile1.mmIncludedBinaryObject);
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				messageElement_lazy = () -> Arrays.asList(BinaryFile1.mmMIMEType, BinaryFile1.mmEncodingType, BinaryFile1.mmCharacterSet, BinaryFile1.mmIncludedBinaryObject);
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "BinaryFile1";
 				definition = "Computer file stored in a binary format.";
 			}

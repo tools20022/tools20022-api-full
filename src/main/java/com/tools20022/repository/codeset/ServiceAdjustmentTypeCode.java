@@ -19,6 +19,8 @@ package com.tools20022.repository.codeset;
 
 import com.tools20022.metamodel.MMCode;
 import com.tools20022.metamodel.MMCodeSet;
+import com.tools20022.metamodel.MMRegistrationStatus;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -27,6 +29,13 @@ import java.util.concurrent.atomic.AtomicReference;
  * <p>
  * <strong>Constant fields:</strong>
  * <ul>
+ * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getDerivation derivation}
+ * =
+ * <ul>
+ * <li>{@linkplain com.tools20022.repository.codeset.ServiceAdjustmentType1Code
+ * ServiceAdjustmentType1Code}</li>
+ * </ul>
+ * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getCode code} =
  * <ul>
  * <li>
@@ -35,13 +44,6 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>
  * {@linkplain com.tools20022.repository.codeset.ServiceAdjustmentTypeCode#mmNonCompensable
  * ServiceAdjustmentTypeCode.mmNonCompensable}</li>
- * </ul>
- * </li>
- * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getDerivation derivation}
- * =
- * <ul>
- * <li>{@linkplain com.tools20022.repository.codeset.ServiceAdjustmentType1Code
- * ServiceAdjustmentType1Code}</li>
  * </ul>
  * </li>
  * <li>
@@ -95,7 +97,7 @@ public class ServiceAdjustmentTypeCode {
 	 */
 	public static final MMCode mmCompensable = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Compensable";
 			definition = "Adjustment applies to a service which is balance compensable. Earnings credits based on average balances maintained in the account can be used to offset the service charge.";
 			owner_lazy = () -> ServiceAdjustmentTypeCode.mmObject();
@@ -128,7 +130,7 @@ public class ServiceAdjustmentTypeCode {
 	 */
 	public static final MMCode mmNonCompensable = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "NonCompensable";
 			definition = "Adjustment applies to a service which is not balance compensable. Balance based credits cannot be used to offset the service charge.";
 			owner_lazy = () -> ServiceAdjustmentTypeCode.mmObject();
@@ -139,12 +141,12 @@ public class ServiceAdjustmentTypeCode {
 	static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
 				example = Arrays.asList("COMP");
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "ServiceAdjustmentTypeCode";
 				definition = "Defines the type of allowed service adjustment.";
-				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.ServiceAdjustmentTypeCode.mmCompensable, com.tools20022.repository.codeset.ServiceAdjustmentTypeCode.mmNonCompensable);
+				code_lazy = () -> Arrays.asList(ServiceAdjustmentTypeCode.mmCompensable, ServiceAdjustmentTypeCode.mmNonCompensable);
 				derivation_lazy = () -> Arrays.asList(ServiceAdjustmentType1Code.mmObject());
 			}
 		});

@@ -19,7 +19,9 @@ package com.tools20022.repository.choice;
 
 import com.tools20022.metamodel.MMChoiceComponent;
 import com.tools20022.metamodel.MMMessageAttribute;
+import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.codeset.SettledStatusReason2Code;
+import com.tools20022.repository.GeneratedRepository;
 import com.tools20022.repository.msg.GenericIdentification1;
 import com.tools20022.repository.msg.PartiallySettledStatus1;
 import java.util.Arrays;
@@ -103,10 +105,10 @@ public class PartiallySettled21Choice {
 			componentContext_lazy = () -> PartiallySettled21Choice.mmObject();
 			isDerived = false;
 			xmlTag = "Cd";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Code";
 			definition = "Partially settled reason expressed as a code.";
-			previousVersion_lazy = () -> com.tools20022.repository.choice.RejectedReason20Choice.mmCode;
+			previousVersion_lazy = () -> RejectedReason20Choice.mmCode;
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> SettledStatusReason2Code.mmObject();
@@ -152,10 +154,10 @@ public class PartiallySettled21Choice {
 			componentContext_lazy = () -> PartiallySettled21Choice.mmObject();
 			isDerived = false;
 			xmlTag = "Prtry";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Proprietary";
 			definition = "Partially settled reason expressed as a proprietary code.";
-			previousVersion_lazy = () -> com.tools20022.repository.choice.RejectedReason20Choice.mmProprietary;
+			previousVersion_lazy = () -> RejectedReason20Choice.mmProprietary;
 			maxOccurs = 1;
 			minOccurs = 1;
 			complexType_lazy = () -> GenericIdentification1.mmObject();
@@ -165,9 +167,9 @@ public class PartiallySettled21Choice {
 	final static public MMChoiceComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMChoiceComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.choice.PartiallySettled21Choice.mmCode, com.tools20022.repository.choice.PartiallySettled21Choice.mmProprietary);
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				messageElement_lazy = () -> Arrays.asList(PartiallySettled21Choice.mmCode, PartiallySettled21Choice.mmProprietary);
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "PartiallySettled21Choice";
 				definition = "Choice between formats for a partially settled reason.";
 				previousVersion_lazy = () -> PartiallySettledStatus1.mmObject();

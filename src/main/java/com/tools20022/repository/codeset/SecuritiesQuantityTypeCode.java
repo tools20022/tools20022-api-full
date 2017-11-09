@@ -19,6 +19,8 @@ package com.tools20022.repository.codeset;
 
 import com.tools20022.metamodel.MMCode;
 import com.tools20022.metamodel.MMCodeSet;
+import com.tools20022.metamodel.MMRegistrationStatus;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -27,6 +29,15 @@ import java.util.concurrent.atomic.AtomicReference;
  * <p>
  * <strong>Constant fields:</strong>
  * <ul>
+ * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getDerivation derivation}
+ * =
+ * <ul>
+ * <li>{@linkplain com.tools20022.repository.codeset.SecuritiesQuantity1Code
+ * SecuritiesQuantity1Code}</li>
+ * <li>{@linkplain com.tools20022.repository.codeset.SecuritiesQuantity2Code
+ * SecuritiesQuantity2Code}</li>
+ * </ul>
+ * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getCode code} =
  * <ul>
  * <li>
@@ -38,15 +49,6 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>
  * {@linkplain com.tools20022.repository.codeset.SecuritiesQuantityTypeCode#mmUnknown
  * SecuritiesQuantityTypeCode.mmUnknown}</li>
- * </ul>
- * </li>
- * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getDerivation derivation}
- * =
- * <ul>
- * <li>{@linkplain com.tools20022.repository.codeset.SecuritiesQuantity1Code
- * SecuritiesQuantity1Code}</li>
- * <li>{@linkplain com.tools20022.repository.codeset.SecuritiesQuantity2Code
- * SecuritiesQuantity2Code}</li>
  * </ul>
  * </li>
  * <li>
@@ -92,7 +94,7 @@ public class SecuritiesQuantityTypeCode {
 	 */
 	public static final MMCode mmNo = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "No";
 			definition = "No Maximum / Minimum number provided.";
 			owner_lazy = () -> SecuritiesQuantityTypeCode.mmObject();
@@ -122,7 +124,7 @@ public class SecuritiesQuantityTypeCode {
 	 */
 	public static final MMCode mmYes = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Yes";
 			definition = "Maximum / Minimum number provided.";
 			owner_lazy = () -> SecuritiesQuantityTypeCode.mmObject();
@@ -152,7 +154,7 @@ public class SecuritiesQuantityTypeCode {
 	 */
 	public static final MMCode mmUnknown = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Unknown";
 			definition = "Maximum / Minimum number is unknown or not decided.";
 			owner_lazy = () -> SecuritiesQuantityTypeCode.mmObject();
@@ -163,12 +165,11 @@ public class SecuritiesQuantityTypeCode {
 	static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "SecuritiesQuantityTypeCode";
 				definition = "TSE/JASDEC codes for planned, maximum and minimum of shares to be purchased.";
-				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.SecuritiesQuantityTypeCode.mmNo, com.tools20022.repository.codeset.SecuritiesQuantityTypeCode.mmYes,
-						com.tools20022.repository.codeset.SecuritiesQuantityTypeCode.mmUnknown);
+				code_lazy = () -> Arrays.asList(SecuritiesQuantityTypeCode.mmNo, SecuritiesQuantityTypeCode.mmYes, SecuritiesQuantityTypeCode.mmUnknown);
 				derivation_lazy = () -> Arrays.asList(SecuritiesQuantity1Code.mmObject(), SecuritiesQuantity2Code.mmObject());
 			}
 		});

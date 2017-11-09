@@ -19,7 +19,9 @@ package com.tools20022.repository.codeset;
 
 import com.tools20022.metamodel.MMCode;
 import com.tools20022.metamodel.MMCodeSet;
+import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.codeset.CashPaymentStatusCode;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -84,7 +86,7 @@ public class CashPaymentStatus2Code extends CashPaymentStatusCode {
 	 */
 	public static final MMCode mmPending = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Pending";
 			owner_lazy = () -> CashPaymentStatus2Code.mmObject();
 		}
@@ -107,7 +109,7 @@ public class CashPaymentStatus2Code extends CashPaymentStatusCode {
 	 */
 	public static final MMCode mmFinal = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Final";
 			owner_lazy = () -> CashPaymentStatus2Code.mmObject();
 		}
@@ -116,12 +118,12 @@ public class CashPaymentStatus2Code extends CashPaymentStatusCode {
 	static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
 				example = Arrays.asList("PDNG");
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "CashPaymentStatus2Code";
 				definition = "Specifies the state of a payment instruction at a specified time.";
-				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.CashPaymentStatus2Code.mmPending, com.tools20022.repository.codeset.CashPaymentStatus2Code.mmFinal);
+				code_lazy = () -> Arrays.asList(CashPaymentStatus2Code.mmPending, CashPaymentStatus2Code.mmFinal);
 				trace_lazy = () -> CashPaymentStatusCode.mmObject();
 			}
 		});

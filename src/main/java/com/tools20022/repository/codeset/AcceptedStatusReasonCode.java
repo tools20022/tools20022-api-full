@@ -19,6 +19,8 @@ package com.tools20022.repository.codeset;
 
 import com.tools20022.metamodel.MMCode;
 import com.tools20022.metamodel.MMCodeSet;
+import com.tools20022.metamodel.MMRegistrationStatus;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -27,6 +29,13 @@ import java.util.concurrent.atomic.AtomicReference;
  * <p>
  * <strong>Constant fields:</strong>
  * <ul>
+ * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getDerivation derivation}
+ * =
+ * <ul>
+ * <li>{@linkplain com.tools20022.repository.codeset.AcceptedStatusReason1Code
+ * AcceptedStatusReason1Code}</li>
+ * </ul>
+ * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getCode code} =
  * <ul>
  * <li>
@@ -35,13 +44,6 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>
  * {@linkplain com.tools20022.repository.codeset.AcceptedStatusReasonCode#mmPlaceNotAllowed
  * AcceptedStatusReasonCode.mmPlaceNotAllowed}</li>
- * </ul>
- * </li>
- * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getDerivation derivation}
- * =
- * <ul>
- * <li>{@linkplain com.tools20022.repository.codeset.AcceptedStatusReason1Code
- * AcceptedStatusReason1Code}</li>
  * </ul>
  * </li>
  * <li>
@@ -89,7 +91,7 @@ public class AcceptedStatusReasonCode {
 	 */
 	public static final MMCode mmSectorNotAllowed = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SectorNotAllowed";
 			definition = "Status of the account modification instruction is accepted but modification of the account data will not be carried out for the sector code.";
 			owner_lazy = () -> AcceptedStatusReasonCode.mmObject();
@@ -122,7 +124,7 @@ public class AcceptedStatusReasonCode {
 	 */
 	public static final MMCode mmPlaceNotAllowed = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PlaceNotAllowed";
 			definition = "Status of the account modification instruction is accepted but modification of the account data will not be carried out for the place.";
 			owner_lazy = () -> AcceptedStatusReasonCode.mmObject();
@@ -133,11 +135,11 @@ public class AcceptedStatusReasonCode {
 	static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "AcceptedStatusReasonCode";
 				definition = "Specifies the reason for an accepted status.";
-				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.AcceptedStatusReasonCode.mmSectorNotAllowed, com.tools20022.repository.codeset.AcceptedStatusReasonCode.mmPlaceNotAllowed);
+				code_lazy = () -> Arrays.asList(AcceptedStatusReasonCode.mmSectorNotAllowed, AcceptedStatusReasonCode.mmPlaceNotAllowed);
 				derivation_lazy = () -> Arrays.asList(AcceptedStatusReason1Code.mmObject());
 			}
 		});

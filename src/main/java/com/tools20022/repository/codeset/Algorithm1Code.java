@@ -19,7 +19,9 @@ package com.tools20022.repository.codeset;
 
 import com.tools20022.metamodel.MMCode;
 import com.tools20022.metamodel.MMCodeSet;
+import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.codeset.AlgorithmCode;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -96,7 +98,7 @@ public class Algorithm1Code extends AlgorithmCode {
 	 */
 	public static final MMCode mmRetailCBCMAC = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "RetailCBCMAC";
 			owner_lazy = () -> Algorithm1Code.mmObject();
 		}
@@ -119,7 +121,7 @@ public class Algorithm1Code extends AlgorithmCode {
 	 */
 	public static final MMCode mmRetailSHA256MAC = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "RetailSHA256MAC";
 			owner_lazy = () -> Algorithm1Code.mmObject();
 		}
@@ -142,7 +144,7 @@ public class Algorithm1Code extends AlgorithmCode {
 	 */
 	public static final MMCode mmUKPT = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "UKPT";
 			owner_lazy = () -> Algorithm1Code.mmObject();
 		}
@@ -165,7 +167,7 @@ public class Algorithm1Code extends AlgorithmCode {
 	 */
 	public static final MMCode mmDUKPT = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "DUKPT";
 			owner_lazy = () -> Algorithm1Code.mmObject();
 		}
@@ -188,7 +190,7 @@ public class Algorithm1Code extends AlgorithmCode {
 	 */
 	public static final MMCode mmDES112CBC = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "DES112CBC";
 			owner_lazy = () -> Algorithm1Code.mmObject();
 		}
@@ -211,7 +213,7 @@ public class Algorithm1Code extends AlgorithmCode {
 	 */
 	public static final MMCode mmSHA256 = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SHA256";
 			owner_lazy = () -> Algorithm1Code.mmObject();
 		}
@@ -234,7 +236,7 @@ public class Algorithm1Code extends AlgorithmCode {
 	 */
 	public static final MMCode mmSHA256WithRSA = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SHA256WithRSA";
 			owner_lazy = () -> Algorithm1Code.mmObject();
 		}
@@ -257,7 +259,7 @@ public class Algorithm1Code extends AlgorithmCode {
 	 */
 	public static final MMCode mmRSAEncryption = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "RSAEncryption";
 			owner_lazy = () -> Algorithm1Code.mmObject();
 		}
@@ -266,14 +268,13 @@ public class Algorithm1Code extends AlgorithmCode {
 	static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
 				example = Arrays.asList("MACC");
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "Algorithm1Code";
 				definition = "Identification of a cryptographic algorithm";
-				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.Algorithm1Code.mmRetailCBCMAC, com.tools20022.repository.codeset.Algorithm1Code.mmRetailSHA256MAC, com.tools20022.repository.codeset.Algorithm1Code.mmUKPT,
-						com.tools20022.repository.codeset.Algorithm1Code.mmDUKPT, com.tools20022.repository.codeset.Algorithm1Code.mmDES112CBC, com.tools20022.repository.codeset.Algorithm1Code.mmSHA256,
-						com.tools20022.repository.codeset.Algorithm1Code.mmSHA256WithRSA, com.tools20022.repository.codeset.Algorithm1Code.mmRSAEncryption);
+				code_lazy = () -> Arrays.asList(Algorithm1Code.mmRetailCBCMAC, Algorithm1Code.mmRetailSHA256MAC, Algorithm1Code.mmUKPT, Algorithm1Code.mmDUKPT, Algorithm1Code.mmDES112CBC, Algorithm1Code.mmSHA256,
+						Algorithm1Code.mmSHA256WithRSA, Algorithm1Code.mmRSAEncryption);
 				trace_lazy = () -> AlgorithmCode.mmObject();
 			}
 		});

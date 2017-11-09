@@ -17,15 +17,16 @@
 
 package com.tools20022.repository.msg;
 
-import com.tools20022.metamodel.MMMessageAssociationEnd;
-import com.tools20022.metamodel.MMMessageAttribute;
-import com.tools20022.metamodel.MMMessageComponent;
-import com.tools20022.metamodel.MMXor;
+import com.tools20022.metamodel.*;
 import com.tools20022.repository.choice.*;
 import com.tools20022.repository.codeset.StatementType1Code;
 import com.tools20022.repository.datatype.Extended350Code;
 import com.tools20022.repository.datatype.ISODate;
 import com.tools20022.repository.entity.Account;
+import com.tools20022.repository.entity.InvestmentAccount;
+import com.tools20022.repository.entity.Party;
+import com.tools20022.repository.entity.ReportingService;
+import com.tools20022.repository.GeneratedRepository;
 import java.text.DateFormat;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
@@ -150,11 +151,11 @@ public class StatementAndFinancialInstrumentDetails {
 	 */
 	public static final MMMessageAttribute mmAccountIdentification = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Account.mmIdentification;
+			businessElementTrace_lazy = () -> Account.mmIdentification;
 			componentContext_lazy = () -> StatementAndFinancialInstrumentDetails.mmObject();
 			isDerived = false;
 			xmlTag = "AcctId";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AccountIdentification";
 			definition = "Unique and unambiguous identification for the account between the account owner and the account servicer.";
 			maxOccurs = 1;
@@ -201,11 +202,11 @@ public class StatementAndFinancialInstrumentDetails {
 	 */
 	public static final MMMessageAttribute mmSubAccountIdentification = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Account.mmIdentification;
+			businessElementTrace_lazy = () -> Account.mmIdentification;
 			componentContext_lazy = () -> StatementAndFinancialInstrumentDetails.mmObject();
 			isDerived = false;
 			xmlTag = "SubAcctId";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SubAccountIdentification";
 			definition = "Unique and unambiguous identification for the account between the account owner and the account servicer.";
 			maxOccurs = 1;
@@ -248,11 +249,11 @@ public class StatementAndFinancialInstrumentDetails {
 	 */
 	public static final MMMessageAssociationEnd mmFinancialInstrumentDetails = new MMMessageAssociationEnd() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.InvestmentAccount.mmInvestmentFundClass;
+			businessElementTrace_lazy = () -> InvestmentAccount.mmInvestmentFundClass;
 			componentContext_lazy = () -> StatementAndFinancialInstrumentDetails.mmObject();
 			isDerived = false;
 			xmlTag = "FinInstrmDtls";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "FinancialInstrumentDetails";
 			definition = "Financial instrument for which the statement is requested.";
 			maxOccurs = 1;
@@ -297,11 +298,11 @@ public class StatementAndFinancialInstrumentDetails {
 	 */
 	public static final MMMessageAttribute mmAccountOwner = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Party.mmIdentification;
+			businessElementTrace_lazy = () -> Party.mmIdentification;
 			componentContext_lazy = () -> StatementAndFinancialInstrumentDetails.mmObject();
 			isDerived = false;
 			xmlTag = "AcctOwnr";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AccountOwner";
 			definition = "Party that legally owns the account.";
 			maxOccurs = 1;
@@ -343,7 +344,7 @@ public class StatementAndFinancialInstrumentDetails {
 			componentContext_lazy = () -> StatementAndFinancialInstrumentDetails.mmObject();
 			isDerived = false;
 			xmlTag = "StmtTp";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "StatementType";
 			definition = "Specifes the statement message.";
 			maxOccurs = 1;
@@ -385,7 +386,7 @@ public class StatementAndFinancialInstrumentDetails {
 			componentContext_lazy = () -> StatementAndFinancialInstrumentDetails.mmObject();
 			isDerived = false;
 			xmlTag = "XtndedStmtTp";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ExtendedStatementType";
 			definition = "Specifes the statement message.";
 			maxOccurs = 1;
@@ -426,7 +427,7 @@ public class StatementAndFinancialInstrumentDetails {
 			componentContext_lazy = () -> StatementAndFinancialInstrumentDetails.mmObject();
 			isDerived = false;
 			xmlTag = "StmtDt";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "StatementDate";
 			definition = "Date of the statement.";
 			maxOccurs = 1;
@@ -470,11 +471,11 @@ public class StatementAndFinancialInstrumentDetails {
 	 */
 	public static final MMMessageAttribute mmStatementPeriod = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Account.mmReportedPeriod;
+			businessElementTrace_lazy = () -> Account.mmReportedPeriod;
 			componentContext_lazy = () -> StatementAndFinancialInstrumentDetails.mmObject();
 			isDerived = false;
 			xmlTag = "StmtPrd";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "StatementPeriod";
 			definition = "Period on which the statement is reporting.";
 			maxOccurs = 1;
@@ -518,11 +519,11 @@ public class StatementAndFinancialInstrumentDetails {
 	 */
 	public static final MMMessageAttribute mmFrequency = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.ReportingService.mmStatementFrequency;
+			businessElementTrace_lazy = () -> ReportingService.mmStatementFrequency;
 			componentContext_lazy = () -> StatementAndFinancialInstrumentDetails.mmObject();
 			isDerived = false;
 			xmlTag = "Frqcy";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Frequency";
 			definition = "Frequency of the statement.";
 			maxOccurs = 1;
@@ -565,7 +566,7 @@ public class StatementAndFinancialInstrumentDetails {
 			componentContext_lazy = () -> StatementAndFinancialInstrumentDetails.mmObject();
 			isDerived = false;
 			xmlTag = "UpdTp";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "UpdateType";
 			definition = "Indicates whether the report is complete or contains changes only.";
 			maxOccurs = 1;
@@ -607,7 +608,7 @@ public class StatementAndFinancialInstrumentDetails {
 			componentContext_lazy = () -> StatementAndFinancialInstrumentDetails.mmObject();
 			isDerived = false;
 			xmlTag = "StmtBsis";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "StatementBasis";
 			definition = "Type of balance on which the statement is prepared.";
 			maxOccurs = 1;
@@ -620,6 +621,10 @@ public class StatementAndFinancialInstrumentDetails {
 	 * <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
+	 * <li>{@linkplain com.tools20022.metamodel.MMXor#getMessageComponent
+	 * messageComponent} =
+	 * {@linkplain com.tools20022.repository.msg.StatementAndFinancialInstrumentDetails
+	 * StatementAndFinancialInstrumentDetails}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMXor#getImpactedElements
 	 * impactedElements} =
 	 * <ul>
@@ -631,10 +636,6 @@ public class StatementAndFinancialInstrumentDetails {
 	 * StatementAndFinancialInstrumentDetails.mmExtendedStatementType}</li>
 	 * </ul>
 	 * </li>
-	 * <li>{@linkplain com.tools20022.metamodel.MMXor#getMessageComponent
-	 * messageComponent} =
-	 * {@linkplain com.tools20022.repository.msg.StatementAndFinancialInstrumentDetails
-	 * StatementAndFinancialInstrumentDetails}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
@@ -649,11 +650,11 @@ public class StatementAndFinancialInstrumentDetails {
 	 */
 	public static final MMXor mmStatementTypeOrExtendedStatementType = new MMXor() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "StatementTypeOrExtendedStatementType";
 			definition = "Either StatementType or ExtendedStatementType must be present.";
 			messageComponent_lazy = () -> StatementAndFinancialInstrumentDetails.mmObject();
-			impactedElements_lazy = () -> Arrays.asList(com.tools20022.repository.msg.StatementAndFinancialInstrumentDetails.mmStatementType, com.tools20022.repository.msg.StatementAndFinancialInstrumentDetails.mmExtendedStatementType);
+			impactedElements_lazy = () -> Arrays.asList(StatementAndFinancialInstrumentDetails.mmStatementType, StatementAndFinancialInstrumentDetails.mmExtendedStatementType);
 		}
 	};
 	/**
@@ -661,6 +662,10 @@ public class StatementAndFinancialInstrumentDetails {
 	 * <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
+	 * <li>{@linkplain com.tools20022.metamodel.MMXor#getMessageComponent
+	 * messageComponent} =
+	 * {@linkplain com.tools20022.repository.msg.StatementAndFinancialInstrumentDetails
+	 * StatementAndFinancialInstrumentDetails}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMXor#getImpactedElements
 	 * impactedElements} =
 	 * <ul>
@@ -672,10 +677,6 @@ public class StatementAndFinancialInstrumentDetails {
 	 * StatementAndFinancialInstrumentDetails.mmStatementPeriod}</li>
 	 * </ul>
 	 * </li>
-	 * <li>{@linkplain com.tools20022.metamodel.MMXor#getMessageComponent
-	 * messageComponent} =
-	 * {@linkplain com.tools20022.repository.msg.StatementAndFinancialInstrumentDetails
-	 * StatementAndFinancialInstrumentDetails}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
@@ -689,26 +690,24 @@ public class StatementAndFinancialInstrumentDetails {
 	 */
 	public static final MMXor mmStatementDateOrPeriod = new MMXor() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "StatementDateOrPeriod";
 			definition = "Either StatementDate or StatementPeriod may be present.";
 			messageComponent_lazy = () -> StatementAndFinancialInstrumentDetails.mmObject();
-			impactedElements_lazy = () -> Arrays.asList(com.tools20022.repository.msg.StatementAndFinancialInstrumentDetails.mmStatementDate, com.tools20022.repository.msg.StatementAndFinancialInstrumentDetails.mmStatementPeriod);
+			impactedElements_lazy = () -> Arrays.asList(StatementAndFinancialInstrumentDetails.mmStatementDate, StatementAndFinancialInstrumentDetails.mmStatementPeriod);
 		}
 	};
 
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.StatementAndFinancialInstrumentDetails.mmAccountIdentification,
-						com.tools20022.repository.msg.StatementAndFinancialInstrumentDetails.mmSubAccountIdentification, com.tools20022.repository.msg.StatementAndFinancialInstrumentDetails.mmFinancialInstrumentDetails,
-						com.tools20022.repository.msg.StatementAndFinancialInstrumentDetails.mmAccountOwner, com.tools20022.repository.msg.StatementAndFinancialInstrumentDetails.mmStatementType,
-						com.tools20022.repository.msg.StatementAndFinancialInstrumentDetails.mmExtendedStatementType, com.tools20022.repository.msg.StatementAndFinancialInstrumentDetails.mmStatementDate,
-						com.tools20022.repository.msg.StatementAndFinancialInstrumentDetails.mmStatementPeriod, com.tools20022.repository.msg.StatementAndFinancialInstrumentDetails.mmFrequency,
-						com.tools20022.repository.msg.StatementAndFinancialInstrumentDetails.mmUpdateType, com.tools20022.repository.msg.StatementAndFinancialInstrumentDetails.mmStatementBasis);
+				messageElement_lazy = () -> Arrays.asList(StatementAndFinancialInstrumentDetails.mmAccountIdentification, StatementAndFinancialInstrumentDetails.mmSubAccountIdentification,
+						StatementAndFinancialInstrumentDetails.mmFinancialInstrumentDetails, StatementAndFinancialInstrumentDetails.mmAccountOwner, StatementAndFinancialInstrumentDetails.mmStatementType,
+						StatementAndFinancialInstrumentDetails.mmExtendedStatementType, StatementAndFinancialInstrumentDetails.mmStatementDate, StatementAndFinancialInstrumentDetails.mmStatementPeriod,
+						StatementAndFinancialInstrumentDetails.mmFrequency, StatementAndFinancialInstrumentDetails.mmUpdateType, StatementAndFinancialInstrumentDetails.mmStatementBasis);
 				trace_lazy = () -> Account.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.OBSOLETE;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.OBSOLETE;
 				removalDate = ((Supplier<Date>) (() -> {
 					try {
 						return DateFormat.getDateInstance(java.text.DateFormat.LONG).parse("September 9, 2016");
@@ -718,8 +717,7 @@ public class StatementAndFinancialInstrumentDetails {
 				})).get();
 				name = "StatementAndFinancialInstrumentDetails";
 				definition = "Account, financial instrument and statement parameters for which a statement is requested.";
-				xors_lazy = () -> Arrays.asList(com.tools20022.repository.msg.StatementAndFinancialInstrumentDetails.mmStatementTypeOrExtendedStatementType,
-						com.tools20022.repository.msg.StatementAndFinancialInstrumentDetails.mmStatementDateOrPeriod);
+				xors_lazy = () -> Arrays.asList(StatementAndFinancialInstrumentDetails.mmStatementTypeOrExtendedStatementType, StatementAndFinancialInstrumentDetails.mmStatementDateOrPeriod);
 			}
 		});
 		return mmObject_lazy.get();

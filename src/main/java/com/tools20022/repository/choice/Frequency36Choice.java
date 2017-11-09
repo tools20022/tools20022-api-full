@@ -20,7 +20,9 @@ package com.tools20022.repository.choice;
 import com.tools20022.metamodel.MMChoiceComponent;
 import com.tools20022.metamodel.MMMessageAssociationEnd;
 import com.tools20022.metamodel.MMMessageAttribute;
+import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.codeset.Frequency6Code;
+import com.tools20022.repository.GeneratedRepository;
 import com.tools20022.repository.msg.FrequencyAndMoment1;
 import com.tools20022.repository.msg.FrequencyPeriod1;
 import java.util.Arrays;
@@ -107,10 +109,10 @@ public class Frequency36Choice {
 			componentContext_lazy = () -> Frequency36Choice.mmObject();
 			isDerived = false;
 			xmlTag = "Tp";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Type";
 			definition = "Specifies a frequency in terms of a specified period type.";
-			previousVersion_lazy = () -> com.tools20022.repository.choice.Frequency21Choice.mmType;
+			previousVersion_lazy = () -> Frequency21Choice.mmType;
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> Frequency6Code.mmObject();
@@ -158,10 +160,10 @@ public class Frequency36Choice {
 			componentContext_lazy = () -> Frequency36Choice.mmObject();
 			isDerived = false;
 			xmlTag = "Prd";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Period";
 			definition = "Specifies a frequency in terms of a count per period within a specified period type.";
-			previousVersion_lazy = () -> com.tools20022.repository.choice.Frequency21Choice.mmPeriod;
+			previousVersion_lazy = () -> Frequency21Choice.mmPeriod;
 			maxOccurs = 1;
 			minOccurs = 1;
 			complexType_lazy = () -> FrequencyPeriod1.mmObject();
@@ -202,7 +204,7 @@ public class Frequency36Choice {
 			componentContext_lazy = () -> Frequency36Choice.mmObject();
 			isDerived = false;
 			xmlTag = "PtInTm";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PointInTime";
 			definition = "Specifies a frequency in terms of an exact point in time or moment within a specified period type.";
 			maxOccurs = 1;
@@ -215,10 +217,9 @@ public class Frequency36Choice {
 	final static public MMChoiceComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMChoiceComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.choice.Frequency36Choice.mmType, com.tools20022.repository.choice.Frequency36Choice.mmPeriod,
-						com.tools20022.repository.choice.Frequency36Choice.mmPointInTime);
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				messageElement_lazy = () -> Arrays.asList(Frequency36Choice.mmType, Frequency36Choice.mmPeriod, Frequency36Choice.mmPointInTime);
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "Frequency36Choice";
 				definition = "Choice of format for a frequency, for example, the frequency of payment.";
 				previousVersion_lazy = () -> Frequency21Choice.mmObject();

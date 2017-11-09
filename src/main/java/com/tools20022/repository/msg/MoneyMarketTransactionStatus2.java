@@ -20,9 +20,13 @@ package com.tools20022.repository.msg;
 import com.tools20022.metamodel.MMMessageAssociationEnd;
 import com.tools20022.metamodel.MMMessageAttribute;
 import com.tools20022.metamodel.MMMessageComponent;
+import com.tools20022.metamodel.MMRegistrationStatus;
+import com.tools20022.repository.area.auth.MoneyMarketStatisticalReportStatusAdviceV01;
 import com.tools20022.repository.codeset.StatisticalReportingStatus2Code;
 import com.tools20022.repository.datatype.LEIIdentifier;
 import com.tools20022.repository.datatype.Max105Text;
+import com.tools20022.repository.entity.PartyIdentificationInformation;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.List;
@@ -147,11 +151,11 @@ public class MoneyMarketTransactionStatus2 {
 			componentContext_lazy = () -> MoneyMarketTransactionStatus2.mmObject();
 			isDerived = false;
 			xmlTag = "UnqTxIdr";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "UniqueTransactionIdentifier";
 			definition = "Unique transaction identifier will be created at the time a transaction is first executed, shared with all registered entities and counterparties involved in the transaction, and used to track that particular transaction during its lifetime.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.InvoiceTaxReportTransactionStatus1.mmTaxReportIdentification);
-			previousVersion_lazy = () -> com.tools20022.repository.msg.MoneyMarketTransactionStatus1.mmUniqueTransactionIdentifier;
+			nextVersions_lazy = () -> Arrays.asList(InvoiceTaxReportTransactionStatus1.mmTaxReportIdentification);
+			previousVersion_lazy = () -> MoneyMarketTransactionStatus1.mmUniqueTransactionIdentifier;
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> Max105Text.mmObject();
@@ -198,10 +202,10 @@ public class MoneyMarketTransactionStatus2 {
 			componentContext_lazy = () -> MoneyMarketTransactionStatus2.mmObject();
 			isDerived = false;
 			xmlTag = "PrtryTxId";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ProprietaryTransactionIdentification";
 			definition = "Internal unique transaction identifier used by the reporting agent for each transaction. ";
-			previousVersion_lazy = () -> com.tools20022.repository.msg.MoneyMarketTransactionStatus1.mmProprietaryTransactionIdentification;
+			previousVersion_lazy = () -> MoneyMarketTransactionStatus1.mmProprietaryTransactionIdentification;
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> Max105Text.mmObject();
@@ -253,11 +257,11 @@ public class MoneyMarketTransactionStatus2 {
 	 */
 	public static final MMMessageAttribute mmBranchIdentification = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.PartyIdentificationInformation.mmLEI;
+			businessElementTrace_lazy = () -> PartyIdentificationInformation.mmLEI;
 			componentContext_lazy = () -> MoneyMarketTransactionStatus2.mmObject();
 			isDerived = false;
 			xmlTag = "BrnchId";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "BranchIdentification";
 			definition = "Unique and unambiguous legal entity identification of  the branch of the reporting agent in which the transaction has been booked.\r\n\r\nUsage: This field must only be provided if the transaction has been conducted and booked by a branch of the reporting agent and only if this branch has its own LEI that the reporting agent can clearly identify. \r\nWhere the transaction has been booked by the head office or the reporting agent cannot be identified by a unique branch-specific LEI, the reporting agent must provide the LEI of the head office.";
 			maxOccurs = 1;
@@ -312,11 +316,11 @@ public class MoneyMarketTransactionStatus2 {
 			componentContext_lazy = () -> MoneyMarketTransactionStatus2.mmObject();
 			isDerived = false;
 			xmlTag = "Sts";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Status";
 			definition = "Defines status of the reported transaction.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.InvoiceTaxReportTransactionStatus1.mmStatus);
-			previousVersion_lazy = () -> com.tools20022.repository.msg.MoneyMarketTransactionStatus1.mmStatus;
+			nextVersions_lazy = () -> Arrays.asList(InvoiceTaxReportTransactionStatus1.mmStatus);
+			previousVersion_lazy = () -> MoneyMarketTransactionStatus1.mmStatus;
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> StatisticalReportingStatus2Code.mmObject();
@@ -369,11 +373,11 @@ public class MoneyMarketTransactionStatus2 {
 			componentContext_lazy = () -> MoneyMarketTransactionStatus2.mmObject();
 			isDerived = false;
 			xmlTag = "VldtnRule";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ValidationRule";
 			definition = "Provides the details of the rule which could not be validated.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.InvoiceTaxReportTransactionStatus1.mmValidationRule);
-			previousVersion_lazy = () -> com.tools20022.repository.msg.MoneyMarketTransactionStatus1.mmValidationRule;
+			nextVersions_lazy = () -> Arrays.asList(InvoiceTaxReportTransactionStatus1.mmValidationRule);
+			previousVersion_lazy = () -> MoneyMarketTransactionStatus1.mmValidationRule;
 			minOccurs = 0;
 			isComposite = true;
 			type_lazy = () -> com.tools20022.repository.msg.GenericValidationRuleIdentification1.mmObject();
@@ -427,11 +431,11 @@ public class MoneyMarketTransactionStatus2 {
 			componentContext_lazy = () -> MoneyMarketTransactionStatus2.mmObject();
 			isDerived = false;
 			xmlTag = "SplmtryData";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SupplementaryData";
 			definition = "Additional information that can not be captured in the structured fields and/or any other specific block.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.InvoiceTaxReportTransactionStatus1.mmSupplementaryData);
-			previousVersion_lazy = () -> com.tools20022.repository.msg.MoneyMarketTransactionStatus1.mmSupplementaryData;
+			nextVersions_lazy = () -> Arrays.asList(InvoiceTaxReportTransactionStatus1.mmSupplementaryData);
+			previousVersion_lazy = () -> MoneyMarketTransactionStatus1.mmSupplementaryData;
 			minOccurs = 0;
 			isComposite = true;
 			type_lazy = () -> com.tools20022.repository.msg.SupplementaryData1.mmObject();
@@ -441,13 +445,11 @@ public class MoneyMarketTransactionStatus2 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.MoneyMarketTransactionStatus2.mmUniqueTransactionIdentifier,
-						com.tools20022.repository.msg.MoneyMarketTransactionStatus2.mmProprietaryTransactionIdentification, com.tools20022.repository.msg.MoneyMarketTransactionStatus2.mmBranchIdentification,
-						com.tools20022.repository.msg.MoneyMarketTransactionStatus2.mmStatus, com.tools20022.repository.msg.MoneyMarketTransactionStatus2.mmValidationRule,
-						com.tools20022.repository.msg.MoneyMarketTransactionStatus2.mmSupplementaryData);
-				messageBuildingBlock_lazy = () -> Arrays.asList(com.tools20022.repository.area.auth.MoneyMarketStatisticalReportStatusAdviceV01.mmTransactionStatus);
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				messageElement_lazy = () -> Arrays.asList(MoneyMarketTransactionStatus2.mmUniqueTransactionIdentifier, MoneyMarketTransactionStatus2.mmProprietaryTransactionIdentification,
+						MoneyMarketTransactionStatus2.mmBranchIdentification, MoneyMarketTransactionStatus2.mmStatus, MoneyMarketTransactionStatus2.mmValidationRule, MoneyMarketTransactionStatus2.mmSupplementaryData);
+				messageBuildingBlock_lazy = () -> Arrays.asList(MoneyMarketStatisticalReportStatusAdviceV01.mmTransactionStatus);
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "MoneyMarketTransactionStatus2";
 				definition = "Provides the details of each individual secured market transaction.";
 				nextVersions_lazy = () -> Arrays.asList(InvoiceTaxReportTransactionStatus1.mmObject());

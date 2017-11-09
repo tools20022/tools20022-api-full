@@ -19,7 +19,9 @@ package com.tools20022.repository.codeset;
 
 import com.tools20022.metamodel.MMCode;
 import com.tools20022.metamodel.MMCodeSet;
+import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.codeset.AlgorithmCode;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -111,10 +113,10 @@ public class Algorithm9Code extends AlgorithmCode {
 	 */
 	public static final MMCode mmAES128CBC = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AES128CBC";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.Algorithm13Code.mmAES128CBC);
-			previousVersion_lazy = () -> com.tools20022.repository.codeset.Algorithm2Code.mmAES128CBC;
+			nextVersions_lazy = () -> Arrays.asList(Algorithm13Code.mmAES128CBC);
+			previousVersion_lazy = () -> Algorithm2Code.mmAES128CBC;
 			owner_lazy = () -> Algorithm9Code.mmObject();
 		}
 	};
@@ -149,10 +151,10 @@ public class Algorithm9Code extends AlgorithmCode {
 	 */
 	public static final MMCode mmDES112CBC = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "DES112CBC";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.Algorithm13Code.mmDES112CBC);
-			previousVersion_lazy = () -> com.tools20022.repository.codeset.Algorithm2Code.mmDES112CBC;
+			nextVersions_lazy = () -> Arrays.asList(Algorithm13Code.mmDES112CBC);
+			previousVersion_lazy = () -> Algorithm2Code.mmDES112CBC;
 			owner_lazy = () -> Algorithm9Code.mmObject();
 		}
 	};
@@ -187,10 +189,10 @@ public class Algorithm9Code extends AlgorithmCode {
 	 */
 	public static final MMCode mmDUKPT2009 = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "DUKPT2009";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.Algorithm13Code.mmDUKPT2009);
-			previousVersion_lazy = () -> com.tools20022.repository.codeset.Algorithm2Code.mmDUKPT2009;
+			nextVersions_lazy = () -> Arrays.asList(Algorithm13Code.mmDUKPT2009);
+			previousVersion_lazy = () -> Algorithm2Code.mmDUKPT2009;
 			owner_lazy = () -> Algorithm9Code.mmObject();
 		}
 	};
@@ -224,10 +226,10 @@ public class Algorithm9Code extends AlgorithmCode {
 	 */
 	public static final MMCode mmUKPT = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "UKPT";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.Algorithm13Code.mmUKPT);
-			previousVersion_lazy = () -> com.tools20022.repository.codeset.Algorithm2Code.mmUKPT;
+			nextVersions_lazy = () -> Arrays.asList(Algorithm13Code.mmUKPT);
+			previousVersion_lazy = () -> Algorithm2Code.mmUKPT;
 			owner_lazy = () -> Algorithm9Code.mmObject();
 		}
 	};
@@ -262,10 +264,10 @@ public class Algorithm9Code extends AlgorithmCode {
 	 */
 	public static final MMCode mmUKPTwithAES128 = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "UKPTwithAES128";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.Algorithm13Code.mmUKPTwithAES128);
-			previousVersion_lazy = () -> com.tools20022.repository.codeset.Algorithm2Code.mmUKPTwithAES128;
+			nextVersions_lazy = () -> Arrays.asList(Algorithm13Code.mmUKPTwithAES128);
+			previousVersion_lazy = () -> Algorithm2Code.mmUKPTwithAES128;
 			owner_lazy = () -> Algorithm9Code.mmObject();
 		}
 	};
@@ -273,15 +275,14 @@ public class Algorithm9Code extends AlgorithmCode {
 	static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
 				example = Arrays.asList("EA2C");
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "Algorithm9Code";
 				definition = "Cryptographic algorithms for the protection of transported keys.";
 				nextVersions_lazy = () -> Arrays.asList(Algorithm13Code.mmObject());
 				previousVersion_lazy = () -> Algorithm2Code.mmObject();
-				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.Algorithm9Code.mmAES128CBC, com.tools20022.repository.codeset.Algorithm9Code.mmDES112CBC, com.tools20022.repository.codeset.Algorithm9Code.mmDUKPT2009,
-						com.tools20022.repository.codeset.Algorithm9Code.mmUKPT, com.tools20022.repository.codeset.Algorithm9Code.mmUKPTwithAES128);
+				code_lazy = () -> Arrays.asList(Algorithm9Code.mmAES128CBC, Algorithm9Code.mmDES112CBC, Algorithm9Code.mmDUKPT2009, Algorithm9Code.mmUKPT, Algorithm9Code.mmUKPTwithAES128);
 				trace_lazy = () -> AlgorithmCode.mmObject();
 			}
 		});

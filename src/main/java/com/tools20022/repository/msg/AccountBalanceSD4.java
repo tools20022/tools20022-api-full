@@ -20,7 +20,9 @@ package com.tools20022.repository.msg;
 import com.tools20022.metamodel.MMMessageAssociationEnd;
 import com.tools20022.metamodel.MMMessageAttribute;
 import com.tools20022.metamodel.MMMessageComponent;
+import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.datatype.Max350Text;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -120,10 +122,10 @@ public class AccountBalanceSD4 {
 			componentContext_lazy = () -> AccountBalanceSD4.mmObject();
 			isDerived = false;
 			xmlTag = "PlcAndNm";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PlaceAndName";
 			definition = "xPath to the element that is being extended.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.AccountBalanceSD9.mmPlaceAndName);
+			nextVersions_lazy = () -> Arrays.asList(AccountBalanceSD9.mmPlaceAndName);
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> Max350Text.mmObject();
@@ -175,10 +177,10 @@ public class AccountBalanceSD4 {
 			componentContext_lazy = () -> AccountBalanceSD4.mmObject();
 			isDerived = false;
 			xmlTag = "OrgnlBal";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "OriginalBalance";
 			definition = "Position held in a security as of the day prior to publication date. This position is subject to a redemption lottery call when this is the first lottery. This balance will not be adjusted for the supplemental or concurrent lotteries and will remain constant to report the original position.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.AccountBalanceSD9.mmOriginalBalance);
+			nextVersions_lazy = () -> Arrays.asList(AccountBalanceSD9.mmOriginalBalance);
 			maxOccurs = 1;
 			minOccurs = 0;
 			isComposite = true;
@@ -229,10 +231,10 @@ public class AccountBalanceSD4 {
 			componentContext_lazy = () -> AccountBalanceSD4.mmObject();
 			isDerived = false;
 			xmlTag = "UpldgdBal";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "UnpledgedBalance";
 			definition = "Portion of the Original Balance position held in DTC General Free account as of day prior to Publication Date. Position held in this account is subject to redemption lottery call.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.AccountBalanceSD9.mmUnpledgedBalance);
+			nextVersions_lazy = () -> Arrays.asList(AccountBalanceSD9.mmUnpledgedBalance);
 			maxOccurs = 1;
 			minOccurs = 0;
 			isComposite = true;
@@ -284,10 +286,10 @@ public class AccountBalanceSD4 {
 			componentContext_lazy = () -> AccountBalanceSD4.mmObject();
 			isDerived = false;
 			xmlTag = "InvstmtUpldgdBal";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "InvestmentUnpledgedBalance";
 			definition = "Portion of the Original Balance position held in DTC Segregated account as of day prior to Publication Date. Position held in this account is subject to redemption lottery call and must be released to allow allocation.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.AccountBalanceSD9.mmInvestmentUnpledgedBalance);
+			nextVersions_lazy = () -> Arrays.asList(AccountBalanceSD9.mmInvestmentUnpledgedBalance);
 			maxOccurs = 1;
 			minOccurs = 0;
 			isComposite = true;
@@ -339,10 +341,10 @@ public class AccountBalanceSD4 {
 			componentContext_lazy = () -> AccountBalanceSD4.mmObject();
 			isDerived = false;
 			xmlTag = "InvstmtPldgdBal";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "InvestmentPledgedBalance";
 			definition = "Portion of the Original Balance position held in DTC Investment account as of day prior to Publication Date. Position held in this account is subject to redemption lottery call and must be released to allow allocation.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.AccountBalanceSD9.mmInvestmentPledgedBalance);
+			nextVersions_lazy = () -> Arrays.asList(AccountBalanceSD9.mmInvestmentPledgedBalance);
 			maxOccurs = 1;
 			minOccurs = 0;
 			isComposite = true;
@@ -353,11 +355,10 @@ public class AccountBalanceSD4 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.AccountBalanceSD4.mmPlaceAndName, com.tools20022.repository.msg.AccountBalanceSD4.mmOriginalBalance,
-						com.tools20022.repository.msg.AccountBalanceSD4.mmUnpledgedBalance, com.tools20022.repository.msg.AccountBalanceSD4.mmInvestmentUnpledgedBalance,
-						com.tools20022.repository.msg.AccountBalanceSD4.mmInvestmentPledgedBalance);
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				messageElement_lazy = () -> Arrays.asList(AccountBalanceSD4.mmPlaceAndName, AccountBalanceSD4.mmOriginalBalance, AccountBalanceSD4.mmUnpledgedBalance, AccountBalanceSD4.mmInvestmentUnpledgedBalance,
+						AccountBalanceSD4.mmInvestmentPledgedBalance);
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "AccountBalanceSD4";
 				definition = "Provides additional information regarding account balance. Contains transaction details of the stock loans, repurchase agreements (REPOs) and undelivered trades (FAILs).  ";
 				nextVersions_lazy = () -> Arrays.asList(AccountBalanceSD9.mmObject());

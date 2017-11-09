@@ -19,8 +19,11 @@ package com.tools20022.repository.msg;
 
 import com.tools20022.metamodel.MMMessageAttribute;
 import com.tools20022.metamodel.MMMessageComponent;
+import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.datatype.DecimalNumber;
 import com.tools20022.repository.entity.CashAccountService;
+import com.tools20022.repository.entity.ProductQuantity;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -118,10 +121,10 @@ public class BillingServiceParameters1 {
 			componentContext_lazy = () -> BillingServiceParameters1.mmObject();
 			isDerived = false;
 			xmlTag = "BkSvc";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "BankService";
 			definition = "Specifies the details to fully identify the bank service.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.BillingServiceParameters3.mmBankService);
+			nextVersions_lazy = () -> Arrays.asList(BillingServiceParameters3.mmBankService);
 			maxOccurs = 1;
 			minOccurs = 1;
 			complexType_lazy = () -> com.tools20022.repository.msg.BillingServiceIdentification1.mmObject();
@@ -172,14 +175,14 @@ public class BillingServiceParameters1 {
 	 */
 	public static final MMMessageAttribute mmVolume = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.ProductQuantity.mmValue;
+			businessElementTrace_lazy = () -> ProductQuantity.mmValue;
 			componentContext_lazy = () -> BillingServiceParameters1.mmObject();
 			isDerived = false;
 			xmlTag = "Vol";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Volume";
 			definition = "Count or number of items (volume) involved in the charge.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.BillingServiceParameters3.mmVolume);
+			nextVersions_lazy = () -> Arrays.asList(BillingServiceParameters3.mmVolume);
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> DecimalNumber.mmObject();
@@ -189,10 +192,10 @@ public class BillingServiceParameters1 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.BillingServiceParameters1.mmBankService, com.tools20022.repository.msg.BillingServiceParameters1.mmVolume);
+				messageElement_lazy = () -> Arrays.asList(BillingServiceParameters1.mmBankService, BillingServiceParameters1.mmVolume);
 				trace_lazy = () -> CashAccountService.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "BillingServiceParameters1";
 				definition = "Specifies the detailed parameters a service to be billed.";
 				nextVersions_lazy = () -> Arrays.asList(BillingServiceParameters3.mmObject());

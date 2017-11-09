@@ -17,9 +17,7 @@
 
 package com.tools20022.repository.entity;
 
-import com.tools20022.metamodel.MMBusinessAssociationEnd;
-import com.tools20022.metamodel.MMBusinessAttribute;
-import com.tools20022.metamodel.MMBusinessComponent;
+import com.tools20022.metamodel.*;
 import com.tools20022.repository.codeset.QualifierCode;
 import com.tools20022.repository.codeset.QualityIndicationCode;
 import com.tools20022.repository.codeset.RelativeSizeCode;
@@ -27,7 +25,9 @@ import com.tools20022.repository.codeset.RoutingTypeCode;
 import com.tools20022.repository.datatype.Max35Text;
 import com.tools20022.repository.datatype.Number;
 import com.tools20022.repository.datatype.TrueFalseIndicator;
+import com.tools20022.repository.GeneratedRepository;
 import com.tools20022.repository.msg.IndicationOfInterest1;
+import com.tools20022.repository.msg.Order6;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.List;
@@ -42,6 +42,35 @@ import java.util.List;
  * <p>
  * <strong>Constant fields:</strong>
  * <ul>
+ * <li>
+ * {@linkplain com.tools20022.metamodel.MMBusinessComponent#getDerivationComponent
+ * derivationComponent} =
+ * <ul>
+ * <li>{@linkplain com.tools20022.repository.msg.IndicationOfInterest1
+ * IndicationOfInterest1}</li>
+ * </ul>
+ * </li>
+ * <li>
+ * {@linkplain com.tools20022.metamodel.MMBusinessComponent#getAssociationDomain
+ * associationDomain} =
+ * <ul>
+ * <li>
+ * {@linkplain com.tools20022.repository.entity.Organisation#mmRelatedIndicationOfInterest
+ * Organisation.mmRelatedIndicationOfInterest}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.entity.SecuritiesFinancing#mmRelatedIndicationOfInterest
+ * SecuritiesFinancing.mmRelatedIndicationOfInterest}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.entity.Spread#mmRelatedIndicationOfInterest
+ * Spread.mmRelatedIndicationOfInterest}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.entity.Spread#mmIndicationOfInterest
+ * Spread.mmIndicationOfInterest}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.entity.Negotiation#mmIndicationOfInterest
+ * Negotiation.mmIndicationOfInterest}</li>
+ * </ul>
+ * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMBusinessComponent#getElement
  * element} =
  * <ul>
@@ -84,35 +113,6 @@ import java.util.List;
  * <li>
  * {@linkplain com.tools20022.repository.entity.BuyOrSellIndicationOfInterest#mmOrganisationListName
  * BuyOrSellIndicationOfInterest.mmOrganisationListName}</li>
- * </ul>
- * </li>
- * <li>
- * {@linkplain com.tools20022.metamodel.MMBusinessComponent#getAssociationDomain
- * associationDomain} =
- * <ul>
- * <li>
- * {@linkplain com.tools20022.repository.entity.Organisation#mmRelatedIndicationOfInterest
- * Organisation.mmRelatedIndicationOfInterest}</li>
- * <li>
- * {@linkplain com.tools20022.repository.entity.SecuritiesFinancing#mmRelatedIndicationOfInterest
- * SecuritiesFinancing.mmRelatedIndicationOfInterest}</li>
- * <li>
- * {@linkplain com.tools20022.repository.entity.Spread#mmRelatedIndicationOfInterest
- * Spread.mmRelatedIndicationOfInterest}</li>
- * <li>
- * {@linkplain com.tools20022.repository.entity.Spread#mmIndicationOfInterest
- * Spread.mmIndicationOfInterest}</li>
- * <li>
- * {@linkplain com.tools20022.repository.entity.Negotiation#mmIndicationOfInterest
- * Negotiation.mmIndicationOfInterest}</li>
- * </ul>
- * </li>
- * <li>
- * {@linkplain com.tools20022.metamodel.MMBusinessComponent#getDerivationComponent
- * derivationComponent} =
- * <ul>
- * <li>{@linkplain com.tools20022.repository.msg.IndicationOfInterest1
- * IndicationOfInterest1}</li>
  * </ul>
  * </li>
  * <li>
@@ -172,13 +172,13 @@ public class BuyOrSellIndicationOfInterest {
 		{
 			elementContext_lazy = () -> BuyOrSellIndicationOfInterest.mmObject();
 			isDerived = false;
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "NegotiationDetails";
 			definition = "Negotiation details associated with an indication of interest.";
 			maxOccurs = 1;
 			minOccurs = 1;
 			opposite_lazy = () -> com.tools20022.repository.entity.Negotiation.mmIndicationOfInterest;
-			aggregation = com.tools20022.metamodel.MMAggregation.NONE;
+			aggregation = MMAggregation.NONE;
 			type_lazy = () -> com.tools20022.repository.entity.Negotiation.mmObject();
 		}
 	};
@@ -223,12 +223,12 @@ public class BuyOrSellIndicationOfInterest {
 		{
 			elementContext_lazy = () -> BuyOrSellIndicationOfInterest.mmObject();
 			isDerived = false;
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "Organisations";
 			definition = "Organisations to be included from the targeted list of firms, managed by the vendor, receiving indications.";
 			minOccurs = 1;
 			opposite_lazy = () -> com.tools20022.repository.entity.Organisation.mmRelatedIndicationOfInterest;
-			aggregation = com.tools20022.metamodel.MMAggregation.NONE;
+			aggregation = MMAggregation.NONE;
 			type_lazy = () -> com.tools20022.repository.entity.Organisation.mmObject();
 		}
 	};
@@ -263,7 +263,7 @@ public class BuyOrSellIndicationOfInterest {
 		{
 			elementContext_lazy = () -> BuyOrSellIndicationOfInterest.mmObject();
 			isDerived = false;
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "RelativeSize";
 			definition = "Indicates a quantity in relative size.";
 			maxOccurs = 1;
@@ -311,10 +311,10 @@ public class BuyOrSellIndicationOfInterest {
 	 */
 	public static final MMBusinessAttribute mmPrice = new MMBusinessAttribute() {
 		{
-			derivation_lazy = () -> Arrays.asList(com.tools20022.repository.msg.IndicationOfInterest1.mmPrice);
+			derivation_lazy = () -> Arrays.asList(IndicationOfInterest1.mmPrice);
 			elementContext_lazy = () -> BuyOrSellIndicationOfInterest.mmObject();
 			isDerived = false;
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "Price";
 			definition = "Indicates the price of the instrument, applicable to the indication of interest.";
 			maxOccurs = 1;
@@ -360,10 +360,10 @@ public class BuyOrSellIndicationOfInterest {
 	 */
 	public static final MMBusinessAttribute mmQualityIndication = new MMBusinessAttribute() {
 		{
-			derivation_lazy = () -> Arrays.asList(com.tools20022.repository.msg.IndicationOfInterest1.mmQualityIndication);
+			derivation_lazy = () -> Arrays.asList(IndicationOfInterest1.mmQualityIndication);
 			elementContext_lazy = () -> BuyOrSellIndicationOfInterest.mmObject();
 			isDerived = false;
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "QualityIndication";
 			definition = "Indicates the relative quality of the indication of interest.";
 			maxOccurs = 1;
@@ -412,10 +412,10 @@ public class BuyOrSellIndicationOfInterest {
 	 */
 	public static final MMBusinessAttribute mmNaturalIndicator = new MMBusinessAttribute() {
 		{
-			derivation_lazy = () -> Arrays.asList(com.tools20022.repository.msg.IndicationOfInterest1.mmNaturalIndicator);
+			derivation_lazy = () -> Arrays.asList(IndicationOfInterest1.mmNaturalIndicator);
 			elementContext_lazy = () -> BuyOrSellIndicationOfInterest.mmObject();
 			isDerived = false;
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "NaturalIndicator";
 			definition = "Indicates whether or not the indication of interest is the result of an existing agency order or a facilitation position resulting from an agency order, not from principal trading or order solicitation activity.";
 			maxOccurs = 1;
@@ -460,10 +460,10 @@ public class BuyOrSellIndicationOfInterest {
 	 */
 	public static final MMBusinessAttribute mmQualifier = new MMBusinessAttribute() {
 		{
-			derivation_lazy = () -> Arrays.asList(com.tools20022.repository.msg.IndicationOfInterest1.mmQualifier);
+			derivation_lazy = () -> Arrays.asList(IndicationOfInterest1.mmQualifier);
 			elementContext_lazy = () -> BuyOrSellIndicationOfInterest.mmObject();
 			isDerived = false;
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "Qualifier";
 			definition = "Qualifies the use of the indication of interest.";
 			maxOccurs = 1;
@@ -510,10 +510,10 @@ public class BuyOrSellIndicationOfInterest {
 	 */
 	public static final MMBusinessAttribute mmNumberOfLegs = new MMBusinessAttribute() {
 		{
-			derivation_lazy = () -> Arrays.asList(com.tools20022.repository.msg.IndicationOfInterest1.mmNumberOfLegs);
+			derivation_lazy = () -> Arrays.asList(IndicationOfInterest1.mmNumberOfLegs);
 			elementContext_lazy = () -> BuyOrSellIndicationOfInterest.mmObject();
 			isDerived = false;
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "NumberOfLegs";
 			definition = "In case of multilegs indication of interest, indicates number of instrumentLeg repeating group .";
 			maxOccurs = 1;
@@ -569,16 +569,16 @@ public class BuyOrSellIndicationOfInterest {
 	 */
 	public static final MMBusinessAssociationEnd mmSpreadToBenchmark = new MMBusinessAssociationEnd() {
 		{
-			derivation_lazy = () -> Arrays.asList(com.tools20022.repository.msg.IndicationOfInterest1.mmSpreadAndBenchmarkCurveDetails, com.tools20022.repository.msg.Order6.mmSpreadAndBenchmarkCurveDetails);
+			derivation_lazy = () -> Arrays.asList(IndicationOfInterest1.mmSpreadAndBenchmarkCurveDetails, Order6.mmSpreadAndBenchmarkCurveDetails);
 			elementContext_lazy = () -> BuyOrSellIndicationOfInterest.mmObject();
 			isDerived = false;
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "SpreadToBenchmark";
 			definition = "Indicates the spread to benchmark details of an indication of interest.";
 			maxOccurs = 1;
 			minOccurs = 1;
 			opposite_lazy = () -> com.tools20022.repository.entity.Spread.mmRelatedIndicationOfInterest;
-			aggregation = com.tools20022.metamodel.MMAggregation.NONE;
+			aggregation = MMAggregation.NONE;
 			type_lazy = () -> com.tools20022.repository.entity.Spread.mmObject();
 		}
 	};
@@ -620,13 +620,13 @@ public class BuyOrSellIndicationOfInterest {
 		{
 			elementContext_lazy = () -> BuyOrSellIndicationOfInterest.mmObject();
 			isDerived = false;
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "SwapSpread";
 			definition = "Indicates the swap spread details of an indication of interest.";
 			maxOccurs = 1;
 			minOccurs = 1;
 			opposite_lazy = () -> com.tools20022.repository.entity.Spread.mmIndicationOfInterest;
-			aggregation = com.tools20022.metamodel.MMAggregation.NONE;
+			aggregation = MMAggregation.NONE;
 			type_lazy = () -> com.tools20022.repository.entity.Spread.mmObject();
 		}
 	};
@@ -678,15 +678,15 @@ public class BuyOrSellIndicationOfInterest {
 	 */
 	public static final MMBusinessAssociationEnd mmTwoLegTransaction = new MMBusinessAssociationEnd() {
 		{
-			derivation_lazy = () -> Arrays.asList(com.tools20022.repository.msg.IndicationOfInterest1.mmTwoLegTransactionDetails);
+			derivation_lazy = () -> Arrays.asList(IndicationOfInterest1.mmTwoLegTransactionDetails);
 			elementContext_lazy = () -> BuyOrSellIndicationOfInterest.mmObject();
 			isDerived = false;
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "TwoLegTransaction";
 			definition = "Securities Financing is the process of lending or borrowing cash or securities against securities or cash collateral. It aims at optimising liquidity, support a trading strategy, or increase settlement efficiency.";
 			minOccurs = 0;
 			opposite_lazy = () -> com.tools20022.repository.entity.SecuritiesFinancing.mmRelatedIndicationOfInterest;
-			aggregation = com.tools20022.metamodel.MMAggregation.NONE;
+			aggregation = MMAggregation.NONE;
 			type_lazy = () -> com.tools20022.repository.entity.SecuritiesFinancing.mmObject();
 		}
 	};
@@ -721,7 +721,7 @@ public class BuyOrSellIndicationOfInterest {
 		{
 			elementContext_lazy = () -> BuyOrSellIndicationOfInterest.mmObject();
 			isDerived = false;
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "RoutingType";
 			definition = "Indicates if the type of routing is allowed or blocked.";
 			maxOccurs = 1;
@@ -759,7 +759,7 @@ public class BuyOrSellIndicationOfInterest {
 		{
 			elementContext_lazy = () -> BuyOrSellIndicationOfInterest.mmObject();
 			isDerived = false;
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "OrganisationListName";
 			definition = "Name of the organisation list.";
 			maxOccurs = 1;
@@ -771,19 +771,16 @@ public class BuyOrSellIndicationOfInterest {
 	static public MMBusinessComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMBusinessComponent() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "BuyOrSellIndicationOfInterest";
 				definition = "Intention to buy or sell a financial Instrument.";
 				associationDomain_lazy = () -> Arrays.asList(com.tools20022.repository.entity.Organisation.mmRelatedIndicationOfInterest, com.tools20022.repository.entity.SecuritiesFinancing.mmRelatedIndicationOfInterest,
 						com.tools20022.repository.entity.Spread.mmRelatedIndicationOfInterest, com.tools20022.repository.entity.Spread.mmIndicationOfInterest, com.tools20022.repository.entity.Negotiation.mmIndicationOfInterest);
-				element_lazy = () -> Arrays.asList(com.tools20022.repository.entity.BuyOrSellIndicationOfInterest.mmNegotiationDetails, com.tools20022.repository.entity.BuyOrSellIndicationOfInterest.mmOrganisations,
-						com.tools20022.repository.entity.BuyOrSellIndicationOfInterest.mmRelativeSize, com.tools20022.repository.entity.BuyOrSellIndicationOfInterest.mmPrice,
-						com.tools20022.repository.entity.BuyOrSellIndicationOfInterest.mmQualityIndication, com.tools20022.repository.entity.BuyOrSellIndicationOfInterest.mmNaturalIndicator,
-						com.tools20022.repository.entity.BuyOrSellIndicationOfInterest.mmQualifier, com.tools20022.repository.entity.BuyOrSellIndicationOfInterest.mmNumberOfLegs,
-						com.tools20022.repository.entity.BuyOrSellIndicationOfInterest.mmSpreadToBenchmark, com.tools20022.repository.entity.BuyOrSellIndicationOfInterest.mmSwapSpread,
-						com.tools20022.repository.entity.BuyOrSellIndicationOfInterest.mmTwoLegTransaction, com.tools20022.repository.entity.BuyOrSellIndicationOfInterest.mmRoutingType,
-						com.tools20022.repository.entity.BuyOrSellIndicationOfInterest.mmOrganisationListName);
+				element_lazy = () -> Arrays.asList(BuyOrSellIndicationOfInterest.mmNegotiationDetails, BuyOrSellIndicationOfInterest.mmOrganisations, BuyOrSellIndicationOfInterest.mmRelativeSize, BuyOrSellIndicationOfInterest.mmPrice,
+						BuyOrSellIndicationOfInterest.mmQualityIndication, BuyOrSellIndicationOfInterest.mmNaturalIndicator, BuyOrSellIndicationOfInterest.mmQualifier, BuyOrSellIndicationOfInterest.mmNumberOfLegs,
+						BuyOrSellIndicationOfInterest.mmSpreadToBenchmark, BuyOrSellIndicationOfInterest.mmSwapSpread, BuyOrSellIndicationOfInterest.mmTwoLegTransaction, BuyOrSellIndicationOfInterest.mmRoutingType,
+						BuyOrSellIndicationOfInterest.mmOrganisationListName);
 				derivationComponent_lazy = () -> Arrays.asList(IndicationOfInterest1.mmObject());
 			}
 		});

@@ -19,7 +19,9 @@ package com.tools20022.repository.codeset;
 
 import com.tools20022.metamodel.MMCode;
 import com.tools20022.metamodel.MMCodeSet;
+import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.codeset.InstructionProcessingStatusCode;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -100,7 +102,7 @@ public class TransactionProcessingStatus1Code extends InstructionProcessingStatu
 	 */
 	public static final MMCode mmCancelled = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Cancelled";
 			owner_lazy = () -> TransactionProcessingStatus1Code.mmObject();
 		}
@@ -123,7 +125,7 @@ public class TransactionProcessingStatus1Code extends InstructionProcessingStatu
 	 */
 	public static final MMCode mmPendingCancellation = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PendingCancellation";
 			owner_lazy = () -> TransactionProcessingStatus1Code.mmObject();
 		}
@@ -146,7 +148,7 @@ public class TransactionProcessingStatus1Code extends InstructionProcessingStatu
 	 */
 	public static final MMCode mmCancellationRequested = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CancellationRequested";
 			owner_lazy = () -> TransactionProcessingStatus1Code.mmObject();
 		}
@@ -169,7 +171,7 @@ public class TransactionProcessingStatus1Code extends InstructionProcessingStatu
 	 */
 	public static final MMCode mmPendingProcessing = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PendingProcessing";
 			owner_lazy = () -> TransactionProcessingStatus1Code.mmObject();
 		}
@@ -192,7 +194,7 @@ public class TransactionProcessingStatus1Code extends InstructionProcessingStatu
 	 */
 	public static final MMCode mmAcknowledgedAccepted = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AcknowledgedAccepted";
 			owner_lazy = () -> TransactionProcessingStatus1Code.mmObject();
 		}
@@ -215,7 +217,7 @@ public class TransactionProcessingStatus1Code extends InstructionProcessingStatu
 	 */
 	public static final MMCode mmRejected = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Rejected";
 			owner_lazy = () -> TransactionProcessingStatus1Code.mmObject();
 		}
@@ -238,7 +240,7 @@ public class TransactionProcessingStatus1Code extends InstructionProcessingStatu
 	 */
 	public static final MMCode mmInRepair = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "InRepair";
 			owner_lazy = () -> TransactionProcessingStatus1Code.mmObject();
 		}
@@ -247,15 +249,13 @@ public class TransactionProcessingStatus1Code extends InstructionProcessingStatu
 	static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
 				example = Arrays.asList("CAND");
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "TransactionProcessingStatus1Code";
 				definition = "Provides the processing status of a transaction (at account servicer level).";
-				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.TransactionProcessingStatus1Code.mmCancelled, com.tools20022.repository.codeset.TransactionProcessingStatus1Code.mmPendingCancellation,
-						com.tools20022.repository.codeset.TransactionProcessingStatus1Code.mmCancellationRequested, com.tools20022.repository.codeset.TransactionProcessingStatus1Code.mmPendingProcessing,
-						com.tools20022.repository.codeset.TransactionProcessingStatus1Code.mmAcknowledgedAccepted, com.tools20022.repository.codeset.TransactionProcessingStatus1Code.mmRejected,
-						com.tools20022.repository.codeset.TransactionProcessingStatus1Code.mmInRepair);
+				code_lazy = () -> Arrays.asList(TransactionProcessingStatus1Code.mmCancelled, TransactionProcessingStatus1Code.mmPendingCancellation, TransactionProcessingStatus1Code.mmCancellationRequested,
+						TransactionProcessingStatus1Code.mmPendingProcessing, TransactionProcessingStatus1Code.mmAcknowledgedAccepted, TransactionProcessingStatus1Code.mmRejected, TransactionProcessingStatus1Code.mmInRepair);
 				trace_lazy = () -> InstructionProcessingStatusCode.mmObject();
 			}
 		});

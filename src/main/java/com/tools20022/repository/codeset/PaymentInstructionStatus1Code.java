@@ -19,7 +19,9 @@ package com.tools20022.repository.codeset;
 
 import com.tools20022.metamodel.MMCode;
 import com.tools20022.metamodel.MMCodeSet;
+import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.codeset.PaymentInstructionStatusCode;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -137,7 +139,7 @@ public class PaymentInstructionStatus1Code extends PaymentInstructionStatusCode 
 	 */
 	public static final MMCode mmAccepted = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Accepted";
 			owner_lazy = () -> PaymentInstructionStatus1Code.mmObject();
 		}
@@ -160,7 +162,7 @@ public class PaymentInstructionStatus1Code extends PaymentInstructionStatusCode 
 	 */
 	public static final MMCode mmValidated = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Validated";
 			owner_lazy = () -> PaymentInstructionStatus1Code.mmObject();
 		}
@@ -183,7 +185,7 @@ public class PaymentInstructionStatus1Code extends PaymentInstructionStatusCode 
 	 */
 	public static final MMCode mmAuthorised = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Authorised";
 			owner_lazy = () -> PaymentInstructionStatus1Code.mmObject();
 		}
@@ -206,7 +208,7 @@ public class PaymentInstructionStatus1Code extends PaymentInstructionStatusCode 
 	 */
 	public static final MMCode mmInvalid = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Invalid";
 			owner_lazy = () -> PaymentInstructionStatus1Code.mmObject();
 		}
@@ -229,7 +231,7 @@ public class PaymentInstructionStatus1Code extends PaymentInstructionStatusCode 
 	 */
 	public static final MMCode mmMatched = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Matched";
 			owner_lazy = () -> PaymentInstructionStatus1Code.mmObject();
 		}
@@ -252,7 +254,7 @@ public class PaymentInstructionStatus1Code extends PaymentInstructionStatusCode 
 	 */
 	public static final MMCode mmUnmatched = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Unmatched";
 			owner_lazy = () -> PaymentInstructionStatus1Code.mmObject();
 		}
@@ -275,7 +277,7 @@ public class PaymentInstructionStatus1Code extends PaymentInstructionStatusCode 
 	 */
 	public static final MMCode mmMismatched = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Mismatched";
 			owner_lazy = () -> PaymentInstructionStatus1Code.mmObject();
 		}
@@ -298,7 +300,7 @@ public class PaymentInstructionStatus1Code extends PaymentInstructionStatusCode 
 	 */
 	public static final MMCode mmSettlementEligible = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SettlementEligible";
 			owner_lazy = () -> PaymentInstructionStatus1Code.mmObject();
 		}
@@ -321,7 +323,7 @@ public class PaymentInstructionStatus1Code extends PaymentInstructionStatusCode 
 	 */
 	public static final MMCode mmSettlementMature = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SettlementMature";
 			owner_lazy = () -> PaymentInstructionStatus1Code.mmObject();
 		}
@@ -344,7 +346,7 @@ public class PaymentInstructionStatus1Code extends PaymentInstructionStatusCode 
 	 */
 	public static final MMCode mmSuspended = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Suspended";
 			owner_lazy = () -> PaymentInstructionStatus1Code.mmObject();
 		}
@@ -367,7 +369,7 @@ public class PaymentInstructionStatus1Code extends PaymentInstructionStatusCode 
 	 */
 	public static final MMCode mmPendingCancellation = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PendingCancellation";
 			owner_lazy = () -> PaymentInstructionStatus1Code.mmObject();
 		}
@@ -390,7 +392,7 @@ public class PaymentInstructionStatus1Code extends PaymentInstructionStatusCode 
 	 */
 	public static final MMCode mmPendingSettlement = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PendingSettlement";
 			owner_lazy = () -> PaymentInstructionStatus1Code.mmObject();
 		}
@@ -413,7 +415,7 @@ public class PaymentInstructionStatus1Code extends PaymentInstructionStatusCode 
 	 */
 	public static final MMCode mmPendingFailingSettlement = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PendingFailingSettlement";
 			owner_lazy = () -> PaymentInstructionStatus1Code.mmObject();
 		}
@@ -436,7 +438,7 @@ public class PaymentInstructionStatus1Code extends PaymentInstructionStatusCode 
 	 */
 	public static final MMCode mmSenderMultilateralLimitRelated = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SenderMultilateralLimitRelated";
 			owner_lazy = () -> PaymentInstructionStatus1Code.mmObject();
 		}
@@ -459,7 +461,7 @@ public class PaymentInstructionStatus1Code extends PaymentInstructionStatusCode 
 	 */
 	public static final MMCode mmReceiverMultilateralLimitRelated = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ReceiverMultilateralLimitRelated";
 			owner_lazy = () -> PaymentInstructionStatus1Code.mmObject();
 		}
@@ -482,7 +484,7 @@ public class PaymentInstructionStatus1Code extends PaymentInstructionStatusCode 
 	 */
 	public static final MMCode mmSenderReceiverBilateralLimitRelated = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SenderReceiverBilateralLimitRelated";
 			owner_lazy = () -> PaymentInstructionStatus1Code.mmObject();
 		}
@@ -505,7 +507,7 @@ public class PaymentInstructionStatus1Code extends PaymentInstructionStatusCode 
 	 */
 	public static final MMCode mmSettled = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Settled";
 			owner_lazy = () -> PaymentInstructionStatus1Code.mmObject();
 		}
@@ -528,7 +530,7 @@ public class PaymentInstructionStatus1Code extends PaymentInstructionStatusCode 
 	 */
 	public static final MMCode mmRejected = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Rejected";
 			owner_lazy = () -> PaymentInstructionStatus1Code.mmObject();
 		}
@@ -551,7 +553,7 @@ public class PaymentInstructionStatus1Code extends PaymentInstructionStatusCode 
 	 */
 	public static final MMCode mmCancelled = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Cancelled";
 			owner_lazy = () -> PaymentInstructionStatus1Code.mmObject();
 		}
@@ -574,7 +576,7 @@ public class PaymentInstructionStatus1Code extends PaymentInstructionStatusCode 
 	 */
 	public static final MMCode mmFinalised = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Finalised";
 			owner_lazy = () -> PaymentInstructionStatus1Code.mmObject();
 		}
@@ -583,21 +585,17 @@ public class PaymentInstructionStatus1Code extends PaymentInstructionStatusCode 
 	static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
 				example = Arrays.asList("ACPD");
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "PaymentInstructionStatus1Code";
 				definition = "Specifies the state of a payment.";
-				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.PaymentInstructionStatus1Code.mmAccepted, com.tools20022.repository.codeset.PaymentInstructionStatus1Code.mmValidated,
-						com.tools20022.repository.codeset.PaymentInstructionStatus1Code.mmAuthorised, com.tools20022.repository.codeset.PaymentInstructionStatus1Code.mmInvalid,
-						com.tools20022.repository.codeset.PaymentInstructionStatus1Code.mmMatched, com.tools20022.repository.codeset.PaymentInstructionStatus1Code.mmUnmatched,
-						com.tools20022.repository.codeset.PaymentInstructionStatus1Code.mmMismatched, com.tools20022.repository.codeset.PaymentInstructionStatus1Code.mmSettlementEligible,
-						com.tools20022.repository.codeset.PaymentInstructionStatus1Code.mmSettlementMature, com.tools20022.repository.codeset.PaymentInstructionStatus1Code.mmSuspended,
-						com.tools20022.repository.codeset.PaymentInstructionStatus1Code.mmPendingCancellation, com.tools20022.repository.codeset.PaymentInstructionStatus1Code.mmPendingSettlement,
-						com.tools20022.repository.codeset.PaymentInstructionStatus1Code.mmPendingFailingSettlement, com.tools20022.repository.codeset.PaymentInstructionStatus1Code.mmSenderMultilateralLimitRelated,
-						com.tools20022.repository.codeset.PaymentInstructionStatus1Code.mmReceiverMultilateralLimitRelated, com.tools20022.repository.codeset.PaymentInstructionStatus1Code.mmSenderReceiverBilateralLimitRelated,
-						com.tools20022.repository.codeset.PaymentInstructionStatus1Code.mmSettled, com.tools20022.repository.codeset.PaymentInstructionStatus1Code.mmRejected,
-						com.tools20022.repository.codeset.PaymentInstructionStatus1Code.mmCancelled, com.tools20022.repository.codeset.PaymentInstructionStatus1Code.mmFinalised);
+				code_lazy = () -> Arrays.asList(PaymentInstructionStatus1Code.mmAccepted, PaymentInstructionStatus1Code.mmValidated, PaymentInstructionStatus1Code.mmAuthorised, PaymentInstructionStatus1Code.mmInvalid,
+						PaymentInstructionStatus1Code.mmMatched, PaymentInstructionStatus1Code.mmUnmatched, PaymentInstructionStatus1Code.mmMismatched, PaymentInstructionStatus1Code.mmSettlementEligible,
+						PaymentInstructionStatus1Code.mmSettlementMature, PaymentInstructionStatus1Code.mmSuspended, PaymentInstructionStatus1Code.mmPendingCancellation, PaymentInstructionStatus1Code.mmPendingSettlement,
+						PaymentInstructionStatus1Code.mmPendingFailingSettlement, PaymentInstructionStatus1Code.mmSenderMultilateralLimitRelated, PaymentInstructionStatus1Code.mmReceiverMultilateralLimitRelated,
+						PaymentInstructionStatus1Code.mmSenderReceiverBilateralLimitRelated, PaymentInstructionStatus1Code.mmSettled, PaymentInstructionStatus1Code.mmRejected, PaymentInstructionStatus1Code.mmCancelled,
+						PaymentInstructionStatus1Code.mmFinalised);
 				trace_lazy = () -> PaymentInstructionStatusCode.mmObject();
 			}
 		});

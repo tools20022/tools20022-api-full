@@ -19,6 +19,8 @@ package com.tools20022.repository.codeset;
 
 import com.tools20022.metamodel.MMCode;
 import com.tools20022.metamodel.MMCodeSet;
+import com.tools20022.metamodel.MMRegistrationStatus;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -27,6 +29,20 @@ import java.util.concurrent.atomic.AtomicReference;
  * <p>
  * <strong>Constant fields:</strong>
  * <ul>
+ * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getDerivation derivation}
+ * =
+ * <ul>
+ * <li>
+ * {@linkplain com.tools20022.repository.codeset.CorporateActionEventStatus2Code
+ * CorporateActionEventStatus2Code}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.codeset.CorporateActionEventStatus1Code
+ * CorporateActionEventStatus1Code}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.codeset.CorporateActionEventStatus3Code
+ * CorporateActionEventStatus3Code}</li>
+ * </ul>
+ * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getCode code} =
  * <ul>
  * <li>
@@ -47,20 +63,6 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>
  * {@linkplain com.tools20022.repository.codeset.CorporateActionEventStatusCode#mmInactive
  * CorporateActionEventStatusCode.mmInactive}</li>
- * </ul>
- * </li>
- * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getDerivation derivation}
- * =
- * <ul>
- * <li>
- * {@linkplain com.tools20022.repository.codeset.CorporateActionEventStatus2Code
- * CorporateActionEventStatus2Code}</li>
- * <li>
- * {@linkplain com.tools20022.repository.codeset.CorporateActionEventStatus1Code
- * CorporateActionEventStatus1Code}</li>
- * <li>
- * {@linkplain com.tools20022.repository.codeset.CorporateActionEventStatus3Code
- * CorporateActionEventStatus3Code}</li>
  * </ul>
  * </li>
  * <li>
@@ -110,7 +112,7 @@ public class CorporateActionEventStatusCode {
 	 */
 	public static final MMCode mmActive = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "Active";
 			definition = "The CA event is active.";
 			owner_lazy = () -> CorporateActionEventStatusCode.mmObject();
@@ -142,7 +144,7 @@ public class CorporateActionEventStatusCode {
 	 */
 	public static final MMCode mmDeactivated = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "Deactivated";
 			definition = "The CA event is deactivated. The clients cannot send instruction anymore.";
 			owner_lazy = () -> CorporateActionEventStatusCode.mmObject();
@@ -175,7 +177,7 @@ public class CorporateActionEventStatusCode {
 	 */
 	public static final MMCode mmExpired = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "Expired";
 			definition = "The CA event is expired, no more processing, claims, transformations take place.";
 			owner_lazy = () -> CorporateActionEventStatusCode.mmObject();
@@ -205,7 +207,7 @@ public class CorporateActionEventStatusCode {
 	 */
 	public static final MMCode mmCancelled = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "Cancelled";
 			definition = "The CA event is cancelled.";
 			owner_lazy = () -> CorporateActionEventStatusCode.mmObject();
@@ -235,7 +237,7 @@ public class CorporateActionEventStatusCode {
 	 */
 	public static final MMCode mmWithdrawn = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "Withdrawn";
 			definition = "The CA event is withrawn, ie, cancelled by the market.";
 			owner_lazy = () -> CorporateActionEventStatusCode.mmObject();
@@ -269,7 +271,7 @@ public class CorporateActionEventStatusCode {
 	 */
 	public static final MMCode mmInactive = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "Inactive";
 			definition = "Option is not active and can no longer be responded to. Any responses already processed against this option will remain valid, eg, expired option.";
 			owner_lazy = () -> CorporateActionEventStatusCode.mmObject();
@@ -280,14 +282,13 @@ public class CorporateActionEventStatusCode {
 	static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
 				example = Arrays.asList("ACTI");
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "CorporateActionEventStatusCode";
 				definition = "Specifies the status of the CA event or option.";
-				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.CorporateActionEventStatusCode.mmActive, com.tools20022.repository.codeset.CorporateActionEventStatusCode.mmDeactivated,
-						com.tools20022.repository.codeset.CorporateActionEventStatusCode.mmExpired, com.tools20022.repository.codeset.CorporateActionEventStatusCode.mmCancelled,
-						com.tools20022.repository.codeset.CorporateActionEventStatusCode.mmWithdrawn, com.tools20022.repository.codeset.CorporateActionEventStatusCode.mmInactive);
+				code_lazy = () -> Arrays.asList(CorporateActionEventStatusCode.mmActive, CorporateActionEventStatusCode.mmDeactivated, CorporateActionEventStatusCode.mmExpired, CorporateActionEventStatusCode.mmCancelled,
+						CorporateActionEventStatusCode.mmWithdrawn, CorporateActionEventStatusCode.mmInactive);
 				derivation_lazy = () -> Arrays.asList(CorporateActionEventStatus2Code.mmObject(), CorporateActionEventStatus1Code.mmObject(), CorporateActionEventStatus3Code.mmObject());
 			}
 		});

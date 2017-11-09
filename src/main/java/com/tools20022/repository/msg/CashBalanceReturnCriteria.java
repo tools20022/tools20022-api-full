@@ -19,7 +19,9 @@ package com.tools20022.repository.msg;
 
 import com.tools20022.metamodel.MMMessageAttribute;
 import com.tools20022.metamodel.MMMessageComponent;
+import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.datatype.RequestedIndicator;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -98,7 +100,7 @@ public class CashBalanceReturnCriteria {
 			componentContext_lazy = () -> CashBalanceReturnCriteria.mmObject();
 			isDerived = false;
 			xmlTag = "TpInd";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "TypeIndicator";
 			definition = "Indicates whether the balance type is requested.";
 			maxOccurs = 1;
@@ -140,7 +142,7 @@ public class CashBalanceReturnCriteria {
 			componentContext_lazy = () -> CashBalanceReturnCriteria.mmObject();
 			isDerived = false;
 			xmlTag = "StsInd";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "StatusIndicator";
 			definition = "Indicates whether the balance status is requested.";
 			maxOccurs = 1;
@@ -182,7 +184,7 @@ public class CashBalanceReturnCriteria {
 			componentContext_lazy = () -> CashBalanceReturnCriteria.mmObject();
 			isDerived = false;
 			xmlTag = "ValDtInd";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ValueDateIndicator";
 			definition = "Indicates whether the value date is requested.";
 			maxOccurs = 1;
@@ -224,7 +226,7 @@ public class CashBalanceReturnCriteria {
 			componentContext_lazy = () -> CashBalanceReturnCriteria.mmObject();
 			isDerived = false;
 			xmlTag = "NbOfPmtsInd";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "NumberOfPaymentsIndicator";
 			definition = "Indicates whether the number of payment is requested.";
 			maxOccurs = 1;
@@ -236,10 +238,10 @@ public class CashBalanceReturnCriteria {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.CashBalanceReturnCriteria.mmTypeIndicator, com.tools20022.repository.msg.CashBalanceReturnCriteria.mmStatusIndicator,
-						com.tools20022.repository.msg.CashBalanceReturnCriteria.mmValueDateIndicator, com.tools20022.repository.msg.CashBalanceReturnCriteria.mmNumberOfPaymentsIndicator);
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+				messageElement_lazy = () -> Arrays.asList(CashBalanceReturnCriteria.mmTypeIndicator, CashBalanceReturnCriteria.mmStatusIndicator, CashBalanceReturnCriteria.mmValueDateIndicator,
+						CashBalanceReturnCriteria.mmNumberOfPaymentsIndicator);
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 				name = "CashBalanceReturnCriteria";
 				definition = "Defines the criteria used to report on the cash balance.";
 			}

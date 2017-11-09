@@ -20,12 +20,13 @@ package com.tools20022.repository.msg;
 import com.tools20022.metamodel.MMMessageAssociationEnd;
 import com.tools20022.metamodel.MMMessageAttribute;
 import com.tools20022.metamodel.MMMessageComponent;
+import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.datatype.ActiveOrHistoricCurrencyAndAmount;
 import com.tools20022.repository.datatype.ISODate;
 import com.tools20022.repository.datatype.Max140Text;
 import com.tools20022.repository.datatype.TrueFalseIndicator;
-import com.tools20022.repository.entity.Garnishment;
-import com.tools20022.repository.entity.UltimateDebtorRole;
+import com.tools20022.repository.entity.*;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -116,11 +117,11 @@ public class Garnishment1 {
 	 */
 	public static final MMMessageAssociationEnd mmType = new MMMessageAssociationEnd() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.PaymentObligation.mmAssociatedDocument;
+			businessElementTrace_lazy = () -> PaymentObligation.mmAssociatedDocument;
 			componentContext_lazy = () -> Garnishment1.mmObject();
 			isDerived = false;
 			xmlTag = "Tp";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Type";
 			definition = "Specifies the type of garnishment.";
 			maxOccurs = 1;
@@ -169,7 +170,7 @@ public class Garnishment1 {
 			componentContext_lazy = () -> Garnishment1.mmObject();
 			isDerived = false;
 			xmlTag = "Grnshee";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Garnishee";
 			definition = "Ultimate party that owes an amount of money to the (ultimate) creditor, in this case, to the garnisher.";
 			maxOccurs = 1;
@@ -214,11 +215,11 @@ public class Garnishment1 {
 	 */
 	public static final MMMessageAssociationEnd mmGarnishmentAdministrator = new MMMessageAssociationEnd() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Party.mmIdentification;
+			businessElementTrace_lazy = () -> Party.mmIdentification;
 			componentContext_lazy = () -> Garnishment1.mmObject();
 			isDerived = false;
 			xmlTag = "GrnshmtAdmstr";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "GarnishmentAdministrator";
 			definition = "Party on the credit side of the transaction who administers the garnishment on behalf of the ultimate beneficiary.";
 			maxOccurs = 1;
@@ -264,11 +265,11 @@ public class Garnishment1 {
 	 */
 	public static final MMMessageAttribute mmReferenceNumber = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Tax.mmIdentification;
+			businessElementTrace_lazy = () -> Tax.mmIdentification;
 			componentContext_lazy = () -> Garnishment1.mmObject();
 			isDerived = false;
 			xmlTag = "RefNb";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ReferenceNumber";
 			definition = "Reference information that is specific to the agency receiving the garnishment.";
 			maxOccurs = 1;
@@ -310,11 +311,11 @@ public class Garnishment1 {
 	 */
 	public static final MMMessageAttribute mmDate = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Trade.mmTradeDateTime;
+			businessElementTrace_lazy = () -> Trade.mmTradeDateTime;
 			componentContext_lazy = () -> Garnishment1.mmObject();
 			isDerived = false;
 			xmlTag = "Dt";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Date";
 			definition = "Date of payment which garnishment was taken from.";
 			maxOccurs = 1;
@@ -357,11 +358,11 @@ public class Garnishment1 {
 	 */
 	public static final MMMessageAttribute mmRemittedAmount = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Document.mmRemittedAmount;
+			businessElementTrace_lazy = () -> Document.mmRemittedAmount;
 			componentContext_lazy = () -> Garnishment1.mmObject();
 			isDerived = false;
 			xmlTag = "RmtdAmt";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "RemittedAmount";
 			definition = "Amount of money remitted for the referred document.";
 			maxOccurs = 1;
@@ -407,11 +408,11 @@ public class Garnishment1 {
 	 */
 	public static final MMMessageAttribute mmFamilyMedicalInsuranceIndicator = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.PersonProfile.mmFamilyMedicalInsuranceIndicator;
+			businessElementTrace_lazy = () -> PersonProfile.mmFamilyMedicalInsuranceIndicator;
 			componentContext_lazy = () -> Garnishment1.mmObject();
 			isDerived = false;
 			xmlTag = "FmlyMdclInsrncInd";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "FamilyMedicalInsuranceIndicator";
 			definition = "Indicates if the person to whom the garnishment applies (that is, the ultimate debtor) has family medical insurance coverage available. ";
 			maxOccurs = 1;
@@ -457,11 +458,11 @@ public class Garnishment1 {
 	 */
 	public static final MMMessageAttribute mmEmployeeTerminationIndicator = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.PersonProfile.mmEmployeeTerminationIndicator;
+			businessElementTrace_lazy = () -> PersonProfile.mmEmployeeTerminationIndicator;
 			componentContext_lazy = () -> Garnishment1.mmObject();
 			isDerived = false;
 			xmlTag = "MplyeeTermntnInd";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "EmployeeTerminationIndicator";
 			definition = "Indicates if the employment of the person to whom the garnishment applies (that is, the ultimate debtor) has been terminated.";
 			maxOccurs = 1;
@@ -473,12 +474,11 @@ public class Garnishment1 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.Garnishment1.mmType, com.tools20022.repository.msg.Garnishment1.mmGarnishee, com.tools20022.repository.msg.Garnishment1.mmGarnishmentAdministrator,
-						com.tools20022.repository.msg.Garnishment1.mmReferenceNumber, com.tools20022.repository.msg.Garnishment1.mmDate, com.tools20022.repository.msg.Garnishment1.mmRemittedAmount,
-						com.tools20022.repository.msg.Garnishment1.mmFamilyMedicalInsuranceIndicator, com.tools20022.repository.msg.Garnishment1.mmEmployeeTerminationIndicator);
+				messageElement_lazy = () -> Arrays.asList(Garnishment1.mmType, Garnishment1.mmGarnishee, Garnishment1.mmGarnishmentAdministrator, Garnishment1.mmReferenceNumber, Garnishment1.mmDate, Garnishment1.mmRemittedAmount,
+						Garnishment1.mmFamilyMedicalInsuranceIndicator, Garnishment1.mmEmployeeTerminationIndicator);
 				trace_lazy = () -> Garnishment.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "Garnishment1";
 				definition = "Provides remittance information about a payment for garnishment-related purposes. ";
 			}

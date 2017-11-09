@@ -19,8 +19,12 @@ package com.tools20022.repository.msg;
 
 import com.tools20022.metamodel.MMMessageAttribute;
 import com.tools20022.metamodel.MMMessageComponent;
+import com.tools20022.metamodel.MMRegistrationStatus;
+import com.tools20022.repository.area.setr.*;
 import com.tools20022.repository.datatype.Max35Text;
 import com.tools20022.repository.entity.GenericIdentification;
+import com.tools20022.repository.entity.Party;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -180,14 +184,14 @@ public class AdditionalReference9 {
 	 */
 	public static final MMMessageAttribute mmReference = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.GenericIdentification.mmIdentification;
+			businessElementTrace_lazy = () -> GenericIdentification.mmIdentification;
 			componentContext_lazy = () -> AdditionalReference9.mmObject();
 			isDerived = false;
 			xmlTag = "Ref";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Reference";
 			definition = "Reference identifying a set of messages.";
-			previousVersion_lazy = () -> com.tools20022.repository.msg.AdditionalReference8.mmReference;
+			previousVersion_lazy = () -> AdditionalReference8.mmReference;
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> Max35Text.mmObject();
@@ -234,14 +238,14 @@ public class AdditionalReference9 {
 	 */
 	public static final MMMessageAttribute mmReferenceIssuer = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Party.mmIdentification;
+			businessElementTrace_lazy = () -> Party.mmIdentification;
 			componentContext_lazy = () -> AdditionalReference9.mmObject();
 			isDerived = false;
 			xmlTag = "RefIssr";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ReferenceIssuer";
 			definition = "Issuer of the reference.";
-			previousVersion_lazy = () -> com.tools20022.repository.msg.AdditionalReference8.mmReferenceIssuer;
+			previousVersion_lazy = () -> AdditionalReference8.mmReferenceIssuer;
 			maxOccurs = 1;
 			minOccurs = 0;
 			complexType_lazy = () -> com.tools20022.repository.msg.PartyIdentification113.mmObject();
@@ -285,10 +289,10 @@ public class AdditionalReference9 {
 			componentContext_lazy = () -> AdditionalReference9.mmObject();
 			isDerived = false;
 			xmlTag = "MsgNm";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "MessageName";
 			definition = "Name of the message.";
-			previousVersion_lazy = () -> com.tools20022.repository.msg.AdditionalReference8.mmMessageName;
+			previousVersion_lazy = () -> AdditionalReference8.mmMessageName;
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> Max35Text.mmObject();
@@ -298,21 +302,16 @@ public class AdditionalReference9 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.AdditionalReference9.mmReference, com.tools20022.repository.msg.AdditionalReference9.mmReferenceIssuer,
-						com.tools20022.repository.msg.AdditionalReference9.mmMessageName);
-				messageBuildingBlock_lazy = () -> Arrays.asList(com.tools20022.repository.area.setr.SubscriptionBulkOrderConfirmationV04.mmPoolReference, com.tools20022.repository.area.setr.RedemptionBulkOrderV04.mmPoolReference,
-						com.tools20022.repository.area.setr.SubscriptionBulkOrderCancellationRequestV04.mmPoolReference, com.tools20022.repository.area.setr.RedemptionOrderV04.mmPoolReference,
-						com.tools20022.repository.area.setr.SubscriptionOrderCancellationRequestV04.mmPoolReference, com.tools20022.repository.area.setr.RedemptionBulkOrderConfirmationCancellationInstructionV02.mmPoolReference,
-						com.tools20022.repository.area.setr.RedemptionBulkOrderConfirmationV04.mmPoolReference, com.tools20022.repository.area.setr.RedemptionBulkOrderCancellationRequestV04.mmPoolReference,
-						com.tools20022.repository.area.setr.SwitchOrderConfirmationV04.mmPoolReference, com.tools20022.repository.area.setr.SubscriptionOrderConfirmationV04.mmPoolReference,
-						com.tools20022.repository.area.setr.SubscriptionOrderConfirmationCancellationInstructionV02.mmPoolReference, com.tools20022.repository.area.setr.SwitchOrderCancellationRequestV04.mmPoolReference,
-						com.tools20022.repository.area.setr.SwitchOrderV04.mmPoolReference, com.tools20022.repository.area.setr.RedemptionOrderConfirmationCancellationInstructionV02.mmPoolReference,
-						com.tools20022.repository.area.setr.RedemptionOrderConfirmationV04.mmPoolReference, com.tools20022.repository.area.setr.SubscriptionBulkOrderConfirmationCancellationInstructionV02.mmPoolReference,
-						com.tools20022.repository.area.setr.RedemptionOrderCancellationRequestV04.mmPoolReference, com.tools20022.repository.area.setr.SubscriptionBulkOrderV04.mmPoolReference,
-						com.tools20022.repository.area.setr.SwitchOrderConfirmationCancellationInstructionV02.mmPoolReference, com.tools20022.repository.area.setr.SubscriptionOrderV04.mmPoolReference);
+				messageElement_lazy = () -> Arrays.asList(AdditionalReference9.mmReference, AdditionalReference9.mmReferenceIssuer, AdditionalReference9.mmMessageName);
+				messageBuildingBlock_lazy = () -> Arrays.asList(SubscriptionBulkOrderConfirmationV04.mmPoolReference, RedemptionBulkOrderV04.mmPoolReference, SubscriptionBulkOrderCancellationRequestV04.mmPoolReference,
+						RedemptionOrderV04.mmPoolReference, SubscriptionOrderCancellationRequestV04.mmPoolReference, RedemptionBulkOrderConfirmationCancellationInstructionV02.mmPoolReference,
+						RedemptionBulkOrderConfirmationV04.mmPoolReference, RedemptionBulkOrderCancellationRequestV04.mmPoolReference, SwitchOrderConfirmationV04.mmPoolReference, SubscriptionOrderConfirmationV04.mmPoolReference,
+						SubscriptionOrderConfirmationCancellationInstructionV02.mmPoolReference, SwitchOrderCancellationRequestV04.mmPoolReference, SwitchOrderV04.mmPoolReference,
+						RedemptionOrderConfirmationCancellationInstructionV02.mmPoolReference, RedemptionOrderConfirmationV04.mmPoolReference, SubscriptionBulkOrderConfirmationCancellationInstructionV02.mmPoolReference,
+						RedemptionOrderCancellationRequestV04.mmPoolReference, SubscriptionBulkOrderV04.mmPoolReference, SwitchOrderConfirmationCancellationInstructionV02.mmPoolReference, SubscriptionOrderV04.mmPoolReference);
 				trace_lazy = () -> GenericIdentification.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "AdditionalReference9";
 				definition = "References a related message or provides another reference, such as a pool reference, linking a set of messages. The party which issued the related reference may be the Sender of the referenced message or a party other than the Sender.";
 				previousVersion_lazy = () -> AdditionalReference8.mmObject();

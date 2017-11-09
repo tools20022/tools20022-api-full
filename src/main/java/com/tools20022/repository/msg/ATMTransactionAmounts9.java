@@ -19,11 +19,13 @@ package com.tools20022.repository.msg;
 
 import com.tools20022.metamodel.MMMessageAttribute;
 import com.tools20022.metamodel.MMMessageComponent;
+import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.codeset.ActiveCurrencyCode;
 import com.tools20022.repository.codeset.ATMMediaType2Code;
 import com.tools20022.repository.datatype.Number;
 import com.tools20022.repository.datatype.TrueFalseIndicator;
 import com.tools20022.repository.entity.Limit;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -108,11 +110,11 @@ public class ATMTransactionAmounts9 {
 	 */
 	public static final MMMessageAttribute mmMediaType = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Limit.mmType;
+			businessElementTrace_lazy = () -> Limit.mmType;
 			componentContext_lazy = () -> ATMTransactionAmounts9.mmObject();
 			isDerived = false;
 			xmlTag = "MdiaTp";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "MediaType";
 			definition = "Type of media.";
 			maxOccurs = 1;
@@ -156,11 +158,11 @@ public class ATMTransactionAmounts9 {
 	 */
 	public static final MMMessageAttribute mmCurrency = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Limit.mmCurrency;
+			businessElementTrace_lazy = () -> Limit.mmCurrency;
 			componentContext_lazy = () -> ATMTransactionAmounts9.mmObject();
 			isDerived = false;
 			xmlTag = "Ccy";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Currency";
 			definition = "Currency of the media.";
 			maxOccurs = 1;
@@ -201,7 +203,7 @@ public class ATMTransactionAmounts9 {
 			componentContext_lazy = () -> ATMTransactionAmounts9.mmObject();
 			isDerived = false;
 			xmlTag = "MinNb";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "MinimumNumber";
 			definition = "Minimum number of media.";
 			maxOccurs = 1;
@@ -242,7 +244,7 @@ public class ATMTransactionAmounts9 {
 			componentContext_lazy = () -> ATMTransactionAmounts9.mmObject();
 			isDerived = false;
 			xmlTag = "MaxNb";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "MaximumNumber";
 			definition = "Maximum number of media.";
 			maxOccurs = 1;
@@ -285,7 +287,7 @@ public class ATMTransactionAmounts9 {
 			componentContext_lazy = () -> ATMTransactionAmounts9.mmObject();
 			isDerived = false;
 			xmlTag = "DispFlg";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "DisplayFlag";
 			definition = "True if limits may be displayed to the customer on the ATM.";
 			maxOccurs = 1;
@@ -297,11 +299,11 @@ public class ATMTransactionAmounts9 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.ATMTransactionAmounts9.mmMediaType, com.tools20022.repository.msg.ATMTransactionAmounts9.mmCurrency,
-						com.tools20022.repository.msg.ATMTransactionAmounts9.mmMinimumNumber, com.tools20022.repository.msg.ATMTransactionAmounts9.mmMaximumNumber, com.tools20022.repository.msg.ATMTransactionAmounts9.mmDisplayFlag);
+				messageElement_lazy = () -> Arrays.asList(ATMTransactionAmounts9.mmMediaType, ATMTransactionAmounts9.mmCurrency, ATMTransactionAmounts9.mmMinimumNumber, ATMTransactionAmounts9.mmMaximumNumber,
+						ATMTransactionAmounts9.mmDisplayFlag);
 				trace_lazy = () -> Limit.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "ATMTransactionAmounts9";
 				definition = "Limit of deposited media for the customer.";
 			}

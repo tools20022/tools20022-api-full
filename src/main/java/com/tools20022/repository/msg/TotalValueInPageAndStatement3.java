@@ -19,6 +19,10 @@ package com.tools20022.repository.msg;
 
 import com.tools20022.metamodel.MMMessageAssociationEnd;
 import com.tools20022.metamodel.MMMessageComponent;
+import com.tools20022.metamodel.MMRegistrationStatus;
+import com.tools20022.repository.area.semt.SecuritiesBalanceCustodyReport002V09;
+import com.tools20022.repository.entity.AssetHolding;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -105,7 +109,7 @@ public class TotalValueInPageAndStatement3 {
 			componentContext_lazy = () -> TotalValueInPageAndStatement3.mmObject();
 			isDerived = false;
 			xmlTag = "TtlHldgsValOfPg";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "TotalHoldingsValueOfPage";
 			definition = "Total value of positions reported in this message.";
 			maxOccurs = 1;
@@ -149,7 +153,7 @@ public class TotalValueInPageAndStatement3 {
 			componentContext_lazy = () -> TotalValueInPageAndStatement3.mmObject();
 			isDerived = false;
 			xmlTag = "TtlHldgsValOfStmt";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "TotalHoldingsValueOfStatement";
 			definition = "Total value of positions reported in this statement (a statement may comprise one or more messages).";
 			maxOccurs = 1;
@@ -193,7 +197,7 @@ public class TotalValueInPageAndStatement3 {
 			componentContext_lazy = () -> TotalValueInPageAndStatement3.mmObject();
 			isDerived = false;
 			xmlTag = "TtlBookValOfStmt";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "TotalBookValueOfStatement";
 			definition = "Total book value of positions reported in this statement (a statement may comprise one or more messages).";
 			maxOccurs = 1;
@@ -239,11 +243,11 @@ public class TotalValueInPageAndStatement3 {
 	 */
 	public static final MMMessageAssociationEnd mmTotalEligibleCollateralValue = new MMMessageAssociationEnd() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.AssetHolding.mmEligibleCollateralValue;
+			businessElementTrace_lazy = () -> AssetHolding.mmEligibleCollateralValue;
 			componentContext_lazy = () -> TotalValueInPageAndStatement3.mmObject();
 			isDerived = false;
 			xmlTag = "TtlElgblCollVal";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "TotalEligibleCollateralValue";
 			definition = "Total value of the holdings eligible for collateral purposes reported in this statement (a statement may comprise one or more messages).";
 			maxOccurs = 1;
@@ -256,11 +260,11 @@ public class TotalValueInPageAndStatement3 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.TotalValueInPageAndStatement3.mmTotalHoldingsValueOfPage, com.tools20022.repository.msg.TotalValueInPageAndStatement3.mmTotalHoldingsValueOfStatement,
-						com.tools20022.repository.msg.TotalValueInPageAndStatement3.mmTotalBookValueOfStatement, com.tools20022.repository.msg.TotalValueInPageAndStatement3.mmTotalEligibleCollateralValue);
-				messageBuildingBlock_lazy = () -> Arrays.asList(com.tools20022.repository.area.semt.SecuritiesBalanceCustodyReport002V09.mmAccountBaseCurrencyTotalAmounts);
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				messageElement_lazy = () -> Arrays.asList(TotalValueInPageAndStatement3.mmTotalHoldingsValueOfPage, TotalValueInPageAndStatement3.mmTotalHoldingsValueOfStatement, TotalValueInPageAndStatement3.mmTotalBookValueOfStatement,
+						TotalValueInPageAndStatement3.mmTotalEligibleCollateralValue);
+				messageBuildingBlock_lazy = () -> Arrays.asList(SecuritiesBalanceCustodyReport002V09.mmAccountBaseCurrencyTotalAmounts);
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "TotalValueInPageAndStatement3";
 				definition = "Totals for the value of the holdings reported in the statement or page.";
 			}

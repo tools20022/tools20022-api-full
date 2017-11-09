@@ -18,7 +18,11 @@
 package com.tools20022.repository.entity;
 
 import com.tools20022.metamodel.MMBusinessComponent;
+import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.entity.UndertakingPartyRole;
+import com.tools20022.repository.GeneratedRepository;
+import com.tools20022.repository.msg.Undertaking1;
+import com.tools20022.repository.msg.Undertaking3;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -68,11 +72,11 @@ public class UndertakingConfirmer extends UndertakingPartyRole {
 	static public MMBusinessComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMBusinessComponent() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "UndertakingConfirmer";
 				definition = "Party that adds its confirmation to the undertaking.";
-				derivationElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.Undertaking1.mmConfirmer, com.tools20022.repository.msg.Undertaking3.mmConfirmationPartyType);
+				derivationElement_lazy = () -> Arrays.asList(Undertaking1.mmConfirmer, Undertaking3.mmConfirmationPartyType);
 				superType_lazy = () -> UndertakingPartyRole.mmObject();
 			}
 		});

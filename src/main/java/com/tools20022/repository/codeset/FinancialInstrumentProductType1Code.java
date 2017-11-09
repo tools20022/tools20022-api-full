@@ -19,7 +19,9 @@ package com.tools20022.repository.codeset;
 
 import com.tools20022.metamodel.MMCode;
 import com.tools20022.metamodel.MMCodeSet;
+import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.codeset.FinancialInstrumentProductTypeCode;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -92,7 +94,7 @@ public class FinancialInstrumentProductType1Code extends FinancialInstrumentProd
 	 */
 	public static final MMCode mmCertificateOfDeposit = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CertificateOfDeposit";
 			owner_lazy = () -> FinancialInstrumentProductType1Code.mmObject();
 		}
@@ -115,7 +117,7 @@ public class FinancialInstrumentProductType1Code extends FinancialInstrumentProd
 	 */
 	public static final MMCode mmCommercialPaper = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CommercialPaper";
 			owner_lazy = () -> FinancialInstrumentProductType1Code.mmObject();
 		}
@@ -138,7 +140,7 @@ public class FinancialInstrumentProductType1Code extends FinancialInstrumentProd
 	 */
 	public static final MMCode mmOtherShortTermDebtSecurities = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "OtherShortTermDebtSecurities";
 			owner_lazy = () -> FinancialInstrumentProductType1Code.mmObject();
 		}
@@ -161,7 +163,7 @@ public class FinancialInstrumentProductType1Code extends FinancialInstrumentProd
 	 */
 	public static final MMCode mmAssetBackedCommercialPaper = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AssetBackedCommercialPaper";
 			owner_lazy = () -> FinancialInstrumentProductType1Code.mmObject();
 		}
@@ -184,7 +186,7 @@ public class FinancialInstrumentProductType1Code extends FinancialInstrumentProd
 	 */
 	public static final MMCode mmFloatingRateNote = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "FloatingRateNote";
 			owner_lazy = () -> FinancialInstrumentProductType1Code.mmObject();
 		}
@@ -207,7 +209,7 @@ public class FinancialInstrumentProductType1Code extends FinancialInstrumentProd
 	 */
 	public static final MMCode mmCallAccountCallMoney = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CallAccountCallMoney";
 			owner_lazy = () -> FinancialInstrumentProductType1Code.mmObject();
 		}
@@ -230,7 +232,7 @@ public class FinancialInstrumentProductType1Code extends FinancialInstrumentProd
 	 */
 	public static final MMCode mmDeposit = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Deposit";
 			owner_lazy = () -> FinancialInstrumentProductType1Code.mmObject();
 		}
@@ -239,14 +241,13 @@ public class FinancialInstrumentProductType1Code extends FinancialInstrumentProd
 	static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "FinancialInstrumentProductType1Code";
 				definition = "Specifies the type of product or financial instrument.";
-				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.FinancialInstrumentProductType1Code.mmCertificateOfDeposit, com.tools20022.repository.codeset.FinancialInstrumentProductType1Code.mmCommercialPaper,
-						com.tools20022.repository.codeset.FinancialInstrumentProductType1Code.mmOtherShortTermDebtSecurities, com.tools20022.repository.codeset.FinancialInstrumentProductType1Code.mmAssetBackedCommercialPaper,
-						com.tools20022.repository.codeset.FinancialInstrumentProductType1Code.mmFloatingRateNote, com.tools20022.repository.codeset.FinancialInstrumentProductType1Code.mmCallAccountCallMoney,
-						com.tools20022.repository.codeset.FinancialInstrumentProductType1Code.mmDeposit);
+				code_lazy = () -> Arrays.asList(FinancialInstrumentProductType1Code.mmCertificateOfDeposit, FinancialInstrumentProductType1Code.mmCommercialPaper, FinancialInstrumentProductType1Code.mmOtherShortTermDebtSecurities,
+						FinancialInstrumentProductType1Code.mmAssetBackedCommercialPaper, FinancialInstrumentProductType1Code.mmFloatingRateNote, FinancialInstrumentProductType1Code.mmCallAccountCallMoney,
+						FinancialInstrumentProductType1Code.mmDeposit);
 				trace_lazy = () -> FinancialInstrumentProductTypeCode.mmObject();
 			}
 		});

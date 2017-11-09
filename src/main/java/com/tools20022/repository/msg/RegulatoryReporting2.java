@@ -20,8 +20,10 @@ package com.tools20022.repository.msg;
 import com.tools20022.metamodel.MMMessageAssociationEnd;
 import com.tools20022.metamodel.MMMessageAttribute;
 import com.tools20022.metamodel.MMMessageComponent;
+import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.codeset.RegulatoryReportingType1Code;
 import com.tools20022.repository.entity.RegulatoryReport;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -107,11 +109,11 @@ public class RegulatoryReporting2 {
 	 */
 	public static final MMMessageAttribute mmDebitCreditReportingIndicator = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.RegulatoryReport.mmDebitCreditReportingIndicator;
+			businessElementTrace_lazy = () -> RegulatoryReport.mmDebitCreditReportingIndicator;
 			componentContext_lazy = () -> RegulatoryReporting2.mmObject();
 			isDerived = false;
 			xmlTag = "DbtCdtRptgInd";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "DebitCreditReportingIndicator";
 			definition = "Identifies whether the regulatory reporting information applies to the debit side, to the credit side or to both debit and credit sides of the transaction.";
 			maxOccurs = 1;
@@ -153,11 +155,11 @@ public class RegulatoryReporting2 {
 	 */
 	public static final MMMessageAssociationEnd mmAuthority = new MMMessageAssociationEnd() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.RegulatoryReport.mmAuthority;
+			businessElementTrace_lazy = () -> RegulatoryReport.mmAuthority;
 			componentContext_lazy = () -> RegulatoryReporting2.mmObject();
 			isDerived = false;
 			xmlTag = "Authrty";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Authority";
 			definition = "Entity requiring the regulatory reporting information.";
 			maxOccurs = 1;
@@ -205,7 +207,7 @@ public class RegulatoryReporting2 {
 			componentContext_lazy = () -> RegulatoryReporting2.mmObject();
 			isDerived = false;
 			xmlTag = "RgltryDtls";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "RegulatoryDetails";
 			definition = "Details related to the regulatory reporting information.";
 			maxOccurs = 1;
@@ -218,11 +220,10 @@ public class RegulatoryReporting2 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.RegulatoryReporting2.mmDebitCreditReportingIndicator, com.tools20022.repository.msg.RegulatoryReporting2.mmAuthority,
-						com.tools20022.repository.msg.RegulatoryReporting2.mmRegulatoryDetails);
+				messageElement_lazy = () -> Arrays.asList(RegulatoryReporting2.mmDebitCreditReportingIndicator, RegulatoryReporting2.mmAuthority, RegulatoryReporting2.mmRegulatoryDetails);
 				trace_lazy = () -> RegulatoryReport.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "RegulatoryReporting2";
 				definition = "Information needed due to regulatory and/or statutory requirements.";
 			}

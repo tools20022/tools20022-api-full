@@ -19,7 +19,9 @@ package com.tools20022.repository.codeset;
 
 import com.tools20022.metamodel.MMCode;
 import com.tools20022.metamodel.MMCodeSet;
+import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.codeset.SenderTriggerCode;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -84,7 +86,7 @@ public class SenderTrigger1Code extends SenderTriggerCode {
 	 */
 	public static final MMCode mmDateTime = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "DateTime";
 			owner_lazy = () -> SenderTrigger1Code.mmObject();
 		}
@@ -107,7 +109,7 @@ public class SenderTrigger1Code extends SenderTriggerCode {
 	 */
 	public static final MMCode mmManual = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Manual";
 			owner_lazy = () -> SenderTrigger1Code.mmObject();
 		}
@@ -130,7 +132,7 @@ public class SenderTrigger1Code extends SenderTriggerCode {
 	 */
 	public static final MMCode mmSufficientlySigned = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SufficientlySigned";
 			owner_lazy = () -> SenderTrigger1Code.mmObject();
 		}
@@ -153,7 +155,7 @@ public class SenderTrigger1Code extends SenderTriggerCode {
 	 */
 	public static final MMCode mmForced = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Forced";
 			owner_lazy = () -> SenderTrigger1Code.mmObject();
 		}
@@ -162,12 +164,11 @@ public class SenderTrigger1Code extends SenderTriggerCode {
 	static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "SenderTrigger1Code";
 				definition = "Specifies the trigger code used by the sender to generate the file.";
-				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.SenderTrigger1Code.mmDateTime, com.tools20022.repository.codeset.SenderTrigger1Code.mmManual,
-						com.tools20022.repository.codeset.SenderTrigger1Code.mmSufficientlySigned, com.tools20022.repository.codeset.SenderTrigger1Code.mmForced);
+				code_lazy = () -> Arrays.asList(SenderTrigger1Code.mmDateTime, SenderTrigger1Code.mmManual, SenderTrigger1Code.mmSufficientlySigned, SenderTrigger1Code.mmForced);
 				trace_lazy = () -> SenderTriggerCode.mmObject();
 			}
 		});

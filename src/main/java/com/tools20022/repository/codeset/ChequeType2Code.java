@@ -19,7 +19,9 @@ package com.tools20022.repository.codeset;
 
 import com.tools20022.metamodel.MMCode;
 import com.tools20022.metamodel.MMCodeSet;
+import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.codeset.ChequeTypeCode;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -90,7 +92,7 @@ public class ChequeType2Code extends ChequeTypeCode {
 	 */
 	public static final MMCode mmCustomerCheque = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CustomerCheque";
 			owner_lazy = () -> ChequeType2Code.mmObject();
 		}
@@ -113,7 +115,7 @@ public class ChequeType2Code extends ChequeTypeCode {
 	 */
 	public static final MMCode mmCertifiedCustomerCheque = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CertifiedCustomerCheque";
 			owner_lazy = () -> ChequeType2Code.mmObject();
 		}
@@ -136,7 +138,7 @@ public class ChequeType2Code extends ChequeTypeCode {
 	 */
 	public static final MMCode mmBankCheque = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "BankCheque";
 			owner_lazy = () -> ChequeType2Code.mmObject();
 		}
@@ -159,7 +161,7 @@ public class ChequeType2Code extends ChequeTypeCode {
 	 */
 	public static final MMCode mmDraft = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Draft";
 			owner_lazy = () -> ChequeType2Code.mmObject();
 		}
@@ -182,7 +184,7 @@ public class ChequeType2Code extends ChequeTypeCode {
 	 */
 	public static final MMCode mmElectronicDraft = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ElectronicDraft";
 			owner_lazy = () -> ChequeType2Code.mmObject();
 		}
@@ -191,13 +193,12 @@ public class ChequeType2Code extends ChequeTypeCode {
 	static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
 				example = Arrays.asList("CCHQ");
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "ChequeType2Code";
 				definition = "Specifies the type of cheque.";
-				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.ChequeType2Code.mmCustomerCheque, com.tools20022.repository.codeset.ChequeType2Code.mmCertifiedCustomerCheque,
-						com.tools20022.repository.codeset.ChequeType2Code.mmBankCheque, com.tools20022.repository.codeset.ChequeType2Code.mmDraft, com.tools20022.repository.codeset.ChequeType2Code.mmElectronicDraft);
+				code_lazy = () -> Arrays.asList(ChequeType2Code.mmCustomerCheque, ChequeType2Code.mmCertifiedCustomerCheque, ChequeType2Code.mmBankCheque, ChequeType2Code.mmDraft, ChequeType2Code.mmElectronicDraft);
 				trace_lazy = () -> ChequeTypeCode.mmObject();
 			}
 		});

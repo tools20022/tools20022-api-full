@@ -18,8 +18,10 @@
 package com.tools20022.repository.msgset;
 
 import com.tools20022.metamodel.MMMessageSet;
+import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.area.remt.RemittanceAdviceV03;
 import com.tools20022.repository.area.remt.RemittanceLocationAdviceV01;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -63,8 +65,8 @@ public class StandAloneRemittanceAdviceMaintenance20162017 {
 	final static public MMMessageSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageSet() {
 			{
-				businessProcessCatalogue_lazy = () -> com.tools20022.repository.GeneratedRepository.mmcatalogue;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+				businessProcessCatalogue_lazy = () -> GeneratedRepository.mmcatalogue;
+				registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 				name = "Stand-Alone Remittance Advice - Maintenance 2016 - 2017";
 				definition = "This document describes the ISO 20022 Stand-alone Remittance Advice message set. ";
 				messageDefinition_lazy = () -> Arrays.asList(RemittanceLocationAdviceV01.mmObject(), RemittanceAdviceV03.mmObject());

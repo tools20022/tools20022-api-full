@@ -19,8 +19,10 @@ package com.tools20022.repository.msg;
 
 import com.tools20022.metamodel.MMMessageAttribute;
 import com.tools20022.metamodel.MMMessageComponent;
+import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.datatype.ActiveCurrencyAndAmount;
 import com.tools20022.repository.datatype.Max10Text;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -97,7 +99,7 @@ public class ArrestedFunds1 {
 			componentContext_lazy = () -> ArrestedFunds1.mmObject();
 			isDerived = false;
 			xmlTag = "ArrstId";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ArrestIdentification";
 			definition = "Identification of the arrest order assigned by the account servicer.";
 			maxOccurs = 1;
@@ -138,7 +140,7 @@ public class ArrestedFunds1 {
 			componentContext_lazy = () -> ArrestedFunds1.mmObject();
 			isDerived = false;
 			xmlTag = "TtlAmt";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "TotalAmount";
 			definition = "Total amount owed subject to arrest.";
 			maxOccurs = 1;
@@ -180,7 +182,7 @@ public class ArrestedFunds1 {
 			componentContext_lazy = () -> ArrestedFunds1.mmObject();
 			isDerived = false;
 			xmlTag = "RmngUnpdAmt";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "RemainingUnpaidAmount";
 			definition = "Remaining unpaid amount out of total amount owed subject to arrest.";
 			maxOccurs = 1;
@@ -221,7 +223,7 @@ public class ArrestedFunds1 {
 			componentContext_lazy = () -> ArrestedFunds1.mmObject();
 			isDerived = false;
 			xmlTag = "ArrstdAmt";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ArrestedAmount";
 			definition = "Funds blocked for settlement of the arrest order.";
 			maxOccurs = 1;
@@ -233,10 +235,9 @@ public class ArrestedFunds1 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.ArrestedFunds1.mmArrestIdentification, com.tools20022.repository.msg.ArrestedFunds1.mmTotalAmount,
-						com.tools20022.repository.msg.ArrestedFunds1.mmRemainingUnpaidAmount, com.tools20022.repository.msg.ArrestedFunds1.mmArrestedAmount);
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+				messageElement_lazy = () -> Arrays.asList(ArrestedFunds1.mmArrestIdentification, ArrestedFunds1.mmTotalAmount, ArrestedFunds1.mmRemainingUnpaidAmount, ArrestedFunds1.mmArrestedAmount);
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 				name = "ArrestedFunds1";
 				definition = "Information about funds that have been arrested. ";
 			}

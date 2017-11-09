@@ -20,7 +20,9 @@ package com.tools20022.repository.msg;
 import com.tools20022.metamodel.MMMessageAssociationEnd;
 import com.tools20022.metamodel.MMMessageAttribute;
 import com.tools20022.metamodel.MMMessageComponent;
+import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.codeset.DataModification2Code;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -116,10 +118,10 @@ public class ModificationScope14 {
 			componentContext_lazy = () -> ModificationScope14.mmObject();
 			isDerived = false;
 			xmlTag = "ModScpIndctn";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ModificationScopeIndication";
 			definition = "Specifies the type of modification to be applied on a set of information.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.ModificationScope19.mmModificationScopeIndication);
+			nextVersions_lazy = () -> Arrays.asList(ModificationScope19.mmModificationScopeIndication);
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> DataModification2Code.mmObject();
@@ -167,10 +169,10 @@ public class ModificationScope14 {
 			componentContext_lazy = () -> ModificationScope14.mmObject();
 			isDerived = false;
 			xmlTag = "InvstrPrflVldtn";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "InvestorProfileValidation";
 			definition = "Detailed information about the party profile information.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.ModificationScope19.mmInvestorProfileValidation);
+			nextVersions_lazy = () -> Arrays.asList(ModificationScope19.mmInvestorProfileValidation);
 			maxOccurs = 1;
 			minOccurs = 1;
 			isComposite = true;
@@ -181,9 +183,9 @@ public class ModificationScope14 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.ModificationScope14.mmModificationScopeIndication, com.tools20022.repository.msg.ModificationScope14.mmInvestorProfileValidation);
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				messageElement_lazy = () -> Arrays.asList(ModificationScope14.mmModificationScopeIndication, ModificationScope14.mmInvestorProfileValidation);
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "ModificationScope14";
 				definition = "Scope of the modification to be applied on an identified set of information.";
 				nextVersions_lazy = () -> Arrays.asList(ModificationScope19.mmObject());

@@ -19,7 +19,9 @@ package com.tools20022.repository.codeset;
 
 import com.tools20022.metamodel.MMCode;
 import com.tools20022.metamodel.MMCodeSet;
+import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.codeset.ErrorSeverityCode;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -76,7 +78,7 @@ public class ErrorSeverity1Code extends ErrorSeverityCode {
 	 */
 	public static final MMCode mmFatal = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Fatal";
 			owner_lazy = () -> ErrorSeverity1Code.mmObject();
 		}
@@ -99,7 +101,7 @@ public class ErrorSeverity1Code extends ErrorSeverityCode {
 	 */
 	public static final MMCode mmTransient = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Transient";
 			owner_lazy = () -> ErrorSeverity1Code.mmObject();
 		}
@@ -108,11 +110,11 @@ public class ErrorSeverity1Code extends ErrorSeverityCode {
 	static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 				name = "ErrorSeverity1Code";
 				definition = "Indicates the severity of the related error.";
-				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.ErrorSeverity1Code.mmFatal, com.tools20022.repository.codeset.ErrorSeverity1Code.mmTransient);
+				code_lazy = () -> Arrays.asList(ErrorSeverity1Code.mmFatal, ErrorSeverity1Code.mmTransient);
 				trace_lazy = () -> ErrorSeverityCode.mmObject();
 			}
 		});

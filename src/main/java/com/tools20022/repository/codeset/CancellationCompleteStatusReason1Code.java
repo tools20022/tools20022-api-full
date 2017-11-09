@@ -19,7 +19,9 @@ package com.tools20022.repository.codeset;
 
 import com.tools20022.metamodel.MMCode;
 import com.tools20022.metamodel.MMCodeSet;
+import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.codeset.CancelledStatusReasonCode;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -89,7 +91,7 @@ public class CancellationCompleteStatusReason1Code extends CancelledStatusReason
 	 */
 	public static final MMCode mmCancelledByYourself = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CancelledByYourself";
 			owner_lazy = () -> CancellationCompleteStatusReason1Code.mmObject();
 		}
@@ -112,7 +114,7 @@ public class CancellationCompleteStatusReason1Code extends CancelledStatusReason
 	 */
 	public static final MMCode mmCancelledBySystem = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CancelledBySystem";
 			owner_lazy = () -> CancellationCompleteStatusReason1Code.mmObject();
 		}
@@ -135,7 +137,7 @@ public class CancellationCompleteStatusReason1Code extends CancelledStatusReason
 	 */
 	public static final MMCode mmCancelledByAgent = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CancelledByAgent";
 			owner_lazy = () -> CancellationCompleteStatusReason1Code.mmObject();
 		}
@@ -158,7 +160,7 @@ public class CancellationCompleteStatusReason1Code extends CancelledStatusReason
 	 */
 	public static final MMCode mmOther = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Other";
 			owner_lazy = () -> CancellationCompleteStatusReason1Code.mmObject();
 		}
@@ -167,13 +169,13 @@ public class CancellationCompleteStatusReason1Code extends CancelledStatusReason
 	static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
 				example = Arrays.asList("CANI");
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "CancellationCompleteStatusReason1Code";
 				definition = "Specifies the reason for a cancellation complete status.";
-				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.CancellationCompleteStatusReason1Code.mmCancelledByYourself, com.tools20022.repository.codeset.CancellationCompleteStatusReason1Code.mmCancelledBySystem,
-						com.tools20022.repository.codeset.CancellationCompleteStatusReason1Code.mmCancelledByAgent, com.tools20022.repository.codeset.CancellationCompleteStatusReason1Code.mmOther);
+				code_lazy = () -> Arrays.asList(CancellationCompleteStatusReason1Code.mmCancelledByYourself, CancellationCompleteStatusReason1Code.mmCancelledBySystem, CancellationCompleteStatusReason1Code.mmCancelledByAgent,
+						CancellationCompleteStatusReason1Code.mmOther);
 				trace_lazy = () -> CancelledStatusReasonCode.mmObject();
 			}
 		});

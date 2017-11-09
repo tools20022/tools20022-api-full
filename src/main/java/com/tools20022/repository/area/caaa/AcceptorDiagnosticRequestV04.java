@@ -20,6 +20,7 @@ package com.tools20022.repository.area.caaa;
 import com.tools20022.metamodel.MMMessageBuildingBlock;
 import com.tools20022.metamodel.MMMessageDefinition;
 import com.tools20022.metamodel.MMMessageDefinitionIdentifier;
+import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.area.AcceptortoAcquirerCardTransactionLatestVersion;
 import com.tools20022.repository.msg.AcceptorDiagnosticRequest4;
 import com.tools20022.repository.msg.ContentInformationType11;
@@ -37,6 +38,9 @@ import java.util.concurrent.atomic.AtomicReference;
  * <p>
  * <strong>Constant fields:</strong>
  * <ul>
+ * <li>
+ * {@linkplain com.tools20022.metamodel.MMMessageDefinition#getMessageDefinitionIdentifier
+ * messageDefinitionIdentifier} = {@code caaa.013.001.04}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMMessageDefinition#getBusinessArea
  * businessArea} =
  * {@linkplain com.tools20022.repository.area.AcceptortoAcquirerCardTransactionLatestVersion
@@ -71,9 +75,6 @@ import java.util.concurrent.atomic.AtomicReference;
  * AcceptorDiagnosticRequestV04.mmSecurityTrailer}</li>
  * </ul>
  * </li>
- * <li>
- * {@linkplain com.tools20022.metamodel.MMMessageDefinition#getMessageDefinitionIdentifier
- * messageDefinitionIdentifier} = {@code caaa.013.001.04}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -140,11 +141,11 @@ public class AcceptorDiagnosticRequestV04 {
 	public static final MMMessageBuildingBlock mmHeader = new MMMessageBuildingBlock() {
 		{
 			xmlTag = "Hdr";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Header";
 			definition = "Diagnostic request message management information.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.area.caaa.AcceptorDiagnosticRequestV05.mmHeader);
-			previousVersion_lazy = () -> com.tools20022.repository.area.caaa.AcceptorDiagnosticRequestV03.mmHeader;
+			nextVersions_lazy = () -> Arrays.asList(AcceptorDiagnosticRequestV05.mmHeader);
+			previousVersion_lazy = () -> AcceptorDiagnosticRequestV03.mmHeader;
 			maxOccurs = 1;
 			minOccurs = 1;
 			complexType_lazy = () -> Header10.mmObject();
@@ -190,11 +191,11 @@ public class AcceptorDiagnosticRequestV04 {
 	public static final MMMessageBuildingBlock mmDiagnosticRequest = new MMMessageBuildingBlock() {
 		{
 			xmlTag = "DgnstcReq";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "DiagnosticRequest";
 			definition = "Information related to the diagnostic request.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.area.caaa.AcceptorDiagnosticRequestV05.mmDiagnosticRequest);
-			previousVersion_lazy = () -> com.tools20022.repository.area.caaa.AcceptorDiagnosticRequestV03.mmDiagnosticRequest;
+			nextVersions_lazy = () -> Arrays.asList(AcceptorDiagnosticRequestV05.mmDiagnosticRequest);
+			previousVersion_lazy = () -> AcceptorDiagnosticRequestV03.mmDiagnosticRequest;
 			maxOccurs = 1;
 			minOccurs = 1;
 			complexType_lazy = () -> AcceptorDiagnosticRequest4.mmObject();
@@ -240,11 +241,11 @@ public class AcceptorDiagnosticRequestV04 {
 	public static final MMMessageBuildingBlock mmSecurityTrailer = new MMMessageBuildingBlock() {
 		{
 			xmlTag = "SctyTrlr";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SecurityTrailer";
 			definition = "Trailer of the message containing a MAC.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.area.caaa.AcceptorDiagnosticRequestV05.mmSecurityTrailer);
-			previousVersion_lazy = () -> com.tools20022.repository.area.caaa.AcceptorDiagnosticRequestV03.mmSecurityTrailer;
+			nextVersions_lazy = () -> Arrays.asList(AcceptorDiagnosticRequestV05.mmSecurityTrailer);
+			previousVersion_lazy = () -> AcceptorDiagnosticRequestV03.mmSecurityTrailer;
 			maxOccurs = 1;
 			minOccurs = 1;
 			complexType_lazy = () -> ContentInformationType11.mmObject();
@@ -254,7 +255,7 @@ public class AcceptorDiagnosticRequestV04 {
 	final static public MMMessageDefinition mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageDefinition() {
 			{
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "AcceptorDiagnosticRequestV04";
 				definition = "The AcceptorDiagnosticRequest message is sent by an acceptor (or its agent) to the acquirer (or its agent) , to check the end-to-end communication, to test the availability of this acquirer, or to validate the security environment.";
 				nextVersions_lazy = () -> Arrays.asList(AcceptorDiagnosticRequestV05.mmObject());
@@ -263,8 +264,7 @@ public class AcceptorDiagnosticRequestV04 {
 				rootElement = "Document";
 				xmlTag = "AccptrDgnstcReq";
 				businessArea_lazy = () -> AcceptortoAcquirerCardTransactionLatestVersion.mmObject();
-				messageBuildingBlock_lazy = () -> Arrays.asList(com.tools20022.repository.area.caaa.AcceptorDiagnosticRequestV04.mmHeader, com.tools20022.repository.area.caaa.AcceptorDiagnosticRequestV04.mmDiagnosticRequest,
-						com.tools20022.repository.area.caaa.AcceptorDiagnosticRequestV04.mmSecurityTrailer);
+				messageBuildingBlock_lazy = () -> Arrays.asList(AcceptorDiagnosticRequestV04.mmHeader, AcceptorDiagnosticRequestV04.mmDiagnosticRequest, AcceptorDiagnosticRequestV04.mmSecurityTrailer);
 				messageDefinitionIdentifier_lazy = () -> new MMMessageDefinitionIdentifier() {
 					{
 						businessArea = "caaa";

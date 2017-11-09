@@ -20,8 +20,11 @@ package com.tools20022.repository.msg;
 import com.tools20022.metamodel.MMMessageAssociationEnd;
 import com.tools20022.metamodel.MMMessageAttribute;
 import com.tools20022.metamodel.MMMessageComponent;
+import com.tools20022.metamodel.MMRegistrationStatus;
+import com.tools20022.repository.area.acmt.IdentificationVerificationRequestV01;
 import com.tools20022.repository.datatype.Max35Text;
 import com.tools20022.repository.entity.Account;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -111,7 +114,7 @@ public class IdentificationVerification1 {
 			componentContext_lazy = () -> IdentificationVerification1.mmObject();
 			isDerived = false;
 			xmlTag = "Id";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Identification";
 			definition = "Unique identification, as assigned by a sending party, to unambiguously identify the party and account identification information group within the message.";
 			maxOccurs = 1;
@@ -160,7 +163,7 @@ public class IdentificationVerification1 {
 			componentContext_lazy = () -> IdentificationVerification1.mmObject();
 			isDerived = false;
 			xmlTag = "PtyAndAcctId";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PartyAndAccountIdentification";
 			definition = "Party and/or account identification information for which verification is requested.";
 			maxOccurs = 1;
@@ -173,11 +176,11 @@ public class IdentificationVerification1 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.IdentificationVerification1.mmIdentification, com.tools20022.repository.msg.IdentificationVerification1.mmPartyAndAccountIdentification);
-				messageBuildingBlock_lazy = () -> Arrays.asList(com.tools20022.repository.area.acmt.IdentificationVerificationRequestV01.mmVerification);
+				messageElement_lazy = () -> Arrays.asList(IdentificationVerification1.mmIdentification, IdentificationVerification1.mmPartyAndAccountIdentification);
+				messageBuildingBlock_lazy = () -> Arrays.asList(IdentificationVerificationRequestV01.mmVerification);
 				trace_lazy = () -> Account.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "IdentificationVerification1";
 				definition = "Set of elements used to provide information concerning the identification data that is requested to be verified.";
 			}

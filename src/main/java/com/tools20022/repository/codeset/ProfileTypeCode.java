@@ -19,6 +19,8 @@ package com.tools20022.repository.codeset;
 
 import com.tools20022.metamodel.MMCode;
 import com.tools20022.metamodel.MMCodeSet;
+import com.tools20022.metamodel.MMRegistrationStatus;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -27,6 +29,13 @@ import java.util.concurrent.atomic.AtomicReference;
  * <p>
  * <strong>Constant fields:</strong>
  * <ul>
+ * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getDerivation derivation}
+ * =
+ * <ul>
+ * <li>{@linkplain com.tools20022.repository.codeset.ProfileType1Code
+ * ProfileType1Code}</li>
+ * </ul>
+ * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getCode code} =
  * <ul>
  * <li>{@linkplain com.tools20022.repository.codeset.ProfileTypeCode#mmTreasury
@@ -39,13 +48,6 @@ import java.util.concurrent.atomic.AtomicReference;
  * ProfileTypeCode.mmMarketMaker}</li>
  * <li>{@linkplain com.tools20022.repository.codeset.ProfileTypeCode#mmHedge
  * ProfileTypeCode.mmHedge}</li>
- * </ul>
- * </li>
- * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getDerivation derivation}
- * =
- * <ul>
- * <li>{@linkplain com.tools20022.repository.codeset.ProfileType1Code
- * ProfileType1Code}</li>
  * </ul>
  * </li>
  * <li>
@@ -92,7 +94,7 @@ public class ProfileTypeCode {
 	 */
 	public static final MMCode mmTreasury = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Treasury";
 			definition = "Trading system of federal securities in the retail market directly to the investor. The operation can be performed directly over the Internet.";
 			owner_lazy = () -> ProfileTypeCode.mmObject();
@@ -128,7 +130,7 @@ public class ProfileTypeCode {
 	 */
 	public static final MMCode mmHighFrequencyTrader = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "HighFrequencyTrader";
 			definition = "Investors operating through algorithms and send orders automatically according to the strategies defined by their managers. Through this access model, the participants of these servers are hosted primarily within the premises of Brazilian Market and significantly reduce the time of submission of offers to trading systems";
 			owner_lazy = () -> ProfileTypeCode.mmObject();
@@ -164,7 +166,7 @@ public class ProfileTypeCode {
 	 */
 	public static final MMCode mmMarketMaker = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "MarketMaker";
 			definition = "Agent liquidity, liquidity facilitator, promoter of business, specialist, market maker and liquidity provider are some designations given to those who propose to provide liquidity and minimum reference price for assets previously accredited, factors highlighted in the analysis of efficiency in capital markets.";
 			owner_lazy = () -> ProfileTypeCode.mmObject();
@@ -197,7 +199,7 @@ public class ProfileTypeCode {
 	 */
 	public static final MMCode mmHedge = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Hedge";
 			definition = "Investor shares that uses defensive operations (hedging), thus avoiding the risk of large swings.";
 			owner_lazy = () -> ProfileTypeCode.mmObject();
@@ -208,12 +210,11 @@ public class ProfileTypeCode {
 	static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "ProfileTypeCode";
 				definition = "Specifies the type of profile.";
-				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.ProfileTypeCode.mmTreasury, com.tools20022.repository.codeset.ProfileTypeCode.mmHighFrequencyTrader,
-						com.tools20022.repository.codeset.ProfileTypeCode.mmMarketMaker, com.tools20022.repository.codeset.ProfileTypeCode.mmHedge);
+				code_lazy = () -> Arrays.asList(ProfileTypeCode.mmTreasury, ProfileTypeCode.mmHighFrequencyTrader, ProfileTypeCode.mmMarketMaker, ProfileTypeCode.mmHedge);
 				derivation_lazy = () -> Arrays.asList(ProfileType1Code.mmObject());
 			}
 		});

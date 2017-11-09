@@ -19,8 +19,10 @@ package com.tools20022.repository.msg;
 
 import com.tools20022.metamodel.MMMessageAssociationEnd;
 import com.tools20022.metamodel.MMMessageComponent;
+import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.choice.PaymentIdentification4Choice;
 import com.tools20022.repository.entity.PaymentInstruction;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -113,10 +115,10 @@ public class TransactionModification3 {
 			componentContext_lazy = () -> TransactionModification3.mmObject();
 			isDerived = false;
 			xmlTag = "PmtId";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PaymentIdentification";
 			definition = "Reference to the instruction related to the payment for which a modification is requested.";
-			previousVersion_lazy = () -> com.tools20022.repository.msg.TransactionModification2.mmPaymentIdentification;
+			previousVersion_lazy = () -> TransactionModification2.mmPaymentIdentification;
 			maxOccurs = 1;
 			minOccurs = 1;
 			isComposite = true;
@@ -166,10 +168,10 @@ public class TransactionModification3 {
 			componentContext_lazy = () -> TransactionModification3.mmObject();
 			isDerived = false;
 			xmlTag = "NewPmtValSet";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "NewPaymentValueSet";
 			definition = "New payment values.";
-			previousVersion_lazy = () -> com.tools20022.repository.msg.TransactionModification2.mmNewPaymentValueSet;
+			previousVersion_lazy = () -> TransactionModification2.mmNewPaymentValueSet;
 			maxOccurs = 1;
 			minOccurs = 1;
 			isComposite = true;
@@ -180,10 +182,10 @@ public class TransactionModification3 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.TransactionModification3.mmPaymentIdentification, com.tools20022.repository.msg.TransactionModification3.mmNewPaymentValueSet);
+				messageElement_lazy = () -> Arrays.asList(TransactionModification3.mmPaymentIdentification, TransactionModification3.mmNewPaymentValueSet);
 				trace_lazy = () -> PaymentInstruction.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "TransactionModification3";
 				definition = "Contains the requested modifications. ";
 				previousVersion_lazy = () -> TransactionModification2.mmObject();

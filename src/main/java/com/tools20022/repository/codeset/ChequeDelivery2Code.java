@@ -19,7 +19,9 @@ package com.tools20022.repository.codeset;
 
 import com.tools20022.metamodel.MMCode;
 import com.tools20022.metamodel.MMCodeSet;
+import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.codeset.ChequeDeliveryCode;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -90,7 +92,7 @@ public class ChequeDelivery2Code extends ChequeDeliveryCode {
 	 */
 	public static final MMCode mmMailToFinalAgent = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "MailToFinalAgent";
 			owner_lazy = () -> ChequeDelivery2Code.mmObject();
 		}
@@ -113,7 +115,7 @@ public class ChequeDelivery2Code extends ChequeDeliveryCode {
 	 */
 	public static final MMCode mmCourierToFinalAgent = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CourierToFinalAgent";
 			owner_lazy = () -> ChequeDelivery2Code.mmObject();
 		}
@@ -136,7 +138,7 @@ public class ChequeDelivery2Code extends ChequeDeliveryCode {
 	 */
 	public static final MMCode mmPickUpByFinalAgent = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PickUpByFinalAgent";
 			owner_lazy = () -> ChequeDelivery2Code.mmObject();
 		}
@@ -159,7 +161,7 @@ public class ChequeDelivery2Code extends ChequeDeliveryCode {
 	 */
 	public static final MMCode mmRegisteredMailToFinalAgent = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "RegisteredMailToFinalAgent";
 			owner_lazy = () -> ChequeDelivery2Code.mmObject();
 		}
@@ -168,13 +170,12 @@ public class ChequeDelivery2Code extends ChequeDeliveryCode {
 	static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
 				example = Arrays.asList("MLFA");
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "ChequeDelivery2Code";
 				definition = "Specifies the method to be used in delivering a cheque to a party.";
-				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.ChequeDelivery2Code.mmMailToFinalAgent, com.tools20022.repository.codeset.ChequeDelivery2Code.mmCourierToFinalAgent,
-						com.tools20022.repository.codeset.ChequeDelivery2Code.mmPickUpByFinalAgent, com.tools20022.repository.codeset.ChequeDelivery2Code.mmRegisteredMailToFinalAgent);
+				code_lazy = () -> Arrays.asList(ChequeDelivery2Code.mmMailToFinalAgent, ChequeDelivery2Code.mmCourierToFinalAgent, ChequeDelivery2Code.mmPickUpByFinalAgent, ChequeDelivery2Code.mmRegisteredMailToFinalAgent);
 				trace_lazy = () -> ChequeDeliveryCode.mmObject();
 			}
 		});

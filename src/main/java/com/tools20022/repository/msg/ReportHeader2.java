@@ -20,9 +20,14 @@ package com.tools20022.repository.msg;
 import com.tools20022.metamodel.MMMessageAssociationEnd;
 import com.tools20022.metamodel.MMMessageAttribute;
 import com.tools20022.metamodel.MMMessageComponent;
+import com.tools20022.metamodel.MMRegistrationStatus;
+import com.tools20022.repository.area.camt.CaseStatusReportRequestV02;
+import com.tools20022.repository.area.camt.CaseStatusReportV03;
+import com.tools20022.repository.area.camt.NotificationOfCaseAssignmentV03;
 import com.tools20022.repository.choice.Party7Choice;
 import com.tools20022.repository.datatype.ISODateTime;
 import com.tools20022.repository.datatype.Max35Text;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -114,7 +119,7 @@ public class ReportHeader2 {
 			componentContext_lazy = () -> ReportHeader2.mmObject();
 			isDerived = false;
 			xmlTag = "Id";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Identification";
 			definition = "Point to point reference as assigned by the case assigner to unambiguously identify the case status report.";
 			maxOccurs = 1;
@@ -153,7 +158,7 @@ public class ReportHeader2 {
 			componentContext_lazy = () -> ReportHeader2.mmObject();
 			isDerived = false;
 			xmlTag = "Fr";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "From";
 			definition = "Party reporting the status of the investigation case.";
 			maxOccurs = 1;
@@ -193,7 +198,7 @@ public class ReportHeader2 {
 			componentContext_lazy = () -> ReportHeader2.mmObject();
 			isDerived = false;
 			xmlTag = "To";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "To";
 			definition = "Party to which the status of the case is reported.";
 			maxOccurs = 1;
@@ -234,7 +239,7 @@ public class ReportHeader2 {
 			componentContext_lazy = () -> ReportHeader2.mmObject();
 			isDerived = false;
 			xmlTag = "CreDtTm";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CreationDateTime";
 			definition = "Date and time at which the message was created.";
 			maxOccurs = 1;
@@ -246,12 +251,10 @@ public class ReportHeader2 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.ReportHeader2.mmIdentification, com.tools20022.repository.msg.ReportHeader2.mmFrom, com.tools20022.repository.msg.ReportHeader2.mmTo,
-						com.tools20022.repository.msg.ReportHeader2.mmCreationDateTime);
-				messageBuildingBlock_lazy = () -> Arrays.asList(com.tools20022.repository.area.camt.NotificationOfCaseAssignmentV03.mmHeader, com.tools20022.repository.area.camt.CaseStatusReportRequestV02.mmRequestHeader,
-						com.tools20022.repository.area.camt.CaseStatusReportV03.mmHeader);
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				messageElement_lazy = () -> Arrays.asList(ReportHeader2.mmIdentification, ReportHeader2.mmFrom, ReportHeader2.mmTo, ReportHeader2.mmCreationDateTime);
+				messageBuildingBlock_lazy = () -> Arrays.asList(NotificationOfCaseAssignmentV03.mmHeader, CaseStatusReportRequestV02.mmRequestHeader, CaseStatusReportV03.mmHeader);
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "ReportHeader2";
 				definition = "Specifies generic information about an investigation report.";
 			}

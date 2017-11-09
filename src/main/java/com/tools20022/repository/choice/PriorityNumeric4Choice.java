@@ -19,7 +19,9 @@ package com.tools20022.repository.choice;
 
 import com.tools20022.metamodel.MMChoiceComponent;
 import com.tools20022.metamodel.MMMessageAttribute;
+import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.datatype.Exact4NumericText;
+import com.tools20022.repository.GeneratedRepository;
 import com.tools20022.repository.msg.GenericIdentification30;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
@@ -105,10 +107,10 @@ public class PriorityNumeric4Choice {
 			componentContext_lazy = () -> PriorityNumeric4Choice.mmObject();
 			isDerived = false;
 			xmlTag = "Nmrc";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Numeric";
 			definition = "Specifies the execution priority of the instruction with a number between 0001 and 9999.";
-			previousVersion_lazy = () -> com.tools20022.repository.choice.PriorityNumeric1Choice.mmNumeric;
+			previousVersion_lazy = () -> PriorityNumeric1Choice.mmNumeric;
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> Exact4NumericText.mmObject();
@@ -156,10 +158,10 @@ public class PriorityNumeric4Choice {
 			componentContext_lazy = () -> PriorityNumeric4Choice.mmObject();
 			isDerived = false;
 			xmlTag = "Prtry";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Proprietary";
 			definition = "Specifies the execution priority of the instruction with a proprietary scheme.";
-			previousVersion_lazy = () -> com.tools20022.repository.choice.PriorityNumeric1Choice.mmProprietary;
+			previousVersion_lazy = () -> PriorityNumeric1Choice.mmProprietary;
 			maxOccurs = 1;
 			minOccurs = 1;
 			complexType_lazy = () -> GenericIdentification30.mmObject();
@@ -169,9 +171,9 @@ public class PriorityNumeric4Choice {
 	final static public MMChoiceComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMChoiceComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.choice.PriorityNumeric4Choice.mmNumeric, com.tools20022.repository.choice.PriorityNumeric4Choice.mmProprietary);
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				messageElement_lazy = () -> Arrays.asList(PriorityNumeric4Choice.mmNumeric, PriorityNumeric4Choice.mmProprietary);
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "PriorityNumeric4Choice";
 				definition = "Choice of format for the priority.";
 				previousVersion_lazy = () -> PriorityNumeric1Choice.mmObject();

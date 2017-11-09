@@ -19,7 +19,9 @@ package com.tools20022.repository.codeset;
 
 import com.tools20022.metamodel.MMCode;
 import com.tools20022.metamodel.MMCodeSet;
+import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.codeset.SpecialCollateralCode;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -80,7 +82,7 @@ public class SpecialCollateral1Code extends SpecialCollateralCode {
 	 */
 	public static final MMCode mmGeneralCollateral = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "GeneralCollateral";
 			owner_lazy = () -> SpecialCollateral1Code.mmObject();
 		}
@@ -103,7 +105,7 @@ public class SpecialCollateral1Code extends SpecialCollateralCode {
 	 */
 	public static final MMCode mmSpecialCollateral = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SpecialCollateral";
 			owner_lazy = () -> SpecialCollateral1Code.mmObject();
 		}
@@ -112,11 +114,11 @@ public class SpecialCollateral1Code extends SpecialCollateralCode {
 	static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "SpecialCollateral1Code";
 				definition = "Specifies the collateral type against which all repurchase agreements are conducted.";
-				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.SpecialCollateral1Code.mmGeneralCollateral, com.tools20022.repository.codeset.SpecialCollateral1Code.mmSpecialCollateral);
+				code_lazy = () -> Arrays.asList(SpecialCollateral1Code.mmGeneralCollateral, SpecialCollateral1Code.mmSpecialCollateral);
 				trace_lazy = () -> SpecialCollateralCode.mmObject();
 			}
 		});

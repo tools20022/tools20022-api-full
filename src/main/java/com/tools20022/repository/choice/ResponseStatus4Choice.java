@@ -19,7 +19,10 @@ package com.tools20022.repository.choice;
 
 import com.tools20022.metamodel.MMChoiceComponent;
 import com.tools20022.metamodel.MMMessageAssociationEnd;
+import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.entity.Status;
+import com.tools20022.repository.entity.StatusReason;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -102,11 +105,11 @@ public class ResponseStatus4Choice {
 	 */
 	public static final MMMessageAssociationEnd mmConsented = new MMMessageAssociationEnd() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.StatusReason.mmReason;
+			businessElementTrace_lazy = () -> StatusReason.mmReason;
 			componentContext_lazy = () -> ResponseStatus4Choice.mmObject();
 			isDerived = false;
 			xmlTag = "Cnsntd";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Consented";
 			definition = "Reason provided for the status.";
 			maxOccurs = 1;
@@ -153,7 +156,7 @@ public class ResponseStatus4Choice {
 			componentContext_lazy = () -> ResponseStatus4Choice.mmObject();
 			isDerived = false;
 			xmlTag = "Rjctd";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Rejected";
 			definition = "The status of an instruction, advice or request.";
 			maxOccurs = 1;
@@ -200,7 +203,7 @@ public class ResponseStatus4Choice {
 			componentContext_lazy = () -> ResponseStatus4Choice.mmObject();
 			isDerived = false;
 			xmlTag = "Pdg";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Pending";
 			definition = "The status of an instruction, advice or request.";
 			maxOccurs = 1;
@@ -213,11 +216,10 @@ public class ResponseStatus4Choice {
 	final static public MMChoiceComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMChoiceComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.choice.ResponseStatus4Choice.mmConsented, com.tools20022.repository.choice.ResponseStatus4Choice.mmRejected,
-						com.tools20022.repository.choice.ResponseStatus4Choice.mmPending);
+				messageElement_lazy = () -> Arrays.asList(ResponseStatus4Choice.mmConsented, ResponseStatus4Choice.mmRejected, ResponseStatus4Choice.mmPending);
 				trace_lazy = () -> Status.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "ResponseStatus4Choice";
 				definition = "Choice of response status.";
 				previousVersion_lazy = () -> ResponseStatus3Choice.mmObject();

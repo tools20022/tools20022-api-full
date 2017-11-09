@@ -19,11 +19,13 @@ package com.tools20022.repository.msg;
 
 import com.tools20022.metamodel.MMMessageAttribute;
 import com.tools20022.metamodel.MMMessageComponent;
+import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.codeset.DTCCSubEventType2Code;
 import com.tools20022.repository.codeset.EventGroup1Code;
 import com.tools20022.repository.codeset.ExtendedEventType1Code;
 import com.tools20022.repository.datatype.Max350Text;
 import com.tools20022.repository.datatype.YesNoIndicator;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -127,10 +129,10 @@ public class CorporateActionGeneralInformationSD10 {
 			componentContext_lazy = () -> CorporateActionGeneralInformationSD10.mmObject();
 			isDerived = false;
 			xmlTag = "PlcAndNm";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PlaceAndName";
 			definition = "xPath to the element that is being extended.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.CorporateActionGeneralInformationSD12.mmPlaceAndName);
+			nextVersions_lazy = () -> Arrays.asList(CorporateActionGeneralInformationSD12.mmPlaceAndName);
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> Max350Text.mmObject();
@@ -178,10 +180,10 @@ public class CorporateActionGeneralInformationSD10 {
 			componentContext_lazy = () -> CorporateActionGeneralInformationSD10.mmObject();
 			isDerived = false;
 			xmlTag = "EvtGrp";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "EventGroup";
 			definition = "DTC processing domain/ category for event types.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.CorporateActionGeneralInformationSD12.mmEventGroup);
+			nextVersions_lazy = () -> Arrays.asList(CorporateActionGeneralInformationSD12.mmEventGroup);
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> EventGroup1Code.mmObject();
@@ -235,10 +237,10 @@ public class CorporateActionGeneralInformationSD10 {
 			componentContext_lazy = () -> CorporateActionGeneralInformationSD10.mmObject();
 			isDerived = false;
 			xmlTag = "EvtTp";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "EventType";
 			definition = "DTCC  (The Depository Trust and Clearing Corporation) native corporate action event type name. Used in place for the events that cannot be classified by ISO code and mapped to OTHR or when two  or more distinct events (in DTCC model)  use same ISO code and there are no additional data elements that distinguish those two or more events.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.CorporateActionGeneralInformationSD12.mmEventType);
+			nextVersions_lazy = () -> Arrays.asList(CorporateActionGeneralInformationSD12.mmEventType);
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> ExtendedEventType1Code.mmObject();
@@ -289,10 +291,10 @@ public class CorporateActionGeneralInformationSD10 {
 			componentContext_lazy = () -> CorporateActionGeneralInformationSD10.mmObject();
 			isDerived = false;
 			xmlTag = "SubEvtTp";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SubEventType";
 			definition = "DTCC  (The Depository Trust and Clearing Corporation) native corporate action sub event type name further defines the event type. ";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.CorporateActionGeneralInformationSD12.mmSubEventType);
+			nextVersions_lazy = () -> Arrays.asList(CorporateActionGeneralInformationSD12.mmSubEventType);
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> DTCCSubEventType2Code.mmObject();
@@ -343,10 +345,10 @@ public class CorporateActionGeneralInformationSD10 {
 			componentContext_lazy = () -> CorporateActionGeneralInformationSD10.mmObject();
 			isDerived = false;
 			xmlTag = "EDSMsggElgbltyFlg";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "EDSMessagingEligibilityFlag";
 			definition = "Indicates whether the event is eligible for EDS (Elective Dividend Services) ISO20022 messaging.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.CorporateActionGeneralInformationSD12.mmEDSMessagingEligibilityFlag);
+			nextVersions_lazy = () -> Arrays.asList(CorporateActionGeneralInformationSD12.mmEDSMessagingEligibilityFlag);
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> YesNoIndicator.mmObject();
@@ -356,11 +358,10 @@ public class CorporateActionGeneralInformationSD10 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.CorporateActionGeneralInformationSD10.mmPlaceAndName, com.tools20022.repository.msg.CorporateActionGeneralInformationSD10.mmEventGroup,
-						com.tools20022.repository.msg.CorporateActionGeneralInformationSD10.mmEventType, com.tools20022.repository.msg.CorporateActionGeneralInformationSD10.mmSubEventType,
-						com.tools20022.repository.msg.CorporateActionGeneralInformationSD10.mmEDSMessagingEligibilityFlag);
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+				messageElement_lazy = () -> Arrays.asList(CorporateActionGeneralInformationSD10.mmPlaceAndName, CorporateActionGeneralInformationSD10.mmEventGroup, CorporateActionGeneralInformationSD10.mmEventType,
+						CorporateActionGeneralInformationSD10.mmSubEventType, CorporateActionGeneralInformationSD10.mmEDSMessagingEligibilityFlag);
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 				name = "CorporateActionGeneralInformationSD10";
 				definition = "Provides additional information regarding corporate action general information details.";
 				nextVersions_lazy = () -> Arrays.asList(CorporateActionGeneralInformationSD12.mmObject());

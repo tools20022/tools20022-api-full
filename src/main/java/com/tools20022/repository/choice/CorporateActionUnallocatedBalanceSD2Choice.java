@@ -19,6 +19,8 @@ package com.tools20022.repository.choice;
 
 import com.tools20022.metamodel.MMChoiceComponent;
 import com.tools20022.metamodel.MMMessageAttribute;
+import com.tools20022.metamodel.MMRegistrationStatus;
+import com.tools20022.repository.GeneratedRepository;
 import com.tools20022.repository.msg.SignedQuantityFormat4;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
@@ -117,10 +119,10 @@ public class CorporateActionUnallocatedBalanceSD2Choice {
 			componentContext_lazy = () -> CorporateActionUnallocatedBalanceSD2Choice.mmObject();
 			isDerived = false;
 			xmlTag = "TtlElgblBal";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "TotalEligibleBalance";
 			definition = "Total quantity of financial instruments of the balance.";
-			previousVersion_lazy = () -> com.tools20022.repository.choice.CorporateActionUnallocatedBalanceSD1Choice.mmTotalEligibleBalance;
+			previousVersion_lazy = () -> CorporateActionUnallocatedBalanceSD1Choice.mmTotalEligibleBalance;
 			maxOccurs = 1;
 			minOccurs = 1;
 			complexType_lazy = () -> SignedQuantityFormat4.mmObject();
@@ -165,10 +167,10 @@ public class CorporateActionUnallocatedBalanceSD2Choice {
 			componentContext_lazy = () -> CorporateActionUnallocatedBalanceSD2Choice.mmObject();
 			isDerived = false;
 			xmlTag = "BrrwdBal";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "BorrowedBalance";
 			definition = "Quantity of securities in the sub-balance.";
-			previousVersion_lazy = () -> com.tools20022.repository.choice.CorporateActionUnallocatedBalanceSD1Choice.mmBorrowedBalance;
+			previousVersion_lazy = () -> CorporateActionUnallocatedBalanceSD1Choice.mmBorrowedBalance;
 			maxOccurs = 1;
 			minOccurs = 1;
 			complexType_lazy = () -> SignedQuantityFormat4.mmObject();
@@ -213,10 +215,10 @@ public class CorporateActionUnallocatedBalanceSD2Choice {
 			componentContext_lazy = () -> CorporateActionUnallocatedBalanceSD2Choice.mmObject();
 			isDerived = false;
 			xmlTag = "CollInBal";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CollateralInBalance";
 			definition = "Quantity of securities in the sub-balance.";
-			previousVersion_lazy = () -> com.tools20022.repository.choice.CorporateActionUnallocatedBalanceSD1Choice.mmCollateralInBalance;
+			previousVersion_lazy = () -> CorporateActionUnallocatedBalanceSD1Choice.mmCollateralInBalance;
 			maxOccurs = 1;
 			minOccurs = 1;
 			complexType_lazy = () -> SignedQuantityFormat4.mmObject();
@@ -261,10 +263,10 @@ public class CorporateActionUnallocatedBalanceSD2Choice {
 			componentContext_lazy = () -> CorporateActionUnallocatedBalanceSD2Choice.mmObject();
 			isDerived = false;
 			xmlTag = "CollOutBal";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CollateralOutBalance";
 			definition = "Quantity of securities in the sub-balance.";
-			previousVersion_lazy = () -> com.tools20022.repository.choice.CorporateActionUnallocatedBalanceSD1Choice.mmCollateralOutBalance;
+			previousVersion_lazy = () -> CorporateActionUnallocatedBalanceSD1Choice.mmCollateralOutBalance;
 			maxOccurs = 1;
 			minOccurs = 1;
 			complexType_lazy = () -> SignedQuantityFormat4.mmObject();
@@ -309,10 +311,10 @@ public class CorporateActionUnallocatedBalanceSD2Choice {
 			componentContext_lazy = () -> CorporateActionUnallocatedBalanceSD2Choice.mmObject();
 			isDerived = false;
 			xmlTag = "OnLnBal";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "OnLoanBalance";
 			definition = "Quantity of securities in the sub-balance.";
-			previousVersion_lazy = () -> com.tools20022.repository.choice.CorporateActionUnallocatedBalanceSD1Choice.mmOnLoanBalance;
+			previousVersion_lazy = () -> CorporateActionUnallocatedBalanceSD1Choice.mmOnLoanBalance;
 			maxOccurs = 1;
 			minOccurs = 1;
 			complexType_lazy = () -> SignedQuantityFormat4.mmObject();
@@ -357,10 +359,10 @@ public class CorporateActionUnallocatedBalanceSD2Choice {
 			componentContext_lazy = () -> CorporateActionUnallocatedBalanceSD2Choice.mmObject();
 			isDerived = false;
 			xmlTag = "PdgDlvryBal";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PendingDeliveryBalance";
 			definition = "Quantity of securities in the sub-balance.";
-			previousVersion_lazy = () -> com.tools20022.repository.choice.CorporateActionUnallocatedBalanceSD1Choice.mmPendingDeliveryBalance;
+			previousVersion_lazy = () -> CorporateActionUnallocatedBalanceSD1Choice.mmPendingDeliveryBalance;
 			maxOccurs = 1;
 			minOccurs = 1;
 			complexType_lazy = () -> SignedQuantityFormat4.mmObject();
@@ -405,10 +407,10 @@ public class CorporateActionUnallocatedBalanceSD2Choice {
 			componentContext_lazy = () -> CorporateActionUnallocatedBalanceSD2Choice.mmObject();
 			isDerived = false;
 			xmlTag = "PdgRctBal";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PendingReceiptBalance";
 			definition = "Quantity of securities in the sub-balance.";
-			previousVersion_lazy = () -> com.tools20022.repository.choice.CorporateActionUnallocatedBalanceSD1Choice.mmPendingReceiptBalance;
+			previousVersion_lazy = () -> CorporateActionUnallocatedBalanceSD1Choice.mmPendingReceiptBalance;
 			maxOccurs = 1;
 			minOccurs = 1;
 			complexType_lazy = () -> SignedQuantityFormat4.mmObject();
@@ -418,12 +420,11 @@ public class CorporateActionUnallocatedBalanceSD2Choice {
 	final static public MMChoiceComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMChoiceComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.choice.CorporateActionUnallocatedBalanceSD2Choice.mmTotalEligibleBalance,
-						com.tools20022.repository.choice.CorporateActionUnallocatedBalanceSD2Choice.mmBorrowedBalance, com.tools20022.repository.choice.CorporateActionUnallocatedBalanceSD2Choice.mmCollateralInBalance,
-						com.tools20022.repository.choice.CorporateActionUnallocatedBalanceSD2Choice.mmCollateralOutBalance, com.tools20022.repository.choice.CorporateActionUnallocatedBalanceSD2Choice.mmOnLoanBalance,
-						com.tools20022.repository.choice.CorporateActionUnallocatedBalanceSD2Choice.mmPendingDeliveryBalance, com.tools20022.repository.choice.CorporateActionUnallocatedBalanceSD2Choice.mmPendingReceiptBalance);
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				messageElement_lazy = () -> Arrays.asList(CorporateActionUnallocatedBalanceSD2Choice.mmTotalEligibleBalance, CorporateActionUnallocatedBalanceSD2Choice.mmBorrowedBalance,
+						CorporateActionUnallocatedBalanceSD2Choice.mmCollateralInBalance, CorporateActionUnallocatedBalanceSD2Choice.mmCollateralOutBalance, CorporateActionUnallocatedBalanceSD2Choice.mmOnLoanBalance,
+						CorporateActionUnallocatedBalanceSD2Choice.mmPendingDeliveryBalance, CorporateActionUnallocatedBalanceSD2Choice.mmPendingReceiptBalance);
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "CorporateActionUnallocatedBalanceSD2Choice";
 				definition = "Choice amongst various balance types related to unallocated payment.";
 				previousVersion_lazy = () -> CorporateActionUnallocatedBalanceSD1Choice.mmObject();

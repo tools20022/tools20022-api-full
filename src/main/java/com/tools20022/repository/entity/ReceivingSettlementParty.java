@@ -17,9 +17,14 @@
 
 package com.tools20022.repository.entity;
 
+import com.tools20022.metamodel.MMAggregation;
 import com.tools20022.metamodel.MMBusinessAssociationEnd;
 import com.tools20022.metamodel.MMBusinessComponent;
+import com.tools20022.metamodel.MMRegistrationStatus;
+import com.tools20022.repository.choice.*;
 import com.tools20022.repository.entity.SecuritiesSettlementPartyRole;
+import com.tools20022.repository.GeneratedRepository;
+import com.tools20022.repository.msg.*;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.List;
@@ -35,24 +40,6 @@ import java.util.List;
  * <p>
  * <strong>Constant fields:</strong>
  * <ul>
- * <li>{@linkplain com.tools20022.metamodel.MMBusinessComponent#getElement
- * element} =
- * <ul>
- * <li>
- * {@linkplain com.tools20022.repository.entity.ReceivingSettlementParty#mmReceivingSettlementParty
- * ReceivingSettlementParty.mmReceivingSettlementParty}</li>
- * <li>
- * {@linkplain com.tools20022.repository.entity.ReceivingSettlementParty#mmNextParty
- * ReceivingSettlementParty.mmNextParty}</li>
- * </ul>
- * </li>
- * <li>{@linkplain com.tools20022.metamodel.MMBusinessComponent#getSubType
- * subType} =
- * <ul>
- * <li>{@linkplain com.tools20022.repository.entity.ReceivingDepositoryRole
- * ReceivingDepositoryRole}</li>
- * </ul>
- * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMBusinessComponent#getAssociationDomain
  * associationDomain} =
@@ -333,6 +320,24 @@ import java.util.List;
  * superType} =
  * {@linkplain com.tools20022.repository.entity.SecuritiesSettlementPartyRole
  * SecuritiesSettlementPartyRole}</li>
+ * <li>{@linkplain com.tools20022.metamodel.MMBusinessComponent#getSubType
+ * subType} =
+ * <ul>
+ * <li>{@linkplain com.tools20022.repository.entity.ReceivingDepositoryRole
+ * ReceivingDepositoryRole}</li>
+ * </ul>
+ * </li>
+ * <li>{@linkplain com.tools20022.metamodel.MMBusinessComponent#getElement
+ * element} =
+ * <ul>
+ * <li>
+ * {@linkplain com.tools20022.repository.entity.ReceivingSettlementParty#mmReceivingSettlementParty
+ * ReceivingSettlementParty.mmReceivingSettlementParty}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.entity.ReceivingSettlementParty#mmNextParty
+ * ReceivingSettlementParty.mmNextParty}</li>
+ * </ul>
+ * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
@@ -393,13 +398,13 @@ public class ReceivingSettlementParty extends SecuritiesSettlementPartyRole {
 		{
 			elementContext_lazy = () -> com.tools20022.repository.entity.ReceivingSettlementParty.mmObject();
 			isDerived = false;
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "ReceivingSettlementParty";
 			definition = "Specifies the settlement party which is followed by another party.";
 			maxOccurs = 1;
 			minOccurs = 1;
 			opposite_lazy = () -> com.tools20022.repository.entity.ReceivingSettlementParty.mmNextParty;
-			aggregation = com.tools20022.metamodel.MMAggregation.NONE;
+			aggregation = MMAggregation.NONE;
 			type_lazy = () -> com.tools20022.repository.entity.ReceivingSettlementParty.mmObject();
 		}
 	};
@@ -443,12 +448,12 @@ public class ReceivingSettlementParty extends SecuritiesSettlementPartyRole {
 		{
 			elementContext_lazy = () -> com.tools20022.repository.entity.ReceivingSettlementParty.mmObject();
 			isDerived = false;
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "NextParty";
 			definition = "Next party in the receiving side of the settlement transaction chain.";
 			minOccurs = 0;
 			opposite_lazy = () -> com.tools20022.repository.entity.ReceivingSettlementParty.mmReceivingSettlementParty;
-			aggregation = com.tools20022.metamodel.MMAggregation.NONE;
+			aggregation = MMAggregation.NONE;
 			type_lazy = () -> com.tools20022.repository.entity.ReceivingSettlementParty.mmObject();
 		}
 	};
@@ -456,54 +461,39 @@ public class ReceivingSettlementParty extends SecuritiesSettlementPartyRole {
 	static public MMBusinessComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMBusinessComponent() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "ReceivingSettlementParty";
 				definition = "Party that receives securities as part of a chain of settlement parties or as ultimate party.";
 				associationDomain_lazy = () -> Arrays.asList(com.tools20022.repository.entity.ReceivingSettlementParty.mmReceivingSettlementParty, com.tools20022.repository.entity.ReceivingSettlementParty.mmNextParty);
-				derivationElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.StandingSettlementInstruction4.mmOtherReceivingSettlementParties,
-						com.tools20022.repository.msg.SecuritiesSettlementTransactionDetails3.mmReceivingSettlementParties, com.tools20022.repository.msg.SecuritiesSettlementTransactionDetails4.mmReceivingSettlementParties,
-						com.tools20022.repository.msg.SecuritiesSettlementTransactionDetails2.mmReceivingSettlementParties, com.tools20022.repository.msg.StandingSettlementInstruction7.mmOtherReceivingSettlementParties,
-						com.tools20022.repository.msg.SecuritiesSettlementTransactionDetails5.mmReceivingSettlementParties, com.tools20022.repository.msg.SecuritiesSettlementTransactionDetails6.mmReceivingSettlementParties,
-						com.tools20022.repository.msg.SecuritiesSettlementTransactionDetails7.mmReceivingSettlementParties, com.tools20022.repository.msg.SecuritiesOption3.mmReceivingSettlementParties,
-						com.tools20022.repository.msg.SecuritiesOption8.mmReceivingSettlementParties, com.tools20022.repository.msg.SecuritiesOption18.mmReceivingSettlementParties,
-						com.tools20022.repository.msg.SecuritiesOption20.mmReceivingSettlementParties, com.tools20022.repository.msg.SecuritiesOption26.mmReceivingSettlementParties,
-						com.tools20022.repository.msg.SecuritiesOption31.mmReceivingSettlementParties, com.tools20022.repository.msg.SecuritiesOption35.mmReceivingSettlementParties,
-						com.tools20022.repository.msg.SecuritiesOption36.mmReceivingSettlementParties, com.tools20022.repository.msg.StandingSettlementInstruction3.mmOtherReceivingSettlementParties,
-						com.tools20022.repository.msg.StandingSettlementInstruction6.mmOtherReceivingSettlementParties, com.tools20022.repository.msg.SecuritiesSettlementTransactionDetails8.mmReceivingSettlementParties,
-						com.tools20022.repository.msg.SecuritiesSettlementTransactionDetails9.mmReceivingSettlementParties, com.tools20022.repository.msg.SecuritiesSettlementTransactionDetails10.mmReceivingSettlementParties,
-						com.tools20022.repository.msg.SecuritiesSettlementTransactionDetails11.mmReceivingSettlementParties, com.tools20022.repository.msg.SecuritiesSettlementTransactionDetails12.mmReceivingSettlementParties,
-						com.tools20022.repository.msg.SecuritiesSettlementTransactionDetails13.mmReceivingSettlementParties, com.tools20022.repository.msg.Order3.mmReceivingSettlementParties,
-						com.tools20022.repository.msg.StandingSettlementInstruction9.mmOtherReceivingSettlementParties, com.tools20022.repository.msg.SecuritiesFinancingTransactionDetails2.mmReceivingSettlementParties,
-						com.tools20022.repository.msg.SecuritiesFinancingTransactionDetails8.mmReceivingSettlementParties, com.tools20022.repository.msg.StandingSettlementInstruction5.mmOtherReceivingSettlementParties,
-						com.tools20022.repository.msg.SecuritiesFinancingTransactionDetails6.mmReceivingSettlementParties, com.tools20022.repository.msg.SecuritiesFinancingTransactionDetails10.mmReceivingSettlementParties,
-						com.tools20022.repository.msg.SecuritiesFinancingTransactionDetails17.mmReceivingSettlementParties, com.tools20022.repository.msg.SecuritiesFinancingTransactionDetails18.mmReceivingSettlementParties,
-						com.tools20022.repository.msg.StandingSettlementInstruction8.mmOtherReceivingSettlementParties, com.tools20022.repository.choice.SettlementParties2Choice.mmReceivingSettlementParties,
-						com.tools20022.repository.msg.NonGuaranteedTrade1.mmReceivingParties, com.tools20022.repository.msg.NonGuaranteedTrade2.mmReceivingParties, com.tools20022.repository.msg.Order9.mmReceivingSettlementParties,
-						com.tools20022.repository.msg.InstrumentLeg2.mmReceivingSettlementParties, com.tools20022.repository.msg.SingleQuote1.mmReceivingSettlementParties,
-						com.tools20022.repository.msg.MassQuote1.mmReceivingSettlementParties, com.tools20022.repository.msg.InstrumentLeg3.mmReceivingSettlementParties,
-						com.tools20022.repository.msg.IndicationOfInterest1.mmReceivingSettlementParties, com.tools20022.repository.msg.Order6.mmReceivingSettlementParties,
-						com.tools20022.repository.msg.Order11.mmReceivingSettlementParties, com.tools20022.repository.msg.QuoteRequest1.mmReceivingSettlementParties,
-						com.tools20022.repository.msg.RequestForQuote.mmReceivingSettlementParties, com.tools20022.repository.msg.SecuritiesSettlementTransactionDetails16.mmReceivingSettlementParties,
-						com.tools20022.repository.msg.SecuritiesSettlementTransactionDetails14.mmReceivingSettlementParties, com.tools20022.repository.msg.SecuritiesSettlementTransactionDetails15.mmReceivingSettlementParties,
-						com.tools20022.repository.msg.SecuritiesFinancingTransactionDetails21.mmReceivingSettlementParties, com.tools20022.repository.msg.SecuritiesOption42.mmReceivingSettlementParties,
-						com.tools20022.repository.msg.SecuritiesOption48.mmReceivingSettlementParties, com.tools20022.repository.msg.SecuritiesFinancingTransactionDetails22.mmReceivingSettlementParties,
-						com.tools20022.repository.msg.SecuritiesSettlementTransactionDetails17.mmReceivingSettlementParties, com.tools20022.repository.msg.SecuritiesSettlementTransactionDetails18.mmReceivingSettlementParties,
-						com.tools20022.repository.msg.SecuritiesSettlementTransactionDetails19.mmReceivingSettlementParties, com.tools20022.repository.msg.SecuritiesFinancingTransactionDetails24.mmReceivingSettlementParties,
-						com.tools20022.repository.choice.SettlementParties3Choice.mmReceivingSettlementParties, com.tools20022.repository.msg.NonGuaranteedTrade3.mmReceivingParties,
-						com.tools20022.repository.choice.SettlementParties4Choice.mmReceivingSettlementParties, com.tools20022.repository.msg.SecuritiesFinancingTransactionDetails25.mmReceivingSettlementParties,
-						com.tools20022.repository.msg.StandingSettlementInstruction11.mmOtherReceivingSettlementParties, com.tools20022.repository.msg.SecuritiesFinancingTransactionDetails26.mmReceivingSettlementParties,
-						com.tools20022.repository.msg.SecuritiesSettlementTransactionDetails21.mmReceivingSettlementParties, com.tools20022.repository.msg.SecuritiesSettlementTransactionDetails22.mmReceivingSettlementParties,
-						com.tools20022.repository.msg.SecuritiesSettlementTransactionDetails20.mmReceivingSettlementParties, com.tools20022.repository.msg.SecuritiesOption50.mmReceivingSettlementParties,
-						com.tools20022.repository.choice.SettlementParties5Choice.mmReceivingSettlementParties, com.tools20022.repository.msg.SecuritiesOption55.mmReceivingSettlementParties,
-						com.tools20022.repository.msg.SecuritiesFinancingTransactionDetails33.mmReceivingSettlementParties, com.tools20022.repository.msg.StandingSettlementInstruction12.mmOtherReceivingSettlementParties,
-						com.tools20022.repository.msg.SecuritiesSettlementTransactionDetails23.mmReceivingSettlementParties, com.tools20022.repository.msg.SecuritiesSettlementTransactionDetails25.mmReceivingSettlementParties,
-						com.tools20022.repository.msg.SecuritiesSettlementTransactionDetails24.mmReceivingSettlementParties, com.tools20022.repository.msg.SecuritiesOption60.mmReceivingSettlementParties,
-						com.tools20022.repository.msg.SecuritiesFinancingTransactionDetails35.mmReceivingSettlementParties, com.tools20022.repository.msg.SecuritiesSettlementTransactionDetails27.mmReceivingSettlementParties,
-						com.tools20022.repository.msg.SecuritiesSettlementTransactionDetails28.mmReceivingSettlementParties, com.tools20022.repository.msg.SecuritiesSettlementTransactionDetails26.mmReceivingSettlementParties,
-						com.tools20022.repository.choice.SettlementParties7Choice.mmReceivingSettlementParties, com.tools20022.repository.msg.SecuritiesFinancingTransactionDetails36.mmReceivingSettlementParties,
-						com.tools20022.repository.msg.SecuritiesSettlementTransactionDetails30.mmReceivingSettlementParties, com.tools20022.repository.msg.SecuritiesOption63.mmReceivingSettlementParties,
-						com.tools20022.repository.msg.SecuritiesSettlementTransactionDetails29.mmReceivingSettlementParties, com.tools20022.repository.msg.SecuritiesSettlementTransactionDetails31.mmReceivingSettlementParties);
+				derivationElement_lazy = () -> Arrays.asList(StandingSettlementInstruction4.mmOtherReceivingSettlementParties, SecuritiesSettlementTransactionDetails3.mmReceivingSettlementParties,
+						SecuritiesSettlementTransactionDetails4.mmReceivingSettlementParties, SecuritiesSettlementTransactionDetails2.mmReceivingSettlementParties, StandingSettlementInstruction7.mmOtherReceivingSettlementParties,
+						SecuritiesSettlementTransactionDetails5.mmReceivingSettlementParties, SecuritiesSettlementTransactionDetails6.mmReceivingSettlementParties, SecuritiesSettlementTransactionDetails7.mmReceivingSettlementParties,
+						SecuritiesOption3.mmReceivingSettlementParties, SecuritiesOption8.mmReceivingSettlementParties, SecuritiesOption18.mmReceivingSettlementParties, SecuritiesOption20.mmReceivingSettlementParties,
+						SecuritiesOption26.mmReceivingSettlementParties, SecuritiesOption31.mmReceivingSettlementParties, SecuritiesOption35.mmReceivingSettlementParties, SecuritiesOption36.mmReceivingSettlementParties,
+						StandingSettlementInstruction3.mmOtherReceivingSettlementParties, StandingSettlementInstruction6.mmOtherReceivingSettlementParties, SecuritiesSettlementTransactionDetails8.mmReceivingSettlementParties,
+						SecuritiesSettlementTransactionDetails9.mmReceivingSettlementParties, SecuritiesSettlementTransactionDetails10.mmReceivingSettlementParties, SecuritiesSettlementTransactionDetails11.mmReceivingSettlementParties,
+						SecuritiesSettlementTransactionDetails12.mmReceivingSettlementParties, SecuritiesSettlementTransactionDetails13.mmReceivingSettlementParties, Order3.mmReceivingSettlementParties,
+						StandingSettlementInstruction9.mmOtherReceivingSettlementParties, SecuritiesFinancingTransactionDetails2.mmReceivingSettlementParties, SecuritiesFinancingTransactionDetails8.mmReceivingSettlementParties,
+						StandingSettlementInstruction5.mmOtherReceivingSettlementParties, SecuritiesFinancingTransactionDetails6.mmReceivingSettlementParties, SecuritiesFinancingTransactionDetails10.mmReceivingSettlementParties,
+						SecuritiesFinancingTransactionDetails17.mmReceivingSettlementParties, SecuritiesFinancingTransactionDetails18.mmReceivingSettlementParties, StandingSettlementInstruction8.mmOtherReceivingSettlementParties,
+						SettlementParties2Choice.mmReceivingSettlementParties, NonGuaranteedTrade1.mmReceivingParties, NonGuaranteedTrade2.mmReceivingParties, Order9.mmReceivingSettlementParties,
+						InstrumentLeg2.mmReceivingSettlementParties, SingleQuote1.mmReceivingSettlementParties, MassQuote1.mmReceivingSettlementParties, InstrumentLeg3.mmReceivingSettlementParties,
+						IndicationOfInterest1.mmReceivingSettlementParties, Order6.mmReceivingSettlementParties, Order11.mmReceivingSettlementParties, QuoteRequest1.mmReceivingSettlementParties,
+						RequestForQuote.mmReceivingSettlementParties, SecuritiesSettlementTransactionDetails16.mmReceivingSettlementParties, SecuritiesSettlementTransactionDetails14.mmReceivingSettlementParties,
+						SecuritiesSettlementTransactionDetails15.mmReceivingSettlementParties, SecuritiesFinancingTransactionDetails21.mmReceivingSettlementParties, SecuritiesOption42.mmReceivingSettlementParties,
+						SecuritiesOption48.mmReceivingSettlementParties, SecuritiesFinancingTransactionDetails22.mmReceivingSettlementParties, SecuritiesSettlementTransactionDetails17.mmReceivingSettlementParties,
+						SecuritiesSettlementTransactionDetails18.mmReceivingSettlementParties, SecuritiesSettlementTransactionDetails19.mmReceivingSettlementParties, SecuritiesFinancingTransactionDetails24.mmReceivingSettlementParties,
+						SettlementParties3Choice.mmReceivingSettlementParties, NonGuaranteedTrade3.mmReceivingParties, SettlementParties4Choice.mmReceivingSettlementParties,
+						SecuritiesFinancingTransactionDetails25.mmReceivingSettlementParties, StandingSettlementInstruction11.mmOtherReceivingSettlementParties, SecuritiesFinancingTransactionDetails26.mmReceivingSettlementParties,
+						SecuritiesSettlementTransactionDetails21.mmReceivingSettlementParties, SecuritiesSettlementTransactionDetails22.mmReceivingSettlementParties, SecuritiesSettlementTransactionDetails20.mmReceivingSettlementParties,
+						SecuritiesOption50.mmReceivingSettlementParties, SettlementParties5Choice.mmReceivingSettlementParties, SecuritiesOption55.mmReceivingSettlementParties,
+						SecuritiesFinancingTransactionDetails33.mmReceivingSettlementParties, StandingSettlementInstruction12.mmOtherReceivingSettlementParties, SecuritiesSettlementTransactionDetails23.mmReceivingSettlementParties,
+						SecuritiesSettlementTransactionDetails25.mmReceivingSettlementParties, SecuritiesSettlementTransactionDetails24.mmReceivingSettlementParties, SecuritiesOption60.mmReceivingSettlementParties,
+						SecuritiesFinancingTransactionDetails35.mmReceivingSettlementParties, SecuritiesSettlementTransactionDetails27.mmReceivingSettlementParties, SecuritiesSettlementTransactionDetails28.mmReceivingSettlementParties,
+						SecuritiesSettlementTransactionDetails26.mmReceivingSettlementParties, SettlementParties7Choice.mmReceivingSettlementParties, SecuritiesFinancingTransactionDetails36.mmReceivingSettlementParties,
+						SecuritiesSettlementTransactionDetails30.mmReceivingSettlementParties, SecuritiesOption63.mmReceivingSettlementParties, SecuritiesSettlementTransactionDetails29.mmReceivingSettlementParties,
+						SecuritiesSettlementTransactionDetails31.mmReceivingSettlementParties);
 				subType_lazy = () -> Arrays.asList(ReceivingDepositoryRole.mmObject());
 				superType_lazy = () -> SecuritiesSettlementPartyRole.mmObject();
 				element_lazy = () -> Arrays.asList(com.tools20022.repository.entity.ReceivingSettlementParty.mmReceivingSettlementParty, com.tools20022.repository.entity.ReceivingSettlementParty.mmNextParty);

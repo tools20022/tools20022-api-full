@@ -19,8 +19,10 @@ package com.tools20022.repository.choice;
 
 import com.tools20022.metamodel.MMChoiceComponent;
 import com.tools20022.metamodel.MMMessageAttribute;
+import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.codeset.CollateralAccountType1Code;
 import com.tools20022.repository.entity.Account;
+import com.tools20022.repository.GeneratedRepository;
 import com.tools20022.repository.msg.GenericIdentification36;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
@@ -108,14 +110,14 @@ public class CollateralAccountIdentificationType3Choice {
 	 */
 	public static final MMMessageAttribute mmType = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Account.mmCollateralAccountType;
+			businessElementTrace_lazy = () -> Account.mmCollateralAccountType;
 			componentContext_lazy = () -> CollateralAccountIdentificationType3Choice.mmObject();
 			isDerived = false;
 			xmlTag = "Tp";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Type";
 			definition = "Indicates the type of collateral account expressed as a code.";
-			previousVersion_lazy = () -> com.tools20022.repository.choice.CollateralAccountIdentificationType2Choice.mmType;
+			previousVersion_lazy = () -> CollateralAccountIdentificationType2Choice.mmType;
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> CollateralAccountType1Code.mmObject();
@@ -163,14 +165,14 @@ public class CollateralAccountIdentificationType3Choice {
 	 */
 	public static final MMMessageAttribute mmProprietary = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Account.mmCollateralAccountType;
+			businessElementTrace_lazy = () -> Account.mmCollateralAccountType;
 			componentContext_lazy = () -> CollateralAccountIdentificationType3Choice.mmObject();
 			isDerived = false;
 			xmlTag = "Prtry";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Proprietary";
 			definition = "Specifies the collateral account expressed as a proprietary code.";
-			previousVersion_lazy = () -> com.tools20022.repository.choice.CollateralAccountIdentificationType2Choice.mmProprietary;
+			previousVersion_lazy = () -> CollateralAccountIdentificationType2Choice.mmProprietary;
 			maxOccurs = 1;
 			minOccurs = 1;
 			complexType_lazy = () -> GenericIdentification36.mmObject();
@@ -180,10 +182,10 @@ public class CollateralAccountIdentificationType3Choice {
 	final static public MMChoiceComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMChoiceComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.choice.CollateralAccountIdentificationType3Choice.mmType, com.tools20022.repository.choice.CollateralAccountIdentificationType3Choice.mmProprietary);
+				messageElement_lazy = () -> Arrays.asList(CollateralAccountIdentificationType3Choice.mmType, CollateralAccountIdentificationType3Choice.mmProprietary);
 				trace_lazy = () -> Account.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "CollateralAccountIdentificationType3Choice";
 				definition = "Specifies the identification of the collateral account.";
 				previousVersion_lazy = () -> CollateralAccountIdentificationType2Choice.mmObject();

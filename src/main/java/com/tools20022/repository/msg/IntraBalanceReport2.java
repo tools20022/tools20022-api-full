@@ -20,9 +20,11 @@ package com.tools20022.repository.msg;
 import com.tools20022.metamodel.MMMessageAssociationEnd;
 import com.tools20022.metamodel.MMMessageAttribute;
 import com.tools20022.metamodel.MMMessageComponent;
+import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.choice.*;
 import com.tools20022.repository.datatype.Max35Text;
 import com.tools20022.repository.datatype.YesNoIndicator;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -113,7 +115,7 @@ public class IntraBalanceReport2 {
 			componentContext_lazy = () -> IntraBalanceReport2.mmObject();
 			isDerived = false;
 			xmlTag = "RptNb";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ReportNumber";
 			definition = "Sequential number of the report.";
 			maxOccurs = 1;
@@ -155,7 +157,7 @@ public class IntraBalanceReport2 {
 			componentContext_lazy = () -> IntraBalanceReport2.mmObject();
 			isDerived = false;
 			xmlTag = "QryRef";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "QueryReference";
 			definition = "Identification of the query message sent to request this statement.";
 			maxOccurs = 1;
@@ -196,7 +198,7 @@ public class IntraBalanceReport2 {
 			componentContext_lazy = () -> IntraBalanceReport2.mmObject();
 			isDerived = false;
 			xmlTag = "RptId";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ReportIdentification";
 			definition = "Reference common to all pages of a statement.";
 			maxOccurs = 1;
@@ -238,7 +240,7 @@ public class IntraBalanceReport2 {
 			componentContext_lazy = () -> IntraBalanceReport2.mmObject();
 			isDerived = false;
 			xmlTag = "RptDtTm";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ReportDateTime";
 			definition = "Date and time when the report was created.";
 			maxOccurs = 1;
@@ -280,7 +282,7 @@ public class IntraBalanceReport2 {
 			componentContext_lazy = () -> IntraBalanceReport2.mmObject();
 			isDerived = false;
 			xmlTag = "RptPrd";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ReportPeriod";
 			definition = "Period for the statement.";
 			maxOccurs = 1;
@@ -320,7 +322,7 @@ public class IntraBalanceReport2 {
 			componentContext_lazy = () -> IntraBalanceReport2.mmObject();
 			isDerived = false;
 			xmlTag = "Frqcy";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Frequency";
 			definition = "Frequency of the statement.";
 			maxOccurs = 1;
@@ -362,7 +364,7 @@ public class IntraBalanceReport2 {
 			componentContext_lazy = () -> IntraBalanceReport2.mmObject();
 			isDerived = false;
 			xmlTag = "UpdTp";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "UpdateType";
 			definition = "Indicates whether the statement is complete or contains changes only.";
 			maxOccurs = 1;
@@ -408,7 +410,7 @@ public class IntraBalanceReport2 {
 			componentContext_lazy = () -> IntraBalanceReport2.mmObject();
 			isDerived = false;
 			xmlTag = "ActvtyInd";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ActivityIndicator";
 			definition = "Indicates whether there is activity or information update reported in the statement.";
 			maxOccurs = 1;
@@ -420,11 +422,10 @@ public class IntraBalanceReport2 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.IntraBalanceReport2.mmReportNumber, com.tools20022.repository.msg.IntraBalanceReport2.mmQueryReference,
-						com.tools20022.repository.msg.IntraBalanceReport2.mmReportIdentification, com.tools20022.repository.msg.IntraBalanceReport2.mmReportDateTime, com.tools20022.repository.msg.IntraBalanceReport2.mmReportPeriod,
-						com.tools20022.repository.msg.IntraBalanceReport2.mmFrequency, com.tools20022.repository.msg.IntraBalanceReport2.mmUpdateType, com.tools20022.repository.msg.IntraBalanceReport2.mmActivityIndicator);
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+				messageElement_lazy = () -> Arrays.asList(IntraBalanceReport2.mmReportNumber, IntraBalanceReport2.mmQueryReference, IntraBalanceReport2.mmReportIdentification, IntraBalanceReport2.mmReportDateTime,
+						IntraBalanceReport2.mmReportPeriod, IntraBalanceReport2.mmFrequency, IntraBalanceReport2.mmUpdateType, IntraBalanceReport2.mmActivityIndicator);
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 				name = "IntraBalanceReport2";
 				definition = "Characteristics of the report.";
 			}

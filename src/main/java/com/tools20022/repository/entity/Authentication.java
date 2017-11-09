@@ -17,9 +17,7 @@
 
 package com.tools20022.repository.entity;
 
-import com.tools20022.metamodel.MMBusinessAssociationEnd;
-import com.tools20022.metamodel.MMBusinessAttribute;
-import com.tools20022.metamodel.MMBusinessComponent;
+import com.tools20022.metamodel.*;
 import com.tools20022.repository.codeset.AuthenticationEntityCode;
 import com.tools20022.repository.codeset.AuthenticationMethodCode;
 import com.tools20022.repository.codeset.AuthenticationResultCode;
@@ -27,6 +25,7 @@ import com.tools20022.repository.codeset.PINFormatCode;
 import com.tools20022.repository.datatype.Max140Binary;
 import com.tools20022.repository.datatype.Max35Text;
 import com.tools20022.repository.datatype.Max70Text;
+import com.tools20022.repository.GeneratedRepository;
 import com.tools20022.repository.msg.*;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
@@ -40,35 +39,37 @@ import java.util.concurrent.atomic.AtomicReference;
  * <p>
  * <strong>Constant fields:</strong>
  * <ul>
- * <li>{@linkplain com.tools20022.metamodel.MMBusinessComponent#getElement
- * element} =
+ * <li>
+ * {@linkplain com.tools20022.metamodel.MMBusinessComponent#getDerivationComponent
+ * derivationComponent} =
  * <ul>
- * <li>{@linkplain com.tools20022.repository.entity.Authentication#mmCardholder
- * Authentication.mmCardholder}</li>
- * <li>
- * {@linkplain com.tools20022.repository.entity.Authentication#mmAuthenticationMethod
- * Authentication.mmAuthenticationMethod}</li>
- * <li>
- * {@linkplain com.tools20022.repository.entity.Authentication#mmAuthenticationEntity
- * Authentication.mmAuthenticationEntity}</li>
- * <li>
- * {@linkplain com.tools20022.repository.entity.Authentication#mmAuthenticationValue
- * Authentication.mmAuthenticationValue}</li>
- * <li>{@linkplain com.tools20022.repository.entity.Authentication#mmPINFormat
- * Authentication.mmPINFormat}</li>
- * <li>{@linkplain com.tools20022.repository.entity.Authentication#mmPIN
- * Authentication.mmPIN}</li>
- * <li>
- * {@linkplain com.tools20022.repository.entity.Authentication#mmAuthenticationSupport
- * Authentication.mmAuthenticationSupport}</li>
- * <li>
- * {@linkplain com.tools20022.repository.entity.Authentication#mmCollectionIndicator
- * Authentication.mmCollectionIndicator}</li>
- * <li>{@linkplain com.tools20022.repository.entity.Authentication#mmMandate
- * Authentication.mmMandate}</li>
- * <li>
- * {@linkplain com.tools20022.repository.entity.Authentication#mmAuthenticationResult
- * Authentication.mmAuthenticationResult}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.CardholderAuthentication2
+ * CardholderAuthentication2}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.CardholderAuthentication4
+ * CardholderAuthentication4}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.OnLinePIN1 OnLinePIN1}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.CardholderAuthentication1
+ * CardholderAuthentication1}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.OnLinePIN2 OnLinePIN2}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.CardholderAuthentication3
+ * CardholderAuthentication3}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.OnLinePIN3 OnLinePIN3}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.CardholderAuthentication5
+ * CardholderAuthentication5}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.OnLinePIN4 OnLinePIN4}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.CardholderAuthentication6
+ * CardholderAuthentication6}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.CardholderAuthentication7
+ * CardholderAuthentication7}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.CardholderAuthentication8
+ * CardholderAuthentication8}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.OnLinePIN5 OnLinePIN5}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.CardholderAuthentication9
+ * CardholderAuthentication9}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.MandateAuthentication1
+ * MandateAuthentication1}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.CardholderAuthentication10
+ * CardholderAuthentication10}</li>
  * </ul>
  * </li>
  * <li>
@@ -112,37 +113,35 @@ import java.util.concurrent.atomic.AtomicReference;
  * CardholderAuthentication10.mmCardholderOnLinePIN}</li>
  * </ul>
  * </li>
- * <li>
- * {@linkplain com.tools20022.metamodel.MMBusinessComponent#getDerivationComponent
- * derivationComponent} =
+ * <li>{@linkplain com.tools20022.metamodel.MMBusinessComponent#getElement
+ * element} =
  * <ul>
- * <li>{@linkplain com.tools20022.repository.msg.CardholderAuthentication2
- * CardholderAuthentication2}</li>
- * <li>{@linkplain com.tools20022.repository.msg.CardholderAuthentication4
- * CardholderAuthentication4}</li>
- * <li>{@linkplain com.tools20022.repository.msg.OnLinePIN1 OnLinePIN1}</li>
- * <li>{@linkplain com.tools20022.repository.msg.CardholderAuthentication1
- * CardholderAuthentication1}</li>
- * <li>{@linkplain com.tools20022.repository.msg.OnLinePIN2 OnLinePIN2}</li>
- * <li>{@linkplain com.tools20022.repository.msg.CardholderAuthentication3
- * CardholderAuthentication3}</li>
- * <li>{@linkplain com.tools20022.repository.msg.OnLinePIN3 OnLinePIN3}</li>
- * <li>{@linkplain com.tools20022.repository.msg.CardholderAuthentication5
- * CardholderAuthentication5}</li>
- * <li>{@linkplain com.tools20022.repository.msg.OnLinePIN4 OnLinePIN4}</li>
- * <li>{@linkplain com.tools20022.repository.msg.CardholderAuthentication6
- * CardholderAuthentication6}</li>
- * <li>{@linkplain com.tools20022.repository.msg.CardholderAuthentication7
- * CardholderAuthentication7}</li>
- * <li>{@linkplain com.tools20022.repository.msg.CardholderAuthentication8
- * CardholderAuthentication8}</li>
- * <li>{@linkplain com.tools20022.repository.msg.OnLinePIN5 OnLinePIN5}</li>
- * <li>{@linkplain com.tools20022.repository.msg.CardholderAuthentication9
- * CardholderAuthentication9}</li>
- * <li>{@linkplain com.tools20022.repository.msg.MandateAuthentication1
- * MandateAuthentication1}</li>
- * <li>{@linkplain com.tools20022.repository.msg.CardholderAuthentication10
- * CardholderAuthentication10}</li>
+ * <li>{@linkplain com.tools20022.repository.entity.Authentication#mmCardholder
+ * Authentication.mmCardholder}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.entity.Authentication#mmAuthenticationMethod
+ * Authentication.mmAuthenticationMethod}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.entity.Authentication#mmAuthenticationEntity
+ * Authentication.mmAuthenticationEntity}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.entity.Authentication#mmAuthenticationValue
+ * Authentication.mmAuthenticationValue}</li>
+ * <li>{@linkplain com.tools20022.repository.entity.Authentication#mmPINFormat
+ * Authentication.mmPINFormat}</li>
+ * <li>{@linkplain com.tools20022.repository.entity.Authentication#mmPIN
+ * Authentication.mmPIN}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.entity.Authentication#mmAuthenticationSupport
+ * Authentication.mmAuthenticationSupport}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.entity.Authentication#mmCollectionIndicator
+ * Authentication.mmCollectionIndicator}</li>
+ * <li>{@linkplain com.tools20022.repository.entity.Authentication#mmMandate
+ * Authentication.mmMandate}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.entity.Authentication#mmAuthenticationResult
+ * Authentication.mmAuthenticationResult}</li>
  * </ul>
  * </li>
  * <li>
@@ -201,13 +200,13 @@ public class Authentication {
 		{
 			elementContext_lazy = () -> Authentication.mmObject();
 			isDerived = false;
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "Cardholder";
 			definition = "Cardholder for which an authentication is provided.";
 			maxOccurs = 1;
 			minOccurs = 0;
 			opposite_lazy = () -> com.tools20022.repository.entity.CardholderRole.mmAuthentication;
-			aggregation = com.tools20022.metamodel.MMAggregation.NONE;
+			aggregation = MMAggregation.NONE;
 			type_lazy = () -> com.tools20022.repository.entity.CardholderRole.mmObject();
 		}
 	};
@@ -278,15 +277,12 @@ public class Authentication {
 	 */
 	public static final MMBusinessAttribute mmAuthenticationMethod = new MMBusinessAttribute() {
 		{
-			derivation_lazy = () -> Arrays.asList(com.tools20022.repository.msg.CardholderAuthentication2.mmAuthenticationMethod, com.tools20022.repository.msg.CardholderAuthentication4.mmAuthenticationMethod,
-					com.tools20022.repository.msg.CardholderAuthentication1.mmAuthenticationMethod, com.tools20022.repository.msg.CardholderAuthentication3.mmAuthenticationMethod,
-					com.tools20022.repository.msg.CardholderAuthentication5.mmAuthenticationMethod, com.tools20022.repository.msg.CardholderAuthentication6.mmAuthenticationMethod,
-					com.tools20022.repository.msg.CardholderAuthentication7.mmAuthenticationMethod, com.tools20022.repository.msg.CardholderAuthentication8.mmAuthenticationMethod,
-					com.tools20022.repository.msg.CardholderAuthentication9.mmAuthenticationMethod, com.tools20022.repository.msg.MandateAuthentication1.mmChannel,
-					com.tools20022.repository.msg.CardholderAuthentication10.mmAuthenticationMethod);
+			derivation_lazy = () -> Arrays.asList(CardholderAuthentication2.mmAuthenticationMethod, CardholderAuthentication4.mmAuthenticationMethod, CardholderAuthentication1.mmAuthenticationMethod,
+					CardholderAuthentication3.mmAuthenticationMethod, CardholderAuthentication5.mmAuthenticationMethod, CardholderAuthentication6.mmAuthenticationMethod, CardholderAuthentication7.mmAuthenticationMethod,
+					CardholderAuthentication8.mmAuthenticationMethod, CardholderAuthentication9.mmAuthenticationMethod, MandateAuthentication1.mmChannel, CardholderAuthentication10.mmAuthenticationMethod);
 			elementContext_lazy = () -> Authentication.mmObject();
 			isDerived = false;
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "AuthenticationMethod";
 			definition = "Method used to authenticate a person.";
 			maxOccurs = 1;
@@ -347,12 +343,11 @@ public class Authentication {
 	 */
 	public static final MMBusinessAttribute mmAuthenticationEntity = new MMBusinessAttribute() {
 		{
-			derivation_lazy = () -> Arrays.asList(com.tools20022.repository.msg.CardholderAuthentication2.mmAuthenticationEntity, com.tools20022.repository.msg.CardholderAuthentication4.mmAuthenticationEntity,
-					com.tools20022.repository.msg.CardholderAuthentication1.mmAuthenticationEntity, com.tools20022.repository.msg.CardholderAuthentication3.mmAuthenticationEntity,
-					com.tools20022.repository.msg.CardholderAuthentication5.mmAuthenticationEntity, com.tools20022.repository.msg.MandateAuthentication1.mmMessageAuthenticationCode);
+			derivation_lazy = () -> Arrays.asList(CardholderAuthentication2.mmAuthenticationEntity, CardholderAuthentication4.mmAuthenticationEntity, CardholderAuthentication1.mmAuthenticationEntity,
+					CardholderAuthentication3.mmAuthenticationEntity, CardholderAuthentication5.mmAuthenticationEntity, MandateAuthentication1.mmMessageAuthenticationCode);
 			elementContext_lazy = () -> Authentication.mmObject();
 			isDerived = false;
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "AuthenticationEntity";
 			definition = "Entity or object in charge of verifying the person authenticity.";
 			maxOccurs = 1;
@@ -418,13 +413,12 @@ public class Authentication {
 	 */
 	public static final MMBusinessAttribute mmAuthenticationValue = new MMBusinessAttribute() {
 		{
-			derivation_lazy = () -> Arrays.asList(com.tools20022.repository.msg.CardholderAuthentication1.mmAuthenticationValue, com.tools20022.repository.msg.CardholderAuthentication3.mmAuthenticationValue,
-					com.tools20022.repository.msg.CardholderAuthentication5.mmAuthenticationValue, com.tools20022.repository.msg.CardholderAuthentication6.mmAuthenticationValue,
-					com.tools20022.repository.msg.CardholderAuthentication7.mmAuthenticationValue, com.tools20022.repository.msg.CardholderAuthentication8.mmAuthenticationValue,
-					com.tools20022.repository.msg.CardholderAuthentication9.mmAuthenticationValue, com.tools20022.repository.msg.CardholderAuthentication10.mmAuthenticationValue);
+			derivation_lazy = () -> Arrays.asList(CardholderAuthentication1.mmAuthenticationValue, CardholderAuthentication3.mmAuthenticationValue, CardholderAuthentication5.mmAuthenticationValue,
+					CardholderAuthentication6.mmAuthenticationValue, CardholderAuthentication7.mmAuthenticationValue, CardholderAuthentication8.mmAuthenticationValue, CardholderAuthentication9.mmAuthenticationValue,
+					CardholderAuthentication10.mmAuthenticationValue);
 			elementContext_lazy = () -> Authentication.mmObject();
 			isDerived = false;
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "AuthenticationValue";
 			definition = "Value used to authenticate the owner of the payment card.";
 			maxOccurs = 1;
@@ -476,11 +470,10 @@ public class Authentication {
 	 */
 	public static final MMBusinessAttribute mmPINFormat = new MMBusinessAttribute() {
 		{
-			derivation_lazy = () -> Arrays.asList(com.tools20022.repository.msg.OnLinePIN1.mmPINFormat, com.tools20022.repository.msg.OnLinePIN2.mmPINFormat, com.tools20022.repository.msg.OnLinePIN3.mmPINFormat,
-					com.tools20022.repository.msg.OnLinePIN4.mmPINFormat, com.tools20022.repository.msg.OnLinePIN5.mmPINFormat);
+			derivation_lazy = () -> Arrays.asList(OnLinePIN1.mmPINFormat, OnLinePIN2.mmPINFormat, OnLinePIN3.mmPINFormat, OnLinePIN4.mmPINFormat, OnLinePIN5.mmPINFormat);
 			elementContext_lazy = () -> Authentication.mmObject();
 			isDerived = false;
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "PINFormat";
 			definition = "Encrypted personal identification number (PIN) format.";
 			maxOccurs = 1;
@@ -519,7 +512,7 @@ public class Authentication {
 		{
 			elementContext_lazy = () -> Authentication.mmObject();
 			isDerived = false;
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "PIN";
 			definition = "Personal Identification Number (PIN) for authentication.";
 			maxOccurs = 1;
@@ -560,7 +553,7 @@ public class Authentication {
 		{
 			elementContext_lazy = () -> Authentication.mmObject();
 			isDerived = false;
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "AuthenticationSupport";
 			definition = "This indicator identifies whether person authentication is supported and data is available.";
 			maxOccurs = 1;
@@ -601,7 +594,7 @@ public class Authentication {
 		{
 			elementContext_lazy = () -> Authentication.mmObject();
 			isDerived = false;
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "CollectionIndicator";
 			definition = "Identifies in electronic commerce transactions whether customer authentication is supported and data is available.";
 			maxOccurs = 1;
@@ -649,13 +642,13 @@ public class Authentication {
 		{
 			elementContext_lazy = () -> Authentication.mmObject();
 			isDerived = false;
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "Mandate";
 			definition = "Specifies the mandate related to the transport authentication detailsmandate.";
 			maxOccurs = 1;
 			minOccurs = 1;
 			opposite_lazy = () -> com.tools20022.repository.entity.Mandate.mmAuthentication;
-			aggregation = com.tools20022.metamodel.MMAggregation.NONE;
+			aggregation = MMAggregation.NONE;
 			type_lazy = () -> com.tools20022.repository.entity.Mandate.mmObject();
 		}
 	};
@@ -690,7 +683,7 @@ public class Authentication {
 		{
 			elementContext_lazy = () -> Authentication.mmObject();
 			isDerived = false;
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "AuthenticationResult";
 			definition = "Specifies the result of the authentication.";
 			maxOccurs = 1;
@@ -702,19 +695,16 @@ public class Authentication {
 	static public MMBusinessComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMBusinessComponent() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "Authentication";
 				definition = "Data related to the authentication of the cardholder.";
 				associationDomain_lazy = () -> Arrays.asList(com.tools20022.repository.entity.CardholderRole.mmAuthentication, com.tools20022.repository.entity.Mandate.mmAuthentication);
-				derivationElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.CardholderAuthentication1.mmCardholderOnLinePIN, com.tools20022.repository.msg.CardholderAuthentication3.mmCardholderOnLinePIN,
-						com.tools20022.repository.msg.CardholderAuthentication5.mmCardholderOnLinePIN, com.tools20022.repository.msg.CardholderAuthentication6.mmCardholderOnLinePIN,
-						com.tools20022.repository.msg.CardholderAuthentication7.mmCardholderOnLinePIN, com.tools20022.repository.msg.CardholderAuthentication8.mmCardholderOnLinePIN,
-						com.tools20022.repository.msg.CardholderAuthentication9.mmCardholderOnLinePIN, com.tools20022.repository.msg.CardholderAuthentication10.mmCardholderOnLinePIN);
-				element_lazy = () -> Arrays.asList(com.tools20022.repository.entity.Authentication.mmCardholder, com.tools20022.repository.entity.Authentication.mmAuthenticationMethod,
-						com.tools20022.repository.entity.Authentication.mmAuthenticationEntity, com.tools20022.repository.entity.Authentication.mmAuthenticationValue, com.tools20022.repository.entity.Authentication.mmPINFormat,
-						com.tools20022.repository.entity.Authentication.mmPIN, com.tools20022.repository.entity.Authentication.mmAuthenticationSupport, com.tools20022.repository.entity.Authentication.mmCollectionIndicator,
-						com.tools20022.repository.entity.Authentication.mmMandate, com.tools20022.repository.entity.Authentication.mmAuthenticationResult);
+				derivationElement_lazy = () -> Arrays.asList(CardholderAuthentication1.mmCardholderOnLinePIN, CardholderAuthentication3.mmCardholderOnLinePIN, CardholderAuthentication5.mmCardholderOnLinePIN,
+						CardholderAuthentication6.mmCardholderOnLinePIN, CardholderAuthentication7.mmCardholderOnLinePIN, CardholderAuthentication8.mmCardholderOnLinePIN, CardholderAuthentication9.mmCardholderOnLinePIN,
+						CardholderAuthentication10.mmCardholderOnLinePIN);
+				element_lazy = () -> Arrays.asList(Authentication.mmCardholder, Authentication.mmAuthenticationMethod, Authentication.mmAuthenticationEntity, Authentication.mmAuthenticationValue, Authentication.mmPINFormat,
+						Authentication.mmPIN, Authentication.mmAuthenticationSupport, Authentication.mmCollectionIndicator, Authentication.mmMandate, Authentication.mmAuthenticationResult);
 				derivationComponent_lazy = () -> Arrays.asList(CardholderAuthentication2.mmObject(), CardholderAuthentication4.mmObject(), OnLinePIN1.mmObject(), CardholderAuthentication1.mmObject(), OnLinePIN2.mmObject(),
 						CardholderAuthentication3.mmObject(), OnLinePIN3.mmObject(), CardholderAuthentication5.mmObject(), OnLinePIN4.mmObject(), CardholderAuthentication6.mmObject(), CardholderAuthentication7.mmObject(),
 						CardholderAuthentication8.mmObject(), OnLinePIN5.mmObject(), CardholderAuthentication9.mmObject(), MandateAuthentication1.mmObject(), CardholderAuthentication10.mmObject());

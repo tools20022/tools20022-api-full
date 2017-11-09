@@ -17,11 +17,10 @@
 
 package com.tools20022.repository.entity;
 
-import com.tools20022.metamodel.MMBusinessAssociationEnd;
-import com.tools20022.metamodel.MMBusinessAttribute;
-import com.tools20022.metamodel.MMBusinessComponent;
+import com.tools20022.metamodel.*;
 import com.tools20022.repository.codeset.CollateralSubstitutionTypeCode;
 import com.tools20022.repository.datatype.CurrencyAndAmount;
+import com.tools20022.repository.GeneratedRepository;
 import com.tools20022.repository.msg.*;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
@@ -38,24 +37,28 @@ import java.util.List;
  * <p>
  * <strong>Constant fields:</strong>
  * <ul>
- * <li>{@linkplain com.tools20022.metamodel.MMBusinessComponent#getElement
- * element} =
+ * <li>
+ * {@linkplain com.tools20022.metamodel.MMBusinessComponent#getDerivationComponent
+ * derivationComponent} =
  * <ul>
+ * <li>{@linkplain com.tools20022.repository.msg.CollateralSubstitution1
+ * CollateralSubstitution1}</li>
  * <li>
- * {@linkplain com.tools20022.repository.entity.CollateralSubstitution#mmType
- * CollateralSubstitution.mmType}</li>
+ * {@linkplain com.tools20022.repository.msg.CollateralSubstitutionResponse1
+ * CollateralSubstitutionResponse1}</li>
  * <li>
- * {@linkplain com.tools20022.repository.entity.CollateralSubstitution#mmAcceptedAmount
- * CollateralSubstitution.mmAcceptedAmount}</li>
- * <li>
- * {@linkplain com.tools20022.repository.entity.CollateralSubstitution#mmRejectedAmount
- * CollateralSubstitution.mmRejectedAmount}</li>
- * <li>
- * {@linkplain com.tools20022.repository.entity.CollateralSubstitution#mmRelatedManagementProcess
- * CollateralSubstitution.mmRelatedManagementProcess}</li>
- * <li>
- * {@linkplain com.tools20022.repository.entity.CollateralSubstitution#mmNewCollateral
- * CollateralSubstitution.mmNewCollateral}</li>
+ * {@linkplain com.tools20022.repository.msg.CollateralSubstitutionResponse2
+ * CollateralSubstitutionResponse2}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.SubstitutionResponse1
+ * SubstitutionResponse1}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.CollateralSubstitution2
+ * CollateralSubstitution2}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.CollateralSubstitution3
+ * CollateralSubstitution3}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.CollateralSubstitution5
+ * CollateralSubstitution5}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.CollateralSubstitution4
+ * CollateralSubstitution4}</li>
  * </ul>
  * </li>
  * <li>
@@ -82,28 +85,24 @@ import java.util.List;
  * SubstitutionResponse1.mmCollateralSubstitutionRejectionDetails}</li>
  * </ul>
  * </li>
- * <li>
- * {@linkplain com.tools20022.metamodel.MMBusinessComponent#getDerivationComponent
- * derivationComponent} =
+ * <li>{@linkplain com.tools20022.metamodel.MMBusinessComponent#getElement
+ * element} =
  * <ul>
- * <li>{@linkplain com.tools20022.repository.msg.CollateralSubstitution1
- * CollateralSubstitution1}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.CollateralSubstitutionResponse1
- * CollateralSubstitutionResponse1}</li>
+ * {@linkplain com.tools20022.repository.entity.CollateralSubstitution#mmType
+ * CollateralSubstitution.mmType}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.CollateralSubstitutionResponse2
- * CollateralSubstitutionResponse2}</li>
- * <li>{@linkplain com.tools20022.repository.msg.SubstitutionResponse1
- * SubstitutionResponse1}</li>
- * <li>{@linkplain com.tools20022.repository.msg.CollateralSubstitution2
- * CollateralSubstitution2}</li>
- * <li>{@linkplain com.tools20022.repository.msg.CollateralSubstitution3
- * CollateralSubstitution3}</li>
- * <li>{@linkplain com.tools20022.repository.msg.CollateralSubstitution5
- * CollateralSubstitution5}</li>
- * <li>{@linkplain com.tools20022.repository.msg.CollateralSubstitution4
- * CollateralSubstitution4}</li>
+ * {@linkplain com.tools20022.repository.entity.CollateralSubstitution#mmAcceptedAmount
+ * CollateralSubstitution.mmAcceptedAmount}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.entity.CollateralSubstitution#mmRejectedAmount
+ * CollateralSubstitution.mmRejectedAmount}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.entity.CollateralSubstitution#mmRelatedManagementProcess
+ * CollateralSubstitution.mmRelatedManagementProcess}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.entity.CollateralSubstitution#mmNewCollateral
+ * CollateralSubstitution.mmNewCollateral}</li>
  * </ul>
  * </li>
  * <li>
@@ -178,12 +177,11 @@ public class CollateralSubstitution {
 	 */
 	public static final MMBusinessAttribute mmType = new MMBusinessAttribute() {
 		{
-			derivation_lazy = () -> Arrays.asList(com.tools20022.repository.msg.CollateralSubstitution1.mmCollateralSubstitutionType, com.tools20022.repository.msg.CollateralSubstitution2.mmCollateralSubstitutionType,
-					com.tools20022.repository.msg.CollateralSubstitution3.mmCollateralSubstitutionType, com.tools20022.repository.msg.CollateralSubstitution5.mmCollateralSubstitutionType,
-					com.tools20022.repository.msg.CollateralSubstitution4.mmCollateralSubstitutionType);
+			derivation_lazy = () -> Arrays.asList(CollateralSubstitution1.mmCollateralSubstitutionType, CollateralSubstitution2.mmCollateralSubstitutionType, CollateralSubstitution3.mmCollateralSubstitutionType,
+					CollateralSubstitution5.mmCollateralSubstitutionType, CollateralSubstitution4.mmCollateralSubstitutionType);
 			elementContext_lazy = () -> CollateralSubstitution.mmObject();
 			isDerived = false;
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Type";
 			definition = "Specifies if the collateral that is substituted was posted against the variation margin or the independent amount.";
 			maxOccurs = 1;
@@ -228,10 +226,10 @@ public class CollateralSubstitution {
 	 */
 	public static final MMBusinessAttribute mmAcceptedAmount = new MMBusinessAttribute() {
 		{
-			derivation_lazy = () -> Arrays.asList(com.tools20022.repository.msg.CollateralSubstitutionResponse1.mmAcceptedAmount);
+			derivation_lazy = () -> Arrays.asList(CollateralSubstitutionResponse1.mmAcceptedAmount);
 			elementContext_lazy = () -> CollateralSubstitution.mmObject();
 			isDerived = false;
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AcceptedAmount";
 			definition = "Provides the accepted collateral substitution amount.";
 			maxOccurs = 1;
@@ -277,10 +275,10 @@ public class CollateralSubstitution {
 	 */
 	public static final MMBusinessAttribute mmRejectedAmount = new MMBusinessAttribute() {
 		{
-			derivation_lazy = () -> Arrays.asList(com.tools20022.repository.msg.CollateralSubstitutionResponse2.mmRejectedAmount);
+			derivation_lazy = () -> Arrays.asList(CollateralSubstitutionResponse2.mmRejectedAmount);
 			elementContext_lazy = () -> CollateralSubstitution.mmObject();
 			isDerived = false;
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "RejectedAmount";
 			definition = "Specifies the collateral substitution amount that is rejected.";
 			maxOccurs = 1;
@@ -328,13 +326,13 @@ public class CollateralSubstitution {
 		{
 			elementContext_lazy = () -> CollateralSubstitution.mmObject();
 			isDerived = false;
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "RelatedManagementProcess";
 			definition = "Process which groups the activities related to collateral.";
 			maxOccurs = 1;
 			minOccurs = 0;
 			opposite_lazy = () -> com.tools20022.repository.entity.CollateralManagement.mmCollateralSubstitution;
-			aggregation = com.tools20022.metamodel.MMAggregation.NONE;
+			aggregation = MMAggregation.NONE;
 			type_lazy = () -> com.tools20022.repository.entity.CollateralManagement.mmObject();
 		}
 	};
@@ -377,12 +375,12 @@ public class CollateralSubstitution {
 		{
 			elementContext_lazy = () -> CollateralSubstitution.mmObject();
 			isDerived = false;
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "NewCollateral";
 			definition = "Specifies the collateral which is replacing the returned one.";
 			minOccurs = 0;
 			opposite_lazy = () -> com.tools20022.repository.entity.Collateral.mmRelatedCollateralSubstitution;
-			aggregation = com.tools20022.metamodel.MMAggregation.NONE;
+			aggregation = MMAggregation.NONE;
 			type_lazy = () -> com.tools20022.repository.entity.Collateral.mmObject();
 		}
 	};
@@ -390,16 +388,14 @@ public class CollateralSubstitution {
 	static public MMBusinessComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMBusinessComponent() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 				name = "CollateralSubstitution";
 				definition = "Substitution of collateral by specifying the collateral to be returned and proposing the new type(s) of collateral to be delivered.";
 				associationDomain_lazy = () -> Arrays.asList(com.tools20022.repository.entity.Collateral.mmRelatedCollateralSubstitution, com.tools20022.repository.entity.CollateralManagement.mmCollateralSubstitution);
-				derivationElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.SubstitutionResponse1.mmCollateralSubstitutionAcceptanceDetails,
-						com.tools20022.repository.msg.SubstitutionResponse1.mmCollateralSubstitutionRejectionDetails);
-				element_lazy = () -> Arrays.asList(com.tools20022.repository.entity.CollateralSubstitution.mmType, com.tools20022.repository.entity.CollateralSubstitution.mmAcceptedAmount,
-						com.tools20022.repository.entity.CollateralSubstitution.mmRejectedAmount, com.tools20022.repository.entity.CollateralSubstitution.mmRelatedManagementProcess,
-						com.tools20022.repository.entity.CollateralSubstitution.mmNewCollateral);
+				derivationElement_lazy = () -> Arrays.asList(SubstitutionResponse1.mmCollateralSubstitutionAcceptanceDetails, SubstitutionResponse1.mmCollateralSubstitutionRejectionDetails);
+				element_lazy = () -> Arrays.asList(CollateralSubstitution.mmType, CollateralSubstitution.mmAcceptedAmount, CollateralSubstitution.mmRejectedAmount, CollateralSubstitution.mmRelatedManagementProcess,
+						CollateralSubstitution.mmNewCollateral);
 				derivationComponent_lazy = () -> Arrays.asList(CollateralSubstitution1.mmObject(), CollateralSubstitutionResponse1.mmObject(), CollateralSubstitutionResponse2.mmObject(), SubstitutionResponse1.mmObject(),
 						CollateralSubstitution2.mmObject(), CollateralSubstitution3.mmObject(), CollateralSubstitution5.mmObject(), CollateralSubstitution4.mmObject());
 			}

@@ -19,7 +19,10 @@ package com.tools20022.repository.choice;
 
 import com.tools20022.metamodel.MMChoiceComponent;
 import com.tools20022.metamodel.MMMessageAssociationEnd;
+import com.tools20022.metamodel.MMRegistrationStatus;
+import com.tools20022.repository.entity.AssetHolding;
 import com.tools20022.repository.entity.SecuritiesQuantity;
+import com.tools20022.repository.GeneratedRepository;
 import com.tools20022.repository.msg.OriginalAndCurrentQuantities6;
 import com.tools20022.repository.msg.SignedQuantityFormat6;
 import java.util.Arrays;
@@ -107,14 +110,14 @@ public class Quantity18Choice {
 	 */
 	public static final MMMessageAssociationEnd mmOriginalAndCurrentFaceAmount = new MMMessageAssociationEnd() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.AssetHolding.mmFaceAmount;
+			businessElementTrace_lazy = () -> AssetHolding.mmFaceAmount;
 			componentContext_lazy = () -> Quantity18Choice.mmObject();
 			isDerived = false;
 			xmlTag = "OrgnlAndCurFaceAmt";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "OriginalAndCurrentFaceAmount";
 			definition = "Signed face amount and amortised value of security.";
-			previousVersion_lazy = () -> com.tools20022.repository.choice.Quantity4Choice.mmOriginalAndCurrentFaceAmount;
+			previousVersion_lazy = () -> Quantity4Choice.mmOriginalAndCurrentFaceAmount;
 			maxOccurs = 1;
 			minOccurs = 1;
 			isComposite = true;
@@ -158,10 +161,10 @@ public class Quantity18Choice {
 			componentContext_lazy = () -> Quantity18Choice.mmObject();
 			isDerived = false;
 			xmlTag = "SgndQty";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SignedQuantity";
 			definition = "Signed quantity of security.";
-			previousVersion_lazy = () -> com.tools20022.repository.choice.Quantity4Choice.mmSignedQuantity;
+			previousVersion_lazy = () -> Quantity4Choice.mmSignedQuantity;
 			maxOccurs = 1;
 			minOccurs = 1;
 			isComposite = true;
@@ -172,10 +175,10 @@ public class Quantity18Choice {
 	final static public MMChoiceComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMChoiceComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.choice.Quantity18Choice.mmOriginalAndCurrentFaceAmount, com.tools20022.repository.choice.Quantity18Choice.mmSignedQuantity);
+				messageElement_lazy = () -> Arrays.asList(Quantity18Choice.mmOriginalAndCurrentFaceAmount, Quantity18Choice.mmSignedQuantity);
 				trace_lazy = () -> SecuritiesQuantity.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "Quantity18Choice";
 				definition = "Choice between different quantity of security formats.";
 				previousVersion_lazy = () -> Quantity4Choice.mmObject();

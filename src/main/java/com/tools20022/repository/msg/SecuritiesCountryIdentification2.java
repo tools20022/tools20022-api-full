@@ -20,10 +20,13 @@ package com.tools20022.repository.msg;
 import com.tools20022.metamodel.MMMessageAssociationEnd;
 import com.tools20022.metamodel.MMMessageAttribute;
 import com.tools20022.metamodel.MMMessageComponent;
+import com.tools20022.metamodel.MMRegistrationStatus;
+import com.tools20022.repository.area.auth.FinancialInstrumentReportingCountryCodeReportV01;
 import com.tools20022.repository.choice.Period4Choice;
 import com.tools20022.repository.codeset.Modification1Code;
 import com.tools20022.repository.datatype.ISODate;
 import com.tools20022.repository.datatype.TrueFalseIndicator;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -114,7 +117,7 @@ public class SecuritiesCountryIdentification2 {
 			componentContext_lazy = () -> SecuritiesCountryIdentification2.mmObject();
 			isDerived = false;
 			xmlTag = "Ctry";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Country";
 			definition = "Two character country code and country name as per ISO 3166.";
 			maxOccurs = 1;
@@ -160,7 +163,7 @@ public class SecuritiesCountryIdentification2 {
 			componentContext_lazy = () -> SecuritiesCountryIdentification2.mmObject();
 			isDerived = false;
 			xmlTag = "EEACtry";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "EEACountry";
 			definition = "Flag which reflects if the country is a member of the EEA (European Economic Area) or not.";
 			maxOccurs = 1;
@@ -203,7 +206,7 @@ public class SecuritiesCountryIdentification2 {
 			componentContext_lazy = () -> SecuritiesCountryIdentification2.mmObject();
 			isDerived = false;
 			xmlTag = "Mod";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Modification";
 			definition = "Modification status for the record compared to the previous report.";
 			maxOccurs = 1;
@@ -243,7 +246,7 @@ public class SecuritiesCountryIdentification2 {
 			componentContext_lazy = () -> SecuritiesCountryIdentification2.mmObject();
 			isDerived = false;
 			xmlTag = "VldtyPrd";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ValidityPeriod";
 			definition = "Details the validity of the specific record.";
 			maxOccurs = 1;
@@ -285,7 +288,7 @@ public class SecuritiesCountryIdentification2 {
 			componentContext_lazy = () -> SecuritiesCountryIdentification2.mmObject();
 			isDerived = false;
 			xmlTag = "LastUpdtd";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "LastUpdated";
 			definition = "Date when this record was last modified.";
 			maxOccurs = 1;
@@ -297,12 +300,11 @@ public class SecuritiesCountryIdentification2 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.SecuritiesCountryIdentification2.mmCountry, com.tools20022.repository.msg.SecuritiesCountryIdentification2.mmEEACountry,
-						com.tools20022.repository.msg.SecuritiesCountryIdentification2.mmModification, com.tools20022.repository.msg.SecuritiesCountryIdentification2.mmValidityPeriod,
-						com.tools20022.repository.msg.SecuritiesCountryIdentification2.mmLastUpdated);
-				messageBuildingBlock_lazy = () -> Arrays.asList(com.tools20022.repository.area.auth.FinancialInstrumentReportingCountryCodeReportV01.mmCountryData);
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				messageElement_lazy = () -> Arrays.asList(SecuritiesCountryIdentification2.mmCountry, SecuritiesCountryIdentification2.mmEEACountry, SecuritiesCountryIdentification2.mmModification,
+						SecuritiesCountryIdentification2.mmValidityPeriod, SecuritiesCountryIdentification2.mmLastUpdated);
+				messageBuildingBlock_lazy = () -> Arrays.asList(FinancialInstrumentReportingCountryCodeReportV01.mmCountryData);
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "SecuritiesCountryIdentification2";
 				definition = "Details an individual country including its name and country code.";
 			}

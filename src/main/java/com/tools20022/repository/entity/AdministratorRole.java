@@ -18,7 +18,10 @@
 package com.tools20022.repository.entity;
 
 import com.tools20022.metamodel.MMBusinessComponent;
+import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.entity.InvestmentAccountPartyRole;
+import com.tools20022.repository.GeneratedRepository;
+import com.tools20022.repository.msg.*;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -111,16 +114,13 @@ public class AdministratorRole extends InvestmentAccountPartyRole {
 	static public MMBusinessComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMBusinessComponent() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "AdministratorRole";
 				definition = "Entity that has been appointed by a legal authority to act on behalf of a person or organisation that has gone bankrupt.";
-				derivationElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.AccountParties2.mmAdministrator, com.tools20022.repository.msg.AccountParties5.mmAdministrator,
-						com.tools20022.repository.msg.AccountParties6.mmAdministrator, com.tools20022.repository.msg.AccountParties3.mmAdministrator, com.tools20022.repository.msg.AccountParties4.mmAdministrator,
-						com.tools20022.repository.msg.AccountParties7.mmAdministrator, com.tools20022.repository.msg.AccountParties9.mmAdministrator, com.tools20022.repository.msg.AccountParties8.mmAdministrator,
-						com.tools20022.repository.msg.AccountParties11.mmAdministrator, com.tools20022.repository.msg.AccountParties10.mmAdministrator, com.tools20022.repository.msg.AccountParties12.mmAdministrator,
-						com.tools20022.repository.msg.AccountParties13.mmAdministrator, com.tools20022.repository.msg.AccountParties14.mmAdministrator, com.tools20022.repository.msg.AccountParties15.mmAdministrator,
-						com.tools20022.repository.msg.AccountParties16.mmAdministrator);
+				derivationElement_lazy = () -> Arrays.asList(AccountParties2.mmAdministrator, AccountParties5.mmAdministrator, AccountParties6.mmAdministrator, AccountParties3.mmAdministrator, AccountParties4.mmAdministrator,
+						AccountParties7.mmAdministrator, AccountParties9.mmAdministrator, AccountParties8.mmAdministrator, AccountParties11.mmAdministrator, AccountParties10.mmAdministrator, AccountParties12.mmAdministrator,
+						AccountParties13.mmAdministrator, AccountParties14.mmAdministrator, AccountParties15.mmAdministrator, AccountParties16.mmAdministrator);
 				superType_lazy = () -> InvestmentAccountPartyRole.mmObject();
 			}
 		});

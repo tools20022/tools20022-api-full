@@ -20,10 +20,12 @@ package com.tools20022.repository.msg;
 import com.tools20022.metamodel.MMMessageAssociationEnd;
 import com.tools20022.metamodel.MMMessageAttribute;
 import com.tools20022.metamodel.MMMessageComponent;
+import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.codeset.ATMOperation1Code;
 import com.tools20022.repository.datatype.Max140Text;
 import com.tools20022.repository.datatype.Max35Text;
 import com.tools20022.repository.datatype.Number;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.List;
@@ -123,7 +125,7 @@ public class ATMTransaction25 {
 			componentContext_lazy = () -> ATMTransaction25.mmObject();
 			isDerived = false;
 			xmlTag = "TpOfOpr";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "TypeOfOperation";
 			definition = "Type of logical or physical operation on the ATM for which the counters are computed.";
 			maxOccurs = 1;
@@ -171,10 +173,10 @@ public class ATMTransaction25 {
 			componentContext_lazy = () -> ATMTransaction25.mmObject();
 			isDerived = false;
 			xmlTag = "TxId";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "TransactionIdentification";
 			definition = "Identification of the reconciliation transaction.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.ATMTransaction27.mmTransactionIdentification);
+			nextVersions_lazy = () -> Arrays.asList(ATMTransaction27.mmTransactionIdentification);
 			maxOccurs = 1;
 			minOccurs = 1;
 			isComposite = true;
@@ -222,10 +224,10 @@ public class ATMTransaction25 {
 			componentContext_lazy = () -> ATMTransaction25.mmObject();
 			isDerived = false;
 			xmlTag = "RcncltnId";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ReconciliationIdentification";
 			definition = "Identification of the reconciliation period.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.ATMTransaction27.mmReconciliationIdentification);
+			nextVersions_lazy = () -> Arrays.asList(ATMTransaction27.mmReconciliationIdentification);
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> Max35Text.mmObject();
@@ -262,7 +264,7 @@ public class ATMTransaction25 {
 			componentContext_lazy = () -> ATMTransaction25.mmObject();
 			isDerived = false;
 			xmlTag = "ATMTtls";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ATMTotals";
 			definition = "Current totals of the ATM.";
 			minOccurs = 0;
@@ -302,7 +304,7 @@ public class ATMTransaction25 {
 			componentContext_lazy = () -> ATMTransaction25.mmObject();
 			isDerived = false;
 			xmlTag = "Csstt";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Cassette";
 			definition = "Information on the cassette of the ATM.";
 			minOccurs = 0;
@@ -344,7 +346,7 @@ public class ATMTransaction25 {
 			componentContext_lazy = () -> ATMTransaction25.mmObject();
 			isDerived = false;
 			xmlTag = "TxTtls";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "TransactionTotals";
 			definition = "Transaction counters that are set to zero after a reconciliation with counter reinitialisation command.";
 			minOccurs = 0;
@@ -385,7 +387,7 @@ public class ATMTransaction25 {
 			componentContext_lazy = () -> ATMTransaction25.mmObject();
 			isDerived = false;
 			xmlTag = "RtndCard";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "RetainedCard";
 			definition = "Total number of retained cards.";
 			maxOccurs = 1;
@@ -426,7 +428,7 @@ public class ATMTransaction25 {
 			componentContext_lazy = () -> ATMTransaction25.mmObject();
 			isDerived = false;
 			xmlTag = "AddtlTxInf";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AdditionalTransactionInformation";
 			definition = "Additional information about reconciliation.";
 			maxOccurs = 1;
@@ -438,11 +440,10 @@ public class ATMTransaction25 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.ATMTransaction25.mmTypeOfOperation, com.tools20022.repository.msg.ATMTransaction25.mmTransactionIdentification,
-						com.tools20022.repository.msg.ATMTransaction25.mmReconciliationIdentification, com.tools20022.repository.msg.ATMTransaction25.mmATMTotals, com.tools20022.repository.msg.ATMTransaction25.mmCassette,
-						com.tools20022.repository.msg.ATMTransaction25.mmTransactionTotals, com.tools20022.repository.msg.ATMTransaction25.mmRetainedCard, com.tools20022.repository.msg.ATMTransaction25.mmAdditionalTransactionInformation);
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				messageElement_lazy = () -> Arrays.asList(ATMTransaction25.mmTypeOfOperation, ATMTransaction25.mmTransactionIdentification, ATMTransaction25.mmReconciliationIdentification, ATMTransaction25.mmATMTotals,
+						ATMTransaction25.mmCassette, ATMTransaction25.mmTransactionTotals, ATMTransaction25.mmRetainedCard, ATMTransaction25.mmAdditionalTransactionInformation);
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "ATMTransaction25";
 				definition = "Information about the reconciliation request.";
 				nextVersions_lazy = () -> Arrays.asList(ATMTransaction27.mmObject());

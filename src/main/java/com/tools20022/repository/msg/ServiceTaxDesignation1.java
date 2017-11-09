@@ -19,9 +19,12 @@ package com.tools20022.repository.msg;
 
 import com.tools20022.metamodel.MMMessageAttribute;
 import com.tools20022.metamodel.MMMessageComponent;
+import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.codeset.ServiceTaxDesignation1Code;
 import com.tools20022.repository.datatype.Max35Text;
+import com.tools20022.repository.entity.Tax;
 import com.tools20022.repository.entity.TaxRecord;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.List;
@@ -99,7 +102,7 @@ public class ServiceTaxDesignation1 {
 			componentContext_lazy = () -> ServiceTaxDesignation1.mmObject();
 			isDerived = false;
 			xmlTag = "Cd";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Code";
 			definition = "Identifies the taxable status of the service.";
 			maxOccurs = 1;
@@ -145,11 +148,11 @@ public class ServiceTaxDesignation1 {
 	 */
 	public static final MMMessageAttribute mmRegion = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Tax.mmAdministrationZone;
+			businessElementTrace_lazy = () -> Tax.mmAdministrationZone;
 			componentContext_lazy = () -> ServiceTaxDesignation1.mmObject();
 			isDerived = false;
 			xmlTag = "Rgn";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Region";
 			definition = "Defines the tax region associated with the service. This element must be present if taxes are involved with any portion of the statement.";
 			maxOccurs = 1;
@@ -193,7 +196,7 @@ public class ServiceTaxDesignation1 {
 			componentContext_lazy = () -> ServiceTaxDesignation1.mmObject();
 			isDerived = false;
 			xmlTag = "TaxRsn";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "TaxReason";
 			definition = "Provides free form explanations of the various tax codes used within the statement.";
 			minOccurs = 0;
@@ -204,11 +207,10 @@ public class ServiceTaxDesignation1 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.ServiceTaxDesignation1.mmCode, com.tools20022.repository.msg.ServiceTaxDesignation1.mmRegion,
-						com.tools20022.repository.msg.ServiceTaxDesignation1.mmTaxReason);
+				messageElement_lazy = () -> Arrays.asList(ServiceTaxDesignation1.mmCode, ServiceTaxDesignation1.mmRegion, ServiceTaxDesignation1.mmTaxReason);
 				trace_lazy = () -> TaxRecord.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "ServiceTaxDesignation1";
 				definition = "Designates the tax calculation to be applied on a service.";
 			}

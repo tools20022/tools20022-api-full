@@ -20,11 +20,14 @@ package com.tools20022.repository.msg;
 import com.tools20022.metamodel.MMMessageAssociationEnd;
 import com.tools20022.metamodel.MMMessageAttribute;
 import com.tools20022.metamodel.MMMessageComponent;
+import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.choice.BalanceType3Choice;
 import com.tools20022.repository.choice.DateAndDateTimeSearchChoice;
 import com.tools20022.repository.choice.MemberIdentificationChoice;
 import com.tools20022.repository.codeset.BalanceCounterparty1Code;
+import com.tools20022.repository.entity.Balance;
 import com.tools20022.repository.entity.CashBalance;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.List;
@@ -106,11 +109,11 @@ public class BalanceDetails4 {
 	 */
 	public static final MMMessageAssociationEnd mmBalanceType = new MMMessageAssociationEnd() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Balance.mmType;
+			businessElementTrace_lazy = () -> Balance.mmType;
 			componentContext_lazy = () -> BalanceDetails4.mmObject();
 			isDerived = false;
 			xmlTag = "BalTp";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "BalanceType";
 			definition = "Specifies the nature of a balance.";
 			minOccurs = 0;
@@ -156,11 +159,11 @@ public class BalanceDetails4 {
 	 */
 	public static final MMMessageAttribute mmCounterpartyType = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.CashBalance.mmCalculationType;
+			businessElementTrace_lazy = () -> CashBalance.mmCalculationType;
 			componentContext_lazy = () -> BalanceDetails4.mmObject();
 			isDerived = false;
 			xmlTag = "CtrPtyTp";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CounterpartyType";
 			definition = "Specifies the type of counterparty for which the balance is calculated.";
 			maxOccurs = 1;
@@ -205,11 +208,11 @@ public class BalanceDetails4 {
 	 */
 	public static final MMMessageAttribute mmCounterpartyIdentification = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.CashBalance.mmCounterparty;
+			businessElementTrace_lazy = () -> CashBalance.mmCounterparty;
 			componentContext_lazy = () -> BalanceDetails4.mmObject();
 			isDerived = false;
 			xmlTag = "CtrPtyId";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CounterpartyIdentification";
 			definition = "Identifies the counterparty for which the balance is calculated.";
 			minOccurs = 0;
@@ -253,11 +256,11 @@ public class BalanceDetails4 {
 	 */
 	public static final MMMessageAttribute mmBalanceValueDate = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Balance.mmValueDate;
+			businessElementTrace_lazy = () -> Balance.mmValueDate;
 			componentContext_lazy = () -> BalanceDetails4.mmObject();
 			isDerived = false;
 			xmlTag = "BalValDt";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "BalanceValueDate";
 			definition = "Date and time at which the balance is or will be available.";
 			minOccurs = 0;
@@ -268,11 +271,10 @@ public class BalanceDetails4 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.BalanceDetails4.mmBalanceType, com.tools20022.repository.msg.BalanceDetails4.mmCounterpartyType,
-						com.tools20022.repository.msg.BalanceDetails4.mmCounterpartyIdentification, com.tools20022.repository.msg.BalanceDetails4.mmBalanceValueDate);
+				messageElement_lazy = () -> Arrays.asList(BalanceDetails4.mmBalanceType, BalanceDetails4.mmCounterpartyType, BalanceDetails4.mmCounterpartyIdentification, BalanceDetails4.mmBalanceValueDate);
 				trace_lazy = () -> CashBalance.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 				name = "BalanceDetails4";
 				definition = "Balance related detailed for a cash account.";
 			}

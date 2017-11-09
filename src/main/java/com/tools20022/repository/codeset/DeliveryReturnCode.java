@@ -19,6 +19,8 @@ package com.tools20022.repository.codeset;
 
 import com.tools20022.metamodel.MMCode;
 import com.tools20022.metamodel.MMCodeSet;
+import com.tools20022.metamodel.MMRegistrationStatus;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -27,6 +29,13 @@ import java.util.concurrent.atomic.AtomicReference;
  * <p>
  * <strong>Constant fields:</strong>
  * <ul>
+ * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getDerivation derivation}
+ * =
+ * <ul>
+ * <li>{@linkplain com.tools20022.repository.codeset.DeliveryReturn1Code
+ * DeliveryReturn1Code}</li>
+ * </ul>
+ * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getCode code} =
  * <ul>
  * <li>
@@ -50,13 +59,6 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>
  * {@linkplain com.tools20022.repository.codeset.DeliveryReturnCode#mmPartialReturn
  * DeliveryReturnCode.mmPartialReturn}</li>
- * </ul>
- * </li>
- * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getDerivation derivation}
- * =
- * <ul>
- * <li>{@linkplain com.tools20022.repository.codeset.DeliveryReturn1Code
- * DeliveryReturn1Code}</li>
  * </ul>
  * </li>
  * <li>
@@ -106,7 +108,7 @@ public class DeliveryReturnCode {
 	 */
 	public static final MMCode mmUnrecognisedDelivery = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "UnrecognisedDelivery";
 			definition = "Original delivery is not recognized.";
 			owner_lazy = () -> DeliveryReturnCode.mmObject();
@@ -136,7 +138,7 @@ public class DeliveryReturnCode {
 	 */
 	public static final MMCode mmWrongQuantity = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "WrongQuantity";
 			definition = "Wrong quantity delivered in the original instruction.";
 			owner_lazy = () -> DeliveryReturnCode.mmObject();
@@ -167,7 +169,7 @@ public class DeliveryReturnCode {
 	 */
 	public static final MMCode mmWrongSettlementAmount = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "WrongSettlementAmount";
 			definition = "Wrong settlement amount settled in the original delivery.";
 			owner_lazy = () -> DeliveryReturnCode.mmObject();
@@ -200,7 +202,7 @@ public class DeliveryReturnCode {
 	 */
 	public static final MMCode mmPartialDelivery = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PartialDelivery";
 			definition = "Only a portion of the original transaction quantity was delivered by the Central Securities Depository (CSD).";
 			owner_lazy = () -> DeliveryReturnCode.mmObject();
@@ -230,7 +232,7 @@ public class DeliveryReturnCode {
 	 */
 	public static final MMCode mmAccountMissing = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AccountMissing";
 			definition = "Account information is missing in the original delivery.";
 			owner_lazy = () -> DeliveryReturnCode.mmObject();
@@ -260,7 +262,7 @@ public class DeliveryReturnCode {
 	 */
 	public static final MMCode mmDueBiillMissing = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "DueBiillMissing";
 			definition = "Due bill information missing in the original delivery.";
 			owner_lazy = () -> DeliveryReturnCode.mmObject();
@@ -293,7 +295,7 @@ public class DeliveryReturnCode {
 	 */
 	public static final MMCode mmPartialReturn = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PartialReturn";
 			definition = "Portion of the original transaction quantity was returned by the receiver.";
 			owner_lazy = () -> DeliveryReturnCode.mmObject();
@@ -304,14 +306,13 @@ public class DeliveryReturnCode {
 	static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
 				example = Arrays.asList("UNRE");
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "DeliveryReturnCode";
 				definition = "Specifies the type of delivery return.";
-				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.DeliveryReturnCode.mmUnrecognisedDelivery, com.tools20022.repository.codeset.DeliveryReturnCode.mmWrongQuantity,
-						com.tools20022.repository.codeset.DeliveryReturnCode.mmWrongSettlementAmount, com.tools20022.repository.codeset.DeliveryReturnCode.mmPartialDelivery,
-						com.tools20022.repository.codeset.DeliveryReturnCode.mmAccountMissing, com.tools20022.repository.codeset.DeliveryReturnCode.mmDueBiillMissing, com.tools20022.repository.codeset.DeliveryReturnCode.mmPartialReturn);
+				code_lazy = () -> Arrays.asList(DeliveryReturnCode.mmUnrecognisedDelivery, DeliveryReturnCode.mmWrongQuantity, DeliveryReturnCode.mmWrongSettlementAmount, DeliveryReturnCode.mmPartialDelivery,
+						DeliveryReturnCode.mmAccountMissing, DeliveryReturnCode.mmDueBiillMissing, DeliveryReturnCode.mmPartialReturn);
 				derivation_lazy = () -> Arrays.asList(DeliveryReturn1Code.mmObject());
 			}
 		});

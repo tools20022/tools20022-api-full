@@ -19,6 +19,8 @@ package com.tools20022.repository.choice;
 
 import com.tools20022.metamodel.MMChoiceComponent;
 import com.tools20022.metamodel.MMMessageAssociationEnd;
+import com.tools20022.metamodel.MMRegistrationStatus;
+import com.tools20022.repository.GeneratedRepository;
 import com.tools20022.repository.msg.DateCodeAndTimeFormat3;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
@@ -105,10 +107,10 @@ public class DateFormat32Choice {
 			componentContext_lazy = () -> DateFormat32Choice.mmObject();
 			isDerived = false;
 			xmlTag = "Dt";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Date";
 			definition = "Date expressed as a calendar date.";
-			previousVersion_lazy = () -> com.tools20022.repository.choice.DateFormat20Choice.mmDate;
+			previousVersion_lazy = () -> DateFormat20Choice.mmDate;
 			maxOccurs = 1;
 			minOccurs = 1;
 			isComposite = true;
@@ -152,10 +154,10 @@ public class DateFormat32Choice {
 			componentContext_lazy = () -> DateFormat32Choice.mmObject();
 			isDerived = false;
 			xmlTag = "DtCdAndTm";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "DateCodeAndTime";
 			definition = "Specifies  a date code and a time.";
-			previousVersion_lazy = () -> com.tools20022.repository.choice.DateFormat20Choice.mmDateCodeAndTime;
+			previousVersion_lazy = () -> DateFormat20Choice.mmDateCodeAndTime;
 			maxOccurs = 1;
 			minOccurs = 1;
 			isComposite = true;
@@ -199,10 +201,10 @@ public class DateFormat32Choice {
 			componentContext_lazy = () -> DateFormat32Choice.mmObject();
 			isDerived = false;
 			xmlTag = "DtCd";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "DateCode";
 			definition = "Specifies the type of date.";
-			previousVersion_lazy = () -> com.tools20022.repository.choice.DateFormat20Choice.mmDateCode;
+			previousVersion_lazy = () -> DateFormat20Choice.mmDateCode;
 			maxOccurs = 1;
 			minOccurs = 1;
 			isComposite = true;
@@ -213,10 +215,9 @@ public class DateFormat32Choice {
 	final static public MMChoiceComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMChoiceComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.choice.DateFormat32Choice.mmDate, com.tools20022.repository.choice.DateFormat32Choice.mmDateCodeAndTime,
-						com.tools20022.repository.choice.DateFormat32Choice.mmDateCode);
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				messageElement_lazy = () -> Arrays.asList(DateFormat32Choice.mmDate, DateFormat32Choice.mmDateCodeAndTime, DateFormat32Choice.mmDateCode);
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "DateFormat32Choice";
 				definition = "Choice between an ISODate or ISODateTime format or a date code or a date code and a time.";
 				previousVersion_lazy = () -> DateFormat20Choice.mmObject();

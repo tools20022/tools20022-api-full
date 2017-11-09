@@ -19,7 +19,9 @@ package com.tools20022.repository.codeset;
 
 import com.tools20022.metamodel.MMCode;
 import com.tools20022.metamodel.MMCodeSet;
+import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.codeset.AuthenticationMethodCode;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -98,7 +100,7 @@ public class AuthenticationMethod7Code extends AuthenticationMethodCode {
 	 */
 	public static final MMCode mmAuthenticationToken = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AuthenticationToken";
 			owner_lazy = () -> AuthenticationMethod7Code.mmObject();
 		}
@@ -121,7 +123,7 @@ public class AuthenticationMethod7Code extends AuthenticationMethodCode {
 	 */
 	public static final MMCode mmBiometry = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Biometry";
 			owner_lazy = () -> AuthenticationMethod7Code.mmObject();
 		}
@@ -144,7 +146,7 @@ public class AuthenticationMethod7Code extends AuthenticationMethodCode {
 	 */
 	public static final MMCode mmMobile = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Mobile";
 			owner_lazy = () -> AuthenticationMethod7Code.mmObject();
 		}
@@ -167,7 +169,7 @@ public class AuthenticationMethod7Code extends AuthenticationMethodCode {
 	 */
 	public static final MMCode mmOther = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Other";
 			owner_lazy = () -> AuthenticationMethod7Code.mmObject();
 		}
@@ -190,7 +192,7 @@ public class AuthenticationMethod7Code extends AuthenticationMethodCode {
 	 */
 	public static final MMCode mmOfflinePIN = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "OfflinePIN";
 			owner_lazy = () -> AuthenticationMethod7Code.mmObject();
 		}
@@ -213,7 +215,7 @@ public class AuthenticationMethod7Code extends AuthenticationMethodCode {
 	 */
 	public static final MMCode mmOnLinePIN = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "OnLinePIN";
 			owner_lazy = () -> AuthenticationMethod7Code.mmObject();
 		}
@@ -236,7 +238,7 @@ public class AuthenticationMethod7Code extends AuthenticationMethodCode {
 	 */
 	public static final MMCode mmPassword = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Password";
 			owner_lazy = () -> AuthenticationMethod7Code.mmObject();
 		}
@@ -259,7 +261,7 @@ public class AuthenticationMethod7Code extends AuthenticationMethodCode {
 	 */
 	public static final MMCode mmSecureCertificate = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SecureCertificate";
 			owner_lazy = () -> AuthenticationMethod7Code.mmObject();
 		}
@@ -282,7 +284,7 @@ public class AuthenticationMethod7Code extends AuthenticationMethodCode {
 	 */
 	public static final MMCode mmSecuredChannel = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SecuredChannel";
 			owner_lazy = () -> AuthenticationMethod7Code.mmObject();
 		}
@@ -291,14 +293,12 @@ public class AuthenticationMethod7Code extends AuthenticationMethodCode {
 	static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "AuthenticationMethod7Code";
 				definition = "Method to authenticate the customer or its card.";
-				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.AuthenticationMethod7Code.mmAuthenticationToken, com.tools20022.repository.codeset.AuthenticationMethod7Code.mmBiometry,
-						com.tools20022.repository.codeset.AuthenticationMethod7Code.mmMobile, com.tools20022.repository.codeset.AuthenticationMethod7Code.mmOther, com.tools20022.repository.codeset.AuthenticationMethod7Code.mmOfflinePIN,
-						com.tools20022.repository.codeset.AuthenticationMethod7Code.mmOnLinePIN, com.tools20022.repository.codeset.AuthenticationMethod7Code.mmPassword,
-						com.tools20022.repository.codeset.AuthenticationMethod7Code.mmSecureCertificate, com.tools20022.repository.codeset.AuthenticationMethod7Code.mmSecuredChannel);
+				code_lazy = () -> Arrays.asList(AuthenticationMethod7Code.mmAuthenticationToken, AuthenticationMethod7Code.mmBiometry, AuthenticationMethod7Code.mmMobile, AuthenticationMethod7Code.mmOther,
+						AuthenticationMethod7Code.mmOfflinePIN, AuthenticationMethod7Code.mmOnLinePIN, AuthenticationMethod7Code.mmPassword, AuthenticationMethod7Code.mmSecureCertificate, AuthenticationMethod7Code.mmSecuredChannel);
 				trace_lazy = () -> AuthenticationMethodCode.mmObject();
 			}
 		});

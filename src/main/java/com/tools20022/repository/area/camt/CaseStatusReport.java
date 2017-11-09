@@ -20,6 +20,7 @@ package com.tools20022.repository.area.camt;
 import com.tools20022.metamodel.MMMessageBuildingBlock;
 import com.tools20022.metamodel.MMMessageDefinition;
 import com.tools20022.metamodel.MMMessageDefinitionIdentifier;
+import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.area.CashManagementArchive;
 import com.tools20022.repository.msg.Case;
 import com.tools20022.repository.msg.CaseAssignment;
@@ -48,6 +49,9 @@ import java.util.concurrent.atomic.AtomicReference;
  * <p>
  * <strong>Constant fields:</strong>
  * <ul>
+ * <li>
+ * {@linkplain com.tools20022.metamodel.MMMessageDefinition#getMessageDefinitionIdentifier
+ * messageDefinitionIdentifier} = {@code camt.039.001.01}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMMessageDefinition#getBusinessArea
  * businessArea} =
  * {@linkplain com.tools20022.repository.area.CashManagementArchive
@@ -81,9 +85,6 @@ import java.util.concurrent.atomic.AtomicReference;
  * CaseStatusReport.mmNewAssignment}</li>
  * </ul>
  * </li>
- * <li>
- * {@linkplain com.tools20022.metamodel.MMMessageDefinition#getMessageDefinitionIdentifier
- * messageDefinitionIdentifier} = {@code camt.039.001.01}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -126,7 +127,7 @@ public class CaseStatusReport {
 	public static final MMMessageBuildingBlock mmHeader = new MMMessageBuildingBlock() {
 		{
 			xmlTag = "Hdr";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Header";
 			definition = "Specifies generic information about an investigation report.";
 			maxOccurs = 1;
@@ -159,7 +160,7 @@ public class CaseStatusReport {
 	public static final MMMessageBuildingBlock mmCase = new MMMessageBuildingBlock() {
 		{
 			xmlTag = "Case";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Case";
 			definition = "Identifies the case.";
 			maxOccurs = 1;
@@ -193,7 +194,7 @@ public class CaseStatusReport {
 	public static final MMMessageBuildingBlock mmStatus = new MMMessageBuildingBlock() {
 		{
 			xmlTag = "Sts";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Status";
 			definition = "Defines the status of the case.";
 			maxOccurs = 1;
@@ -227,7 +228,7 @@ public class CaseStatusReport {
 	public static final MMMessageBuildingBlock mmNewAssignment = new MMMessageBuildingBlock() {
 		{
 			xmlTag = "NewAssgnmt";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "NewAssignment";
 			definition = "Identifies the last assignment performed.";
 			maxOccurs = 1;
@@ -239,7 +240,7 @@ public class CaseStatusReport {
 	final static public MMMessageDefinition mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageDefinition() {
 			{
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "CaseStatusReport";
 				definition = "Scope\nThe Case Status Report message is sent by a case assignee to a case creator or case assigner.\nThis message is used to report on the status of a case.\nUsage\nA Case Status Report message is sent in reply to a Case Status Report Request message. This message\n- covers one and only one case at a time. (If a case assignee needs to report on several cases, then multiple Case Status Report messages must be sent.)\n- may be forwarded to subsequent case assigner(s) until it reaches the end point\n- is able to indicate the fact that a case has been assigned to a party downstream in the payment processing chain\n- may not be used in place of a Resolution Of Investigation (except for the condition given in the next bullet point) or Notification Of Case Assignment message\n- may be skipped and replaced by a Resolution Of Investigation message if at the moment when the request for a investigation status arrives, the assignee has obtained a solution. (In this case a Resolution Of Investigation message can be sent in lieu of a Case Status Report and the case may be closed.)";
 				messageSet_lazy = () -> Arrays.asList(ISOArchive.mmObject());
@@ -247,8 +248,7 @@ public class CaseStatusReport {
 				xmlTag = "camt.039.001.01";
 				businessArea_lazy = () -> CashManagementArchive.mmObject();
 				xmlName = "camt.039.001.01";
-				messageBuildingBlock_lazy = () -> Arrays.asList(com.tools20022.repository.area.camt.CaseStatusReport.mmHeader, com.tools20022.repository.area.camt.CaseStatusReport.mmCase,
-						com.tools20022.repository.area.camt.CaseStatusReport.mmStatus, com.tools20022.repository.area.camt.CaseStatusReport.mmNewAssignment);
+				messageBuildingBlock_lazy = () -> Arrays.asList(CaseStatusReport.mmHeader, CaseStatusReport.mmCase, CaseStatusReport.mmStatus, CaseStatusReport.mmNewAssignment);
 				messageDefinitionIdentifier_lazy = () -> new MMMessageDefinitionIdentifier() {
 					{
 						businessArea = "camt";

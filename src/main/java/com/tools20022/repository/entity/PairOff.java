@@ -17,9 +17,16 @@
 
 package com.tools20022.repository.entity;
 
+import com.tools20022.metamodel.MMAggregation;
 import com.tools20022.metamodel.MMBusinessAssociationEnd;
 import com.tools20022.metamodel.MMBusinessComponent;
+import com.tools20022.metamodel.MMRegistrationStatus;
+import com.tools20022.repository.choice.PairedOrTurnedQuantity1Choice;
+import com.tools20022.repository.choice.PairedOrTurnedQuantity2Choice;
+import com.tools20022.repository.choice.PairedOrTurnedQuantity3Choice;
+import com.tools20022.repository.choice.PairedOrTurnedQuantity4Choice;
 import com.tools20022.repository.entity.ObligationFulfilment;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -33,16 +40,6 @@ import java.util.concurrent.atomic.AtomicReference;
  * <p>
  * <strong>Constant fields:</strong>
  * <ul>
- * <li>{@linkplain com.tools20022.metamodel.MMBusinessComponent#getElement
- * element} =
- * <ul>
- * <li>{@linkplain com.tools20022.repository.entity.PairOff#mmPairedOffQuantity
- * PairOff.mmPairedOffQuantity}</li>
- * <li>
- * {@linkplain com.tools20022.repository.entity.PairOff#mmRelatedSecuritiesSettlement
- * PairOff.mmRelatedSecuritiesSettlement}</li>
- * </ul>
- * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMBusinessComponent#getAssociationDomain
  * associationDomain} =
@@ -59,6 +56,16 @@ import java.util.concurrent.atomic.AtomicReference;
  * superType} =
  * {@linkplain com.tools20022.repository.entity.ObligationFulfilment
  * ObligationFulfilment}</li>
+ * <li>{@linkplain com.tools20022.metamodel.MMBusinessComponent#getElement
+ * element} =
+ * <ul>
+ * <li>{@linkplain com.tools20022.repository.entity.PairOff#mmPairedOffQuantity
+ * PairOff.mmPairedOffQuantity}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.entity.PairOff#mmRelatedSecuritiesSettlement
+ * PairOff.mmRelatedSecuritiesSettlement}</li>
+ * </ul>
+ * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
@@ -131,17 +138,17 @@ public class PairOff extends ObligationFulfilment {
 	 */
 	public static final MMBusinessAssociationEnd mmPairedOffQuantity = new MMBusinessAssociationEnd() {
 		{
-			derivation_lazy = () -> Arrays.asList(com.tools20022.repository.choice.PairedOrTurnedQuantity1Choice.mmPairedOffQuantity, com.tools20022.repository.choice.PairedOrTurnedQuantity2Choice.mmPairedOffQuantity,
-					com.tools20022.repository.choice.PairedOrTurnedQuantity3Choice.mmPairedOffQuantity, com.tools20022.repository.choice.PairedOrTurnedQuantity4Choice.mmPairedOffQuantity);
+			derivation_lazy = () -> Arrays.asList(PairedOrTurnedQuantity1Choice.mmPairedOffQuantity, PairedOrTurnedQuantity2Choice.mmPairedOffQuantity, PairedOrTurnedQuantity3Choice.mmPairedOffQuantity,
+					PairedOrTurnedQuantity4Choice.mmPairedOffQuantity);
 			elementContext_lazy = () -> PairOff.mmObject();
 			isDerived = true;
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "PairedOffQuantity";
 			definition = "Quantity of financial instruments to be paired-off.";
 			maxOccurs = 1;
 			minOccurs = 1;
 			opposite_lazy = () -> com.tools20022.repository.entity.SecuritiesQuantity.mmPairoff;
-			aggregation = com.tools20022.metamodel.MMAggregation.NONE;
+			aggregation = MMAggregation.NONE;
 			type_lazy = () -> com.tools20022.repository.entity.SecuritiesQuantity.mmObject();
 		}
 	};
@@ -184,13 +191,13 @@ public class PairOff extends ObligationFulfilment {
 		{
 			elementContext_lazy = () -> PairOff.mmObject();
 			isDerived = false;
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "RelatedSecuritiesSettlement";
 			definition = "Trade settlement process which is the source of the pair off.";
 			maxOccurs = 1;
 			minOccurs = 1;
 			opposite_lazy = () -> com.tools20022.repository.entity.SecuritiesSettlement.mmPairOff;
-			aggregation = com.tools20022.metamodel.MMAggregation.NONE;
+			aggregation = MMAggregation.NONE;
 			type_lazy = () -> com.tools20022.repository.entity.SecuritiesSettlement.mmObject();
 		}
 	};
@@ -198,13 +205,13 @@ public class PairOff extends ObligationFulfilment {
 	static public MMBusinessComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMBusinessComponent() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "PairOff";
 				definition = "Transaction is paired off and netted against one or more previous transactions.";
 				associationDomain_lazy = () -> Arrays.asList(com.tools20022.repository.entity.SecuritiesQuantity.mmPairoff, com.tools20022.repository.entity.SecuritiesSettlement.mmPairOff);
 				superType_lazy = () -> ObligationFulfilment.mmObject();
-				element_lazy = () -> Arrays.asList(com.tools20022.repository.entity.PairOff.mmPairedOffQuantity, com.tools20022.repository.entity.PairOff.mmRelatedSecuritiesSettlement);
+				element_lazy = () -> Arrays.asList(PairOff.mmPairedOffQuantity, PairOff.mmRelatedSecuritiesSettlement);
 			}
 		});
 		return mmObject_lazy.get();

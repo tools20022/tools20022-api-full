@@ -19,9 +19,11 @@ package com.tools20022.repository.msg;
 
 import com.tools20022.metamodel.MMMessageAttribute;
 import com.tools20022.metamodel.MMMessageComponent;
+import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.datatype.PercentageRate;
 import com.tools20022.repository.datatype.YesNoIndicator;
 import com.tools20022.repository.entity.Investor;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -105,11 +107,11 @@ public class DeMinimusApplicable1 {
 	 */
 	public static final MMMessageAttribute mmNewIssuePermission = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Investor.mmNewIssuePermission;
+			businessElementTrace_lazy = () -> Investor.mmNewIssuePermission;
 			componentContext_lazy = () -> DeMinimusApplicable1.mmObject();
 			isDerived = false;
 			xmlTag = "NewIssePrmssn";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "NewIssuePermission";
 			definition = "Indicates whether the investor permits its beneficial owners that are restricted persons, if any, to participate in profits and losses allocated to the investor that are attribute to new issue securities.";
 			maxOccurs = 1;
@@ -154,7 +156,7 @@ public class DeMinimusApplicable1 {
 			componentContext_lazy = () -> DeMinimusApplicable1.mmObject();
 			isDerived = false;
 			xmlTag = "Pctg";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Percentage";
 			definition = "Percentage of the new issue profits and losses that it receives to beneficial owners that are restricted persons.";
 			maxOccurs = 1;
@@ -166,10 +168,10 @@ public class DeMinimusApplicable1 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.DeMinimusApplicable1.mmNewIssuePermission, com.tools20022.repository.msg.DeMinimusApplicable1.mmPercentage);
+				messageElement_lazy = () -> Arrays.asList(DeMinimusApplicable1.mmNewIssuePermission, DeMinimusApplicable1.mmPercentage);
 				trace_lazy = () -> Investor.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "DeMinimusApplicable1";
 				definition = "Conditions applicable when the investor is covered by the \"de minimis\" exemption.";
 			}

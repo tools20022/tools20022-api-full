@@ -19,7 +19,9 @@ package com.tools20022.repository.codeset;
 
 import com.tools20022.metamodel.MMCode;
 import com.tools20022.metamodel.MMCodeSet;
+import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.codeset.RequestTypeCode;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -95,7 +97,7 @@ public class RequestType1Code extends RequestTypeCode {
 	 */
 	public static final MMCode mmReleasePending = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ReleasePending";
 			owner_lazy = () -> RequestType1Code.mmObject();
 		}
@@ -118,7 +120,7 @@ public class RequestType1Code extends RequestTypeCode {
 	 */
 	public static final MMCode mmHoldNormal = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "HoldNormal";
 			owner_lazy = () -> RequestType1Code.mmObject();
 		}
@@ -141,7 +143,7 @@ public class RequestType1Code extends RequestTypeCode {
 	 */
 	public static final MMCode mmCancellation = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Cancellation";
 			owner_lazy = () -> RequestType1Code.mmObject();
 		}
@@ -164,7 +166,7 @@ public class RequestType1Code extends RequestTypeCode {
 	 */
 	public static final MMCode mmReSequence = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ReSequence";
 			owner_lazy = () -> RequestType1Code.mmObject();
 		}
@@ -187,7 +189,7 @@ public class RequestType1Code extends RequestTypeCode {
 	 */
 	public static final MMCode mmReleaseSuspicious = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ReleaseSuspicious";
 			owner_lazy = () -> RequestType1Code.mmObject();
 		}
@@ -196,13 +198,12 @@ public class RequestType1Code extends RequestTypeCode {
 	static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
 				example = Arrays.asList("RT01");
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "RequestType1Code";
 				definition = "Specifies the request used to further detail the type of information that will be queried.";
-				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.RequestType1Code.mmReleasePending, com.tools20022.repository.codeset.RequestType1Code.mmHoldNormal,
-						com.tools20022.repository.codeset.RequestType1Code.mmCancellation, com.tools20022.repository.codeset.RequestType1Code.mmReSequence, com.tools20022.repository.codeset.RequestType1Code.mmReleaseSuspicious);
+				code_lazy = () -> Arrays.asList(RequestType1Code.mmReleasePending, RequestType1Code.mmHoldNormal, RequestType1Code.mmCancellation, RequestType1Code.mmReSequence, RequestType1Code.mmReleaseSuspicious);
 				trace_lazy = () -> RequestTypeCode.mmObject();
 			}
 		});

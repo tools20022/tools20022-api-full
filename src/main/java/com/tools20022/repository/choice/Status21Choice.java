@@ -19,9 +19,12 @@ package com.tools20022.repository.choice;
 
 import com.tools20022.metamodel.MMChoiceComponent;
 import com.tools20022.metamodel.MMMessageAssociationEnd;
+import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.entity.AccountStatus;
 import com.tools20022.repository.entity.SecuritiesTradeStatus;
+import com.tools20022.repository.entity.Status;
 import com.tools20022.repository.entity.StatusReason;
+import com.tools20022.repository.GeneratedRepository;
 import com.tools20022.repository.msg.CancelledCompleteReason1;
 import com.tools20022.repository.msg.RejectionReason33;
 import com.tools20022.repository.msg.TransferCancellationPendingStatus1;
@@ -112,7 +115,7 @@ public class Status21Choice {
 			componentContext_lazy = () -> Status21Choice.mmObject();
 			isDerived = false;
 			xmlTag = "Sts";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Status";
 			definition = "Status of the transfer cancellation is accepted or sent to next party.";
 			maxOccurs = 1;
@@ -158,7 +161,7 @@ public class Status21Choice {
 			componentContext_lazy = () -> Status21Choice.mmObject();
 			isDerived = false;
 			xmlTag = "Rjctd";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Rejected";
 			definition = "Status of the transfer cancellation is rejected.";
 			maxOccurs = 1;
@@ -209,7 +212,7 @@ public class Status21Choice {
 			componentContext_lazy = () -> Status21Choice.mmObject();
 			isDerived = false;
 			xmlTag = "Cmplt";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Complete";
 			definition = "Status of the transfer cancellation is complete. The cancellation instruction has been accepted and processed, the cancellation is complete.";
 			maxOccurs = 1;
@@ -253,11 +256,11 @@ public class Status21Choice {
 	 */
 	public static final MMMessageAssociationEnd mmPending = new MMMessageAssociationEnd() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Status.mmStatusReason;
+			businessElementTrace_lazy = () -> Status.mmStatusReason;
 			componentContext_lazy = () -> Status21Choice.mmObject();
 			isDerived = false;
 			xmlTag = "Pdg";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Pending";
 			definition = "Status of the transfer cancellation is pending.";
 			maxOccurs = 1;
@@ -270,11 +273,10 @@ public class Status21Choice {
 	final static public MMChoiceComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMChoiceComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.choice.Status21Choice.mmStatus, com.tools20022.repository.choice.Status21Choice.mmRejected, com.tools20022.repository.choice.Status21Choice.mmComplete,
-						com.tools20022.repository.choice.Status21Choice.mmPending);
+				messageElement_lazy = () -> Arrays.asList(Status21Choice.mmStatus, Status21Choice.mmRejected, Status21Choice.mmComplete, Status21Choice.mmPending);
 				trace_lazy = () -> AccountStatus.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "Status21Choice";
 				definition = "Choice of formats for the specification of the status.";
 				previousVersion_lazy = () -> Status20Choice.mmObject();

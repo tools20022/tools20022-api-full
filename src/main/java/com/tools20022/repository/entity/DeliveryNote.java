@@ -18,7 +18,11 @@
 package com.tools20022.repository.entity;
 
 import com.tools20022.metamodel.MMBusinessComponent;
+import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.entity.Document;
+import com.tools20022.repository.GeneratedRepository;
+import com.tools20022.repository.msg.TradeDelivery1;
+import com.tools20022.repository.msg.TradeDelivery2;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -65,11 +69,11 @@ public class DeliveryNote extends Document {
 	static public MMBusinessComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMBusinessComponent() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "DeliveryNote";
 				definition = "Document which is a proof of delivery of the product.";
-				derivationElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.TradeDelivery1.mmDeliveryNote, com.tools20022.repository.msg.TradeDelivery2.mmDeliveryNote);
+				derivationElement_lazy = () -> Arrays.asList(TradeDelivery1.mmDeliveryNote, TradeDelivery2.mmDeliveryNote);
 				superType_lazy = () -> Document.mmObject();
 			}
 		});

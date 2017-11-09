@@ -17,9 +17,12 @@
 
 package com.tools20022.repository.entity;
 
+import com.tools20022.metamodel.MMAggregation;
 import com.tools20022.metamodel.MMBusinessAssociationEnd;
 import com.tools20022.metamodel.MMBusinessComponent;
-import com.tools20022.repository.msg.PartyIdentification79;
+import com.tools20022.metamodel.MMRegistrationStatus;
+import com.tools20022.repository.GeneratedRepository;
+import com.tools20022.repository.msg.*;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.List;
@@ -33,20 +36,12 @@ import java.util.List;
  * <p>
  * <strong>Constant fields:</strong>
  * <ul>
- * <li>{@linkplain com.tools20022.metamodel.MMBusinessComponent#getElement
- * element} =
+ * <li>
+ * {@linkplain com.tools20022.metamodel.MMBusinessComponent#getDerivationComponent
+ * derivationComponent} =
  * <ul>
- * <li>{@linkplain com.tools20022.repository.entity.RolePlayer#mmRole
- * RolePlayer.mmRole}</li>
- * <li>{@linkplain com.tools20022.repository.entity.RolePlayer#mmValidityPeriod
- * RolePlayer.mmValidityPeriod}</li>
- * </ul>
- * </li>
- * <li>{@linkplain com.tools20022.metamodel.MMBusinessComponent#getSubType
- * subType} =
- * <ul>
- * <li>{@linkplain com.tools20022.repository.entity.Party Party}</li>
- * <li>{@linkplain com.tools20022.repository.entity.System System}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.PartyIdentification79
+ * PartyIdentification79}</li>
  * </ul>
  * </li>
  * <li>
@@ -78,12 +73,20 @@ import java.util.List;
  * AccountParties16.mmRegisteredShareholderName}</li>
  * </ul>
  * </li>
- * <li>
- * {@linkplain com.tools20022.metamodel.MMBusinessComponent#getDerivationComponent
- * derivationComponent} =
+ * <li>{@linkplain com.tools20022.metamodel.MMBusinessComponent#getSubType
+ * subType} =
  * <ul>
- * <li>{@linkplain com.tools20022.repository.msg.PartyIdentification79
- * PartyIdentification79}</li>
+ * <li>{@linkplain com.tools20022.repository.entity.Party Party}</li>
+ * <li>{@linkplain com.tools20022.repository.entity.System System}</li>
+ * </ul>
+ * </li>
+ * <li>{@linkplain com.tools20022.metamodel.MMBusinessComponent#getElement
+ * element} =
+ * <ul>
+ * <li>{@linkplain com.tools20022.repository.entity.RolePlayer#mmRole
+ * RolePlayer.mmRole}</li>
+ * <li>{@linkplain com.tools20022.repository.entity.RolePlayer#mmValidityPeriod
+ * RolePlayer.mmValidityPeriod}</li>
  * </ul>
  * </li>
  * <li>
@@ -175,19 +178,17 @@ public class RolePlayer {
 	 */
 	public static final MMBusinessAssociationEnd mmRole = new MMBusinessAssociationEnd() {
 		{
-			derivation_lazy = () -> Arrays.asList(com.tools20022.repository.msg.InvestmentAccountOwnershipInformation2.mmExtendedPartyRole, com.tools20022.repository.msg.ExtendedParty2.mmExtendedPartyRole,
-					com.tools20022.repository.msg.InvestmentAccountOwnershipInformation3.mmExtendedPartyRole, com.tools20022.repository.msg.ExtendedParty1.mmExtendedPartyRole, com.tools20022.repository.msg.ContactIdentification4.mmRole,
-					com.tools20022.repository.msg.ContactIdentification3.mmRole, com.tools20022.repository.msg.Intermediary26.mmRole, com.tools20022.repository.msg.Intermediary25.mmRole,
-					com.tools20022.repository.msg.SingleQualifiedPartyIdentification1.mmBaseParty, com.tools20022.repository.msg.QualifiedPartyIdentification1.mmRole, com.tools20022.repository.msg.Intermediary34.mmRole,
-					com.tools20022.repository.msg.Intermediary35.mmRole);
+			derivation_lazy = () -> Arrays.asList(InvestmentAccountOwnershipInformation2.mmExtendedPartyRole, ExtendedParty2.mmExtendedPartyRole, InvestmentAccountOwnershipInformation3.mmExtendedPartyRole,
+					ExtendedParty1.mmExtendedPartyRole, ContactIdentification4.mmRole, ContactIdentification3.mmRole, Intermediary26.mmRole, Intermediary25.mmRole, SingleQualifiedPartyIdentification1.mmBaseParty,
+					QualifiedPartyIdentification1.mmRole, Intermediary34.mmRole, Intermediary35.mmRole);
 			elementContext_lazy = () -> RolePlayer.mmObject();
 			isDerived = false;
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "Role";
 			definition = "Role of the entity in the activity.";
 			minOccurs = 1;
 			opposite_lazy = () -> com.tools20022.repository.entity.Role.mmPlayer;
-			aggregation = com.tools20022.metamodel.MMAggregation.NONE;
+			aggregation = MMAggregation.NONE;
 			type_lazy = () -> com.tools20022.repository.entity.Role.mmObject();
 		}
 	};
@@ -228,13 +229,13 @@ public class RolePlayer {
 		{
 			elementContext_lazy = () -> RolePlayer.mmObject();
 			isDerived = false;
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ValidityPeriod";
 			definition = "Specifies the period during which a role player is valid";
 			maxOccurs = 1;
 			minOccurs = 0;
 			opposite_lazy = () -> com.tools20022.repository.entity.DateTimePeriod.mmRelatedRolePlayer;
-			aggregation = com.tools20022.metamodel.MMAggregation.NONE;
+			aggregation = MMAggregation.NONE;
 			type_lazy = () -> com.tools20022.repository.entity.DateTimePeriod.mmObject();
 		}
 	};
@@ -242,15 +243,15 @@ public class RolePlayer {
 	static public MMBusinessComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMBusinessComponent() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "RolePlayer";
 				definition = "Type of entity that plays a specific role in a specific context.";
 				associationDomain_lazy = () -> Arrays.asList(com.tools20022.repository.entity.Role.mmPlayer, com.tools20022.repository.entity.DateTimePeriod.mmRelatedRolePlayer);
-				derivationElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.AccountParties13.mmRegisteredShareholderName, com.tools20022.repository.msg.AccountParties14.mmRegisteredShareholderName,
-						com.tools20022.repository.msg.AccountParties15.mmRegisteredShareholderName, com.tools20022.repository.msg.AccountParties16.mmRegisteredShareholderName);
+				derivationElement_lazy = () -> Arrays.asList(AccountParties13.mmRegisteredShareholderName, AccountParties14.mmRegisteredShareholderName, AccountParties15.mmRegisteredShareholderName,
+						AccountParties16.mmRegisteredShareholderName);
 				subType_lazy = () -> Arrays.asList(Party.mmObject(), System.mmObject());
-				element_lazy = () -> Arrays.asList(com.tools20022.repository.entity.RolePlayer.mmRole, com.tools20022.repository.entity.RolePlayer.mmValidityPeriod);
+				element_lazy = () -> Arrays.asList(RolePlayer.mmRole, RolePlayer.mmValidityPeriod);
 				derivationComponent_lazy = () -> Arrays.asList(PartyIdentification79.mmObject());
 			}
 		});

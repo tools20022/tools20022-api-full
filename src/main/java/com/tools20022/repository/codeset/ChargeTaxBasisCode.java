@@ -19,6 +19,8 @@ package com.tools20022.repository.codeset;
 
 import com.tools20022.metamodel.MMCode;
 import com.tools20022.metamodel.MMCodeSet;
+import com.tools20022.metamodel.MMRegistrationStatus;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -27,6 +29,13 @@ import java.util.concurrent.atomic.AtomicReference;
  * <p>
  * <strong>Constant fields:</strong>
  * <ul>
+ * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getDerivation derivation}
+ * =
+ * <ul>
+ * <li>{@linkplain com.tools20022.repository.codeset.ChargeTaxBasis1Code
+ * ChargeTaxBasis1Code}</li>
+ * </ul>
+ * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getCode code} =
  * <ul>
  * <li>
@@ -35,13 +44,6 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>
  * {@linkplain com.tools20022.repository.codeset.ChargeTaxBasisCode#mmPerUnit
  * ChargeTaxBasisCode.mmPerUnit}</li>
- * </ul>
- * </li>
- * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getDerivation derivation}
- * =
- * <ul>
- * <li>{@linkplain com.tools20022.repository.codeset.ChargeTaxBasis1Code
- * ChargeTaxBasis1Code}</li>
  * </ul>
  * </li>
  * <li>
@@ -92,7 +94,7 @@ public class ChargeTaxBasisCode {
 	 */
 	public static final MMCode mmFlatOrAbsolute = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "FlatOrAbsolute";
 			definition = "Charges/tax basis is flat or absolute for the trade being allocated.";
 			owner_lazy = () -> ChargeTaxBasisCode.mmObject();
@@ -122,7 +124,7 @@ public class ChargeTaxBasisCode {
 	 */
 	public static final MMCode mmPerUnit = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PerUnit";
 			definition = "Charge/tax basis is per unit of financial instrument.";
 			owner_lazy = () -> ChargeTaxBasisCode.mmObject();
@@ -133,12 +135,12 @@ public class ChargeTaxBasisCode {
 	static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
 				example = Arrays.asList("FLAT");
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "ChargeTaxBasisCode";
 				definition = "Define the Charges/tax basis for the trade being allocated.";
-				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.ChargeTaxBasisCode.mmFlatOrAbsolute, com.tools20022.repository.codeset.ChargeTaxBasisCode.mmPerUnit);
+				code_lazy = () -> Arrays.asList(ChargeTaxBasisCode.mmFlatOrAbsolute, ChargeTaxBasisCode.mmPerUnit);
 				derivation_lazy = () -> Arrays.asList(ChargeTaxBasis1Code.mmObject());
 			}
 		});

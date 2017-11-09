@@ -19,7 +19,9 @@ package com.tools20022.repository.codeset;
 
 import com.tools20022.metamodel.MMCode;
 import com.tools20022.metamodel.MMCodeSet;
+import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.codeset.BestExecutionCode;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -82,7 +84,7 @@ public class BestExecution1Code extends BestExecutionCode {
 	 */
 	public static final MMCode mmBest = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Best";
 			owner_lazy = () -> BestExecution1Code.mmObject();
 		}
@@ -91,12 +93,12 @@ public class BestExecution1Code extends BestExecutionCode {
 	static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
 				example = Arrays.asList("BTEX");
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "BestExecution1Code";
 				definition = "Specifies whether best execution rules as defined in the EU MiFID directive were followed for a transaction.";
-				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.BestExecution1Code.mmBest);
+				code_lazy = () -> Arrays.asList(BestExecution1Code.mmBest);
 				trace_lazy = () -> BestExecutionCode.mmObject();
 			}
 		});

@@ -20,11 +20,13 @@ package com.tools20022.repository.msg;
 import com.tools20022.metamodel.MMMessageAssociationEnd;
 import com.tools20022.metamodel.MMMessageAttribute;
 import com.tools20022.metamodel.MMMessageComponent;
+import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.choice.DateTimePeriodChoice;
 import com.tools20022.repository.choice.SystemEventType2Choice;
 import com.tools20022.repository.choice.SystemIdentification2Choice;
 import com.tools20022.repository.codeset.ActiveCurrencyCode;
 import com.tools20022.repository.datatype.ISODate;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.List;
@@ -107,7 +109,7 @@ public class BusinessDaySearchCriteria1 {
 			componentContext_lazy = () -> BusinessDaySearchCriteria1.mmObject();
 			isDerived = false;
 			xmlTag = "SysDt";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SystemDate";
 			definition = "Date for which the availability information is provided.";
 			maxOccurs = 1;
@@ -151,7 +153,7 @@ public class BusinessDaySearchCriteria1 {
 			componentContext_lazy = () -> BusinessDaySearchCriteria1.mmObject();
 			isDerived = false;
 			xmlTag = "SysId";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SystemIdentification";
 			definition = "Unique and unambiguous identification of the system, as assigned by the system administrator. ";
 			minOccurs = 0;
@@ -196,7 +198,7 @@ public class BusinessDaySearchCriteria1 {
 			componentContext_lazy = () -> BusinessDaySearchCriteria1.mmObject();
 			isDerived = false;
 			xmlTag = "SysCcy";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SystemCurrency";
 			definition = "Currency which may be processed by the system. A system may process transactions in a single currency or in multiple currencies.";
 			minOccurs = 0;
@@ -236,7 +238,7 @@ public class BusinessDaySearchCriteria1 {
 			componentContext_lazy = () -> BusinessDaySearchCriteria1.mmObject();
 			isDerived = false;
 			xmlTag = "EvtTp";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "EventType";
 			definition = "Nature of the event that has occurred.";
 			maxOccurs = 1;
@@ -279,7 +281,7 @@ public class BusinessDaySearchCriteria1 {
 			componentContext_lazy = () -> BusinessDaySearchCriteria1.mmObject();
 			isDerived = false;
 			xmlTag = "ClsrPrd";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ClosurePeriod";
 			definition = "Period of time when the system is closed/not operating.";
 			maxOccurs = 1;
@@ -291,11 +293,10 @@ public class BusinessDaySearchCriteria1 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.BusinessDaySearchCriteria1.mmSystemDate, com.tools20022.repository.msg.BusinessDaySearchCriteria1.mmSystemIdentification,
-						com.tools20022.repository.msg.BusinessDaySearchCriteria1.mmSystemCurrency, com.tools20022.repository.msg.BusinessDaySearchCriteria1.mmEventType,
-						com.tools20022.repository.msg.BusinessDaySearchCriteria1.mmClosurePeriod);
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+				messageElement_lazy = () -> Arrays.asList(BusinessDaySearchCriteria1.mmSystemDate, BusinessDaySearchCriteria1.mmSystemIdentification, BusinessDaySearchCriteria1.mmSystemCurrency, BusinessDaySearchCriteria1.mmEventType,
+						BusinessDaySearchCriteria1.mmClosurePeriod);
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 				name = "BusinessDaySearchCriteria1";
 				definition = "Defines the criteria used to search for system business day information.";
 			}

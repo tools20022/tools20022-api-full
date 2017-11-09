@@ -18,6 +18,10 @@
 package com.tools20022.repository.other;
 
 import com.tools20022.metamodel.MMExternalSchema;
+import com.tools20022.metamodel.MMProcessContent;
+import com.tools20022.metamodel.MMRegistrationStatus;
+import com.tools20022.repository.area.head.BusinessApplicationHeaderV01;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -70,13 +74,13 @@ public class SignatureEnvelope {
 	final static public MMExternalSchema mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMExternalSchema() {
 			{
-				messageBuildingBlock_lazy = () -> Arrays.asList(com.tools20022.repository.area.head.BusinessApplicationHeaderV01.mmSignature);
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				messageBuildingBlock_lazy = () -> Arrays.asList(BusinessApplicationHeaderV01.mmSignature);
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "SignatureEnvelope";
 				definition = "The W3C XML Schema that specifies following standard signature:\r\n XML Signature Syntax and Processing (Second Edition) W3C Recommendation 10 June 2008\r\nhttp://www.w3.org/TR/2008/REC-xmldsig-core-20080610/";
 				namespaceList = Arrays.asList("http://www.w3.org/2000/09/xmldsig#");
-				processContent = com.tools20022.metamodel.MMProcessContent.LAX;
+				processContent = MMProcessContent.LAX;
 			}
 		});
 		return mmObject_lazy.get();

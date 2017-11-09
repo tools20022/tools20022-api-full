@@ -20,7 +20,9 @@ package com.tools20022.repository.msg;
 import com.tools20022.metamodel.MMMessageAssociationEnd;
 import com.tools20022.metamodel.MMMessageAttribute;
 import com.tools20022.metamodel.MMMessageComponent;
+import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.datatype.Max35Text;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -114,10 +116,10 @@ public class ATMContext1 {
 			componentContext_lazy = () -> ATMContext1.mmObject();
 			isDerived = false;
 			xmlTag = "SsnRef";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SessionReference";
 			definition = "Unique identification of the customer session in which the service is performed.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.ATMContext3.mmSessionReference, com.tools20022.repository.msg.ATMContext2.mmSessionReference, com.tools20022.repository.msg.ATMContext7.mmSessionReference);
+			nextVersions_lazy = () -> Arrays.asList(ATMContext3.mmSessionReference, ATMContext2.mmSessionReference, ATMContext7.mmSessionReference);
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> Max35Text.mmObject();
@@ -166,10 +168,10 @@ public class ATMContext1 {
 			componentContext_lazy = () -> ATMContext1.mmObject();
 			isDerived = false;
 			xmlTag = "Svc";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Service";
 			definition = "Withdrawal service provided by the ATM inside the session.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.ATMContext3.mmService, com.tools20022.repository.msg.ATMContext2.mmService, com.tools20022.repository.msg.ATMContext7.mmService);
+			nextVersions_lazy = () -> Arrays.asList(ATMContext3.mmService, ATMContext2.mmService, ATMContext7.mmService);
 			maxOccurs = 1;
 			minOccurs = 0;
 			isComposite = true;
@@ -180,9 +182,9 @@ public class ATMContext1 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.ATMContext1.mmSessionReference, com.tools20022.repository.msg.ATMContext1.mmService);
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				messageElement_lazy = () -> Arrays.asList(ATMContext1.mmSessionReference, ATMContext1.mmService);
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "ATMContext1";
 				definition = "Context in which the transaction is performed.";
 				nextVersions_lazy = () -> Arrays.asList(ATMContext3.mmObject(), ATMContext2.mmObject(), ATMContext7.mmObject());

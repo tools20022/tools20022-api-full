@@ -20,9 +20,11 @@ package com.tools20022.repository.msg;
 import com.tools20022.metamodel.MMMessageAssociationEnd;
 import com.tools20022.metamodel.MMMessageAttribute;
 import com.tools20022.metamodel.MMMessageComponent;
+import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.choice.*;
 import com.tools20022.repository.codeset.ActiveOrHistoricCurrencyCode;
 import com.tools20022.repository.entity.IntraPositionTransfer;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.List;
@@ -135,7 +137,7 @@ public class IntraBalanceQueryCriteria1 {
 			componentContext_lazy = () -> IntraBalanceQueryCriteria1.mmObject();
 			isDerived = false;
 			xmlTag = "Refs";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "References";
 			definition = "Collective reference identifying a set of messages.";
 			minOccurs = 0;
@@ -176,7 +178,7 @@ public class IntraBalanceQueryCriteria1 {
 			componentContext_lazy = () -> IntraBalanceQueryCriteria1.mmObject();
 			isDerived = false;
 			xmlTag = "Sts";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Status";
 			definition = "Provides the status of settlement of a transaction.";
 			maxOccurs = 1;
@@ -217,7 +219,7 @@ public class IntraBalanceQueryCriteria1 {
 			componentContext_lazy = () -> IntraBalanceQueryCriteria1.mmObject();
 			isDerived = false;
 			xmlTag = "CshAcctOwnr";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CashAccountOwner";
 			definition = "Party that owns the account.";
 			minOccurs = 0;
@@ -259,7 +261,7 @@ public class IntraBalanceQueryCriteria1 {
 			componentContext_lazy = () -> IntraBalanceQueryCriteria1.mmObject();
 			isDerived = false;
 			xmlTag = "CshAcct";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CashAccount";
 			definition = "Account in which cash is maintained.";
 			minOccurs = 0;
@@ -300,7 +302,7 @@ public class IntraBalanceQueryCriteria1 {
 			componentContext_lazy = () -> IntraBalanceQueryCriteria1.mmObject();
 			isDerived = false;
 			xmlTag = "BalTp";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "BalanceType";
 			definition = "Balance to which the amount of money is moved.";
 			minOccurs = 0;
@@ -340,7 +342,7 @@ public class IntraBalanceQueryCriteria1 {
 			componentContext_lazy = () -> IntraBalanceQueryCriteria1.mmObject();
 			isDerived = false;
 			xmlTag = "CshSubBalId";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CashSubBalanceIdentification";
 			definition = "Number identifying a lot constituting the sub-balance.";
 			minOccurs = 0;
@@ -382,7 +384,7 @@ public class IntraBalanceQueryCriteria1 {
 			componentContext_lazy = () -> IntraBalanceQueryCriteria1.mmObject();
 			isDerived = false;
 			xmlTag = "SttlmAmt";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SettlementAmount";
 			definition = "Total amount of money to be settled.";
 			maxOccurs = 1;
@@ -428,7 +430,7 @@ public class IntraBalanceQueryCriteria1 {
 			componentContext_lazy = () -> IntraBalanceQueryCriteria1.mmObject();
 			isDerived = false;
 			xmlTag = "SttldAmt";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SettledAmount";
 			definition = "Amount of money effectively settled and which will be credited to/debited from the account owner's cash account. It may differ from the instructed settlement amount based on market tolerance level.";
 			maxOccurs = 1;
@@ -470,7 +472,7 @@ public class IntraBalanceQueryCriteria1 {
 			componentContext_lazy = () -> IntraBalanceQueryCriteria1.mmObject();
 			isDerived = false;
 			xmlTag = "SttlmCcy";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SettlementCurrency";
 			definition = "Currency in which the instructed amount is expressed.";
 			minOccurs = 0;
@@ -512,7 +514,7 @@ public class IntraBalanceQueryCriteria1 {
 			componentContext_lazy = () -> IntraBalanceQueryCriteria1.mmObject();
 			isDerived = false;
 			xmlTag = "IntnddSttlmDt";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "IntendedSettlementDate";
 			definition = "Date and time at which the amount of money is intended to be moved.";
 			maxOccurs = 1;
@@ -554,7 +556,7 @@ public class IntraBalanceQueryCriteria1 {
 			componentContext_lazy = () -> IntraBalanceQueryCriteria1.mmObject();
 			isDerived = false;
 			xmlTag = "FctvSttlmDt";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "EffectiveSettlementDate";
 			definition = "Date and time at which the amount of money is moved.";
 			maxOccurs = 1;
@@ -598,7 +600,7 @@ public class IntraBalanceQueryCriteria1 {
 			componentContext_lazy = () -> IntraBalanceQueryCriteria1.mmObject();
 			isDerived = false;
 			xmlTag = "Prty";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Priority";
 			definition = "Specifies whether the transaction is to be executed with a high priority.";
 			minOccurs = 0;
@@ -639,7 +641,7 @@ public class IntraBalanceQueryCriteria1 {
 			componentContext_lazy = () -> IntraBalanceQueryCriteria1.mmObject();
 			isDerived = false;
 			xmlTag = "MsgOrgtr";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "MessageOriginator";
 			definition = "Party that originated the message, if other than the sender.";
 			minOccurs = 0;
@@ -682,7 +684,7 @@ public class IntraBalanceQueryCriteria1 {
 			componentContext_lazy = () -> IntraBalanceQueryCriteria1.mmObject();
 			isDerived = false;
 			xmlTag = "CreDtTm";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CreationDateTime";
 			definition = "Specifies the creation date/time of the intra-balance movement.";
 			maxOccurs = 1;
@@ -694,16 +696,13 @@ public class IntraBalanceQueryCriteria1 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.IntraBalanceQueryCriteria1.mmReferences, com.tools20022.repository.msg.IntraBalanceQueryCriteria1.mmStatus,
-						com.tools20022.repository.msg.IntraBalanceQueryCriteria1.mmCashAccountOwner, com.tools20022.repository.msg.IntraBalanceQueryCriteria1.mmCashAccount,
-						com.tools20022.repository.msg.IntraBalanceQueryCriteria1.mmBalanceType, com.tools20022.repository.msg.IntraBalanceQueryCriteria1.mmCashSubBalanceIdentification,
-						com.tools20022.repository.msg.IntraBalanceQueryCriteria1.mmSettlementAmount, com.tools20022.repository.msg.IntraBalanceQueryCriteria1.mmSettledAmount,
-						com.tools20022.repository.msg.IntraBalanceQueryCriteria1.mmSettlementCurrency, com.tools20022.repository.msg.IntraBalanceQueryCriteria1.mmIntendedSettlementDate,
-						com.tools20022.repository.msg.IntraBalanceQueryCriteria1.mmEffectiveSettlementDate, com.tools20022.repository.msg.IntraBalanceQueryCriteria1.mmPriority,
-						com.tools20022.repository.msg.IntraBalanceQueryCriteria1.mmMessageOriginator, com.tools20022.repository.msg.IntraBalanceQueryCriteria1.mmCreationDateTime);
+				messageElement_lazy = () -> Arrays.asList(IntraBalanceQueryCriteria1.mmReferences, IntraBalanceQueryCriteria1.mmStatus, IntraBalanceQueryCriteria1.mmCashAccountOwner, IntraBalanceQueryCriteria1.mmCashAccount,
+						IntraBalanceQueryCriteria1.mmBalanceType, IntraBalanceQueryCriteria1.mmCashSubBalanceIdentification, IntraBalanceQueryCriteria1.mmSettlementAmount, IntraBalanceQueryCriteria1.mmSettledAmount,
+						IntraBalanceQueryCriteria1.mmSettlementCurrency, IntraBalanceQueryCriteria1.mmIntendedSettlementDate, IntraBalanceQueryCriteria1.mmEffectiveSettlementDate, IntraBalanceQueryCriteria1.mmPriority,
+						IntraBalanceQueryCriteria1.mmMessageOriginator, IntraBalanceQueryCriteria1.mmCreationDateTime);
 				trace_lazy = () -> IntraPositionTransfer.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 				name = "IntraBalanceQueryCriteria1";
 				definition = "Defines the criteria based on which information is included.";
 			}

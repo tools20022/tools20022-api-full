@@ -19,6 +19,8 @@ package com.tools20022.repository.codeset;
 
 import com.tools20022.metamodel.MMCode;
 import com.tools20022.metamodel.MMCodeSet;
+import com.tools20022.metamodel.MMRegistrationStatus;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -27,6 +29,13 @@ import java.util.concurrent.atomic.AtomicReference;
  * <p>
  * <strong>Constant fields:</strong>
  * <ul>
+ * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getDerivation derivation}
+ * =
+ * <ul>
+ * <li>{@linkplain com.tools20022.repository.codeset.UseCases1Code
+ * UseCases1Code}</li>
+ * </ul>
+ * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getCode code} =
  * <ul>
  * <li>{@linkplain com.tools20022.repository.codeset.UseCasesCode#mmOpening
@@ -37,13 +46,6 @@ import java.util.concurrent.atomic.AtomicReference;
  * UseCasesCode.mmClosing}</li>
  * <li>{@linkplain com.tools20022.repository.codeset.UseCasesCode#mmView
  * UseCasesCode.mmView}</li>
- * </ul>
- * </li>
- * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getDerivation derivation}
- * =
- * <ul>
- * <li>{@linkplain com.tools20022.repository.codeset.UseCases1Code
- * UseCases1Code}</li>
  * </ul>
  * </li>
  * <li>
@@ -92,7 +94,7 @@ public class UseCasesCode {
 	 */
 	public static final MMCode mmOpening = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Opening";
 			definition = "Code indicating the opening of an account.";
 			owner_lazy = () -> UseCasesCode.mmObject();
@@ -121,7 +123,7 @@ public class UseCasesCode {
 	 */
 	public static final MMCode mmMaintenance = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Maintenance";
 			definition = "Code indicating the maintenance of an account.";
 			owner_lazy = () -> UseCasesCode.mmObject();
@@ -150,7 +152,7 @@ public class UseCasesCode {
 	 */
 	public static final MMCode mmClosing = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Closing";
 			definition = "Code indicating the closing of an account.";
 			owner_lazy = () -> UseCasesCode.mmObject();
@@ -179,7 +181,7 @@ public class UseCasesCode {
 	 */
 	public static final MMCode mmView = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "View";
 			definition = "Code indicating the view of an account.";
 			owner_lazy = () -> UseCasesCode.mmObject();
@@ -190,13 +192,12 @@ public class UseCasesCode {
 	static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
 				example = Arrays.asList("OPEN");
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "UseCasesCode";
 				definition = "Specifies the action on the cash account.";
-				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.UseCasesCode.mmOpening, com.tools20022.repository.codeset.UseCasesCode.mmMaintenance, com.tools20022.repository.codeset.UseCasesCode.mmClosing,
-						com.tools20022.repository.codeset.UseCasesCode.mmView);
+				code_lazy = () -> Arrays.asList(UseCasesCode.mmOpening, UseCasesCode.mmMaintenance, UseCasesCode.mmClosing, UseCasesCode.mmView);
 				derivation_lazy = () -> Arrays.asList(UseCases1Code.mmObject());
 			}
 		});

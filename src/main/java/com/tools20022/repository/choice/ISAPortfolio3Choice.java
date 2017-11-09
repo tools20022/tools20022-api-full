@@ -20,7 +20,9 @@ package com.tools20022.repository.choice;
 import com.tools20022.metamodel.MMChoiceComponent;
 import com.tools20022.metamodel.MMMessageAssociationEnd;
 import com.tools20022.metamodel.MMMessageAttribute;
+import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.entity.Portfolio;
+import com.tools20022.repository.GeneratedRepository;
 import com.tools20022.repository.msg.ISAYearsOfIssue6;
 import com.tools20022.repository.msg.Portfolio1;
 import java.util.Arrays;
@@ -108,11 +110,11 @@ public class ISAPortfolio3Choice {
 	 */
 	public static final MMMessageAssociationEnd mmISA = new MMMessageAssociationEnd() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Portfolio.mmTransfer;
+			businessElementTrace_lazy = () -> Portfolio.mmTransfer;
 			componentContext_lazy = () -> ISAPortfolio3Choice.mmObject();
 			isDerived = false;
 			xmlTag = "ISA";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ISA";
 			definition = "UK government schemes to encourage individuals to invest in securities based unit and investment trusts, offering certain tax benefits. These are not investment in their own right but are tax exempt wrappers in which individuals can hold equities, bonds and funds to shelter them from income and capital gains tax. \r\nThe Individual Savings Account (ISA) is provided only by UK based financial institutions.";
 			maxOccurs = 1;
@@ -162,7 +164,7 @@ public class ISAPortfolio3Choice {
 			componentContext_lazy = () -> ISAPortfolio3Choice.mmObject();
 			isDerived = false;
 			xmlTag = "Prtfl";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Portfolio";
 			definition = "Wrapper for a specific product or a specific sub-product owned by a set of beneficial owners.";
 			maxOccurs = 1;
@@ -174,10 +176,10 @@ public class ISAPortfolio3Choice {
 	final static public MMChoiceComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMChoiceComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.choice.ISAPortfolio3Choice.mmISA, com.tools20022.repository.choice.ISAPortfolio3Choice.mmPortfolio);
+				messageElement_lazy = () -> Arrays.asList(ISAPortfolio3Choice.mmISA, ISAPortfolio3Choice.mmPortfolio);
 				trace_lazy = () -> Portfolio.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "ISAPortfolio3Choice";
 				definition = "Choice to provide additional portfolio information or individual savings account information (UK government scheme provided by UK based financial institutions only).";
 			}

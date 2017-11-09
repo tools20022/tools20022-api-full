@@ -19,8 +19,10 @@ package com.tools20022.repository.choice;
 
 import com.tools20022.metamodel.MMChoiceComponent;
 import com.tools20022.metamodel.MMMessageAttribute;
+import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.datatype.Exact1NumericText;
 import com.tools20022.repository.datatype.Max35Text;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -93,7 +95,7 @@ public class CommunicationChannel1Choice {
 			componentContext_lazy = () -> CommunicationChannel1Choice.mmObject();
 			isDerived = false;
 			xmlTag = "ChanlMd";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ChannelMode";
 			definition = "CBRF communication channel mode.";
 			maxOccurs = 1;
@@ -134,7 +136,7 @@ public class CommunicationChannel1Choice {
 			componentContext_lazy = () -> CommunicationChannel1Choice.mmObject();
 			isDerived = false;
 			xmlTag = "TermnlId";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "TerminalIdentification";
 			definition = "CBRF identification of the terminal. ";
 			maxOccurs = 1;
@@ -146,9 +148,9 @@ public class CommunicationChannel1Choice {
 	final static public MMChoiceComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMChoiceComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.choice.CommunicationChannel1Choice.mmChannelMode, com.tools20022.repository.choice.CommunicationChannel1Choice.mmTerminalIdentification);
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+				messageElement_lazy = () -> Arrays.asList(CommunicationChannel1Choice.mmChannelMode, CommunicationChannel1Choice.mmTerminalIdentification);
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 				name = "CommunicationChannel1Choice";
 				definition = "Choice between channel mode and terminal identification.";
 			}

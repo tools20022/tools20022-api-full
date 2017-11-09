@@ -20,11 +20,14 @@ package com.tools20022.repository.choice;
 import com.tools20022.metamodel.MMChoiceComponent;
 import com.tools20022.metamodel.MMMessageAssociationEnd;
 import com.tools20022.metamodel.MMMessageAttribute;
+import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.codeset.InternalPartyRole1Code;
 import com.tools20022.repository.datatype.LEIIdentifier;
 import com.tools20022.repository.datatype.MICIdentifier;
+import com.tools20022.repository.entity.OrganisationIdentification;
 import com.tools20022.repository.entity.PartyIdentificationInformation;
 import com.tools20022.repository.entity.PersonIdentification;
+import com.tools20022.repository.GeneratedRepository;
 import com.tools20022.repository.msg.PersonIdentification10;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
@@ -125,14 +128,14 @@ public class PersonOrOrganisation1Choice {
 	 */
 	public static final MMMessageAttribute mmLEI = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.PartyIdentificationInformation.mmLEI;
+			businessElementTrace_lazy = () -> PartyIdentificationInformation.mmLEI;
 			componentContext_lazy = () -> PersonOrOrganisation1Choice.mmObject();
 			isDerived = false;
 			xmlTag = "LEI";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "LEI";
 			definition = "Legal entity identifier of the party.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.choice.PersonOrOrganisation2Choice.mmLEI);
+			nextVersions_lazy = () -> Arrays.asList(PersonOrOrganisation2Choice.mmLEI);
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> LEIIdentifier.mmObject();
@@ -174,11 +177,11 @@ public class PersonOrOrganisation1Choice {
 	 */
 	public static final MMMessageAttribute mmMIC = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.OrganisationIdentification.mmMIC;
+			businessElementTrace_lazy = () -> OrganisationIdentification.mmMIC;
 			componentContext_lazy = () -> PersonOrOrganisation1Choice.mmObject();
 			isDerived = false;
 			xmlTag = "MIC";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "MIC";
 			definition = "Market identifier code of the party.";
 			maxOccurs = 1;
@@ -232,10 +235,10 @@ public class PersonOrOrganisation1Choice {
 			componentContext_lazy = () -> PersonOrOrganisation1Choice.mmObject();
 			isDerived = false;
 			xmlTag = "Prsn";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Person";
 			definition = "Identification of a person.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.choice.PersonOrOrganisation2Choice.mmPerson);
+			nextVersions_lazy = () -> Arrays.asList(PersonOrOrganisation2Choice.mmPerson);
 			maxOccurs = 1;
 			minOccurs = 1;
 			isComposite = true;
@@ -278,11 +281,11 @@ public class PersonOrOrganisation1Choice {
 	 */
 	public static final MMMessageAttribute mmInternal = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.PartyIdentificationInformation.mmOtherIdentification;
+			businessElementTrace_lazy = () -> PartyIdentificationInformation.mmOtherIdentification;
 			componentContext_lazy = () -> PersonOrOrganisation1Choice.mmObject();
 			isDerived = false;
 			xmlTag = "Intl";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Internal";
 			definition = "Identifies internal party.";
 			maxOccurs = 1;
@@ -294,11 +297,10 @@ public class PersonOrOrganisation1Choice {
 	final static public MMChoiceComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMChoiceComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.choice.PersonOrOrganisation1Choice.mmLEI, com.tools20022.repository.choice.PersonOrOrganisation1Choice.mmMIC,
-						com.tools20022.repository.choice.PersonOrOrganisation1Choice.mmPerson, com.tools20022.repository.choice.PersonOrOrganisation1Choice.mmInternal);
+				messageElement_lazy = () -> Arrays.asList(PersonOrOrganisation1Choice.mmLEI, PersonOrOrganisation1Choice.mmMIC, PersonOrOrganisation1Choice.mmPerson, PersonOrOrganisation1Choice.mmInternal);
 				trace_lazy = () -> PartyIdentificationInformation.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "PersonOrOrganisation1Choice";
 				definition = "Specifies the identification of a person or an organisation.";
 				nextVersions_lazy = () -> Arrays.asList(PersonOrOrganisation2Choice.mmObject());

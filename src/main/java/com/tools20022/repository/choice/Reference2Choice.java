@@ -19,7 +19,11 @@ package com.tools20022.repository.choice;
 
 import com.tools20022.metamodel.MMChoiceComponent;
 import com.tools20022.metamodel.MMMessageAttribute;
+import com.tools20022.metamodel.MMRegistrationStatus;
+import com.tools20022.repository.area.colr.CollateralManagementCancellationRequestV03;
+import com.tools20022.repository.area.colr.CollateralManagementCancellationRequestV04;
 import com.tools20022.repository.datatype.Max35Text;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -138,7 +142,7 @@ public class Reference2Choice {
 			componentContext_lazy = () -> Reference2Choice.mmObject();
 			isDerived = false;
 			xmlTag = "MrgnCallReqId";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "MarginCallRequestIdentification";
 			definition = "Unique identifier of the margin call request.";
 			maxOccurs = 1;
@@ -179,7 +183,7 @@ public class Reference2Choice {
 			componentContext_lazy = () -> Reference2Choice.mmObject();
 			isDerived = false;
 			xmlTag = "MrgnCallRspnId";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "MarginCallResponseIdentification";
 			definition = "Unique identifier of the margin call response.";
 			maxOccurs = 1;
@@ -220,7 +224,7 @@ public class Reference2Choice {
 			componentContext_lazy = () -> Reference2Choice.mmObject();
 			isDerived = false;
 			xmlTag = "CollPrpslId";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CollateralProposalIdentification";
 			definition = "Unique identifier of the collateral proposal.";
 			maxOccurs = 1;
@@ -261,7 +265,7 @@ public class Reference2Choice {
 			componentContext_lazy = () -> Reference2Choice.mmObject();
 			isDerived = false;
 			xmlTag = "CollPrpslRspnId";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CollateralProposalResponseIdentification";
 			definition = "Unique identifier of the collateral proposal response.";
 			maxOccurs = 1;
@@ -302,7 +306,7 @@ public class Reference2Choice {
 			componentContext_lazy = () -> Reference2Choice.mmObject();
 			isDerived = false;
 			xmlTag = "DsptNtfctnId";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "DisputeNotificationIdentification";
 			definition = "Unique identifier of the dispute notification.";
 			maxOccurs = 1;
@@ -352,7 +356,7 @@ public class Reference2Choice {
 			componentContext_lazy = () -> Reference2Choice.mmObject();
 			isDerived = false;
 			xmlTag = "CollSbstitnReqId";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CollateralSubstitutionRequestIdentification";
 			definition = "Choice between the identification of the MarginCallRequest message, the MarginCallResponse message, the CollateralProposal message, the CollateralProposalResponse message, the CollateralSubstitutionRequest message, the CollateralSubstitutionResponse message, the CollateralSubstitutionConfirmation message, the InterestPaymentRequest message, the InterestPaymentResponse message, the InterestPaymentStatement message or the MarginCallDisputeNotification message.";
 			maxOccurs = 1;
@@ -394,7 +398,7 @@ public class Reference2Choice {
 			componentContext_lazy = () -> Reference2Choice.mmObject();
 			isDerived = false;
 			xmlTag = "CollSbstitnRspnId";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CollateralSubstitutionResponseIdentification";
 			definition = "Unique identifier of the collateral substitution response.";
 			maxOccurs = 1;
@@ -436,7 +440,7 @@ public class Reference2Choice {
 			componentContext_lazy = () -> Reference2Choice.mmObject();
 			isDerived = false;
 			xmlTag = "CollSbstitnConfId";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CollateralSubstitutionConfirmationIdentification";
 			definition = "Unique identifier of the collateral substitution confirmation.";
 			maxOccurs = 1;
@@ -477,7 +481,7 @@ public class Reference2Choice {
 			componentContext_lazy = () -> Reference2Choice.mmObject();
 			isDerived = false;
 			xmlTag = "IntrstPmtReqId";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "InterestPaymentRequestIdentification";
 			definition = "Unique identifier of the interest payment request.";
 			maxOccurs = 1;
@@ -518,7 +522,7 @@ public class Reference2Choice {
 			componentContext_lazy = () -> Reference2Choice.mmObject();
 			isDerived = false;
 			xmlTag = "IntrstPmtRspnId";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "InterestPaymentResponseIdentification";
 			definition = "Unique identifier of the interest payment response.";
 			maxOccurs = 1;
@@ -559,7 +563,7 @@ public class Reference2Choice {
 			componentContext_lazy = () -> Reference2Choice.mmObject();
 			isDerived = false;
 			xmlTag = "IntrstPmtStmtId";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "InterestPaymentStatementIdentification";
 			definition = "Unique identifier of the interest payment statement.";
 			maxOccurs = 1;
@@ -571,16 +575,13 @@ public class Reference2Choice {
 	final static public MMChoiceComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMChoiceComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.choice.Reference2Choice.mmMarginCallRequestIdentification, com.tools20022.repository.choice.Reference2Choice.mmMarginCallResponseIdentification,
-						com.tools20022.repository.choice.Reference2Choice.mmCollateralProposalIdentification, com.tools20022.repository.choice.Reference2Choice.mmCollateralProposalResponseIdentification,
-						com.tools20022.repository.choice.Reference2Choice.mmDisputeNotificationIdentification, com.tools20022.repository.choice.Reference2Choice.mmCollateralSubstitutionRequestIdentification,
-						com.tools20022.repository.choice.Reference2Choice.mmCollateralSubstitutionResponseIdentification, com.tools20022.repository.choice.Reference2Choice.mmCollateralSubstitutionConfirmationIdentification,
-						com.tools20022.repository.choice.Reference2Choice.mmInterestPaymentRequestIdentification, com.tools20022.repository.choice.Reference2Choice.mmInterestPaymentResponseIdentification,
-						com.tools20022.repository.choice.Reference2Choice.mmInterestPaymentStatementIdentification);
-				messageBuildingBlock_lazy = () -> Arrays.asList(com.tools20022.repository.area.colr.CollateralManagementCancellationRequestV03.mmReference,
-						com.tools20022.repository.area.colr.CollateralManagementCancellationRequestV04.mmReference);
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				messageElement_lazy = () -> Arrays.asList(Reference2Choice.mmMarginCallRequestIdentification, Reference2Choice.mmMarginCallResponseIdentification, Reference2Choice.mmCollateralProposalIdentification,
+						Reference2Choice.mmCollateralProposalResponseIdentification, Reference2Choice.mmDisputeNotificationIdentification, Reference2Choice.mmCollateralSubstitutionRequestIdentification,
+						Reference2Choice.mmCollateralSubstitutionResponseIdentification, Reference2Choice.mmCollateralSubstitutionConfirmationIdentification, Reference2Choice.mmInterestPaymentRequestIdentification,
+						Reference2Choice.mmInterestPaymentResponseIdentification, Reference2Choice.mmInterestPaymentStatementIdentification);
+				messageBuildingBlock_lazy = () -> Arrays.asList(CollateralManagementCancellationRequestV03.mmReference, CollateralManagementCancellationRequestV04.mmReference);
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "Reference2Choice";
 				definition = "Choice between the identification of the MarginCallRequest message, the MarginCallResponse message, the CollateralProposal message, the CollateralProposalResponse message, the CollateralSubstitutionRequest message, the CollateralSubstitutionResponse message, the CollateralSubstitutionConfirmation message, the InterestPaymentRequest message, the InterestPaymentResponse message, the InterestPaymentStatement message or the MarginCallDisputeNotification message.";
 			}

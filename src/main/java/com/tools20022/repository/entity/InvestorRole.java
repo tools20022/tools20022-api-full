@@ -19,12 +19,15 @@ package com.tools20022.repository.entity;
 
 import com.tools20022.metamodel.MMBusinessAttribute;
 import com.tools20022.metamodel.MMBusinessComponent;
+import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.choice.*;
 import com.tools20022.repository.codeset.EligibilityCode;
 import com.tools20022.repository.codeset.InvestorTypeCode;
 import com.tools20022.repository.codeset.RankCode;
 import com.tools20022.repository.datatype.YesNoIndicator;
 import com.tools20022.repository.entity.TradePartyRole;
+import com.tools20022.repository.GeneratedRepository;
+import com.tools20022.repository.msg.*;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -38,27 +41,6 @@ import java.util.concurrent.atomic.AtomicReference;
  * <p>
  * <strong>Constant fields:</strong>
  * <ul>
- * <li>{@linkplain com.tools20022.metamodel.MMBusinessComponent#getElement
- * element} =
- * <ul>
- * <li>
- * {@linkplain com.tools20022.repository.entity.InvestorRole#mmIndividualInvestor
- * InvestorRole.mmIndividualInvestor}</li>
- * <li>
- * {@linkplain com.tools20022.repository.entity.InvestorRole#mmCorporateInvestor
- * InvestorRole.mmCorporateInvestor}</li>
- * <li>{@linkplain com.tools20022.repository.entity.InvestorRole#mmCapacity
- * InvestorRole.mmCapacity}</li>
- * <li>
- * {@linkplain com.tools20022.repository.entity.InvestorRole#mmInvestorProtectionAssociationMembership
- * InvestorRole.mmInvestorProtectionAssociationMembership}</li>
- * <li>{@linkplain com.tools20022.repository.entity.InvestorRole#mmType
- * InvestorRole.mmType}</li>
- * </ul>
- * </li>
- * <li>{@linkplain com.tools20022.metamodel.MMBusinessComponent#getSuperType
- * superType} = {@linkplain com.tools20022.repository.entity.TradePartyRole
- * TradePartyRole}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMBusinessComponent#getDerivationComponent
  * derivationComponent} =
@@ -77,6 +59,27 @@ import java.util.concurrent.atomic.AtomicReference;
  * AccountDesignation1Choice}</li>
  * <li>{@linkplain com.tools20022.repository.choice.InvestorCapacity5Choice
  * InvestorCapacity5Choice}</li>
+ * </ul>
+ * </li>
+ * <li>{@linkplain com.tools20022.metamodel.MMBusinessComponent#getSuperType
+ * superType} = {@linkplain com.tools20022.repository.entity.TradePartyRole
+ * TradePartyRole}</li>
+ * <li>{@linkplain com.tools20022.metamodel.MMBusinessComponent#getElement
+ * element} =
+ * <ul>
+ * <li>
+ * {@linkplain com.tools20022.repository.entity.InvestorRole#mmIndividualInvestor
+ * InvestorRole.mmIndividualInvestor}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.entity.InvestorRole#mmCorporateInvestor
+ * InvestorRole.mmCorporateInvestor}</li>
+ * <li>{@linkplain com.tools20022.repository.entity.InvestorRole#mmCapacity
+ * InvestorRole.mmCapacity}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.entity.InvestorRole#mmInvestorProtectionAssociationMembership
+ * InvestorRole.mmInvestorProtectionAssociationMembership}</li>
+ * <li>{@linkplain com.tools20022.repository.entity.InvestorRole#mmType
+ * InvestorRole.mmType}</li>
  * </ul>
  * </li>
  * <li>
@@ -131,7 +134,7 @@ public class InvestorRole extends TradePartyRole {
 		{
 			elementContext_lazy = () -> InvestorRole.mmObject();
 			isDerived = false;
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "IndividualInvestor";
 			definition = "Specifies whether the investor is a primary or the secondary individual investor.";
 			maxOccurs = 1;
@@ -180,10 +183,10 @@ public class InvestorRole extends TradePartyRole {
 	 */
 	public static final MMBusinessAttribute mmCorporateInvestor = new MMBusinessAttribute() {
 		{
-			derivation_lazy = () -> Arrays.asList(com.tools20022.repository.msg.CashAccount33.mmCashAccountDesignation, com.tools20022.repository.choice.AccountDesignation1Choice.mmCode);
+			derivation_lazy = () -> Arrays.asList(CashAccount33.mmCashAccountDesignation, AccountDesignation1Choice.mmCode);
 			elementContext_lazy = () -> InvestorRole.mmObject();
 			isDerived = false;
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "CorporateInvestor";
 			definition = "Specifies whether the investor is a primary or a secondary corporate investor.";
 			maxOccurs = 1;
@@ -389,34 +392,22 @@ public class InvestorRole extends TradePartyRole {
 	 */
 	public static final MMBusinessAttribute mmCapacity = new MMBusinessAttribute() {
 		{
-			derivation_lazy = () -> Arrays.asList(com.tools20022.repository.choice.InvestorCapacity1Choice.mmCode, com.tools20022.repository.choice.InvestorCapacity1Choice.mmProprietary,
-					com.tools20022.repository.msg.SecuritiesTradeDetails25.mmInvestorCapacity, com.tools20022.repository.msg.SecuritiesTradeDetails26.mmInvestorCapacity, com.tools20022.repository.choice.InvestorCapacity2Choice.mmCode,
-					com.tools20022.repository.choice.InvestorCapacity2Choice.mmProprietary, com.tools20022.repository.msg.SecuritiesTradeDetails27.mmInvestorCapacity,
-					com.tools20022.repository.msg.SecuritiesTradeDetails28.mmInvestorCapacity, com.tools20022.repository.msg.SecuritiesTradeDetails6.mmInvestorCapacity,
-					com.tools20022.repository.msg.SecuritiesTradeDetails13.mmInvestorCapacity, com.tools20022.repository.msg.SecuritiesTradeDetails3.mmInvestorCapacity,
-					com.tools20022.repository.msg.SecuritiesTradeDetails11.mmInvestorCapacity, com.tools20022.repository.msg.SecuritiesTradeDetails2.mmInvestorCapacity,
-					com.tools20022.repository.msg.SecuritiesTradeDetails16.mmInvestorCapacity, com.tools20022.repository.msg.SecuritiesTradeDetails1.mmInvestorCapacity,
-					com.tools20022.repository.msg.SecuritiesTradeDetails15.mmInvestorCapacity, com.tools20022.repository.choice.InvestorCapacity3Choice.mmCode, com.tools20022.repository.choice.InvestorCapacity3Choice.mmProprietary,
-					com.tools20022.repository.msg.ConfirmationPartyDetails2.mmInvestorCapacity, com.tools20022.repository.msg.Intermediary8.mmOrderOriginatorEligibility,
-					com.tools20022.repository.msg.Intermediary9.mmOrderOriginatorEligibility, com.tools20022.repository.msg.SecuritiesTradeDetails31.mmInvestorCapacity,
-					com.tools20022.repository.msg.SecuritiesTradeDetails33.mmInvestorCapacity, com.tools20022.repository.msg.SecuritiesTradeDetails38.mmInvestorCapacity,
-					com.tools20022.repository.msg.SecuritiesTradeDetails37.mmInvestorCapacity, com.tools20022.repository.msg.SecuritiesTradeDetails34.mmInvestorCapacity,
-					com.tools20022.repository.msg.SecuritiesTradeDetails32.mmInvestorCapacity, com.tools20022.repository.msg.SecuritiesTradeDetails44.mmInvestorCapacity,
-					com.tools20022.repository.msg.SecuritiesTradeDetails39.mmInvestorCapacity, com.tools20022.repository.msg.SecuritiesTradeDetails43.mmInvestorCapacity,
-					com.tools20022.repository.msg.SecuritiesTradeDetails40.mmInvestorCapacity, com.tools20022.repository.msg.SecuritiesTradeDetails46.mmInvestorCapacity,
-					com.tools20022.repository.msg.SecuritiesTradeDetails47.mmInvestorCapacity, com.tools20022.repository.msg.Intermediary29.mmOrderOriginatorEligibility,
-					com.tools20022.repository.msg.SecuritiesTradeDetails51.mmInvestorCapacity, com.tools20022.repository.msg.SecuritiesTradeDetails53.mmInvestorCapacity,
-					com.tools20022.repository.msg.SecuritiesTradeDetails55.mmInvestorCapacity, com.tools20022.repository.msg.SecuritiesTradeDetails56.mmInvestorCapacity, com.tools20022.repository.choice.InvestorCapacity4Choice.mmCode,
-					com.tools20022.repository.choice.InvestorCapacity4Choice.mmProprietary, com.tools20022.repository.msg.SecuritiesTradeDetails52.mmInvestorCapacity,
-					com.tools20022.repository.msg.SecuritiesTradeDetails50.mmInvestorCapacity, com.tools20022.repository.msg.SecuritiesTradeDetails59.mmInvestorCapacity,
-					com.tools20022.repository.msg.SecuritiesTradeDetails58.mmInvestorCapacity, com.tools20022.repository.msg.SecuritiesTradeDetails63.mmInvestorCapacity,
-					com.tools20022.repository.msg.SecuritiesTradeDetails62.mmInvestorCapacity, com.tools20022.repository.choice.InvestorCapacity5Choice.mmCode, com.tools20022.repository.choice.InvestorCapacity5Choice.mmProprietary,
-					com.tools20022.repository.msg.SecuritiesTradeDetails65.mmInvestorCapacity, com.tools20022.repository.msg.SecuritiesTradeDetails66.mmInvestorCapacity,
-					com.tools20022.repository.msg.Intermediary39.mmOrderOriginatorEligibility, com.tools20022.repository.msg.Intermediary40.mmOrderOriginatorEligibility,
-					com.tools20022.repository.msg.SecuritiesTradeDetails67.mmInvestorCapacity, com.tools20022.repository.msg.SecuritiesTradeDetails70.mmInvestorCapacity);
+			derivation_lazy = () -> Arrays.asList(InvestorCapacity1Choice.mmCode, InvestorCapacity1Choice.mmProprietary, SecuritiesTradeDetails25.mmInvestorCapacity, SecuritiesTradeDetails26.mmInvestorCapacity,
+					InvestorCapacity2Choice.mmCode, InvestorCapacity2Choice.mmProprietary, SecuritiesTradeDetails27.mmInvestorCapacity, SecuritiesTradeDetails28.mmInvestorCapacity, SecuritiesTradeDetails6.mmInvestorCapacity,
+					SecuritiesTradeDetails13.mmInvestorCapacity, SecuritiesTradeDetails3.mmInvestorCapacity, SecuritiesTradeDetails11.mmInvestorCapacity, SecuritiesTradeDetails2.mmInvestorCapacity,
+					SecuritiesTradeDetails16.mmInvestorCapacity, SecuritiesTradeDetails1.mmInvestorCapacity, SecuritiesTradeDetails15.mmInvestorCapacity, InvestorCapacity3Choice.mmCode, InvestorCapacity3Choice.mmProprietary,
+					ConfirmationPartyDetails2.mmInvestorCapacity, Intermediary8.mmOrderOriginatorEligibility, Intermediary9.mmOrderOriginatorEligibility, SecuritiesTradeDetails31.mmInvestorCapacity,
+					SecuritiesTradeDetails33.mmInvestorCapacity, SecuritiesTradeDetails38.mmInvestorCapacity, SecuritiesTradeDetails37.mmInvestorCapacity, SecuritiesTradeDetails34.mmInvestorCapacity,
+					SecuritiesTradeDetails32.mmInvestorCapacity, SecuritiesTradeDetails44.mmInvestorCapacity, SecuritiesTradeDetails39.mmInvestorCapacity, SecuritiesTradeDetails43.mmInvestorCapacity,
+					SecuritiesTradeDetails40.mmInvestorCapacity, SecuritiesTradeDetails46.mmInvestorCapacity, SecuritiesTradeDetails47.mmInvestorCapacity, Intermediary29.mmOrderOriginatorEligibility,
+					SecuritiesTradeDetails51.mmInvestorCapacity, SecuritiesTradeDetails53.mmInvestorCapacity, SecuritiesTradeDetails55.mmInvestorCapacity, SecuritiesTradeDetails56.mmInvestorCapacity, InvestorCapacity4Choice.mmCode,
+					InvestorCapacity4Choice.mmProprietary, SecuritiesTradeDetails52.mmInvestorCapacity, SecuritiesTradeDetails50.mmInvestorCapacity, SecuritiesTradeDetails59.mmInvestorCapacity, SecuritiesTradeDetails58.mmInvestorCapacity,
+					SecuritiesTradeDetails63.mmInvestorCapacity, SecuritiesTradeDetails62.mmInvestorCapacity, InvestorCapacity5Choice.mmCode, InvestorCapacity5Choice.mmProprietary, SecuritiesTradeDetails65.mmInvestorCapacity,
+					SecuritiesTradeDetails66.mmInvestorCapacity, Intermediary39.mmOrderOriginatorEligibility, Intermediary40.mmOrderOriginatorEligibility, SecuritiesTradeDetails67.mmInvestorCapacity,
+					SecuritiesTradeDetails70.mmInvestorCapacity);
 			elementContext_lazy = () -> InvestorRole.mmObject();
 			isDerived = false;
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "Capacity";
 			definition = "Specifies whether the investor is the primary, or the secondary account owner or another account owner.";
 			maxOccurs = 1;
@@ -466,11 +457,10 @@ public class InvestorRole extends TradePartyRole {
 	 */
 	public static final MMBusinessAttribute mmInvestorProtectionAssociationMembership = new MMBusinessAttribute() {
 		{
-			derivation_lazy = () -> Arrays.asList(com.tools20022.repository.msg.ConfirmationPartyDetails6.mmInvestorProtectionAssociationMembership,
-					com.tools20022.repository.msg.ConfirmationPartyDetails5.mmInvestorProtectionAssociationMembership);
+			derivation_lazy = () -> Arrays.asList(ConfirmationPartyDetails6.mmInvestorProtectionAssociationMembership, ConfirmationPartyDetails5.mmInvestorProtectionAssociationMembership);
 			elementContext_lazy = () -> InvestorRole.mmObject();
 			isDerived = false;
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "InvestorProtectionAssociationMembership";
 			definition = "Indicates whether the confirmation party is a member of the investor protection association required, eg, as per regulation.";
 			maxOccurs = 1;
@@ -518,10 +508,10 @@ public class InvestorRole extends TradePartyRole {
 	 */
 	public static final MMBusinessAttribute mmType = new MMBusinessAttribute() {
 		{
-			derivation_lazy = () -> Arrays.asList(com.tools20022.repository.choice.InvestorType2Choice.mmCode, com.tools20022.repository.choice.InvestorType2Choice.mmProprietary);
+			derivation_lazy = () -> Arrays.asList(InvestorType2Choice.mmCode, InvestorType2Choice.mmProprietary);
 			elementContext_lazy = () -> InvestorRole.mmObject();
 			isDerived = false;
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "Type";
 			definition = "Specifies whether the investor is a corporate or an individual";
 			maxOccurs = 1;
@@ -533,13 +523,12 @@ public class InvestorRole extends TradePartyRole {
 	static public MMBusinessComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMBusinessComponent() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "InvestorRole";
 				definition = "Party that makes investment decisions. Identifies the beneficiary or its broker.";
 				superType_lazy = () -> TradePartyRole.mmObject();
-				element_lazy = () -> Arrays.asList(com.tools20022.repository.entity.InvestorRole.mmIndividualInvestor, com.tools20022.repository.entity.InvestorRole.mmCorporateInvestor,
-						com.tools20022.repository.entity.InvestorRole.mmCapacity, com.tools20022.repository.entity.InvestorRole.mmInvestorProtectionAssociationMembership, com.tools20022.repository.entity.InvestorRole.mmType);
+				element_lazy = () -> Arrays.asList(InvestorRole.mmIndividualInvestor, InvestorRole.mmCorporateInvestor, InvestorRole.mmCapacity, InvestorRole.mmInvestorProtectionAssociationMembership, InvestorRole.mmType);
 				derivationComponent_lazy = () -> Arrays.asList(InvestorCapacity1Choice.mmObject(), InvestorCapacity2Choice.mmObject(), InvestorCapacity3Choice.mmObject(), InvestorType2Choice.mmObject(), InvestorCapacity4Choice.mmObject(),
 						AccountDesignation1Choice.mmObject(), InvestorCapacity5Choice.mmObject());
 			}

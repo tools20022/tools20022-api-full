@@ -20,9 +20,11 @@ package com.tools20022.repository.msg;
 import com.tools20022.metamodel.MMMessageAssociationEnd;
 import com.tools20022.metamodel.MMMessageAttribute;
 import com.tools20022.metamodel.MMMessageComponent;
+import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.choice.DateAndDateTimeChoice;
 import com.tools20022.repository.choice.SystemPartyIdentification1Choice;
 import com.tools20022.repository.datatype.YesNoIndicator;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.List;
@@ -108,7 +110,7 @@ public class SecurityCSDLink1 {
 			componentContext_lazy = () -> SecurityCSDLink1.mmObject();
 			isDerived = false;
 			xmlTag = "VldFr";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ValidFrom";
 			definition = "Defines the date since when the CSD is linked to the security.";
 			maxOccurs = 1;
@@ -151,7 +153,7 @@ public class SecurityCSDLink1 {
 			componentContext_lazy = () -> SecurityCSDLink1.mmObject();
 			isDerived = false;
 			xmlTag = "VldTo";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ValidTo";
 			definition = "Defines the date until when the CSD is linked to the security.";
 			maxOccurs = 1;
@@ -196,7 +198,7 @@ public class SecurityCSDLink1 {
 			componentContext_lazy = () -> SecurityCSDLink1.mmObject();
 			isDerived = false;
 			xmlTag = "SctyMntnc";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SecurityMaintenance";
 			definition = "Specify if the involved CSD (issuer/technical issuer/investor) is also the maintainer of related reference data.";
 			maxOccurs = 1;
@@ -237,7 +239,7 @@ public class SecurityCSDLink1 {
 			componentContext_lazy = () -> SecurityCSDLink1.mmObject();
 			isDerived = false;
 			xmlTag = "IssrCSD";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "IssuerCSD";
 			definition = "CSD Issuer of a security.";
 			maxOccurs = 1;
@@ -279,7 +281,7 @@ public class SecurityCSDLink1 {
 			componentContext_lazy = () -> SecurityCSDLink1.mmObject();
 			isDerived = false;
 			xmlTag = "InvstrCSD";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "InvestorCSD";
 			definition = "CSD Investor of a security.";
 			maxOccurs = 1;
@@ -321,7 +323,7 @@ public class SecurityCSDLink1 {
 			componentContext_lazy = () -> SecurityCSDLink1.mmObject();
 			isDerived = false;
 			xmlTag = "TechIssrCSD";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "TechnicalIssuerCSD";
 			definition = "Technical issuer of a security.";
 			maxOccurs = 1;
@@ -364,7 +366,7 @@ public class SecurityCSDLink1 {
 			componentContext_lazy = () -> SecurityCSDLink1.mmObject();
 			isDerived = false;
 			xmlTag = "IssncAcct";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "IssuanceAccount";
 			definition = "Account to or from which a securities entry is made.";
 			minOccurs = 0;
@@ -375,11 +377,10 @@ public class SecurityCSDLink1 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.SecurityCSDLink1.mmValidFrom, com.tools20022.repository.msg.SecurityCSDLink1.mmValidTo,
-						com.tools20022.repository.msg.SecurityCSDLink1.mmSecurityMaintenance, com.tools20022.repository.msg.SecurityCSDLink1.mmIssuerCSD, com.tools20022.repository.msg.SecurityCSDLink1.mmInvestorCSD,
-						com.tools20022.repository.msg.SecurityCSDLink1.mmTechnicalIssuerCSD, com.tools20022.repository.msg.SecurityCSDLink1.mmIssuanceAccount);
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+				messageElement_lazy = () -> Arrays.asList(SecurityCSDLink1.mmValidFrom, SecurityCSDLink1.mmValidTo, SecurityCSDLink1.mmSecurityMaintenance, SecurityCSDLink1.mmIssuerCSD, SecurityCSDLink1.mmInvestorCSD,
+						SecurityCSDLink1.mmTechnicalIssuerCSD, SecurityCSDLink1.mmIssuanceAccount);
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 				name = "SecurityCSDLink1";
 				definition = "Defines how the CSD is linked to the security.";
 			}

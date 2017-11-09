@@ -20,6 +20,7 @@ package com.tools20022.repository.area.caam;
 import com.tools20022.metamodel.MMMessageBuildingBlock;
 import com.tools20022.metamodel.MMMessageDefinition;
 import com.tools20022.metamodel.MMMessageDefinitionIdentifier;
+import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.area.ATMManagementLatestVersion;
 import com.tools20022.repository.msg.ATMReconciliationAcknowledgement1;
 import com.tools20022.repository.msg.ContentInformationType10;
@@ -36,6 +37,9 @@ import java.util.concurrent.atomic.AtomicReference;
  * <p>
  * <strong>Constant fields:</strong>
  * <ul>
+ * <li>
+ * {@linkplain com.tools20022.metamodel.MMMessageDefinition#getMessageDefinitionIdentifier
+ * messageDefinitionIdentifier} = {@code caam.010.001.01}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMMessageDefinition#getBusinessArea
  * businessArea} =
  * {@linkplain com.tools20022.repository.area.ATMManagementLatestVersion
@@ -71,9 +75,6 @@ import java.util.concurrent.atomic.AtomicReference;
  * ATMReconciliationAcknowledgementV01.mmSecurityTrailer}</li>
  * </ul>
  * </li>
- * <li>
- * {@linkplain com.tools20022.metamodel.MMMessageDefinition#getMessageDefinitionIdentifier
- * messageDefinitionIdentifier} = {@code caam.010.001.01}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -126,7 +127,7 @@ public class ATMReconciliationAcknowledgementV01 {
 	public static final MMMessageBuildingBlock mmHeader = new MMMessageBuildingBlock() {
 		{
 			xmlTag = "Hdr";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Header";
 			definition = "Information related to the protocol management on a segment of the path from the ATM to the acquirer.";
 			maxOccurs = 1;
@@ -161,7 +162,7 @@ public class ATMReconciliationAcknowledgementV01 {
 	public static final MMMessageBuildingBlock mmProtectedATMReconciliationAcknowledgement = new MMMessageBuildingBlock() {
 		{
 			xmlTag = "PrtctdATMRcncltnAck";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ProtectedATMReconciliationAcknowledgement";
 			definition = "Encrypted body of the message.";
 			maxOccurs = 1;
@@ -199,7 +200,7 @@ public class ATMReconciliationAcknowledgementV01 {
 	public static final MMMessageBuildingBlock mmATMReconciliationAcknowledgement = new MMMessageBuildingBlock() {
 		{
 			xmlTag = "ATMRcncltnAck";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ATMReconciliationAcknowledgement";
 			definition = "Information related to the acknowledgement  of an ATM reconciliation from the ATM manager.";
 			maxOccurs = 1;
@@ -234,7 +235,7 @@ public class ATMReconciliationAcknowledgementV01 {
 	public static final MMMessageBuildingBlock mmSecurityTrailer = new MMMessageBuildingBlock() {
 		{
 			xmlTag = "SctyTrlr";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SecurityTrailer";
 			definition = "Trailer of the message containing a MAC.";
 			maxOccurs = 1;
@@ -246,7 +247,7 @@ public class ATMReconciliationAcknowledgementV01 {
 	final static public MMMessageDefinition mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageDefinition() {
 			{
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "ATMReconciliationAcknowledgementV01";
 				definition = "The ATMReconciliationAcknowledgement message is sent by an acquirer or its agent to an ATM to acknowledge the receipt of an ATMReconciliationAdvice message.";
 				nextVersions_lazy = () -> Arrays.asList(ATMReconciliationAcknowledgementV02.mmObject());
@@ -254,9 +255,8 @@ public class ATMReconciliationAcknowledgementV01 {
 				rootElement = "Document";
 				xmlTag = "ATMRcncltnAck";
 				businessArea_lazy = () -> ATMManagementLatestVersion.mmObject();
-				messageBuildingBlock_lazy = () -> Arrays.asList(com.tools20022.repository.area.caam.ATMReconciliationAcknowledgementV01.mmHeader,
-						com.tools20022.repository.area.caam.ATMReconciliationAcknowledgementV01.mmProtectedATMReconciliationAcknowledgement,
-						com.tools20022.repository.area.caam.ATMReconciliationAcknowledgementV01.mmATMReconciliationAcknowledgement, com.tools20022.repository.area.caam.ATMReconciliationAcknowledgementV01.mmSecurityTrailer);
+				messageBuildingBlock_lazy = () -> Arrays.asList(ATMReconciliationAcknowledgementV01.mmHeader, ATMReconciliationAcknowledgementV01.mmProtectedATMReconciliationAcknowledgement,
+						ATMReconciliationAcknowledgementV01.mmATMReconciliationAcknowledgement, ATMReconciliationAcknowledgementV01.mmSecurityTrailer);
 				messageDefinitionIdentifier_lazy = () -> new MMMessageDefinitionIdentifier() {
 					{
 						businessArea = "caam";

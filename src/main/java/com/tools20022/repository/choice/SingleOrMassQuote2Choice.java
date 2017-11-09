@@ -19,7 +19,9 @@ package com.tools20022.repository.choice;
 
 import com.tools20022.metamodel.MMChoiceComponent;
 import com.tools20022.metamodel.MMMessageAssociationEnd;
+import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.entity.SecuritiesQuoteVariable;
+import com.tools20022.repository.GeneratedRepository;
 import com.tools20022.repository.msg.QuoteStatus2;
 import com.tools20022.repository.msg.SingleQuote1;
 import java.util.Arrays;
@@ -98,7 +100,7 @@ public class SingleOrMassQuote2Choice {
 			componentContext_lazy = () -> SingleOrMassQuote2Choice.mmObject();
 			isDerived = false;
 			xmlTag = "SnglQtDtls";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SingleQuoteDetails";
 			definition = "Details related to a single quote.";
 			maxOccurs = 1;
@@ -139,7 +141,7 @@ public class SingleOrMassQuote2Choice {
 			componentContext_lazy = () -> SingleOrMassQuote2Choice.mmObject();
 			isDerived = false;
 			xmlTag = "MassQtDtls";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "MassQuoteDetails";
 			definition = "Details related to a mass quote.";
 			maxOccurs = 1;
@@ -152,9 +154,9 @@ public class SingleOrMassQuote2Choice {
 	final static public MMChoiceComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMChoiceComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.choice.SingleOrMassQuote2Choice.mmSingleQuoteDetails, com.tools20022.repository.choice.SingleOrMassQuote2Choice.mmMassQuoteDetails);
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+				messageElement_lazy = () -> Arrays.asList(SingleOrMassQuote2Choice.mmSingleQuoteDetails, SingleOrMassQuote2Choice.mmMassQuoteDetails);
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 				name = "SingleOrMassQuote2Choice";
 				definition = "Choice between a single or a mass quote.";
 			}

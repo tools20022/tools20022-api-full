@@ -19,6 +19,8 @@ package com.tools20022.repository.codeset;
 
 import com.tools20022.metamodel.MMCode;
 import com.tools20022.metamodel.MMCodeSet;
+import com.tools20022.metamodel.MMRegistrationStatus;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -27,6 +29,17 @@ import java.util.concurrent.atomic.AtomicReference;
  * <p>
  * <strong>Constant fields:</strong>
  * <ul>
+ * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getDerivation derivation}
+ * =
+ * <ul>
+ * <li>
+ * {@linkplain com.tools20022.repository.codeset.ConditionallyAcceptedStatusReason2Code
+ * ConditionallyAcceptedStatusReason2Code}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.codeset.ConditionallyAcceptedStatusReason3Code
+ * ConditionallyAcceptedStatusReason3Code}</li>
+ * </ul>
+ * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getCode code} =
  * <ul>
  * <li>
@@ -100,17 +113,6 @@ import java.util.concurrent.atomic.AtomicReference;
  * ConditionallyAcceptedStatusReasonCode.mmSubscriptionTopUpAmount}</li>
  * </ul>
  * </li>
- * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getDerivation derivation}
- * =
- * <ul>
- * <li>
- * {@linkplain com.tools20022.repository.codeset.ConditionallyAcceptedStatusReason2Code
- * ConditionallyAcceptedStatusReason2Code}</li>
- * <li>
- * {@linkplain com.tools20022.repository.codeset.ConditionallyAcceptedStatusReason3Code
- * ConditionallyAcceptedStatusReason3Code}</li>
- * </ul>
- * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
@@ -162,7 +164,7 @@ public class ConditionallyAcceptedStatusReasonCode {
 	 */
 	public static final MMCode mmAwaitingMoney = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AwaitingMoney";
 			definition = "Order is accepted for further processing but the execution of the order is pending until there is enough cash in the account to pay the subscription.";
 			owner_lazy = () -> ConditionallyAcceptedStatusReasonCode.mmObject();
@@ -195,7 +197,7 @@ public class ConditionallyAcceptedStatusReasonCode {
 	 */
 	public static final MMCode mmAwaitingFunds = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AwaitingFunds";
 			definition = "Order is accepted for further processing but the execution of the order is pending until there are enough funds in the account to complete it.";
 			owner_lazy = () -> ConditionallyAcceptedStatusReasonCode.mmObject();
@@ -229,7 +231,7 @@ public class ConditionallyAcceptedStatusReasonCode {
 	 */
 	public static final MMCode mmAwaitingDocuments = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AwaitingDocuments";
 			definition = "Order is pending until documents are completed and received, eg, legal documents from the successor, legal proceeds because of bankruptcy, missing signature.";
 			owner_lazy = () -> ConditionallyAcceptedStatusReasonCode.mmObject();
@@ -263,7 +265,7 @@ public class ConditionallyAcceptedStatusReasonCode {
 	 */
 	public static final MMCode mmAwaitingRedemptionMoney = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AwaitingRedemptionMoney";
 			definition = "Order is accepted for further processing but the execution of the order is pending until there are enough funds in the account to complete the redemption.";
 			owner_lazy = () -> ConditionallyAcceptedStatusReasonCode.mmObject();
@@ -297,7 +299,7 @@ public class ConditionallyAcceptedStatusReasonCode {
 	 */
 	public static final MMCode mmAwaitingSubscriptionMoney = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AwaitingSubscriptionMoney";
 			definition = "Order is accepted for further processing but the execution of the order is pending until there is enough cash in the account to pay the subscription.";
 			owner_lazy = () -> ConditionallyAcceptedStatusReasonCode.mmObject();
@@ -327,7 +329,7 @@ public class ConditionallyAcceptedStatusReasonCode {
 	 */
 	public static final MMCode mmOther = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Other";
 			definition = "Another reason for the conditionally accepted status.";
 			owner_lazy = () -> ConditionallyAcceptedStatusReasonCode.mmObject();
@@ -360,7 +362,7 @@ public class ConditionallyAcceptedStatusReasonCode {
 	 */
 	public static final MMCode mmPossibleDuplicate = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PossibleDuplicate";
 			definition = "Order is accepted for further processing pending the result of the investigation for possible duplicates.";
 			owner_lazy = () -> ConditionallyAcceptedStatusReasonCode.mmObject();
@@ -393,7 +395,7 @@ public class ConditionallyAcceptedStatusReasonCode {
 	 */
 	public static final MMCode mmTradingLimitExceeded = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "TradingLimitExceeded";
 			definition = "Order is accepted for further processing pending the extension of the trading limit.";
 			owner_lazy = () -> ConditionallyAcceptedStatusReasonCode.mmObject();
@@ -426,7 +428,7 @@ public class ConditionallyAcceptedStatusReasonCode {
 	 */
 	public static final MMCode mmBenefitPlanDeclaration = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "BenefitPlanDeclaration";
 			definition = "Order is accepted for further processing but the execution of the order is pending the benefit plan investor (BPI) declaration.";
 			owner_lazy = () -> ConditionallyAcceptedStatusReasonCode.mmObject();
@@ -459,7 +461,7 @@ public class ConditionallyAcceptedStatusReasonCode {
 	 */
 	public static final MMCode mmERISADeclaration = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ERISADeclaration";
 			definition = "Order is accepted for further processing but the execution of the order is pending the ERISA declaration.";
 			owner_lazy = () -> ConditionallyAcceptedStatusReasonCode.mmObject();
@@ -493,7 +495,7 @@ public class ConditionallyAcceptedStatusReasonCode {
 	 */
 	public static final MMCode mmAMLDocuments = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AMLDocuments";
 			definition = "Order is accepted for further processing but the execution of the order is pending until the required anti-money laundering documentation is presented to the transfer agent.";
 			owner_lazy = () -> ConditionallyAcceptedStatusReasonCode.mmObject();
@@ -526,7 +528,7 @@ public class ConditionallyAcceptedStatusReasonCode {
 	 */
 	public static final MMCode mmAwaitingApproval = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AwaitingApproval";
 			definition = "Order is accepted for further processing but the execution of the order is pending the investment manager's approval.";
 			owner_lazy = () -> ConditionallyAcceptedStatusReasonCode.mmObject();
@@ -559,7 +561,7 @@ public class ConditionallyAcceptedStatusReasonCode {
 	 */
 	public static final MMCode mmAdditionalFundingRequired = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AdditionalFundingRequired";
 			definition = "Order is accepted for further processing but the execution of the subscription order is pending as additional funding is required.";
 			owner_lazy = () -> ConditionallyAcceptedStatusReasonCode.mmObject();
@@ -593,7 +595,7 @@ public class ConditionallyAcceptedStatusReasonCode {
 	 */
 	public static final MMCode mmBelowMinimumInitialInvestmentAmount = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "BelowMinimumInitialInvestmentAmount";
 			definition = "Order is accepted for further processing but the execution of the order is pending as the order is below the minimum initial investment amount and is subject to the investment manager's approval.";
 			owner_lazy = () -> ConditionallyAcceptedStatusReasonCode.mmObject();
@@ -627,7 +629,7 @@ public class ConditionallyAcceptedStatusReasonCode {
 	 */
 	public static final MMCode mmBelowMinimumTopUpAmount = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "BelowMinimumTopUpAmount";
 			definition = "Order is accepted for further processing but the execution of the subscription order is pending as the order is below the minimum top-up investment and is subject to the investment manager's approval.";
 			owner_lazy = () -> ConditionallyAcceptedStatusReasonCode.mmObject();
@@ -661,7 +663,7 @@ public class ConditionallyAcceptedStatusReasonCode {
 	 */
 	public static final MMCode mmInsufficientCapacity = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "InsufficientCapacity";
 			definition = "Order is accepted for further processing but the execution of the order is pending as there is insufficient capacity and the order is subject to the investment manager's approval.";
 			owner_lazy = () -> ConditionallyAcceptedStatusReasonCode.mmObject();
@@ -695,7 +697,7 @@ public class ConditionallyAcceptedStatusReasonCode {
 	 */
 	public static final MMCode mmPercentageHoldingBreach = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PercentageHoldingBreach";
 			definition = "Order is accepted for further processing but the execution of the order is pending because of a percentage holding breach, eg, PPM rules; taxation rules (ERISA).";
 			owner_lazy = () -> ConditionallyAcceptedStatusReasonCode.mmObject();
@@ -729,7 +731,7 @@ public class ConditionallyAcceptedStatusReasonCode {
 	 */
 	public static final MMCode mmBelowMinimumRedemptionAmount = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "BelowMinimumRedemptionAmount";
 			definition = "Order is accepted for further processing but the execution of the redemption order is pending as it is below the minimum redemption amount and subject to the investment manager's approval.";
 			owner_lazy = () -> ConditionallyAcceptedStatusReasonCode.mmObject();
@@ -763,7 +765,7 @@ public class ConditionallyAcceptedStatusReasonCode {
 	 */
 	public static final MMCode mmBelowMinimumRetainedAmount = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "BelowMinimumRetainedAmount";
 			definition = "Order is accepted for further processing but the execution of the redemption order is pending as the holding will be below the minimum retained value and subject to the investment manager's approval.";
 			owner_lazy = () -> ConditionallyAcceptedStatusReasonCode.mmObject();
@@ -797,7 +799,7 @@ public class ConditionallyAcceptedStatusReasonCode {
 	 */
 	public static final MMCode mmLockUp = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "LockUp";
 			definition = "Order is accepted for further processing but the execution of the order is pending as a lock-up period is in place and subject to the investment manager's approval.";
 			owner_lazy = () -> ConditionallyAcceptedStatusReasonCode.mmObject();
@@ -831,7 +833,7 @@ public class ConditionallyAcceptedStatusReasonCode {
 	 */
 	public static final MMCode mmAssetsIlliquid = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AssetsIlliquid";
 			definition = "Order is accepted for further processing but the execution of the redemption order is pending as assets are illiquid and the order is subject to the investment manager's approval.";
 			owner_lazy = () -> ConditionallyAcceptedStatusReasonCode.mmObject();
@@ -865,7 +867,7 @@ public class ConditionallyAcceptedStatusReasonCode {
 	 */
 	public static final MMCode mmDiscretion = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Discretion";
 			definition = "Order is accepted for further processing but the execution of the redemption order is pending as it is subject to the investment manager's discretion.";
 			owner_lazy = () -> ConditionallyAcceptedStatusReasonCode.mmObject();
@@ -899,7 +901,7 @@ public class ConditionallyAcceptedStatusReasonCode {
 	 */
 	public static final MMCode mmSubscriptionTopUpAmount = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SubscriptionTopUpAmount";
 			definition = "Order is accepted for further processing but the execution of the subscription order is pending as the order is below the minimum investment and a top-up is required.";
 			owner_lazy = () -> ConditionallyAcceptedStatusReasonCode.mmObject();
@@ -910,23 +912,19 @@ public class ConditionallyAcceptedStatusReasonCode {
 	static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
 				example = Arrays.asList("AWMO");
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "ConditionallyAcceptedStatusReasonCode";
 				definition = "Specifies the reason for a conditionally accepted status.";
-				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.ConditionallyAcceptedStatusReasonCode.mmAwaitingMoney, com.tools20022.repository.codeset.ConditionallyAcceptedStatusReasonCode.mmAwaitingFunds,
-						com.tools20022.repository.codeset.ConditionallyAcceptedStatusReasonCode.mmAwaitingDocuments, com.tools20022.repository.codeset.ConditionallyAcceptedStatusReasonCode.mmAwaitingRedemptionMoney,
-						com.tools20022.repository.codeset.ConditionallyAcceptedStatusReasonCode.mmAwaitingSubscriptionMoney, com.tools20022.repository.codeset.ConditionallyAcceptedStatusReasonCode.mmOther,
-						com.tools20022.repository.codeset.ConditionallyAcceptedStatusReasonCode.mmPossibleDuplicate, com.tools20022.repository.codeset.ConditionallyAcceptedStatusReasonCode.mmTradingLimitExceeded,
-						com.tools20022.repository.codeset.ConditionallyAcceptedStatusReasonCode.mmBenefitPlanDeclaration, com.tools20022.repository.codeset.ConditionallyAcceptedStatusReasonCode.mmERISADeclaration,
-						com.tools20022.repository.codeset.ConditionallyAcceptedStatusReasonCode.mmAMLDocuments, com.tools20022.repository.codeset.ConditionallyAcceptedStatusReasonCode.mmAwaitingApproval,
-						com.tools20022.repository.codeset.ConditionallyAcceptedStatusReasonCode.mmAdditionalFundingRequired, com.tools20022.repository.codeset.ConditionallyAcceptedStatusReasonCode.mmBelowMinimumInitialInvestmentAmount,
-						com.tools20022.repository.codeset.ConditionallyAcceptedStatusReasonCode.mmBelowMinimumTopUpAmount, com.tools20022.repository.codeset.ConditionallyAcceptedStatusReasonCode.mmInsufficientCapacity,
-						com.tools20022.repository.codeset.ConditionallyAcceptedStatusReasonCode.mmPercentageHoldingBreach, com.tools20022.repository.codeset.ConditionallyAcceptedStatusReasonCode.mmBelowMinimumRedemptionAmount,
-						com.tools20022.repository.codeset.ConditionallyAcceptedStatusReasonCode.mmBelowMinimumRetainedAmount, com.tools20022.repository.codeset.ConditionallyAcceptedStatusReasonCode.mmLockUp,
-						com.tools20022.repository.codeset.ConditionallyAcceptedStatusReasonCode.mmAssetsIlliquid, com.tools20022.repository.codeset.ConditionallyAcceptedStatusReasonCode.mmDiscretion,
-						com.tools20022.repository.codeset.ConditionallyAcceptedStatusReasonCode.mmSubscriptionTopUpAmount);
+				code_lazy = () -> Arrays.asList(ConditionallyAcceptedStatusReasonCode.mmAwaitingMoney, ConditionallyAcceptedStatusReasonCode.mmAwaitingFunds, ConditionallyAcceptedStatusReasonCode.mmAwaitingDocuments,
+						ConditionallyAcceptedStatusReasonCode.mmAwaitingRedemptionMoney, ConditionallyAcceptedStatusReasonCode.mmAwaitingSubscriptionMoney, ConditionallyAcceptedStatusReasonCode.mmOther,
+						ConditionallyAcceptedStatusReasonCode.mmPossibleDuplicate, ConditionallyAcceptedStatusReasonCode.mmTradingLimitExceeded, ConditionallyAcceptedStatusReasonCode.mmBenefitPlanDeclaration,
+						ConditionallyAcceptedStatusReasonCode.mmERISADeclaration, ConditionallyAcceptedStatusReasonCode.mmAMLDocuments, ConditionallyAcceptedStatusReasonCode.mmAwaitingApproval,
+						ConditionallyAcceptedStatusReasonCode.mmAdditionalFundingRequired, ConditionallyAcceptedStatusReasonCode.mmBelowMinimumInitialInvestmentAmount, ConditionallyAcceptedStatusReasonCode.mmBelowMinimumTopUpAmount,
+						ConditionallyAcceptedStatusReasonCode.mmInsufficientCapacity, ConditionallyAcceptedStatusReasonCode.mmPercentageHoldingBreach, ConditionallyAcceptedStatusReasonCode.mmBelowMinimumRedemptionAmount,
+						ConditionallyAcceptedStatusReasonCode.mmBelowMinimumRetainedAmount, ConditionallyAcceptedStatusReasonCode.mmLockUp, ConditionallyAcceptedStatusReasonCode.mmAssetsIlliquid,
+						ConditionallyAcceptedStatusReasonCode.mmDiscretion, ConditionallyAcceptedStatusReasonCode.mmSubscriptionTopUpAmount);
 				derivation_lazy = () -> Arrays.asList(ConditionallyAcceptedStatusReason2Code.mmObject(), ConditionallyAcceptedStatusReason3Code.mmObject());
 			}
 		});

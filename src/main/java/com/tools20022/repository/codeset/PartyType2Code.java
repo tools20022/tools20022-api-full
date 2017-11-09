@@ -19,7 +19,9 @@ package com.tools20022.repository.codeset;
 
 import com.tools20022.metamodel.MMCode;
 import com.tools20022.metamodel.MMCodeSet;
+import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.codeset.PartyTypeCode;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -119,7 +121,7 @@ public class PartyType2Code extends PartyTypeCode {
 	 */
 	public static final MMCode mmInvestor = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Investor";
 			owner_lazy = () -> PartyType2Code.mmObject();
 		}
@@ -142,7 +144,7 @@ public class PartyType2Code extends PartyTypeCode {
 	 */
 	public static final MMCode mmExecutingFirm = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ExecutingFirm";
 			owner_lazy = () -> PartyType2Code.mmObject();
 		}
@@ -165,7 +167,7 @@ public class PartyType2Code extends PartyTypeCode {
 	 */
 	public static final MMCode mmBrokerOfCredit = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "BrokerOfCredit";
 			owner_lazy = () -> PartyType2Code.mmObject();
 		}
@@ -188,7 +190,7 @@ public class PartyType2Code extends PartyTypeCode {
 	 */
 	public static final MMCode mmCorrespondentClearingFirm = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CorrespondentClearingFirm";
 			owner_lazy = () -> PartyType2Code.mmObject();
 		}
@@ -211,7 +213,7 @@ public class PartyType2Code extends PartyTypeCode {
 	 */
 	public static final MMCode mmContraFirm = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ContraFirm";
 			owner_lazy = () -> PartyType2Code.mmObject();
 		}
@@ -234,7 +236,7 @@ public class PartyType2Code extends PartyTypeCode {
 	 */
 	public static final MMCode mmContraClearingFirm = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ContraClearingFirm";
 			owner_lazy = () -> PartyType2Code.mmObject();
 		}
@@ -257,7 +259,7 @@ public class PartyType2Code extends PartyTypeCode {
 	 */
 	public static final MMCode mmUnderlyingContraFirm = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "UnderlyingContraFirm";
 			owner_lazy = () -> PartyType2Code.mmObject();
 		}
@@ -280,7 +282,7 @@ public class PartyType2Code extends PartyTypeCode {
 	 */
 	public static final MMCode mmGiveUpClearingFirm = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "GiveUpClearingFirm";
 			owner_lazy = () -> PartyType2Code.mmObject();
 		}
@@ -303,7 +305,7 @@ public class PartyType2Code extends PartyTypeCode {
 	 */
 	public static final MMCode mmOrderOriginationFirm = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "OrderOriginationFirm";
 			owner_lazy = () -> PartyType2Code.mmObject();
 		}
@@ -326,7 +328,7 @@ public class PartyType2Code extends PartyTypeCode {
 	 */
 	public static final MMCode mmSponsoringFirm = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SponsoringFirm";
 			owner_lazy = () -> PartyType2Code.mmObject();
 		}
@@ -349,7 +351,7 @@ public class PartyType2Code extends PartyTypeCode {
 	 */
 	public static final MMCode mmClearingfirm = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Clearingfirm";
 			owner_lazy = () -> PartyType2Code.mmObject();
 		}
@@ -372,7 +374,7 @@ public class PartyType2Code extends PartyTypeCode {
 	 */
 	public static final MMCode mmIntroducingFirm = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "IntroducingFirm";
 			owner_lazy = () -> PartyType2Code.mmObject();
 		}
@@ -395,7 +397,7 @@ public class PartyType2Code extends PartyTypeCode {
 	 */
 	public static final MMCode mmEnteringFirm = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "EnteringFirm";
 			owner_lazy = () -> PartyType2Code.mmObject();
 		}
@@ -418,7 +420,7 @@ public class PartyType2Code extends PartyTypeCode {
 	 */
 	public static final MMCode mmClient = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Client";
 			owner_lazy = () -> PartyType2Code.mmObject();
 		}
@@ -441,7 +443,7 @@ public class PartyType2Code extends PartyTypeCode {
 	 */
 	public static final MMCode mmStepInBroker = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "StepInBroker";
 			owner_lazy = () -> PartyType2Code.mmObject();
 		}
@@ -450,17 +452,14 @@ public class PartyType2Code extends PartyTypeCode {
 	static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
 				example = Arrays.asList("INVE");
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "PartyType2Code";
 				definition = "Specifies the type of party involved in the transaction.";
-				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.PartyType2Code.mmInvestor, com.tools20022.repository.codeset.PartyType2Code.mmExecutingFirm,
-						com.tools20022.repository.codeset.PartyType2Code.mmBrokerOfCredit, com.tools20022.repository.codeset.PartyType2Code.mmCorrespondentClearingFirm, com.tools20022.repository.codeset.PartyType2Code.mmContraFirm,
-						com.tools20022.repository.codeset.PartyType2Code.mmContraClearingFirm, com.tools20022.repository.codeset.PartyType2Code.mmUnderlyingContraFirm, com.tools20022.repository.codeset.PartyType2Code.mmGiveUpClearingFirm,
-						com.tools20022.repository.codeset.PartyType2Code.mmOrderOriginationFirm, com.tools20022.repository.codeset.PartyType2Code.mmSponsoringFirm, com.tools20022.repository.codeset.PartyType2Code.mmClearingfirm,
-						com.tools20022.repository.codeset.PartyType2Code.mmIntroducingFirm, com.tools20022.repository.codeset.PartyType2Code.mmEnteringFirm, com.tools20022.repository.codeset.PartyType2Code.mmClient,
-						com.tools20022.repository.codeset.PartyType2Code.mmStepInBroker);
+				code_lazy = () -> Arrays.asList(PartyType2Code.mmInvestor, PartyType2Code.mmExecutingFirm, PartyType2Code.mmBrokerOfCredit, PartyType2Code.mmCorrespondentClearingFirm, PartyType2Code.mmContraFirm,
+						PartyType2Code.mmContraClearingFirm, PartyType2Code.mmUnderlyingContraFirm, PartyType2Code.mmGiveUpClearingFirm, PartyType2Code.mmOrderOriginationFirm, PartyType2Code.mmSponsoringFirm, PartyType2Code.mmClearingfirm,
+						PartyType2Code.mmIntroducingFirm, PartyType2Code.mmEnteringFirm, PartyType2Code.mmClient, PartyType2Code.mmStepInBroker);
 				trace_lazy = () -> PartyTypeCode.mmObject();
 			}
 		});

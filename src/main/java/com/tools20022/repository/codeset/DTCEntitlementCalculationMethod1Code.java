@@ -19,7 +19,9 @@ package com.tools20022.repository.codeset;
 
 import com.tools20022.metamodel.MMCode;
 import com.tools20022.metamodel.MMCodeSet;
+import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.codeset.DTCEntitlementCalculationMethodCode;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -96,7 +98,7 @@ public class DTCEntitlementCalculationMethod1Code extends DTCEntitlementCalculat
 	 */
 	public static final MMCode mmStockRateFC15 = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "StockRateFC15";
 			owner_lazy = () -> DTCEntitlementCalculationMethod1Code.mmObject();
 		}
@@ -119,7 +121,7 @@ public class DTCEntitlementCalculationMethod1Code extends DTCEntitlementCalculat
 	 */
 	public static final MMCode mmCashRateFC17 = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CashRateFC17";
 			owner_lazy = () -> DTCEntitlementCalculationMethod1Code.mmObject();
 		}
@@ -142,7 +144,7 @@ public class DTCEntitlementCalculationMethod1Code extends DTCEntitlementCalculat
 	 */
 	public static final MMCode mmStockRateFC18 = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "StockRateFC18";
 			owner_lazy = () -> DTCEntitlementCalculationMethod1Code.mmObject();
 		}
@@ -165,7 +167,7 @@ public class DTCEntitlementCalculationMethod1Code extends DTCEntitlementCalculat
 	 */
 	public static final MMCode mmStockRateXCashRateFC19 = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "StockRateXCashRateFC19";
 			owner_lazy = () -> DTCEntitlementCalculationMethod1Code.mmObject();
 		}
@@ -188,7 +190,7 @@ public class DTCEntitlementCalculationMethod1Code extends DTCEntitlementCalculat
 	 */
 	public static final MMCode mmStockRateEnableBuyUpToNextWholeShareFC20 = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "StockRateEnableBuyUpToNextWholeShareFC20";
 			owner_lazy = () -> DTCEntitlementCalculationMethod1Code.mmObject();
 		}
@@ -211,7 +213,7 @@ public class DTCEntitlementCalculationMethod1Code extends DTCEntitlementCalculat
 	 */
 	public static final MMCode mmSharesXStock = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SharesXStock";
 			owner_lazy = () -> DTCEntitlementCalculationMethod1Code.mmObject();
 		}
@@ -220,14 +222,13 @@ public class DTCEntitlementCalculationMethod1Code extends DTCEntitlementCalculat
 	static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
 				example = Arrays.asList("SR15");
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "DTCEntitlementCalculationMethod1Code";
 				definition = "Specifies the type of calculation of entitlements.";
-				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.DTCEntitlementCalculationMethod1Code.mmStockRateFC15, com.tools20022.repository.codeset.DTCEntitlementCalculationMethod1Code.mmCashRateFC17,
-						com.tools20022.repository.codeset.DTCEntitlementCalculationMethod1Code.mmStockRateFC18, com.tools20022.repository.codeset.DTCEntitlementCalculationMethod1Code.mmStockRateXCashRateFC19,
-						com.tools20022.repository.codeset.DTCEntitlementCalculationMethod1Code.mmStockRateEnableBuyUpToNextWholeShareFC20, com.tools20022.repository.codeset.DTCEntitlementCalculationMethod1Code.mmSharesXStock);
+				code_lazy = () -> Arrays.asList(DTCEntitlementCalculationMethod1Code.mmStockRateFC15, DTCEntitlementCalculationMethod1Code.mmCashRateFC17, DTCEntitlementCalculationMethod1Code.mmStockRateFC18,
+						DTCEntitlementCalculationMethod1Code.mmStockRateXCashRateFC19, DTCEntitlementCalculationMethod1Code.mmStockRateEnableBuyUpToNextWholeShareFC20, DTCEntitlementCalculationMethod1Code.mmSharesXStock);
 				trace_lazy = () -> DTCEntitlementCalculationMethodCode.mmObject();
 			}
 		});

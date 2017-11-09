@@ -19,10 +19,13 @@ package com.tools20022.repository.choice;
 
 import com.tools20022.metamodel.MMChoiceComponent;
 import com.tools20022.metamodel.MMMessageAttribute;
+import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.codeset.CountryCode;
 import com.tools20022.repository.datatype.Max70Text;
 import com.tools20022.repository.datatype.YesNoIndicator;
+import com.tools20022.repository.entity.Goods;
 import com.tools20022.repository.entity.Product;
+import com.tools20022.repository.GeneratedRepository;
 import com.tools20022.repository.msg.Quantity4;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
@@ -134,14 +137,14 @@ public class CertifiedCharacteristics1Choice {
 	 */
 	public static final MMMessageAttribute mmOrigin = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Product.mmOrigin;
+			businessElementTrace_lazy = () -> Product.mmOrigin;
 			componentContext_lazy = () -> CertifiedCharacteristics1Choice.mmObject();
 			isDerived = false;
 			xmlTag = "Orgn";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Origin";
 			definition = "Country of origin of the goods, as proven by the certificate.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.choice.CertifiedCharacteristics2Choice.mmOrigin);
+			nextVersions_lazy = () -> Arrays.asList(CertifiedCharacteristics2Choice.mmOrigin);
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> CountryCode.mmObject();
@@ -190,14 +193,14 @@ public class CertifiedCharacteristics1Choice {
 	 */
 	public static final MMMessageAttribute mmQuality = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Product.mmQuality;
+			businessElementTrace_lazy = () -> Product.mmQuality;
 			componentContext_lazy = () -> CertifiedCharacteristics1Choice.mmObject();
 			isDerived = false;
 			xmlTag = "Qlty";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Quality";
 			definition = "Quality of the goods, as proven by the certificate.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.choice.CertifiedCharacteristics2Choice.mmQuality);
+			nextVersions_lazy = () -> Arrays.asList(CertifiedCharacteristics2Choice.mmQuality);
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> Max70Text.mmObject();
@@ -246,14 +249,14 @@ public class CertifiedCharacteristics1Choice {
 	 */
 	public static final MMMessageAttribute mmAnalysis = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Goods.mmAnalysis;
+			businessElementTrace_lazy = () -> Goods.mmAnalysis;
 			componentContext_lazy = () -> CertifiedCharacteristics1Choice.mmObject();
 			isDerived = false;
 			xmlTag = "Anlys";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Analysis";
 			definition = "Analysis of the goods, as proven by the certificate.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.choice.CertifiedCharacteristics2Choice.mmAnalysis);
+			nextVersions_lazy = () -> Arrays.asList(CertifiedCharacteristics2Choice.mmAnalysis);
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> Max70Text.mmObject();
@@ -302,14 +305,14 @@ public class CertifiedCharacteristics1Choice {
 	 */
 	public static final MMMessageAttribute mmWeight = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Product.mmQuantity;
+			businessElementTrace_lazy = () -> Product.mmQuantity;
 			componentContext_lazy = () -> CertifiedCharacteristics1Choice.mmObject();
 			isDerived = false;
 			xmlTag = "Wght";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Weight";
 			definition = "Weight of the goods, as proven by the certificate.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.choice.CertifiedCharacteristics2Choice.mmWeight);
+			nextVersions_lazy = () -> Arrays.asList(CertifiedCharacteristics2Choice.mmWeight);
 			maxOccurs = 1;
 			minOccurs = 1;
 			complexType_lazy = () -> Quantity4.mmObject();
@@ -358,14 +361,14 @@ public class CertifiedCharacteristics1Choice {
 	 */
 	public static final MMMessageAttribute mmQuantity = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Product.mmQuantity;
+			businessElementTrace_lazy = () -> Product.mmQuantity;
 			componentContext_lazy = () -> CertifiedCharacteristics1Choice.mmObject();
 			isDerived = false;
 			xmlTag = "Qty";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Quantity";
 			definition = "Quantity of the goods, as proven by the certificate.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.choice.CertifiedCharacteristics2Choice.mmQuantity);
+			nextVersions_lazy = () -> Arrays.asList(CertifiedCharacteristics2Choice.mmQuantity);
 			maxOccurs = 1;
 			minOccurs = 1;
 			complexType_lazy = () -> Quantity4.mmObject();
@@ -415,14 +418,14 @@ public class CertifiedCharacteristics1Choice {
 	 */
 	public static final MMMessageAttribute mmHealthIndication = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Goods.mmHealthCheck;
+			businessElementTrace_lazy = () -> Goods.mmHealthCheck;
 			componentContext_lazy = () -> CertifiedCharacteristics1Choice.mmObject();
 			isDerived = false;
 			xmlTag = "HlthIndctn";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "HealthIndication";
 			definition = "Indicates if the goods have passed the health check.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.choice.CertifiedCharacteristics2Choice.mmHealthIndication);
+			nextVersions_lazy = () -> Arrays.asList(CertifiedCharacteristics2Choice.mmHealthIndication);
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> YesNoIndicator.mmObject();
@@ -473,14 +476,14 @@ public class CertifiedCharacteristics1Choice {
 	 */
 	public static final MMMessageAttribute mmPhytosanitaryIndication = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Goods.mmPhytosanitaryInspection;
+			businessElementTrace_lazy = () -> Goods.mmPhytosanitaryInspection;
 			componentContext_lazy = () -> CertifiedCharacteristics1Choice.mmObject();
 			isDerived = false;
 			xmlTag = "PhytosntryIndctn";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PhytosanitaryIndication";
 			definition = "Indicates if the goods have passed the phytosanitary check.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.choice.CertifiedCharacteristics2Choice.mmPhytosanitaryIndication);
+			nextVersions_lazy = () -> Arrays.asList(CertifiedCharacteristics2Choice.mmPhytosanitaryIndication);
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> YesNoIndicator.mmObject();
@@ -490,13 +493,11 @@ public class CertifiedCharacteristics1Choice {
 	final static public MMChoiceComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMChoiceComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.choice.CertifiedCharacteristics1Choice.mmOrigin, com.tools20022.repository.choice.CertifiedCharacteristics1Choice.mmQuality,
-						com.tools20022.repository.choice.CertifiedCharacteristics1Choice.mmAnalysis, com.tools20022.repository.choice.CertifiedCharacteristics1Choice.mmWeight,
-						com.tools20022.repository.choice.CertifiedCharacteristics1Choice.mmQuantity, com.tools20022.repository.choice.CertifiedCharacteristics1Choice.mmHealthIndication,
-						com.tools20022.repository.choice.CertifiedCharacteristics1Choice.mmPhytosanitaryIndication);
+				messageElement_lazy = () -> Arrays.asList(CertifiedCharacteristics1Choice.mmOrigin, CertifiedCharacteristics1Choice.mmQuality, CertifiedCharacteristics1Choice.mmAnalysis, CertifiedCharacteristics1Choice.mmWeight,
+						CertifiedCharacteristics1Choice.mmQuantity, CertifiedCharacteristics1Choice.mmHealthIndication, CertifiedCharacteristics1Choice.mmPhytosanitaryIndication);
 				trace_lazy = () -> Product.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "CertifiedCharacteristics1Choice";
 				definition = "Characteristics of the goods that are certified, in the context of a commercial trade transaction.";
 				nextVersions_lazy = () -> Arrays.asList(CertifiedCharacteristics2Choice.mmObject());

@@ -19,7 +19,9 @@ package com.tools20022.repository.codeset;
 
 import com.tools20022.metamodel.MMCode;
 import com.tools20022.metamodel.MMCodeSet;
+import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.codeset.RateTypeCode;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -82,7 +84,7 @@ public class RateType3Code extends RateTypeCode {
 	 */
 	public static final MMCode mmImputed = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Imputed";
 			owner_lazy = () -> RateType3Code.mmObject();
 		}
@@ -105,7 +107,7 @@ public class RateType3Code extends RateTypeCode {
 	 */
 	public static final MMCode mmPrecompte = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Precompte";
 			owner_lazy = () -> RateType3Code.mmObject();
 		}
@@ -128,7 +130,7 @@ public class RateType3Code extends RateTypeCode {
 	 */
 	public static final MMCode mmOneTierTax = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "OneTierTax";
 			owner_lazy = () -> RateType3Code.mmObject();
 		}
@@ -137,12 +139,12 @@ public class RateType3Code extends RateTypeCode {
 	static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
 				example = Arrays.asList("IMPU");
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "RateType3Code";
 				definition = "Specifies the type of tax rate.";
-				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.RateType3Code.mmImputed, com.tools20022.repository.codeset.RateType3Code.mmPrecompte, com.tools20022.repository.codeset.RateType3Code.mmOneTierTax);
+				code_lazy = () -> Arrays.asList(RateType3Code.mmImputed, RateType3Code.mmPrecompte, RateType3Code.mmOneTierTax);
 				trace_lazy = () -> RateTypeCode.mmObject();
 			}
 		});

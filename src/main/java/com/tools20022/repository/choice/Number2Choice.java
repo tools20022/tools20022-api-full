@@ -19,7 +19,9 @@ package com.tools20022.repository.choice;
 
 import com.tools20022.metamodel.MMChoiceComponent;
 import com.tools20022.metamodel.MMMessageAttribute;
+import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.datatype.Exact3NumericText;
+import com.tools20022.repository.GeneratedRepository;
 import com.tools20022.repository.msg.GenericIdentification1;
 import java.text.DateFormat;
 import java.util.Arrays;
@@ -109,10 +111,10 @@ public class Number2Choice {
 			componentContext_lazy = () -> Number2Choice.mmObject();
 			isDerived = false;
 			xmlTag = "Shrt";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Short";
 			definition = "Number of maximum 3 numeric text.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.choice.Number22Choice.mmShort);
+			nextVersions_lazy = () -> Arrays.asList(Number22Choice.mmShort);
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> Exact3NumericText.mmObject();
@@ -162,10 +164,10 @@ public class Number2Choice {
 			componentContext_lazy = () -> Number2Choice.mmObject();
 			isDerived = false;
 			xmlTag = "Lng";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Long";
 			definition = "Number of maximum 35 text, with the possibility to provide an issuer for the number identification.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.choice.Number22Choice.mmLong);
+			nextVersions_lazy = () -> Arrays.asList(Number22Choice.mmLong);
 			maxOccurs = 1;
 			minOccurs = 1;
 			complexType_lazy = () -> GenericIdentification1.mmObject();
@@ -175,9 +177,9 @@ public class Number2Choice {
 	final static public MMChoiceComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMChoiceComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.choice.Number2Choice.mmShort, com.tools20022.repository.choice.Number2Choice.mmLong);
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.OBSOLETE;
+				messageElement_lazy = () -> Arrays.asList(Number2Choice.mmShort, Number2Choice.mmLong);
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.OBSOLETE;
 				removalDate = ((Supplier<Date>) (() -> {
 					try {
 						return DateFormat.getDateInstance(java.text.DateFormat.LONG).parse("May 5, 2016");

@@ -20,8 +20,11 @@ package com.tools20022.repository.choice;
 import com.tools20022.metamodel.MMChoiceComponent;
 import com.tools20022.metamodel.MMMessageAssociationEnd;
 import com.tools20022.metamodel.MMMessageAttribute;
+import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.codeset.OrderStatus4Code;
 import com.tools20022.repository.entity.SecuritiesOrderStatus;
+import com.tools20022.repository.entity.Status;
+import com.tools20022.repository.GeneratedRepository;
 import com.tools20022.repository.msg.CancelledStatusReason16;
 import com.tools20022.repository.msg.PartiallySettledStatus10;
 import com.tools20022.repository.msg.RejectedStatus9;
@@ -122,14 +125,14 @@ public class OrderStatus4Choice {
 	 */
 	public static final MMMessageAttribute mmStatus = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.SecuritiesOrderStatus.mmOrderStatus;
+			businessElementTrace_lazy = () -> SecuritiesOrderStatus.mmOrderStatus;
 			componentContext_lazy = () -> OrderStatus4Choice.mmObject();
 			isDerived = false;
 			xmlTag = "Sts";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Status";
 			definition = "Status of the switch order is accepted or already executed or sent to next party or received. There is no reason attached.";
-			previousVersion_lazy = () -> com.tools20022.repository.choice.OrderStatus5Choice.mmStatus;
+			previousVersion_lazy = () -> OrderStatus5Choice.mmStatus;
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> OrderStatus4Code.mmObject();
@@ -179,14 +182,14 @@ public class OrderStatus4Choice {
 	 */
 	public static final MMMessageAssociationEnd mmCancelled = new MMMessageAssociationEnd() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Status.mmStatusReason;
+			businessElementTrace_lazy = () -> Status.mmStatusReason;
 			componentContext_lazy = () -> OrderStatus4Choice.mmObject();
 			isDerived = false;
 			xmlTag = "Canc";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Cancelled";
 			definition = "Status of the switch order is cancelled. This status is used for an order that has been accepted or that has been entered in an order book but that can not be executed.";
-			previousVersion_lazy = () -> com.tools20022.repository.choice.OrderStatus5Choice.mmCancelled;
+			previousVersion_lazy = () -> OrderStatus5Choice.mmCancelled;
 			maxOccurs = 1;
 			minOccurs = 1;
 			isComposite = true;
@@ -233,14 +236,14 @@ public class OrderStatus4Choice {
 	 */
 	public static final MMMessageAssociationEnd mmConditionallyAccepted = new MMMessageAssociationEnd() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.SecuritiesOrderStatus.mmConditionallyAcceptedStatus;
+			businessElementTrace_lazy = () -> SecuritiesOrderStatus.mmConditionallyAcceptedStatus;
 			componentContext_lazy = () -> OrderStatus4Choice.mmObject();
 			isDerived = false;
 			xmlTag = "CondlyAccptd";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ConditionallyAccepted";
 			definition = "Status of the switch order is conditionally accepted.";
-			previousVersion_lazy = () -> com.tools20022.repository.choice.OrderStatus5Choice.mmConditionallyAccepted;
+			previousVersion_lazy = () -> OrderStatus5Choice.mmConditionallyAccepted;
 			maxOccurs = 1;
 			minOccurs = 1;
 			isComposite = true;
@@ -290,10 +293,10 @@ public class OrderStatus4Choice {
 			componentContext_lazy = () -> OrderStatus4Choice.mmObject();
 			isDerived = false;
 			xmlTag = "Rjctd";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Rejected";
 			definition = "Status of the switch order is rejected.";
-			previousVersion_lazy = () -> com.tools20022.repository.choice.OrderStatus5Choice.mmRejected;
+			previousVersion_lazy = () -> OrderStatus5Choice.mmRejected;
 			maxOccurs = 10;
 			minOccurs = 1;
 			isComposite = true;
@@ -340,14 +343,14 @@ public class OrderStatus4Choice {
 	 */
 	public static final MMMessageAssociationEnd mmSuspended = new MMMessageAssociationEnd() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.SecuritiesOrderStatus.mmSuspendedStatusReason;
+			businessElementTrace_lazy = () -> SecuritiesOrderStatus.mmSuspendedStatusReason;
 			componentContext_lazy = () -> OrderStatus4Choice.mmObject();
 			isDerived = false;
 			xmlTag = "Sspd";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Suspended";
 			definition = "Status of the switch order is suspended.";
-			previousVersion_lazy = () -> com.tools20022.repository.choice.OrderStatus5Choice.mmSuspended;
+			previousVersion_lazy = () -> OrderStatus5Choice.mmSuspended;
 			maxOccurs = 1;
 			minOccurs = 1;
 			isComposite = true;
@@ -394,14 +397,14 @@ public class OrderStatus4Choice {
 	 */
 	public static final MMMessageAssociationEnd mmInRepair = new MMMessageAssociationEnd() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Status.mmStatusReason;
+			businessElementTrace_lazy = () -> Status.mmStatusReason;
 			componentContext_lazy = () -> OrderStatus4Choice.mmObject();
 			isDerived = false;
 			xmlTag = "InRpr";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "InRepair";
 			definition = "Status of the switch order is in repair.";
-			previousVersion_lazy = () -> com.tools20022.repository.choice.OrderStatus5Choice.mmInRepair;
+			previousVersion_lazy = () -> OrderStatus5Choice.mmInRepair;
 			maxOccurs = 1;
 			minOccurs = 1;
 			isComposite = true;
@@ -448,14 +451,14 @@ public class OrderStatus4Choice {
 	 */
 	public static final MMMessageAssociationEnd mmPartiallySettled = new MMMessageAssociationEnd() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.SecuritiesOrderStatus.mmPartiallySettledStatusReason;
+			businessElementTrace_lazy = () -> SecuritiesOrderStatus.mmPartiallySettledStatusReason;
 			componentContext_lazy = () -> OrderStatus4Choice.mmObject();
 			isDerived = false;
 			xmlTag = "PrtlySttld";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PartiallySettled";
 			definition = "Status of the switch order is partially settled.";
-			previousVersion_lazy = () -> com.tools20022.repository.choice.OrderStatus5Choice.mmPartiallySettled;
+			previousVersion_lazy = () -> OrderStatus5Choice.mmPartiallySettled;
 			maxOccurs = 1;
 			minOccurs = 1;
 			isComposite = true;
@@ -466,11 +469,10 @@ public class OrderStatus4Choice {
 	final static public MMChoiceComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMChoiceComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.choice.OrderStatus4Choice.mmStatus, com.tools20022.repository.choice.OrderStatus4Choice.mmCancelled,
-						com.tools20022.repository.choice.OrderStatus4Choice.mmConditionallyAccepted, com.tools20022.repository.choice.OrderStatus4Choice.mmRejected, com.tools20022.repository.choice.OrderStatus4Choice.mmSuspended,
-						com.tools20022.repository.choice.OrderStatus4Choice.mmInRepair, com.tools20022.repository.choice.OrderStatus4Choice.mmPartiallySettled);
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				messageElement_lazy = () -> Arrays.asList(OrderStatus4Choice.mmStatus, OrderStatus4Choice.mmCancelled, OrderStatus4Choice.mmConditionallyAccepted, OrderStatus4Choice.mmRejected, OrderStatus4Choice.mmSuspended,
+						OrderStatus4Choice.mmInRepair, OrderStatus4Choice.mmPartiallySettled);
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "OrderStatus4Choice";
 				definition = "Choice of status for an order.";
 			}

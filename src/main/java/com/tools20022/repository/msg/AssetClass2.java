@@ -19,8 +19,10 @@ package com.tools20022.repository.msg;
 
 import com.tools20022.metamodel.MMMessageAssociationEnd;
 import com.tools20022.metamodel.MMMessageComponent;
+import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.entity.AssetClassification;
 import com.tools20022.repository.entity.Derivative;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -104,7 +106,7 @@ public class AssetClass2 {
 			componentContext_lazy = () -> AssetClass2.mmObject();
 			isDerived = false;
 			xmlTag = "Cmmdty";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Commodity";
 			definition = "The fields in this section should only be populated for instruments that have non-financial instrument of type commodity as underlying.";
 			maxOccurs = 1;
@@ -152,7 +154,7 @@ public class AssetClass2 {
 			componentContext_lazy = () -> AssetClass2.mmObject();
 			isDerived = false;
 			xmlTag = "Intrst";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Interest";
 			definition = "The fields in this section should only be populated for instruments that have non-financial instrument of type interest rates as underlying.";
 			maxOccurs = 1;
@@ -201,7 +203,7 @@ public class AssetClass2 {
 			componentContext_lazy = () -> AssetClass2.mmObject();
 			isDerived = false;
 			xmlTag = "FX";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ForeignExchange";
 			definition = "The fields in this section should only be populated for instruments that have non-financial instrument of type foreign exchange as underlying.";
 			maxOccurs = 1;
@@ -214,10 +216,10 @@ public class AssetClass2 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.AssetClass2.mmCommodity, com.tools20022.repository.msg.AssetClass2.mmInterest, com.tools20022.repository.msg.AssetClass2.mmForeignExchange);
+				messageElement_lazy = () -> Arrays.asList(AssetClass2.mmCommodity, AssetClass2.mmInterest, AssetClass2.mmForeignExchange);
 				trace_lazy = () -> AssetClassification.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "AssetClass2";
 				definition = "Structure for defining asset class specific details of a derivative to be declared.";
 			}

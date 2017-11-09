@@ -20,10 +20,10 @@ package com.tools20022.repository.msg;
 import com.tools20022.metamodel.MMMessageAssociationEnd;
 import com.tools20022.metamodel.MMMessageAttribute;
 import com.tools20022.metamodel.MMMessageComponent;
-import com.tools20022.repository.entity.BeneficialOwner;
-import com.tools20022.repository.entity.PartyIdentificationInformation;
-import com.tools20022.repository.entity.SecuritiesAccount;
-import com.tools20022.repository.entity.SecuritiesBalance;
+import com.tools20022.metamodel.MMRegistrationStatus;
+import com.tools20022.repository.area.semt.SecuritiesBalanceTransparencyReportV02;
+import com.tools20022.repository.entity.*;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.List;
@@ -140,10 +140,10 @@ public class SafekeepingAccount7 {
 			componentContext_lazy = () -> SafekeepingAccount7.mmObject();
 			isDerived = false;
 			xmlTag = "AcctId";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AccountIdentification";
 			definition = "Unique and unambiguous identification for the account between the account owner and the account servicer.";
-			previousVersion_lazy = () -> com.tools20022.repository.msg.SafekeepingAccount5.mmAccountIdentification;
+			previousVersion_lazy = () -> SafekeepingAccount5.mmAccountIdentification;
 			maxOccurs = 1;
 			minOccurs = 1;
 			isComposite = true;
@@ -191,14 +191,14 @@ public class SafekeepingAccount7 {
 	 */
 	public static final MMMessageAttribute mmAccountOwner = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Party.mmIdentification;
+			businessElementTrace_lazy = () -> Party.mmIdentification;
 			componentContext_lazy = () -> SafekeepingAccount7.mmObject();
 			isDerived = false;
 			xmlTag = "AcctOwnr";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AccountOwner";
 			definition = "Party that legally owns the account.";
-			previousVersion_lazy = () -> com.tools20022.repository.msg.SafekeepingAccount5.mmAccountOwner;
+			previousVersion_lazy = () -> SafekeepingAccount5.mmAccountOwner;
 			maxOccurs = 1;
 			minOccurs = 1;
 			complexType_lazy = () -> com.tools20022.repository.msg.PartyIdentification100.mmObject();
@@ -254,10 +254,10 @@ public class SafekeepingAccount7 {
 			componentContext_lazy = () -> SafekeepingAccount7.mmObject();
 			isDerived = false;
 			xmlTag = "AcctSvcr";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AccountServicer";
 			definition = "Party that manages the account on behalf of the account owner, that is manages the registration and booking of entries on the account, calculates balances on the account and provides information about the account.";
-			previousVersion_lazy = () -> com.tools20022.repository.msg.SafekeepingAccount5.mmAccountServicer;
+			previousVersion_lazy = () -> SafekeepingAccount5.mmAccountServicer;
 			maxOccurs = 1;
 			minOccurs = 1;
 			complexType_lazy = () -> com.tools20022.repository.msg.PartyIdentification100.mmObject();
@@ -310,10 +310,10 @@ public class SafekeepingAccount7 {
 			componentContext_lazy = () -> SafekeepingAccount7.mmObject();
 			isDerived = false;
 			xmlTag = "BnfclOwnr";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "BeneficialOwner";
 			definition = "Individual or entity that is ultimately entitled to the benefit of income and rights in a financial instrument, as opposed to a nominal or legal owner.";
-			previousVersion_lazy = () -> com.tools20022.repository.msg.SafekeepingAccount5.mmBeneficialOwner;
+			previousVersion_lazy = () -> SafekeepingAccount5.mmBeneficialOwner;
 			minOccurs = 0;
 			isComposite = true;
 			type_lazy = () -> com.tools20022.repository.msg.BeneficialOwner2.mmObject();
@@ -362,7 +362,7 @@ public class SafekeepingAccount7 {
 			componentContext_lazy = () -> SafekeepingAccount7.mmObject();
 			isDerived = false;
 			xmlTag = "BalDtls";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "BalanceDetails";
 			definition = "Report on the net position of a financial instrument on the account,  for a certain date. The agent, for example, a trade intermediary, may also be specified.";
 			minOccurs = 0;
@@ -413,10 +413,10 @@ public class SafekeepingAccount7 {
 			componentContext_lazy = () -> SafekeepingAccount7.mmObject();
 			isDerived = false;
 			xmlTag = "AcctSubLvl1";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AccountSubLevel1";
 			definition = "Holdings of level 1.";
-			previousVersion_lazy = () -> com.tools20022.repository.msg.SafekeepingAccount5.mmAccountSubLevel1;
+			previousVersion_lazy = () -> SafekeepingAccount5.mmAccountSubLevel1;
 			minOccurs = 0;
 			isComposite = true;
 			type_lazy = () -> com.tools20022.repository.msg.AccountSubLevel11.mmObject();
@@ -469,10 +469,10 @@ public class SafekeepingAccount7 {
 			componentContext_lazy = () -> SafekeepingAccount7.mmObject();
 			isDerived = false;
 			xmlTag = "AcctSubLvl1Diff";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AccountSubLevel1Difference";
 			definition = "Difference in holdings between the safekeeping account and the sub-accounts of level 1.";
-			previousVersion_lazy = () -> com.tools20022.repository.msg.SafekeepingAccount5.mmAccountSubLevel1Difference;
+			previousVersion_lazy = () -> SafekeepingAccount5.mmAccountSubLevel1Difference;
 			minOccurs = 0;
 			isComposite = true;
 			type_lazy = () -> com.tools20022.repository.msg.AggregateHoldingBalance2.mmObject();
@@ -482,13 +482,12 @@ public class SafekeepingAccount7 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.SafekeepingAccount7.mmAccountIdentification, com.tools20022.repository.msg.SafekeepingAccount7.mmAccountOwner,
-						com.tools20022.repository.msg.SafekeepingAccount7.mmAccountServicer, com.tools20022.repository.msg.SafekeepingAccount7.mmBeneficialOwner, com.tools20022.repository.msg.SafekeepingAccount7.mmBalanceDetails,
-						com.tools20022.repository.msg.SafekeepingAccount7.mmAccountSubLevel1, com.tools20022.repository.msg.SafekeepingAccount7.mmAccountSubLevel1Difference);
-				messageBuildingBlock_lazy = () -> Arrays.asList(com.tools20022.repository.area.semt.SecuritiesBalanceTransparencyReportV02.mmSafekeepingAccountAndHoldings);
+				messageElement_lazy = () -> Arrays.asList(SafekeepingAccount7.mmAccountIdentification, SafekeepingAccount7.mmAccountOwner, SafekeepingAccount7.mmAccountServicer, SafekeepingAccount7.mmBeneficialOwner,
+						SafekeepingAccount7.mmBalanceDetails, SafekeepingAccount7.mmAccountSubLevel1, SafekeepingAccount7.mmAccountSubLevel1Difference);
+				messageBuildingBlock_lazy = () -> Arrays.asList(SecuritiesBalanceTransparencyReportV02.mmSafekeepingAccountAndHoldings);
 				trace_lazy = () -> SecuritiesAccount.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "SafekeepingAccount7";
 				definition = "Account on which a securities entry is made.";
 				previousVersion_lazy = () -> SafekeepingAccount5.mmObject();

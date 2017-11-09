@@ -20,8 +20,10 @@ package com.tools20022.repository.msg;
 import com.tools20022.metamodel.MMMessageAssociationEnd;
 import com.tools20022.metamodel.MMMessageAttribute;
 import com.tools20022.metamodel.MMMessageComponent;
+import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.datatype.Max10000Binary;
 import com.tools20022.repository.datatype.Max35Text;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -106,10 +108,10 @@ public class ATMTransaction9 {
 			componentContext_lazy = () -> ATMTransaction9.mmObject();
 			isDerived = false;
 			xmlTag = "TxId";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "TransactionIdentification";
 			definition = "Identification of the transaction assigned by the ATM.";
-			previousVersion_lazy = () -> com.tools20022.repository.msg.ATMTransaction6.mmTransactionIdentification;
+			previousVersion_lazy = () -> ATMTransaction6.mmTransactionIdentification;
 			maxOccurs = 1;
 			minOccurs = 1;
 			isComposite = true;
@@ -151,7 +153,7 @@ public class ATMTransaction9 {
 			componentContext_lazy = () -> ATMTransaction9.mmObject();
 			isDerived = false;
 			xmlTag = "RcncltnId";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ReconciliationIdentification";
 			definition = "Identification of the reconciliation period assigned by the ATM manager.";
 			maxOccurs = 1;
@@ -192,7 +194,7 @@ public class ATMTransaction9 {
 			componentContext_lazy = () -> ATMTransaction9.mmObject();
 			isDerived = false;
 			xmlTag = "CrdhldrNewPIN";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CardholderNewPIN";
 			definition = "Encrypted personal identification number (PIN) and related information.";
 			maxOccurs = 1;
@@ -244,10 +246,10 @@ public class ATMTransaction9 {
 			componentContext_lazy = () -> ATMTransaction9.mmObject();
 			isDerived = false;
 			xmlTag = "ICCRltdData";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ICCRelatedData";
 			definition = "Sequence of one or more TLV data elements from the ATM application, in accordance with ISO 7816-6, not in a specific order. Present if the transaction is performed with an EMV chip card application.";
-			previousVersion_lazy = () -> com.tools20022.repository.msg.ATMTransaction6.mmICCRelatedData;
+			previousVersion_lazy = () -> ATMTransaction6.mmICCRelatedData;
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> Max10000Binary.mmObject();
@@ -257,10 +259,9 @@ public class ATMTransaction9 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.ATMTransaction9.mmTransactionIdentification, com.tools20022.repository.msg.ATMTransaction9.mmReconciliationIdentification,
-						com.tools20022.repository.msg.ATMTransaction9.mmCardholderNewPIN, com.tools20022.repository.msg.ATMTransaction9.mmICCRelatedData);
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				messageElement_lazy = () -> Arrays.asList(ATMTransaction9.mmTransactionIdentification, ATMTransaction9.mmReconciliationIdentification, ATMTransaction9.mmCardholderNewPIN, ATMTransaction9.mmICCRelatedData);
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "ATMTransaction9";
 				definition = "Transaction for which the service is requested.";
 				previousVersion_lazy = () -> ATMTransaction6.mmObject();

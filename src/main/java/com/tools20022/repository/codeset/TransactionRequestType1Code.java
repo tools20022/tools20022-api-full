@@ -19,7 +19,9 @@ package com.tools20022.repository.codeset;
 
 import com.tools20022.metamodel.MMCode;
 import com.tools20022.metamodel.MMCodeSet;
+import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.codeset.TransactionRequestTypeCode;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -84,7 +86,7 @@ public class TransactionRequestType1Code extends TransactionRequestTypeCode {
 	 */
 	public static final MMCode mmDateTimeTransaction = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "DateTimeTransaction";
 			owner_lazy = () -> TransactionRequestType1Code.mmObject();
 		}
@@ -107,7 +109,7 @@ public class TransactionRequestType1Code extends TransactionRequestTypeCode {
 	 */
 	public static final MMCode mmOriginalReceipt = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "OriginalReceipt";
 			owner_lazy = () -> TransactionRequestType1Code.mmObject();
 		}
@@ -116,12 +118,12 @@ public class TransactionRequestType1Code extends TransactionRequestTypeCode {
 	static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
 				example = Arrays.asList("DTTX");
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "TransactionRequestType1Code";
 				definition = "Specifies the type of information request related to a transaction number.";
-				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.TransactionRequestType1Code.mmDateTimeTransaction, com.tools20022.repository.codeset.TransactionRequestType1Code.mmOriginalReceipt);
+				code_lazy = () -> Arrays.asList(TransactionRequestType1Code.mmDateTimeTransaction, TransactionRequestType1Code.mmOriginalReceipt);
 				trace_lazy = () -> TransactionRequestTypeCode.mmObject();
 			}
 		});

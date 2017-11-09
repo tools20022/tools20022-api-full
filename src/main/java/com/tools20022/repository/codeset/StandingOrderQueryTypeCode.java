@@ -19,6 +19,8 @@ package com.tools20022.repository.codeset;
 
 import com.tools20022.metamodel.MMCode;
 import com.tools20022.metamodel.MMCodeSet;
+import com.tools20022.metamodel.MMRegistrationStatus;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -28,6 +30,14 @@ import java.util.concurrent.atomic.AtomicReference;
  * <p>
  * <strong>Constant fields:</strong>
  * <ul>
+ * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getDerivation derivation}
+ * =
+ * <ul>
+ * <li>
+ * {@linkplain com.tools20022.repository.codeset.StandingOrderQueryType1Code
+ * StandingOrderQueryType1Code}</li>
+ * </ul>
+ * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getCode code} =
  * <ul>
  * <li>
@@ -45,14 +55,6 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>
  * {@linkplain com.tools20022.repository.codeset.StandingOrderQueryTypeCode#mmStandingOrderDetailsWithinLinkSet
  * StandingOrderQueryTypeCode.mmStandingOrderDetailsWithinLinkSet}</li>
- * </ul>
- * </li>
- * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getDerivation derivation}
- * =
- * <ul>
- * <li>
- * {@linkplain com.tools20022.repository.codeset.StandingOrderQueryType1Code
- * StandingOrderQueryType1Code}</li>
  * </ul>
  * </li>
  * <li>
@@ -107,7 +109,7 @@ public class StandingOrderQueryTypeCode {
 	 */
 	public static final MMCode mmStandingOrderList = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "StandingOrderList";
 			definition = "Used to query the list of liquidity transfer standing orders defined in the system.";
 			owner_lazy = () -> StandingOrderQueryTypeCode.mmObject();
@@ -140,7 +142,7 @@ public class StandingOrderQueryTypeCode {
 	 */
 	public static final MMCode mmStandingOrderDetails = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "StandingOrderDetails";
 			definition = "Used to query a specific liquidity transfer standing order based on a set of search criteria.";
 			owner_lazy = () -> StandingOrderQueryTypeCode.mmObject();
@@ -173,7 +175,7 @@ public class StandingOrderQueryTypeCode {
 	 */
 	public static final MMCode mmTotalAmountPerStandingOrder = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "TotalAmountPerStandingOrder";
 			definition = "Used to query the total amounts of predefined and user defined liquidity transfer standing orders for both defined and not yet executed orders.";
 			owner_lazy = () -> StandingOrderQueryTypeCode.mmObject();
@@ -207,7 +209,7 @@ public class StandingOrderQueryTypeCode {
 	 */
 	public static final MMCode mmStandingOrderLinkSetList = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "StandingOrderLinkSetList";
 			definition = "Used to query the list of liquidity transfer standing orders defined in a specific link set of sequenced standing orders. The link set is a collection of standing order defined in a specific sequence.";
 			owner_lazy = () -> StandingOrderQueryTypeCode.mmObject();
@@ -241,7 +243,7 @@ public class StandingOrderQueryTypeCode {
 	 */
 	public static final MMCode mmStandingOrderDetailsWithinLinkSet = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "StandingOrderDetailsWithinLinkSet";
 			definition = "Used to query a specific standing order within a link set of sequenced liquidity transfer standing orders. The link set is a collection of standing order defined in a specific sequence.";
 			owner_lazy = () -> StandingOrderQueryTypeCode.mmObject();
@@ -252,14 +254,13 @@ public class StandingOrderQueryTypeCode {
 	static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
 				example = Arrays.asList("SLST");
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "StandingOrderQueryTypeCode";
 				definition = "Defines the query type for standing orders queries, that identifies the predefined key attributes expected in the response to the query.";
-				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.StandingOrderQueryTypeCode.mmStandingOrderList, com.tools20022.repository.codeset.StandingOrderQueryTypeCode.mmStandingOrderDetails,
-						com.tools20022.repository.codeset.StandingOrderQueryTypeCode.mmTotalAmountPerStandingOrder, com.tools20022.repository.codeset.StandingOrderQueryTypeCode.mmStandingOrderLinkSetList,
-						com.tools20022.repository.codeset.StandingOrderQueryTypeCode.mmStandingOrderDetailsWithinLinkSet);
+				code_lazy = () -> Arrays.asList(StandingOrderQueryTypeCode.mmStandingOrderList, StandingOrderQueryTypeCode.mmStandingOrderDetails, StandingOrderQueryTypeCode.mmTotalAmountPerStandingOrder,
+						StandingOrderQueryTypeCode.mmStandingOrderLinkSetList, StandingOrderQueryTypeCode.mmStandingOrderDetailsWithinLinkSet);
 				derivation_lazy = () -> Arrays.asList(StandingOrderQueryType1Code.mmObject());
 			}
 		});

@@ -20,6 +20,7 @@ package com.tools20022.repository.area.sese;
 import com.tools20022.metamodel.MMMessageBuildingBlock;
 import com.tools20022.metamodel.MMMessageDefinition;
 import com.tools20022.metamodel.MMMessageDefinitionIdentifier;
+import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.area.SecuritiesSettlementPreviousVersion;
 import com.tools20022.repository.datatype.Max35Text;
 import com.tools20022.repository.msg.*;
@@ -45,6 +46,9 @@ import java.util.List;
  * <p>
  * <strong>Constant fields:</strong>
  * <ul>
+ * <li>
+ * {@linkplain com.tools20022.metamodel.MMMessageDefinition#getMessageDefinitionIdentifier
+ * messageDefinitionIdentifier} = {@code sese.005.001.06}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMMessageDefinition#getBusinessArea
  * businessArea} =
  * {@linkplain com.tools20022.repository.area.SecuritiesSettlementPreviousVersion
@@ -101,9 +105,6 @@ import java.util.List;
  * TransferInInstructionV06.mmExtension}</li>
  * </ul>
  * </li>
- * <li>
- * {@linkplain com.tools20022.metamodel.MMMessageDefinition#getMessageDefinitionIdentifier
- * messageDefinitionIdentifier} = {@code sese.005.001.06}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -173,11 +174,11 @@ public class TransferInInstructionV06 {
 	public static final MMMessageBuildingBlock mmMessageIdentification = new MMMessageBuildingBlock() {
 		{
 			xmlTag = "MsgId";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "MessageIdentification";
 			definition = "Reference that uniquely identifies a message from a business application standpoint.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.area.sese.TransferInInstructionV07.mmMessageIdentification);
-			previousVersion_lazy = () -> com.tools20022.repository.area.sese.TransferInInstructionV05.mmMessageIdentification;
+			nextVersions_lazy = () -> Arrays.asList(TransferInInstructionV07.mmMessageIdentification);
+			previousVersion_lazy = () -> TransferInInstructionV05.mmMessageIdentification;
 			maxOccurs = 1;
 			minOccurs = 1;
 			complexType_lazy = () -> MessageIdentification1.mmObject();
@@ -223,11 +224,11 @@ public class TransferInInstructionV06 {
 	public static final MMMessageBuildingBlock mmPoolReference = new MMMessageBuildingBlock() {
 		{
 			xmlTag = "PoolRef";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PoolReference";
 			definition = "Collective reference identifying a set of messages.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.area.sese.TransferInInstructionV07.mmPoolReference);
-			previousVersion_lazy = () -> com.tools20022.repository.area.sese.TransferInInstructionV05.mmPoolReference;
+			nextVersions_lazy = () -> Arrays.asList(TransferInInstructionV07.mmPoolReference);
+			previousVersion_lazy = () -> TransferInInstructionV05.mmPoolReference;
 			maxOccurs = 1;
 			minOccurs = 0;
 			complexType_lazy = () -> AdditionalReference2.mmObject();
@@ -274,11 +275,11 @@ public class TransferInInstructionV06 {
 	public static final MMMessageBuildingBlock mmPreviousReference = new MMMessageBuildingBlock() {
 		{
 			xmlTag = "PrvsRef";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PreviousReference";
 			definition = "Reference of the linked message that was previously sent.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.area.sese.TransferInInstructionV07.mmPreviousReference);
-			previousVersion_lazy = () -> com.tools20022.repository.area.sese.TransferInInstructionV05.mmPreviousReference;
+			nextVersions_lazy = () -> Arrays.asList(TransferInInstructionV07.mmPreviousReference);
+			previousVersion_lazy = () -> TransferInInstructionV05.mmPreviousReference;
 			maxOccurs = 1;
 			minOccurs = 0;
 			complexType_lazy = () -> AdditionalReference2.mmObject();
@@ -325,11 +326,11 @@ public class TransferInInstructionV06 {
 	public static final MMMessageBuildingBlock mmRelatedReference = new MMMessageBuildingBlock() {
 		{
 			xmlTag = "RltdRef";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "RelatedReference";
 			definition = "Reference to a linked message that was previously received.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.area.sese.TransferInInstructionV07.mmRelatedReference);
-			previousVersion_lazy = () -> com.tools20022.repository.area.sese.TransferInInstructionV05.mmRelatedReference;
+			nextVersions_lazy = () -> Arrays.asList(TransferInInstructionV07.mmRelatedReference);
+			previousVersion_lazy = () -> TransferInInstructionV05.mmRelatedReference;
 			maxOccurs = 1;
 			minOccurs = 0;
 			complexType_lazy = () -> AdditionalReference2.mmObject();
@@ -378,11 +379,11 @@ public class TransferInInstructionV06 {
 	public static final MMMessageBuildingBlock mmMasterReference = new MMMessageBuildingBlock() {
 		{
 			xmlTag = "MstrRef";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "MasterReference";
 			definition = "Unique and unambiguous identifier for a group of individual transfers as assigned by the instructing party. This identifier links the individual transfers together.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.area.sese.TransferInInstructionV07.mmMasterReference);
-			previousVersion_lazy = () -> com.tools20022.repository.area.sese.TransferInInstructionV05.mmMasterReference;
+			nextVersions_lazy = () -> Arrays.asList(TransferInInstructionV07.mmMasterReference);
+			previousVersion_lazy = () -> TransferInInstructionV05.mmMasterReference;
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> Max35Text.mmObject();
@@ -429,11 +430,11 @@ public class TransferInInstructionV06 {
 	public static final MMMessageBuildingBlock mmTransferDetails = new MMMessageBuildingBlock() {
 		{
 			xmlTag = "TrfDtls";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "TransferDetails";
 			definition = "General information related to the transfer of a financial instrument. ";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.area.sese.TransferInInstructionV07.mmTransferDetails);
-			previousVersion_lazy = () -> com.tools20022.repository.area.sese.TransferInInstructionV05.mmTransferDetails;
+			nextVersions_lazy = () -> Arrays.asList(TransferInInstructionV07.mmTransferDetails);
+			previousVersion_lazy = () -> TransferInInstructionV05.mmTransferDetails;
 			minOccurs = 1;
 			complexType_lazy = () -> Transfer21.mmObject();
 		}
@@ -481,11 +482,11 @@ public class TransferInInstructionV06 {
 	public static final MMMessageBuildingBlock mmAccountDetails = new MMMessageBuildingBlock() {
 		{
 			xmlTag = "AcctDtls";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AccountDetails";
 			definition = "Information related to the account into which the financial instrument is to be received.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.area.sese.TransferInInstructionV07.mmAccountDetails);
-			previousVersion_lazy = () -> com.tools20022.repository.area.sese.TransferInInstructionV05.mmAccountDetails;
+			nextVersions_lazy = () -> Arrays.asList(TransferInInstructionV07.mmAccountDetails);
+			previousVersion_lazy = () -> TransferInInstructionV05.mmAccountDetails;
 			maxOccurs = 1;
 			minOccurs = 1;
 			complexType_lazy = () -> InvestmentAccount40.mmObject();
@@ -532,11 +533,11 @@ public class TransferInInstructionV06 {
 	public static final MMMessageBuildingBlock mmSettlementDetails = new MMMessageBuildingBlock() {
 		{
 			xmlTag = "SttlmDtls";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SettlementDetails";
 			definition = "Information related to the delivering side of the transfer.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.area.sese.TransferInInstructionV07.mmSettlementDetails);
-			previousVersion_lazy = () -> com.tools20022.repository.area.sese.TransferInInstructionV05.mmSettlementDetails;
+			nextVersions_lazy = () -> Arrays.asList(TransferInInstructionV07.mmSettlementDetails);
+			previousVersion_lazy = () -> TransferInInstructionV05.mmSettlementDetails;
 			maxOccurs = 1;
 			minOccurs = 0;
 			complexType_lazy = () -> DeliverInformation15.mmObject();
@@ -583,11 +584,11 @@ public class TransferInInstructionV06 {
 	public static final MMMessageBuildingBlock mmMarketPracticeVersion = new MMMessageBuildingBlock() {
 		{
 			xmlTag = "MktPrctcVrsn";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "MarketPracticeVersion";
 			definition = "Identifies the market practice to which the message conforms.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.area.sese.TransferInInstructionV07.mmMarketPracticeVersion);
-			previousVersion_lazy = () -> com.tools20022.repository.area.sese.TransferInInstructionV05.mmMarketPracticeVersion;
+			nextVersions_lazy = () -> Arrays.asList(TransferInInstructionV07.mmMarketPracticeVersion);
+			previousVersion_lazy = () -> TransferInInstructionV05.mmMarketPracticeVersion;
 			maxOccurs = 1;
 			minOccurs = 0;
 			complexType_lazy = () -> MarketPracticeVersion1.mmObject();
@@ -634,11 +635,11 @@ public class TransferInInstructionV06 {
 	public static final MMMessageBuildingBlock mmCopyDetails = new MMMessageBuildingBlock() {
 		{
 			xmlTag = "CpyDtls";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CopyDetails";
 			definition = "Information provided when the message is a copy of a previous message.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.area.sese.TransferInInstructionV07.mmCopyDetails);
-			previousVersion_lazy = () -> com.tools20022.repository.area.sese.TransferInInstructionV05.mmCopyDetails;
+			nextVersions_lazy = () -> Arrays.asList(TransferInInstructionV07.mmCopyDetails);
+			previousVersion_lazy = () -> TransferInInstructionV05.mmCopyDetails;
 			maxOccurs = 1;
 			minOccurs = 0;
 			complexType_lazy = () -> CopyInformation2.mmObject();
@@ -686,11 +687,11 @@ public class TransferInInstructionV06 {
 	public static final MMMessageBuildingBlock mmExtension = new MMMessageBuildingBlock() {
 		{
 			xmlTag = "Xtnsn";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Extension";
 			definition = "Additional information that cannot be captured in the structured elements and/or any other specific block.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.area.sese.TransferInInstructionV07.mmExtension);
-			previousVersion_lazy = () -> com.tools20022.repository.area.sese.TransferInInstructionV05.mmExtension;
+			nextVersions_lazy = () -> Arrays.asList(TransferInInstructionV07.mmExtension);
+			previousVersion_lazy = () -> TransferInInstructionV05.mmExtension;
 			minOccurs = 0;
 			complexType_lazy = () -> Extension1.mmObject();
 		}
@@ -699,7 +700,7 @@ public class TransferInInstructionV06 {
 	final static public MMMessageDefinition mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageDefinition() {
 			{
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+				registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 				name = "TransferInInstructionV06";
 				definition = "Scope\r\nAn instructing party, for example, an investment manager or its authorised representative, sends the TransferInInstruction message to the executing party, for example, a transfer agent, to instruct the receipt of a financial instrument, free of payment, on a given date from a specified party.\r\nThis message may also be used to instruct the receipt of a financial instrument, free of payment, from another of the instructing parties own accounts or from a third party.\r\nUsage\r\nThe TransferInInstruction message is used to instruct the receipt of a financial instrument from another account, either owned by the instructing party or by a third party.";
 				nextVersions_lazy = () -> Arrays.asList(TransferInInstructionV07.mmObject());
@@ -708,12 +709,9 @@ public class TransferInInstructionV06 {
 				rootElement = "Document";
 				xmlTag = "TrfInInstr";
 				businessArea_lazy = () -> SecuritiesSettlementPreviousVersion.mmObject();
-				messageBuildingBlock_lazy = () -> Arrays.asList(com.tools20022.repository.area.sese.TransferInInstructionV06.mmMessageIdentification, com.tools20022.repository.area.sese.TransferInInstructionV06.mmPoolReference,
-						com.tools20022.repository.area.sese.TransferInInstructionV06.mmPreviousReference, com.tools20022.repository.area.sese.TransferInInstructionV06.mmRelatedReference,
-						com.tools20022.repository.area.sese.TransferInInstructionV06.mmMasterReference, com.tools20022.repository.area.sese.TransferInInstructionV06.mmTransferDetails,
-						com.tools20022.repository.area.sese.TransferInInstructionV06.mmAccountDetails, com.tools20022.repository.area.sese.TransferInInstructionV06.mmSettlementDetails,
-						com.tools20022.repository.area.sese.TransferInInstructionV06.mmMarketPracticeVersion, com.tools20022.repository.area.sese.TransferInInstructionV06.mmCopyDetails,
-						com.tools20022.repository.area.sese.TransferInInstructionV06.mmExtension);
+				messageBuildingBlock_lazy = () -> Arrays.asList(TransferInInstructionV06.mmMessageIdentification, TransferInInstructionV06.mmPoolReference, TransferInInstructionV06.mmPreviousReference,
+						TransferInInstructionV06.mmRelatedReference, TransferInInstructionV06.mmMasterReference, TransferInInstructionV06.mmTransferDetails, TransferInInstructionV06.mmAccountDetails,
+						TransferInInstructionV06.mmSettlementDetails, TransferInInstructionV06.mmMarketPracticeVersion, TransferInInstructionV06.mmCopyDetails, TransferInInstructionV06.mmExtension);
 				messageDefinitionIdentifier_lazy = () -> new MMMessageDefinitionIdentifier() {
 					{
 						businessArea = "sese";

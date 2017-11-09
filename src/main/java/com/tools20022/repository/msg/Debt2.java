@@ -20,12 +20,14 @@ package com.tools20022.repository.msg;
 import com.tools20022.metamodel.MMMessageAssociationEnd;
 import com.tools20022.metamodel.MMMessageAttribute;
 import com.tools20022.metamodel.MMMessageComponent;
+import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.choice.*;
 import com.tools20022.repository.codeset.ActiveCurrencyCode;
 import com.tools20022.repository.codeset.InterestType3Code;
 import com.tools20022.repository.datatype.*;
 import com.tools20022.repository.datatype.Number;
-import com.tools20022.repository.entity.Debt;
+import com.tools20022.repository.entity.*;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.List;
@@ -260,11 +262,11 @@ public class Debt2 {
 	 */
 	public static final MMMessageAttribute mmPaymentCurrency = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Debt.mmPaymentCurrency;
+			businessElementTrace_lazy = () -> Debt.mmPaymentCurrency;
 			componentContext_lazy = () -> Debt2.mmObject();
 			isDerived = false;
 			xmlTag = "PmtCcy";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PaymentCurrency";
 			definition = "Currency of the payment.";
 			maxOccurs = 1;
@@ -307,11 +309,11 @@ public class Debt2 {
 	 */
 	public static final MMMessageAttribute mmFaceAmount = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.AssetHolding.mmFaceAmount;
+			businessElementTrace_lazy = () -> AssetHolding.mmFaceAmount;
 			componentContext_lazy = () -> Debt2.mmObject();
 			isDerived = false;
 			xmlTag = "FaceAmt";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "FaceAmount";
 			definition = "Unit value of a debt security.";
 			maxOccurs = 1;
@@ -354,11 +356,11 @@ public class Debt2 {
 	 */
 	public static final MMMessageAttribute mmPaymentFrequency = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Dividend.mmPaymentFrequency;
+			businessElementTrace_lazy = () -> Dividend.mmPaymentFrequency;
 			componentContext_lazy = () -> Debt2.mmObject();
 			isDerived = false;
 			xmlTag = "PmtFrqcy";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PaymentFrequency";
 			definition = "Specifies the frequency of an interest payment.";
 			maxOccurs = 1;
@@ -403,11 +405,11 @@ public class Debt2 {
 	 */
 	public static final MMMessageAttribute mmInterestFixingDate = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.VariableInterest.mmFixingDate;
+			businessElementTrace_lazy = () -> VariableInterest.mmFixingDate;
 			componentContext_lazy = () -> Debt2.mmObject();
 			isDerived = false;
 			xmlTag = "IntrstFxgDt";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "InterestFixingDate";
 			definition = "Date/time at which the rate determination is made, also called determination date.";
 			maxOccurs = 1;
@@ -450,11 +452,11 @@ public class Debt2 {
 	 */
 	public static final MMMessageAttribute mmDatedDate = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Debt.mmDatedDate;
+			businessElementTrace_lazy = () -> Debt.mmDatedDate;
 			componentContext_lazy = () -> Debt2.mmObject();
 			isDerived = false;
 			xmlTag = "DtdDt";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "DatedDate";
 			definition = "First date/time at which a security begins to accrue interest.";
 			maxOccurs = 1;
@@ -499,11 +501,11 @@ public class Debt2 {
 	 */
 	public static final MMMessageAttribute mmFirstPaymentDate = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Debt.mmFirstPaymentDate;
+			businessElementTrace_lazy = () -> Debt.mmFirstPaymentDate;
 			componentContext_lazy = () -> Debt2.mmObject();
 			isDerived = false;
 			xmlTag = "FrstPmtDt";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "FirstPaymentDate";
 			definition = "Date/time at which the first interest payment is due to holders of the security.";
 			maxOccurs = 1;
@@ -545,11 +547,11 @@ public class Debt2 {
 	 */
 	public static final MMMessageAttribute mmMaturityDate = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Asset.mmMaturityDate;
+			businessElementTrace_lazy = () -> Asset.mmMaturityDate;
 			componentContext_lazy = () -> Debt2.mmObject();
 			isDerived = false;
 			xmlTag = "MtrtyDt";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "MaturityDate";
 			definition = "Planned final repayment date at the time of issuance.";
 			maxOccurs = 1;
@@ -591,11 +593,11 @@ public class Debt2 {
 	 */
 	public static final MMMessageAttribute mmNextCouponDate = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.CouponAttached.mmDate;
+			businessElementTrace_lazy = () -> CouponAttached.mmDate;
 			componentContext_lazy = () -> Debt2.mmObject();
 			isDerived = false;
 			xmlTag = "NxtCpnDt";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "NextCouponDate";
 			definition = "Date of the coupon attached to the physical security.";
 			maxOccurs = 1;
@@ -640,11 +642,11 @@ public class Debt2 {
 	 */
 	public static final MMMessageAttribute mmPutableDate = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Debt.mmPutableDate;
+			businessElementTrace_lazy = () -> Debt.mmPutableDate;
 			componentContext_lazy = () -> Debt2.mmObject();
 			isDerived = false;
 			xmlTag = "PutblDt";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PutableDate";
 			definition = "Date at which the holder has the right to ask for redemption of the security prior to final maturity.";
 			maxOccurs = 1;
@@ -689,11 +691,11 @@ public class Debt2 {
 	 */
 	public static final MMMessageAttribute mmNextCallableDate = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Debt.mmNextCallableDate;
+			businessElementTrace_lazy = () -> Debt.mmNextCallableDate;
 			componentContext_lazy = () -> Debt2.mmObject();
 			isDerived = false;
 			xmlTag = "NxtCllblDt";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "NextCallableDate";
 			definition = "Next date/time at which the issuer has the right to pay the securitiy prior to maturity.";
 			maxOccurs = 1;
@@ -736,11 +738,11 @@ public class Debt2 {
 	 */
 	public static final MMMessageAttribute mmNextFactorDate = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Debt.mmNextFactorDate;
+			businessElementTrace_lazy = () -> Debt.mmNextFactorDate;
 			componentContext_lazy = () -> Debt2.mmObject();
 			isDerived = false;
 			xmlTag = "NxtFctrDt";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "NextFactorDate";
 			definition = "The date that the current factor will be changed to a new factor.";
 			maxOccurs = 1;
@@ -785,11 +787,11 @@ public class Debt2 {
 	 */
 	public static final MMMessageAttribute mmExpirationDate = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Asset.mmExpiryDate;
+			businessElementTrace_lazy = () -> Asset.mmExpiryDate;
 			componentContext_lazy = () -> Debt2.mmObject();
 			isDerived = false;
 			xmlTag = "XprtnDt";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ExpirationDate";
 			definition = "Date/time at which an interest bearing security becomes due and assets are to be repaid.";
 			maxOccurs = 1;
@@ -836,11 +838,11 @@ public class Debt2 {
 	 */
 	public static final MMMessageAttribute mmPaymentDirectionIndicator = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Debt.mmPaymentDirectionIndicator;
+			businessElementTrace_lazy = () -> Debt.mmPaymentDirectionIndicator;
 			componentContext_lazy = () -> Debt2.mmObject();
 			isDerived = false;
 			xmlTag = "PmtDrctnInd";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PaymentDirectionIndicator";
 			definition = "Indicates the direction of payment for asset or mortgage backed securities, ie, whether the repaid capital is distributed (payment direction is down) or capitalized (payment direction is up).";
 			maxOccurs = 1;
@@ -886,11 +888,11 @@ public class Debt2 {
 	 */
 	public static final MMMessageAttribute mmInterestRate = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.InterestCalculation.mmRate;
+			businessElementTrace_lazy = () -> InterestCalculation.mmRate;
 			componentContext_lazy = () -> Debt2.mmObject();
 			isDerived = false;
 			xmlTag = "IntrstRate";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "InterestRate";
 			definition = "Per annum ratio of interest paid to the principal amount of the financial instrument for a specific period of time.";
 			maxOccurs = 1;
@@ -936,11 +938,11 @@ public class Debt2 {
 	 */
 	public static final MMMessageAttribute mmNextInterestRate = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.InterestCalculation.mmRate;
+			businessElementTrace_lazy = () -> InterestCalculation.mmRate;
 			componentContext_lazy = () -> Debt2.mmObject();
 			isDerived = false;
 			xmlTag = "NxtIntrstRate";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "NextInterestRate";
 			definition = "Specifies the interest rate applicable to the next interest payment period.";
 			maxOccurs = 1;
@@ -986,11 +988,11 @@ public class Debt2 {
 	 */
 	public static final MMMessageAttribute mmOddCouponIndicator = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Debt.mmOddCouponIndicator;
+			businessElementTrace_lazy = () -> Debt.mmOddCouponIndicator;
 			componentContext_lazy = () -> Debt2.mmObject();
 			isDerived = false;
 			xmlTag = "OddCpnInd";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "OddCouponIndicator";
 			definition = "Specifies whether the payment of the coupon (interest) on a bond is off the normal schedule.";
 			maxOccurs = 1;
@@ -1036,11 +1038,11 @@ public class Debt2 {
 	 */
 	public static final MMMessageAttribute mmCallableIndicator = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Debt.mmCallableIndicator;
+			businessElementTrace_lazy = () -> Debt.mmCallableIndicator;
 			componentContext_lazy = () -> Debt2.mmObject();
 			isDerived = false;
 			xmlTag = "CllblInd";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CallableIndicator";
 			definition = "Indicates whether the issuer has the right to pay the security prior to maturity. Also called RetractableIndicator.";
 			maxOccurs = 1;
@@ -1093,11 +1095,11 @@ public class Debt2 {
 	 */
 	public static final MMMessageAttribute mmCPProgram = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Debt.mmCPProgram;
+			businessElementTrace_lazy = () -> Debt.mmCPProgram;
 			componentContext_lazy = () -> Debt2.mmObject();
 			isDerived = false;
 			xmlTag = "CPPrgm";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CPProgram";
 			definition = "The program under which a commercial paper is issued. The values that are most used are:\r\n0 = N/A\r\n1 = 3(a)3\r\n2 = 4(2)\r\n3 = 3(a)4\r\n4 = 3(c)7\r\n5 = 144A\r\n6 = 3(a)2\r\n99 = Other";
 			maxOccurs = 1;
@@ -1139,11 +1141,11 @@ public class Debt2 {
 	 */
 	public static final MMMessageAttribute mmCPRegistrationType = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Debt.mmCPRegistrationType;
+			businessElementTrace_lazy = () -> Debt.mmCPRegistrationType;
 			componentContext_lazy = () -> Debt2.mmObject();
 			isDerived = false;
 			xmlTag = "CPRegnTp";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CPRegistrationType";
 			definition = "Registration type of a commercial paper issuance.";
 			maxOccurs = 1;
@@ -1189,11 +1191,11 @@ public class Debt2 {
 	 */
 	public static final MMMessageAttribute mmInterestAccrualDate = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.InterestCalculation.mmInterestAccrualDate;
+			businessElementTrace_lazy = () -> InterestCalculation.mmInterestAccrualDate;
 			componentContext_lazy = () -> Debt2.mmObject();
 			isDerived = false;
 			xmlTag = "IntrstAcrlDt";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "InterestAccrualDate";
 			definition = "Start date used for calculating accrued interest on debt instruments which are being sold between interest payment dates. Often but not always the same as the issue date and the dated date.";
 			maxOccurs = 1;
@@ -1239,11 +1241,11 @@ public class Debt2 {
 	 */
 	public static final MMMessageAttribute mmPutableIndicator = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Debt.mmPutableIndicator;
+			businessElementTrace_lazy = () -> Debt.mmPutableIndicator;
 			componentContext_lazy = () -> Debt2.mmObject();
 			isDerived = false;
 			xmlTag = "PutblInd";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PutableIndicator";
 			definition = "Indicates whether the holder has the right to ask for redemption of the security prior to final maturity. Also called RedeemableIndicator.";
 			maxOccurs = 1;
@@ -1293,11 +1295,11 @@ public class Debt2 {
 	 */
 	public static final MMMessageAttribute mmPreFundedIndicator = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Debt.mmPreFundedIndicator;
+			businessElementTrace_lazy = () -> Debt.mmPreFundedIndicator;
 			componentContext_lazy = () -> Debt2.mmObject();
 			isDerived = false;
 			xmlTag = "PreFnddInd";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PreFundedIndicator";
 			definition = "Indicates whether an interest bearing instrument is being escrowed or collateralized either by direct obligations guaranteed by the US government, or by other types of securities. The maturity schedules of the securities in the escrow fund are determined in such a way to pay the maturity value, coupon, and premium payments (if any) of the refunded bonds.";
 			maxOccurs = 1;
@@ -1343,11 +1345,11 @@ public class Debt2 {
 	 */
 	public static final MMMessageAttribute mmEscrowedIndicator = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Debt.mmEscrowedIndicator;
+			businessElementTrace_lazy = () -> Debt.mmEscrowedIndicator;
 			componentContext_lazy = () -> Debt2.mmObject();
 			isDerived = false;
 			xmlTag = "EscrwdInd";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "EscrowedIndicator";
 			definition = "Indicates whether an interest bearing instrument is deposited in a fund that will be used to pay debt service on refunded securities.";
 			maxOccurs = 1;
@@ -1390,11 +1392,11 @@ public class Debt2 {
 	 */
 	public static final MMMessageAttribute mmPerpetualIndicator = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Debt.mmPerpetualIndicator;
+			businessElementTrace_lazy = () -> Debt.mmPerpetualIndicator;
 			componentContext_lazy = () -> Debt2.mmObject();
 			isDerived = false;
 			xmlTag = "PerptlInd";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PerpetualIndicator";
 			definition = "Indicates whether the security has no maturity date.";
 			maxOccurs = 1;
@@ -1438,11 +1440,11 @@ public class Debt2 {
 	 */
 	public static final MMMessageAttribute mmSubordinatedIndicator = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Debt.mmSubordinatedIndicator;
+			businessElementTrace_lazy = () -> Debt.mmSubordinatedIndicator;
 			componentContext_lazy = () -> Debt2.mmObject();
 			isDerived = false;
 			xmlTag = "SubrdntdInd";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SubordinatedIndicator";
 			definition = "Indicates whether the security is a subordinated security.";
 			maxOccurs = 1;
@@ -1488,11 +1490,11 @@ public class Debt2 {
 	 */
 	public static final MMMessageAttribute mmExtendibleIndicator = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Debt.mmExtendibleIndicator;
+			businessElementTrace_lazy = () -> Debt.mmExtendibleIndicator;
 			componentContext_lazy = () -> Debt2.mmObject();
 			isDerived = false;
 			xmlTag = "XtndblInd";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ExtendibleIndicator";
 			definition = "Indicates whether the security is extendible,eg, repayment may be extended or maturity changed.";
 			maxOccurs = 1;
@@ -1535,11 +1537,11 @@ public class Debt2 {
 	 */
 	public static final MMMessageAttribute mmExtendiblePeriod = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Debt.mmExtendiblePeriod;
+			businessElementTrace_lazy = () -> Debt.mmExtendiblePeriod;
 			componentContext_lazy = () -> Debt2.mmObject();
 			isDerived = false;
 			xmlTag = "XtndblPrd";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ExtendiblePeriod";
 			definition = "Period during which a date might be extended.";
 			maxOccurs = 1;
@@ -1585,11 +1587,11 @@ public class Debt2 {
 	 */
 	public static final MMMessageAttribute mmVariableRateIndicator = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Debt.mmVariableRateIndicator;
+			businessElementTrace_lazy = () -> Debt.mmVariableRateIndicator;
 			componentContext_lazy = () -> Debt2.mmObject();
 			isDerived = false;
 			xmlTag = "VarblRateInd";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "VariableRateIndicator";
 			definition = "Indicates whether the interest rate of an interest bearing instrument is reset periodically.";
 			maxOccurs = 1;
@@ -1634,11 +1636,11 @@ public class Debt2 {
 	 */
 	public static final MMMessageAttribute mmOverAllotmentAmount = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Debt.mmOverAllotmentAmount;
+			businessElementTrace_lazy = () -> Debt.mmOverAllotmentAmount;
 			componentContext_lazy = () -> Debt2.mmObject();
 			isDerived = false;
 			xmlTag = "OverAlltmtAmt";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "OverAllotmentAmount";
 			definition = "Amount for which a security can be overalloted (as in greenshoe option).";
 			maxOccurs = 1;
@@ -1684,11 +1686,11 @@ public class Debt2 {
 	 */
 	public static final MMMessageAttribute mmOverAllotmentRate = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Debt.mmOverAllotmentRate;
+			businessElementTrace_lazy = () -> Debt.mmOverAllotmentRate;
 			componentContext_lazy = () -> Debt2.mmObject();
 			isDerived = false;
 			xmlTag = "OverAlltmtRate";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "OverAllotmentRate";
 			definition = "Percentage for which a security can be overalloted (as in greenshoe option).";
 			maxOccurs = 1;
@@ -1734,11 +1736,11 @@ public class Debt2 {
 	 */
 	public static final MMMessageAttribute mmAmortisableIndicator = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Debt.mmAmortisableIndicator;
+			businessElementTrace_lazy = () -> Debt.mmAmortisableIndicator;
 			componentContext_lazy = () -> Debt2.mmObject();
 			isDerived = false;
 			xmlTag = "AmtsblInd";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AmortisableIndicator";
 			definition = "Indicates whether repayment is made via regular principal and interest payments over time.";
 			maxOccurs = 1;
@@ -1783,11 +1785,11 @@ public class Debt2 {
 	 */
 	public static final MMMessageAttribute mmInterestCalculationMethod = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.InterestCalculation.mmCalculationMethod;
+			businessElementTrace_lazy = () -> InterestCalculation.mmCalculationMethod;
 			componentContext_lazy = () -> Debt2.mmObject();
 			isDerived = false;
 			xmlTag = "IntrstClctnMtd";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "InterestCalculationMethod";
 			definition = "Calculation method used to calculate interest and/or yield for a bond, for example, street convention.";
 			maxOccurs = 1;
@@ -1833,11 +1835,11 @@ public class Debt2 {
 	 */
 	public static final MMMessageAttribute mmCapitalisedInterest = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Debt.mmCapitalisedInterest;
+			businessElementTrace_lazy = () -> Debt.mmCapitalisedInterest;
 			componentContext_lazy = () -> Debt2.mmObject();
 			isDerived = false;
 			xmlTag = "CptlsdIntrst";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CapitalisedInterest";
 			definition = "Specifies whether the interest amount is capitalised until maturity date or paid out at each interest payment date.";
 			maxOccurs = 1;
@@ -1880,11 +1882,11 @@ public class Debt2 {
 	 */
 	public static final MMMessageAttribute mmActualDenominationAmount = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Debt.mmActualDenominationAmount;
+			businessElementTrace_lazy = () -> Debt.mmActualDenominationAmount;
 			componentContext_lazy = () -> Debt2.mmObject();
 			isDerived = false;
 			xmlTag = "ActlDnmtnAmt";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ActualDenominationAmount";
 			definition = "Nominal value per security unit.";
 			minOccurs = 0;
@@ -1929,11 +1931,11 @@ public class Debt2 {
 	 */
 	public static final MMMessageAttribute mmCurrentFactor = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Debt.mmFactor;
+			businessElementTrace_lazy = () -> Debt.mmFactor;
 			componentContext_lazy = () -> Debt2.mmObject();
 			isDerived = false;
 			xmlTag = "CurFctr";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CurrentFactor";
 			definition = "Identifies the current factor expressed as a decimal between 0 and 1 defining the outstanding principal of  the bond (for factored securities).";
 			maxOccurs = 1;
@@ -1979,11 +1981,11 @@ public class Debt2 {
 	 */
 	public static final MMMessageAttribute mmNextFactor = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Debt.mmFactor;
+			businessElementTrace_lazy = () -> Debt.mmFactor;
 			componentContext_lazy = () -> Debt2.mmObject();
 			isDerived = false;
 			xmlTag = "NxtFctr";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "NextFactor";
 			definition = "Identifies the new factor expressed as a decimal between 0 and 1 defining the outstanding principal of  the bond (for factored securities).";
 			maxOccurs = 1;
@@ -2029,11 +2031,11 @@ public class Debt2 {
 	 */
 	public static final MMMessageAttribute mmPreviousFactor = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Debt.mmFactor;
+			businessElementTrace_lazy = () -> Debt.mmFactor;
 			componentContext_lazy = () -> Debt2.mmObject();
 			isDerived = false;
 			xmlTag = "PrvsFctr";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PreviousFactor";
 			definition = "Identifies the previous factor expressed as a decimal between 0 and 1 defining the outstanding principal of the bond (for factored securities).";
 			maxOccurs = 1;
@@ -2076,11 +2078,11 @@ public class Debt2 {
 	 */
 	public static final MMMessageAttribute mmPieces = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Debt.mmPieces;
+			businessElementTrace_lazy = () -> Debt.mmPieces;
 			componentContext_lazy = () -> Debt2.mmObject();
 			isDerived = false;
 			xmlTag = "Pcs";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Pieces";
 			definition = "Number of pieces composing a pool of financial assets.";
 			maxOccurs = 1;
@@ -2123,11 +2125,11 @@ public class Debt2 {
 	 */
 	public static final MMMessageAttribute mmPoolsMaximum = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Debt.mmPoolsMaximum;
+			businessElementTrace_lazy = () -> Debt.mmPoolsMaximum;
 			componentContext_lazy = () -> Debt2.mmObject();
 			isDerived = false;
 			xmlTag = "PlsMax";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PoolsMaximum";
 			definition = "Collection of assets by which a security is backed.";
 			maxOccurs = 1;
@@ -2173,11 +2175,11 @@ public class Debt2 {
 	 */
 	public static final MMMessageAttribute mmPoolsPerMillion = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Debt.mmPoolsPerMillion;
+			businessElementTrace_lazy = () -> Debt.mmPoolsPerMillion;
 			componentContext_lazy = () -> Debt2.mmObject();
 			isDerived = false;
 			xmlTag = "PlsPerMln";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PoolsPerMillion";
 			definition = "Indicates per million the collection of loans, mortgages or other assets assembled by an originator as the basis for a security.";
 			maxOccurs = 1;
@@ -2223,11 +2225,11 @@ public class Debt2 {
 	 */
 	public static final MMMessageAttribute mmPoolsPerLot = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Debt.mmPoolsPerLot;
+			businessElementTrace_lazy = () -> Debt.mmPoolsPerLot;
 			componentContext_lazy = () -> Debt2.mmObject();
 			isDerived = false;
 			xmlTag = "PlsPerLot";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PoolsPerLot";
 			definition = "Indicates per lot the collection of loans, mortgages or other assets assembled by an originator as the basis for a security.";
 			maxOccurs = 1;
@@ -2273,11 +2275,11 @@ public class Debt2 {
 	 */
 	public static final MMMessageAttribute mmPoolsPerTrade = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Debt.mmPoolsPerTrade;
+			businessElementTrace_lazy = () -> Debt.mmPoolsPerTrade;
 			componentContext_lazy = () -> Debt2.mmObject();
 			isDerived = false;
 			xmlTag = "PlsPerTrad";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PoolsPerTrade";
 			definition = "Indicates per trade the collection of loans, mortgages or other assets assembled by an originator as the basis for a security.";
 			maxOccurs = 1;
@@ -2323,11 +2325,11 @@ public class Debt2 {
 	 */
 	public static final MMMessageAttribute mmConstantPrePaymentPenaltyIndicator = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Debt.mmConstantPrePaymentPenalty;
+			businessElementTrace_lazy = () -> Debt.mmConstantPrePaymentPenalty;
 			componentContext_lazy = () -> Debt2.mmObject();
 			isDerived = false;
 			xmlTag = "CstPrePmtPnltyInd";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ConstantPrePaymentPenaltyIndicator";
 			definition = "Indicates whether a penalty might be imposed to the borrower of a mortgage in case of prepayments occurring during the lockout period.";
 			maxOccurs = 1;
@@ -2372,11 +2374,11 @@ public class Debt2 {
 	 */
 	public static final MMMessageAttribute mmLotIdentification = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.LotBreakdown.mmLotIdentifier;
+			businessElementTrace_lazy = () -> LotBreakdown.mmLotIdentifier;
 			componentContext_lazy = () -> Debt2.mmObject();
 			isDerived = false;
 			xmlTag = "LotId";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "LotIdentification";
 			definition = "Identifies the lot constituting an asset backed or mortgage backed security issue.";
 			maxOccurs = 1;
@@ -2421,11 +2423,11 @@ public class Debt2 {
 	 */
 	public static final MMMessageAttribute mmConstantPrePaymentYield = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Debt.mmConstantPrePaymentYield;
+			businessElementTrace_lazy = () -> Debt.mmConstantPrePaymentYield;
 			componentContext_lazy = () -> Debt2.mmObject();
 			isDerived = false;
 			xmlTag = "CstPrePmtYld";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ConstantPrePaymentYield";
 			definition = "Measure of prepayment as a yield of the current outstanding loan balance.";
 			maxOccurs = 1;
@@ -2471,11 +2473,11 @@ public class Debt2 {
 	 */
 	public static final MMMessageAttribute mmWeightedAverageCoupon = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Debt.mmWeightedAverageCoupon;
+			businessElementTrace_lazy = () -> Debt.mmWeightedAverageCoupon;
 			componentContext_lazy = () -> Debt2.mmObject();
 			isDerived = false;
 			xmlTag = "WghtdAvrgCpn";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "WeightedAverageCoupon";
 			definition = "Contains the weighted average coupon of the fixed income instrument (expressed as a percentage).";
 			maxOccurs = 1;
@@ -2521,11 +2523,11 @@ public class Debt2 {
 	 */
 	public static final MMMessageAttribute mmWeightedAverageLife = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Debt.mmWeightedAverageLife;
+			businessElementTrace_lazy = () -> Debt.mmWeightedAverageLife;
 			componentContext_lazy = () -> Debt2.mmObject();
 			isDerived = false;
 			xmlTag = "WghtdAvrgLife";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "WeightedAverageLife";
 			definition = "Contains the weighted average life of the fixed income instrument (expressed in months).";
 			maxOccurs = 1;
@@ -2571,11 +2573,11 @@ public class Debt2 {
 	 */
 	public static final MMMessageAttribute mmWeightedAverageLoan = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Debt.mmWeightedAverageLoan;
+			businessElementTrace_lazy = () -> Debt.mmWeightedAverageLoan;
 			componentContext_lazy = () -> Debt2.mmObject();
 			isDerived = false;
 			xmlTag = "WghtdAvrgLn";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "WeightedAverageLoan";
 			definition = "Contains the weighted average loan of the fixed income instrument (expressed in months).";
 			maxOccurs = 1;
@@ -2621,11 +2623,11 @@ public class Debt2 {
 	 */
 	public static final MMMessageAttribute mmWeightedAverageMaturity = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Debt.mmWeightedAverageMaturity;
+			businessElementTrace_lazy = () -> Debt.mmWeightedAverageMaturity;
 			componentContext_lazy = () -> Debt2.mmObject();
 			isDerived = false;
 			xmlTag = "WghtdAvrgMtrty";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "WeightedAverageMaturity";
 			definition = "Contains the weighted average maturity of the fixed income instrument (expressed in months).";
 			maxOccurs = 1;
@@ -2670,11 +2672,11 @@ public class Debt2 {
 	 */
 	public static final MMMessageAttribute mmInsuredIndicator = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Debt.mmInsuredIndicator;
+			businessElementTrace_lazy = () -> Debt.mmInsuredIndicator;
 			componentContext_lazy = () -> Debt2.mmObject();
 			isDerived = false;
 			xmlTag = "InsrdInd";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "InsuredIndicator";
 			definition = "Indicates whether the instruments is backed by any kind of asset or not.";
 			maxOccurs = 1;
@@ -2720,11 +2722,11 @@ public class Debt2 {
 	 */
 	public static final MMMessageAttribute mmBankQualifiedIndicator = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Debt.mmBankQualified;
+			businessElementTrace_lazy = () -> Debt.mmBankQualified;
 			componentContext_lazy = () -> Debt2.mmObject();
 			isDerived = false;
 			xmlTag = "BkQlfdInd";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "BankQualifiedIndicator";
 			definition = "Indicates whether the security is bank qualified (usually applies to loan products).";
 			maxOccurs = 1;
@@ -2765,11 +2767,11 @@ public class Debt2 {
 	 */
 	public static final MMMessageAssociationEnd mmYieldCalculation = new MMMessageAssociationEnd() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.SecuritiesPricing.mmYieldCalculation;
+			businessElementTrace_lazy = () -> SecuritiesPricing.mmYieldCalculation;
 			componentContext_lazy = () -> Debt2.mmObject();
 			isDerived = false;
 			xmlTag = "YldClctn";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "YieldCalculation";
 			definition = "Rate of return on an investment, based on the price.";
 			minOccurs = 0;
@@ -2813,11 +2815,11 @@ public class Debt2 {
 	 */
 	public static final MMMessageAttribute mmInterestType = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.InterestCalculation.mmInterestType;
+			businessElementTrace_lazy = () -> InterestCalculation.mmInterestType;
 			componentContext_lazy = () -> Debt2.mmObject();
 			isDerived = false;
 			xmlTag = "IntrstTp";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "InterestType";
 			definition = "Indicates whether interest rate is fixed, variable or other.";
 			maxOccurs = 1;
@@ -2860,11 +2862,11 @@ public class Debt2 {
 	 */
 	public static final MMMessageAttribute mmInstrumentStructureType = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Asset.mmFinancialInstrumentSubStructure;
+			businessElementTrace_lazy = () -> Asset.mmFinancialInstrumentSubStructure;
 			componentContext_lazy = () -> Debt2.mmObject();
 			isDerived = false;
 			xmlTag = "InstrmStrTp";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "InstrumentStructureType";
 			definition = "Indicates the type of deal for structured finance.";
 			maxOccurs = 1;
@@ -2916,11 +2918,11 @@ public class Debt2 {
 	 */
 	public static final MMMessageAttribute mmGlobalType = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Asset.mmIssuance;
+			businessElementTrace_lazy = () -> Asset.mmIssuance;
 			componentContext_lazy = () -> Debt2.mmObject();
 			isDerived = false;
 			xmlTag = "GblTp";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "GlobalType";
 			definition = "Identifies if the security will be issued in New Global Note (NGN) or Classical Global Note (CGN).\r\nNew Global Note (NGN): Form of global certificate which refers to the books and records of the ICSDs to determine the issue outstanding amount (IOA). \r\nClassical Global Note (CGN): Form of global certificate which requires physical annotation on the attached schedule to reflect changes in the issue outstanding amount (IOA).";
 			maxOccurs = 1;
@@ -2964,7 +2966,7 @@ public class Debt2 {
 			componentContext_lazy = () -> Debt2.mmObject();
 			isDerived = false;
 			xmlTag = "PotntlEuroSysElgblty";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PotentialEuroSystemEligibility";
 			definition = "Flag to indicate the security is intended to be held in a manner that could allow the Eurosystem eligibility.";
 			maxOccurs = 1;
@@ -3011,11 +3013,11 @@ public class Debt2 {
 	 */
 	public static final MMMessageAttribute mmGeographics = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Debt.mmGeographics;
+			businessElementTrace_lazy = () -> Debt.mmGeographics;
 			componentContext_lazy = () -> Debt2.mmObject();
 			isDerived = false;
 			xmlTag = "Geogcs";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Geographics";
 			definition = "Type of stipulation expressing geographical constraints on a fixed income instrument. It is expressed with a state or country abbreviation and a minimum or maximum percentage. Example: CA 0-80 (minimum of 80 percent in Californian assets).";
 			maxOccurs = 1;
@@ -3058,11 +3060,11 @@ public class Debt2 {
 	 */
 	public static final MMMessageAttribute mmYieldRange = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.YieldCalculation.mmYieldRange;
+			businessElementTrace_lazy = () -> YieldCalculation.mmYieldRange;
 			componentContext_lazy = () -> Debt2.mmObject();
 			isDerived = false;
 			xmlTag = "YldRg";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "YieldRange";
 			definition = "Range of allowed yield.";
 			maxOccurs = 1;
@@ -3108,11 +3110,11 @@ public class Debt2 {
 	 */
 	public static final MMMessageAttribute mmCouponRange = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Debt.mmConvertibleIndicator;
+			businessElementTrace_lazy = () -> Debt.mmConvertibleIndicator;
 			componentContext_lazy = () -> Debt2.mmObject();
 			isDerived = false;
 			xmlTag = "CpnRg";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CouponRange";
 			definition = "Identification of a range of coupon numbers attached to its related financial instrument.";
 			maxOccurs = 1;
@@ -3155,11 +3157,11 @@ public class Debt2 {
 	 */
 	public static final MMMessageAttribute mmPurpose = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Issuance.mmPurpose;
+			businessElementTrace_lazy = () -> Issuance.mmPurpose;
 			componentContext_lazy = () -> Debt2.mmObject();
 			isDerived = false;
 			xmlTag = "Purp";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Purpose";
 			definition = "Reason for which money is raised through the issuance of a security.";
 			maxOccurs = 1;
@@ -3205,11 +3207,11 @@ public class Debt2 {
 	 */
 	public static final MMMessageAttribute mmAlternativeMinimumTaxIndicator = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Debt.mmAlternativeMinimumTax;
+			businessElementTrace_lazy = () -> Debt.mmAlternativeMinimumTax;
 			componentContext_lazy = () -> Debt2.mmObject();
 			isDerived = false;
 			xmlTag = "AltrntvMinTaxInd";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AlternativeMinimumTaxIndicator";
 			definition = "Identifies whether the issue is subject to alternative minimum taxation (used for municipal bonds).";
 			maxOccurs = 1;
@@ -3256,11 +3258,11 @@ public class Debt2 {
 	 */
 	public static final MMMessageAttribute mmAutoReinvestment = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Debt.mmAutoReinvestment;
+			businessElementTrace_lazy = () -> Debt.mmAutoReinvestment;
 			componentContext_lazy = () -> Debt2.mmObject();
 			isDerived = false;
 			xmlTag = "AutoRinvstmt";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AutoReinvestment";
 			definition = "Indicates an instruction to reinvest dividends in the underlying security (or proceeds at maturity in a similar instrument) if the current rate is <rate> or better.";
 			maxOccurs = 1;
@@ -3304,11 +3306,11 @@ public class Debt2 {
 	 */
 	public static final MMMessageAttribute mmHaircut = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.HaircutValuation.mmHaircut;
+			businessElementTrace_lazy = () -> HaircutValuation.mmHaircut;
 			componentContext_lazy = () -> Debt2.mmObject();
 			isDerived = false;
 			xmlTag = "Hrcut";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Haircut";
 			definition = "Haircut or valuation factor on the security expressed as a percentage.";
 			maxOccurs = 1;
@@ -3354,11 +3356,11 @@ public class Debt2 {
 	 */
 	public static final MMMessageAttribute mmTransactionConditions = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.SecuritiesTrade.mmTradeTransactionCondition;
+			businessElementTrace_lazy = () -> SecuritiesTrade.mmTradeTransactionCondition;
 			componentContext_lazy = () -> Debt2.mmObject();
 			isDerived = false;
 			xmlTag = "TxConds";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "TransactionConditions";
 			definition = "Indicates the conditions under which the order/trade is to be/was executed.";
 			maxOccurs = 1;
@@ -3405,11 +3407,11 @@ public class Debt2 {
 	 */
 	public static final MMMessageAttribute mmLookBack = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Debt.mmLookBack;
+			businessElementTrace_lazy = () -> Debt.mmLookBack;
 			componentContext_lazy = () -> Debt2.mmObject();
 			isDerived = false;
 			xmlTag = "LookBck";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "LookBack";
 			definition = "Indicates an instruction or attribute giving the number of days to be included in the look-back period for the investment. For example some options allow exercise based on the underlying asset's optimal value over the look-back period.";
 			maxOccurs = 1;
@@ -3451,11 +3453,11 @@ public class Debt2 {
 	 */
 	public static final MMMessageAttribute mmMaximumSubstitution = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Debt.mmMaximumSubstitution;
+			businessElementTrace_lazy = () -> Debt.mmMaximumSubstitution;
 			componentContext_lazy = () -> Debt2.mmObject();
 			isDerived = false;
 			xmlTag = "MaxSbstitn";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "MaximumSubstitution";
 			definition = "Maximum number of time the collateral can be substitute.";
 			maxOccurs = 1;
@@ -3498,11 +3500,11 @@ public class Debt2 {
 	 */
 	public static final MMMessageAttribute mmMinimumIncrement = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Debt.mmMinimumIncrement;
+			businessElementTrace_lazy = () -> Debt.mmMinimumIncrement;
 			componentContext_lazy = () -> Debt2.mmObject();
 			isDerived = false;
 			xmlTag = "MinIncrmt";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "MinimumIncrement";
 			definition = "Indicates the minimum tradable increments of a security.";
 			maxOccurs = 1;
@@ -3545,11 +3547,11 @@ public class Debt2 {
 	 */
 	public static final MMMessageAttribute mmMinimumQuantity = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.TradingMarket.mmMinimumTradedNominalQuantity;
+			businessElementTrace_lazy = () -> TradingMarket.mmMinimumTradedNominalQuantity;
 			componentContext_lazy = () -> Debt2.mmObject();
 			isDerived = false;
 			xmlTag = "MinQty";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "MinimumQuantity";
 			definition = "Indicates the minimum tradable quantity of a security.";
 			maxOccurs = 1;
@@ -3593,7 +3595,7 @@ public class Debt2 {
 			componentContext_lazy = () -> Debt2.mmObject();
 			isDerived = false;
 			xmlTag = "Pdctn";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Production";
 			definition = "Indicates a search criterion used when looking to buy a bond, particularly an mortgage back security (MBS), issued in a particular year.";
 			maxOccurs = 1;
@@ -3637,11 +3639,11 @@ public class Debt2 {
 	 */
 	public static final MMMessageAttribute mmRestrictedIndicator = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Security.mmRestrictedIndicator;
+			businessElementTrace_lazy = () -> Security.mmRestrictedIndicator;
 			componentContext_lazy = () -> Debt2.mmObject();
 			isDerived = false;
 			xmlTag = "RstrctdInd";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "RestrictedIndicator";
 			definition = "Identifies if the securities is restricted or not (as per Rule 144).";
 			maxOccurs = 1;
@@ -3688,11 +3690,11 @@ public class Debt2 {
 	 */
 	public static final MMMessageAttribute mmPriceFrequency = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Debt.mmPriceFrequency;
+			businessElementTrace_lazy = () -> Debt.mmPriceFrequency;
 			componentContext_lazy = () -> Debt2.mmObject();
 			isDerived = false;
 			xmlTag = "PricFrqcy";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PriceFrequency";
 			definition = "Indicates the frequency at which the bond is re-rated and therefore re-priced (bond attribute, particularly of floating rate and index linked instruments).";
 			maxOccurs = 1;
@@ -3737,11 +3739,11 @@ public class Debt2 {
 	 */
 	public static final MMMessageAttribute mmSector = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Security.mmSector;
+			businessElementTrace_lazy = () -> Security.mmSector;
 			componentContext_lazy = () -> Debt2.mmObject();
 			isDerived = false;
 			xmlTag = "Sctr";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Sector";
 			definition = "Indicates the market sector the security is classified as for example pharmaceuticals, automobile, housing, etc.";
 			maxOccurs = 1;
@@ -3785,11 +3787,11 @@ public class Debt2 {
 	 */
 	public static final MMMessageAttribute mmSubstitutionFrequency = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Debt.mmSubstitutionFrequency;
+			businessElementTrace_lazy = () -> Debt.mmSubstitutionFrequency;
 			componentContext_lazy = () -> Debt2.mmObject();
 			isDerived = false;
 			xmlTag = "SbstitnFrqcy";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SubstitutionFrequency";
 			definition = "Indicates the maximum number of times collateral can be substituted.";
 			maxOccurs = 1;
@@ -3832,11 +3834,11 @@ public class Debt2 {
 	 */
 	public static final MMMessageAttribute mmSubstitutionLeft = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Debt.mmSubstitutionLeft;
+			businessElementTrace_lazy = () -> Debt.mmSubstitutionLeft;
 			componentContext_lazy = () -> Debt2.mmObject();
 			isDerived = false;
 			xmlTag = "SbstitnLft";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SubstitutionLeft";
 			definition = "Number of remaining times the collateral can be substitute.";
 			maxOccurs = 1;
@@ -3880,7 +3882,7 @@ public class Debt2 {
 			componentContext_lazy = () -> Debt2.mmObject();
 			isDerived = false;
 			xmlTag = "WhlPoolInd";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "WholePoolIndicator";
 			definition = "Indicates a search criterion when looking to buy a mortgaged backed security that either is [yes] or is not [no] an entire pool.";
 			maxOccurs = 1;
@@ -3925,11 +3927,11 @@ public class Debt2 {
 	 */
 	public static final MMMessageAttribute mmPriceSource = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.GenericIdentification.mmIdentification;
+			businessElementTrace_lazy = () -> GenericIdentification.mmIdentification;
 			componentContext_lazy = () -> Debt2.mmObject();
 			isDerived = false;
 			xmlTag = "PricSrc";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PriceSource";
 			definition = "Identifies the Benchmark source price (eg. BB Generic, BB Fairvalue, Brokertec..).";
 			maxOccurs = 1;
@@ -3973,7 +3975,7 @@ public class Debt2 {
 			componentContext_lazy = () -> Debt2.mmObject();
 			isDerived = false;
 			xmlTag = "PricRg";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PriceRange";
 			definition = "Indicates a search criterion used when looking to buy a bond within a particular price range.";
 			maxOccurs = 1;
@@ -3985,34 +3987,19 @@ public class Debt2 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.Debt2.mmPaymentCurrency, com.tools20022.repository.msg.Debt2.mmFaceAmount, com.tools20022.repository.msg.Debt2.mmPaymentFrequency,
-						com.tools20022.repository.msg.Debt2.mmInterestFixingDate, com.tools20022.repository.msg.Debt2.mmDatedDate, com.tools20022.repository.msg.Debt2.mmFirstPaymentDate, com.tools20022.repository.msg.Debt2.mmMaturityDate,
-						com.tools20022.repository.msg.Debt2.mmNextCouponDate, com.tools20022.repository.msg.Debt2.mmPutableDate, com.tools20022.repository.msg.Debt2.mmNextCallableDate, com.tools20022.repository.msg.Debt2.mmNextFactorDate,
-						com.tools20022.repository.msg.Debt2.mmExpirationDate, com.tools20022.repository.msg.Debt2.mmPaymentDirectionIndicator, com.tools20022.repository.msg.Debt2.mmInterestRate,
-						com.tools20022.repository.msg.Debt2.mmNextInterestRate, com.tools20022.repository.msg.Debt2.mmOddCouponIndicator, com.tools20022.repository.msg.Debt2.mmCallableIndicator,
-						com.tools20022.repository.msg.Debt2.mmCPProgram, com.tools20022.repository.msg.Debt2.mmCPRegistrationType, com.tools20022.repository.msg.Debt2.mmInterestAccrualDate,
-						com.tools20022.repository.msg.Debt2.mmPutableIndicator, com.tools20022.repository.msg.Debt2.mmPreFundedIndicator, com.tools20022.repository.msg.Debt2.mmEscrowedIndicator,
-						com.tools20022.repository.msg.Debt2.mmPerpetualIndicator, com.tools20022.repository.msg.Debt2.mmSubordinatedIndicator, com.tools20022.repository.msg.Debt2.mmExtendibleIndicator,
-						com.tools20022.repository.msg.Debt2.mmExtendiblePeriod, com.tools20022.repository.msg.Debt2.mmVariableRateIndicator, com.tools20022.repository.msg.Debt2.mmOverAllotmentAmount,
-						com.tools20022.repository.msg.Debt2.mmOverAllotmentRate, com.tools20022.repository.msg.Debt2.mmAmortisableIndicator, com.tools20022.repository.msg.Debt2.mmInterestCalculationMethod,
-						com.tools20022.repository.msg.Debt2.mmCapitalisedInterest, com.tools20022.repository.msg.Debt2.mmActualDenominationAmount, com.tools20022.repository.msg.Debt2.mmCurrentFactor,
-						com.tools20022.repository.msg.Debt2.mmNextFactor, com.tools20022.repository.msg.Debt2.mmPreviousFactor, com.tools20022.repository.msg.Debt2.mmPieces, com.tools20022.repository.msg.Debt2.mmPoolsMaximum,
-						com.tools20022.repository.msg.Debt2.mmPoolsPerMillion, com.tools20022.repository.msg.Debt2.mmPoolsPerLot, com.tools20022.repository.msg.Debt2.mmPoolsPerTrade,
-						com.tools20022.repository.msg.Debt2.mmConstantPrePaymentPenaltyIndicator, com.tools20022.repository.msg.Debt2.mmLotIdentification, com.tools20022.repository.msg.Debt2.mmConstantPrePaymentYield,
-						com.tools20022.repository.msg.Debt2.mmWeightedAverageCoupon, com.tools20022.repository.msg.Debt2.mmWeightedAverageLife, com.tools20022.repository.msg.Debt2.mmWeightedAverageLoan,
-						com.tools20022.repository.msg.Debt2.mmWeightedAverageMaturity, com.tools20022.repository.msg.Debt2.mmInsuredIndicator, com.tools20022.repository.msg.Debt2.mmBankQualifiedIndicator,
-						com.tools20022.repository.msg.Debt2.mmYieldCalculation, com.tools20022.repository.msg.Debt2.mmInterestType, com.tools20022.repository.msg.Debt2.mmInstrumentStructureType,
-						com.tools20022.repository.msg.Debt2.mmGlobalType, com.tools20022.repository.msg.Debt2.mmPotentialEuroSystemEligibility, com.tools20022.repository.msg.Debt2.mmGeographics,
-						com.tools20022.repository.msg.Debt2.mmYieldRange, com.tools20022.repository.msg.Debt2.mmCouponRange, com.tools20022.repository.msg.Debt2.mmPurpose,
-						com.tools20022.repository.msg.Debt2.mmAlternativeMinimumTaxIndicator, com.tools20022.repository.msg.Debt2.mmAutoReinvestment, com.tools20022.repository.msg.Debt2.mmHaircut,
-						com.tools20022.repository.msg.Debt2.mmTransactionConditions, com.tools20022.repository.msg.Debt2.mmLookBack, com.tools20022.repository.msg.Debt2.mmMaximumSubstitution,
-						com.tools20022.repository.msg.Debt2.mmMinimumIncrement, com.tools20022.repository.msg.Debt2.mmMinimumQuantity, com.tools20022.repository.msg.Debt2.mmProduction,
-						com.tools20022.repository.msg.Debt2.mmRestrictedIndicator, com.tools20022.repository.msg.Debt2.mmPriceFrequency, com.tools20022.repository.msg.Debt2.mmSector,
-						com.tools20022.repository.msg.Debt2.mmSubstitutionFrequency, com.tools20022.repository.msg.Debt2.mmSubstitutionLeft, com.tools20022.repository.msg.Debt2.mmWholePoolIndicator,
-						com.tools20022.repository.msg.Debt2.mmPriceSource, com.tools20022.repository.msg.Debt2.mmPriceRange);
+				messageElement_lazy = () -> Arrays.asList(Debt2.mmPaymentCurrency, Debt2.mmFaceAmount, Debt2.mmPaymentFrequency, Debt2.mmInterestFixingDate, Debt2.mmDatedDate, Debt2.mmFirstPaymentDate, Debt2.mmMaturityDate,
+						Debt2.mmNextCouponDate, Debt2.mmPutableDate, Debt2.mmNextCallableDate, Debt2.mmNextFactorDate, Debt2.mmExpirationDate, Debt2.mmPaymentDirectionIndicator, Debt2.mmInterestRate, Debt2.mmNextInterestRate,
+						Debt2.mmOddCouponIndicator, Debt2.mmCallableIndicator, Debt2.mmCPProgram, Debt2.mmCPRegistrationType, Debt2.mmInterestAccrualDate, Debt2.mmPutableIndicator, Debt2.mmPreFundedIndicator, Debt2.mmEscrowedIndicator,
+						Debt2.mmPerpetualIndicator, Debt2.mmSubordinatedIndicator, Debt2.mmExtendibleIndicator, Debt2.mmExtendiblePeriod, Debt2.mmVariableRateIndicator, Debt2.mmOverAllotmentAmount, Debt2.mmOverAllotmentRate,
+						Debt2.mmAmortisableIndicator, Debt2.mmInterestCalculationMethod, Debt2.mmCapitalisedInterest, Debt2.mmActualDenominationAmount, Debt2.mmCurrentFactor, Debt2.mmNextFactor, Debt2.mmPreviousFactor, Debt2.mmPieces,
+						Debt2.mmPoolsMaximum, Debt2.mmPoolsPerMillion, Debt2.mmPoolsPerLot, Debt2.mmPoolsPerTrade, Debt2.mmConstantPrePaymentPenaltyIndicator, Debt2.mmLotIdentification, Debt2.mmConstantPrePaymentYield,
+						Debt2.mmWeightedAverageCoupon, Debt2.mmWeightedAverageLife, Debt2.mmWeightedAverageLoan, Debt2.mmWeightedAverageMaturity, Debt2.mmInsuredIndicator, Debt2.mmBankQualifiedIndicator, Debt2.mmYieldCalculation,
+						Debt2.mmInterestType, Debt2.mmInstrumentStructureType, Debt2.mmGlobalType, Debt2.mmPotentialEuroSystemEligibility, Debt2.mmGeographics, Debt2.mmYieldRange, Debt2.mmCouponRange, Debt2.mmPurpose,
+						Debt2.mmAlternativeMinimumTaxIndicator, Debt2.mmAutoReinvestment, Debt2.mmHaircut, Debt2.mmTransactionConditions, Debt2.mmLookBack, Debt2.mmMaximumSubstitution, Debt2.mmMinimumIncrement, Debt2.mmMinimumQuantity,
+						Debt2.mmProduction, Debt2.mmRestrictedIndicator, Debt2.mmPriceFrequency, Debt2.mmSector, Debt2.mmSubstitutionFrequency, Debt2.mmSubstitutionLeft, Debt2.mmWholePoolIndicator, Debt2.mmPriceSource, Debt2.mmPriceRange);
 				trace_lazy = () -> Debt.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 				name = "Debt2";
 				definition = "Financial instruments evidencing moneys owed by the issuer to the holder on terms as specified.";
 			}

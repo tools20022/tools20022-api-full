@@ -20,12 +20,15 @@ package com.tools20022.repository.msg;
 import com.tools20022.metamodel.MMMessageAssociationEnd;
 import com.tools20022.metamodel.MMMessageAttribute;
 import com.tools20022.metamodel.MMMessageComponent;
+import com.tools20022.metamodel.MMRegistrationStatus;
+import com.tools20022.repository.area.acmt.AccountManagementStatusReportV06;
 import com.tools20022.repository.choice.AcceptedStatusReason1Choice;
 import com.tools20022.repository.choice.BlockedStatusReason2Choice;
 import com.tools20022.repository.choice.Status25Choice;
 import com.tools20022.repository.datatype.ISODate;
 import com.tools20022.repository.datatype.Max35Text;
-import com.tools20022.repository.entity.AccountStatus;
+import com.tools20022.repository.entity.*;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.List;
@@ -150,10 +153,10 @@ public class AccountManagementStatusAndReason5 {
 			componentContext_lazy = () -> AccountManagementStatusAndReason5.mmObject();
 			isDerived = false;
 			xmlTag = "Sts";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Status";
 			definition = "Status of the account management instruction that was previously received.";
-			previousVersion_lazy = () -> com.tools20022.repository.msg.AccountManagementStatusAndReason4.mmStatus;
+			previousVersion_lazy = () -> AccountManagementStatusAndReason4.mmStatus;
 			maxOccurs = 1;
 			minOccurs = 1;
 			complexType_lazy = () -> Status25Choice.mmObject();
@@ -195,11 +198,11 @@ public class AccountManagementStatusAndReason5 {
 	 */
 	public static final MMMessageAssociationEnd mmStatusReason = new MMMessageAssociationEnd() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Status.mmStatusReason;
+			businessElementTrace_lazy = () -> Status.mmStatusReason;
 			componentContext_lazy = () -> AccountManagementStatusAndReason5.mmObject();
 			isDerived = false;
 			xmlTag = "StsRsn";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "StatusReason";
 			definition = "Reason for the status of the account management instruction.";
 			minOccurs = 0;
@@ -248,10 +251,10 @@ public class AccountManagementStatusAndReason5 {
 			componentContext_lazy = () -> AccountManagementStatusAndReason5.mmObject();
 			isDerived = false;
 			xmlTag = "AcctApplId";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AccountApplicationIdentification";
 			definition = "Unique and unambiguous identifier of the account opening or modification instruction at application level.";
-			previousVersion_lazy = () -> com.tools20022.repository.msg.AccountManagementStatusAndReason4.mmAccountApplicationIdentification;
+			previousVersion_lazy = () -> AccountManagementStatusAndReason4.mmAccountApplicationIdentification;
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> Max35Text.mmObject();
@@ -295,14 +298,14 @@ public class AccountManagementStatusAndReason5 {
 	 */
 	public static final MMMessageAssociationEnd mmExistingAccountIdentification = new MMMessageAssociationEnd() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Account.mmIdentification;
+			businessElementTrace_lazy = () -> Account.mmIdentification;
 			componentContext_lazy = () -> AccountManagementStatusAndReason5.mmObject();
 			isDerived = false;
 			xmlTag = "ExstgAcctId";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ExistingAccountIdentification";
 			definition = "Account to which the account opening is related.";
-			previousVersion_lazy = () -> com.tools20022.repository.msg.AccountManagementStatusAndReason4.mmExistingAccountIdentification;
+			previousVersion_lazy = () -> AccountManagementStatusAndReason4.mmExistingAccountIdentification;
 			minOccurs = 0;
 			isComposite = true;
 			type_lazy = () -> com.tools20022.repository.msg.Account23.mmObject();
@@ -346,11 +349,11 @@ public class AccountManagementStatusAndReason5 {
 	 */
 	public static final MMMessageAttribute mmAccountIdentification = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Account.mmIdentification;
+			businessElementTrace_lazy = () -> Account.mmIdentification;
 			componentContext_lazy = () -> AccountManagementStatusAndReason5.mmObject();
 			isDerived = false;
 			xmlTag = "AcctId";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AccountIdentification";
 			definition = "Unique and unambiguous identification for the account between the account owner and the account servicer.";
 			maxOccurs = 1;
@@ -392,11 +395,11 @@ public class AccountManagementStatusAndReason5 {
 	 */
 	public static final MMMessageAssociationEnd mmAccountStatus = new MMMessageAssociationEnd() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Account.mmStatus;
+			businessElementTrace_lazy = () -> Account.mmStatus;
 			componentContext_lazy = () -> AccountManagementStatusAndReason5.mmObject();
 			isDerived = false;
 			xmlTag = "AcctSts";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AccountStatus";
 			definition = "Status of the account.";
 			maxOccurs = 1;
@@ -444,11 +447,11 @@ public class AccountManagementStatusAndReason5 {
 	 */
 	public static final MMMessageAttribute mmBlockedStatus = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Account.mmStatus;
+			businessElementTrace_lazy = () -> Account.mmStatus;
 			componentContext_lazy = () -> AccountManagementStatusAndReason5.mmObject();
 			isDerived = false;
 			xmlTag = "BlckdSts";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "BlockedStatus";
 			definition = "Specifies the account is blocked and other factors for the blocked account.";
 			maxOccurs = 1;
@@ -495,11 +498,11 @@ public class AccountManagementStatusAndReason5 {
 	 */
 	public static final MMMessageAttribute mmFATCAReportingDate = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.FATCAStatus.mmFATCAReportingDate;
+			businessElementTrace_lazy = () -> FATCAStatus.mmFATCAReportingDate;
 			componentContext_lazy = () -> AccountManagementStatusAndReason5.mmObject();
 			isDerived = false;
 			xmlTag = "FATCARptgDt";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "FATCAReportingDate";
 			definition = "Date provided by the account owner to inform the account servicer of the date on which the holdings must be reported before the account is subsequently closed.";
 			maxOccurs = 1;
@@ -546,11 +549,11 @@ public class AccountManagementStatusAndReason5 {
 	 */
 	public static final MMMessageAttribute mmCRSReportingDate = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.CRSStatus.mmCRSReportingDate;
+			businessElementTrace_lazy = () -> CRSStatus.mmCRSReportingDate;
 			componentContext_lazy = () -> AccountManagementStatusAndReason5.mmObject();
 			isDerived = false;
 			xmlTag = "CRSRptgDt";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CRSReportingDate";
 			definition = "Date provided by the account owner to inform the account servicer of the date on which the holdings must be reported before the account is subsequently closed.";
 			maxOccurs = 1;
@@ -562,15 +565,13 @@ public class AccountManagementStatusAndReason5 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.AccountManagementStatusAndReason5.mmStatus, com.tools20022.repository.msg.AccountManagementStatusAndReason5.mmStatusReason,
-						com.tools20022.repository.msg.AccountManagementStatusAndReason5.mmAccountApplicationIdentification, com.tools20022.repository.msg.AccountManagementStatusAndReason5.mmExistingAccountIdentification,
-						com.tools20022.repository.msg.AccountManagementStatusAndReason5.mmAccountIdentification, com.tools20022.repository.msg.AccountManagementStatusAndReason5.mmAccountStatus,
-						com.tools20022.repository.msg.AccountManagementStatusAndReason5.mmBlockedStatus, com.tools20022.repository.msg.AccountManagementStatusAndReason5.mmFATCAReportingDate,
-						com.tools20022.repository.msg.AccountManagementStatusAndReason5.mmCRSReportingDate);
-				messageBuildingBlock_lazy = () -> Arrays.asList(com.tools20022.repository.area.acmt.AccountManagementStatusReportV06.mmStatusReport);
+				messageElement_lazy = () -> Arrays.asList(AccountManagementStatusAndReason5.mmStatus, AccountManagementStatusAndReason5.mmStatusReason, AccountManagementStatusAndReason5.mmAccountApplicationIdentification,
+						AccountManagementStatusAndReason5.mmExistingAccountIdentification, AccountManagementStatusAndReason5.mmAccountIdentification, AccountManagementStatusAndReason5.mmAccountStatus,
+						AccountManagementStatusAndReason5.mmBlockedStatus, AccountManagementStatusAndReason5.mmFATCAReportingDate, AccountManagementStatusAndReason5.mmCRSReportingDate);
+				messageBuildingBlock_lazy = () -> Arrays.asList(AccountManagementStatusReportV06.mmStatusReport);
 				trace_lazy = () -> AccountStatus.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "AccountManagementStatusAndReason5";
 				definition = "Status information.";
 				previousVersion_lazy = () -> AccountManagementStatusAndReason4.mmObject();

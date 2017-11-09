@@ -19,6 +19,8 @@ package com.tools20022.repository.codeset;
 
 import com.tools20022.metamodel.MMCode;
 import com.tools20022.metamodel.MMCodeSet;
+import com.tools20022.metamodel.MMRegistrationStatus;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -90,7 +92,7 @@ public class AutomaticBorrowing1Code {
 	 */
 	public static final MMCode mmLastResort = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.OBSOLETE;
+			registrationStatus = MMRegistrationStatus.OBSOLETE;
 			name = "LastResort";
 			definition = "Automatic borrowing may be considered as a last resort to make a settlement occur.";
 			owner_lazy = () -> AutomaticBorrowing1Code.mmObject();
@@ -120,7 +122,7 @@ public class AutomaticBorrowing1Code {
 	 */
 	public static final MMCode mmNoAutomatic = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.OBSOLETE;
+			registrationStatus = MMRegistrationStatus.OBSOLETE;
 			name = "NoAutomatic";
 			definition = "No automatic borrowing may take place.";
 			owner_lazy = () -> AutomaticBorrowing1Code.mmObject();
@@ -153,7 +155,7 @@ public class AutomaticBorrowing1Code {
 	 */
 	public static final MMCode mmAutomatic = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.OBSOLETE;
+			registrationStatus = MMRegistrationStatus.OBSOLETE;
 			name = "Automatic";
 			definition = "Automatic borrowing may take place to effect settlement in case of insufficient securities.";
 			owner_lazy = () -> AutomaticBorrowing1Code.mmObject();
@@ -164,13 +166,12 @@ public class AutomaticBorrowing1Code {
 	static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
 				example = Arrays.asList("LAST");
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.OBSOLETE;
+				registrationStatus = MMRegistrationStatus.OBSOLETE;
 				name = "AutomaticBorrowing1Code";
 				definition = "Specifies the condition under which automatic borrowing is allowed.";
-				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.AutomaticBorrowing1Code.mmLastResort, com.tools20022.repository.codeset.AutomaticBorrowing1Code.mmNoAutomatic,
-						com.tools20022.repository.codeset.AutomaticBorrowing1Code.mmAutomatic);
+				code_lazy = () -> Arrays.asList(AutomaticBorrowing1Code.mmLastResort, AutomaticBorrowing1Code.mmNoAutomatic, AutomaticBorrowing1Code.mmAutomatic);
 			}
 		});
 		return mmObject_lazy.get();

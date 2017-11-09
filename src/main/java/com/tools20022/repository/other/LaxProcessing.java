@@ -17,7 +17,11 @@
 
 package com.tools20022.repository.other;
 
+import com.tools20022.metamodel.MMNamespace;
+import com.tools20022.metamodel.MMProcessContent;
+import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.metamodel.MMUserDefined;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.concurrent.atomic.AtomicReference;
 
 /**
@@ -49,11 +53,11 @@ public class LaxProcessing {
 	final static public MMUserDefined mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMUserDefined() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 				name = "LaxProcessing";
-				namespace = com.tools20022.metamodel.MMNamespace.any;
-				processContents = com.tools20022.metamodel.MMProcessContent.LAX;
+				namespace = MMNamespace.any;
+				processContents = MMProcessContent.LAX;
 			}
 		});
 		return mmObject_lazy.get();

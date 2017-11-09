@@ -19,7 +19,9 @@ package com.tools20022.repository.choice;
 
 import com.tools20022.metamodel.MMChoiceComponent;
 import com.tools20022.metamodel.MMMessageAssociationEnd;
-import com.tools20022.repository.entity.Status;
+import com.tools20022.metamodel.MMRegistrationStatus;
+import com.tools20022.repository.entity.*;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -146,14 +148,14 @@ public class Status8Choice {
 	 */
 	public static final MMMessageAssociationEnd mmAffirmationStatus = new MMMessageAssociationEnd() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.SecuritiesTradeStatus.mmAffirmationStatus;
+			businessElementTrace_lazy = () -> SecuritiesTradeStatus.mmAffirmationStatus;
 			componentContext_lazy = () -> Status8Choice.mmObject();
 			isDerived = false;
 			xmlTag = "AffirmSts";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AffirmationStatus";
 			definition = "Status of affirmation of a trade.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.choice.Status19Choice.mmAffirmationStatus);
+			nextVersions_lazy = () -> Arrays.asList(Status19Choice.mmAffirmationStatus);
 			maxOccurs = 1;
 			minOccurs = 1;
 			isComposite = true;
@@ -205,14 +207,14 @@ public class Status8Choice {
 	 */
 	public static final MMMessageAssociationEnd mmAllocationStatus = new MMMessageAssociationEnd() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.SecuritiesTradeStatus.mmCollateralAllocationStatus;
+			businessElementTrace_lazy = () -> SecuritiesTradeStatus.mmCollateralAllocationStatus;
 			componentContext_lazy = () -> Status8Choice.mmObject();
 			isDerived = false;
 			xmlTag = "AllcnSts";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AllocationStatus";
 			definition = "Provides the status of allocation of collateral to cover the instruction.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.choice.Status19Choice.mmAllocationStatus);
+			nextVersions_lazy = () -> Arrays.asList(Status19Choice.mmAllocationStatus);
 			maxOccurs = 1;
 			minOccurs = 1;
 			isComposite = true;
@@ -263,14 +265,14 @@ public class Status8Choice {
 	 */
 	public static final MMMessageAssociationEnd mmRepoCallRequestStatus = new MMMessageAssociationEnd() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.SecuritiesTradeStatus.mmRepoCallRequestStatus;
+			businessElementTrace_lazy = () -> SecuritiesTradeStatus.mmRepoCallRequestStatus;
 			componentContext_lazy = () -> Status8Choice.mmObject();
 			isDerived = false;
 			xmlTag = "RepoCallReqSts";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "RepoCallRequestStatus";
 			definition = "Provides the status of the repurchase agreement call request.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.choice.Status19Choice.mmRepoCallRequestStatus);
+			nextVersions_lazy = () -> Arrays.asList(Status19Choice.mmRepoCallRequestStatus);
 			maxOccurs = 1;
 			minOccurs = 1;
 			isComposite = true;
@@ -321,14 +323,14 @@ public class Status8Choice {
 	 */
 	public static final MMMessageAssociationEnd mmCorporateActionEventProcessingStatus = new MMMessageAssociationEnd() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.CorporateActionStatus.mmEventProcessingStatus;
+			businessElementTrace_lazy = () -> CorporateActionStatus.mmEventProcessingStatus;
 			componentContext_lazy = () -> Status8Choice.mmObject();
 			isDerived = false;
 			xmlTag = "CorpActnEvtPrcgSts";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CorporateActionEventProcessingStatus";
 			definition = "Provides the status of a corporate action or the status of a payment.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.choice.Status19Choice.mmCorporateActionEventProcessingStatus);
+			nextVersions_lazy = () -> Arrays.asList(Status19Choice.mmCorporateActionEventProcessingStatus);
 			maxOccurs = 1;
 			minOccurs = 1;
 			isComposite = true;
@@ -378,14 +380,14 @@ public class Status8Choice {
 	 */
 	public static final MMMessageAssociationEnd mmCorporateActionEventStage = new MMMessageAssociationEnd() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.CorporateActionEvent.mmEventStage;
+			businessElementTrace_lazy = () -> CorporateActionEvent.mmEventStage;
 			componentContext_lazy = () -> Status8Choice.mmObject();
 			isDerived = false;
 			xmlTag = "CorpActnEvtStag";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CorporateActionEventStage";
 			definition = "Stage in the corporate action event life cycle.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.choice.Status19Choice.mmCorporateActionEventStage);
+			nextVersions_lazy = () -> Arrays.asList(Status19Choice.mmCorporateActionEventStage);
 			maxOccurs = 1;
 			minOccurs = 1;
 			isComposite = true;
@@ -439,14 +441,14 @@ public class Status8Choice {
 	 */
 	public static final MMMessageAssociationEnd mmInferredMatchingStatus = new MMMessageAssociationEnd() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.SecuritiesTradeStatus.mmMatchingStatus;
+			businessElementTrace_lazy = () -> SecuritiesTradeStatus.mmMatchingStatus;
 			componentContext_lazy = () -> Status8Choice.mmObject();
 			isDerived = false;
 			xmlTag = "IfrrdMtchgSts";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "InferredMatchingStatus";
 			definition = "Provides the matching status of an instruction as known by the account servicer based on an allegement. At this time no matching took place on the market (at the CSD/ICSD).";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.choice.Status19Choice.mmInferredMatchingStatus);
+			nextVersions_lazy = () -> Arrays.asList(Status19Choice.mmInferredMatchingStatus);
 			maxOccurs = 1;
 			minOccurs = 1;
 			isComposite = true;
@@ -496,14 +498,14 @@ public class Status8Choice {
 	 */
 	public static final MMMessageAssociationEnd mmInstructionProcessingStatus = new MMMessageAssociationEnd() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Status.mmTransactionProcessingStatus;
+			businessElementTrace_lazy = () -> Status.mmTransactionProcessingStatus;
 			componentContext_lazy = () -> Status8Choice.mmObject();
 			isDerived = false;
 			xmlTag = "InstrPrcgSts";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "InstructionProcessingStatus";
 			definition = "Provides the status of an instruction.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.choice.Status19Choice.mmInstructionProcessingStatus);
+			nextVersions_lazy = () -> Arrays.asList(Status19Choice.mmInstructionProcessingStatus);
 			maxOccurs = 1;
 			minOccurs = 1;
 			isComposite = true;
@@ -553,14 +555,14 @@ public class Status8Choice {
 	 */
 	public static final MMMessageAssociationEnd mmMatchingStatus = new MMMessageAssociationEnd() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.SecuritiesTradeStatus.mmMatchingStatus;
+			businessElementTrace_lazy = () -> SecuritiesTradeStatus.mmMatchingStatus;
 			componentContext_lazy = () -> Status8Choice.mmObject();
 			isDerived = false;
 			xmlTag = "MtchgSts";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "MatchingStatus";
 			definition = "Provides the matching status of the instruction.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.choice.Status19Choice.mmMatchingStatus);
+			nextVersions_lazy = () -> Arrays.asList(Status19Choice.mmMatchingStatus);
 			maxOccurs = 1;
 			minOccurs = 1;
 			isComposite = true;
@@ -610,14 +612,14 @@ public class Status8Choice {
 	 */
 	public static final MMMessageAssociationEnd mmRegistrationProcessingStatus = new MMMessageAssociationEnd() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Status.mmTransactionProcessingStatus;
+			businessElementTrace_lazy = () -> Status.mmTransactionProcessingStatus;
 			componentContext_lazy = () -> Status8Choice.mmObject();
 			isDerived = false;
 			xmlTag = "RegnPrcgSts";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "RegistrationProcessingStatus";
 			definition = "Provides the status of the registration processing.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.choice.Status19Choice.mmRegistrationProcessingStatus);
+			nextVersions_lazy = () -> Arrays.asList(Status19Choice.mmRegistrationProcessingStatus);
 			maxOccurs = 1;
 			minOccurs = 1;
 			isComposite = true;
@@ -671,14 +673,14 @@ public class Status8Choice {
 	 */
 	public static final MMMessageAssociationEnd mmResponseStatus = new MMMessageAssociationEnd() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.CollateralStatus.mmResponseStatus;
+			businessElementTrace_lazy = () -> CollateralStatus.mmResponseStatus;
 			componentContext_lazy = () -> Status8Choice.mmObject();
 			isDerived = false;
 			xmlTag = "RspnSts";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ResponseStatus";
 			definition = "Provides the status of the received collateral message (collateral claim, a collateral proposal or a proposal/request for collateral substitution) from a collateral management perspective.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.choice.Status19Choice.mmResponseStatus);
+			nextVersions_lazy = () -> Arrays.asList(Status19Choice.mmResponseStatus);
 			maxOccurs = 1;
 			minOccurs = 1;
 			isComposite = true;
@@ -729,14 +731,14 @@ public class Status8Choice {
 	 */
 	public static final MMMessageAssociationEnd mmReplacementProcessingStatus = new MMMessageAssociationEnd() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Status.mmTransactionProcessingStatus;
+			businessElementTrace_lazy = () -> Status.mmTransactionProcessingStatus;
 			componentContext_lazy = () -> Status8Choice.mmObject();
 			isDerived = false;
 			xmlTag = "RplcmntPrcgSts";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ReplacementProcessingStatus";
 			definition = "Provides the processing status of the replacement request.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.choice.Status19Choice.mmReplacementProcessingStatus);
+			nextVersions_lazy = () -> Arrays.asList(Status19Choice.mmReplacementProcessingStatus);
 			maxOccurs = 1;
 			minOccurs = 1;
 			isComposite = true;
@@ -786,14 +788,14 @@ public class Status8Choice {
 	 */
 	public static final MMMessageAssociationEnd mmCancellationProcessingStatus = new MMMessageAssociationEnd() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Status.mmCancellationProcessingStatus;
+			businessElementTrace_lazy = () -> Status.mmCancellationProcessingStatus;
 			componentContext_lazy = () -> Status8Choice.mmObject();
 			isDerived = false;
 			xmlTag = "CxlPrcgSts";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CancellationProcessingStatus";
 			definition = "Provides the status of a cancellation request.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.choice.Status19Choice.mmCancellationProcessingStatus);
+			nextVersions_lazy = () -> Arrays.asList(Status19Choice.mmCancellationProcessingStatus);
 			maxOccurs = 1;
 			minOccurs = 1;
 			isComposite = true;
@@ -843,14 +845,14 @@ public class Status8Choice {
 	 */
 	public static final MMMessageAssociationEnd mmSettlementStatus = new MMMessageAssociationEnd() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Status.mmSettlementStatus;
+			businessElementTrace_lazy = () -> Status.mmSettlementStatus;
 			componentContext_lazy = () -> Status8Choice.mmObject();
 			isDerived = false;
 			xmlTag = "SttlmSts";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SettlementStatus";
 			definition = "Provides the status of settlement of a transaction.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.choice.Status19Choice.mmSettlementStatus);
+			nextVersions_lazy = () -> Arrays.asList(Status19Choice.mmSettlementStatus);
 			maxOccurs = 1;
 			minOccurs = 1;
 			isComposite = true;
@@ -903,14 +905,14 @@ public class Status8Choice {
 	 */
 	public static final MMMessageAssociationEnd mmSettlementConditionModificationStatus = new MMMessageAssociationEnd() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.SecuritiesTradeStatus.mmSettlementConditionModificationStatus;
+			businessElementTrace_lazy = () -> SecuritiesTradeStatus.mmSettlementConditionModificationStatus;
 			componentContext_lazy = () -> Status8Choice.mmObject();
 			isDerived = false;
 			xmlTag = "SttlmCondModSts";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SettlementConditionModificationStatus";
 			definition = "Provides the status of a securities settlement condition modification request.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.choice.Status19Choice.mmSettlementConditionModificationStatus);
+			nextVersions_lazy = () -> Arrays.asList(Status19Choice.mmSettlementConditionModificationStatus);
 			maxOccurs = 1;
 			minOccurs = 1;
 			isComposite = true;
@@ -921,16 +923,12 @@ public class Status8Choice {
 	final static public MMChoiceComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMChoiceComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.choice.Status8Choice.mmAffirmationStatus, com.tools20022.repository.choice.Status8Choice.mmAllocationStatus,
-						com.tools20022.repository.choice.Status8Choice.mmRepoCallRequestStatus, com.tools20022.repository.choice.Status8Choice.mmCorporateActionEventProcessingStatus,
-						com.tools20022.repository.choice.Status8Choice.mmCorporateActionEventStage, com.tools20022.repository.choice.Status8Choice.mmInferredMatchingStatus,
-						com.tools20022.repository.choice.Status8Choice.mmInstructionProcessingStatus, com.tools20022.repository.choice.Status8Choice.mmMatchingStatus,
-						com.tools20022.repository.choice.Status8Choice.mmRegistrationProcessingStatus, com.tools20022.repository.choice.Status8Choice.mmResponseStatus,
-						com.tools20022.repository.choice.Status8Choice.mmReplacementProcessingStatus, com.tools20022.repository.choice.Status8Choice.mmCancellationProcessingStatus,
-						com.tools20022.repository.choice.Status8Choice.mmSettlementStatus, com.tools20022.repository.choice.Status8Choice.mmSettlementConditionModificationStatus);
+				messageElement_lazy = () -> Arrays.asList(Status8Choice.mmAffirmationStatus, Status8Choice.mmAllocationStatus, Status8Choice.mmRepoCallRequestStatus, Status8Choice.mmCorporateActionEventProcessingStatus,
+						Status8Choice.mmCorporateActionEventStage, Status8Choice.mmInferredMatchingStatus, Status8Choice.mmInstructionProcessingStatus, Status8Choice.mmMatchingStatus, Status8Choice.mmRegistrationProcessingStatus,
+						Status8Choice.mmResponseStatus, Status8Choice.mmReplacementProcessingStatus, Status8Choice.mmCancellationProcessingStatus, Status8Choice.mmSettlementStatus, Status8Choice.mmSettlementConditionModificationStatus);
 				trace_lazy = () -> Status.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "Status8Choice";
 				definition = "Choice of status.";
 				nextVersions_lazy = () -> Arrays.asList(Status19Choice.mmObject());

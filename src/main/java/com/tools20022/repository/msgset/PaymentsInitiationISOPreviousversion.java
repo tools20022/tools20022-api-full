@@ -18,10 +18,12 @@
 package com.tools20022.repository.msgset;
 
 import com.tools20022.metamodel.MMMessageSet;
+import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.area.pain.CustomerCreditTransferInitiationV07;
 import com.tools20022.repository.area.pain.CustomerDirectDebitInitiationV06;
 import com.tools20022.repository.area.pain.CustomerPaymentReversalV06;
 import com.tools20022.repository.area.pain.CustomerPaymentStatusReportV07;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -73,8 +75,8 @@ public class PaymentsInitiationISOPreviousversion {
 	final static public MMMessageSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageSet() {
 			{
-				businessProcessCatalogue_lazy = () -> com.tools20022.repository.GeneratedRepository.mmcatalogue;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+				businessProcessCatalogue_lazy = () -> GeneratedRepository.mmcatalogue;
+				registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 				name = "Payments Initiation - ISO - Previous version";
 				definition = "Set of messages exchanged between a debtor (or buyer) and its bank or between a creditor (or seller) and its bank to initiate, collect, manage and monitor payments.\r\n";
 				messageDefinition_lazy = () -> Arrays.asList(CustomerCreditTransferInitiationV07.mmObject(), CustomerPaymentReversalV06.mmObject(), CustomerDirectDebitInitiationV06.mmObject(), CustomerPaymentStatusReportV07.mmObject());

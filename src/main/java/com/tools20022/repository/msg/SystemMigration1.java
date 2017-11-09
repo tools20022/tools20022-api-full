@@ -19,8 +19,10 @@ package com.tools20022.repository.msg;
 
 import com.tools20022.metamodel.MMMessageAttribute;
 import com.tools20022.metamodel.MMMessageComponent;
+import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.datatype.ISODateTime;
 import com.tools20022.repository.datatype.YesNoIndicator;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -102,7 +104,7 @@ public class SystemMigration1 {
 			componentContext_lazy = () -> SystemMigration1.mmObject();
 			isDerived = false;
 			xmlTag = "NPSPtcptInd";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "NPSParticipantIndicator";
 			definition = "Indicates whether the participant is a member of a new payment system.";
 			maxOccurs = 1;
@@ -143,7 +145,7 @@ public class SystemMigration1 {
 			componentContext_lazy = () -> SystemMigration1.mmObject();
 			isDerived = false;
 			xmlTag = "PlandMgrtnDt";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PlannedMigrationDate";
 			definition = "Planned migration date.";
 			maxOccurs = 1;
@@ -185,7 +187,7 @@ public class SystemMigration1 {
 			componentContext_lazy = () -> SystemMigration1.mmObject();
 			isDerived = false;
 			xmlTag = "BalRcvdInd";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "BalanceReceivedIndicator";
 			definition = "Indicates whether the balance was received.";
 			maxOccurs = 1;
@@ -227,7 +229,7 @@ public class SystemMigration1 {
 			componentContext_lazy = () -> SystemMigration1.mmObject();
 			isDerived = false;
 			xmlTag = "Mgrtd";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Migrated";
 			definition = "Indicates whether the participant was migrated.";
 			maxOccurs = 1;
@@ -268,7 +270,7 @@ public class SystemMigration1 {
 			componentContext_lazy = () -> SystemMigration1.mmObject();
 			isDerived = false;
 			xmlTag = "LastDt";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "LastDate";
 			definition = "Date of the latest RABIS service";
 			maxOccurs = 1;
@@ -280,10 +282,10 @@ public class SystemMigration1 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.SystemMigration1.mmNPSParticipantIndicator, com.tools20022.repository.msg.SystemMigration1.mmPlannedMigrationDate,
-						com.tools20022.repository.msg.SystemMigration1.mmBalanceReceivedIndicator, com.tools20022.repository.msg.SystemMigration1.mmMigrated, com.tools20022.repository.msg.SystemMigration1.mmLastDate);
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+				messageElement_lazy = () -> Arrays.asList(SystemMigration1.mmNPSParticipantIndicator, SystemMigration1.mmPlannedMigrationDate, SystemMigration1.mmBalanceReceivedIndicator, SystemMigration1.mmMigrated,
+						SystemMigration1.mmLastDate);
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 				name = "SystemMigration1";
 				definition = "Data about participant migration to new payment system process.";
 			}

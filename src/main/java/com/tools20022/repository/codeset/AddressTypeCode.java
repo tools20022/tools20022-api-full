@@ -19,6 +19,8 @@ package com.tools20022.repository.codeset;
 
 import com.tools20022.metamodel.MMCode;
 import com.tools20022.metamodel.MMCodeSet;
+import com.tools20022.metamodel.MMRegistrationStatus;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -27,6 +29,15 @@ import java.util.concurrent.atomic.AtomicReference;
  * <p>
  * <strong>Constant fields:</strong>
  * <ul>
+ * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getDerivation derivation}
+ * =
+ * <ul>
+ * <li>{@linkplain com.tools20022.repository.codeset.AddressType2Code
+ * AddressType2Code}</li>
+ * <li>{@linkplain com.tools20022.repository.codeset.AddressType1Code
+ * AddressType1Code}</li>
+ * </ul>
+ * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getCode code} =
  * <ul>
  * <li>
@@ -43,15 +54,6 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>
  * {@linkplain com.tools20022.repository.codeset.AddressTypeCode#mmDeliveryTo
  * AddressTypeCode.mmDeliveryTo}</li>
- * </ul>
- * </li>
- * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getDerivation derivation}
- * =
- * <ul>
- * <li>{@linkplain com.tools20022.repository.codeset.AddressType2Code
- * AddressType2Code}</li>
- * <li>{@linkplain com.tools20022.repository.codeset.AddressType1Code
- * AddressType1Code}</li>
  * </ul>
  * </li>
  * <li>
@@ -101,7 +103,7 @@ public class AddressTypeCode {
 	 */
 	public static final MMCode mmResidential = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "Residential";
 			definition = "Address is the home address.";
 			owner_lazy = () -> AddressTypeCode.mmObject();
@@ -131,7 +133,7 @@ public class AddressTypeCode {
 	 */
 	public static final MMCode mmBusiness = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "Business";
 			definition = "Address is the business address.";
 			owner_lazy = () -> AddressTypeCode.mmObject();
@@ -161,7 +163,7 @@ public class AddressTypeCode {
 	 */
 	public static final MMCode mmPostal = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "Postal";
 			definition = "Address is the complete postal address.";
 			owner_lazy = () -> AddressTypeCode.mmObject();
@@ -191,7 +193,7 @@ public class AddressTypeCode {
 	 */
 	public static final MMCode mmPOBox = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "POBox";
 			definition = "Address is a postal office (PO) box.";
 			owner_lazy = () -> AddressTypeCode.mmObject();
@@ -221,7 +223,7 @@ public class AddressTypeCode {
 	 */
 	public static final MMCode mmMailTo = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "MailTo";
 			definition = "Address is the address to which mail is sent.";
 			owner_lazy = () -> AddressTypeCode.mmObject();
@@ -252,7 +254,7 @@ public class AddressTypeCode {
 	 */
 	public static final MMCode mmDeliveryTo = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "DeliveryTo";
 			definition = "Address is the address to which delivery is to take place.";
 			owner_lazy = () -> AddressTypeCode.mmObject();
@@ -263,13 +265,12 @@ public class AddressTypeCode {
 	static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
 				example = Arrays.asList("HOME");
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "AddressTypeCode";
 				definition = "Specifies the type of address.";
-				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.AddressTypeCode.mmResidential, com.tools20022.repository.codeset.AddressTypeCode.mmBusiness, com.tools20022.repository.codeset.AddressTypeCode.mmPostal,
-						com.tools20022.repository.codeset.AddressTypeCode.mmPOBox, com.tools20022.repository.codeset.AddressTypeCode.mmMailTo, com.tools20022.repository.codeset.AddressTypeCode.mmDeliveryTo);
+				code_lazy = () -> Arrays.asList(AddressTypeCode.mmResidential, AddressTypeCode.mmBusiness, AddressTypeCode.mmPostal, AddressTypeCode.mmPOBox, AddressTypeCode.mmMailTo, AddressTypeCode.mmDeliveryTo);
 				derivation_lazy = () -> Arrays.asList(AddressType2Code.mmObject(), AddressType1Code.mmObject());
 			}
 		});

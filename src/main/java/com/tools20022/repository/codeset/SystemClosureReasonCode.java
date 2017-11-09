@@ -19,6 +19,8 @@ package com.tools20022.repository.codeset;
 
 import com.tools20022.metamodel.MMCode;
 import com.tools20022.metamodel.MMCodeSet;
+import com.tools20022.metamodel.MMRegistrationStatus;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -27,6 +29,13 @@ import java.util.concurrent.atomic.AtomicReference;
  * <p>
  * <strong>Constant fields:</strong>
  * <ul>
+ * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getDerivation derivation}
+ * =
+ * <ul>
+ * <li>{@linkplain com.tools20022.repository.codeset.SystemClosureReason1Code
+ * SystemClosureReason1Code}</li>
+ * </ul>
+ * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getCode code} =
  * <ul>
  * <li>
@@ -44,13 +53,6 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>
  * {@linkplain com.tools20022.repository.codeset.SystemClosureReasonCode#mmAllowedDowntimeWindow
  * SystemClosureReasonCode.mmAllowedDowntimeWindow}</li>
- * </ul>
- * </li>
- * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getDerivation derivation}
- * =
- * <ul>
- * <li>{@linkplain com.tools20022.repository.codeset.SystemClosureReason1Code
- * SystemClosureReason1Code}</li>
  * </ul>
  * </li>
  * <li>
@@ -100,7 +102,7 @@ public class SystemClosureReasonCode {
 	 */
 	public static final MMCode mmBankingHoliday = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "BankingHoliday";
 			definition = "System is closed due to a bank holiday.";
 			owner_lazy = () -> SystemClosureReasonCode.mmObject();
@@ -130,7 +132,7 @@ public class SystemClosureReasonCode {
 	 */
 	public static final MMCode mmSystemMaintenance = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "SystemMaintenance";
 			definition = "System is closed for maintenance reasons.";
 			owner_lazy = () -> SystemClosureReasonCode.mmObject();
@@ -160,7 +162,7 @@ public class SystemClosureReasonCode {
 	 */
 	public static final MMCode mmNoOperation = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "NoOperation";
 			definition = "System is not processing any operation.";
 			owner_lazy = () -> SystemClosureReasonCode.mmObject();
@@ -190,7 +192,7 @@ public class SystemClosureReasonCode {
 	 */
 	public static final MMCode mmRecovery = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "Recovery";
 			definition = "System is not operational during recovery operations.";
 			owner_lazy = () -> SystemClosureReasonCode.mmObject();
@@ -221,7 +223,7 @@ public class SystemClosureReasonCode {
 	 */
 	public static final MMCode mmAllowedDowntimeWindow = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "AllowedDowntimeWindow";
 			definition = "System is not operational during allowed downtime windows.";
 			owner_lazy = () -> SystemClosureReasonCode.mmObject();
@@ -232,14 +234,13 @@ public class SystemClosureReasonCode {
 	static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
 				example = Arrays.asList("BHOL");
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "SystemClosureReasonCode";
 				definition = "Specifies the reason for system inactivity.";
-				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.SystemClosureReasonCode.mmBankingHoliday, com.tools20022.repository.codeset.SystemClosureReasonCode.mmSystemMaintenance,
-						com.tools20022.repository.codeset.SystemClosureReasonCode.mmNoOperation, com.tools20022.repository.codeset.SystemClosureReasonCode.mmRecovery,
-						com.tools20022.repository.codeset.SystemClosureReasonCode.mmAllowedDowntimeWindow);
+				code_lazy = () -> Arrays.asList(SystemClosureReasonCode.mmBankingHoliday, SystemClosureReasonCode.mmSystemMaintenance, SystemClosureReasonCode.mmNoOperation, SystemClosureReasonCode.mmRecovery,
+						SystemClosureReasonCode.mmAllowedDowntimeWindow);
 				derivation_lazy = () -> Arrays.asList(SystemClosureReason1Code.mmObject());
 			}
 		});

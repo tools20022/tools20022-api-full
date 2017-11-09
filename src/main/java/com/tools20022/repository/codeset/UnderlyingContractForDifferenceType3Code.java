@@ -19,7 +19,9 @@ package com.tools20022.repository.codeset;
 
 import com.tools20022.metamodel.MMCode;
 import com.tools20022.metamodel.MMCodeSet;
+import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.codeset.UnderlyingTypeV3Code;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -96,7 +98,7 @@ public class UnderlyingContractForDifferenceType3Code extends UnderlyingTypeV3Co
 	 */
 	public static final MMCode mmBond = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Bond";
 			owner_lazy = () -> UnderlyingContractForDifferenceType3Code.mmObject();
 		}
@@ -119,7 +121,7 @@ public class UnderlyingContractForDifferenceType3Code extends UnderlyingTypeV3Co
 	 */
 	public static final MMCode mmCommodity = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Commodity";
 			owner_lazy = () -> UnderlyingContractForDifferenceType3Code.mmObject();
 		}
@@ -142,7 +144,7 @@ public class UnderlyingContractForDifferenceType3Code extends UnderlyingTypeV3Co
 	 */
 	public static final MMCode mmCurrency = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Currency";
 			owner_lazy = () -> UnderlyingContractForDifferenceType3Code.mmObject();
 		}
@@ -165,7 +167,7 @@ public class UnderlyingContractForDifferenceType3Code extends UnderlyingTypeV3Co
 	 */
 	public static final MMCode mmEmissionAllowance = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "EmissionAllowance";
 			owner_lazy = () -> UnderlyingContractForDifferenceType3Code.mmObject();
 		}
@@ -188,7 +190,7 @@ public class UnderlyingContractForDifferenceType3Code extends UnderlyingTypeV3Co
 	 */
 	public static final MMCode mmEquity = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Equity";
 			owner_lazy = () -> UnderlyingContractForDifferenceType3Code.mmObject();
 		}
@@ -211,7 +213,7 @@ public class UnderlyingContractForDifferenceType3Code extends UnderlyingTypeV3Co
 	 */
 	public static final MMCode mmFutureOnEquity = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "FutureOnEquity";
 			owner_lazy = () -> UnderlyingContractForDifferenceType3Code.mmObject();
 		}
@@ -234,7 +236,7 @@ public class UnderlyingContractForDifferenceType3Code extends UnderlyingTypeV3Co
 	 */
 	public static final MMCode mmOptionOnEquity = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "OptionOnEquity";
 			owner_lazy = () -> UnderlyingContractForDifferenceType3Code.mmObject();
 		}
@@ -257,7 +259,7 @@ public class UnderlyingContractForDifferenceType3Code extends UnderlyingTypeV3Co
 	 */
 	public static final MMCode mmOther = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Other";
 			owner_lazy = () -> UnderlyingContractForDifferenceType3Code.mmObject();
 		}
@@ -266,14 +268,13 @@ public class UnderlyingContractForDifferenceType3Code extends UnderlyingTypeV3Co
 	static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "UnderlyingContractForDifferenceType3Code";
 				definition = "Specifies the type for an underlying contract for difference derivative.";
-				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.UnderlyingContractForDifferenceType3Code.mmBond, com.tools20022.repository.codeset.UnderlyingContractForDifferenceType3Code.mmCommodity,
-						com.tools20022.repository.codeset.UnderlyingContractForDifferenceType3Code.mmCurrency, com.tools20022.repository.codeset.UnderlyingContractForDifferenceType3Code.mmEmissionAllowance,
-						com.tools20022.repository.codeset.UnderlyingContractForDifferenceType3Code.mmEquity, com.tools20022.repository.codeset.UnderlyingContractForDifferenceType3Code.mmFutureOnEquity,
-						com.tools20022.repository.codeset.UnderlyingContractForDifferenceType3Code.mmOptionOnEquity, com.tools20022.repository.codeset.UnderlyingContractForDifferenceType3Code.mmOther);
+				code_lazy = () -> Arrays.asList(UnderlyingContractForDifferenceType3Code.mmBond, UnderlyingContractForDifferenceType3Code.mmCommodity, UnderlyingContractForDifferenceType3Code.mmCurrency,
+						UnderlyingContractForDifferenceType3Code.mmEmissionAllowance, UnderlyingContractForDifferenceType3Code.mmEquity, UnderlyingContractForDifferenceType3Code.mmFutureOnEquity,
+						UnderlyingContractForDifferenceType3Code.mmOptionOnEquity, UnderlyingContractForDifferenceType3Code.mmOther);
 				trace_lazy = () -> UnderlyingTypeV3Code.mmObject();
 			}
 		});

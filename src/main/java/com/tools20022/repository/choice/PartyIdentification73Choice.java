@@ -20,8 +20,13 @@ package com.tools20022.repository.choice;
 import com.tools20022.metamodel.MMChoiceComponent;
 import com.tools20022.metamodel.MMMessageAssociationEnd;
 import com.tools20022.metamodel.MMMessageAttribute;
+import com.tools20022.metamodel.MMRegistrationStatus;
+import com.tools20022.repository.area.camt.NetReportV01;
+import com.tools20022.repository.area.camt.PayInCallV02;
+import com.tools20022.repository.area.camt.PayInScheduleV03;
 import com.tools20022.repository.entity.OrganisationIdentification;
 import com.tools20022.repository.entity.PartyIdentificationInformation;
+import com.tools20022.repository.GeneratedRepository;
 import com.tools20022.repository.msg.NameAndAddress8;
 import com.tools20022.repository.msg.PartyIdentification44;
 import com.tools20022.repository.msg.PartyIdentification59;
@@ -136,7 +141,7 @@ public class PartyIdentification73Choice {
 			componentContext_lazy = () -> PartyIdentification73Choice.mmObject();
 			isDerived = false;
 			xmlTag = "NmAndAdr";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "NameAndAddress";
 			definition = "Identification of the party expressed as name and an optional address and an optional alternative identifier.";
 			maxOccurs = 1;
@@ -186,7 +191,7 @@ public class PartyIdentification73Choice {
 			componentContext_lazy = () -> PartyIdentification73Choice.mmObject();
 			isDerived = false;
 			xmlTag = "AnyBIC";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AnyBIC";
 			definition = "Identification of the party expressed as a BIC and an optional alternative identifier.";
 			maxOccurs = 1;
@@ -236,7 +241,7 @@ public class PartyIdentification73Choice {
 			componentContext_lazy = () -> PartyIdentification73Choice.mmObject();
 			isDerived = false;
 			xmlTag = "PtyId";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PartyIdentification";
 			definition = "Party Identification specified as a list of values per element";
 			maxOccurs = 1;
@@ -248,13 +253,12 @@ public class PartyIdentification73Choice {
 	final static public MMChoiceComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMChoiceComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.choice.PartyIdentification73Choice.mmNameAndAddress, com.tools20022.repository.choice.PartyIdentification73Choice.mmAnyBIC,
-						com.tools20022.repository.choice.PartyIdentification73Choice.mmPartyIdentification);
-				messageBuildingBlock_lazy = () -> Arrays.asList(com.tools20022.repository.area.camt.PayInCallV02.mmPartyIdentification, com.tools20022.repository.area.camt.PayInScheduleV03.mmPartyIdentification,
-						com.tools20022.repository.area.camt.NetReportV01.mmNetServiceParticipantIdentification, com.tools20022.repository.area.camt.NetReportV01.mmNetServiceCounterpartyIdentification);
+				messageElement_lazy = () -> Arrays.asList(PartyIdentification73Choice.mmNameAndAddress, PartyIdentification73Choice.mmAnyBIC, PartyIdentification73Choice.mmPartyIdentification);
+				messageBuildingBlock_lazy = () -> Arrays.asList(PayInCallV02.mmPartyIdentification, PayInScheduleV03.mmPartyIdentification, NetReportV01.mmNetServiceParticipantIdentification,
+						NetReportV01.mmNetServiceCounterpartyIdentification);
 				trace_lazy = () -> PartyIdentificationInformation.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "PartyIdentification73Choice";
 				definition = "Identification of a party by a choice between a BIC or a name and address or an LEI.";
 				previousVersion_lazy = () -> PartyIdentification19Choice.mmObject();

@@ -19,7 +19,9 @@ package com.tools20022.repository.codeset;
 
 import com.tools20022.metamodel.MMCode;
 import com.tools20022.metamodel.MMCodeSet;
+import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.codeset.LotteryTypeCode;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -83,7 +85,7 @@ public class LotteryType1Code extends LotteryTypeCode {
 	 */
 	public static final MMCode mmOriginalLotteryNotification = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "OriginalLotteryNotification";
 			owner_lazy = () -> LotteryType1Code.mmObject();
 		}
@@ -106,7 +108,7 @@ public class LotteryType1Code extends LotteryTypeCode {
 	 */
 	public static final MMCode mmSupplementalLotteryNotification = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SupplementalLotteryNotification";
 			owner_lazy = () -> LotteryType1Code.mmObject();
 		}
@@ -115,12 +117,12 @@ public class LotteryType1Code extends LotteryTypeCode {
 	static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
 				example = Arrays.asList("ORIG");
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "LotteryType1Code";
 				definition = "Specifies the type of lottery.";
-				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.LotteryType1Code.mmOriginalLotteryNotification, com.tools20022.repository.codeset.LotteryType1Code.mmSupplementalLotteryNotification);
+				code_lazy = () -> Arrays.asList(LotteryType1Code.mmOriginalLotteryNotification, LotteryType1Code.mmSupplementalLotteryNotification);
 				trace_lazy = () -> LotteryTypeCode.mmObject();
 			}
 		});

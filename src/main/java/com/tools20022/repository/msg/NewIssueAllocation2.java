@@ -20,10 +20,13 @@ package com.tools20022.repository.msg;
 import com.tools20022.metamodel.MMMessageAssociationEnd;
 import com.tools20022.metamodel.MMMessageAttribute;
 import com.tools20022.metamodel.MMMessageComponent;
+import com.tools20022.metamodel.MMRegistrationStatus;
+import com.tools20022.repository.area.acmt.*;
 import com.tools20022.repository.choice.DeMinimus1Choice;
 import com.tools20022.repository.datatype.Max350Text;
 import com.tools20022.repository.datatype.YesNoIndicator;
 import com.tools20022.repository.entity.Investor;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -142,14 +145,14 @@ public class NewIssueAllocation2 {
 	 */
 	public static final MMMessageAttribute mmRestricted = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Investor.mmRestricted;
+			businessElementTrace_lazy = () -> Investor.mmRestricted;
 			componentContext_lazy = () -> NewIssueAllocation2.mmObject();
 			isDerived = false;
 			xmlTag = "Rstrctd";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Restricted";
 			definition = "Indicates whether the investor is eligible to participate in the profits and losses from a new issue.";
-			previousVersion_lazy = () -> com.tools20022.repository.msg.NewIssueAllocation1.mmRestricted;
+			previousVersion_lazy = () -> NewIssueAllocation1.mmRestricted;
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> YesNoIndicator.mmObject();
@@ -193,10 +196,10 @@ public class NewIssueAllocation2 {
 			componentContext_lazy = () -> NewIssueAllocation2.mmObject();
 			isDerived = false;
 			xmlTag = "XmptPrsnRsn";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ExemptPersonReason";
 			definition = "Reason for exemption.";
-			previousVersion_lazy = () -> com.tools20022.repository.msg.NewIssueAllocation1.mmExemptPersonReason;
+			previousVersion_lazy = () -> NewIssueAllocation1.mmExemptPersonReason;
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> Max350Text.mmObject();
@@ -237,7 +240,7 @@ public class NewIssueAllocation2 {
 			componentContext_lazy = () -> NewIssueAllocation2.mmObject();
 			isDerived = false;
 			xmlTag = "DeMnms";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "DeMinimus";
 			definition = "Conditions applicable when the investor is covered by the \"de minimis\" exemption.";
 			maxOccurs = 1;
@@ -250,14 +253,12 @@ public class NewIssueAllocation2 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.NewIssueAllocation2.mmRestricted, com.tools20022.repository.msg.NewIssueAllocation2.mmExemptPersonReason,
-						com.tools20022.repository.msg.NewIssueAllocation2.mmDeMinimus);
-				messageBuildingBlock_lazy = () -> Arrays.asList(com.tools20022.repository.area.acmt.AccountOpeningInstructionV05.mmNewIssueAllocation, com.tools20022.repository.area.acmt.AccountDetailsConfirmationV05.mmNewIssueAllocation,
-						com.tools20022.repository.area.acmt.AccountOpeningInstructionV06.mmNewIssueAllocation, com.tools20022.repository.area.acmt.AccountDetailsConfirmationV06.mmNewIssueAllocation,
-						com.tools20022.repository.area.acmt.AccountDetailsConfirmationV07.mmNewIssueAllocation, com.tools20022.repository.area.acmt.AccountOpeningInstructionV07.mmNewIssueAllocation);
+				messageElement_lazy = () -> Arrays.asList(NewIssueAllocation2.mmRestricted, NewIssueAllocation2.mmExemptPersonReason, NewIssueAllocation2.mmDeMinimus);
+				messageBuildingBlock_lazy = () -> Arrays.asList(AccountOpeningInstructionV05.mmNewIssueAllocation, AccountDetailsConfirmationV05.mmNewIssueAllocation, AccountOpeningInstructionV06.mmNewIssueAllocation,
+						AccountDetailsConfirmationV06.mmNewIssueAllocation, AccountDetailsConfirmationV07.mmNewIssueAllocation, AccountOpeningInstructionV07.mmNewIssueAllocation);
 				trace_lazy = () -> Investor.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "NewIssueAllocation2";
 				definition = "Information about the investment account ownership with respect to new issue allocation for a hedge fund.";
 				previousVersion_lazy = () -> NewIssueAllocation1.mmObject();

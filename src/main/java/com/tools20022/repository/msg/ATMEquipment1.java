@@ -20,7 +20,9 @@ package com.tools20022.repository.msg;
 import com.tools20022.metamodel.MMMessageAssociationEnd;
 import com.tools20022.metamodel.MMMessageAttribute;
 import com.tools20022.metamodel.MMMessageComponent;
+import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.datatype.Max35Text;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.List;
@@ -120,10 +122,10 @@ public class ATMEquipment1 {
 			componentContext_lazy = () -> ATMEquipment1.mmObject();
 			isDerived = false;
 			xmlTag = "Manfctr";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Manufacturer";
 			definition = "ATM Manufacturer.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.ATMEquipment2.mmManufacturer);
+			nextVersions_lazy = () -> Arrays.asList(ATMEquipment2.mmManufacturer);
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> Max35Text.mmObject();
@@ -168,10 +170,10 @@ public class ATMEquipment1 {
 			componentContext_lazy = () -> ATMEquipment1.mmObject();
 			isDerived = false;
 			xmlTag = "Mdl";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Model";
 			definition = "Model of ATM.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.ATMEquipment2.mmModel);
+			nextVersions_lazy = () -> Arrays.asList(ATMEquipment2.mmModel);
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> Max35Text.mmObject();
@@ -217,10 +219,10 @@ public class ATMEquipment1 {
 			componentContext_lazy = () -> ATMEquipment1.mmObject();
 			isDerived = false;
 			xmlTag = "SrlNb";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SerialNumber";
 			definition = "Serial number of the ATM.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.ATMEquipment2.mmSerialNumber);
+			nextVersions_lazy = () -> Arrays.asList(ATMEquipment2.mmSerialNumber);
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> Max35Text.mmObject();
@@ -266,10 +268,10 @@ public class ATMEquipment1 {
 			componentContext_lazy = () -> ATMEquipment1.mmObject();
 			isDerived = false;
 			xmlTag = "ApplPrvdr";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ApplicationProvider";
 			definition = "Provider of the ATM application software.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.ATMEquipment2.mmFirmwareProvider);
+			nextVersions_lazy = () -> Arrays.asList(ATMEquipment2.mmFirmwareProvider);
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> Max35Text.mmObject();
@@ -307,7 +309,7 @@ public class ATMEquipment1 {
 			componentContext_lazy = () -> ATMEquipment1.mmObject();
 			isDerived = false;
 			xmlTag = "ApplNm";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ApplicationName";
 			definition = "Name of the software product.";
 			maxOccurs = 1;
@@ -356,10 +358,10 @@ public class ATMEquipment1 {
 			componentContext_lazy = () -> ATMEquipment1.mmObject();
 			isDerived = false;
 			xmlTag = "ApplVrsn";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ApplicationVersion";
 			definition = "Current version of the software that might include the release number.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.ATMEquipment2.mmFirmwareIdentification);
+			nextVersions_lazy = () -> Arrays.asList(ATMEquipment2.mmFirmwareIdentification);
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> Max35Text.mmObject();
@@ -405,10 +407,10 @@ public class ATMEquipment1 {
 			componentContext_lazy = () -> ATMEquipment1.mmObject();
 			isDerived = false;
 			xmlTag = "ApprvlNb";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ApprovalNumber";
 			definition = "Unique assessment number for the component.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.ATMEquipment2.mmFirmwareVersion);
+			nextVersions_lazy = () -> Arrays.asList(ATMEquipment2.mmFirmwareVersion);
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> Max35Text.mmObject();
@@ -446,7 +448,7 @@ public class ATMEquipment1 {
 			componentContext_lazy = () -> ATMEquipment1.mmObject();
 			isDerived = false;
 			xmlTag = "CfgtnParam";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ConfigurationParameter";
 			definition = "Configuration parameter version.";
 			minOccurs = 0;
@@ -458,11 +460,10 @@ public class ATMEquipment1 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.ATMEquipment1.mmManufacturer, com.tools20022.repository.msg.ATMEquipment1.mmModel, com.tools20022.repository.msg.ATMEquipment1.mmSerialNumber,
-						com.tools20022.repository.msg.ATMEquipment1.mmApplicationProvider, com.tools20022.repository.msg.ATMEquipment1.mmApplicationName, com.tools20022.repository.msg.ATMEquipment1.mmApplicationVersion,
-						com.tools20022.repository.msg.ATMEquipment1.mmApprovalNumber, com.tools20022.repository.msg.ATMEquipment1.mmConfigurationParameter);
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				messageElement_lazy = () -> Arrays.asList(ATMEquipment1.mmManufacturer, ATMEquipment1.mmModel, ATMEquipment1.mmSerialNumber, ATMEquipment1.mmApplicationProvider, ATMEquipment1.mmApplicationName,
+						ATMEquipment1.mmApplicationVersion, ATMEquipment1.mmApprovalNumber, ATMEquipment1.mmConfigurationParameter);
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "ATMEquipment1";
 				definition = "ATM terminal equipment.";
 				nextVersions_lazy = () -> Arrays.asList(ATMEquipment2.mmObject());

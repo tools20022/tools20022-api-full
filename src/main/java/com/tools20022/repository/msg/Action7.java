@@ -20,9 +20,11 @@ package com.tools20022.repository.msg;
 import com.tools20022.metamodel.MMMessageAssociationEnd;
 import com.tools20022.metamodel.MMMessageAttribute;
 import com.tools20022.metamodel.MMMessageComponent;
+import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.codeset.ActionType6Code;
 import com.tools20022.repository.codeset.MessageFunction11Code;
 import com.tools20022.repository.entity.CardPaymentAcquiring;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -99,11 +101,11 @@ public class Action7 {
 	 */
 	public static final MMMessageAttribute mmActionType = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.CardPaymentAcquiring.mmActionType;
+			businessElementTrace_lazy = () -> CardPaymentAcquiring.mmActionType;
 			componentContext_lazy = () -> Action7.mmObject();
 			isDerived = false;
 			xmlTag = "ActnTp";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ActionType";
 			definition = "Type of action to be performed by the card acceptor.";
 			maxOccurs = 1;
@@ -144,11 +146,11 @@ public class Action7 {
 	 */
 	public static final MMMessageAssociationEnd mmMessageToPresent = new MMMessageAssociationEnd() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.CardPaymentAcquiring.mmActionMessage;
+			businessElementTrace_lazy = () -> CardPaymentAcquiring.mmActionMessage;
 			componentContext_lazy = () -> Action7.mmObject();
 			isDerived = false;
 			xmlTag = "MsgToPres";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "MessageToPresent";
 			definition = "Information to display, print or log.";
 			maxOccurs = 1;
@@ -191,7 +193,7 @@ public class Action7 {
 			componentContext_lazy = () -> Action7.mmObject();
 			isDerived = false;
 			xmlTag = "ReqToPrfrm";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "RequestToPerform";
 			definition = "Message to send before the completion of the transaction.";
 			maxOccurs = 1;
@@ -203,10 +205,10 @@ public class Action7 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.Action7.mmActionType, com.tools20022.repository.msg.Action7.mmMessageToPresent, com.tools20022.repository.msg.Action7.mmRequestToPerform);
+				messageElement_lazy = () -> Arrays.asList(Action7.mmActionType, Action7.mmMessageToPresent, Action7.mmRequestToPerform);
 				trace_lazy = () -> CardPaymentAcquiring.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "Action7";
 				definition = "Set of actions to be performed by the card acceptor.";
 			}

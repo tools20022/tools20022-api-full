@@ -19,6 +19,8 @@ package com.tools20022.repository.choice;
 
 import com.tools20022.metamodel.MMChoiceComponent;
 import com.tools20022.metamodel.MMMessageAssociationEnd;
+import com.tools20022.metamodel.MMRegistrationStatus;
+import com.tools20022.repository.GeneratedRepository;
 import com.tools20022.repository.msg.ReportLine5;
 import com.tools20022.repository.msg.ReportLine6;
 import java.util.Arrays;
@@ -92,7 +94,7 @@ public class BreakDown1Choice {
 			componentContext_lazy = () -> BreakDown1Choice.mmObject();
 			isDerived = false;
 			xmlTag = "ByPurchsOrdr";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ByPurchaseOrder";
 			definition = "The intention to pay is based on a purchase order.";
 			maxOccurs = 1;
@@ -133,7 +135,7 @@ public class BreakDown1Choice {
 			componentContext_lazy = () -> BreakDown1Choice.mmObject();
 			isDerived = false;
 			xmlTag = "ByComrclInvc";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ByCommercialInvoice";
 			definition = "The intention to pay is based on a commercial invoice.";
 			maxOccurs = 1;
@@ -146,9 +148,9 @@ public class BreakDown1Choice {
 	final static public MMChoiceComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMChoiceComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.choice.BreakDown1Choice.mmByPurchaseOrder, com.tools20022.repository.choice.BreakDown1Choice.mmByCommercialInvoice);
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				messageElement_lazy = () -> Arrays.asList(BreakDown1Choice.mmByPurchaseOrder, BreakDown1Choice.mmByCommercialInvoice);
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "BreakDown1Choice";
 				definition = "Specifies if breakdown is by purchase order or commercial invoice.";
 			}

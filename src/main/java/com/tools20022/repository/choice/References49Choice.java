@@ -19,6 +19,10 @@ package com.tools20022.repository.choice;
 
 import com.tools20022.metamodel.MMChoiceComponent;
 import com.tools20022.metamodel.MMMessageAssociationEnd;
+import com.tools20022.metamodel.MMRegistrationStatus;
+import com.tools20022.repository.area.sese.TransferCancellationStatusReportV05;
+import com.tools20022.repository.area.sese.TransferInstructionStatusReportV05;
+import com.tools20022.repository.GeneratedRepository;
 import com.tools20022.repository.msg.AdditionalReference6;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
@@ -129,11 +133,11 @@ public class References49Choice {
 			componentContext_lazy = () -> References49Choice.mmObject();
 			isDerived = false;
 			xmlTag = "RltdRef";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "RelatedReference";
 			definition = "Reference to a linked message that was previously received.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.choice.References61Choice.mmRelatedReference);
-			previousVersion_lazy = () -> com.tools20022.repository.choice.References40Choice.mmRelatedReference;
+			nextVersions_lazy = () -> Arrays.asList(References61Choice.mmRelatedReference);
+			previousVersion_lazy = () -> References40Choice.mmRelatedReference;
 			maxOccurs = 2;
 			minOccurs = 1;
 			isComposite = true;
@@ -188,11 +192,11 @@ public class References49Choice {
 			componentContext_lazy = () -> References49Choice.mmObject();
 			isDerived = false;
 			xmlTag = "OthrRef";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "OtherReference";
 			definition = "Reference to a linked proprietary message or reference of a system that was previously received.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.choice.References61Choice.mmOtherReference);
-			previousVersion_lazy = () -> com.tools20022.repository.choice.References40Choice.mmOtherReference;
+			nextVersions_lazy = () -> Arrays.asList(References61Choice.mmOtherReference);
+			previousVersion_lazy = () -> References40Choice.mmOtherReference;
 			maxOccurs = 2;
 			minOccurs = 1;
 			isComposite = true;
@@ -203,10 +207,10 @@ public class References49Choice {
 	final static public MMChoiceComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMChoiceComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.choice.References49Choice.mmRelatedReference, com.tools20022.repository.choice.References49Choice.mmOtherReference);
-				messageBuildingBlock_lazy = () -> Arrays.asList(com.tools20022.repository.area.sese.TransferInstructionStatusReportV05.mmReference, com.tools20022.repository.area.sese.TransferCancellationStatusReportV05.mmReference);
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				messageElement_lazy = () -> Arrays.asList(References49Choice.mmRelatedReference, References49Choice.mmOtherReference);
+				messageBuildingBlock_lazy = () -> Arrays.asList(TransferInstructionStatusReportV05.mmReference, TransferCancellationStatusReportV05.mmReference);
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "References49Choice";
 				definition = "Choice of references used to reference a previous transaction.";
 				nextVersions_lazy = () -> Arrays.asList(References61Choice.mmObject());

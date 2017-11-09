@@ -19,6 +19,8 @@ package com.tools20022.repository.codeset;
 
 import com.tools20022.metamodel.MMCode;
 import com.tools20022.metamodel.MMCodeSet;
+import com.tools20022.metamodel.MMRegistrationStatus;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -27,6 +29,13 @@ import java.util.concurrent.atomic.AtomicReference;
  * <p>
  * <strong>Constant fields:</strong>
  * <ul>
+ * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getDerivation derivation}
+ * =
+ * <ul>
+ * <li>{@linkplain com.tools20022.repository.codeset.SettlementQueryType1Code
+ * SettlementQueryType1Code}</li>
+ * </ul>
+ * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getCode code} =
  * <ul>
  * <li>
@@ -38,13 +47,6 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>
  * {@linkplain com.tools20022.repository.codeset.SettlementQueryTypeCode#mmStatusPeriod
  * SettlementQueryTypeCode.mmStatusPeriod}</li>
- * </ul>
- * </li>
- * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getDerivation derivation}
- * =
- * <ul>
- * <li>{@linkplain com.tools20022.repository.codeset.SettlementQueryType1Code
- * SettlementQueryType1Code}</li>
  * </ul>
  * </li>
  * <li>
@@ -96,7 +98,7 @@ public class SettlementQueryTypeCode {
 	 */
 	public static final MMCode mmInstruction = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Instruction";
 			definition = "Queries settlement instructions based on criteria exluding statuses.";
 			owner_lazy = () -> SettlementQueryTypeCode.mmObject();
@@ -128,7 +130,7 @@ public class SettlementQueryTypeCode {
 	 */
 	public static final MMCode mmStatus = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Status";
 			definition = "Queries settlement instructions based on criteria that includes statuses.";
 			owner_lazy = () -> SettlementQueryTypeCode.mmObject();
@@ -161,7 +163,7 @@ public class SettlementQueryTypeCode {
 	 */
 	public static final MMCode mmStatusPeriod = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "StatusPeriod";
 			definition = "Queries settlement instructions based on criteria that includes statuses during a period.";
 			owner_lazy = () -> SettlementQueryTypeCode.mmObject();
@@ -172,13 +174,12 @@ public class SettlementQueryTypeCode {
 	static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
 				example = Arrays.asList("INST");
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "SettlementQueryTypeCode";
 				definition = "Specifies the type of settlement instruction query to be executed.";
-				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.SettlementQueryTypeCode.mmInstruction, com.tools20022.repository.codeset.SettlementQueryTypeCode.mmStatus,
-						com.tools20022.repository.codeset.SettlementQueryTypeCode.mmStatusPeriod);
+				code_lazy = () -> Arrays.asList(SettlementQueryTypeCode.mmInstruction, SettlementQueryTypeCode.mmStatus, SettlementQueryTypeCode.mmStatusPeriod);
 				derivation_lazy = () -> Arrays.asList(SettlementQueryType1Code.mmObject());
 			}
 		});

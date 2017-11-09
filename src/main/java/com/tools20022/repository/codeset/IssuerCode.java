@@ -19,6 +19,8 @@ package com.tools20022.repository.codeset;
 
 import com.tools20022.metamodel.MMCode;
 import com.tools20022.metamodel.MMCodeSet;
+import com.tools20022.metamodel.MMRegistrationStatus;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -27,6 +29,13 @@ import java.util.concurrent.atomic.AtomicReference;
  * <p>
  * <strong>Constant fields:</strong>
  * <ul>
+ * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getDerivation derivation}
+ * =
+ * <ul>
+ * <li>{@linkplain com.tools20022.repository.codeset.PartyIssuerCode
+ * PartyIssuerCode}</li>
+ * </ul>
+ * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getCode code} =
  * <ul>
  * <li>
@@ -288,13 +297,6 @@ import java.util.concurrent.atomic.AtomicReference;
  * IssuerCode.mmXClear}</li>
  * </ul>
  * </li>
- * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getDerivation derivation}
- * =
- * <ul>
- * <li>{@linkplain com.tools20022.repository.codeset.PartyIssuerCode
- * PartyIssuerCode}</li>
- * </ul>
- * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
@@ -344,7 +346,7 @@ public class IssuerCode {
 	 */
 	public static final MMCode mmClearstreamBankLuxemburg = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ClearstreamBankLuxemburg";
 			definition = "Based in Luxembourg, the holding, clearing and settlement agency for certain international securities, especially Eurobonds.";
 			owner_lazy = () -> IssuerCode.mmObject();
@@ -373,7 +375,7 @@ public class IssuerCode {
 	 */
 	public static final MMCode mmCajaDeValores = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CajaDeValores";
 			definition = "Caja de Valores S.A.";
 			owner_lazy = () -> IssuerCode.mmObject();
@@ -402,7 +404,7 @@ public class IssuerCode {
 	 */
 	public static final MMCode mmAustraclearLtd = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AustraclearLtd";
 			definition = "Austraclear Limited.";
 			owner_lazy = () -> IssuerCode.mmObject();
@@ -431,7 +433,7 @@ public class IssuerCode {
 	 */
 	public static final MMCode mmAustralianBankStateBranch = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AustralianBankStateBranch";
 			definition = "Australian Bank State Branch Code.";
 			owner_lazy = () -> IssuerCode.mmObject();
@@ -460,7 +462,7 @@ public class IssuerCode {
 	 */
 	public static final MMCode mmClearingHouseElectronicSettlementSystems = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ClearingHouseElectronicSettlementSystems";
 			definition = "Clearing House Electronic Settlements Systems.";
 			owner_lazy = () -> IssuerCode.mmObject();
@@ -489,7 +491,7 @@ public class IssuerCode {
 	 */
 	public static final MMCode mmAustrianBankLeitzahl = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AustrianBankLeitzahl";
 			definition = "Austrian Bankleitzahl.";
 			owner_lazy = () -> IssuerCode.mmObject();
@@ -518,7 +520,7 @@ public class IssuerCode {
 	 */
 	public static final MMCode mmOesterreichischeKontrollbank = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "OesterreichischeKontrollbank";
 			definition = "OKB - Oesterreichische Kontrollbank AG.";
 			owner_lazy = () -> IssuerCode.mmObject();
@@ -549,7 +551,7 @@ public class IssuerCode {
 	 */
 	public static final MMCode mmCaisseInterprofessionelleDepotsVirementsTitres = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CaisseInterprofessionelleDepotsVirementsTitres";
 			definition = "CIK - Caisse Interprofessionelle de Depots et de Virements de Titres S.A.";
 			owner_lazy = () -> IssuerCode.mmObject();
@@ -578,7 +580,7 @@ public class IssuerCode {
 	 */
 	public static final MMCode mmEuroclear = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Euroclear";
 			definition = "Euroclear.";
 			owner_lazy = () -> IssuerCode.mmObject();
@@ -607,7 +609,7 @@ public class IssuerCode {
 	 */
 	public static final MMCode mmBanqueNationaleDeBelgique = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "BanqueNationaleDeBelgique";
 			definition = "Banque Nationale de Belgique.";
 			owner_lazy = () -> IssuerCode.mmObject();
@@ -636,7 +638,7 @@ public class IssuerCode {
 	 */
 	public static final MMCode mmCamaraLiquidacaoCustodia = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CamaraLiquidacaoCustodia";
 			definition = "CLC - Camara de Liquidacao e Custodia S.A. (Brazil).";
 			owner_lazy = () -> IssuerCode.mmObject();
@@ -665,7 +667,7 @@ public class IssuerCode {
 	 */
 	public static final MMCode mmCanadianDepositorySecuritiesLtd = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CanadianDepositorySecuritiesLtd";
 			definition = "CDS - Canadian Depository for Securities Limited.";
 			owner_lazy = () -> IssuerCode.mmObject();
@@ -694,7 +696,7 @@ public class IssuerCode {
 	 */
 	public static final MMCode mmCanadianPaymentsAssociation = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CanadianPaymentsAssociation";
 			definition = "Canadian Payments Association Payment Routing Number.";
 			owner_lazy = () -> IssuerCode.mmObject();
@@ -724,7 +726,7 @@ public class IssuerCode {
 	 */
 	public static final MMCode mmCentralSecuritiesDepositoryDepositoCentralValores = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CentralSecuritiesDepositoryDepositoCentralValores";
 			definition = "Chile Central Securities Depository Deposito Central de Valores.";
 			owner_lazy = () -> IssuerCode.mmObject();
@@ -754,7 +756,7 @@ public class IssuerCode {
 	 */
 	public static final MMCode mmShanghaiSecuritiesCentralClearingRegistrationCompany = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ShanghaiSecuritiesCentralClearingRegistrationCompany";
 			definition = "Shanghai Securities Central Clearing & Registration Company.";
 			owner_lazy = () -> IssuerCode.mmObject();
@@ -783,7 +785,7 @@ public class IssuerCode {
 	 */
 	public static final MMCode mmShenzhenSecuritiesClearingCompany = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ShenzhenSecuritiesClearingCompany";
 			definition = "Shenzhen Securities Clearing Company.";
 			owner_lazy = () -> IssuerCode.mmObject();
@@ -812,7 +814,7 @@ public class IssuerCode {
 	 */
 	public static final MMCode mmColombiaCentralDepositorySystem = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ColombiaCentralDepositorySystem";
 			definition = "Colombia Central Depository System.";
 			owner_lazy = () -> IssuerCode.mmObject();
@@ -841,7 +843,7 @@ public class IssuerCode {
 	 */
 	public static final MMCode mmDenmarkVaerdipapircentralen = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "DenmarkVaerdipapircentralen";
 			definition = "Denmark Vaerdipapircentralen.";
 			owner_lazy = () -> IssuerCode.mmObject();
@@ -870,7 +872,7 @@ public class IssuerCode {
 	 */
 	public static final MMCode mmFinnishCentralSecuritiesDepositoryLtd = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "FinnishCentralSecuritiesDepositoryLtd";
 			definition = "Finnish Central Securities Depository Limited.";
 			owner_lazy = () -> IssuerCode.mmObject();
@@ -899,7 +901,7 @@ public class IssuerCode {
 	 */
 	public static final MMCode mmFranceRIB = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "FranceRIB";
 			definition = "French R.I.B.";
 			owner_lazy = () -> IssuerCode.mmObject();
@@ -931,7 +933,7 @@ public class IssuerCode {
 	 */
 	public static final MMCode mmSICOVAM = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SICOVAM";
 			definition = "Societe Interprofessional Pour La Compensation des Valeurs Mobiliers in France.";
 			owner_lazy = () -> IssuerCode.mmObject();
@@ -960,7 +962,7 @@ public class IssuerCode {
 	 */
 	public static final MMCode mmPragueStockExchange = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PragueStockExchange";
 			definition = "The Prague Stock Exchange.";
 			owner_lazy = () -> IssuerCode.mmObject();
@@ -989,7 +991,7 @@ public class IssuerCode {
 	 */
 	public static final MMCode mmBundesausichtsamtWertpapierhandel = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "BundesausichtsamtWertpapierhandel";
 			definition = "Bundesausichtsamt fur den Wertpapierhandel.";
 			owner_lazy = () -> IssuerCode.mmObject();
@@ -1018,7 +1020,7 @@ public class IssuerCode {
 	 */
 	public static final MMCode mmDeutscheBoerseAGDeutscheTerminborse = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "DeutscheBoerseAGDeutscheTerminborse";
 			definition = "Deutsche Boerse AG: Deutsche Terminborse.";
 			owner_lazy = () -> IssuerCode.mmObject();
@@ -1047,7 +1049,7 @@ public class IssuerCode {
 	 */
 	public static final MMCode mmDeutscheBoerseAGFrankfurterWertpapierborse = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "DeutscheBoerseAGFrankfurterWertpapierborse";
 			definition = "Deutsche Boerse AG: Frankfurter Wertpapierborse.";
 			owner_lazy = () -> IssuerCode.mmObject();
@@ -1076,7 +1078,7 @@ public class IssuerCode {
 	 */
 	public static final MMCode mmDeutscheBoerseAGXETRA = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "DeutscheBoerseAGXETRA";
 			definition = "Deutsche Boerse AG: XETRA (exchange electronic trading).";
 			owner_lazy = () -> IssuerCode.mmObject();
@@ -1105,7 +1107,7 @@ public class IssuerCode {
 	 */
 	public static final MMCode mmDeutscheBorseClearingAG = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "DeutscheBorseClearingAG";
 			definition = "Deutsche Borse Clearing AG.";
 			owner_lazy = () -> IssuerCode.mmObject();
@@ -1134,7 +1136,7 @@ public class IssuerCode {
 	 */
 	public static final MMCode mmDeutscheBundesbank = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "DeutscheBundesbank";
 			definition = "Deutsche Bundesbank.";
 			owner_lazy = () -> IssuerCode.mmObject();
@@ -1163,7 +1165,7 @@ public class IssuerCode {
 	 */
 	public static final MMCode mmGermanBankleitzahl = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "GermanBankleitzahl";
 			definition = "German Bankleitzahl.";
 			owner_lazy = () -> IssuerCode.mmObject();
@@ -1192,7 +1194,7 @@ public class IssuerCode {
 	 */
 	public static final MMCode mmZentralerKreditausschuss = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ZentralerKreditausschuss";
 			definition = "Zentraler Kreditausschuss.";
 			owner_lazy = () -> IssuerCode.mmObject();
@@ -1222,7 +1224,7 @@ public class IssuerCode {
 	 */
 	public static final MMCode mmHongKongCentralClearingSecuritiesSettlementSystem = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "HongKongCentralClearingSecuritiesSettlementSystem";
 			definition = "Hong KongCentral Clearing and Securities Settlement System.";
 			owner_lazy = () -> IssuerCode.mmObject();
@@ -1251,7 +1253,7 @@ public class IssuerCode {
 	 */
 	public static final MMCode mmHongKongNationalClearing = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "HongKongNationalClearing";
 			definition = "Hong Kong National Clearing System.";
 			owner_lazy = () -> IssuerCode.mmObject();
@@ -1280,7 +1282,7 @@ public class IssuerCode {
 	 */
 	public static final MMCode mmIndianNationalSecuritiesDepository = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "IndianNationalSecuritiesDepository";
 			definition = "India National Securities Depositary.";
 			owner_lazy = () -> IssuerCode.mmObject();
@@ -1309,7 +1311,7 @@ public class IssuerCode {
 	 */
 	public static final MMCode mmIndonesianSecuritiesCentralDepository = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "IndonesianSecuritiesCentralDepository";
 			definition = "Indonesian Securities Central Depository.";
 			owner_lazy = () -> IssuerCode.mmObject();
@@ -1338,7 +1340,7 @@ public class IssuerCode {
 	 */
 	public static final MMCode mmIrishNationalClearing = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "IrishNationalClearing";
 			definition = "Irish National Clearing Code.";
 			owner_lazy = () -> IssuerCode.mmObject();
@@ -1367,7 +1369,7 @@ public class IssuerCode {
 	 */
 	public static final MMCode mmTelAvivStockExchange = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "TelAvivStockExchange";
 			definition = "Israel Tel Aviv Stock Exchange.";
 			owner_lazy = () -> IssuerCode.mmObject();
@@ -1396,7 +1398,7 @@ public class IssuerCode {
 	 */
 	public static final MMCode mmItalianDomesticIdentification = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ItalianDomesticIdentification";
 			definition = "Italian Domestic Identification Code.";
 			owner_lazy = () -> IssuerCode.mmObject();
@@ -1425,7 +1427,7 @@ public class IssuerCode {
 	 */
 	public static final MMCode mmMonteTitoli = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "MonteTitoli";
 			definition = "Italy - Monte Titoli.";
 			owner_lazy = () -> IssuerCode.mmObject();
@@ -1454,7 +1456,7 @@ public class IssuerCode {
 	 */
 	public static final MMCode mmJapanSecuritiesClearingCorporation = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "JapanSecuritiesClearingCorporation";
 			definition = "Japan Securities Clearing Corporation.";
 			owner_lazy = () -> IssuerCode.mmObject();
@@ -1483,7 +1485,7 @@ public class IssuerCode {
 	 */
 	public static final MMCode mmJapanSecuritiesDepositoryCenter = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "JapanSecuritiesDepositoryCenter";
 			definition = "Japan Securities Depository Center.";
 			owner_lazy = () -> IssuerCode.mmObject();
@@ -1512,7 +1514,7 @@ public class IssuerCode {
 	 */
 	public static final MMCode mmKoreanSecuritiesDepository = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "KoreanSecuritiesDepository";
 			definition = "Korea Securities Depository.";
 			owner_lazy = () -> IssuerCode.mmObject();
@@ -1541,7 +1543,7 @@ public class IssuerCode {
 	 */
 	public static final MMCode mmMalaysianCentralDepository = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "MalaysianCentralDepository";
 			definition = "Malaysian Central Depositary.";
 			owner_lazy = () -> IssuerCode.mmObject();
@@ -1570,7 +1572,7 @@ public class IssuerCode {
 	 */
 	public static final MMCode mmIndevalSA = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "IndevalSA";
 			definition = "Mexico S.D. Indeval, S.A. de C.V.";
 			owner_lazy = () -> IssuerCode.mmObject();
@@ -1599,7 +1601,7 @@ public class IssuerCode {
 	 */
 	public static final MMCode mmAmsterdamseEffectenbeurs = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AmsterdamseEffectenbeurs";
 			definition = "Amsterdamse Effectenbeurs.";
 			owner_lazy = () -> IssuerCode.mmObject();
@@ -1629,7 +1631,7 @@ public class IssuerCode {
 	 */
 	public static final MMCode mmNECIGEF = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "NECIGEF";
 			definition = "Nederlands Centraal Instituut voor Giraal Effectenverkeer.";
 			owner_lazy = () -> IssuerCode.mmObject();
@@ -1658,7 +1660,7 @@ public class IssuerCode {
 	 */
 	public static final MMCode mmNewZealandNationalClearing = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "NewZealandNationalClearing";
 			definition = "New Zealand National Clearing Code.";
 			owner_lazy = () -> IssuerCode.mmObject();
@@ -1687,7 +1689,7 @@ public class IssuerCode {
 	 */
 	public static final MMCode mmNewZealandStockExchange = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "NewZealandStockExchange";
 			definition = "New Zealand Stock Exchange.";
 			owner_lazy = () -> IssuerCode.mmObject();
@@ -1716,7 +1718,7 @@ public class IssuerCode {
 	 */
 	public static final MMCode mmVerdipapirsentralen = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Verdipapirsentralen";
 			definition = "Norway Verdipapirsentralen.";
 			owner_lazy = () -> IssuerCode.mmObject();
@@ -1745,7 +1747,7 @@ public class IssuerCode {
 	 */
 	public static final MMCode mmPhilippineCentralDepository = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PhilippineCentralDepository";
 			definition = "Philippine Central Depositary.";
 			owner_lazy = () -> IssuerCode.mmObject();
@@ -1774,7 +1776,7 @@ public class IssuerCode {
 	 */
 	public static final MMCode mmPolandNationalDepositorySecurities = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PolandNationalDepositorySecurities";
 			definition = "Poland National Depository for Securities.";
 			owner_lazy = () -> IssuerCode.mmObject();
@@ -1803,7 +1805,7 @@ public class IssuerCode {
 	 */
 	public static final MMCode mmCentralValoresMobiliaros = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CentralValoresMobiliaros";
 			definition = "Portugal Central de Valores de Mobiliaros.";
 			owner_lazy = () -> IssuerCode.mmObject();
@@ -1832,7 +1834,7 @@ public class IssuerCode {
 	 */
 	public static final MMCode mmPortugueseNationalClearing = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PortugueseNationalClearing";
 			definition = "Portuguese National Clearing Code.";
 			owner_lazy = () -> IssuerCode.mmObject();
@@ -1862,7 +1864,7 @@ public class IssuerCode {
 	 */
 	public static final MMCode mmINTERBOLSA = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "INTERBOLSA";
 			definition = "Associacao para a Prestacao de Servicios as Bolsas de Valores.";
 			owner_lazy = () -> IssuerCode.mmObject();
@@ -1891,7 +1893,7 @@ public class IssuerCode {
 	 */
 	public static final MMCode mmRussianCentralBankIdentification = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "RussianCentralBankIdentification";
 			definition = "Russian Central Bank Identification Code.";
 			owner_lazy = () -> IssuerCode.mmObject();
@@ -1920,7 +1922,7 @@ public class IssuerCode {
 	 */
 	public static final MMCode mmSingaporeCentralDepositoryLtd = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SingaporeCentralDepositoryLtd";
 			definition = "Central Depository Pte Ltd.";
 			owner_lazy = () -> IssuerCode.mmObject();
@@ -1949,7 +1951,7 @@ public class IssuerCode {
 	 */
 	public static final MMCode mmSingaporeInternationalMonetaryExchange = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SingaporeInternationalMonetaryExchange";
 			definition = "Singapore International Monetary Exchange Limited.";
 			owner_lazy = () -> IssuerCode.mmObject();
@@ -1978,7 +1980,7 @@ public class IssuerCode {
 	 */
 	public static final MMCode mmBratislavaStockExchange = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "BratislavaStockExchange";
 			definition = "The Bratislava Stock Exchange.";
 			owner_lazy = () -> IssuerCode.mmObject();
@@ -2007,7 +2009,7 @@ public class IssuerCode {
 	 */
 	public static final MMCode mmSouthAfricanNationalClearing = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SouthAfricanNationalClearing";
 			definition = "South African National Clearing Code.";
 			owner_lazy = () -> IssuerCode.mmObject();
@@ -2036,7 +2038,7 @@ public class IssuerCode {
 	 */
 	public static final MMCode mmStrateClearingSettlementLtd = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "StrateClearingSettlementLtd";
 			definition = "Strate Clearing and Settlement (Proprietary) Limited.";
 			owner_lazy = () -> IssuerCode.mmObject();
@@ -2065,7 +2067,7 @@ public class IssuerCode {
 	 */
 	public static final MMCode mmBancoEspana = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "BancoEspana";
 			definition = "Banco de Espana.";
 			owner_lazy = () -> IssuerCode.mmObject();
@@ -2094,7 +2096,7 @@ public class IssuerCode {
 	 */
 	public static final MMCode mmServicioCompensacionLiquidacionValores = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ServicioCompensacionLiquidacionValores";
 			definition = "Servicio de Compensacion y Liquidacion de Valores.";
 			owner_lazy = () -> IssuerCode.mmObject();
@@ -2123,7 +2125,7 @@ public class IssuerCode {
 	 */
 	public static final MMCode mmSpanishDomesticInterbanking = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SpanishDomesticInterbanking";
 			definition = "Spanish Domestic Interbanking Code.";
 			owner_lazy = () -> IssuerCode.mmObject();
@@ -2152,7 +2154,7 @@ public class IssuerCode {
 	 */
 	public static final MMCode mmVardepapperscentralen = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Vardepapperscentralen";
 			definition = "Sweden Vardepapperscentralen.";
 			owner_lazy = () -> IssuerCode.mmObject();
@@ -2181,7 +2183,7 @@ public class IssuerCode {
 	 */
 	public static final MMCode mmSISSEGAIntersettle = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SISSEGAIntersettle";
 			definition = "SIS - SEGA/Intersettle.";
 			owner_lazy = () -> IssuerCode.mmObject();
@@ -2210,7 +2212,7 @@ public class IssuerCode {
 	 */
 	public static final MMCode mmSwissClearingCode = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SwissClearingCode";
 			definition = "Swiss Clearing System.";
 			owner_lazy = () -> IssuerCode.mmObject();
@@ -2239,7 +2241,7 @@ public class IssuerCode {
 	 */
 	public static final MMCode mmThailandSecuritiesDepositoryCompany = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ThailandSecuritiesDepositoryCompany";
 			definition = "Thailand Securities Depository Company Limited.";
 			owner_lazy = () -> IssuerCode.mmObject();
@@ -2268,7 +2270,7 @@ public class IssuerCode {
 	 */
 	public static final MMCode mmTaiwanSecuritiesCentralDepository = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "TaiwanSecuritiesCentralDepository";
 			definition = "Taiwan Securities Central Depository Co Limited.";
 			owner_lazy = () -> IssuerCode.mmObject();
@@ -2297,7 +2299,7 @@ public class IssuerCode {
 	 */
 	public static final MMCode mmTakasbank = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Takasbank";
 			definition = "Turkey Takasbank.";
 			owner_lazy = () -> IssuerCode.mmObject();
@@ -2326,7 +2328,7 @@ public class IssuerCode {
 	 */
 	public static final MMCode mmUKDomesticSort = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "UKDomesticSort";
 			definition = "UK Domestic Sort Code.";
 			owner_lazy = () -> IssuerCode.mmObject();
@@ -2355,7 +2357,7 @@ public class IssuerCode {
 	 */
 	public static final MMCode mmBankOfEnglandCMO = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "BankOfEnglandCMO";
 			definition = "Bank of England (Central Moneymarkets Office).";
 			owner_lazy = () -> IssuerCode.mmObject();
@@ -2388,7 +2390,7 @@ public class IssuerCode {
 	 */
 	public static final MMCode mmCrestCo = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CrestCo";
 			definition = "CRESTCo Ltd. Company operating two real-time securities settlement services: CREST (for UK, Irish and international securities and government bonds) and CMO (UK money market instrument settlement).";
 			owner_lazy = () -> IssuerCode.mmObject();
@@ -2417,7 +2419,7 @@ public class IssuerCode {
 	 */
 	public static final MMCode mmFinancialServicesAuthority = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "FinancialServicesAuthority";
 			definition = "UK Financial Services Authority.";
 			owner_lazy = () -> IssuerCode.mmObject();
@@ -2446,7 +2448,7 @@ public class IssuerCode {
 	 */
 	public static final MMCode mmLondonClearingHouse = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "LondonClearingHouse";
 			definition = "The London Clearing House.";
 			owner_lazy = () -> IssuerCode.mmObject();
@@ -2475,7 +2477,7 @@ public class IssuerCode {
 	 */
 	public static final MMCode mmInternationalSecuritiesMarketAssociation = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "InternationalSecuritiesMarketAssociation";
 			definition = "UK - International Securities Market Association.";
 			owner_lazy = () -> IssuerCode.mmObject();
@@ -2504,7 +2506,7 @@ public class IssuerCode {
 	 */
 	public static final MMCode mmLondonStockExchange = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "LondonStockExchange";
 			definition = "London Stock Exchange.";
 			owner_lazy = () -> IssuerCode.mmObject();
@@ -2533,7 +2535,7 @@ public class IssuerCode {
 	 */
 	public static final MMCode mmAmericanStockExchange = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AmericanStockExchange";
 			definition = "American Stock Exchange.";
 			owner_lazy = () -> IssuerCode.mmObject();
@@ -2562,7 +2564,7 @@ public class IssuerCode {
 	 */
 	public static final MMCode mmDepositoryTrustCompany = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "DepositoryTrustCompany";
 			definition = "Depository Trust Company.";
 			owner_lazy = () -> IssuerCode.mmObject();
@@ -2591,7 +2593,7 @@ public class IssuerCode {
 	 */
 	public static final MMCode mmEmergingMarketsClearingCorporation = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "EmergingMarketsClearingCorporation";
 			definition = "USA Emerging Markets Clearing Corporation.";
 			owner_lazy = () -> IssuerCode.mmObject();
@@ -2620,7 +2622,7 @@ public class IssuerCode {
 	 */
 	public static final MMCode mmFedwireRoutingNumber = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "FedwireRoutingNumber";
 			definition = "Fedwire Routing Number.";
 			owner_lazy = () -> IssuerCode.mmObject();
@@ -2652,7 +2654,7 @@ public class IssuerCode {
 	 */
 	public static final MMCode mmGovernmentSecuritiesClearingCorporation = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "GovernmentSecuritiesClearingCorporation";
 			definition = "Provider of trade netting and settlement for the US Government securities marketplace.";
 			owner_lazy = () -> IssuerCode.mmObject();
@@ -2681,7 +2683,7 @@ public class IssuerCode {
 	 */
 	public static final MMCode mmInternationalSecuritiesClearingCorporation = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "InternationalSecuritiesClearingCorporation";
 			definition = "International Securities Clearing Corporation.";
 			owner_lazy = () -> IssuerCode.mmObject();
@@ -2710,7 +2712,7 @@ public class IssuerCode {
 	 */
 	public static final MMCode mmMortgageBackedSecuritiesClearingCorporation = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "MortgageBackedSecuritiesClearingCorporation";
 			definition = "Mortgage Backed Securities Clearing Corporation.";
 			owner_lazy = () -> IssuerCode.mmObject();
@@ -2739,7 +2741,7 @@ public class IssuerCode {
 	 */
 	public static final MMCode mmNationalAssociationSecuritiesDealers = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "NationalAssociationSecuritiesDealers";
 			definition = "National Association Securities Dealers.";
 			owner_lazy = () -> IssuerCode.mmObject();
@@ -2771,7 +2773,7 @@ public class IssuerCode {
 	 */
 	public static final MMCode mmNASDAQ = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "NASDAQ";
 			definition = "National Association of Securities Dealers Automated Quotation Service \"NASDAQ\" / National Market System.";
 			owner_lazy = () -> IssuerCode.mmObject();
@@ -2800,7 +2802,7 @@ public class IssuerCode {
 	 */
 	public static final MMCode mmNationalSecuritiesClearingCorporation = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "NationalSecuritiesClearingCorporation";
 			definition = "National Securities Clearing Corporation.";
 			owner_lazy = () -> IssuerCode.mmObject();
@@ -2829,7 +2831,7 @@ public class IssuerCode {
 	 */
 	public static final MMCode mmNewYorkClearingHouse = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "NewYorkClearingHouse";
 			definition = "New York Clearing House.";
 			owner_lazy = () -> IssuerCode.mmObject();
@@ -2858,7 +2860,7 @@ public class IssuerCode {
 	 */
 	public static final MMCode mmNewYorkStockExchange = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "NewYorkStockExchange";
 			definition = "New York Stock Exchange.";
 			owner_lazy = () -> IssuerCode.mmObject();
@@ -2887,7 +2889,7 @@ public class IssuerCode {
 	 */
 	public static final MMCode mmOptionsClearingCorporation = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "OptionsClearingCorporation";
 			definition = "Options Clearing Corporation.";
 			owner_lazy = () -> IssuerCode.mmObject();
@@ -2916,7 +2918,7 @@ public class IssuerCode {
 	 */
 	public static final MMCode mmParticipantTrustCompany = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ParticipantTrustCompany";
 			definition = "Participant Trust Company.";
 			owner_lazy = () -> IssuerCode.mmObject();
@@ -2948,7 +2950,7 @@ public class IssuerCode {
 	 */
 	public static final MMCode mmXClear = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "XClear";
 			definition = "X-Clear, clearing and risk management services for the Swiss banking industry.";
 			owner_lazy = () -> IssuerCode.mmObject();
@@ -2959,50 +2961,30 @@ public class IssuerCode {
 	static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
 				example = Arrays.asList("CEDE");
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "IssuerCode";
 				definition = "Identifies the institution issuing a proprietary code.";
-				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.IssuerCode.mmClearstreamBankLuxemburg, com.tools20022.repository.codeset.IssuerCode.mmCajaDeValores,
-						com.tools20022.repository.codeset.IssuerCode.mmAustraclearLtd, com.tools20022.repository.codeset.IssuerCode.mmAustralianBankStateBranch,
-						com.tools20022.repository.codeset.IssuerCode.mmClearingHouseElectronicSettlementSystems, com.tools20022.repository.codeset.IssuerCode.mmAustrianBankLeitzahl,
-						com.tools20022.repository.codeset.IssuerCode.mmOesterreichischeKontrollbank, com.tools20022.repository.codeset.IssuerCode.mmCaisseInterprofessionelleDepotsVirementsTitres,
-						com.tools20022.repository.codeset.IssuerCode.mmEuroclear, com.tools20022.repository.codeset.IssuerCode.mmBanqueNationaleDeBelgique, com.tools20022.repository.codeset.IssuerCode.mmCamaraLiquidacaoCustodia,
-						com.tools20022.repository.codeset.IssuerCode.mmCanadianDepositorySecuritiesLtd, com.tools20022.repository.codeset.IssuerCode.mmCanadianPaymentsAssociation,
-						com.tools20022.repository.codeset.IssuerCode.mmCentralSecuritiesDepositoryDepositoCentralValores, com.tools20022.repository.codeset.IssuerCode.mmShanghaiSecuritiesCentralClearingRegistrationCompany,
-						com.tools20022.repository.codeset.IssuerCode.mmShenzhenSecuritiesClearingCompany, com.tools20022.repository.codeset.IssuerCode.mmColombiaCentralDepositorySystem,
-						com.tools20022.repository.codeset.IssuerCode.mmDenmarkVaerdipapircentralen, com.tools20022.repository.codeset.IssuerCode.mmFinnishCentralSecuritiesDepositoryLtd,
-						com.tools20022.repository.codeset.IssuerCode.mmFranceRIB, com.tools20022.repository.codeset.IssuerCode.mmSICOVAM, com.tools20022.repository.codeset.IssuerCode.mmPragueStockExchange,
-						com.tools20022.repository.codeset.IssuerCode.mmBundesausichtsamtWertpapierhandel, com.tools20022.repository.codeset.IssuerCode.mmDeutscheBoerseAGDeutscheTerminborse,
-						com.tools20022.repository.codeset.IssuerCode.mmDeutscheBoerseAGFrankfurterWertpapierborse, com.tools20022.repository.codeset.IssuerCode.mmDeutscheBoerseAGXETRA,
-						com.tools20022.repository.codeset.IssuerCode.mmDeutscheBorseClearingAG, com.tools20022.repository.codeset.IssuerCode.mmDeutscheBundesbank, com.tools20022.repository.codeset.IssuerCode.mmGermanBankleitzahl,
-						com.tools20022.repository.codeset.IssuerCode.mmZentralerKreditausschuss, com.tools20022.repository.codeset.IssuerCode.mmHongKongCentralClearingSecuritiesSettlementSystem,
-						com.tools20022.repository.codeset.IssuerCode.mmHongKongNationalClearing, com.tools20022.repository.codeset.IssuerCode.mmIndianNationalSecuritiesDepository,
-						com.tools20022.repository.codeset.IssuerCode.mmIndonesianSecuritiesCentralDepository, com.tools20022.repository.codeset.IssuerCode.mmIrishNationalClearing,
-						com.tools20022.repository.codeset.IssuerCode.mmTelAvivStockExchange, com.tools20022.repository.codeset.IssuerCode.mmItalianDomesticIdentification, com.tools20022.repository.codeset.IssuerCode.mmMonteTitoli,
-						com.tools20022.repository.codeset.IssuerCode.mmJapanSecuritiesClearingCorporation, com.tools20022.repository.codeset.IssuerCode.mmJapanSecuritiesDepositoryCenter,
-						com.tools20022.repository.codeset.IssuerCode.mmKoreanSecuritiesDepository, com.tools20022.repository.codeset.IssuerCode.mmMalaysianCentralDepository, com.tools20022.repository.codeset.IssuerCode.mmIndevalSA,
-						com.tools20022.repository.codeset.IssuerCode.mmAmsterdamseEffectenbeurs, com.tools20022.repository.codeset.IssuerCode.mmNECIGEF, com.tools20022.repository.codeset.IssuerCode.mmNewZealandNationalClearing,
-						com.tools20022.repository.codeset.IssuerCode.mmNewZealandStockExchange, com.tools20022.repository.codeset.IssuerCode.mmVerdipapirsentralen, com.tools20022.repository.codeset.IssuerCode.mmPhilippineCentralDepository,
-						com.tools20022.repository.codeset.IssuerCode.mmPolandNationalDepositorySecurities, com.tools20022.repository.codeset.IssuerCode.mmCentralValoresMobiliaros,
-						com.tools20022.repository.codeset.IssuerCode.mmPortugueseNationalClearing, com.tools20022.repository.codeset.IssuerCode.mmINTERBOLSA, com.tools20022.repository.codeset.IssuerCode.mmRussianCentralBankIdentification,
-						com.tools20022.repository.codeset.IssuerCode.mmSingaporeCentralDepositoryLtd, com.tools20022.repository.codeset.IssuerCode.mmSingaporeInternationalMonetaryExchange,
-						com.tools20022.repository.codeset.IssuerCode.mmBratislavaStockExchange, com.tools20022.repository.codeset.IssuerCode.mmSouthAfricanNationalClearing,
-						com.tools20022.repository.codeset.IssuerCode.mmStrateClearingSettlementLtd, com.tools20022.repository.codeset.IssuerCode.mmBancoEspana,
-						com.tools20022.repository.codeset.IssuerCode.mmServicioCompensacionLiquidacionValores, com.tools20022.repository.codeset.IssuerCode.mmSpanishDomesticInterbanking,
-						com.tools20022.repository.codeset.IssuerCode.mmVardepapperscentralen, com.tools20022.repository.codeset.IssuerCode.mmSISSEGAIntersettle, com.tools20022.repository.codeset.IssuerCode.mmSwissClearingCode,
-						com.tools20022.repository.codeset.IssuerCode.mmThailandSecuritiesDepositoryCompany, com.tools20022.repository.codeset.IssuerCode.mmTaiwanSecuritiesCentralDepository,
-						com.tools20022.repository.codeset.IssuerCode.mmTakasbank, com.tools20022.repository.codeset.IssuerCode.mmUKDomesticSort, com.tools20022.repository.codeset.IssuerCode.mmBankOfEnglandCMO,
-						com.tools20022.repository.codeset.IssuerCode.mmCrestCo, com.tools20022.repository.codeset.IssuerCode.mmFinancialServicesAuthority, com.tools20022.repository.codeset.IssuerCode.mmLondonClearingHouse,
-						com.tools20022.repository.codeset.IssuerCode.mmInternationalSecuritiesMarketAssociation, com.tools20022.repository.codeset.IssuerCode.mmLondonStockExchange,
-						com.tools20022.repository.codeset.IssuerCode.mmAmericanStockExchange, com.tools20022.repository.codeset.IssuerCode.mmDepositoryTrustCompany,
-						com.tools20022.repository.codeset.IssuerCode.mmEmergingMarketsClearingCorporation, com.tools20022.repository.codeset.IssuerCode.mmFedwireRoutingNumber,
-						com.tools20022.repository.codeset.IssuerCode.mmGovernmentSecuritiesClearingCorporation, com.tools20022.repository.codeset.IssuerCode.mmInternationalSecuritiesClearingCorporation,
-						com.tools20022.repository.codeset.IssuerCode.mmMortgageBackedSecuritiesClearingCorporation, com.tools20022.repository.codeset.IssuerCode.mmNationalAssociationSecuritiesDealers,
-						com.tools20022.repository.codeset.IssuerCode.mmNASDAQ, com.tools20022.repository.codeset.IssuerCode.mmNationalSecuritiesClearingCorporation, com.tools20022.repository.codeset.IssuerCode.mmNewYorkClearingHouse,
-						com.tools20022.repository.codeset.IssuerCode.mmNewYorkStockExchange, com.tools20022.repository.codeset.IssuerCode.mmOptionsClearingCorporation, com.tools20022.repository.codeset.IssuerCode.mmParticipantTrustCompany,
-						com.tools20022.repository.codeset.IssuerCode.mmXClear);
+				code_lazy = () -> Arrays.asList(IssuerCode.mmClearstreamBankLuxemburg, IssuerCode.mmCajaDeValores, IssuerCode.mmAustraclearLtd, IssuerCode.mmAustralianBankStateBranch, IssuerCode.mmClearingHouseElectronicSettlementSystems,
+						IssuerCode.mmAustrianBankLeitzahl, IssuerCode.mmOesterreichischeKontrollbank, IssuerCode.mmCaisseInterprofessionelleDepotsVirementsTitres, IssuerCode.mmEuroclear, IssuerCode.mmBanqueNationaleDeBelgique,
+						IssuerCode.mmCamaraLiquidacaoCustodia, IssuerCode.mmCanadianDepositorySecuritiesLtd, IssuerCode.mmCanadianPaymentsAssociation, IssuerCode.mmCentralSecuritiesDepositoryDepositoCentralValores,
+						IssuerCode.mmShanghaiSecuritiesCentralClearingRegistrationCompany, IssuerCode.mmShenzhenSecuritiesClearingCompany, IssuerCode.mmColombiaCentralDepositorySystem, IssuerCode.mmDenmarkVaerdipapircentralen,
+						IssuerCode.mmFinnishCentralSecuritiesDepositoryLtd, IssuerCode.mmFranceRIB, IssuerCode.mmSICOVAM, IssuerCode.mmPragueStockExchange, IssuerCode.mmBundesausichtsamtWertpapierhandel,
+						IssuerCode.mmDeutscheBoerseAGDeutscheTerminborse, IssuerCode.mmDeutscheBoerseAGFrankfurterWertpapierborse, IssuerCode.mmDeutscheBoerseAGXETRA, IssuerCode.mmDeutscheBorseClearingAG, IssuerCode.mmDeutscheBundesbank,
+						IssuerCode.mmGermanBankleitzahl, IssuerCode.mmZentralerKreditausschuss, IssuerCode.mmHongKongCentralClearingSecuritiesSettlementSystem, IssuerCode.mmHongKongNationalClearing,
+						IssuerCode.mmIndianNationalSecuritiesDepository, IssuerCode.mmIndonesianSecuritiesCentralDepository, IssuerCode.mmIrishNationalClearing, IssuerCode.mmTelAvivStockExchange, IssuerCode.mmItalianDomesticIdentification,
+						IssuerCode.mmMonteTitoli, IssuerCode.mmJapanSecuritiesClearingCorporation, IssuerCode.mmJapanSecuritiesDepositoryCenter, IssuerCode.mmKoreanSecuritiesDepository, IssuerCode.mmMalaysianCentralDepository,
+						IssuerCode.mmIndevalSA, IssuerCode.mmAmsterdamseEffectenbeurs, IssuerCode.mmNECIGEF, IssuerCode.mmNewZealandNationalClearing, IssuerCode.mmNewZealandStockExchange, IssuerCode.mmVerdipapirsentralen,
+						IssuerCode.mmPhilippineCentralDepository, IssuerCode.mmPolandNationalDepositorySecurities, IssuerCode.mmCentralValoresMobiliaros, IssuerCode.mmPortugueseNationalClearing, IssuerCode.mmINTERBOLSA,
+						IssuerCode.mmRussianCentralBankIdentification, IssuerCode.mmSingaporeCentralDepositoryLtd, IssuerCode.mmSingaporeInternationalMonetaryExchange, IssuerCode.mmBratislavaStockExchange,
+						IssuerCode.mmSouthAfricanNationalClearing, IssuerCode.mmStrateClearingSettlementLtd, IssuerCode.mmBancoEspana, IssuerCode.mmServicioCompensacionLiquidacionValores, IssuerCode.mmSpanishDomesticInterbanking,
+						IssuerCode.mmVardepapperscentralen, IssuerCode.mmSISSEGAIntersettle, IssuerCode.mmSwissClearingCode, IssuerCode.mmThailandSecuritiesDepositoryCompany, IssuerCode.mmTaiwanSecuritiesCentralDepository,
+						IssuerCode.mmTakasbank, IssuerCode.mmUKDomesticSort, IssuerCode.mmBankOfEnglandCMO, IssuerCode.mmCrestCo, IssuerCode.mmFinancialServicesAuthority, IssuerCode.mmLondonClearingHouse,
+						IssuerCode.mmInternationalSecuritiesMarketAssociation, IssuerCode.mmLondonStockExchange, IssuerCode.mmAmericanStockExchange, IssuerCode.mmDepositoryTrustCompany, IssuerCode.mmEmergingMarketsClearingCorporation,
+						IssuerCode.mmFedwireRoutingNumber, IssuerCode.mmGovernmentSecuritiesClearingCorporation, IssuerCode.mmInternationalSecuritiesClearingCorporation, IssuerCode.mmMortgageBackedSecuritiesClearingCorporation,
+						IssuerCode.mmNationalAssociationSecuritiesDealers, IssuerCode.mmNASDAQ, IssuerCode.mmNationalSecuritiesClearingCorporation, IssuerCode.mmNewYorkClearingHouse, IssuerCode.mmNewYorkStockExchange,
+						IssuerCode.mmOptionsClearingCorporation, IssuerCode.mmParticipantTrustCompany, IssuerCode.mmXClear);
 				derivation_lazy = () -> Arrays.asList(PartyIssuerCode.mmObject());
 			}
 		});

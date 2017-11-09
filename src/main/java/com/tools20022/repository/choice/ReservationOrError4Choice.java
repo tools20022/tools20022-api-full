@@ -19,7 +19,9 @@ package com.tools20022.repository.choice;
 
 import com.tools20022.metamodel.MMChoiceComponent;
 import com.tools20022.metamodel.MMMessageAssociationEnd;
+import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.entity.Reservation;
+import com.tools20022.repository.GeneratedRepository;
 import com.tools20022.repository.msg.CurrentAndDefaultReservation2;
 import com.tools20022.repository.msg.ErrorHandling4;
 import java.util.Arrays;
@@ -115,10 +117,10 @@ public class ReservationOrError4Choice {
 			componentContext_lazy = () -> ReservationOrError4Choice.mmObject();
 			isDerived = false;
 			xmlTag = "BizRpt";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "BusinessReport";
 			definition = "Reports on reservations.";
-			previousVersion_lazy = () -> com.tools20022.repository.choice.ReservationOrError2Choice.mmBusinessReport;
+			previousVersion_lazy = () -> ReservationOrError2Choice.mmBusinessReport;
 			maxOccurs = 1;
 			minOccurs = 1;
 			isComposite = true;
@@ -165,10 +167,10 @@ public class ReservationOrError4Choice {
 			componentContext_lazy = () -> ReservationOrError4Choice.mmObject();
 			isDerived = false;
 			xmlTag = "OprlErr";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "OperationalError";
 			definition = "Indicates that an operational error has been issued during the processing of the related request.";
-			previousVersion_lazy = () -> com.tools20022.repository.choice.ReservationOrError2Choice.mmOperationalError;
+			previousVersion_lazy = () -> ReservationOrError2Choice.mmOperationalError;
 			minOccurs = 1;
 			isComposite = true;
 			type_lazy = () -> ErrorHandling4.mmObject();
@@ -178,10 +180,10 @@ public class ReservationOrError4Choice {
 	final static public MMChoiceComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMChoiceComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.choice.ReservationOrError4Choice.mmBusinessReport, com.tools20022.repository.choice.ReservationOrError4Choice.mmOperationalError);
+				messageElement_lazy = () -> Arrays.asList(ReservationOrError4Choice.mmBusinessReport, ReservationOrError4Choice.mmOperationalError);
 				trace_lazy = () -> Reservation.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "ReservationOrError4Choice";
 				definition = "It is used to provide confirmation details of one or more reservations set by the member (or on behalf of the member) and managed by the transaction administrator.";
 				previousVersion_lazy = () -> ReservationOrError2Choice.mmObject();

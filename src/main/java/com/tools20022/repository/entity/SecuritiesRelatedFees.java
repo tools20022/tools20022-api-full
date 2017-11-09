@@ -17,11 +17,11 @@
 
 package com.tools20022.repository.entity;
 
-import com.tools20022.metamodel.MMBusinessAssociationEnd;
-import com.tools20022.metamodel.MMBusinessAttribute;
-import com.tools20022.metamodel.MMBusinessComponent;
+import com.tools20022.metamodel.*;
 import com.tools20022.repository.datatype.CurrencyAndAmount;
 import com.tools20022.repository.entity.Charges;
+import com.tools20022.repository.GeneratedRepository;
+import com.tools20022.repository.msg.*;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.List;
@@ -36,6 +36,16 @@ import java.util.List;
  * <p>
  * <strong>Constant fields:</strong>
  * <ul>
+ * <li>
+ * {@linkplain com.tools20022.metamodel.MMBusinessComponent#getAssociationDomain
+ * associationDomain} =
+ * <ul>
+ * <li>{@linkplain com.tools20022.repository.entity.Security#mmFees
+ * Security.mmFees}</li>
+ * </ul>
+ * </li>
+ * <li>{@linkplain com.tools20022.metamodel.MMBusinessComponent#getSuperType
+ * superType} = {@linkplain com.tools20022.repository.entity.Charges Charges}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMBusinessComponent#getElement
  * element} =
  * <ul>
@@ -53,16 +63,6 @@ import java.util.List;
  * SecuritiesRelatedFees.mmShippingFeesAmount}</li>
  * </ul>
  * </li>
- * <li>
- * {@linkplain com.tools20022.metamodel.MMBusinessComponent#getAssociationDomain
- * associationDomain} =
- * <ul>
- * <li>{@linkplain com.tools20022.repository.entity.Security#mmFees
- * Security.mmFees}</li>
- * </ul>
- * </li>
- * <li>{@linkplain com.tools20022.metamodel.MMBusinessComponent#getSuperType
- * superType} = {@linkplain com.tools20022.repository.entity.Charges Charges}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
@@ -117,12 +117,12 @@ public class SecuritiesRelatedFees extends Charges {
 		{
 			elementContext_lazy = () -> SecuritiesRelatedFees.mmObject();
 			isDerived = false;
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "Security";
 			definition = "Security for which fees are specified.";
 			minOccurs = 0;
 			opposite_lazy = () -> com.tools20022.repository.entity.Security.mmFees;
-			aggregation = com.tools20022.metamodel.MMAggregation.NONE;
+			aggregation = MMAggregation.NONE;
 			type_lazy = () -> com.tools20022.repository.entity.Security.mmObject();
 		}
 	};
@@ -232,19 +232,14 @@ public class SecuritiesRelatedFees extends Charges {
 	 */
 	public static final MMBusinessAttribute mmPostageFeeAmount = new MMBusinessAttribute() {
 		{
-			derivation_lazy = () -> Arrays.asList(com.tools20022.repository.msg.OtherAmounts12.mmPostageAmount, com.tools20022.repository.msg.CorporateActionAmounts2.mmPostageFeeAmount,
-					com.tools20022.repository.msg.CorporateActionAmounts5.mmPostageFeeAmount, com.tools20022.repository.msg.CorporateActionAmounts11.mmPostageFeeAmount,
-					com.tools20022.repository.msg.CorporateActionAmounts12.mmPostageFeeAmount, com.tools20022.repository.msg.CorporateActionAmounts3.mmPostageFeeAmount,
-					com.tools20022.repository.msg.CorporateActionAmounts6.mmPostageFeeAmount, com.tools20022.repository.msg.CorporateActionAmounts9.mmPostageFeeAmount,
-					com.tools20022.repository.msg.CorporateActionAmounts13.mmPostageFeeAmount, com.tools20022.repository.msg.CorporateActionAmounts4.mmPostageFeeAmount,
-					com.tools20022.repository.msg.CorporateActionAmounts7.mmPostageFeeAmount, com.tools20022.repository.msg.CorporateActionAmounts10.mmPostageFeeAmount,
-					com.tools20022.repository.msg.CorporateActionAmounts14.mmPostageFeeAmount, com.tools20022.repository.msg.OtherAmounts4.mmPostageAmount, com.tools20022.repository.msg.OtherAmounts5.mmPostageAmount,
-					com.tools20022.repository.msg.OtherAmounts3.mmPostageAmount, com.tools20022.repository.msg.OtherAmounts7.mmPostageAmount, com.tools20022.repository.msg.OtherAmounts9.mmPostageAmount,
-					com.tools20022.repository.msg.OtherAmounts10.mmPostageAmount, com.tools20022.repository.msg.OtherAmounts13.mmPostageAmount, com.tools20022.repository.msg.OtherAmounts1.mmPostageAmount,
-					com.tools20022.repository.msg.CorporateActionAmounts1.mmPostageFeeAmount, com.tools20022.repository.msg.OtherAmounts2.mmPostageAmount, com.tools20022.repository.msg.OtherAmounts6.mmPostageAmount);
+			derivation_lazy = () -> Arrays.asList(OtherAmounts12.mmPostageAmount, CorporateActionAmounts2.mmPostageFeeAmount, CorporateActionAmounts5.mmPostageFeeAmount, CorporateActionAmounts11.mmPostageFeeAmount,
+					CorporateActionAmounts12.mmPostageFeeAmount, CorporateActionAmounts3.mmPostageFeeAmount, CorporateActionAmounts6.mmPostageFeeAmount, CorporateActionAmounts9.mmPostageFeeAmount,
+					CorporateActionAmounts13.mmPostageFeeAmount, CorporateActionAmounts4.mmPostageFeeAmount, CorporateActionAmounts7.mmPostageFeeAmount, CorporateActionAmounts10.mmPostageFeeAmount,
+					CorporateActionAmounts14.mmPostageFeeAmount, OtherAmounts4.mmPostageAmount, OtherAmounts5.mmPostageAmount, OtherAmounts3.mmPostageAmount, OtherAmounts7.mmPostageAmount, OtherAmounts9.mmPostageAmount,
+					OtherAmounts10.mmPostageAmount, OtherAmounts13.mmPostageAmount, OtherAmounts1.mmPostageAmount, CorporateActionAmounts1.mmPostageFeeAmount, OtherAmounts2.mmPostageAmount, OtherAmounts6.mmPostageAmount);
 			elementContext_lazy = () -> SecuritiesRelatedFees.mmObject();
 			isDerived = false;
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "PostageFeeAmount";
 			definition = "Amount of money paid for delivery by regular post mail.";
 			maxOccurs = 1;
@@ -484,37 +479,24 @@ public class SecuritiesRelatedFees extends Charges {
 	 */
 	public static final MMBusinessAttribute mmRegulatoryFeesAmount = new MMBusinessAttribute() {
 		{
-			derivation_lazy = () -> Arrays.asList(com.tools20022.repository.msg.OtherAmounts12.mmRegulatoryAmount, com.tools20022.repository.msg.OtherAmounts14.mmRegulatoryAmount,
-					com.tools20022.repository.msg.OtherAmounts20.mmRegulatoryAmount, com.tools20022.repository.msg.CorporateActionAmounts2.mmRegulatoryFeesAmount,
-					com.tools20022.repository.msg.CorporateActionAmounts5.mmRegulatoryFeesAmount, com.tools20022.repository.msg.CorporateActionAmounts11.mmRegulatoryFeesAmount,
-					com.tools20022.repository.msg.CorporateActionAmounts12.mmRegulatoryFeesAmount, com.tools20022.repository.msg.CorporateActionAmounts17.mmRegulatoryFeesAmount,
-					com.tools20022.repository.msg.CorporateActionAmounts20.mmRegulatoryFeesAmount, com.tools20022.repository.msg.CorporateActionAmounts23.mmRegulatoryFeesAmount,
-					com.tools20022.repository.msg.CorporateActionAmounts24.mmRegulatoryFeesAmount, com.tools20022.repository.msg.CorporateActionAmounts3.mmRegulatoryFeesAmount,
-					com.tools20022.repository.msg.CorporateActionAmounts6.mmRegulatoryFeesAmount, com.tools20022.repository.msg.CorporateActionAmounts9.mmRegulatoryFeesAmount,
-					com.tools20022.repository.msg.CorporateActionAmounts13.mmRegulatoryFeesAmount, com.tools20022.repository.msg.CorporateActionAmounts16.mmRegulatoryFeesAmount,
-					com.tools20022.repository.msg.CorporateActionAmounts19.mmRegulatoryFeesAmount, com.tools20022.repository.msg.CorporateActionAmounts22.mmRegulatoryFeesAmount,
-					com.tools20022.repository.msg.CorporateActionAmounts25.mmRegulatoryFeesAmount, com.tools20022.repository.msg.CorporateActionAmounts4.mmRegulatoryFeesAmount,
-					com.tools20022.repository.msg.CorporateActionAmounts7.mmRegulatoryFeesAmount, com.tools20022.repository.msg.CorporateActionAmounts10.mmRegulatoryFeesAmount,
-					com.tools20022.repository.msg.CorporateActionAmounts14.mmRegulatoryFeesAmount, com.tools20022.repository.msg.CorporateActionAmounts15.mmRegulatoryFeesAmount,
-					com.tools20022.repository.msg.CorporateActionAmounts18.mmRegulatoryFeesAmount, com.tools20022.repository.msg.CorporateActionAmounts21.mmRegulatoryFeesAmount,
-					com.tools20022.repository.msg.CorporateActionAmounts26.mmRegulatoryFeesAmount, com.tools20022.repository.msg.OtherAmounts4.mmRegulatoryAmount, com.tools20022.repository.msg.OtherAmounts5.mmRegulatoryAmount,
-					com.tools20022.repository.msg.OtherAmounts17.mmRegulatoryAmount, com.tools20022.repository.msg.OtherAmounts23.mmRegulatoryAmount, com.tools20022.repository.msg.OtherAmounts3.mmRegulatoryAmount,
-					com.tools20022.repository.msg.OtherAmounts7.mmRegulatoryAmount, com.tools20022.repository.msg.OtherAmounts9.mmRegulatoryAmount, com.tools20022.repository.msg.OtherAmounts10.mmRegulatoryAmount,
-					com.tools20022.repository.msg.OtherAmounts18.mmRegulatoryAmount, com.tools20022.repository.msg.OtherAmounts24.mmRegulatoryAmount, com.tools20022.repository.msg.OtherAmounts13.mmRegulatoryAmount,
-					com.tools20022.repository.msg.OtherAmounts1.mmRegulatoryAmount, com.tools20022.repository.msg.OtherAmounts16.mmRegulatoryAmount, com.tools20022.repository.msg.CorporateActionAmounts1.mmRegulatoryFeesAmount,
-					com.tools20022.repository.msg.OtherAmounts2.mmRegulatoryAmount, com.tools20022.repository.msg.OtherAmounts6.mmRegulatoryAmount, com.tools20022.repository.msg.OtherAmounts15.mmRegulatoryAmount,
-					com.tools20022.repository.msg.OtherAmounts22.mmRegulatoryAmount, com.tools20022.repository.msg.CorporateActionAmounts29.mmRegulatoryFeesAmount,
-					com.tools20022.repository.msg.CorporateActionAmounts27.mmRegulatoryFeesAmount, com.tools20022.repository.msg.CorporateActionAmounts28.mmRegulatoryFeesAmount,
-					com.tools20022.repository.msg.CorporateActionAmounts33.mmRegulatoryFeesAmount, com.tools20022.repository.msg.CorporateActionAmounts32.mmRegulatoryFeesAmount,
-					com.tools20022.repository.msg.CorporateActionAmounts35.mmRegulatoryFeesAmount, com.tools20022.repository.msg.OtherAmounts28.mmRegulatoryAmount, com.tools20022.repository.msg.OtherAmounts30.mmRegulatoryAmount,
-					com.tools20022.repository.msg.OtherAmounts31.mmRegulatoryAmount, com.tools20022.repository.msg.OtherAmounts29.mmRegulatoryAmount, com.tools20022.repository.msg.CorporateActionAmounts37.mmRegulatoryFeesAmount,
-					com.tools20022.repository.msg.CorporateActionAmounts36.mmRegulatoryFeesAmount, com.tools20022.repository.msg.CorporateActionAmounts38.mmRegulatoryFeesAmount,
-					com.tools20022.repository.msg.CorporateActionAmounts39.mmRegulatoryFeesAmount, com.tools20022.repository.msg.CorporateActionAmounts41.mmRegulatoryFeesAmount,
-					com.tools20022.repository.msg.CorporateActionAmounts40.mmRegulatoryFeesAmount, com.tools20022.repository.msg.OtherAmounts35.mmRegulatoryAmount, com.tools20022.repository.msg.OtherAmounts34.mmRegulatoryAmount,
-					com.tools20022.repository.msg.OtherAmounts38.mmRegulatoryAmount, com.tools20022.repository.msg.OtherAmounts33.mmRegulatoryAmount);
+			derivation_lazy = () -> Arrays.asList(OtherAmounts12.mmRegulatoryAmount, OtherAmounts14.mmRegulatoryAmount, OtherAmounts20.mmRegulatoryAmount, CorporateActionAmounts2.mmRegulatoryFeesAmount,
+					CorporateActionAmounts5.mmRegulatoryFeesAmount, CorporateActionAmounts11.mmRegulatoryFeesAmount, CorporateActionAmounts12.mmRegulatoryFeesAmount, CorporateActionAmounts17.mmRegulatoryFeesAmount,
+					CorporateActionAmounts20.mmRegulatoryFeesAmount, CorporateActionAmounts23.mmRegulatoryFeesAmount, CorporateActionAmounts24.mmRegulatoryFeesAmount, CorporateActionAmounts3.mmRegulatoryFeesAmount,
+					CorporateActionAmounts6.mmRegulatoryFeesAmount, CorporateActionAmounts9.mmRegulatoryFeesAmount, CorporateActionAmounts13.mmRegulatoryFeesAmount, CorporateActionAmounts16.mmRegulatoryFeesAmount,
+					CorporateActionAmounts19.mmRegulatoryFeesAmount, CorporateActionAmounts22.mmRegulatoryFeesAmount, CorporateActionAmounts25.mmRegulatoryFeesAmount, CorporateActionAmounts4.mmRegulatoryFeesAmount,
+					CorporateActionAmounts7.mmRegulatoryFeesAmount, CorporateActionAmounts10.mmRegulatoryFeesAmount, CorporateActionAmounts14.mmRegulatoryFeesAmount, CorporateActionAmounts15.mmRegulatoryFeesAmount,
+					CorporateActionAmounts18.mmRegulatoryFeesAmount, CorporateActionAmounts21.mmRegulatoryFeesAmount, CorporateActionAmounts26.mmRegulatoryFeesAmount, OtherAmounts4.mmRegulatoryAmount, OtherAmounts5.mmRegulatoryAmount,
+					OtherAmounts17.mmRegulatoryAmount, OtherAmounts23.mmRegulatoryAmount, OtherAmounts3.mmRegulatoryAmount, OtherAmounts7.mmRegulatoryAmount, OtherAmounts9.mmRegulatoryAmount, OtherAmounts10.mmRegulatoryAmount,
+					OtherAmounts18.mmRegulatoryAmount, OtherAmounts24.mmRegulatoryAmount, OtherAmounts13.mmRegulatoryAmount, OtherAmounts1.mmRegulatoryAmount, OtherAmounts16.mmRegulatoryAmount,
+					CorporateActionAmounts1.mmRegulatoryFeesAmount, OtherAmounts2.mmRegulatoryAmount, OtherAmounts6.mmRegulatoryAmount, OtherAmounts15.mmRegulatoryAmount, OtherAmounts22.mmRegulatoryAmount,
+					CorporateActionAmounts29.mmRegulatoryFeesAmount, CorporateActionAmounts27.mmRegulatoryFeesAmount, CorporateActionAmounts28.mmRegulatoryFeesAmount, CorporateActionAmounts33.mmRegulatoryFeesAmount,
+					CorporateActionAmounts32.mmRegulatoryFeesAmount, CorporateActionAmounts35.mmRegulatoryFeesAmount, OtherAmounts28.mmRegulatoryAmount, OtherAmounts30.mmRegulatoryAmount, OtherAmounts31.mmRegulatoryAmount,
+					OtherAmounts29.mmRegulatoryAmount, CorporateActionAmounts37.mmRegulatoryFeesAmount, CorporateActionAmounts36.mmRegulatoryFeesAmount, CorporateActionAmounts38.mmRegulatoryFeesAmount,
+					CorporateActionAmounts39.mmRegulatoryFeesAmount, CorporateActionAmounts41.mmRegulatoryFeesAmount, CorporateActionAmounts40.mmRegulatoryFeesAmount, OtherAmounts35.mmRegulatoryAmount, OtherAmounts34.mmRegulatoryAmount,
+					OtherAmounts38.mmRegulatoryAmount, OtherAmounts33.mmRegulatoryAmount);
 			elementContext_lazy = () -> SecuritiesRelatedFees.mmObject();
 			isDerived = false;
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "RegulatoryFeesAmount";
 			definition = "Amount of money charged by a regulatory authority, eg, Securities and Exchange fees.";
 			maxOccurs = 1;
@@ -749,35 +731,23 @@ public class SecuritiesRelatedFees extends Charges {
 	 */
 	public static final MMBusinessAttribute mmShippingFeesAmount = new MMBusinessAttribute() {
 		{
-			derivation_lazy = () -> Arrays.asList(com.tools20022.repository.msg.OtherAmounts12.mmShippingAmount, com.tools20022.repository.msg.OtherAmounts14.mmShippingAmount, com.tools20022.repository.msg.OtherAmounts20.mmShippingAmount,
-					com.tools20022.repository.msg.CorporateActionAmounts2.mmShippingFeesAmount, com.tools20022.repository.msg.CorporateActionAmounts5.mmShippingFeesAmount,
-					com.tools20022.repository.msg.CorporateActionAmounts11.mmShippingFeesAmount, com.tools20022.repository.msg.CorporateActionAmounts12.mmShippingFeesAmount,
-					com.tools20022.repository.msg.CorporateActionAmounts17.mmShippingFeesAmount, com.tools20022.repository.msg.CorporateActionAmounts20.mmShippingFeesAmount,
-					com.tools20022.repository.msg.CorporateActionAmounts23.mmShippingFeesAmount, com.tools20022.repository.msg.CorporateActionAmounts24.mmShippingFeesAmount,
-					com.tools20022.repository.msg.CorporateActionAmounts3.mmShippingFeesAmount, com.tools20022.repository.msg.CorporateActionAmounts6.mmShippingFeesAmount,
-					com.tools20022.repository.msg.CorporateActionAmounts9.mmShippingFeesAmount, com.tools20022.repository.msg.CorporateActionAmounts13.mmShippingFeesAmount,
-					com.tools20022.repository.msg.CorporateActionAmounts16.mmShippingFeesAmount, com.tools20022.repository.msg.CorporateActionAmounts19.mmShippingFeesAmount,
-					com.tools20022.repository.msg.CorporateActionAmounts22.mmShippingFeesAmount, com.tools20022.repository.msg.CorporateActionAmounts25.mmShippingFeesAmount,
-					com.tools20022.repository.msg.CorporateActionAmounts4.mmShippingFeesAmount, com.tools20022.repository.msg.CorporateActionAmounts7.mmShippingFeesAmount,
-					com.tools20022.repository.msg.CorporateActionAmounts10.mmShippingFeesAmount, com.tools20022.repository.msg.CorporateActionAmounts14.mmShippingFeesAmount,
-					com.tools20022.repository.msg.CorporateActionAmounts15.mmShippingFeesAmount, com.tools20022.repository.msg.CorporateActionAmounts18.mmShippingFeesAmount,
-					com.tools20022.repository.msg.CorporateActionAmounts21.mmShippingFeesAmount, com.tools20022.repository.msg.CorporateActionAmounts26.mmShippingFeesAmount, com.tools20022.repository.msg.OtherAmounts4.mmShippingAmount,
-					com.tools20022.repository.msg.OtherAmounts5.mmShippingAmount, com.tools20022.repository.msg.OtherAmounts17.mmShippingAmount, com.tools20022.repository.msg.OtherAmounts23.mmShippingAmount,
-					com.tools20022.repository.msg.OtherAmounts3.mmShippingAmount, com.tools20022.repository.msg.OtherAmounts7.mmShippingAmount, com.tools20022.repository.msg.OtherAmounts9.mmShippingAmount,
-					com.tools20022.repository.msg.OtherAmounts10.mmShippingAmount, com.tools20022.repository.msg.OtherAmounts18.mmShippingAmount, com.tools20022.repository.msg.OtherAmounts24.mmShippingAmount,
-					com.tools20022.repository.msg.OtherAmounts13.mmShippingAmount, com.tools20022.repository.msg.OtherAmounts1.mmShippingAmount, com.tools20022.repository.msg.CorporateActionAmounts1.mmShippingFeesAmount,
-					com.tools20022.repository.msg.OtherAmounts2.mmShippingAmount, com.tools20022.repository.msg.OtherAmounts6.mmShippingAmount, com.tools20022.repository.msg.OtherAmounts15.mmShippingAmount,
-					com.tools20022.repository.msg.OtherAmounts22.mmShippingAmount, com.tools20022.repository.msg.CorporateActionAmounts29.mmShippingFeesAmount, com.tools20022.repository.msg.CorporateActionAmounts27.mmShippingFeesAmount,
-					com.tools20022.repository.msg.CorporateActionAmounts28.mmShippingFeesAmount, com.tools20022.repository.msg.CorporateActionAmounts33.mmShippingFeesAmount,
-					com.tools20022.repository.msg.CorporateActionAmounts32.mmShippingFeesAmount, com.tools20022.repository.msg.CorporateActionAmounts35.mmShippingFeesAmount, com.tools20022.repository.msg.OtherAmounts28.mmShippingAmount,
-					com.tools20022.repository.msg.OtherAmounts30.mmShippingAmount, com.tools20022.repository.msg.OtherAmounts31.mmShippingAmount, com.tools20022.repository.msg.OtherAmounts29.mmShippingAmount,
-					com.tools20022.repository.msg.CorporateActionAmounts37.mmShippingFeesAmount, com.tools20022.repository.msg.CorporateActionAmounts36.mmShippingFeesAmount,
-					com.tools20022.repository.msg.CorporateActionAmounts38.mmShippingFeesAmount, com.tools20022.repository.msg.CorporateActionAmounts39.mmShippingFeesAmount,
-					com.tools20022.repository.msg.CorporateActionAmounts41.mmShippingFeesAmount, com.tools20022.repository.msg.CorporateActionAmounts40.mmShippingFeesAmount, com.tools20022.repository.msg.OtherAmounts35.mmShippingAmount,
-					com.tools20022.repository.msg.OtherAmounts34.mmShippingAmount, com.tools20022.repository.msg.OtherAmounts38.mmShippingAmount, com.tools20022.repository.msg.OtherAmounts33.mmShippingAmount);
+			derivation_lazy = () -> Arrays.asList(OtherAmounts12.mmShippingAmount, OtherAmounts14.mmShippingAmount, OtherAmounts20.mmShippingAmount, CorporateActionAmounts2.mmShippingFeesAmount,
+					CorporateActionAmounts5.mmShippingFeesAmount, CorporateActionAmounts11.mmShippingFeesAmount, CorporateActionAmounts12.mmShippingFeesAmount, CorporateActionAmounts17.mmShippingFeesAmount,
+					CorporateActionAmounts20.mmShippingFeesAmount, CorporateActionAmounts23.mmShippingFeesAmount, CorporateActionAmounts24.mmShippingFeesAmount, CorporateActionAmounts3.mmShippingFeesAmount,
+					CorporateActionAmounts6.mmShippingFeesAmount, CorporateActionAmounts9.mmShippingFeesAmount, CorporateActionAmounts13.mmShippingFeesAmount, CorporateActionAmounts16.mmShippingFeesAmount,
+					CorporateActionAmounts19.mmShippingFeesAmount, CorporateActionAmounts22.mmShippingFeesAmount, CorporateActionAmounts25.mmShippingFeesAmount, CorporateActionAmounts4.mmShippingFeesAmount,
+					CorporateActionAmounts7.mmShippingFeesAmount, CorporateActionAmounts10.mmShippingFeesAmount, CorporateActionAmounts14.mmShippingFeesAmount, CorporateActionAmounts15.mmShippingFeesAmount,
+					CorporateActionAmounts18.mmShippingFeesAmount, CorporateActionAmounts21.mmShippingFeesAmount, CorporateActionAmounts26.mmShippingFeesAmount, OtherAmounts4.mmShippingAmount, OtherAmounts5.mmShippingAmount,
+					OtherAmounts17.mmShippingAmount, OtherAmounts23.mmShippingAmount, OtherAmounts3.mmShippingAmount, OtherAmounts7.mmShippingAmount, OtherAmounts9.mmShippingAmount, OtherAmounts10.mmShippingAmount,
+					OtherAmounts18.mmShippingAmount, OtherAmounts24.mmShippingAmount, OtherAmounts13.mmShippingAmount, OtherAmounts1.mmShippingAmount, CorporateActionAmounts1.mmShippingFeesAmount, OtherAmounts2.mmShippingAmount,
+					OtherAmounts6.mmShippingAmount, OtherAmounts15.mmShippingAmount, OtherAmounts22.mmShippingAmount, CorporateActionAmounts29.mmShippingFeesAmount, CorporateActionAmounts27.mmShippingFeesAmount,
+					CorporateActionAmounts28.mmShippingFeesAmount, CorporateActionAmounts33.mmShippingFeesAmount, CorporateActionAmounts32.mmShippingFeesAmount, CorporateActionAmounts35.mmShippingFeesAmount,
+					OtherAmounts28.mmShippingAmount, OtherAmounts30.mmShippingAmount, OtherAmounts31.mmShippingAmount, OtherAmounts29.mmShippingAmount, CorporateActionAmounts37.mmShippingFeesAmount,
+					CorporateActionAmounts36.mmShippingFeesAmount, CorporateActionAmounts38.mmShippingFeesAmount, CorporateActionAmounts39.mmShippingFeesAmount, CorporateActionAmounts41.mmShippingFeesAmount,
+					CorporateActionAmounts40.mmShippingFeesAmount, OtherAmounts35.mmShippingAmount, OtherAmounts34.mmShippingAmount, OtherAmounts38.mmShippingAmount, OtherAmounts33.mmShippingAmount);
 			elementContext_lazy = () -> SecuritiesRelatedFees.mmObject();
 			isDerived = false;
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "ShippingFeesAmount";
 			definition = "Amount of money (including insurance) paid for delivery by carrier.";
 			maxOccurs = 1;
@@ -789,14 +759,13 @@ public class SecuritiesRelatedFees extends Charges {
 	static public MMBusinessComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMBusinessComponent() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "SecuritiesRelatedFees";
 				definition = "Fees related to securities trades.";
 				associationDomain_lazy = () -> Arrays.asList(com.tools20022.repository.entity.Security.mmFees);
 				superType_lazy = () -> Charges.mmObject();
-				element_lazy = () -> Arrays.asList(com.tools20022.repository.entity.SecuritiesRelatedFees.mmSecurity, com.tools20022.repository.entity.SecuritiesRelatedFees.mmPostageFeeAmount,
-						com.tools20022.repository.entity.SecuritiesRelatedFees.mmRegulatoryFeesAmount, com.tools20022.repository.entity.SecuritiesRelatedFees.mmShippingFeesAmount);
+				element_lazy = () -> Arrays.asList(SecuritiesRelatedFees.mmSecurity, SecuritiesRelatedFees.mmPostageFeeAmount, SecuritiesRelatedFees.mmRegulatoryFeesAmount, SecuritiesRelatedFees.mmShippingFeesAmount);
 			}
 		});
 		return mmObject_lazy.get();

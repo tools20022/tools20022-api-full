@@ -19,6 +19,8 @@ package com.tools20022.repository.codeset;
 
 import com.tools20022.metamodel.MMCode;
 import com.tools20022.metamodel.MMCodeSet;
+import com.tools20022.metamodel.MMRegistrationStatus;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -27,6 +29,13 @@ import java.util.concurrent.atomic.AtomicReference;
  * <p>
  * <strong>Constant fields:</strong>
  * <ul>
+ * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getDerivation derivation}
+ * =
+ * <ul>
+ * <li>{@linkplain com.tools20022.repository.codeset.SupportDocumentType1Code
+ * SupportDocumentType1Code}</li>
+ * </ul>
+ * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getCode code} =
  * <ul>
  * <li>
@@ -38,13 +47,6 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>
  * {@linkplain com.tools20022.repository.codeset.SupportDocumentTypeCode#mmLetterToBank
  * SupportDocumentTypeCode.mmLetterToBank}</li>
- * </ul>
- * </li>
- * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getDerivation derivation}
- * =
- * <ul>
- * <li>{@linkplain com.tools20022.repository.codeset.SupportDocumentType1Code
- * SupportDocumentType1Code}</li>
  * </ul>
  * </li>
  * <li>
@@ -88,7 +90,7 @@ public class SupportDocumentTypeCode {
 	 */
 	public static final MMCode mmSupportingDocument = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SupportingDocument";
 			definition = "Document is a supporting document.";
 			owner_lazy = () -> SupportDocumentTypeCode.mmObject();
@@ -118,7 +120,7 @@ public class SupportDocumentTypeCode {
 	 */
 	public static final MMCode mmLetterFromBank = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "LetterFromBank";
 			definition = "Document is a letter from the bank.";
 			owner_lazy = () -> SupportDocumentTypeCode.mmObject();
@@ -148,7 +150,7 @@ public class SupportDocumentTypeCode {
 	 */
 	public static final MMCode mmLetterToBank = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "LetterToBank";
 			definition = "Document is a letter to the bank.";
 			owner_lazy = () -> SupportDocumentTypeCode.mmObject();
@@ -159,12 +161,11 @@ public class SupportDocumentTypeCode {
 	static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "SupportDocumentTypeCode";
 				definition = "Specifies a type of supporting document.";
-				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.SupportDocumentTypeCode.mmSupportingDocument, com.tools20022.repository.codeset.SupportDocumentTypeCode.mmLetterFromBank,
-						com.tools20022.repository.codeset.SupportDocumentTypeCode.mmLetterToBank);
+				code_lazy = () -> Arrays.asList(SupportDocumentTypeCode.mmSupportingDocument, SupportDocumentTypeCode.mmLetterFromBank, SupportDocumentTypeCode.mmLetterToBank);
 				derivation_lazy = () -> Arrays.asList(SupportDocumentType1Code.mmObject());
 			}
 		});

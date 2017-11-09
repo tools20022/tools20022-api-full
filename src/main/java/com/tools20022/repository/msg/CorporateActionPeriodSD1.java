@@ -19,7 +19,9 @@ package com.tools20022.repository.msg;
 
 import com.tools20022.metamodel.MMMessageAttribute;
 import com.tools20022.metamodel.MMMessageComponent;
+import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.datatype.Max350Text;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -97,7 +99,7 @@ public class CorporateActionPeriodSD1 {
 			componentContext_lazy = () -> CorporateActionPeriodSD1.mmObject();
 			isDerived = false;
 			xmlTag = "PlcAndNm";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PlaceAndName";
 			definition = "xPath to the element that is being extended.";
 			maxOccurs = 1;
@@ -145,7 +147,7 @@ public class CorporateActionPeriodSD1 {
 			componentContext_lazy = () -> CorporateActionPeriodSD1.mmObject();
 			isDerived = false;
 			xmlTag = "DTCReorgDpstPrd";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "DTCReorganisationDepositPeriod";
 			definition = "Period during which the securities can be submitted to Reorganisation deposit service at DTC (The Depository Trust Corporation). DTC First Day for Reorg Deposit (start date) is the day on which security is eligible for reorganisation deposit service at DTC. DTC Last Day for Reorg Deposit is the last day on which securities are eligible to be submitted for reorganisation deposit service at DTC.";
 			maxOccurs = 1;
@@ -192,7 +194,7 @@ public class CorporateActionPeriodSD1 {
 			componentContext_lazy = () -> CorporateActionPeriodSD1.mmObject();
 			isDerived = false;
 			xmlTag = "DTCChillPrdForDpstryDlvry";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "DTCChillPeriodForDepositoryDelivery";
 			definition = "Period during which the co-depositories deliveries are suspended at DTC (The Depository Trust Corporation). DTC Last Day for Depository Delivery (start date) - the last day on which depository deliveries will be accepted. DTC Chill Release Day  for Depository Delivery (end date) - day when chill is released and depositories can resume delivery activities.";
 			maxOccurs = 1;
@@ -204,10 +206,9 @@ public class CorporateActionPeriodSD1 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.CorporateActionPeriodSD1.mmPlaceAndName, com.tools20022.repository.msg.CorporateActionPeriodSD1.mmDTCReorganisationDepositPeriod,
-						com.tools20022.repository.msg.CorporateActionPeriodSD1.mmDTCChillPeriodForDepositoryDelivery);
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+				messageElement_lazy = () -> Arrays.asList(CorporateActionPeriodSD1.mmPlaceAndName, CorporateActionPeriodSD1.mmDTCReorganisationDepositPeriod, CorporateActionPeriodSD1.mmDTCChillPeriodForDepositoryDelivery);
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 				name = "CorporateActionPeriodSD1";
 				definition = "Provides additional information regarding corporate action details periods details.";
 			}

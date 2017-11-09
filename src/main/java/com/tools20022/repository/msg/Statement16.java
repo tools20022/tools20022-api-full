@@ -20,7 +20,10 @@ package com.tools20022.repository.msg;
 import com.tools20022.metamodel.MMMessageAssociationEnd;
 import com.tools20022.metamodel.MMMessageAttribute;
 import com.tools20022.metamodel.MMMessageComponent;
+import com.tools20022.metamodel.MMRegistrationStatus;
+import com.tools20022.repository.area.semt.*;
 import com.tools20022.repository.choice.*;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -131,10 +134,10 @@ public class Statement16 {
 			componentContext_lazy = () -> Statement16.mmObject();
 			isDerived = false;
 			xmlTag = "StmtDtOrPrd";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "StatementDateOrPeriod";
 			definition = "Date or period of the statement.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.Statement42.mmStatementDateOrPeriod);
+			nextVersions_lazy = () -> Arrays.asList(Statement42.mmStatementDateOrPeriod);
 			maxOccurs = 1;
 			minOccurs = 0;
 			isComposite = true;
@@ -181,10 +184,10 @@ public class Statement16 {
 			componentContext_lazy = () -> Statement16.mmObject();
 			isDerived = false;
 			xmlTag = "Frqcy";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Frequency";
 			definition = "Frequency of the statement.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.Statement42.mmFrequency);
+			nextVersions_lazy = () -> Arrays.asList(Statement42.mmFrequency);
 			maxOccurs = 1;
 			minOccurs = 0;
 			complexType_lazy = () -> Frequency4Choice.mmObject();
@@ -229,10 +232,10 @@ public class Statement16 {
 			componentContext_lazy = () -> Statement16.mmObject();
 			isDerived = false;
 			xmlTag = "UpdTp";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "UpdateType";
 			definition = "Indicates whether the statement is complete or contains changes only.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.Statement42.mmUpdateType);
+			nextVersions_lazy = () -> Arrays.asList(Statement42.mmUpdateType);
 			maxOccurs = 1;
 			minOccurs = 0;
 			isComposite = true;
@@ -280,10 +283,10 @@ public class Statement16 {
 			componentContext_lazy = () -> Statement16.mmObject();
 			isDerived = false;
 			xmlTag = "StmtBsis";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "StatementBasis";
 			definition = "Type of balance on which the statement is prepared.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.Statement42.mmStatementBasis);
+			nextVersions_lazy = () -> Arrays.asList(Statement42.mmStatementBasis);
 			maxOccurs = 1;
 			minOccurs = 0;
 			complexType_lazy = () -> StatementBasis3Choice.mmObject();
@@ -330,10 +333,10 @@ public class Statement16 {
 			componentContext_lazy = () -> Statement16.mmObject();
 			isDerived = false;
 			xmlTag = "StmtTp";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "StatementType";
 			definition = "Type of balance on which the statement is prepared.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.Statement42.mmStatementType);
+			nextVersions_lazy = () -> Arrays.asList(Statement42.mmStatementType);
 			maxOccurs = 1;
 			minOccurs = 0;
 			complexType_lazy = () -> StatementType2Choice.mmObject();
@@ -343,13 +346,11 @@ public class Statement16 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.Statement16.mmStatementDateOrPeriod, com.tools20022.repository.msg.Statement16.mmFrequency, com.tools20022.repository.msg.Statement16.mmUpdateType,
-						com.tools20022.repository.msg.Statement16.mmStatementBasis, com.tools20022.repository.msg.Statement16.mmStatementType);
-				messageBuildingBlock_lazy = () -> Arrays.asList(com.tools20022.repository.area.semt.SecuritiesStatementQueryV01.mmStatementGeneralDetails,
-						com.tools20022.repository.area.semt.SecuritiesStatementQueryV02.mmStatementGeneralDetails, com.tools20022.repository.area.semt.SecuritiesStatementQueryV03.mmStatementGeneralDetails,
-						com.tools20022.repository.area.semt.SecuritiesStatementQueryV04.mmStatementGeneralDetails, com.tools20022.repository.area.semt.SecuritiesStatementQueryV05.mmStatementGeneralDetails);
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				messageElement_lazy = () -> Arrays.asList(Statement16.mmStatementDateOrPeriod, Statement16.mmFrequency, Statement16.mmUpdateType, Statement16.mmStatementBasis, Statement16.mmStatementType);
+				messageBuildingBlock_lazy = () -> Arrays.asList(SecuritiesStatementQueryV01.mmStatementGeneralDetails, SecuritiesStatementQueryV02.mmStatementGeneralDetails, SecuritiesStatementQueryV03.mmStatementGeneralDetails,
+						SecuritiesStatementQueryV04.mmStatementGeneralDetails, SecuritiesStatementQueryV05.mmStatementGeneralDetails);
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "Statement16";
 				definition = "Characteristics of the statement.";
 				nextVersions_lazy = () -> Arrays.asList(Statement42.mmObject());

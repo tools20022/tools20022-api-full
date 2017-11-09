@@ -20,12 +20,14 @@ package com.tools20022.repository.msg;
 import com.tools20022.metamodel.MMMessageAssociationEnd;
 import com.tools20022.metamodel.MMMessageAttribute;
 import com.tools20022.metamodel.MMMessageComponent;
+import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.choice.EUCapitalGain3Choice;
 import com.tools20022.repository.choice.EUDividendStatusType2Choice;
 import com.tools20022.repository.datatype.ActiveCurrencyAndAmount;
 import com.tools20022.repository.datatype.PercentageRate;
 import com.tools20022.repository.entity.InvestmentFundTax;
 import com.tools20022.repository.entity.SecuritiesTax;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.List;
@@ -120,11 +122,11 @@ public class InformativeTax1 {
 	 */
 	public static final MMMessageAttribute mmTaxableIncomePerDividend = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.SecuritiesTax.mmTaxableIncomePerDividend;
+			businessElementTrace_lazy = () -> SecuritiesTax.mmTaxableIncomePerDividend;
 			componentContext_lazy = () -> InformativeTax1.mmObject();
 			isDerived = false;
 			xmlTag = "TaxblIncmPerDvdd";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "TaxableIncomePerDividend";
 			definition = "Amount included in the dividend that corresponds to gains directly or indirectly derived from interest payment in the scope of the European Directive on taxation of savings income in the form of interest payments.";
 			maxOccurs = 1;
@@ -173,11 +175,11 @@ public class InformativeTax1 {
 	 */
 	public static final MMMessageAttribute mmEUCapitalGain = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.SecuritiesTax.mmEUCapitalGain;
+			businessElementTrace_lazy = () -> SecuritiesTax.mmEUCapitalGain;
 			componentContext_lazy = () -> InformativeTax1.mmObject();
 			isDerived = false;
 			xmlTag = "EUCptlGn";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "EUCapitalGain";
 			definition = "Specifies whether capital gain is in the scope of the European directive on taxation of savings income in the form of interest payments (Council Directive 2003/48/EC 3 June), or an income realised upon sale, a refund or redemption of shares and units, etc.";
 			maxOccurs = 1;
@@ -226,11 +228,11 @@ public class InformativeTax1 {
 	 */
 	public static final MMMessageAttribute mmEUDividendStatus = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.SecuritiesTax.mmEUDividendStatus;
+			businessElementTrace_lazy = () -> SecuritiesTax.mmEUDividendStatus;
 			componentContext_lazy = () -> InformativeTax1.mmObject();
 			isDerived = false;
 			xmlTag = "EUDvddSts";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "EUDividendStatus";
 			definition = "Specifies whether dividend is in the scope of the European directive on taxation of savings income in the form of interest payments (Council Directive 2003/48/EC 3 June), or an income realised upon sale, a refund or redemption of shares and units, etc.";
 			maxOccurs = 1;
@@ -279,11 +281,11 @@ public class InformativeTax1 {
 	 */
 	public static final MMMessageAttribute mmPercentageOfDebtClaim = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.InvestmentFundTax.mmPercentageOfDebtClaim;
+			businessElementTrace_lazy = () -> InvestmentFundTax.mmPercentageOfDebtClaim;
 			componentContext_lazy = () -> InformativeTax1.mmObject();
 			isDerived = false;
 			xmlTag = "PctgOfDebtClm";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PercentageOfDebtClaim";
 			definition = "Percentage of the underlying assets of the funds that represents a debt and is in the scope of the European directive on taxation of savings income in the form of interest payments (Council Directive 2003/48/EC 3 June).";
 			maxOccurs = 1;
@@ -331,7 +333,7 @@ public class InformativeTax1 {
 			componentContext_lazy = () -> InformativeTax1.mmObject();
 			isDerived = false;
 			xmlTag = "IndvTax";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "IndividualTax";
 			definition = "Information related to a specific tax that is provided for information purposes.";
 			minOccurs = 0;
@@ -343,11 +345,11 @@ public class InformativeTax1 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.InformativeTax1.mmTaxableIncomePerDividend, com.tools20022.repository.msg.InformativeTax1.mmEUCapitalGain,
-						com.tools20022.repository.msg.InformativeTax1.mmEUDividendStatus, com.tools20022.repository.msg.InformativeTax1.mmPercentageOfDebtClaim, com.tools20022.repository.msg.InformativeTax1.mmIndividualTax);
+				messageElement_lazy = () -> Arrays.asList(InformativeTax1.mmTaxableIncomePerDividend, InformativeTax1.mmEUCapitalGain, InformativeTax1.mmEUDividendStatus, InformativeTax1.mmPercentageOfDebtClaim,
+						InformativeTax1.mmIndividualTax);
 				trace_lazy = () -> SecuritiesTax.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "InformativeTax1";
 				definition = "Tax related to an investment fund order.";
 				previousVersion_lazy = () -> TotalTaxes3.mmObject();

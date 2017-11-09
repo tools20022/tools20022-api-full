@@ -19,8 +19,12 @@ package com.tools20022.repository.msg;
 
 import com.tools20022.metamodel.MMMessageAttribute;
 import com.tools20022.metamodel.MMMessageComponent;
+import com.tools20022.metamodel.MMRegistrationStatus;
+import com.tools20022.repository.area.acmt.*;
+import com.tools20022.repository.area.sese.*;
 import com.tools20022.repository.datatype.ISOYearMonth;
 import com.tools20022.repository.datatype.Max35Text;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -274,7 +278,7 @@ public class MarketPracticeVersion1 {
 			componentContext_lazy = () -> MarketPracticeVersion1.mmObject();
 			isDerived = false;
 			xmlTag = "Nm";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Name";
 			definition = "Market practice, for example, “UKTRANSFERS”, “FINDELSLT”.";
 			maxOccurs = 1;
@@ -316,7 +320,7 @@ public class MarketPracticeVersion1 {
 			componentContext_lazy = () -> MarketPracticeVersion1.mmObject();
 			isDerived = false;
 			xmlTag = "Dt";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Date";
 			definition = "Year and month, for example, 2013-06";
 			maxOccurs = 1;
@@ -357,7 +361,7 @@ public class MarketPracticeVersion1 {
 			componentContext_lazy = () -> MarketPracticeVersion1.mmObject();
 			isDerived = false;
 			xmlTag = "Nb";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Number";
 			definition = "Version of the market practice.";
 			maxOccurs = 1;
@@ -369,40 +373,28 @@ public class MarketPracticeVersion1 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.MarketPracticeVersion1.mmName, com.tools20022.repository.msg.MarketPracticeVersion1.mmDate,
-						com.tools20022.repository.msg.MarketPracticeVersion1.mmNumber);
-				messageBuildingBlock_lazy = () -> Arrays.asList(com.tools20022.repository.area.acmt.AccountDetailsConfirmationV04.mmMarketPracticeVersion,
-						com.tools20022.repository.area.acmt.AccountModificationInstructionV04.mmMarketPracticeVersion, com.tools20022.repository.area.acmt.AccountOpeningInstructionV04.mmMarketPracticeVersion,
-						com.tools20022.repository.area.sese.ReversalOfTransferInConfirmationV05.mmMarketPracticeVersion, com.tools20022.repository.area.sese.TransferInConfirmationV05.mmMarketPracticeVersion,
-						com.tools20022.repository.area.sese.TransferInstructionStatusReportV04.mmMarketPracticeVersion, com.tools20022.repository.area.sese.AccountHoldingInformationRequestV03.mmMarketPracticeVersion,
-						com.tools20022.repository.area.sese.TransferOutInstructionV05.mmMarketPracticeVersion, com.tools20022.repository.area.sese.AccountHoldingInformationV04.mmMarketPracticeVersion,
-						com.tools20022.repository.area.sese.PortfolioTransferCancellationRequestV05.mmMarketPracticeVersion, com.tools20022.repository.area.sese.TransferCancellationStatusReportV04.mmMarketPracticeVersion,
-						com.tools20022.repository.area.sese.PortfolioTransferInstructionV05.mmMarketPracticeVersion, com.tools20022.repository.area.sese.TransferInInstructionV05.mmMarketPracticeVersion,
-						com.tools20022.repository.area.sese.TransferInCancellationRequestV05.mmMarketPracticeVersion, com.tools20022.repository.area.sese.PortfolioTransferConfirmationV05.mmMarketPracticeVersion,
-						com.tools20022.repository.area.sese.TransferOutConfirmationV05.mmMarketPracticeVersion, com.tools20022.repository.area.sese.RequestForTransferStatusReportV04.mmMarketPracticeVersion,
-						com.tools20022.repository.area.sese.ReversalOfTransferOutConfirmationV05.mmMarketPracticeVersion, com.tools20022.repository.area.sese.TransferOutCancellationRequestV05.mmMarketPracticeVersion,
-						com.tools20022.repository.area.acmt.AccountManagementStatusReportV04.mmMarketPracticeVersion, com.tools20022.repository.area.acmt.AccountOpeningInstructionV05.mmMarketPracticeVersion,
-						com.tools20022.repository.area.acmt.AccountModificationInstructionV05.mmMarketPracticeVersion, com.tools20022.repository.area.acmt.AccountDetailsConfirmationV05.mmMarketPracticeVersion,
-						com.tools20022.repository.area.sese.PortfolioTransferCancellationRequestV06.mmMarketPracticeVersion, com.tools20022.repository.area.sese.PortfolioTransferConfirmationV06.mmMarketPracticeVersion,
-						com.tools20022.repository.area.sese.PortfolioTransferInstructionV06.mmMarketPracticeVersion, com.tools20022.repository.area.sese.TransferInInstructionV06.mmMarketPracticeVersion,
-						com.tools20022.repository.area.sese.TransferOutConfirmationV06.mmMarketPracticeVersion, com.tools20022.repository.area.sese.TransferOutInstructionV06.mmMarketPracticeVersion,
-						com.tools20022.repository.area.sese.TransferOutCancellationRequestV06.mmMarketPracticeVersion, com.tools20022.repository.area.sese.TransferInConfirmationV06.mmMarketPracticeVersion,
-						com.tools20022.repository.area.sese.ReversalOfTransferOutConfirmationV06.mmMarketPracticeVersion, com.tools20022.repository.area.sese.TransferInCancellationRequestV06.mmMarketPracticeVersion,
-						com.tools20022.repository.area.sese.ReversalOfTransferInConfirmationV06.mmMarketPracticeVersion, com.tools20022.repository.area.sese.PortfolioTransferInstructionV07.mmMarketPracticeVersion,
-						com.tools20022.repository.area.sese.ReversalOfTransferOutConfirmationV07.mmMarketPracticeVersion, com.tools20022.repository.area.sese.TransferOutCancellationRequestV07.mmMarketPracticeVersion,
-						com.tools20022.repository.area.sese.AccountHoldingInformationV05.mmMarketPracticeVersion, com.tools20022.repository.area.sese.PortfolioTransferCancellationRequestV07.mmMarketPracticeVersion,
-						com.tools20022.repository.area.sese.TransferInstructionStatusReportV05.mmMarketPracticeVersion, com.tools20022.repository.area.sese.TransferInConfirmationV07.mmMarketPracticeVersion,
-						com.tools20022.repository.area.acmt.AccountOpeningInstructionV06.mmMarketPracticeVersion, com.tools20022.repository.area.sese.TransferOutConfirmationV07.mmMarketPracticeVersion,
-						com.tools20022.repository.area.sese.RequestForTransferStatusReportV05.mmMarketPracticeVersion, com.tools20022.repository.area.acmt.AccountDetailsConfirmationV06.mmMarketPracticeVersion,
-						com.tools20022.repository.area.sese.TransferInCancellationRequestV07.mmMarketPracticeVersion, com.tools20022.repository.area.sese.PortfolioTransferConfirmationV07.mmMarketPracticeVersion,
-						com.tools20022.repository.area.sese.TransferCancellationStatusReportV05.mmMarketPracticeVersion, com.tools20022.repository.area.sese.TransferOutInstructionV07.mmMarketPracticeVersion,
-						com.tools20022.repository.area.acmt.AccountManagementStatusReportV05.mmMarketPracticeVersion, com.tools20022.repository.area.acmt.AccountModificationInstructionV06.mmMarketPracticeVersion,
-						com.tools20022.repository.area.sese.TransferInInstructionV07.mmMarketPracticeVersion, com.tools20022.repository.area.sese.AccountHoldingInformationRequestV04.mmMarketPracticeVersion,
-						com.tools20022.repository.area.sese.ReversalOfTransferInConfirmationV07.mmMarketPracticeVersion, com.tools20022.repository.area.acmt.AccountDetailsConfirmationV07.mmMarketPracticeVersion,
-						com.tools20022.repository.area.acmt.AccountModificationInstructionV07.mmMarketPracticeVersion, com.tools20022.repository.area.acmt.AccountOpeningInstructionV07.mmMarketPracticeVersion,
-						com.tools20022.repository.area.acmt.AccountManagementStatusReportV06.mmMarketPracticeVersion);
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				messageElement_lazy = () -> Arrays.asList(MarketPracticeVersion1.mmName, MarketPracticeVersion1.mmDate, MarketPracticeVersion1.mmNumber);
+				messageBuildingBlock_lazy = () -> Arrays.asList(AccountDetailsConfirmationV04.mmMarketPracticeVersion, AccountModificationInstructionV04.mmMarketPracticeVersion, AccountOpeningInstructionV04.mmMarketPracticeVersion,
+						ReversalOfTransferInConfirmationV05.mmMarketPracticeVersion, TransferInConfirmationV05.mmMarketPracticeVersion, TransferInstructionStatusReportV04.mmMarketPracticeVersion,
+						AccountHoldingInformationRequestV03.mmMarketPracticeVersion, TransferOutInstructionV05.mmMarketPracticeVersion, AccountHoldingInformationV04.mmMarketPracticeVersion,
+						PortfolioTransferCancellationRequestV05.mmMarketPracticeVersion, TransferCancellationStatusReportV04.mmMarketPracticeVersion, PortfolioTransferInstructionV05.mmMarketPracticeVersion,
+						TransferInInstructionV05.mmMarketPracticeVersion, TransferInCancellationRequestV05.mmMarketPracticeVersion, PortfolioTransferConfirmationV05.mmMarketPracticeVersion,
+						TransferOutConfirmationV05.mmMarketPracticeVersion, RequestForTransferStatusReportV04.mmMarketPracticeVersion, ReversalOfTransferOutConfirmationV05.mmMarketPracticeVersion,
+						TransferOutCancellationRequestV05.mmMarketPracticeVersion, AccountManagementStatusReportV04.mmMarketPracticeVersion, AccountOpeningInstructionV05.mmMarketPracticeVersion,
+						AccountModificationInstructionV05.mmMarketPracticeVersion, AccountDetailsConfirmationV05.mmMarketPracticeVersion, PortfolioTransferCancellationRequestV06.mmMarketPracticeVersion,
+						PortfolioTransferConfirmationV06.mmMarketPracticeVersion, PortfolioTransferInstructionV06.mmMarketPracticeVersion, TransferInInstructionV06.mmMarketPracticeVersion,
+						TransferOutConfirmationV06.mmMarketPracticeVersion, TransferOutInstructionV06.mmMarketPracticeVersion, TransferOutCancellationRequestV06.mmMarketPracticeVersion, TransferInConfirmationV06.mmMarketPracticeVersion,
+						ReversalOfTransferOutConfirmationV06.mmMarketPracticeVersion, TransferInCancellationRequestV06.mmMarketPracticeVersion, ReversalOfTransferInConfirmationV06.mmMarketPracticeVersion,
+						PortfolioTransferInstructionV07.mmMarketPracticeVersion, ReversalOfTransferOutConfirmationV07.mmMarketPracticeVersion, TransferOutCancellationRequestV07.mmMarketPracticeVersion,
+						AccountHoldingInformationV05.mmMarketPracticeVersion, PortfolioTransferCancellationRequestV07.mmMarketPracticeVersion, TransferInstructionStatusReportV05.mmMarketPracticeVersion,
+						TransferInConfirmationV07.mmMarketPracticeVersion, AccountOpeningInstructionV06.mmMarketPracticeVersion, TransferOutConfirmationV07.mmMarketPracticeVersion, RequestForTransferStatusReportV05.mmMarketPracticeVersion,
+						AccountDetailsConfirmationV06.mmMarketPracticeVersion, TransferInCancellationRequestV07.mmMarketPracticeVersion, PortfolioTransferConfirmationV07.mmMarketPracticeVersion,
+						TransferCancellationStatusReportV05.mmMarketPracticeVersion, TransferOutInstructionV07.mmMarketPracticeVersion, AccountManagementStatusReportV05.mmMarketPracticeVersion,
+						AccountModificationInstructionV06.mmMarketPracticeVersion, TransferInInstructionV07.mmMarketPracticeVersion, AccountHoldingInformationRequestV04.mmMarketPracticeVersion,
+						ReversalOfTransferInConfirmationV07.mmMarketPracticeVersion, AccountDetailsConfirmationV07.mmMarketPracticeVersion, AccountModificationInstructionV07.mmMarketPracticeVersion,
+						AccountOpeningInstructionV07.mmMarketPracticeVersion, AccountManagementStatusReportV06.mmMarketPracticeVersion);
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "MarketPracticeVersion1";
 				definition = "Identifies the implementation and version.";
 			}

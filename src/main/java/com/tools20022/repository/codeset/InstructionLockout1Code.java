@@ -19,7 +19,9 @@ package com.tools20022.repository.codeset;
 
 import com.tools20022.metamodel.MMCode;
 import com.tools20022.metamodel.MMCodeSet;
+import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.codeset.InstructionLockoutCode;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -87,7 +89,7 @@ public class InstructionLockout1Code extends InstructionLockoutCode {
 	 */
 	public static final MMCode mmSystemicLocked = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SystemicLocked";
 			owner_lazy = () -> InstructionLockout1Code.mmObject();
 		}
@@ -110,7 +112,7 @@ public class InstructionLockout1Code extends InstructionLockoutCode {
 	 */
 	public static final MMCode mmManualLocked = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ManualLocked";
 			owner_lazy = () -> InstructionLockout1Code.mmObject();
 		}
@@ -133,7 +135,7 @@ public class InstructionLockout1Code extends InstructionLockoutCode {
 	 */
 	public static final MMCode mmNotLocked = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "NotLocked";
 			owner_lazy = () -> InstructionLockout1Code.mmObject();
 		}
@@ -142,13 +144,12 @@ public class InstructionLockout1Code extends InstructionLockoutCode {
 	static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
 				example = Arrays.asList("SYLK");
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "InstructionLockout1Code";
 				definition = "Specifies the status of the instruction lock (for elections).";
-				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.InstructionLockout1Code.mmSystemicLocked, com.tools20022.repository.codeset.InstructionLockout1Code.mmManualLocked,
-						com.tools20022.repository.codeset.InstructionLockout1Code.mmNotLocked);
+				code_lazy = () -> Arrays.asList(InstructionLockout1Code.mmSystemicLocked, InstructionLockout1Code.mmManualLocked, InstructionLockout1Code.mmNotLocked);
 				trace_lazy = () -> InstructionLockoutCode.mmObject();
 			}
 		});

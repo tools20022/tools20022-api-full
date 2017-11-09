@@ -19,7 +19,9 @@ package com.tools20022.repository.msg;
 
 import com.tools20022.metamodel.MMMessageAttribute;
 import com.tools20022.metamodel.MMMessageComponent;
+import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.datatype.Max50Binary;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -98,7 +100,7 @@ public class IsabelLRCIPaymentInformation1 {
 			componentContext_lazy = () -> IsabelLRCIPaymentInformation1.mmObject();
 			isDerived = false;
 			xmlTag = "ImgHash";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ImageHash";
 			definition = "Arbitrary block of data defined as a fixed-size bit string, the (cryptographic) hash value, which allows the detection of an accidental or intentional change to the  visual representation of a particular payment file.";
 			maxOccurs = 1;
@@ -143,7 +145,7 @@ public class IsabelLRCIPaymentInformation1 {
 			componentContext_lazy = () -> IsabelLRCIPaymentInformation1.mmObject();
 			isDerived = false;
 			xmlTag = "PmtHash";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PaymentHash";
 			definition = "Arbitrary block of data defined as a fixed-size bit string, the (cryptographic) hash value, which allows the detection of an accidental or intentional change to a particular payment file.";
 			maxOccurs = 1;
@@ -155,9 +157,9 @@ public class IsabelLRCIPaymentInformation1 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.IsabelLRCIPaymentInformation1.mmImageHash, com.tools20022.repository.msg.IsabelLRCIPaymentInformation1.mmPaymentHash);
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+				messageElement_lazy = () -> Arrays.asList(IsabelLRCIPaymentInformation1.mmImageHash, IsabelLRCIPaymentInformation1.mmPaymentHash);
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 				name = "IsabelLRCIPaymentInformation1";
 				definition = "Specifies a record holding the LRCI required data related to a payment file.";
 			}

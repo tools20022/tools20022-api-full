@@ -19,9 +19,12 @@ package com.tools20022.repository.msg;
 
 import com.tools20022.metamodel.MMMessageAssociationEnd;
 import com.tools20022.metamodel.MMMessageComponent;
+import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.choice.AmountOrRate3Choice;
 import com.tools20022.repository.choice.CommissionType5Choice;
+import com.tools20022.repository.entity.Adjustment;
 import com.tools20022.repository.entity.Commission;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -99,11 +102,11 @@ public class Commission21 {
 	 */
 	public static final MMMessageAssociationEnd mmCommissionType = new MMMessageAssociationEnd() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Commission.mmCommissionType;
+			businessElementTrace_lazy = () -> Commission.mmCommissionType;
 			componentContext_lazy = () -> Commission21.mmObject();
 			isDerived = false;
 			xmlTag = "ComssnTp";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CommissionType";
 			definition = "Type of commission.";
 			maxOccurs = 1;
@@ -145,11 +148,11 @@ public class Commission21 {
 	 */
 	public static final MMMessageAssociationEnd mmCommissionApplied = new MMMessageAssociationEnd() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Adjustment.mmAmount;
+			businessElementTrace_lazy = () -> Adjustment.mmAmount;
 			componentContext_lazy = () -> Commission21.mmObject();
 			isDerived = false;
 			xmlTag = "ComssnApld";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CommissionApplied";
 			definition = "Commission amount or commission rate applied.";
 			maxOccurs = 1;
@@ -162,10 +165,10 @@ public class Commission21 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.Commission21.mmCommissionType, com.tools20022.repository.msg.Commission21.mmCommissionApplied);
+				messageElement_lazy = () -> Arrays.asList(Commission21.mmCommissionType, Commission21.mmCommissionApplied);
 				trace_lazy = () -> Commission.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "Commission21";
 				definition = "Amount of money due to a party as compensation for a service.";
 				previousVersion_lazy = () -> Commission9.mmObject();

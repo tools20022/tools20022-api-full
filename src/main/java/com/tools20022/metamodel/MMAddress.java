@@ -18,9 +18,11 @@
 package com.tools20022.metamodel;
 
 import com.tools20022.core.metamodel.GeneratedMetamodelBean;
+import com.tools20022.core.metamodel.Metamodel.MetamodelAttribute;
 import com.tools20022.core.metamodel.Metamodel.MetamodelType;
 import com.tools20022.core.metamodel.Opposite;
 import com.tools20022.core.metamodel.OrphanMetamodelType;
+import static com.tools20022.core.metamodel.StaticMemembersBuilder.newAttribute;
 import com.tools20022.metamodel.MMBroadcastList;
 import com.tools20022.metamodel.MMMessagingEndpoint;
 import com.tools20022.metamodel.MMModelEntity;
@@ -36,6 +38,14 @@ import java.util.Optional;
  */
 public class MMAddress implements OrphanMetamodelType, MMModelEntity {
 
+	/**
+	 * a BroadCastList to which this Address belongs
+	 */
+	public final static MetamodelAttribute<MMAddress, List<MMBroadcastList>> broadCastListAttribute = newAttribute();
+	/**
+	 * specifies the MessagingEndpoint for the Address
+	 */
+	public final static MetamodelAttribute<MMAddress, MMMessagingEndpoint> endpointAttribute = newAttribute();
 	protected Supplier<List<MMBroadcastList>> broadCastList_lazy;
 	protected Supplier<MMMessagingEndpoint> endpoint_lazy;
 	protected Supplier<List<MMModelEntity>> nextVersions_lazy;

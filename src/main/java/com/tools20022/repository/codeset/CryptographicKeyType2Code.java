@@ -19,7 +19,9 @@ package com.tools20022.repository.codeset;
 
 import com.tools20022.metamodel.MMCode;
 import com.tools20022.metamodel.MMCodeSet;
+import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.codeset.CryptographicKeyTypeCode;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -101,9 +103,9 @@ public class CryptographicKeyType2Code extends CryptographicKeyTypeCode {
 	 */
 	public static final MMCode mmAES128 = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AES128";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.CryptographicKeyType3Code.mmAES128);
+			nextVersions_lazy = () -> Arrays.asList(CryptographicKeyType3Code.mmAES128);
 			owner_lazy = () -> CryptographicKeyType2Code.mmObject();
 		}
 	};
@@ -133,9 +135,9 @@ public class CryptographicKeyType2Code extends CryptographicKeyTypeCode {
 	 */
 	public static final MMCode mmDES112 = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "DES112";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.CryptographicKeyType3Code.mmDES112);
+			nextVersions_lazy = () -> Arrays.asList(CryptographicKeyType3Code.mmDES112);
 			owner_lazy = () -> CryptographicKeyType2Code.mmObject();
 		}
 	};
@@ -165,9 +167,9 @@ public class CryptographicKeyType2Code extends CryptographicKeyTypeCode {
 	 */
 	public static final MMCode mmDUKPT2009 = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "DUKPT2009";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.CryptographicKeyType3Code.mmDUKPT2009);
+			nextVersions_lazy = () -> Arrays.asList(CryptographicKeyType3Code.mmDUKPT2009);
 			owner_lazy = () -> CryptographicKeyType2Code.mmObject();
 		}
 	};
@@ -175,14 +177,13 @@ public class CryptographicKeyType2Code extends CryptographicKeyTypeCode {
 	static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
 				example = Arrays.asList("AES2");
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "CryptographicKeyType2Code";
 				definition = "Codes for qualifying the type of cryptographic keys;";
 				nextVersions_lazy = () -> Arrays.asList(CryptographicKeyType3Code.mmObject());
-				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.CryptographicKeyType2Code.mmAES128, com.tools20022.repository.codeset.CryptographicKeyType2Code.mmDES112,
-						com.tools20022.repository.codeset.CryptographicKeyType2Code.mmDUKPT2009);
+				code_lazy = () -> Arrays.asList(CryptographicKeyType2Code.mmAES128, CryptographicKeyType2Code.mmDES112, CryptographicKeyType2Code.mmDUKPT2009);
 				trace_lazy = () -> CryptographicKeyTypeCode.mmObject();
 			}
 		});

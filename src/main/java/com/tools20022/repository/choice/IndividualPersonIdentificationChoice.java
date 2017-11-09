@@ -19,7 +19,10 @@ package com.tools20022.repository.choice;
 
 import com.tools20022.metamodel.MMChoiceComponent;
 import com.tools20022.metamodel.MMMessageAssociationEnd;
+import com.tools20022.metamodel.MMRegistrationStatus;
+import com.tools20022.repository.entity.PartyIdentificationInformation;
 import com.tools20022.repository.entity.PersonIdentification;
+import com.tools20022.repository.GeneratedRepository;
 import com.tools20022.repository.msg.GenericIdentification10;
 import com.tools20022.repository.msg.IndividualPerson4;
 import java.util.Arrays;
@@ -123,15 +126,14 @@ public class IndividualPersonIdentificationChoice {
 	 */
 	public static final MMMessageAssociationEnd mmIdentificationNumber = new MMMessageAssociationEnd() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.PartyIdentificationInformation.mmOtherIdentification;
+			businessElementTrace_lazy = () -> PartyIdentificationInformation.mmOtherIdentification;
 			componentContext_lazy = () -> IndividualPersonIdentificationChoice.mmObject();
 			isDerived = false;
 			xmlTag = "IdNb";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "IdentificationNumber";
 			definition = "Information related to an identification, eg, party identification or account identification.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.choice.IndividualPersonIdentification1Choice.mmIdentificationNumber,
-					com.tools20022.repository.choice.IndividualPersonIdentification2Choice.mmIdentificationNumber);
+			nextVersions_lazy = () -> Arrays.asList(IndividualPersonIdentification1Choice.mmIdentificationNumber, IndividualPersonIdentification2Choice.mmIdentificationNumber);
 			maxOccurs = 1;
 			minOccurs = 1;
 			isComposite = true;
@@ -186,14 +188,14 @@ public class IndividualPersonIdentificationChoice {
 	 */
 	public static final MMMessageAssociationEnd mmPersonName = new MMMessageAssociationEnd() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.PersonIdentification.mmPersonName;
+			businessElementTrace_lazy = () -> PersonIdentification.mmPersonName;
 			componentContext_lazy = () -> IndividualPersonIdentificationChoice.mmObject();
 			isDerived = false;
 			xmlTag = "PrsnNm";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PersonName";
 			definition = "Human entity, as distinguished from a corporate entity (which is sometimes referred to as an 'artificial person').";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.choice.IndividualPersonIdentification1Choice.mmPersonName, com.tools20022.repository.choice.IndividualPersonIdentification2Choice.mmPersonName);
+			nextVersions_lazy = () -> Arrays.asList(IndividualPersonIdentification1Choice.mmPersonName, IndividualPersonIdentification2Choice.mmPersonName);
 			maxOccurs = 1;
 			minOccurs = 1;
 			isComposite = true;
@@ -204,10 +206,10 @@ public class IndividualPersonIdentificationChoice {
 	final static public MMChoiceComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMChoiceComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.choice.IndividualPersonIdentificationChoice.mmIdentificationNumber, com.tools20022.repository.choice.IndividualPersonIdentificationChoice.mmPersonName);
+				messageElement_lazy = () -> Arrays.asList(IndividualPersonIdentificationChoice.mmIdentificationNumber, IndividualPersonIdentificationChoice.mmPersonName);
 				trace_lazy = () -> PersonIdentification.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "IndividualPersonIdentificationChoice";
 				definition = "Choice of identification of an individual person.";
 				nextVersions_lazy = () -> Arrays.asList(IndividualPersonIdentification1Choice.mmObject(), IndividualPersonIdentification2Choice.mmObject());

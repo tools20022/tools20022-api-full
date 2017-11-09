@@ -19,8 +19,13 @@ package com.tools20022.repository.msg;
 
 import com.tools20022.metamodel.MMMessageAttribute;
 import com.tools20022.metamodel.MMMessageComponent;
+import com.tools20022.metamodel.MMRegistrationStatus;
+import com.tools20022.repository.area.acmt.AccountOpeningInstructionV02;
+import com.tools20022.repository.area.acmt.AccountOpeningInstructionV03;
+import com.tools20022.repository.area.acmt.AccountOpeningInstructionV04;
 import com.tools20022.repository.codeset.AccountOpeningType1Code;
 import com.tools20022.repository.datatype.Max35Text;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -129,10 +134,10 @@ public class InvestmentAccountOpeningDetails {
 			componentContext_lazy = () -> InvestmentAccountOpeningDetails.mmObject();
 			isDerived = false;
 			xmlTag = "OpngTp";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "OpeningType";
 			definition = "Specifies if the account opening instruction is about a newly created account or a supplementary account.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.InvestmentAccountOpening1.mmOpeningType);
+			nextVersions_lazy = () -> Arrays.asList(InvestmentAccountOpening1.mmOpeningType);
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> AccountOpeningType1Code.mmObject();
@@ -182,10 +187,10 @@ public class InvestmentAccountOpeningDetails {
 			componentContext_lazy = () -> InvestmentAccountOpeningDetails.mmObject();
 			isDerived = false;
 			xmlTag = "AcctApplId";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AccountApplicationIdentification";
 			definition = "Unique and unambiguous identifier of the account opening request at application level.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.InvestmentAccountOpening1.mmAccountApplicationIdentification);
+			nextVersions_lazy = () -> Arrays.asList(InvestmentAccountOpening1.mmAccountApplicationIdentification);
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> Max35Text.mmObject();
@@ -195,11 +200,10 @@ public class InvestmentAccountOpeningDetails {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.InvestmentAccountOpeningDetails.mmOpeningType, com.tools20022.repository.msg.InvestmentAccountOpeningDetails.mmAccountApplicationIdentification);
-				messageBuildingBlock_lazy = () -> Arrays.asList(com.tools20022.repository.area.acmt.AccountOpeningInstructionV02.mmInstructionDetails, com.tools20022.repository.area.acmt.AccountOpeningInstructionV03.mmInstructionDetails,
-						com.tools20022.repository.area.acmt.AccountOpeningInstructionV04.mmInstructionDetails);
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				messageElement_lazy = () -> Arrays.asList(InvestmentAccountOpeningDetails.mmOpeningType, InvestmentAccountOpeningDetails.mmAccountApplicationIdentification);
+				messageBuildingBlock_lazy = () -> Arrays.asList(AccountOpeningInstructionV02.mmInstructionDetails, AccountOpeningInstructionV03.mmInstructionDetails, AccountOpeningInstructionV04.mmInstructionDetails);
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "InvestmentAccountOpeningDetails";
 				definition = "Provide information about the type of opening instruction and identification of the application request.";
 				nextVersions_lazy = () -> Arrays.asList(InvestmentAccountOpening1.mmObject());

@@ -19,7 +19,9 @@ package com.tools20022.repository.codeset;
 
 import com.tools20022.metamodel.MMCode;
 import com.tools20022.metamodel.MMCodeSet;
+import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.codeset.StatementUpdateTypeV2Code;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -86,7 +88,7 @@ public class StatementUpdateType1Code extends StatementUpdateTypeV2Code {
 	 */
 	public static final MMCode mmComplete = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Complete";
 			owner_lazy = () -> StatementUpdateType1Code.mmObject();
 		}
@@ -109,7 +111,7 @@ public class StatementUpdateType1Code extends StatementUpdateTypeV2Code {
 	 */
 	public static final MMCode mmDelta = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Delta";
 			owner_lazy = () -> StatementUpdateType1Code.mmObject();
 		}
@@ -118,12 +120,12 @@ public class StatementUpdateType1Code extends StatementUpdateTypeV2Code {
 	static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
 				example = Arrays.asList("COMP");
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "StatementUpdateType1Code";
 				definition = "Specifies the nature of a statement update, for example, it is a complete statement.";
-				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.StatementUpdateType1Code.mmComplete, com.tools20022.repository.codeset.StatementUpdateType1Code.mmDelta);
+				code_lazy = () -> Arrays.asList(StatementUpdateType1Code.mmComplete, StatementUpdateType1Code.mmDelta);
 				trace_lazy = () -> StatementUpdateTypeV2Code.mmObject();
 			}
 		});

@@ -19,8 +19,11 @@ package com.tools20022.repository.msg;
 
 import com.tools20022.metamodel.MMMessageAttribute;
 import com.tools20022.metamodel.MMMessageComponent;
+import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.datatype.AnyBICIdentifier;
 import com.tools20022.repository.datatype.ISODateTime;
+import com.tools20022.repository.entity.SystemEventInformation;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -94,11 +97,11 @@ public class ResponderDetails1 {
 	 */
 	public static final MMMessageAttribute mmDateTimeStamp = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.SystemEventInformation.mmTime;
+			businessElementTrace_lazy = () -> SystemEventInformation.mmTime;
 			componentContext_lazy = () -> ResponderDetails1.mmObject();
 			isDerived = false;
 			xmlTag = "DtTmStmp";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "DateTimeStamp";
 			definition = "Date and time at which the response was created.";
 			maxOccurs = 1;
@@ -140,7 +143,7 @@ public class ResponderDetails1 {
 			componentContext_lazy = () -> ResponderDetails1.mmObject();
 			isDerived = false;
 			xmlTag = "Rspndr";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Responder";
 			definition = "Identification of the responder.";
 			maxOccurs = 1;
@@ -152,9 +155,9 @@ public class ResponderDetails1 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.ResponderDetails1.mmDateTimeStamp, com.tools20022.repository.msg.ResponderDetails1.mmResponder);
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				messageElement_lazy = () -> Arrays.asList(ResponderDetails1.mmDateTimeStamp, ResponderDetails1.mmResponder);
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "ResponderDetails1";
 				definition = "Details of the Financial Institution responding to the request.";
 			}

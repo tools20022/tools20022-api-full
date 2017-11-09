@@ -19,8 +19,10 @@ package com.tools20022.repository.msg;
 
 import com.tools20022.metamodel.MMMessageAttribute;
 import com.tools20022.metamodel.MMMessageComponent;
+import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.codeset.CancelledStatusReason15Code;
 import com.tools20022.repository.datatype.ISODateTime;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -112,10 +114,10 @@ public class RecordTechnicalData2 {
 			componentContext_lazy = () -> RecordTechnicalData2.mmObject();
 			isDerived = false;
 			xmlTag = "RctDtTm";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ReceiptDateTime";
 			definition = "Defines the date and time when the report was originally received by the national competent authority.";
-			previousVersion_lazy = () -> com.tools20022.repository.msg.RecordTechnicalData1.mmReceiptDateTime;
+			previousVersion_lazy = () -> RecordTechnicalData1.mmReceiptDateTime;
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> ISODateTime.mmObject();
@@ -156,7 +158,7 @@ public class RecordTechnicalData2 {
 			componentContext_lazy = () -> RecordTechnicalData2.mmObject();
 			isDerived = false;
 			xmlTag = "CxlRsn";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CancellationReason";
 			definition = "Specifies the reason for the cancellation the transaction.";
 			maxOccurs = 1;
@@ -168,9 +170,9 @@ public class RecordTechnicalData2 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.RecordTechnicalData2.mmReceiptDateTime, com.tools20022.repository.msg.RecordTechnicalData2.mmCancellationReason);
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				messageElement_lazy = () -> Arrays.asList(RecordTechnicalData2.mmReceiptDateTime, RecordTechnicalData2.mmCancellationReason);
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "RecordTechnicalData2";
 				definition = "Instrument specific technical data to support identification.";
 				nextVersions_lazy = () -> Arrays.asList(RecordTechnicalData3.mmObject());

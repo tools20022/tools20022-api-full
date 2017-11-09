@@ -20,10 +20,13 @@ package com.tools20022.repository.choice;
 import com.tools20022.metamodel.MMChoiceComponent;
 import com.tools20022.metamodel.MMMessageAssociationEnd;
 import com.tools20022.metamodel.MMMessageAttribute;
+import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.datatype.YesNoIndicator;
+import com.tools20022.repository.entity.CardPayment;
 import com.tools20022.repository.entity.ChequePayment;
 import com.tools20022.repository.entity.DirectDebit;
 import com.tools20022.repository.entity.Payment;
+import com.tools20022.repository.GeneratedRepository;
 import com.tools20022.repository.msg.DirectDebitMandate5;
 import com.tools20022.repository.msg.PaymentCard18;
 import java.util.Arrays;
@@ -115,14 +118,14 @@ public class PaymentInstrument18Choice {
 	 */
 	public static final MMMessageAssociationEnd mmPaymentCardDetails = new MMMessageAssociationEnd() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.CardPayment.mmPaymentCard;
+			businessElementTrace_lazy = () -> CardPayment.mmPaymentCard;
 			componentContext_lazy = () -> PaymentInstrument18Choice.mmObject();
 			isDerived = false;
 			xmlTag = "PmtCardDtls";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PaymentCardDetails";
 			definition = "Settlement instructions for a payment by card.";
-			previousVersion_lazy = () -> com.tools20022.repository.choice.PaymentInstrument17Choice.mmPaymentCardDetails;
+			previousVersion_lazy = () -> PaymentInstrument17Choice.mmPaymentCardDetails;
 			maxOccurs = 1;
 			minOccurs = 1;
 			isComposite = true;
@@ -171,10 +174,10 @@ public class PaymentInstrument18Choice {
 			componentContext_lazy = () -> PaymentInstrument18Choice.mmObject();
 			isDerived = false;
 			xmlTag = "DrctDbtDtls";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "DirectDebitDetails";
 			definition = "Settlement instructions for a payment by direct debit.";
-			previousVersion_lazy = () -> com.tools20022.repository.choice.PaymentInstrument17Choice.mmDirectDebitDetails;
+			previousVersion_lazy = () -> PaymentInstrument17Choice.mmDirectDebitDetails;
 			maxOccurs = 1;
 			minOccurs = 1;
 			isComposite = true;
@@ -226,10 +229,10 @@ public class PaymentInstrument18Choice {
 			componentContext_lazy = () -> PaymentInstrument18Choice.mmObject();
 			isDerived = false;
 			xmlTag = "Chq";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Cheque";
 			definition = "Indicates whether the payment is done via cheque.";
-			previousVersion_lazy = () -> com.tools20022.repository.choice.PaymentInstrument17Choice.mmCheque;
+			previousVersion_lazy = () -> PaymentInstrument17Choice.mmCheque;
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> YesNoIndicator.mmObject();
@@ -280,10 +283,10 @@ public class PaymentInstrument18Choice {
 			componentContext_lazy = () -> PaymentInstrument18Choice.mmObject();
 			isDerived = false;
 			xmlTag = "BkrsDrft";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "BankersDraft";
 			definition = "Indicates whether the payment is done via draft.";
-			previousVersion_lazy = () -> com.tools20022.repository.choice.PaymentInstrument17Choice.mmBankersDraft;
+			previousVersion_lazy = () -> PaymentInstrument17Choice.mmBankersDraft;
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> YesNoIndicator.mmObject();
@@ -293,11 +296,10 @@ public class PaymentInstrument18Choice {
 	final static public MMChoiceComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMChoiceComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.choice.PaymentInstrument18Choice.mmPaymentCardDetails, com.tools20022.repository.choice.PaymentInstrument18Choice.mmDirectDebitDetails,
-						com.tools20022.repository.choice.PaymentInstrument18Choice.mmCheque, com.tools20022.repository.choice.PaymentInstrument18Choice.mmBankersDraft);
+				messageElement_lazy = () -> Arrays.asList(PaymentInstrument18Choice.mmPaymentCardDetails, PaymentInstrument18Choice.mmDirectDebitDetails, PaymentInstrument18Choice.mmCheque, PaymentInstrument18Choice.mmBankersDraft);
 				trace_lazy = () -> Payment.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "PaymentInstrument18Choice";
 				definition = "Choice of payment instruments.";
 				previousVersion_lazy = () -> PaymentInstrument17Choice.mmObject();

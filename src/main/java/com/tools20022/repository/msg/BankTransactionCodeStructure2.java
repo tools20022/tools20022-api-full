@@ -20,8 +20,10 @@ package com.tools20022.repository.msg;
 import com.tools20022.metamodel.MMMessageAssociationEnd;
 import com.tools20022.metamodel.MMMessageAttribute;
 import com.tools20022.metamodel.MMMessageComponent;
+import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.codeset.ExternalBankTransactionDomainCode;
 import com.tools20022.repository.entity.BankTransaction;
+import com.tools20022.repository.GeneratedRepository;
 import java.text.DateFormat;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
@@ -104,11 +106,11 @@ public class BankTransactionCodeStructure2 {
 	 */
 	public static final MMMessageAttribute mmCode = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.BankTransaction.mmDomain;
+			businessElementTrace_lazy = () -> BankTransaction.mmDomain;
 			componentContext_lazy = () -> BankTransactionCodeStructure2.mmObject();
 			isDerived = false;
 			xmlTag = "Cd";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Code";
 			definition = "Specifies the business area of the underlying transaction.";
 			maxOccurs = 1;
@@ -154,11 +156,11 @@ public class BankTransactionCodeStructure2 {
 	 */
 	public static final MMMessageAssociationEnd mmFamily = new MMMessageAssociationEnd() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.BankTransaction.mmFamily;
+			businessElementTrace_lazy = () -> BankTransaction.mmFamily;
 			componentContext_lazy = () -> BankTransactionCodeStructure2.mmObject();
 			isDerived = false;
 			xmlTag = "Fmly";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Family";
 			definition = "Specifies the family and the sub-family of the bank transaction code, within a specific domain, in a structured and hierarchical format.";
 			maxOccurs = 1;
@@ -171,10 +173,10 @@ public class BankTransactionCodeStructure2 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.BankTransactionCodeStructure2.mmCode, com.tools20022.repository.msg.BankTransactionCodeStructure2.mmFamily);
+				messageElement_lazy = () -> Arrays.asList(BankTransactionCodeStructure2.mmCode, BankTransactionCodeStructure2.mmFamily);
 				trace_lazy = () -> BankTransaction.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.OBSOLETE;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.OBSOLETE;
 				removalDate = ((Supplier<Date>) (() -> {
 					try {
 						return DateFormat.getDateInstance(java.text.DateFormat.LONG).parse("September 9, 2016");

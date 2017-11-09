@@ -19,7 +19,9 @@ package com.tools20022.repository.codeset;
 
 import com.tools20022.metamodel.MMCode;
 import com.tools20022.metamodel.MMCodeSet;
+import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.codeset.CashMarginOrderCode;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -89,7 +91,7 @@ public class CashMarginOrder1Code extends CashMarginOrderCode {
 	 */
 	public static final MMCode mmCash = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Cash";
 			owner_lazy = () -> CashMarginOrder1Code.mmObject();
 		}
@@ -112,7 +114,7 @@ public class CashMarginOrder1Code extends CashMarginOrderCode {
 	 */
 	public static final MMCode mmMarginOpen = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "MarginOpen";
 			owner_lazy = () -> CashMarginOrder1Code.mmObject();
 		}
@@ -135,7 +137,7 @@ public class CashMarginOrder1Code extends CashMarginOrderCode {
 	 */
 	public static final MMCode mmMarginClose = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "MarginClose";
 			owner_lazy = () -> CashMarginOrder1Code.mmObject();
 		}
@@ -144,13 +146,12 @@ public class CashMarginOrder1Code extends CashMarginOrderCode {
 	static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
 				example = Arrays.asList("CASH");
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "CashMarginOrder1Code";
 				definition = "Identifies whether an order is a non-margin, an opening margin or a closing margin order.";
-				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.CashMarginOrder1Code.mmCash, com.tools20022.repository.codeset.CashMarginOrder1Code.mmMarginOpen,
-						com.tools20022.repository.codeset.CashMarginOrder1Code.mmMarginClose);
+				code_lazy = () -> Arrays.asList(CashMarginOrder1Code.mmCash, CashMarginOrder1Code.mmMarginOpen, CashMarginOrder1Code.mmMarginClose);
 				trace_lazy = () -> CashMarginOrderCode.mmObject();
 			}
 		});

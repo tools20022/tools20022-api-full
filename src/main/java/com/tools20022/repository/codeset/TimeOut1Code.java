@@ -19,7 +19,9 @@ package com.tools20022.repository.codeset;
 
 import com.tools20022.metamodel.MMCode;
 import com.tools20022.metamodel.MMCodeSet;
+import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.codeset.TimeOutCode;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -80,7 +82,7 @@ public class TimeOut1Code extends TimeOutCode {
 	 */
 	public static final MMCode mmLatestShipmentDateDue = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "LatestShipmentDateDue";
 			owner_lazy = () -> TimeOut1Code.mmObject();
 		}
@@ -102,7 +104,7 @@ public class TimeOut1Code extends TimeOutCode {
 	 */
 	public static final MMCode mmNoAction = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "NoAction";
 			owner_lazy = () -> TimeOut1Code.mmObject();
 		}
@@ -111,12 +113,12 @@ public class TimeOut1Code extends TimeOutCode {
 	static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
 				example = Arrays.asList("LSDD");
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "TimeOut1Code";
 				definition = "Specifies the reason for time-out.";
-				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.TimeOut1Code.mmLatestShipmentDateDue, com.tools20022.repository.codeset.TimeOut1Code.mmNoAction);
+				code_lazy = () -> Arrays.asList(TimeOut1Code.mmLatestShipmentDateDue, TimeOut1Code.mmNoAction);
 				trace_lazy = () -> TimeOutCode.mmObject();
 			}
 		});

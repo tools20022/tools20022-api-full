@@ -19,8 +19,11 @@ package com.tools20022.repository.choice;
 
 import com.tools20022.metamodel.MMChoiceComponent;
 import com.tools20022.metamodel.MMMessageAttribute;
+import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.codeset.SettlementConditionModificationStatus1Code;
+import com.tools20022.repository.entity.SecuritiesTradeStatus;
 import com.tools20022.repository.entity.Status;
+import com.tools20022.repository.GeneratedRepository;
 import com.tools20022.repository.msg.GenericIdentification20;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
@@ -117,14 +120,14 @@ public class SettlementConditionModificationStatus1Choice {
 	 */
 	public static final MMMessageAttribute mmCode = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.SecuritiesTradeStatus.mmSettlementConditionModificationStatus;
+			businessElementTrace_lazy = () -> SecuritiesTradeStatus.mmSettlementConditionModificationStatus;
 			componentContext_lazy = () -> SettlementConditionModificationStatus1Choice.mmObject();
 			isDerived = false;
 			xmlTag = "Cd";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Code";
 			definition = "Provides the status of the securities settlement condition modification request.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.choice.SettlementConditionModificationStatus3Choice.mmCode);
+			nextVersions_lazy = () -> Arrays.asList(SettlementConditionModificationStatus3Choice.mmCode);
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> SettlementConditionModificationStatus1Code.mmObject();
@@ -175,10 +178,10 @@ public class SettlementConditionModificationStatus1Choice {
 			componentContext_lazy = () -> SettlementConditionModificationStatus1Choice.mmObject();
 			isDerived = false;
 			xmlTag = "Prtry";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Proprietary";
 			definition = "Provides the status of the securities settlement condition modification request.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.choice.SettlementConditionModificationStatus3Choice.mmProprietary);
+			nextVersions_lazy = () -> Arrays.asList(SettlementConditionModificationStatus3Choice.mmProprietary);
 			maxOccurs = 1;
 			minOccurs = 1;
 			complexType_lazy = () -> GenericIdentification20.mmObject();
@@ -188,10 +191,10 @@ public class SettlementConditionModificationStatus1Choice {
 	final static public MMChoiceComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMChoiceComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.choice.SettlementConditionModificationStatus1Choice.mmCode, com.tools20022.repository.choice.SettlementConditionModificationStatus1Choice.mmProprietary);
+				messageElement_lazy = () -> Arrays.asList(SettlementConditionModificationStatus1Choice.mmCode, SettlementConditionModificationStatus1Choice.mmProprietary);
 				trace_lazy = () -> Status.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "SettlementConditionModificationStatus1Choice";
 				definition = "Choice of processing change command status.";
 				nextVersions_lazy = () -> Arrays.asList(SettlementConditionModificationStatus3Choice.mmObject());

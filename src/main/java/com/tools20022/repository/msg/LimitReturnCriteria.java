@@ -19,7 +19,9 @@ package com.tools20022.repository.msg;
 
 import com.tools20022.metamodel.MMMessageAttribute;
 import com.tools20022.metamodel.MMMessageComponent;
+import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.datatype.RequestedIndicator;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -93,7 +95,7 @@ public class LimitReturnCriteria {
 			componentContext_lazy = () -> LimitReturnCriteria.mmObject();
 			isDerived = false;
 			xmlTag = "StartDtTmInd";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "StartDateTimeIndicator";
 			definition = "Indicates whether the limit start date time is requested.";
 			maxOccurs = 1;
@@ -135,7 +137,7 @@ public class LimitReturnCriteria {
 			componentContext_lazy = () -> LimitReturnCriteria.mmObject();
 			isDerived = false;
 			xmlTag = "StsInd";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "StatusIndicator";
 			definition = "Indicates whether the limit status is requested.";
 			maxOccurs = 1;
@@ -147,9 +149,9 @@ public class LimitReturnCriteria {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.LimitReturnCriteria.mmStartDateTimeIndicator, com.tools20022.repository.msg.LimitReturnCriteria.mmStatusIndicator);
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+				messageElement_lazy = () -> Arrays.asList(LimitReturnCriteria.mmStartDateTimeIndicator, LimitReturnCriteria.mmStatusIndicator);
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 				name = "LimitReturnCriteria";
 				definition = "Defines the criteria used to report on limit.";
 			}

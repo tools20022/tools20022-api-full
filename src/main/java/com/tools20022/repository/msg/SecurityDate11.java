@@ -19,9 +19,11 @@ package com.tools20022.repository.msg;
 
 import com.tools20022.metamodel.MMMessageAssociationEnd;
 import com.tools20022.metamodel.MMMessageComponent;
+import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.choice.DateAndDateTimeChoice;
 import com.tools20022.repository.choice.DateFormat31Choice;
-import com.tools20022.repository.entity.CorporateActionEvent;
+import com.tools20022.repository.entity.*;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -113,14 +115,14 @@ public class SecurityDate11 {
 	 */
 	public static final MMMessageAssociationEnd mmPostingDate = new MMMessageAssociationEnd() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.CorporateActionDistribution.mmPostingDateTime;
+			businessElementTrace_lazy = () -> CorporateActionDistribution.mmPostingDateTime;
 			componentContext_lazy = () -> SecurityDate11.mmObject();
 			isDerived = false;
 			xmlTag = "PstngDt";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PostingDate";
 			definition = "Date of the posting (credit or debit) to the account.";
-			previousVersion_lazy = () -> com.tools20022.repository.msg.SecurityDate6.mmPostingDate;
+			previousVersion_lazy = () -> SecurityDate6.mmPostingDate;
 			maxOccurs = 1;
 			minOccurs = 1;
 			isComposite = true;
@@ -168,14 +170,14 @@ public class SecurityDate11 {
 	 */
 	public static final MMMessageAssociationEnd mmAvailableDate = new MMMessageAssociationEnd() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Security.mmAvailableDate;
+			businessElementTrace_lazy = () -> Security.mmAvailableDate;
 			componentContext_lazy = () -> SecurityDate11.mmObject();
 			isDerived = false;
 			xmlTag = "AvlblDt";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AvailableDate";
 			definition = "Date/time at which securities become available for trading, for example first dealing date.";
-			previousVersion_lazy = () -> com.tools20022.repository.msg.SecurityDate6.mmAvailableDate;
+			previousVersion_lazy = () -> SecurityDate6.mmAvailableDate;
 			maxOccurs = 1;
 			minOccurs = 0;
 			isComposite = true;
@@ -223,14 +225,14 @@ public class SecurityDate11 {
 	 */
 	public static final MMMessageAssociationEnd mmPariPassuDate = new MMMessageAssociationEnd() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.CorporateActionEvent.mmPariPassuDate;
+			businessElementTrace_lazy = () -> CorporateActionEvent.mmPariPassuDate;
 			componentContext_lazy = () -> SecurityDate11.mmObject();
 			isDerived = false;
 			xmlTag = "PrpssDt";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PariPassuDate";
 			definition = "Date/time at which security will assimilate, become fungible, or have the same rights to dividends as the parent issue.";
-			previousVersion_lazy = () -> com.tools20022.repository.msg.SecurityDate6.mmPariPassuDate;
+			previousVersion_lazy = () -> SecurityDate6.mmPariPassuDate;
 			maxOccurs = 1;
 			minOccurs = 0;
 			isComposite = true;
@@ -276,14 +278,14 @@ public class SecurityDate11 {
 	 */
 	public static final MMMessageAssociationEnd mmDividendRankingDate = new MMMessageAssociationEnd() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Dividend.mmDividendRankingDate;
+			businessElementTrace_lazy = () -> Dividend.mmDividendRankingDate;
 			componentContext_lazy = () -> SecurityDate11.mmObject();
 			isDerived = false;
 			xmlTag = "DvddRnkgDt";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "DividendRankingDate";
 			definition = "Date/time at which a security will be entitled to a dividend.";
-			previousVersion_lazy = () -> com.tools20022.repository.msg.SecurityDate6.mmDividendRankingDate;
+			previousVersion_lazy = () -> SecurityDate6.mmDividendRankingDate;
 			maxOccurs = 1;
 			minOccurs = 0;
 			isComposite = true;
@@ -331,14 +333,14 @@ public class SecurityDate11 {
 	 */
 	public static final MMMessageAssociationEnd mmEarliestPaymentDate = new MMMessageAssociationEnd() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.ProceedsDefinition.mmEarliestPaymentDate;
+			businessElementTrace_lazy = () -> ProceedsDefinition.mmEarliestPaymentDate;
 			componentContext_lazy = () -> SecurityDate11.mmObject();
 			isDerived = false;
 			xmlTag = "EarlstPmtDt";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "EarliestPaymentDate";
 			definition = "Date/time at which a payment can be made, for example, if payment date is a non-business day or to indicate the first payment date of an offer.";
-			previousVersion_lazy = () -> com.tools20022.repository.msg.SecurityDate6.mmEarliestPaymentDate;
+			previousVersion_lazy = () -> SecurityDate6.mmEarliestPaymentDate;
 			maxOccurs = 1;
 			minOccurs = 0;
 			isComposite = true;
@@ -386,14 +388,14 @@ public class SecurityDate11 {
 	 */
 	public static final MMMessageAssociationEnd mmPaymentDate = new MMMessageAssociationEnd() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.CorporateActionDistribution.mmMovementDate;
+			businessElementTrace_lazy = () -> CorporateActionDistribution.mmMovementDate;
 			componentContext_lazy = () -> SecurityDate11.mmObject();
 			isDerived = false;
 			xmlTag = "PmtDt";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PaymentDate";
 			definition = "Date/time at which the movement is due to take place (cash and/or securities).";
-			previousVersion_lazy = () -> com.tools20022.repository.msg.SecurityDate6.mmPaymentDate;
+			previousVersion_lazy = () -> SecurityDate6.mmPaymentDate;
 			maxOccurs = 1;
 			minOccurs = 0;
 			isComposite = true;
@@ -404,12 +406,11 @@ public class SecurityDate11 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.SecurityDate11.mmPostingDate, com.tools20022.repository.msg.SecurityDate11.mmAvailableDate,
-						com.tools20022.repository.msg.SecurityDate11.mmPariPassuDate, com.tools20022.repository.msg.SecurityDate11.mmDividendRankingDate, com.tools20022.repository.msg.SecurityDate11.mmEarliestPaymentDate,
-						com.tools20022.repository.msg.SecurityDate11.mmPaymentDate);
+				messageElement_lazy = () -> Arrays.asList(SecurityDate11.mmPostingDate, SecurityDate11.mmAvailableDate, SecurityDate11.mmPariPassuDate, SecurityDate11.mmDividendRankingDate, SecurityDate11.mmEarliestPaymentDate,
+						SecurityDate11.mmPaymentDate);
 				trace_lazy = () -> CorporateActionEvent.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "SecurityDate11";
 				definition = "Specifies security date details.";
 				previousVersion_lazy = () -> SecurityDate6.mmObject();

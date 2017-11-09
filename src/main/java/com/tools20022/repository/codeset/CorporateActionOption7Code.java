@@ -19,7 +19,9 @@ package com.tools20022.repository.codeset;
 
 import com.tools20022.metamodel.MMCode;
 import com.tools20022.metamodel.MMCodeSet;
+import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.codeset.CorporateActionOptionCode;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -156,7 +158,7 @@ public class CorporateActionOption7Code extends CorporateActionOptionCode {
 	 */
 	public static final MMCode mmAbstain = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Abstain";
 			owner_lazy = () -> CorporateActionOption7Code.mmObject();
 		}
@@ -179,7 +181,7 @@ public class CorporateActionOption7Code extends CorporateActionOptionCode {
 	 */
 	public static final MMCode mmVoteAgainstManagement = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "VoteAgainstManagement";
 			owner_lazy = () -> CorporateActionOption7Code.mmObject();
 		}
@@ -202,7 +204,7 @@ public class CorporateActionOption7Code extends CorporateActionOptionCode {
 	 */
 	public static final MMCode mmBonusSharePlan = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "BonusSharePlan";
 			owner_lazy = () -> CorporateActionOption7Code.mmObject();
 		}
@@ -225,7 +227,7 @@ public class CorporateActionOption7Code extends CorporateActionOptionCode {
 	 */
 	public static final MMCode mmBuyUp = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "BuyUp";
 			owner_lazy = () -> CorporateActionOption7Code.mmObject();
 		}
@@ -248,7 +250,7 @@ public class CorporateActionOption7Code extends CorporateActionOptionCode {
 	 */
 	public static final MMCode mmCashAndSecurity = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CashAndSecurity";
 			owner_lazy = () -> CorporateActionOption7Code.mmObject();
 		}
@@ -271,7 +273,7 @@ public class CorporateActionOption7Code extends CorporateActionOptionCode {
 	 */
 	public static final MMCode mmCash = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Cash";
 			owner_lazy = () -> CorporateActionOption7Code.mmObject();
 		}
@@ -294,7 +296,7 @@ public class CorporateActionOption7Code extends CorporateActionOptionCode {
 	 */
 	public static final MMCode mmConsentAndExchange = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ConsentAndExchange";
 			owner_lazy = () -> CorporateActionOption7Code.mmObject();
 		}
@@ -317,7 +319,7 @@ public class CorporateActionOption7Code extends CorporateActionOptionCode {
 	 */
 	public static final MMCode mmConsentDenied = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ConsentDenied";
 			owner_lazy = () -> CorporateActionOption7Code.mmObject();
 		}
@@ -340,7 +342,7 @@ public class CorporateActionOption7Code extends CorporateActionOptionCode {
 	 */
 	public static final MMCode mmConsentGranted = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ConsentGranted";
 			owner_lazy = () -> CorporateActionOption7Code.mmObject();
 		}
@@ -363,7 +365,7 @@ public class CorporateActionOption7Code extends CorporateActionOptionCode {
 	 */
 	public static final MMCode mmConsentAndTender = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ConsentAndTender";
 			owner_lazy = () -> CorporateActionOption7Code.mmObject();
 		}
@@ -386,7 +388,7 @@ public class CorporateActionOption7Code extends CorporateActionOptionCode {
 	 */
 	public static final MMCode mmExercise = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Exercise";
 			owner_lazy = () -> CorporateActionOption7Code.mmObject();
 		}
@@ -409,7 +411,7 @@ public class CorporateActionOption7Code extends CorporateActionOptionCode {
 	 */
 	public static final MMCode mmLapse = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Lapse";
 			owner_lazy = () -> CorporateActionOption7Code.mmObject();
 		}
@@ -432,7 +434,7 @@ public class CorporateActionOption7Code extends CorporateActionOptionCode {
 	 */
 	public static final MMCode mmVoteWithManagement = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "VoteWithManagement";
 			owner_lazy = () -> CorporateActionOption7Code.mmObject();
 		}
@@ -455,7 +457,7 @@ public class CorporateActionOption7Code extends CorporateActionOptionCode {
 	 */
 	public static final MMCode mmRetain = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Retain";
 			owner_lazy = () -> CorporateActionOption7Code.mmObject();
 		}
@@ -478,7 +480,7 @@ public class CorporateActionOption7Code extends CorporateActionOptionCode {
 	 */
 	public static final MMCode mmNoAction = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "NoAction";
 			owner_lazy = () -> CorporateActionOption7Code.mmObject();
 		}
@@ -501,7 +503,7 @@ public class CorporateActionOption7Code extends CorporateActionOptionCode {
 	 */
 	public static final MMCode mmNonQualifiedInvestor = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "NonQualifiedInvestor";
 			owner_lazy = () -> CorporateActionOption7Code.mmObject();
 		}
@@ -524,7 +526,7 @@ public class CorporateActionOption7Code extends CorporateActionOptionCode {
 	 */
 	public static final MMCode mmProposedRate = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ProposedRate";
 			owner_lazy = () -> CorporateActionOption7Code.mmObject();
 		}
@@ -547,7 +549,7 @@ public class CorporateActionOption7Code extends CorporateActionOptionCode {
 	 */
 	public static final MMCode mmOther = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Other";
 			owner_lazy = () -> CorporateActionOption7Code.mmObject();
 		}
@@ -570,7 +572,7 @@ public class CorporateActionOption7Code extends CorporateActionOptionCode {
 	 */
 	public static final MMCode mmOversubscribe = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Oversubscribe";
 			owner_lazy = () -> CorporateActionOption7Code.mmObject();
 		}
@@ -593,7 +595,7 @@ public class CorporateActionOption7Code extends CorporateActionOptionCode {
 	 */
 	public static final MMCode mmProxyCard = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ProxyCard";
 			owner_lazy = () -> CorporateActionOption7Code.mmObject();
 		}
@@ -616,7 +618,7 @@ public class CorporateActionOption7Code extends CorporateActionOptionCode {
 	 */
 	public static final MMCode mmQualifiedInvestor = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "QualifiedInvestor";
 			owner_lazy = () -> CorporateActionOption7Code.mmObject();
 		}
@@ -639,7 +641,7 @@ public class CorporateActionOption7Code extends CorporateActionOptionCode {
 	 */
 	public static final MMCode mmSecurity = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Security";
 			owner_lazy = () -> CorporateActionOption7Code.mmObject();
 		}
@@ -662,7 +664,7 @@ public class CorporateActionOption7Code extends CorporateActionOptionCode {
 	 */
 	public static final MMCode mmSellEntitlement = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SellEntitlement";
 			owner_lazy = () -> CorporateActionOption7Code.mmObject();
 		}
@@ -685,7 +687,7 @@ public class CorporateActionOption7Code extends CorporateActionOptionCode {
 	 */
 	public static final MMCode mmSplitInstruction = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SplitInstruction";
 			owner_lazy = () -> CorporateActionOption7Code.mmObject();
 		}
@@ -708,7 +710,7 @@ public class CorporateActionOption7Code extends CorporateActionOptionCode {
 	 */
 	public static final MMCode mmUnknownProceeds = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "UnknownProceeds";
 			owner_lazy = () -> CorporateActionOption7Code.mmObject();
 		}
@@ -717,25 +719,18 @@ public class CorporateActionOption7Code extends CorporateActionOptionCode {
 	static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
 				example = Arrays.asList("ABST");
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "CorporateActionOption7Code";
 				definition = "Specifies the type of corporate action options.";
 				previousVersion_lazy = () -> CorporateActionOption2Code.mmObject();
-				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.CorporateActionOption7Code.mmAbstain, com.tools20022.repository.codeset.CorporateActionOption7Code.mmVoteAgainstManagement,
-						com.tools20022.repository.codeset.CorporateActionOption7Code.mmBonusSharePlan, com.tools20022.repository.codeset.CorporateActionOption7Code.mmBuyUp,
-						com.tools20022.repository.codeset.CorporateActionOption7Code.mmCashAndSecurity, com.tools20022.repository.codeset.CorporateActionOption7Code.mmCash,
-						com.tools20022.repository.codeset.CorporateActionOption7Code.mmConsentAndExchange, com.tools20022.repository.codeset.CorporateActionOption7Code.mmConsentDenied,
-						com.tools20022.repository.codeset.CorporateActionOption7Code.mmConsentGranted, com.tools20022.repository.codeset.CorporateActionOption7Code.mmConsentAndTender,
-						com.tools20022.repository.codeset.CorporateActionOption7Code.mmExercise, com.tools20022.repository.codeset.CorporateActionOption7Code.mmLapse,
-						com.tools20022.repository.codeset.CorporateActionOption7Code.mmVoteWithManagement, com.tools20022.repository.codeset.CorporateActionOption7Code.mmRetain,
-						com.tools20022.repository.codeset.CorporateActionOption7Code.mmNoAction, com.tools20022.repository.codeset.CorporateActionOption7Code.mmNonQualifiedInvestor,
-						com.tools20022.repository.codeset.CorporateActionOption7Code.mmProposedRate, com.tools20022.repository.codeset.CorporateActionOption7Code.mmOther,
-						com.tools20022.repository.codeset.CorporateActionOption7Code.mmOversubscribe, com.tools20022.repository.codeset.CorporateActionOption7Code.mmProxyCard,
-						com.tools20022.repository.codeset.CorporateActionOption7Code.mmQualifiedInvestor, com.tools20022.repository.codeset.CorporateActionOption7Code.mmSecurity,
-						com.tools20022.repository.codeset.CorporateActionOption7Code.mmSellEntitlement, com.tools20022.repository.codeset.CorporateActionOption7Code.mmSplitInstruction,
-						com.tools20022.repository.codeset.CorporateActionOption7Code.mmUnknownProceeds);
+				code_lazy = () -> Arrays.asList(CorporateActionOption7Code.mmAbstain, CorporateActionOption7Code.mmVoteAgainstManagement, CorporateActionOption7Code.mmBonusSharePlan, CorporateActionOption7Code.mmBuyUp,
+						CorporateActionOption7Code.mmCashAndSecurity, CorporateActionOption7Code.mmCash, CorporateActionOption7Code.mmConsentAndExchange, CorporateActionOption7Code.mmConsentDenied,
+						CorporateActionOption7Code.mmConsentGranted, CorporateActionOption7Code.mmConsentAndTender, CorporateActionOption7Code.mmExercise, CorporateActionOption7Code.mmLapse, CorporateActionOption7Code.mmVoteWithManagement,
+						CorporateActionOption7Code.mmRetain, CorporateActionOption7Code.mmNoAction, CorporateActionOption7Code.mmNonQualifiedInvestor, CorporateActionOption7Code.mmProposedRate, CorporateActionOption7Code.mmOther,
+						CorporateActionOption7Code.mmOversubscribe, CorporateActionOption7Code.mmProxyCard, CorporateActionOption7Code.mmQualifiedInvestor, CorporateActionOption7Code.mmSecurity,
+						CorporateActionOption7Code.mmSellEntitlement, CorporateActionOption7Code.mmSplitInstruction, CorporateActionOption7Code.mmUnknownProceeds);
 				trace_lazy = () -> CorporateActionOptionCode.mmObject();
 			}
 		});

@@ -17,9 +17,13 @@
 
 package com.tools20022.repository.entity;
 
+import com.tools20022.metamodel.MMAggregation;
 import com.tools20022.metamodel.MMBusinessAssociationEnd;
 import com.tools20022.metamodel.MMBusinessComponent;
+import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.entity.Role;
+import com.tools20022.repository.GeneratedRepository;
+import com.tools20022.repository.msg.*;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.List;
@@ -33,14 +37,6 @@ import java.util.List;
  * <p>
  * <strong>Constant fields:</strong>
  * <ul>
- * <li>{@linkplain com.tools20022.metamodel.MMBusinessComponent#getElement
- * element} =
- * <ul>
- * <li>
- * {@linkplain com.tools20022.repository.entity.EmployingPartyRole#mmEmployee
- * EmployingPartyRole.mmEmployee}</li>
- * </ul>
- * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMBusinessComponent#getAssociationDomain
  * associationDomain} =
@@ -111,6 +107,14 @@ import java.util.List;
  * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMBusinessComponent#getSuperType
  * superType} = {@linkplain com.tools20022.repository.entity.Role Role}</li>
+ * <li>{@linkplain com.tools20022.metamodel.MMBusinessComponent#getElement
+ * element} =
+ * <ul>
+ * <li>
+ * {@linkplain com.tools20022.repository.entity.EmployingPartyRole#mmEmployee
+ * EmployingPartyRole.mmEmployee}</li>
+ * </ul>
+ * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
@@ -167,12 +171,12 @@ public class EmployingPartyRole extends Role {
 		{
 			elementContext_lazy = () -> EmployingPartyRole.mmObject();
 			isDerived = false;
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "Employee";
 			definition = "Identifies the employee of a party.";
 			minOccurs = 0;
 			opposite_lazy = () -> com.tools20022.repository.entity.Person.mmEmployingParty;
-			aggregation = com.tools20022.metamodel.MMAggregation.NONE;
+			aggregation = MMAggregation.NONE;
 			type_lazy = () -> com.tools20022.repository.entity.Person.mmObject();
 		}
 	};
@@ -180,20 +184,17 @@ public class EmployingPartyRole extends Role {
 	static public MMBusinessComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMBusinessComponent() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "EmployingPartyRole";
 				definition = "Organisation represented by a person, or for which a person works.";
 				associationDomain_lazy = () -> Arrays.asList(com.tools20022.repository.entity.Person.mmEmployingParty);
-				derivationElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.IndividualPerson10.mmEmployingCompany, com.tools20022.repository.msg.IndividualPerson20.mmEmployingCompany,
-						com.tools20022.repository.msg.IndividualPerson11.mmEmployingCompany, com.tools20022.repository.msg.IndividualPerson7.mmEmployingParty, com.tools20022.repository.msg.IndividualPerson14.mmEmployingParty,
-						com.tools20022.repository.msg.IndividualPerson16.mmEmployingParty, com.tools20022.repository.msg.IndividualPerson13.mmEmployingParty, com.tools20022.repository.msg.IndividualPerson17.mmEmployingParty,
-						com.tools20022.repository.msg.IndividualPerson21.mmEmployingCompany, com.tools20022.repository.msg.IndividualPerson22.mmEmployingCompany, com.tools20022.repository.msg.IndividualPerson23.mmEmployingCompany,
-						com.tools20022.repository.msg.IndividualPerson24.mmEmployingCompany, com.tools20022.repository.msg.IndividualPerson25.mmEmployingParty, com.tools20022.repository.msg.IndividualPerson26.mmEmployingParty,
-						com.tools20022.repository.msg.IndividualPerson28.mmEmployingCompany, com.tools20022.repository.msg.IndividualPerson27.mmEmployingCompany, com.tools20022.repository.msg.IndividualPerson33.mmEmployingCompany,
-						com.tools20022.repository.msg.IndividualPerson34.mmEmployingCompany);
+				derivationElement_lazy = () -> Arrays.asList(IndividualPerson10.mmEmployingCompany, IndividualPerson20.mmEmployingCompany, IndividualPerson11.mmEmployingCompany, IndividualPerson7.mmEmployingParty,
+						IndividualPerson14.mmEmployingParty, IndividualPerson16.mmEmployingParty, IndividualPerson13.mmEmployingParty, IndividualPerson17.mmEmployingParty, IndividualPerson21.mmEmployingCompany,
+						IndividualPerson22.mmEmployingCompany, IndividualPerson23.mmEmployingCompany, IndividualPerson24.mmEmployingCompany, IndividualPerson25.mmEmployingParty, IndividualPerson26.mmEmployingParty,
+						IndividualPerson28.mmEmployingCompany, IndividualPerson27.mmEmployingCompany, IndividualPerson33.mmEmployingCompany, IndividualPerson34.mmEmployingCompany);
 				superType_lazy = () -> Role.mmObject();
-				element_lazy = () -> Arrays.asList(com.tools20022.repository.entity.EmployingPartyRole.mmEmployee);
+				element_lazy = () -> Arrays.asList(EmployingPartyRole.mmEmployee);
 			}
 		});
 		return mmObject_lazy.get();

@@ -17,13 +17,12 @@
 
 package com.tools20022.repository.msg;
 
-import com.tools20022.metamodel.MMMessageAssociationEnd;
-import com.tools20022.metamodel.MMMessageAttribute;
-import com.tools20022.metamodel.MMMessageComponent;
-import com.tools20022.metamodel.MMXor;
+import com.tools20022.metamodel.*;
+import com.tools20022.repository.area.semt.SecuritiesMessageRejection;
 import com.tools20022.repository.codeset.MessageRejectedReason1Code;
 import com.tools20022.repository.datatype.Max140Text;
 import com.tools20022.repository.entity.StatusReason;
+import com.tools20022.repository.GeneratedRepository;
 import java.text.DateFormat;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
@@ -129,11 +128,11 @@ public class RejectionReason1 {
 	 */
 	public static final MMMessageAttribute mmReason = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.StatusReason.mmRejectedStatusReason;
+			businessElementTrace_lazy = () -> StatusReason.mmRejectedStatusReason;
 			componentContext_lazy = () -> RejectionReason1.mmObject();
 			isDerived = false;
 			xmlTag = "Rsn";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Reason";
 			definition = "Reason to reject the message.";
 			maxOccurs = 1;
@@ -176,11 +175,11 @@ public class RejectionReason1 {
 	 */
 	public static final MMMessageAttribute mmAdditionalInformation = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.StatusReason.mmReason;
+			businessElementTrace_lazy = () -> StatusReason.mmReason;
 			componentContext_lazy = () -> RejectionReason1.mmObject();
 			isDerived = false;
 			xmlTag = "AddtlInf";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AdditionalInformation";
 			definition = "Additional information about the rejection reason.";
 			maxOccurs = 1;
@@ -223,7 +222,7 @@ public class RejectionReason1 {
 			componentContext_lazy = () -> RejectionReason1.mmObject();
 			isDerived = false;
 			xmlTag = "LkdMsgPrvsRef";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "LinkedMessagePreviousReference";
 			definition = "Linked previous reference that is invalid or unrecognised, of the message being rejected.";
 			maxOccurs = 1;
@@ -267,7 +266,7 @@ public class RejectionReason1 {
 			componentContext_lazy = () -> RejectionReason1.mmObject();
 			isDerived = false;
 			xmlTag = "LkdMsgOthrRef";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "LinkedMessageOtherReference";
 			definition = "Linked other reference that is invalid or unrecognised, of the message being rejected.";
 			maxOccurs = 1;
@@ -311,7 +310,7 @@ public class RejectionReason1 {
 			componentContext_lazy = () -> RejectionReason1.mmObject();
 			isDerived = false;
 			xmlTag = "LkdMsgRltdRef";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "LinkedMessageRelatedReference";
 			definition = "Linked related reference that is invalid or unrecognised, of the message being rejected.";
 			maxOccurs = 1;
@@ -327,6 +326,10 @@ public class RejectionReason1 {
 	 * <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
+	 * <li>{@linkplain com.tools20022.metamodel.MMXor#getMessageComponent
+	 * messageComponent} =
+	 * {@linkplain com.tools20022.repository.msg.RejectionReason1
+	 * RejectionReason1}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMXor#getImpactedElements
 	 * impactedElements} =
 	 * <ul>
@@ -341,10 +344,6 @@ public class RejectionReason1 {
 	 * RejectionReason1.mmLinkedMessageRelatedReference}</li>
 	 * </ul>
 	 * </li>
-	 * <li>{@linkplain com.tools20022.metamodel.MMXor#getMessageComponent
-	 * messageComponent} =
-	 * {@linkplain com.tools20022.repository.msg.RejectionReason1
-	 * RejectionReason1}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
@@ -360,25 +359,23 @@ public class RejectionReason1 {
 	 */
 	public static final MMXor mmPreviousOrOtherOrRelatedReferenceRule = new MMXor() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PreviousOrOtherOrRelatedReferenceRule";
 			definition = "One and only one message element in the list (LinkedMessagePreviousReference, LinkedMessageOtherReference, LinkedMessageRelatedReference) may be present.";
 			messageComponent_lazy = () -> RejectionReason1.mmObject();
-			impactedElements_lazy = () -> Arrays.asList(com.tools20022.repository.msg.RejectionReason1.mmLinkedMessagePreviousReference, com.tools20022.repository.msg.RejectionReason1.mmLinkedMessageOtherReference,
-					com.tools20022.repository.msg.RejectionReason1.mmLinkedMessageRelatedReference);
+			impactedElements_lazy = () -> Arrays.asList(RejectionReason1.mmLinkedMessagePreviousReference, RejectionReason1.mmLinkedMessageOtherReference, RejectionReason1.mmLinkedMessageRelatedReference);
 		}
 	};
 
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.RejectionReason1.mmReason, com.tools20022.repository.msg.RejectionReason1.mmAdditionalInformation,
-						com.tools20022.repository.msg.RejectionReason1.mmLinkedMessagePreviousReference, com.tools20022.repository.msg.RejectionReason1.mmLinkedMessageOtherReference,
-						com.tools20022.repository.msg.RejectionReason1.mmLinkedMessageRelatedReference);
-				messageBuildingBlock_lazy = () -> Arrays.asList(com.tools20022.repository.area.semt.SecuritiesMessageRejection.mmReason);
+				messageElement_lazy = () -> Arrays.asList(RejectionReason1.mmReason, RejectionReason1.mmAdditionalInformation, RejectionReason1.mmLinkedMessagePreviousReference, RejectionReason1.mmLinkedMessageOtherReference,
+						RejectionReason1.mmLinkedMessageRelatedReference);
+				messageBuildingBlock_lazy = () -> Arrays.asList(SecuritiesMessageRejection.mmReason);
 				trace_lazy = () -> StatusReason.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.OBSOLETE;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.OBSOLETE;
 				removalDate = ((Supplier<Date>) (() -> {
 					try {
 						return DateFormat.getDateInstance(java.text.DateFormat.LONG).parse("September 9, 2016");
@@ -388,7 +385,7 @@ public class RejectionReason1 {
 				})).get();
 				name = "RejectionReason1";
 				definition = "Reason to reject the message.";
-				xors_lazy = () -> Arrays.asList(com.tools20022.repository.msg.RejectionReason1.mmPreviousOrOtherOrRelatedReferenceRule);
+				xors_lazy = () -> Arrays.asList(RejectionReason1.mmPreviousOrOtherOrRelatedReferenceRule);
 			}
 		});
 		return mmObject_lazy.get();

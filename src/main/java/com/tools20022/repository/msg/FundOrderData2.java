@@ -19,12 +19,17 @@ package com.tools20022.repository.msg;
 
 import com.tools20022.metamodel.MMMessageAttribute;
 import com.tools20022.metamodel.MMMessageComponent;
+import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.metamodel.MMXor;
 import com.tools20022.repository.codeset.ActiveOrHistoricCurrencyCode;
 import com.tools20022.repository.codeset.DeliveryReceiptType2Code;
 import com.tools20022.repository.datatype.ActiveCurrencyAndAmount;
 import com.tools20022.repository.datatype.ActiveOrHistoricCurrencyAndAmount;
+import com.tools20022.repository.entity.CurrencyExchange;
+import com.tools20022.repository.entity.Payment;
+import com.tools20022.repository.entity.SecuritiesSettlement;
 import com.tools20022.repository.entity.SwitchOrder;
+import com.tools20022.repository.GeneratedRepository;
 import java.text.DateFormat;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
@@ -138,11 +143,11 @@ public class FundOrderData2 {
 	 */
 	public static final MMMessageAttribute mmTotalRedemptionAmount = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.SwitchOrder.mmTotalRedemptionAmount;
+			businessElementTrace_lazy = () -> SwitchOrder.mmTotalRedemptionAmount;
 			componentContext_lazy = () -> FundOrderData2.mmObject();
 			isDerived = false;
 			xmlTag = "TtlRedAmt";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "TotalRedemptionAmount";
 			definition = "Amount of money used to derive the quantity of investment fund units to be redeemed.";
 			maxOccurs = 1;
@@ -188,11 +193,11 @@ public class FundOrderData2 {
 	 */
 	public static final MMMessageAttribute mmTotalSubscriptionAmount = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.SwitchOrder.mmTotalSubscriptionAmount;
+			businessElementTrace_lazy = () -> SwitchOrder.mmTotalSubscriptionAmount;
 			componentContext_lazy = () -> FundOrderData2.mmObject();
 			isDerived = false;
 			xmlTag = "TtlSbcptAmt";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "TotalSubscriptionAmount";
 			definition = "Amount of money used to derive the quantity of investment fund units to be subscribed.";
 			maxOccurs = 1;
@@ -246,14 +251,14 @@ public class FundOrderData2 {
 	 */
 	public static final MMMessageAttribute mmSettlementAmount = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Payment.mmInstructedAmount;
+			businessElementTrace_lazy = () -> Payment.mmInstructedAmount;
 			componentContext_lazy = () -> FundOrderData2.mmObject();
 			isDerived = false;
 			xmlTag = "SttlmAmt";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SettlementAmount";
 			definition = "Amount of money to be transferred between the debtor and creditor before bank transaction charges.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.FundOrderData6.mmSettlementAmount);
+			nextVersions_lazy = () -> Arrays.asList(FundOrderData6.mmSettlementAmount);
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> ActiveCurrencyAndAmount.mmObject();
@@ -302,14 +307,14 @@ public class FundOrderData2 {
 	 */
 	public static final MMMessageAttribute mmSettlementMethod = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.SecuritiesSettlement.mmSettlementType;
+			businessElementTrace_lazy = () -> SecuritiesSettlement.mmSettlementType;
 			componentContext_lazy = () -> FundOrderData2.mmObject();
 			isDerived = false;
 			xmlTag = "SttlmMtd";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SettlementMethod";
 			definition = "Method by which the transaction is settled.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.FundOrderData6.mmSettlementMethod);
+			nextVersions_lazy = () -> Arrays.asList(FundOrderData6.mmSettlementMethod);
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> DeliveryReceiptType2Code.mmObject();
@@ -353,11 +358,11 @@ public class FundOrderData2 {
 	 */
 	public static final MMMessageAttribute mmAdditionalCashIn = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.SwitchOrder.mmAdditionalCashIn;
+			businessElementTrace_lazy = () -> SwitchOrder.mmAdditionalCashIn;
 			componentContext_lazy = () -> FundOrderData2.mmObject();
 			isDerived = false;
 			xmlTag = "AddtlCshIn";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AdditionalCashIn";
 			definition = "Additional amount of money paid by the investor in addition to the switch redemption amount.";
 			maxOccurs = 1;
@@ -403,11 +408,11 @@ public class FundOrderData2 {
 	 */
 	public static final MMMessageAttribute mmResultingCashOut = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.SwitchOrder.mmResultingCashOut;
+			businessElementTrace_lazy = () -> SwitchOrder.mmResultingCashOut;
 			componentContext_lazy = () -> FundOrderData2.mmObject();
 			isDerived = false;
 			xmlTag = "RsltgCshOut";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ResultingCashOut";
 			definition = "Amount of money that results from a switch-out, that is not reinvested in another investment fund, and is repaid to the investor.";
 			maxOccurs = 1;
@@ -461,14 +466,14 @@ public class FundOrderData2 {
 	 */
 	public static final MMMessageAttribute mmUnitCurrency = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.CurrencyExchange.mmUnitCurrency;
+			businessElementTrace_lazy = () -> CurrencyExchange.mmUnitCurrency;
 			componentContext_lazy = () -> FundOrderData2.mmObject();
 			isDerived = false;
 			xmlTag = "UnitCcy";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "UnitCurrency";
 			definition = "Currency in which the rate of exchange is expressed in a currency exchange. In the example 1GBP = xxxCUR, the unit currency is GBP.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.FundOrderData6.mmUnitCurrency);
+			nextVersions_lazy = () -> Arrays.asList(FundOrderData6.mmUnitCurrency);
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> ActiveOrHistoricCurrencyCode.mmObject();
@@ -520,14 +525,14 @@ public class FundOrderData2 {
 	 */
 	public static final MMMessageAttribute mmQuotedCurrency = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.CurrencyExchange.mmQuotedCurrency;
+			businessElementTrace_lazy = () -> CurrencyExchange.mmQuotedCurrency;
 			componentContext_lazy = () -> FundOrderData2.mmObject();
 			isDerived = false;
 			xmlTag = "QtdCcy";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "QuotedCurrency";
 			definition = "Currency into which the base currency is converted, in a currency exchange.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.FundOrderData6.mmQuotedCurrency);
+			nextVersions_lazy = () -> Arrays.asList(FundOrderData6.mmQuotedCurrency);
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> ActiveOrHistoricCurrencyCode.mmObject();
@@ -538,6 +543,9 @@ public class FundOrderData2 {
 	 * <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
+	 * <li>{@linkplain com.tools20022.metamodel.MMXor#getMessageComponent
+	 * messageComponent} =
+	 * {@linkplain com.tools20022.repository.msg.FundOrderData2 FundOrderData2}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMXor#getImpactedElements
 	 * impactedElements} =
 	 * <ul>
@@ -549,9 +557,6 @@ public class FundOrderData2 {
 	 * FundOrderData2.mmResultingCashOut}</li>
 	 * </ul>
 	 * </li>
-	 * <li>{@linkplain com.tools20022.metamodel.MMXor#getMessageComponent
-	 * messageComponent} =
-	 * {@linkplain com.tools20022.repository.msg.FundOrderData2 FundOrderData2}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
@@ -567,23 +572,22 @@ public class FundOrderData2 {
 	 */
 	public static final MMXor mmCashInOrCashOutRule = new MMXor() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CashInOrCashOutRule";
 			definition = "Either AdditionalCashIn or ResultingCashOut may be present, but not both.";
 			messageComponent_lazy = () -> FundOrderData2.mmObject();
-			impactedElements_lazy = () -> Arrays.asList(com.tools20022.repository.msg.FundOrderData2.mmAdditionalCashIn, com.tools20022.repository.msg.FundOrderData2.mmResultingCashOut);
+			impactedElements_lazy = () -> Arrays.asList(FundOrderData2.mmAdditionalCashIn, FundOrderData2.mmResultingCashOut);
 		}
 	};
 
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.FundOrderData2.mmTotalRedemptionAmount, com.tools20022.repository.msg.FundOrderData2.mmTotalSubscriptionAmount,
-						com.tools20022.repository.msg.FundOrderData2.mmSettlementAmount, com.tools20022.repository.msg.FundOrderData2.mmSettlementMethod, com.tools20022.repository.msg.FundOrderData2.mmAdditionalCashIn,
-						com.tools20022.repository.msg.FundOrderData2.mmResultingCashOut, com.tools20022.repository.msg.FundOrderData2.mmUnitCurrency, com.tools20022.repository.msg.FundOrderData2.mmQuotedCurrency);
+				messageElement_lazy = () -> Arrays.asList(FundOrderData2.mmTotalRedemptionAmount, FundOrderData2.mmTotalSubscriptionAmount, FundOrderData2.mmSettlementAmount, FundOrderData2.mmSettlementMethod,
+						FundOrderData2.mmAdditionalCashIn, FundOrderData2.mmResultingCashOut, FundOrderData2.mmUnitCurrency, FundOrderData2.mmQuotedCurrency);
 				trace_lazy = () -> SwitchOrder.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.OBSOLETE;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.OBSOLETE;
 				removalDate = ((Supplier<Date>) (() -> {
 					try {
 						return DateFormat.getDateInstance(java.text.DateFormat.LONG).parse("September 9, 2016");
@@ -594,7 +598,7 @@ public class FundOrderData2 {
 				name = "FundOrderData2";
 				definition = "Extract of trade data for an investment fund switch order.";
 				nextVersions_lazy = () -> Arrays.asList(FundOrderData6.mmObject());
-				xors_lazy = () -> Arrays.asList(com.tools20022.repository.msg.FundOrderData2.mmCashInOrCashOutRule);
+				xors_lazy = () -> Arrays.asList(FundOrderData2.mmCashInOrCashOutRule);
 			}
 		});
 		return mmObject_lazy.get();

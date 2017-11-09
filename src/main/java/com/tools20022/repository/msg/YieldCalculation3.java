@@ -19,12 +19,14 @@ package com.tools20022.repository.msg;
 
 import com.tools20022.metamodel.MMMessageAttribute;
 import com.tools20022.metamodel.MMMessageComponent;
+import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.choice.CalculationType2Choice;
 import com.tools20022.repository.choice.DateTimePeriodChoice;
 import com.tools20022.repository.datatype.ISODate;
 import com.tools20022.repository.datatype.ISODateTime;
 import com.tools20022.repository.datatype.PercentageRate;
 import com.tools20022.repository.entity.YieldCalculation;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -112,11 +114,11 @@ public class YieldCalculation3 {
 	 */
 	public static final MMMessageAttribute mmValue = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.YieldCalculation.mmValue;
+			businessElementTrace_lazy = () -> YieldCalculation.mmValue;
 			componentContext_lazy = () -> YieldCalculation3.mmObject();
 			isDerived = false;
 			xmlTag = "Val";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Value";
 			definition = "Result of the yield calculation.";
 			maxOccurs = 1;
@@ -160,11 +162,11 @@ public class YieldCalculation3 {
 	 */
 	public static final MMMessageAttribute mmCalculationType = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.YieldCalculation.mmCalculationType;
+			businessElementTrace_lazy = () -> YieldCalculation.mmCalculationType;
 			componentContext_lazy = () -> YieldCalculation3.mmObject();
 			isDerived = false;
 			xmlTag = "ClctnTp";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CalculationType";
 			definition = "Specifies the type of calculation.";
 			maxOccurs = 1;
@@ -206,11 +208,11 @@ public class YieldCalculation3 {
 	 */
 	public static final MMMessageAttribute mmRedemptionPrice = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.YieldCalculation.mmRedemptionPrice;
+			businessElementTrace_lazy = () -> YieldCalculation.mmRedemptionPrice;
 			componentContext_lazy = () -> YieldCalculation3.mmObject();
 			isDerived = false;
 			xmlTag = "RedPric";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "RedemptionPrice";
 			definition = "Price to which the yield has been calculated.";
 			maxOccurs = 1;
@@ -256,11 +258,11 @@ public class YieldCalculation3 {
 	 */
 	public static final MMMessageAttribute mmValueDate = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.YieldCalculation.mmValueDate;
+			businessElementTrace_lazy = () -> YieldCalculation.mmValueDate;
 			componentContext_lazy = () -> YieldCalculation3.mmObject();
 			isDerived = false;
 			xmlTag = "ValDt";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ValueDate";
 			definition = "Date/time on which the calculation is based, for example, valuation on October 1 (price date) based on price of September 19 ( value date).";
 			maxOccurs = 1;
@@ -304,11 +306,11 @@ public class YieldCalculation3 {
 	 */
 	public static final MMMessageAttribute mmValuePeriod = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.YieldCalculation.mmValuePeriod;
+			businessElementTrace_lazy = () -> YieldCalculation.mmValuePeriod;
 			componentContext_lazy = () -> YieldCalculation3.mmObject();
 			isDerived = false;
 			xmlTag = "ValPrd";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ValuePeriod";
 			definition = "Period on which the calculation is based.";
 			maxOccurs = 1;
@@ -354,11 +356,11 @@ public class YieldCalculation3 {
 	 */
 	public static final MMMessageAttribute mmCalculationDate = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.YieldCalculation.mmYieldCalculationDate;
+			businessElementTrace_lazy = () -> YieldCalculation.mmYieldCalculationDate;
 			componentContext_lazy = () -> YieldCalculation3.mmObject();
 			isDerived = false;
 			xmlTag = "ClctnDt";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CalculationDate";
 			definition = "Clarifies yield irregularities associated with date, for example when it falls on a non-business day.";
 			maxOccurs = 1;
@@ -370,12 +372,11 @@ public class YieldCalculation3 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.YieldCalculation3.mmValue, com.tools20022.repository.msg.YieldCalculation3.mmCalculationType,
-						com.tools20022.repository.msg.YieldCalculation3.mmRedemptionPrice, com.tools20022.repository.msg.YieldCalculation3.mmValueDate, com.tools20022.repository.msg.YieldCalculation3.mmValuePeriod,
-						com.tools20022.repository.msg.YieldCalculation3.mmCalculationDate);
+				messageElement_lazy = () -> Arrays.asList(YieldCalculation3.mmValue, YieldCalculation3.mmCalculationType, YieldCalculation3.mmRedemptionPrice, YieldCalculation3.mmValueDate, YieldCalculation3.mmValuePeriod,
+						YieldCalculation3.mmCalculationDate);
 				trace_lazy = () -> YieldCalculation.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 				name = "YieldCalculation3";
 				definition = "Return provided by a financial instrument.";
 			}

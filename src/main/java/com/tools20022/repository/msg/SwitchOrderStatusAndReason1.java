@@ -17,14 +17,13 @@
 
 package com.tools20022.repository.msg;
 
-import com.tools20022.metamodel.MMMessageAssociationEnd;
-import com.tools20022.metamodel.MMMessageAttribute;
-import com.tools20022.metamodel.MMMessageComponent;
-import com.tools20022.metamodel.MMXor;
+import com.tools20022.metamodel.*;
+import com.tools20022.repository.area.setr.OrderInstructionStatusReportV03;
 import com.tools20022.repository.choice.PartyIdentification2Choice;
 import com.tools20022.repository.codeset.OrderStatus4Code;
 import com.tools20022.repository.datatype.Max35Text;
-import com.tools20022.repository.entity.SwitchOrder;
+import com.tools20022.repository.entity.*;
+import com.tools20022.repository.GeneratedRepository;
 import java.text.DateFormat;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
@@ -185,14 +184,14 @@ public class SwitchOrderStatusAndReason1 {
 	 */
 	public static final MMMessageAttribute mmMasterReference = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Order.mmMasterIdentification;
+			businessElementTrace_lazy = () -> Order.mmMasterIdentification;
 			componentContext_lazy = () -> SwitchOrderStatusAndReason1.mmObject();
 			isDerived = false;
 			xmlTag = "MstrRef";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "MasterReference";
 			definition = "Reference assigned to a set of orders or trades in order to link them together.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.SwitchOrderStatusAndReason2.mmMasterReference);
+			nextVersions_lazy = () -> Arrays.asList(SwitchOrderStatusAndReason2.mmMasterReference);
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> Max35Text.mmObject();
@@ -244,14 +243,14 @@ public class SwitchOrderStatusAndReason1 {
 	 */
 	public static final MMMessageAttribute mmOrderReference = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.SecuritiesOrder.mmIdentification;
+			businessElementTrace_lazy = () -> SecuritiesOrder.mmIdentification;
 			componentContext_lazy = () -> SwitchOrderStatusAndReason1.mmObject();
 			isDerived = false;
 			xmlTag = "OrdrRef";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "OrderReference";
 			definition = "Unique and unambiguous identifier for an order, as assigned by the instructing party.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.SwitchOrderStatusAndReason2.mmOrderReference);
+			nextVersions_lazy = () -> Arrays.asList(SwitchOrderStatusAndReason2.mmOrderReference);
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> Max35Text.mmObject();
@@ -304,14 +303,14 @@ public class SwitchOrderStatusAndReason1 {
 	 */
 	public static final MMMessageAttribute mmClientReference = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.InvestmentFundTransaction.mmClientReference;
+			businessElementTrace_lazy = () -> InvestmentFundTransaction.mmClientReference;
 			componentContext_lazy = () -> SwitchOrderStatusAndReason1.mmObject();
 			isDerived = false;
 			xmlTag = "ClntRef";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ClientReference";
 			definition = "Unique and unambiguous investor's identification of an order. This reference can typically be used in a hub scenario to give the reference of the order as assigned by the underlying client.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.SwitchOrderStatusAndReason2.mmClientReference);
+			nextVersions_lazy = () -> Arrays.asList(SwitchOrderStatusAndReason2.mmClientReference);
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> Max35Text.mmObject();
@@ -363,14 +362,14 @@ public class SwitchOrderStatusAndReason1 {
 	 */
 	public static final MMMessageAttribute mmDealReference = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.InvestmentFundOrderExecution.mmDealIdentification;
+			businessElementTrace_lazy = () -> InvestmentFundOrderExecution.mmDealIdentification;
 			componentContext_lazy = () -> SwitchOrderStatusAndReason1.mmObject();
 			isDerived = false;
 			xmlTag = "DealRef";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "DealReference";
 			definition = "Unique and unambiguous identifier for an order execution, as assigned by a confirming party.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.SwitchOrderStatusAndReason2.mmDealReference);
+			nextVersions_lazy = () -> Arrays.asList(SwitchOrderStatusAndReason2.mmDealReference);
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> Max35Text.mmObject();
@@ -420,10 +419,10 @@ public class SwitchOrderStatusAndReason1 {
 			componentContext_lazy = () -> SwitchOrderStatusAndReason1.mmObject();
 			isDerived = false;
 			xmlTag = "CxlRef";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CancellationReference";
 			definition = "Unique and unambiguous identifier for an order cancellation, as assigned by the instructing party.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.SwitchOrderStatusAndReason2.mmCancellationReference);
+			nextVersions_lazy = () -> Arrays.asList(SwitchOrderStatusAndReason2.mmCancellationReference);
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> Max35Text.mmObject();
@@ -468,11 +467,11 @@ public class SwitchOrderStatusAndReason1 {
 	 */
 	public static final MMMessageAttribute mmStatus = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.SecuritiesOrderStatus.mmOrderStatus;
+			businessElementTrace_lazy = () -> SecuritiesOrderStatus.mmOrderStatus;
 			componentContext_lazy = () -> SwitchOrderStatusAndReason1.mmObject();
 			isDerived = false;
 			xmlTag = "Sts";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Status";
 			definition = "Status of the switch order is accepted or already executed or sent to next party or received. There is no reason attached.";
 			maxOccurs = 1;
@@ -518,11 +517,11 @@ public class SwitchOrderStatusAndReason1 {
 	 */
 	public static final MMMessageAssociationEnd mmCancelled = new MMMessageAssociationEnd() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.SecuritiesOrderStatus.mmCancellationStatus;
+			businessElementTrace_lazy = () -> SecuritiesOrderStatus.mmCancellationStatus;
 			componentContext_lazy = () -> SwitchOrderStatusAndReason1.mmObject();
 			isDerived = false;
 			xmlTag = "Canc";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Cancelled";
 			definition = "Status of the switch order is cancelled. This status is used for an order that has been accepted or that has been entered in an order book but that can not be executed.";
 			maxOccurs = 1;
@@ -566,11 +565,11 @@ public class SwitchOrderStatusAndReason1 {
 	 */
 	public static final MMMessageAssociationEnd mmConditionallyAccepted = new MMMessageAssociationEnd() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.SecuritiesOrderStatus.mmConditionallyAcceptedStatus;
+			businessElementTrace_lazy = () -> SecuritiesOrderStatus.mmConditionallyAcceptedStatus;
 			componentContext_lazy = () -> SwitchOrderStatusAndReason1.mmObject();
 			isDerived = false;
 			xmlTag = "CondlyAccptd";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ConditionallyAccepted";
 			definition = "Status of the switch order is conditionally accepted.";
 			maxOccurs = 1;
@@ -613,11 +612,11 @@ public class SwitchOrderStatusAndReason1 {
 	 */
 	public static final MMMessageAssociationEnd mmRejected = new MMMessageAssociationEnd() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.InvestmentFundOrder.mmOrderStatus;
+			businessElementTrace_lazy = () -> InvestmentFundOrder.mmOrderStatus;
 			componentContext_lazy = () -> SwitchOrderStatusAndReason1.mmObject();
 			isDerived = false;
 			xmlTag = "Rjctd";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Rejected";
 			definition = "Status of the switch order is rejected.";
 			maxOccurs = 10;
@@ -660,11 +659,11 @@ public class SwitchOrderStatusAndReason1 {
 	 */
 	public static final MMMessageAssociationEnd mmSuspended = new MMMessageAssociationEnd() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.SecuritiesOrderStatus.mmSuspendedStatusReason;
+			businessElementTrace_lazy = () -> SecuritiesOrderStatus.mmSuspendedStatusReason;
 			componentContext_lazy = () -> SwitchOrderStatusAndReason1.mmObject();
 			isDerived = false;
 			xmlTag = "Sspd";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Suspended";
 			definition = "Status of the switch order is suspended.";
 			maxOccurs = 1;
@@ -707,11 +706,11 @@ public class SwitchOrderStatusAndReason1 {
 	 */
 	public static final MMMessageAssociationEnd mmInRepair = new MMMessageAssociationEnd() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.InvestmentFundOrder.mmOrderStatus;
+			businessElementTrace_lazy = () -> InvestmentFundOrder.mmOrderStatus;
 			componentContext_lazy = () -> SwitchOrderStatusAndReason1.mmObject();
 			isDerived = false;
 			xmlTag = "InRpr";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "InRepair";
 			definition = "Status of the switch order is in repair.";
 			maxOccurs = 1;
@@ -755,11 +754,11 @@ public class SwitchOrderStatusAndReason1 {
 	 */
 	public static final MMMessageAssociationEnd mmPartiallySettled = new MMMessageAssociationEnd() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.SecuritiesOrderStatus.mmPartiallySettledStatusReason;
+			businessElementTrace_lazy = () -> SecuritiesOrderStatus.mmPartiallySettledStatusReason;
 			componentContext_lazy = () -> SwitchOrderStatusAndReason1.mmObject();
 			isDerived = false;
 			xmlTag = "PrtlySttld";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PartiallySettled";
 			definition = "Status of the switch order is partially settled.";
 			maxOccurs = 1;
@@ -809,10 +808,10 @@ public class SwitchOrderStatusAndReason1 {
 			componentContext_lazy = () -> SwitchOrderStatusAndReason1.mmObject();
 			isDerived = false;
 			xmlTag = "LegInf";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "LegInformation";
 			definition = "Information about a switch leg that is rejected or repaired.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.SwitchOrderStatusAndReason2.mmLegInformation);
+			nextVersions_lazy = () -> Arrays.asList(SwitchOrderStatusAndReason2.mmLegInformation);
 			minOccurs = 0;
 			isComposite = true;
 			type_lazy = () -> com.tools20022.repository.msg.SwitchLegReferences1.mmObject();
@@ -861,14 +860,14 @@ public class SwitchOrderStatusAndReason1 {
 	 */
 	public static final MMMessageAssociationEnd mmStatusInitiator = new MMMessageAssociationEnd() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Party.mmIdentification;
+			businessElementTrace_lazy = () -> Party.mmIdentification;
 			componentContext_lazy = () -> SwitchOrderStatusAndReason1.mmObject();
 			isDerived = false;
 			xmlTag = "StsInitr";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "StatusInitiator";
 			definition = "Party that initiates the status of the order.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.SwitchOrderStatusAndReason2.mmStatusInitiator);
+			nextVersions_lazy = () -> Arrays.asList(SwitchOrderStatusAndReason2.mmStatusInitiator);
 			maxOccurs = 1;
 			minOccurs = 0;
 			isComposite = true;
@@ -920,10 +919,10 @@ public class SwitchOrderStatusAndReason1 {
 			componentContext_lazy = () -> SwitchOrderStatusAndReason1.mmObject();
 			isDerived = false;
 			xmlTag = "OrdrData";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "OrderData";
 			definition = "Order data.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.SwitchOrderStatusAndReason2.mmOrderData);
+			nextVersions_lazy = () -> Arrays.asList(SwitchOrderStatusAndReason2.mmOrderData);
 			maxOccurs = 1;
 			minOccurs = 0;
 			isComposite = true;
@@ -973,14 +972,14 @@ public class SwitchOrderStatusAndReason1 {
 	 */
 	public static final MMMessageAssociationEnd mmNewDetails = new MMMessageAssociationEnd() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.InvestmentFundOrder.mmInvestmentFundOrderExecution;
+			businessElementTrace_lazy = () -> InvestmentFundOrder.mmInvestmentFundOrderExecution;
 			componentContext_lazy = () -> SwitchOrderStatusAndReason1.mmObject();
 			isDerived = false;
 			xmlTag = "NewDtls";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "NewDetails";
 			definition = "Information that has been added to the original order.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.SwitchOrderStatusAndReason2.mmNewDetails);
+			nextVersions_lazy = () -> Arrays.asList(SwitchOrderStatusAndReason2.mmNewDetails);
 			maxOccurs = 1;
 			minOccurs = 0;
 			isComposite = true;
@@ -995,6 +994,10 @@ public class SwitchOrderStatusAndReason1 {
 	 * <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
+	 * <li>{@linkplain com.tools20022.metamodel.MMXor#getMessageComponent
+	 * messageComponent} =
+	 * {@linkplain com.tools20022.repository.msg.SwitchOrderStatusAndReason1
+	 * SwitchOrderStatusAndReason1}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMXor#getImpactedElements
 	 * impactedElements} =
 	 * <ul>
@@ -1021,10 +1024,6 @@ public class SwitchOrderStatusAndReason1 {
 	 * SwitchOrderStatusAndReason1.mmPartiallySettled}</li>
 	 * </ul>
 	 * </li>
-	 * <li>{@linkplain com.tools20022.metamodel.MMXor#getMessageComponent
-	 * messageComponent} =
-	 * {@linkplain com.tools20022.repository.msg.SwitchOrderStatusAndReason1
-	 * SwitchOrderStatusAndReason1}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
@@ -1040,31 +1039,27 @@ public class SwitchOrderStatusAndReason1 {
 	 */
 	public static final MMXor mmTypeOfStatusRule = new MMXor() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "TypeOfStatusRule";
 			definition = "One and only one message element in the list (Status, Cancelled, ConditionallyAccepted, Rejected, Suspended, InRepair, PartiallySettled) must be present. This message element may be repeated more than once if allowed by its multiplicity.";
 			messageComponent_lazy = () -> SwitchOrderStatusAndReason1.mmObject();
-			impactedElements_lazy = () -> Arrays.asList(com.tools20022.repository.msg.SwitchOrderStatusAndReason1.mmStatus, com.tools20022.repository.msg.SwitchOrderStatusAndReason1.mmCancelled,
-					com.tools20022.repository.msg.SwitchOrderStatusAndReason1.mmConditionallyAccepted, com.tools20022.repository.msg.SwitchOrderStatusAndReason1.mmRejected,
-					com.tools20022.repository.msg.SwitchOrderStatusAndReason1.mmSuspended, com.tools20022.repository.msg.SwitchOrderStatusAndReason1.mmInRepair, com.tools20022.repository.msg.SwitchOrderStatusAndReason1.mmPartiallySettled);
+			impactedElements_lazy = () -> Arrays.asList(SwitchOrderStatusAndReason1.mmStatus, SwitchOrderStatusAndReason1.mmCancelled, SwitchOrderStatusAndReason1.mmConditionallyAccepted, SwitchOrderStatusAndReason1.mmRejected,
+					SwitchOrderStatusAndReason1.mmSuspended, SwitchOrderStatusAndReason1.mmInRepair, SwitchOrderStatusAndReason1.mmPartiallySettled);
 		}
 	};
 
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.SwitchOrderStatusAndReason1.mmMasterReference, com.tools20022.repository.msg.SwitchOrderStatusAndReason1.mmOrderReference,
-						com.tools20022.repository.msg.SwitchOrderStatusAndReason1.mmClientReference, com.tools20022.repository.msg.SwitchOrderStatusAndReason1.mmDealReference,
-						com.tools20022.repository.msg.SwitchOrderStatusAndReason1.mmCancellationReference, com.tools20022.repository.msg.SwitchOrderStatusAndReason1.mmStatus,
-						com.tools20022.repository.msg.SwitchOrderStatusAndReason1.mmCancelled, com.tools20022.repository.msg.SwitchOrderStatusAndReason1.mmConditionallyAccepted,
-						com.tools20022.repository.msg.SwitchOrderStatusAndReason1.mmRejected, com.tools20022.repository.msg.SwitchOrderStatusAndReason1.mmSuspended, com.tools20022.repository.msg.SwitchOrderStatusAndReason1.mmInRepair,
-						com.tools20022.repository.msg.SwitchOrderStatusAndReason1.mmPartiallySettled, com.tools20022.repository.msg.SwitchOrderStatusAndReason1.mmLegInformation,
-						com.tools20022.repository.msg.SwitchOrderStatusAndReason1.mmStatusInitiator, com.tools20022.repository.msg.SwitchOrderStatusAndReason1.mmOrderData,
-						com.tools20022.repository.msg.SwitchOrderStatusAndReason1.mmNewDetails);
-				messageBuildingBlock_lazy = () -> Arrays.asList(com.tools20022.repository.area.setr.OrderInstructionStatusReportV03.mmSwitchOrderDetailsReport);
+				messageElement_lazy = () -> Arrays.asList(SwitchOrderStatusAndReason1.mmMasterReference, SwitchOrderStatusAndReason1.mmOrderReference, SwitchOrderStatusAndReason1.mmClientReference,
+						SwitchOrderStatusAndReason1.mmDealReference, SwitchOrderStatusAndReason1.mmCancellationReference, SwitchOrderStatusAndReason1.mmStatus, SwitchOrderStatusAndReason1.mmCancelled,
+						SwitchOrderStatusAndReason1.mmConditionallyAccepted, SwitchOrderStatusAndReason1.mmRejected, SwitchOrderStatusAndReason1.mmSuspended, SwitchOrderStatusAndReason1.mmInRepair,
+						SwitchOrderStatusAndReason1.mmPartiallySettled, SwitchOrderStatusAndReason1.mmLegInformation, SwitchOrderStatusAndReason1.mmStatusInitiator, SwitchOrderStatusAndReason1.mmOrderData,
+						SwitchOrderStatusAndReason1.mmNewDetails);
+				messageBuildingBlock_lazy = () -> Arrays.asList(OrderInstructionStatusReportV03.mmSwitchOrderDetailsReport);
 				trace_lazy = () -> SwitchOrder.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.OBSOLETE;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.OBSOLETE;
 				removalDate = ((Supplier<Date>) (() -> {
 					try {
 						return DateFormat.getDateInstance(java.text.DateFormat.LONG).parse("September 9, 2016");
@@ -1075,7 +1070,7 @@ public class SwitchOrderStatusAndReason1 {
 				name = "SwitchOrderStatusAndReason1";
 				definition = "Status report of the individual orders of a bulk or multiple order that was previously received.";
 				nextVersions_lazy = () -> Arrays.asList(SwitchOrderStatusAndReason2.mmObject());
-				xors_lazy = () -> Arrays.asList(com.tools20022.repository.msg.SwitchOrderStatusAndReason1.mmTypeOfStatusRule);
+				xors_lazy = () -> Arrays.asList(SwitchOrderStatusAndReason1.mmTypeOfStatusRule);
 			}
 		});
 		return mmObject_lazy.get();

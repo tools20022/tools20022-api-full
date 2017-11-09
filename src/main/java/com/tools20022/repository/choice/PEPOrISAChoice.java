@@ -19,7 +19,9 @@ package com.tools20022.repository.choice;
 
 import com.tools20022.metamodel.MMChoiceComponent;
 import com.tools20022.metamodel.MMMessageAssociationEnd;
+import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.entity.PortfolioTransfer;
+import com.tools20022.repository.GeneratedRepository;
 import com.tools20022.repository.msg.ISAYearsOfIssue;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
@@ -106,7 +108,7 @@ public class PEPOrISAChoice {
 			componentContext_lazy = () -> PEPOrISAChoice.mmObject();
 			isDerived = false;
 			xmlTag = "ISA";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ISA";
 			definition = "UK government schemes to encourage individuals to invest in securities based unit and investment trusts, offering certain tax benefits. These are not investment in their own right but are tax exempt wrappers in which individuals can hold equities, bonds and funds to shelter them from income and capital gains tax. \nThe Personal Equity Plan (PEP) and the Individual Savings Account (ISA) are provided only by UK based financial institutions.";
 			maxOccurs = 1;
@@ -161,7 +163,7 @@ public class PEPOrISAChoice {
 			componentContext_lazy = () -> PEPOrISAChoice.mmObject();
 			isDerived = false;
 			xmlTag = "PEP";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PEP";
 			definition = "UK government schemes to encourage individuals to invest in securities based unit and investment trusts, offering certain tax benefits. These are not investment in their own right but are tax exempt wrappers in which individuals can hold equities, bonds and funds to shelter them from income and capital gains tax. \nThe Personal Equity Plan (PEP) and the Individual Savings Account (ISA) are provided only by UK based financial institutions.";
 			maxOccurs = 1;
@@ -174,10 +176,10 @@ public class PEPOrISAChoice {
 	final static public MMChoiceComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMChoiceComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.choice.PEPOrISAChoice.mmISA, com.tools20022.repository.choice.PEPOrISAChoice.mmPEP);
+				messageElement_lazy = () -> Arrays.asList(PEPOrISAChoice.mmISA, PEPOrISAChoice.mmPEP);
 				trace_lazy = () -> PortfolioTransfer.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 				name = "PEPOrISAChoice";
 				definition = "Indicates if the transfer relates to an PEP or ISA product";
 			}

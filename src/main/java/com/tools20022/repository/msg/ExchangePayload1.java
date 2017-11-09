@@ -19,6 +19,8 @@ package com.tools20022.repository.msg;
 
 import com.tools20022.metamodel.MMMessageAttribute;
 import com.tools20022.metamodel.MMMessageComponent;
+import com.tools20022.metamodel.MMRegistrationStatus;
+import com.tools20022.repository.GeneratedRepository;
 import com.tools20022.repository.other.LaxProcessing;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
@@ -87,7 +89,7 @@ public class ExchangePayload1 {
 			componentContext_lazy = () -> ExchangePayload1.mmObject();
 			isDerived = false;
 			xmlTag = "Any";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Any";
 			definition = "The respective ISO 20022 standard document.";
 			maxOccurs = 1;
@@ -99,9 +101,9 @@ public class ExchangePayload1 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.ExchangePayload1.mmAny);
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+				messageElement_lazy = () -> Arrays.asList(ExchangePayload1.mmAny);
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 				name = "ExchangePayload1";
 				definition = "This component includes the exchanged ISO20022 documents.";
 			}

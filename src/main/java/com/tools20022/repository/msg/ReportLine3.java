@@ -20,8 +20,12 @@ package com.tools20022.repository.msg;
 import com.tools20022.metamodel.MMMessageAssociationEnd;
 import com.tools20022.metamodel.MMMessageAttribute;
 import com.tools20022.metamodel.MMMessageComponent;
+import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.datatype.CurrencyAndAmount;
+import com.tools20022.repository.entity.LineItem;
+import com.tools20022.repository.entity.Price;
 import com.tools20022.repository.entity.PurchaseOrder;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.List;
@@ -115,14 +119,14 @@ public class ReportLine3 {
 	 */
 	public static final MMMessageAttribute mmPurchaseOrderReference = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.PurchaseOrder.mmIdentification;
+			businessElementTrace_lazy = () -> PurchaseOrder.mmIdentification;
 			componentContext_lazy = () -> ReportLine3.mmObject();
 			isDerived = false;
 			xmlTag = "PurchsOrdrRef";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PurchaseOrderReference";
 			definition = "Unique identification of the purchase order, assigned by the buyer.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.ReportLine5.mmPurchaseOrderReference);
+			nextVersions_lazy = () -> Arrays.asList(ReportLine5.mmPurchaseOrderReference);
 			maxOccurs = 1;
 			minOccurs = 1;
 			complexType_lazy = () -> com.tools20022.repository.msg.DocumentIdentification7.mmObject();
@@ -169,14 +173,14 @@ public class ReportLine3 {
 	 */
 	public static final MMMessageAssociationEnd mmAdjustment = new MMMessageAssociationEnd() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Price.mmPriceAdjustment;
+			businessElementTrace_lazy = () -> Price.mmPriceAdjustment;
 			componentContext_lazy = () -> ReportLine3.mmObject();
 			isDerived = false;
 			xmlTag = "Adjstmnt";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Adjustment";
 			definition = "Specifies the adjustments applied to obtain the net amount.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.ReportLine5.mmAdjustment);
+			nextVersions_lazy = () -> Arrays.asList(ReportLine5.mmAdjustment);
 			minOccurs = 0;
 			isComposite = true;
 			type_lazy = () -> com.tools20022.repository.msg.Adjustment4.mmObject();
@@ -224,14 +228,14 @@ public class ReportLine3 {
 	 */
 	public static final MMMessageAttribute mmNetAmount = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.LineItem.mmNetAmount;
+			businessElementTrace_lazy = () -> LineItem.mmNetAmount;
 			componentContext_lazy = () -> ReportLine3.mmObject();
 			isDerived = false;
 			xmlTag = "NetAmt";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "NetAmount";
 			definition = "Net amount, after adjustments, intended to be paid.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.ReportLine5.mmNetAmount);
+			nextVersions_lazy = () -> Arrays.asList(ReportLine5.mmNetAmount);
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> CurrencyAndAmount.mmObject();
@@ -241,10 +245,10 @@ public class ReportLine3 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.ReportLine3.mmPurchaseOrderReference, com.tools20022.repository.msg.ReportLine3.mmAdjustment, com.tools20022.repository.msg.ReportLine3.mmNetAmount);
+				messageElement_lazy = () -> Arrays.asList(ReportLine3.mmPurchaseOrderReference, ReportLine3.mmAdjustment, ReportLine3.mmNetAmount);
 				trace_lazy = () -> PurchaseOrder.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "ReportLine3";
 				definition = "Information about a payment against a purchase order.";
 				nextVersions_lazy = () -> Arrays.asList(ReportLine5.mmObject());

@@ -19,7 +19,9 @@ package com.tools20022.repository.codeset;
 
 import com.tools20022.metamodel.MMCode;
 import com.tools20022.metamodel.MMCodeSet;
+import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.codeset.TradingMethodCode;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -86,7 +88,7 @@ public class Trading1MethodCode extends TradingMethodCode {
 	 */
 	public static final MMCode mmElectronic = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Electronic";
 			owner_lazy = () -> Trading1MethodCode.mmObject();
 		}
@@ -109,7 +111,7 @@ public class Trading1MethodCode extends TradingMethodCode {
 	 */
 	public static final MMCode mmPhone = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Phone";
 			owner_lazy = () -> Trading1MethodCode.mmObject();
 		}
@@ -132,7 +134,7 @@ public class Trading1MethodCode extends TradingMethodCode {
 	 */
 	public static final MMCode mmBroker = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Broker";
 			owner_lazy = () -> Trading1MethodCode.mmObject();
 		}
@@ -141,12 +143,12 @@ public class Trading1MethodCode extends TradingMethodCode {
 	static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
 				example = Arrays.asList("ELEC");
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "Trading1MethodCode";
 				definition = "Specifies the method used for the negotiation and execution of the trade.";
-				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.Trading1MethodCode.mmElectronic, com.tools20022.repository.codeset.Trading1MethodCode.mmPhone, com.tools20022.repository.codeset.Trading1MethodCode.mmBroker);
+				code_lazy = () -> Arrays.asList(Trading1MethodCode.mmElectronic, Trading1MethodCode.mmPhone, Trading1MethodCode.mmBroker);
 				trace_lazy = () -> TradingMethodCode.mmObject();
 			}
 		});

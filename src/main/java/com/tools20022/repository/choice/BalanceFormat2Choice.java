@@ -19,7 +19,9 @@ package com.tools20022.repository.choice;
 
 import com.tools20022.metamodel.MMChoiceComponent;
 import com.tools20022.metamodel.MMMessageAssociationEnd;
+import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.entity.SecuritiesBalance;
+import com.tools20022.repository.GeneratedRepository;
 import com.tools20022.repository.msg.SignedQuantityFormat3;
 import com.tools20022.repository.msg.SignedQuantityFormat4;
 import java.util.Arrays;
@@ -106,7 +108,7 @@ public class BalanceFormat2Choice {
 			componentContext_lazy = () -> BalanceFormat2Choice.mmObject();
 			isDerived = false;
 			xmlTag = "Bal";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Balance";
 			definition = "Provides information about balance related to a corporate action.";
 			maxOccurs = 1;
@@ -154,7 +156,7 @@ public class BalanceFormat2Choice {
 			componentContext_lazy = () -> BalanceFormat2Choice.mmObject();
 			isDerived = false;
 			xmlTag = "ElgblBal";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "EligibleBalance";
 			definition = "Provide eligible balance information in different formats.";
 			maxOccurs = 1;
@@ -202,7 +204,7 @@ public class BalanceFormat2Choice {
 			componentContext_lazy = () -> BalanceFormat2Choice.mmObject();
 			isDerived = false;
 			xmlTag = "NotElgblBal";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "NotEligibleBalance";
 			definition = "Provide not eligible balance information in different formats.";
 			maxOccurs = 1;
@@ -215,11 +217,10 @@ public class BalanceFormat2Choice {
 	final static public MMChoiceComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMChoiceComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.choice.BalanceFormat2Choice.mmBalance, com.tools20022.repository.choice.BalanceFormat2Choice.mmEligibleBalance,
-						com.tools20022.repository.choice.BalanceFormat2Choice.mmNotEligibleBalance);
+				messageElement_lazy = () -> Arrays.asList(BalanceFormat2Choice.mmBalance, BalanceFormat2Choice.mmEligibleBalance, BalanceFormat2Choice.mmNotEligibleBalance);
 				trace_lazy = () -> SecuritiesBalance.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "BalanceFormat2Choice";
 				definition = "Choice between balance, eligible balance and not eligible balance formats.";
 			}

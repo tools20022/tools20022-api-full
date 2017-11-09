@@ -20,6 +20,7 @@ package com.tools20022.repository.msg;
 import com.tools20022.metamodel.MMMessageAssociationEnd;
 import com.tools20022.metamodel.MMMessageAttribute;
 import com.tools20022.metamodel.MMMessageComponent;
+import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.choice.CounterpartyIdentification3Choice;
 import com.tools20022.repository.choice.DateAndDateTimeChoice;
 import com.tools20022.repository.codeset.NovationStatus1Code;
@@ -29,7 +30,8 @@ import com.tools20022.repository.datatype.ActiveCurrencyAndAmount;
 import com.tools20022.repository.datatype.ISODate;
 import com.tools20022.repository.datatype.LEIIdentifier;
 import com.tools20022.repository.datatype.Max105Text;
-import com.tools20022.repository.entity.ForeignExchangeSwap;
+import com.tools20022.repository.entity.*;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.List;
@@ -165,14 +167,14 @@ public class ForeignExchangeSwapTransaction3 {
 	 */
 	public static final MMMessageAttribute mmReportedTransactionStatus = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.RegulatoryReport.mmType;
+			businessElementTrace_lazy = () -> RegulatoryReport.mmType;
 			componentContext_lazy = () -> ForeignExchangeSwapTransaction3.mmObject();
 			isDerived = false;
 			xmlTag = "RptdTxSts";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ReportedTransactionStatus";
 			definition = "Defines the status of the reported transaction, that is details on whether the transaction is a new transaction, an amendment of a previously reported transaction, a cancellation of a previously reported transaction or a correction to a previously reported and rejected transaction.";
-			previousVersion_lazy = () -> com.tools20022.repository.msg.ForeignExchangeSwapTransaction2.mmReportedTransactionStatus;
+			previousVersion_lazy = () -> ForeignExchangeSwapTransaction2.mmReportedTransactionStatus;
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> TransactionOperationType1Code.mmObject();
@@ -214,11 +216,11 @@ public class ForeignExchangeSwapTransaction3 {
 	 */
 	public static final MMMessageAttribute mmNovationStatus = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Novation.mmNovationStatus;
+			businessElementTrace_lazy = () -> Novation.mmNovationStatus;
 			componentContext_lazy = () -> ForeignExchangeSwapTransaction3.mmObject();
 			isDerived = false;
 			xmlTag = "NvtnSts";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "NovationStatus";
 			definition = "Provides the novation status for the transaction.";
 			maxOccurs = 1;
@@ -277,14 +279,14 @@ public class ForeignExchangeSwapTransaction3 {
 	 */
 	public static final MMMessageAttribute mmBranchIdentification = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.PartyIdentificationInformation.mmLEI;
+			businessElementTrace_lazy = () -> PartyIdentificationInformation.mmLEI;
 			componentContext_lazy = () -> ForeignExchangeSwapTransaction3.mmObject();
 			isDerived = false;
 			xmlTag = "BrnchId";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "BranchIdentification";
 			definition = "Unique and unambiguous legal entity identification of  the branch of the reporting agent in which the transaction has been booked.\r\n\r\nUsage: This field must only be provided if the transaction has been conducted and booked by a branch of the reporting agent and only if this branch has its own LEI that the reporting agent can clearly identify. \r\nWhere the transaction has been booked by the head office or the reporting agent cannot be identified by a unique branch-specific LEI, the reporting agent must provide the LEI of the head office.";
-			previousVersion_lazy = () -> com.tools20022.repository.msg.ForeignExchangeSwapTransaction2.mmBranchIdentification;
+			previousVersion_lazy = () -> ForeignExchangeSwapTransaction2.mmBranchIdentification;
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> LEIIdentifier.mmObject();
@@ -335,14 +337,14 @@ public class ForeignExchangeSwapTransaction3 {
 	 */
 	public static final MMMessageAttribute mmUniqueTransactionIdentifier = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.TradeIdentification.mmUniqueTradeIdentifier;
+			businessElementTrace_lazy = () -> TradeIdentification.mmUniqueTradeIdentifier;
 			componentContext_lazy = () -> ForeignExchangeSwapTransaction3.mmObject();
 			isDerived = false;
 			xmlTag = "UnqTxIdr";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "UniqueTransactionIdentifier";
 			definition = "Unique transaction identifier will be created at the time a transaction is first executed, shared with all registered entities and counterparties involved in the transaction, and used to track that particular transaction during its lifetime.";
-			previousVersion_lazy = () -> com.tools20022.repository.msg.ForeignExchangeSwapTransaction2.mmUniqueTransactionIdentifier;
+			previousVersion_lazy = () -> ForeignExchangeSwapTransaction2.mmUniqueTransactionIdentifier;
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> Max105Text.mmObject();
@@ -391,14 +393,14 @@ public class ForeignExchangeSwapTransaction3 {
 	 */
 	public static final MMMessageAttribute mmProprietaryTransactionIdentification = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.TradeIdentification.mmIdentification;
+			businessElementTrace_lazy = () -> TradeIdentification.mmIdentification;
 			componentContext_lazy = () -> ForeignExchangeSwapTransaction3.mmObject();
 			isDerived = false;
 			xmlTag = "PrtryTxId";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ProprietaryTransactionIdentification";
 			definition = "Internal unique transaction identifier used by the reporting agent for each transaction. ";
-			previousVersion_lazy = () -> com.tools20022.repository.msg.ForeignExchangeSwapTransaction2.mmProprietaryTransactionIdentification;
+			previousVersion_lazy = () -> ForeignExchangeSwapTransaction2.mmProprietaryTransactionIdentification;
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> Max105Text.mmObject();
@@ -443,11 +445,11 @@ public class ForeignExchangeSwapTransaction3 {
 	 */
 	public static final MMMessageAttribute mmRelatedProprietaryTransactionIdentification = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.TradeIdentification.mmIdentification;
+			businessElementTrace_lazy = () -> TradeIdentification.mmIdentification;
 			componentContext_lazy = () -> ForeignExchangeSwapTransaction3.mmObject();
 			isDerived = false;
 			xmlTag = "RltdPrtryTxId";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "RelatedProprietaryTransactionIdentification";
 			definition = "Original proprietary transaction identifier used by the reporting agent to indicate the proprietary transaction identification of the transaction which is novated.";
 			maxOccurs = 1;
@@ -499,14 +501,14 @@ public class ForeignExchangeSwapTransaction3 {
 	 */
 	public static final MMMessageAttribute mmCounterpartyProprietaryTransactionIdentification = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.TradeIdentification.mmCounterpartyReference;
+			businessElementTrace_lazy = () -> TradeIdentification.mmCounterpartyReference;
 			componentContext_lazy = () -> ForeignExchangeSwapTransaction3.mmObject();
 			isDerived = false;
 			xmlTag = "CtrPtyPrtryTxId";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CounterpartyProprietaryTransactionIdentification";
 			definition = "Internal unique proprietary transaction identifier as assigned by the counterparty of the reporting agent for each transaction.";
-			previousVersion_lazy = () -> com.tools20022.repository.msg.ForeignExchangeSwapTransaction2.mmCounterpartyProprietaryTransactionIdentification;
+			previousVersion_lazy = () -> ForeignExchangeSwapTransaction2.mmCounterpartyProprietaryTransactionIdentification;
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> Max105Text.mmObject();
@@ -555,14 +557,14 @@ public class ForeignExchangeSwapTransaction3 {
 	 */
 	public static final MMMessageAssociationEnd mmCounterpartyIdentification = new MMMessageAssociationEnd() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.TradePartyRole.mmBuyerOrSeller;
+			businessElementTrace_lazy = () -> TradePartyRole.mmBuyerOrSeller;
 			componentContext_lazy = () -> ForeignExchangeSwapTransaction3.mmObject();
 			isDerived = false;
 			xmlTag = "CtrPtyId";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CounterpartyIdentification";
 			definition = "Identification of the counterparty of the reporting agent for the reported transaction. ";
-			previousVersion_lazy = () -> com.tools20022.repository.msg.ForeignExchangeSwapTransaction2.mmCounterpartyIdentification;
+			previousVersion_lazy = () -> ForeignExchangeSwapTransaction2.mmCounterpartyIdentification;
 			maxOccurs = 1;
 			minOccurs = 1;
 			isComposite = true;
@@ -620,14 +622,14 @@ public class ForeignExchangeSwapTransaction3 {
 	 */
 	public static final MMMessageAssociationEnd mmTradeDate = new MMMessageAssociationEnd() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Trade.mmTradeDateTime;
+			businessElementTrace_lazy = () -> Trade.mmTradeDateTime;
 			componentContext_lazy = () -> ForeignExchangeSwapTransaction3.mmObject();
 			isDerived = false;
 			xmlTag = "TradDt";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "TradeDate";
 			definition = "Date and time on which the parties entered into the reported transaction.\r\n\r\nUsage: when time is available, it must be reported.\r\n\r\nIt is to be reported with only the date when the time of the transaction is not available. \r\n\r\nThe reported time is the execution time when available or otherwise the time at which the transaction entered the trading system of the reporting agent. ";
-			previousVersion_lazy = () -> com.tools20022.repository.msg.ForeignExchangeSwapTransaction2.mmTradeDate;
+			previousVersion_lazy = () -> ForeignExchangeSwapTransaction2.mmTradeDate;
 			maxOccurs = 1;
 			minOccurs = 1;
 			isComposite = true;
@@ -679,14 +681,14 @@ public class ForeignExchangeSwapTransaction3 {
 	 */
 	public static final MMMessageAttribute mmSpotValueDate = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Trade.mmValueDate;
+			businessElementTrace_lazy = () -> Trade.mmValueDate;
 			componentContext_lazy = () -> ForeignExchangeSwapTransaction3.mmObject();
 			isDerived = false;
 			xmlTag = "SpotValDt";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SpotValueDate";
 			definition = "Date on which one party sells to the other a specified amount of a specified currency against payment of an agreed amount of a specified different currency based on an agreed foreign exchange rate known as foreign exchange spot rate.";
-			previousVersion_lazy = () -> com.tools20022.repository.msg.ForeignExchangeSwapTransaction2.mmSpotValueDate;
+			previousVersion_lazy = () -> ForeignExchangeSwapTransaction2.mmSpotValueDate;
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> ISODate.mmObject();
@@ -735,14 +737,14 @@ public class ForeignExchangeSwapTransaction3 {
 	 */
 	public static final MMMessageAttribute mmMaturityDate = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Asset.mmMaturityDate;
+			businessElementTrace_lazy = () -> Asset.mmMaturityDate;
 			componentContext_lazy = () -> ForeignExchangeSwapTransaction3.mmObject();
 			isDerived = false;
 			xmlTag = "MtrtyDt";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "MaturityDate";
 			definition = "Date on which the foreign exchange swap transaction expires and the currency sold on the value date is repurchased.";
-			previousVersion_lazy = () -> com.tools20022.repository.msg.ForeignExchangeSwapTransaction2.mmMaturityDate;
+			previousVersion_lazy = () -> ForeignExchangeSwapTransaction2.mmMaturityDate;
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> ISODate.mmObject();
@@ -792,14 +794,14 @@ public class ForeignExchangeSwapTransaction3 {
 	 */
 	public static final MMMessageAttribute mmTransactionType = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.SecuritiesTrade.mmSecuritiesTransactionType;
+			businessElementTrace_lazy = () -> SecuritiesTrade.mmSecuritiesTransactionType;
 			componentContext_lazy = () -> ForeignExchangeSwapTransaction3.mmObject();
 			isDerived = false;
 			xmlTag = "TxTp";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "TransactionType";
 			definition = "Defines whether the amount of money reported under the transaction nominal amount is bought or sold on the spot value date.";
-			previousVersion_lazy = () -> com.tools20022.repository.msg.ForeignExchangeSwapTransaction2.mmTransactionType;
+			previousVersion_lazy = () -> ForeignExchangeSwapTransaction2.mmTransactionType;
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> SecuritiesTransactionType15Code.mmObject();
@@ -850,14 +852,14 @@ public class ForeignExchangeSwapTransaction3 {
 	 */
 	public static final MMMessageAttribute mmTransactionNominalAmount = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.CurrencyExchange.mmOriginalAmount;
+			businessElementTrace_lazy = () -> CurrencyExchange.mmOriginalAmount;
 			componentContext_lazy = () -> ForeignExchangeSwapTransaction3.mmObject();
 			isDerived = false;
 			xmlTag = "TxNmnlAmt";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "TransactionNominalAmount";
 			definition = "Specifies the nominal amount of the foreign exchange swap, that is the amount bought/sold on the spot value date and reported as an absolute value.";
-			previousVersion_lazy = () -> com.tools20022.repository.msg.ForeignExchangeSwapTransaction2.mmTransactionNominalAmount;
+			previousVersion_lazy = () -> ForeignExchangeSwapTransaction2.mmTransactionNominalAmount;
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> ActiveCurrencyAndAmount.mmObject();
@@ -903,14 +905,14 @@ public class ForeignExchangeSwapTransaction3 {
 	 */
 	public static final MMMessageAssociationEnd mmForeignExchange = new MMMessageAssociationEnd() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.ForeignExchangeTrade.mmAgreedRate;
+			businessElementTrace_lazy = () -> ForeignExchangeTrade.mmAgreedRate;
 			componentContext_lazy = () -> ForeignExchangeSwapTransaction3.mmObject();
 			isDerived = false;
 			xmlTag = "FX";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ForeignExchange";
 			definition = "Provides the details of the foreign exchange transaction.";
-			previousVersion_lazy = () -> com.tools20022.repository.msg.ForeignExchangeSwapTransaction2.mmForeignExchange;
+			previousVersion_lazy = () -> ForeignExchangeSwapTransaction2.mmForeignExchange;
 			maxOccurs = 1;
 			minOccurs = 1;
 			isComposite = true;
@@ -957,10 +959,10 @@ public class ForeignExchangeSwapTransaction3 {
 			componentContext_lazy = () -> ForeignExchangeSwapTransaction3.mmObject();
 			isDerived = false;
 			xmlTag = "SplmtryData";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SupplementaryData";
 			definition = "Additional information that can not be captured in the structured fields and/or any other specific block.";
-			previousVersion_lazy = () -> com.tools20022.repository.msg.ForeignExchangeSwapTransaction2.mmSupplementaryData;
+			previousVersion_lazy = () -> ForeignExchangeSwapTransaction2.mmSupplementaryData;
 			minOccurs = 0;
 			isComposite = true;
 			type_lazy = () -> com.tools20022.repository.msg.SupplementaryData1.mmObject();
@@ -970,17 +972,14 @@ public class ForeignExchangeSwapTransaction3 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.ForeignExchangeSwapTransaction3.mmReportedTransactionStatus, com.tools20022.repository.msg.ForeignExchangeSwapTransaction3.mmNovationStatus,
-						com.tools20022.repository.msg.ForeignExchangeSwapTransaction3.mmBranchIdentification, com.tools20022.repository.msg.ForeignExchangeSwapTransaction3.mmUniqueTransactionIdentifier,
-						com.tools20022.repository.msg.ForeignExchangeSwapTransaction3.mmProprietaryTransactionIdentification, com.tools20022.repository.msg.ForeignExchangeSwapTransaction3.mmRelatedProprietaryTransactionIdentification,
-						com.tools20022.repository.msg.ForeignExchangeSwapTransaction3.mmCounterpartyProprietaryTransactionIdentification, com.tools20022.repository.msg.ForeignExchangeSwapTransaction3.mmCounterpartyIdentification,
-						com.tools20022.repository.msg.ForeignExchangeSwapTransaction3.mmTradeDate, com.tools20022.repository.msg.ForeignExchangeSwapTransaction3.mmSpotValueDate,
-						com.tools20022.repository.msg.ForeignExchangeSwapTransaction3.mmMaturityDate, com.tools20022.repository.msg.ForeignExchangeSwapTransaction3.mmTransactionType,
-						com.tools20022.repository.msg.ForeignExchangeSwapTransaction3.mmTransactionNominalAmount, com.tools20022.repository.msg.ForeignExchangeSwapTransaction3.mmForeignExchange,
-						com.tools20022.repository.msg.ForeignExchangeSwapTransaction3.mmSupplementaryData);
+				messageElement_lazy = () -> Arrays.asList(ForeignExchangeSwapTransaction3.mmReportedTransactionStatus, ForeignExchangeSwapTransaction3.mmNovationStatus, ForeignExchangeSwapTransaction3.mmBranchIdentification,
+						ForeignExchangeSwapTransaction3.mmUniqueTransactionIdentifier, ForeignExchangeSwapTransaction3.mmProprietaryTransactionIdentification, ForeignExchangeSwapTransaction3.mmRelatedProprietaryTransactionIdentification,
+						ForeignExchangeSwapTransaction3.mmCounterpartyProprietaryTransactionIdentification, ForeignExchangeSwapTransaction3.mmCounterpartyIdentification, ForeignExchangeSwapTransaction3.mmTradeDate,
+						ForeignExchangeSwapTransaction3.mmSpotValueDate, ForeignExchangeSwapTransaction3.mmMaturityDate, ForeignExchangeSwapTransaction3.mmTransactionType, ForeignExchangeSwapTransaction3.mmTransactionNominalAmount,
+						ForeignExchangeSwapTransaction3.mmForeignExchange, ForeignExchangeSwapTransaction3.mmSupplementaryData);
 				trace_lazy = () -> ForeignExchangeSwap.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "ForeignExchangeSwapTransaction3";
 				definition = "Provides the details of each individual foreign exchange swap transaction.";
 				previousVersion_lazy = () -> ForeignExchangeSwapTransaction2.mmObject();

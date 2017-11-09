@@ -19,6 +19,8 @@ package com.tools20022.repository.choice;
 
 import com.tools20022.metamodel.MMChoiceComponent;
 import com.tools20022.metamodel.MMMessageAssociationEnd;
+import com.tools20022.metamodel.MMRegistrationStatus;
+import com.tools20022.repository.GeneratedRepository;
 import com.tools20022.repository.msg.ErrorHandling3;
 import com.tools20022.repository.msg.PartyAuditTrailReport1;
 import java.util.Arrays;
@@ -93,7 +95,7 @@ public class PartyAuditTrailOrOperationalError1Choice {
 			componentContext_lazy = () -> PartyAuditTrailOrOperationalError1Choice.mmObject();
 			isDerived = false;
 			xmlTag = "PtyAudtTrlRpt";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PartyAuditTrailReport";
 			definition = "Report information about party reference data.";
 			minOccurs = 1;
@@ -133,7 +135,7 @@ public class PartyAuditTrailOrOperationalError1Choice {
 			componentContext_lazy = () -> PartyAuditTrailOrOperationalError1Choice.mmObject();
 			isDerived = false;
 			xmlTag = "OprlErr";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "OperationalError";
 			definition = "Operational error resulting from a rejection.";
 			minOccurs = 1;
@@ -145,10 +147,9 @@ public class PartyAuditTrailOrOperationalError1Choice {
 	final static public MMChoiceComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMChoiceComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.choice.PartyAuditTrailOrOperationalError1Choice.mmPartyAuditTrailReport,
-						com.tools20022.repository.choice.PartyAuditTrailOrOperationalError1Choice.mmOperationalError);
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+				messageElement_lazy = () -> Arrays.asList(PartyAuditTrailOrOperationalError1Choice.mmPartyAuditTrailReport, PartyAuditTrailOrOperationalError1Choice.mmOperationalError);
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 				name = "PartyAuditTrailOrOperationalError1Choice";
 				definition = "Used to report between the party reference data or an operational error.";
 			}

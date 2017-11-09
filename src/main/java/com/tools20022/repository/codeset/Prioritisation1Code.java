@@ -19,7 +19,9 @@ package com.tools20022.repository.codeset;
 
 import com.tools20022.metamodel.MMCode;
 import com.tools20022.metamodel.MMCodeSet;
+import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.codeset.PrioritisationCode;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -86,7 +88,7 @@ public class Prioritisation1Code extends PrioritisationCode {
 	 */
 	public static final MMCode mmNone = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "None";
 			owner_lazy = () -> Prioritisation1Code.mmObject();
 		}
@@ -109,7 +111,7 @@ public class Prioritisation1Code extends PrioritisationCode {
 	 */
 	public static final MMCode mmBuySide = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "BuySide";
 			owner_lazy = () -> Prioritisation1Code.mmObject();
 		}
@@ -132,7 +134,7 @@ public class Prioritisation1Code extends PrioritisationCode {
 	 */
 	public static final MMCode mmSellSide = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SellSide";
 			owner_lazy = () -> Prioritisation1Code.mmObject();
 		}
@@ -141,13 +143,12 @@ public class Prioritisation1Code extends PrioritisationCode {
 	static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
 				example = Arrays.asList("NONE");
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "Prioritisation1Code";
 				definition = "Indicates if one side or the other of a cross order should be prioritized.";
-				code_lazy = () -> Arrays
-						.asList(com.tools20022.repository.codeset.Prioritisation1Code.mmNone, com.tools20022.repository.codeset.Prioritisation1Code.mmBuySide, com.tools20022.repository.codeset.Prioritisation1Code.mmSellSide);
+				code_lazy = () -> Arrays.asList(Prioritisation1Code.mmNone, Prioritisation1Code.mmBuySide, Prioritisation1Code.mmSellSide);
 				trace_lazy = () -> PrioritisationCode.mmObject();
 			}
 		});

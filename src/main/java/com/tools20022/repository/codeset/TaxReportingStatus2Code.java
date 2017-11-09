@@ -19,7 +19,9 @@ package com.tools20022.repository.codeset;
 
 import com.tools20022.metamodel.MMCode;
 import com.tools20022.metamodel.MMCodeSet;
+import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.codeset.StatisticalReportingStatusCode;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -89,9 +91,9 @@ public class TaxReportingStatus2Code extends StatisticalReportingStatusCode {
 	 */
 	public static final MMCode mmAccepted = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Accepted";
-			previousVersion_lazy = () -> com.tools20022.repository.codeset.StatisticalReportingStatus2Code.mmAccepted;
+			previousVersion_lazy = () -> StatisticalReportingStatus2Code.mmAccepted;
 			owner_lazy = () -> TaxReportingStatus2Code.mmObject();
 		}
 	};
@@ -118,9 +120,9 @@ public class TaxReportingStatus2Code extends StatisticalReportingStatusCode {
 	 */
 	public static final MMCode mmRejected = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Rejected";
-			previousVersion_lazy = () -> com.tools20022.repository.codeset.StatisticalReportingStatus2Code.mmRejected;
+			previousVersion_lazy = () -> StatisticalReportingStatus2Code.mmRejected;
 			owner_lazy = () -> TaxReportingStatus2Code.mmObject();
 		}
 	};
@@ -147,9 +149,9 @@ public class TaxReportingStatus2Code extends StatisticalReportingStatusCode {
 	 */
 	public static final MMCode mmWarning = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Warning";
-			previousVersion_lazy = () -> com.tools20022.repository.codeset.StatisticalReportingStatus2Code.mmWarning;
+			previousVersion_lazy = () -> StatisticalReportingStatus2Code.mmWarning;
 			owner_lazy = () -> TaxReportingStatus2Code.mmObject();
 		}
 	};
@@ -157,13 +159,12 @@ public class TaxReportingStatus2Code extends StatisticalReportingStatusCode {
 	static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "TaxReportingStatus2Code";
 				definition = "Specifies the status of a single tax reporting transaction.";
 				previousVersion_lazy = () -> StatisticalReportingStatus2Code.mmObject();
-				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.TaxReportingStatus2Code.mmAccepted, com.tools20022.repository.codeset.TaxReportingStatus2Code.mmRejected,
-						com.tools20022.repository.codeset.TaxReportingStatus2Code.mmWarning);
+				code_lazy = () -> Arrays.asList(TaxReportingStatus2Code.mmAccepted, TaxReportingStatus2Code.mmRejected, TaxReportingStatus2Code.mmWarning);
 				trace_lazy = () -> StatisticalReportingStatusCode.mmObject();
 			}
 		});

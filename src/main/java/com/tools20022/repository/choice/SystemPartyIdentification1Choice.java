@@ -20,7 +20,10 @@ package com.tools20022.repository.choice;
 import com.tools20022.metamodel.MMChoiceComponent;
 import com.tools20022.metamodel.MMMessageAssociationEnd;
 import com.tools20022.metamodel.MMMessageAttribute;
+import com.tools20022.metamodel.MMRegistrationStatus;
+import com.tools20022.repository.entity.Party;
 import com.tools20022.repository.entity.SystemPartyRole;
+import com.tools20022.repository.GeneratedRepository;
 import com.tools20022.repository.msg.SystemPartyIdentification3;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
@@ -102,11 +105,11 @@ public class SystemPartyIdentification1Choice {
 	 */
 	public static final MMMessageAttribute mmOrganisationIdentification = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Party.mmIdentification;
+			businessElementTrace_lazy = () -> Party.mmIdentification;
 			componentContext_lazy = () -> SystemPartyIdentification1Choice.mmObject();
 			isDerived = false;
 			xmlTag = "OrgId";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "OrganisationIdentification";
 			definition = "Provides the identification of a party.";
 			maxOccurs = 1;
@@ -156,7 +159,7 @@ public class SystemPartyIdentification1Choice {
 			componentContext_lazy = () -> SystemPartyIdentification1Choice.mmObject();
 			isDerived = false;
 			xmlTag = "CmbndId";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CombinedIdentification";
 			definition = "Identifies the party with the combined identification of both the responsible entity and the party itself.";
 			maxOccurs = 1;
@@ -169,11 +172,10 @@ public class SystemPartyIdentification1Choice {
 	final static public MMChoiceComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMChoiceComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.choice.SystemPartyIdentification1Choice.mmOrganisationIdentification,
-						com.tools20022.repository.choice.SystemPartyIdentification1Choice.mmCombinedIdentification);
+				messageElement_lazy = () -> Arrays.asList(SystemPartyIdentification1Choice.mmOrganisationIdentification, SystemPartyIdentification1Choice.mmCombinedIdentification);
 				trace_lazy = () -> SystemPartyRole.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 				name = "SystemPartyIdentification1Choice";
 				definition = "Choice between an identification of a party or a combination of the responsible party identification and the business identifier.";
 			}

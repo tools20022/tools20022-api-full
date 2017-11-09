@@ -17,12 +17,11 @@
 
 package com.tools20022.repository.entity;
 
-import com.tools20022.metamodel.MMBusinessAssociationEnd;
-import com.tools20022.metamodel.MMBusinessAttribute;
-import com.tools20022.metamodel.MMBusinessComponent;
+import com.tools20022.metamodel.*;
 import com.tools20022.repository.datatype.CurrencyAndAmount;
 import com.tools20022.repository.datatype.ISODateTime;
 import com.tools20022.repository.datatype.Max35Text;
+import com.tools20022.repository.GeneratedRepository;
 import com.tools20022.repository.msg.*;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
@@ -38,6 +37,85 @@ import java.util.List;
  * <p>
  * <strong>Constant fields:</strong>
  * <ul>
+ * <li>
+ * {@linkplain com.tools20022.metamodel.MMBusinessComponent#getDerivationComponent
+ * derivationComponent} =
+ * <ul>
+ * <li>{@linkplain com.tools20022.repository.msg.LineItemMonetarySummation1
+ * LineItemMonetarySummation1}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.LineItemDetails4
+ * LineItemDetails4}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.LineItemDetails7
+ * LineItemDetails7}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.LineItemDetails5
+ * LineItemDetails5}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.LineItemDetails8
+ * LineItemDetails8}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.LineItemDetails6
+ * LineItemDetails6}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.LineItemDetails9
+ * LineItemDetails9}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.LineItemAndPOIdentification1
+ * LineItemAndPOIdentification1}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.LineItemDetails10
+ * LineItemDetails10}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.LineItemDetails11
+ * LineItemDetails11}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.LineItemDetails13
+ * LineItemDetails13}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.LineItemDetails12
+ * LineItemDetails12}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.LineItemDetails14
+ * LineItemDetails14}</li>
+ * </ul>
+ * </li>
+ * <li>
+ * {@linkplain com.tools20022.metamodel.MMBusinessComponent#getAssociationDomain
+ * associationDomain} =
+ * <ul>
+ * <li>{@linkplain com.tools20022.repository.entity.Product#mmLineItem
+ * Product.mmLineItem}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.entity.Adjustment#mmRelatedLineItem
+ * Adjustment.mmRelatedLineItem}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.entity.Charges#mmLogisticsChargeLineItem
+ * Charges.mmLogisticsChargeLineItem}</li>
+ * <li>{@linkplain com.tools20022.repository.entity.Charges#mmLineItem
+ * Charges.mmLineItem}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.entity.Charges#mmNetPriceChargeLineItem
+ * Charges.mmNetPriceChargeLineItem}</li>
+ * <li>{@linkplain com.tools20022.repository.entity.Invoice#mmLineItem
+ * Invoice.mmLineItem}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.entity.ProductQuantity#mmNetWeightRelatedLineItem
+ * ProductQuantity.mmNetWeightRelatedLineItem}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.entity.ProductQuantity#mmBilledQuantityRelatedLineItem
+ * ProductQuantity.mmBilledQuantityRelatedLineItem}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.entity.ProductQuantity#mmChargeFreeQuantityRelatedLineItem
+ * ProductQuantity.mmChargeFreeQuantityRelatedLineItem}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.entity.ProductQuantity#mmMeasureQuantityStart
+ * ProductQuantity.mmMeasureQuantityStart}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.entity.ProductQuantity#mmMeasureQuantityEnd
+ * ProductQuantity.mmMeasureQuantityEnd}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.entity.ProductQuantity#mmGrossPriceQuantityRelatedLineItem
+ * ProductQuantity.mmGrossPriceQuantityRelatedLineItem}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.entity.ProductQuantity#mmNetPriceQuantityRelatedLineItem
+ * ProductQuantity.mmNetPriceQuantityRelatedLineItem}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.entity.ProductQuantity#mmGrossWeightRelatedLineItem
+ * ProductQuantity.mmGrossWeightRelatedLineItem}</li>
+ * <li>{@linkplain com.tools20022.repository.entity.Packaging#mmRelatedLineItem
+ * Packaging.mmRelatedLineItem}</li>
+ * </ul>
+ * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMBusinessComponent#getElement
  * element} =
  * <ul>
@@ -90,85 +168,6 @@ import java.util.List;
  * LineItem.mmNetPriceQuantity}</li>
  * <li>{@linkplain com.tools20022.repository.entity.LineItem#mmGrossWeight
  * LineItem.mmGrossWeight}</li>
- * </ul>
- * </li>
- * <li>
- * {@linkplain com.tools20022.metamodel.MMBusinessComponent#getAssociationDomain
- * associationDomain} =
- * <ul>
- * <li>{@linkplain com.tools20022.repository.entity.Product#mmLineItem
- * Product.mmLineItem}</li>
- * <li>
- * {@linkplain com.tools20022.repository.entity.Adjustment#mmRelatedLineItem
- * Adjustment.mmRelatedLineItem}</li>
- * <li>
- * {@linkplain com.tools20022.repository.entity.Charges#mmLogisticsChargeLineItem
- * Charges.mmLogisticsChargeLineItem}</li>
- * <li>{@linkplain com.tools20022.repository.entity.Charges#mmLineItem
- * Charges.mmLineItem}</li>
- * <li>
- * {@linkplain com.tools20022.repository.entity.Charges#mmNetPriceChargeLineItem
- * Charges.mmNetPriceChargeLineItem}</li>
- * <li>{@linkplain com.tools20022.repository.entity.Invoice#mmLineItem
- * Invoice.mmLineItem}</li>
- * <li>
- * {@linkplain com.tools20022.repository.entity.ProductQuantity#mmNetWeightRelatedLineItem
- * ProductQuantity.mmNetWeightRelatedLineItem}</li>
- * <li>
- * {@linkplain com.tools20022.repository.entity.ProductQuantity#mmBilledQuantityRelatedLineItem
- * ProductQuantity.mmBilledQuantityRelatedLineItem}</li>
- * <li>
- * {@linkplain com.tools20022.repository.entity.ProductQuantity#mmChargeFreeQuantityRelatedLineItem
- * ProductQuantity.mmChargeFreeQuantityRelatedLineItem}</li>
- * <li>
- * {@linkplain com.tools20022.repository.entity.ProductQuantity#mmMeasureQuantityStart
- * ProductQuantity.mmMeasureQuantityStart}</li>
- * <li>
- * {@linkplain com.tools20022.repository.entity.ProductQuantity#mmMeasureQuantityEnd
- * ProductQuantity.mmMeasureQuantityEnd}</li>
- * <li>
- * {@linkplain com.tools20022.repository.entity.ProductQuantity#mmGrossPriceQuantityRelatedLineItem
- * ProductQuantity.mmGrossPriceQuantityRelatedLineItem}</li>
- * <li>
- * {@linkplain com.tools20022.repository.entity.ProductQuantity#mmNetPriceQuantityRelatedLineItem
- * ProductQuantity.mmNetPriceQuantityRelatedLineItem}</li>
- * <li>
- * {@linkplain com.tools20022.repository.entity.ProductQuantity#mmGrossWeightRelatedLineItem
- * ProductQuantity.mmGrossWeightRelatedLineItem}</li>
- * <li>{@linkplain com.tools20022.repository.entity.Packaging#mmRelatedLineItem
- * Packaging.mmRelatedLineItem}</li>
- * </ul>
- * </li>
- * <li>
- * {@linkplain com.tools20022.metamodel.MMBusinessComponent#getDerivationComponent
- * derivationComponent} =
- * <ul>
- * <li>{@linkplain com.tools20022.repository.msg.LineItemMonetarySummation1
- * LineItemMonetarySummation1}</li>
- * <li>{@linkplain com.tools20022.repository.msg.LineItemDetails4
- * LineItemDetails4}</li>
- * <li>{@linkplain com.tools20022.repository.msg.LineItemDetails7
- * LineItemDetails7}</li>
- * <li>{@linkplain com.tools20022.repository.msg.LineItemDetails5
- * LineItemDetails5}</li>
- * <li>{@linkplain com.tools20022.repository.msg.LineItemDetails8
- * LineItemDetails8}</li>
- * <li>{@linkplain com.tools20022.repository.msg.LineItemDetails6
- * LineItemDetails6}</li>
- * <li>{@linkplain com.tools20022.repository.msg.LineItemDetails9
- * LineItemDetails9}</li>
- * <li>{@linkplain com.tools20022.repository.msg.LineItemAndPOIdentification1
- * LineItemAndPOIdentification1}</li>
- * <li>{@linkplain com.tools20022.repository.msg.LineItemDetails10
- * LineItemDetails10}</li>
- * <li>{@linkplain com.tools20022.repository.msg.LineItemDetails11
- * LineItemDetails11}</li>
- * <li>{@linkplain com.tools20022.repository.msg.LineItemDetails13
- * LineItemDetails13}</li>
- * <li>{@linkplain com.tools20022.repository.msg.LineItemDetails12
- * LineItemDetails12}</li>
- * <li>{@linkplain com.tools20022.repository.msg.LineItemDetails14
- * LineItemDetails14}</li>
  * </ul>
  * </li>
  * <li>
@@ -255,18 +254,17 @@ public class LineItem {
 	 */
 	public static final MMBusinessAssociationEnd mmFinancialAdjustment = new MMBusinessAssociationEnd() {
 		{
-			derivation_lazy = () -> Arrays.asList(com.tools20022.repository.msg.InvoiceTotals1.mmAdjustment, com.tools20022.repository.msg.TradeSettlement1.mmAdjustmentAmountAndReason,
-					com.tools20022.repository.msg.LineItem10.mmAllowanceCharge, com.tools20022.repository.msg.LineItem10.mmFinancialAdjustment, com.tools20022.repository.msg.InvoiceTotals2.mmAdjustment,
-					com.tools20022.repository.msg.LineItem16.mmAllowanceCharge, com.tools20022.repository.msg.LineItem16.mmFinancialAdjustment);
+			derivation_lazy = () -> Arrays.asList(InvoiceTotals1.mmAdjustment, TradeSettlement1.mmAdjustmentAmountAndReason, LineItem10.mmAllowanceCharge, LineItem10.mmFinancialAdjustment, InvoiceTotals2.mmAdjustment,
+					LineItem16.mmAllowanceCharge, LineItem16.mmFinancialAdjustment);
 			elementContext_lazy = () -> LineItem.mmObject();
 			isDerived = false;
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "FinancialAdjustment";
 			definition = "Modification on the value of goods and / or services taking into account discounts, allowances and charges.";
 			maxOccurs = 1;
 			minOccurs = 1;
 			opposite_lazy = () -> com.tools20022.repository.entity.Adjustment.mmRelatedLineItem;
-			aggregation = com.tools20022.metamodel.MMAggregation.NONE;
+			aggregation = MMAggregation.NONE;
 			type_lazy = () -> com.tools20022.repository.entity.Adjustment.mmObject();
 		}
 	};
@@ -318,15 +316,15 @@ public class LineItem {
 	 */
 	public static final MMBusinessAssociationEnd mmLogisticsCharge = new MMBusinessAssociationEnd() {
 		{
-			derivation_lazy = () -> Arrays.asList(com.tools20022.repository.msg.TradeSettlement1.mmLogisticsCharge, com.tools20022.repository.msg.LineItem10.mmLogisticsCharge, com.tools20022.repository.msg.LineItem16.mmLogisticsCharge);
+			derivation_lazy = () -> Arrays.asList(TradeSettlement1.mmLogisticsCharge, LineItem10.mmLogisticsCharge, LineItem16.mmLogisticsCharge);
 			elementContext_lazy = () -> LineItem.mmObject();
 			isDerived = false;
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "LogisticsCharge";
 			definition = "Logistics service charge for this line item.";
 			minOccurs = 0;
 			opposite_lazy = () -> com.tools20022.repository.entity.Charges.mmLogisticsChargeLineItem;
-			aggregation = com.tools20022.metamodel.MMAggregation.NONE;
+			aggregation = MMAggregation.NONE;
 			type_lazy = () -> com.tools20022.repository.entity.Charges.mmObject();
 		}
 	};
@@ -369,10 +367,10 @@ public class LineItem {
 	 */
 	public static final MMBusinessAttribute mmGrossAmount = new MMBusinessAttribute() {
 		{
-			derivation_lazy = () -> Arrays.asList(com.tools20022.repository.msg.SettlementMonetarySummation1.mmLineTotalAmount);
+			derivation_lazy = () -> Arrays.asList(SettlementMonetarySummation1.mmLineTotalAmount);
 			elementContext_lazy = () -> LineItem.mmObject();
 			isDerived = false;
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "GrossAmount";
 			definition = "Monetary value of the line amount total being reported for this settlement.";
 			maxOccurs = 1;
@@ -457,16 +455,13 @@ public class LineItem {
 	 */
 	public static final MMBusinessAttribute mmIdentification = new MMBusinessAttribute() {
 		{
-			derivation_lazy = () -> Arrays.asList(com.tools20022.repository.msg.LineItem10.mmIdentification, com.tools20022.repository.msg.LineItemDetails4.mmLineItemIdentification,
-					com.tools20022.repository.msg.LineItemDetails7.mmLineItemIdentification, com.tools20022.repository.msg.RequiredSubmission4.mmLineItemIdentification,
-					com.tools20022.repository.msg.LineItemDetails5.mmLineItemIdentification, com.tools20022.repository.msg.LineItemDetails8.mmLineItemIdentification, com.tools20022.repository.msg.LineItemDetails6.mmLineItemIdentification,
-					com.tools20022.repository.msg.LineItemDetails9.mmLineItemIdentification, com.tools20022.repository.msg.LineItemAndPOIdentification1.mmLineItemIdentification,
-					com.tools20022.repository.msg.LineItemDetails10.mmLineItemIdentification, com.tools20022.repository.msg.LineItemDetails11.mmLineItemIdentification,
-					com.tools20022.repository.msg.LineItemDetails13.mmLineItemIdentification, com.tools20022.repository.msg.LineItemDetails12.mmLineItemIdentification,
-					com.tools20022.repository.msg.LineItemDetails14.mmLineItemIdentification, com.tools20022.repository.msg.LineItem16.mmIdentification);
+			derivation_lazy = () -> Arrays.asList(LineItem10.mmIdentification, LineItemDetails4.mmLineItemIdentification, LineItemDetails7.mmLineItemIdentification, RequiredSubmission4.mmLineItemIdentification,
+					LineItemDetails5.mmLineItemIdentification, LineItemDetails8.mmLineItemIdentification, LineItemDetails6.mmLineItemIdentification, LineItemDetails9.mmLineItemIdentification,
+					LineItemAndPOIdentification1.mmLineItemIdentification, LineItemDetails10.mmLineItemIdentification, LineItemDetails11.mmLineItemIdentification, LineItemDetails13.mmLineItemIdentification,
+					LineItemDetails12.mmLineItemIdentification, LineItemDetails14.mmLineItemIdentification, LineItem16.mmIdentification);
 			elementContext_lazy = () -> LineItem.mmObject();
 			isDerived = false;
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "Identification";
 			definition = "Uniquely identifies a line item.";
 			maxOccurs = 1;
@@ -522,16 +517,16 @@ public class LineItem {
 	 */
 	public static final MMBusinessAssociationEnd mmInvoicedProduct = new MMBusinessAssociationEnd() {
 		{
-			derivation_lazy = () -> Arrays.asList(com.tools20022.repository.msg.LineItem10.mmTradeProduct, com.tools20022.repository.msg.ServiceCategoryTotals1.mmServiceItemTotals, com.tools20022.repository.msg.LineItem16.mmTradeProduct);
+			derivation_lazy = () -> Arrays.asList(LineItem10.mmTradeProduct, ServiceCategoryTotals1.mmServiceItemTotals, LineItem16.mmTradeProduct);
 			elementContext_lazy = () -> LineItem.mmObject();
 			isDerived = false;
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "InvoicedProduct";
 			definition = "Specifies the product and the quantity for which an invoice is generated.";
 			maxOccurs = 1;
 			minOccurs = 1;
 			opposite_lazy = () -> com.tools20022.repository.entity.Product.mmLineItem;
-			aggregation = com.tools20022.metamodel.MMAggregation.NONE;
+			aggregation = MMAggregation.NONE;
 			type_lazy = () -> com.tools20022.repository.entity.Product.mmObject();
 		}
 	};
@@ -579,16 +574,16 @@ public class LineItem {
 	 */
 	public static final MMBusinessAssociationEnd mmNetWeight = new MMBusinessAssociationEnd() {
 		{
-			derivation_lazy = () -> Arrays.asList(com.tools20022.repository.msg.LineItem10.mmNetWeight, com.tools20022.repository.msg.LineItem16.mmNetWeight);
+			derivation_lazy = () -> Arrays.asList(LineItem10.mmNetWeight, LineItem16.mmNetWeight);
 			elementContext_lazy = () -> LineItem.mmObject();
 			isDerived = false;
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "NetWeight";
 			definition = "Net weight of the physical item which is invoiced.";
 			maxOccurs = 1;
 			minOccurs = 1;
 			opposite_lazy = () -> com.tools20022.repository.entity.ProductQuantity.mmNetWeightRelatedLineItem;
-			aggregation = com.tools20022.metamodel.MMAggregation.NONE;
+			aggregation = MMAggregation.NONE;
 			type_lazy = () -> com.tools20022.repository.entity.ProductQuantity.mmObject();
 		}
 	};
@@ -647,16 +642,15 @@ public class LineItem {
 	 */
 	public static final MMBusinessAssociationEnd mmBilledQuantity = new MMBusinessAssociationEnd() {
 		{
-			derivation_lazy = () -> Arrays.asList(com.tools20022.repository.msg.LineItemAllowanceCharge1.mmBasisQuantity, com.tools20022.repository.msg.LineItem10.mmBilledQuantity, com.tools20022.repository.msg.LineItemDetails4.mmQuantity,
-					com.tools20022.repository.msg.LineItem16.mmBilledQuantity, com.tools20022.repository.msg.LineItemAllowanceCharge2.mmBasisQuantity);
+			derivation_lazy = () -> Arrays.asList(LineItemAllowanceCharge1.mmBasisQuantity, LineItem10.mmBilledQuantity, LineItemDetails4.mmQuantity, LineItem16.mmBilledQuantity, LineItemAllowanceCharge2.mmBasisQuantity);
 			elementContext_lazy = () -> LineItem.mmObject();
 			isDerived = false;
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "BilledQuantity";
 			definition = "Quantity billed for this line item.";
 			minOccurs = 0;
 			opposite_lazy = () -> com.tools20022.repository.entity.ProductQuantity.mmBilledQuantityRelatedLineItem;
-			aggregation = com.tools20022.metamodel.MMAggregation.NONE;
+			aggregation = MMAggregation.NONE;
 			type_lazy = () -> com.tools20022.repository.entity.ProductQuantity.mmObject();
 		}
 	};
@@ -706,15 +700,15 @@ public class LineItem {
 	 */
 	public static final MMBusinessAssociationEnd mmChargeFreeQuantity = new MMBusinessAssociationEnd() {
 		{
-			derivation_lazy = () -> Arrays.asList(com.tools20022.repository.msg.LineItem10.mmChargeFreeQuantity, com.tools20022.repository.msg.LineItem16.mmChargeFreeQuantity);
+			derivation_lazy = () -> Arrays.asList(LineItem10.mmChargeFreeQuantity, LineItem16.mmChargeFreeQuantity);
 			elementContext_lazy = () -> LineItem.mmObject();
 			isDerived = false;
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "ChargeFreeQuantity";
 			definition = "Quantity that is free of charge for this line item.";
 			minOccurs = 0;
 			opposite_lazy = () -> com.tools20022.repository.entity.ProductQuantity.mmChargeFreeQuantityRelatedLineItem;
-			aggregation = com.tools20022.metamodel.MMAggregation.NONE;
+			aggregation = MMAggregation.NONE;
 			type_lazy = () -> com.tools20022.repository.entity.ProductQuantity.mmObject();
 		}
 	};
@@ -755,13 +749,13 @@ public class LineItem {
 		{
 			elementContext_lazy = () -> LineItem.mmObject();
 			isDerived = false;
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "MeasureQuantityStartRelatedLineItem";
 			definition = "Line item for which a measure quantity end is specified.";
 			maxOccurs = 1;
 			minOccurs = 1;
 			opposite_lazy = () -> com.tools20022.repository.entity.ProductQuantity.mmMeasureQuantityStart;
-			aggregation = com.tools20022.metamodel.MMAggregation.NONE;
+			aggregation = MMAggregation.NONE;
 			type_lazy = () -> com.tools20022.repository.entity.ProductQuantity.mmObject();
 		}
 	};
@@ -802,13 +796,13 @@ public class LineItem {
 		{
 			elementContext_lazy = () -> LineItem.mmObject();
 			isDerived = false;
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "MeasureQuantityEndRelatedLineItem";
 			definition = "Line item for which a measure quantity end is specified.";
 			maxOccurs = 1;
 			minOccurs = 1;
 			opposite_lazy = () -> com.tools20022.repository.entity.ProductQuantity.mmMeasureQuantityEnd;
-			aggregation = com.tools20022.metamodel.MMAggregation.NONE;
+			aggregation = MMAggregation.NONE;
 			type_lazy = () -> com.tools20022.repository.entity.ProductQuantity.mmObject();
 		}
 	};
@@ -851,10 +845,10 @@ public class LineItem {
 	 */
 	public static final MMBusinessAttribute mmMeasureDateTimeStart = new MMBusinessAttribute() {
 		{
-			derivation_lazy = () -> Arrays.asList(com.tools20022.repository.msg.LineItem10.mmMeasureDateTimeStart, com.tools20022.repository.msg.LineItem16.mmMeasureDateTimeStart);
+			derivation_lazy = () -> Arrays.asList(LineItem10.mmMeasureDateTimeStart, LineItem16.mmMeasureDateTimeStart);
 			elementContext_lazy = () -> LineItem.mmObject();
 			isDerived = false;
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "MeasureDateTimeStart";
 			definition = "Date/time on which the clock time measure started for a line item.";
 			maxOccurs = 1;
@@ -901,10 +895,10 @@ public class LineItem {
 	 */
 	public static final MMBusinessAttribute mmMeasureDateTimeEnd = new MMBusinessAttribute() {
 		{
-			derivation_lazy = () -> Arrays.asList(com.tools20022.repository.msg.LineItem10.mmMeasureDateTimeEnd, com.tools20022.repository.msg.LineItem16.mmMeasureDateTimeEnd);
+			derivation_lazy = () -> Arrays.asList(LineItem10.mmMeasureDateTimeEnd, LineItem16.mmMeasureDateTimeEnd);
 			elementContext_lazy = () -> LineItem.mmObject();
 			isDerived = false;
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "MeasureDateTimeEnd";
 			definition = "Date/time on which the clock time measure ended for a line item.";
 			maxOccurs = 1;
@@ -949,13 +943,13 @@ public class LineItem {
 		{
 			elementContext_lazy = () -> LineItem.mmObject();
 			isDerived = false;
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "Invoice";
 			definition = "Specifies the invoice in which the line item is included.";
 			maxOccurs = 1;
 			minOccurs = 0;
 			opposite_lazy = () -> com.tools20022.repository.entity.Invoice.mmLineItem;
-			aggregation = com.tools20022.metamodel.MMAggregation.NONE;
+			aggregation = MMAggregation.NONE;
 			type_lazy = () -> com.tools20022.repository.entity.Invoice.mmObject();
 		}
 	};
@@ -1031,14 +1025,12 @@ public class LineItem {
 	 */
 	public static final MMBusinessAttribute mmNetAmount = new MMBusinessAttribute() {
 		{
-			derivation_lazy = () -> Arrays.asList(com.tools20022.repository.msg.LineItemDetails4.mmTotalAmount, com.tools20022.repository.msg.LineItemDetails7.mmTotalAmount, com.tools20022.repository.msg.LineItemDetails6.mmTotalAmount,
-					com.tools20022.repository.msg.LineItemDetails9.mmTotalAmount, com.tools20022.repository.msg.ReportLine3.mmNetAmount, com.tools20022.repository.msg.ReportLine2.mmNetAmount,
-					com.tools20022.repository.msg.ReportLine4.mmNetAmount, com.tools20022.repository.msg.LineItemDetails10.mmTotalAmount, com.tools20022.repository.msg.ReportLine7.mmNetAmount,
-					com.tools20022.repository.msg.LineItemDetails11.mmTotalAmount, com.tools20022.repository.msg.ReportLine6.mmNetAmount, com.tools20022.repository.msg.ReportLine5.mmNetAmount,
-					com.tools20022.repository.msg.LineItemDetails13.mmTotalAmount, com.tools20022.repository.msg.LineItemDetails14.mmTotalAmount);
+			derivation_lazy = () -> Arrays.asList(LineItemDetails4.mmTotalAmount, LineItemDetails7.mmTotalAmount, LineItemDetails6.mmTotalAmount, LineItemDetails9.mmTotalAmount, ReportLine3.mmNetAmount, ReportLine2.mmNetAmount,
+					ReportLine4.mmNetAmount, LineItemDetails10.mmTotalAmount, ReportLine7.mmNetAmount, LineItemDetails11.mmTotalAmount, ReportLine6.mmNetAmount, ReportLine5.mmNetAmount, LineItemDetails13.mmTotalAmount,
+					LineItemDetails14.mmTotalAmount);
 			elementContext_lazy = () -> LineItem.mmObject();
 			isDerived = false;
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "NetAmount";
 			definition = "Total amount resulting from the gross amount plus freight charges, tax and plus/minus Adjustments.";
 			maxOccurs = 1;
@@ -1083,12 +1075,12 @@ public class LineItem {
 		{
 			elementContext_lazy = () -> LineItem.mmObject();
 			isDerived = false;
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "Packaging";
 			definition = "Physical packaging of the product.";
 			minOccurs = 0;
 			opposite_lazy = () -> com.tools20022.repository.entity.Packaging.mmRelatedLineItem;
-			aggregation = com.tools20022.metamodel.MMAggregation.NONE;
+			aggregation = MMAggregation.NONE;
 			type_lazy = () -> com.tools20022.repository.entity.Packaging.mmObject();
 		}
 	};
@@ -1124,7 +1116,7 @@ public class LineItem {
 		{
 			elementContext_lazy = () -> LineItem.mmObject();
 			isDerived = false;
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "DeliveryDateTime";
 			definition = "Actual delivery date/time of the products and/or services for this line item.";
 			maxOccurs = 1;
@@ -1168,12 +1160,12 @@ public class LineItem {
 		{
 			elementContext_lazy = () -> LineItem.mmObject();
 			isDerived = false;
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "Charges";
 			definition = "Charges specified for this line item.";
 			minOccurs = 0;
 			opposite_lazy = () -> com.tools20022.repository.entity.Charges.mmLineItem;
-			aggregation = com.tools20022.metamodel.MMAggregation.NONE;
+			aggregation = MMAggregation.NONE;
 			type_lazy = () -> com.tools20022.repository.entity.Charges.mmObject();
 		}
 	};
@@ -1216,13 +1208,13 @@ public class LineItem {
 		{
 			elementContext_lazy = () -> LineItem.mmObject();
 			isDerived = false;
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "NetPriceCharge";
 			definition = "Allowance or charge applied to the net price. When the charge amount is added (credit)";
 			maxOccurs = 1;
 			minOccurs = 1;
 			opposite_lazy = () -> com.tools20022.repository.entity.Charges.mmNetPriceChargeLineItem;
-			aggregation = com.tools20022.metamodel.MMAggregation.NONE;
+			aggregation = MMAggregation.NONE;
 			type_lazy = () -> com.tools20022.repository.entity.Charges.mmObject();
 		}
 	};
@@ -1266,12 +1258,12 @@ public class LineItem {
 		{
 			elementContext_lazy = () -> LineItem.mmObject();
 			isDerived = false;
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "GrossPriceQuantity";
 			definition = "Quantity and conversion factor on which the gross price is based for this line item product and/or service.";
 			minOccurs = 0;
 			opposite_lazy = () -> com.tools20022.repository.entity.ProductQuantity.mmGrossPriceQuantityRelatedLineItem;
-			aggregation = com.tools20022.metamodel.MMAggregation.NONE;
+			aggregation = MMAggregation.NONE;
 			type_lazy = () -> com.tools20022.repository.entity.ProductQuantity.mmObject();
 		}
 	};
@@ -1315,12 +1307,12 @@ public class LineItem {
 		{
 			elementContext_lazy = () -> LineItem.mmObject();
 			isDerived = false;
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "NetPriceQuantity";
 			definition = "Quantity and conversion factor on which the net price is based for this line item product and/or service.";
 			minOccurs = 0;
 			opposite_lazy = () -> com.tools20022.repository.entity.ProductQuantity.mmNetPriceQuantityRelatedLineItem;
-			aggregation = com.tools20022.metamodel.MMAggregation.NONE;
+			aggregation = MMAggregation.NONE;
 			type_lazy = () -> com.tools20022.repository.entity.ProductQuantity.mmObject();
 		}
 	};
@@ -1361,12 +1353,12 @@ public class LineItem {
 		{
 			elementContext_lazy = () -> LineItem.mmObject();
 			isDerived = false;
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "GrossWeight";
 			definition = "Gross weight of the physical item which is invoiced.";
 			minOccurs = 0;
 			opposite_lazy = () -> com.tools20022.repository.entity.ProductQuantity.mmGrossWeightRelatedLineItem;
-			aggregation = com.tools20022.metamodel.MMAggregation.NONE;
+			aggregation = MMAggregation.NONE;
 			type_lazy = () -> com.tools20022.repository.entity.ProductQuantity.mmObject();
 		}
 	};
@@ -1374,8 +1366,8 @@ public class LineItem {
 	static public MMBusinessComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMBusinessComponent() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "LineItem";
 				definition = "Unit of information  showing the related  provision of products and/or services and monetary summations reported as a discrete line item.";
 				associationDomain_lazy = () -> Arrays.asList(com.tools20022.repository.entity.Product.mmLineItem, com.tools20022.repository.entity.Adjustment.mmRelatedLineItem,
@@ -1385,13 +1377,9 @@ public class LineItem {
 						com.tools20022.repository.entity.ProductQuantity.mmMeasureQuantityEnd, com.tools20022.repository.entity.ProductQuantity.mmGrossPriceQuantityRelatedLineItem,
 						com.tools20022.repository.entity.ProductQuantity.mmNetPriceQuantityRelatedLineItem, com.tools20022.repository.entity.ProductQuantity.mmGrossWeightRelatedLineItem,
 						com.tools20022.repository.entity.Packaging.mmRelatedLineItem);
-				element_lazy = () -> Arrays.asList(com.tools20022.repository.entity.LineItem.mmFinancialAdjustment, com.tools20022.repository.entity.LineItem.mmLogisticsCharge, com.tools20022.repository.entity.LineItem.mmGrossAmount,
-						com.tools20022.repository.entity.LineItem.mmIdentification, com.tools20022.repository.entity.LineItem.mmInvoicedProduct, com.tools20022.repository.entity.LineItem.mmNetWeight,
-						com.tools20022.repository.entity.LineItem.mmBilledQuantity, com.tools20022.repository.entity.LineItem.mmChargeFreeQuantity, com.tools20022.repository.entity.LineItem.mmMeasureQuantityStartRelatedLineItem,
-						com.tools20022.repository.entity.LineItem.mmMeasureQuantityEndRelatedLineItem, com.tools20022.repository.entity.LineItem.mmMeasureDateTimeStart, com.tools20022.repository.entity.LineItem.mmMeasureDateTimeEnd,
-						com.tools20022.repository.entity.LineItem.mmInvoice, com.tools20022.repository.entity.LineItem.mmNetAmount, com.tools20022.repository.entity.LineItem.mmPackaging,
-						com.tools20022.repository.entity.LineItem.mmDeliveryDateTime, com.tools20022.repository.entity.LineItem.mmCharges, com.tools20022.repository.entity.LineItem.mmNetPriceCharge,
-						com.tools20022.repository.entity.LineItem.mmGrossPriceQuantity, com.tools20022.repository.entity.LineItem.mmNetPriceQuantity, com.tools20022.repository.entity.LineItem.mmGrossWeight);
+				element_lazy = () -> Arrays.asList(LineItem.mmFinancialAdjustment, LineItem.mmLogisticsCharge, LineItem.mmGrossAmount, LineItem.mmIdentification, LineItem.mmInvoicedProduct, LineItem.mmNetWeight, LineItem.mmBilledQuantity,
+						LineItem.mmChargeFreeQuantity, LineItem.mmMeasureQuantityStartRelatedLineItem, LineItem.mmMeasureQuantityEndRelatedLineItem, LineItem.mmMeasureDateTimeStart, LineItem.mmMeasureDateTimeEnd, LineItem.mmInvoice,
+						LineItem.mmNetAmount, LineItem.mmPackaging, LineItem.mmDeliveryDateTime, LineItem.mmCharges, LineItem.mmNetPriceCharge, LineItem.mmGrossPriceQuantity, LineItem.mmNetPriceQuantity, LineItem.mmGrossWeight);
 				derivationComponent_lazy = () -> Arrays.asList(LineItemMonetarySummation1.mmObject(), LineItemDetails4.mmObject(), LineItemDetails7.mmObject(), LineItemDetails5.mmObject(), LineItemDetails8.mmObject(),
 						LineItemDetails6.mmObject(), LineItemDetails9.mmObject(), LineItemAndPOIdentification1.mmObject(), LineItemDetails10.mmObject(), LineItemDetails11.mmObject(), LineItemDetails13.mmObject(),
 						LineItemDetails12.mmObject(), LineItemDetails14.mmObject());

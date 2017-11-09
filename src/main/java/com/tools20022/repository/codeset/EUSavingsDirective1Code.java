@@ -19,7 +19,9 @@ package com.tools20022.repository.codeset;
 
 import com.tools20022.metamodel.MMCode;
 import com.tools20022.metamodel.MMCodeSet;
+import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.codeset.EUSavingsDirectiveCode;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -90,7 +92,7 @@ public class EUSavingsDirective1Code extends EUSavingsDirectiveCode {
 	 */
 	public static final MMCode mmEUSavingsInScope = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "EUSavingsInScope";
 			owner_lazy = () -> EUSavingsDirective1Code.mmObject();
 		}
@@ -113,7 +115,7 @@ public class EUSavingsDirective1Code extends EUSavingsDirectiveCode {
 	 */
 	public static final MMCode mmEUSavingsOutScope = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "EUSavingsOutScope";
 			owner_lazy = () -> EUSavingsDirective1Code.mmObject();
 		}
@@ -136,7 +138,7 @@ public class EUSavingsDirective1Code extends EUSavingsDirectiveCode {
 	 */
 	public static final MMCode mmEUSavingsVariable = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "EUSavingsVariable";
 			owner_lazy = () -> EUSavingsDirective1Code.mmObject();
 		}
@@ -145,13 +147,12 @@ public class EUSavingsDirective1Code extends EUSavingsDirectiveCode {
 	static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
 				example = Arrays.asList("EUSI");
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "EUSavingsDirective1Code";
 				definition = "ndicate whether or not the fund is subject to reporting  under the EU Savings Directive.  Enter \"Variable\" if the status of the fund is likely to change from time to time.";
-				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.EUSavingsDirective1Code.mmEUSavingsInScope, com.tools20022.repository.codeset.EUSavingsDirective1Code.mmEUSavingsOutScope,
-						com.tools20022.repository.codeset.EUSavingsDirective1Code.mmEUSavingsVariable);
+				code_lazy = () -> Arrays.asList(EUSavingsDirective1Code.mmEUSavingsInScope, EUSavingsDirective1Code.mmEUSavingsOutScope, EUSavingsDirective1Code.mmEUSavingsVariable);
 				trace_lazy = () -> EUSavingsDirectiveCode.mmObject();
 			}
 		});

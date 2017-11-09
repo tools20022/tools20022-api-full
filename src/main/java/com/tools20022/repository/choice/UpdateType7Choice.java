@@ -19,6 +19,8 @@ package com.tools20022.repository.choice;
 
 import com.tools20022.metamodel.MMChoiceComponent;
 import com.tools20022.metamodel.MMMessageAssociationEnd;
+import com.tools20022.metamodel.MMRegistrationStatus;
+import com.tools20022.repository.GeneratedRepository;
 import com.tools20022.repository.msg.SecurityAttributes2;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
@@ -90,7 +92,7 @@ public class UpdateType7Choice {
 			componentContext_lazy = () -> UpdateType7Choice.mmObject();
 			isDerived = false;
 			xmlTag = "Add";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Add";
 			definition = "Set of data requested to enrich a security.";
 			maxOccurs = 1;
@@ -131,7 +133,7 @@ public class UpdateType7Choice {
 			componentContext_lazy = () -> UpdateType7Choice.mmObject();
 			isDerived = false;
 			xmlTag = "Del";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Delete";
 			definition = "Set of data requested for deletion from a security.";
 			maxOccurs = 1;
@@ -172,7 +174,7 @@ public class UpdateType7Choice {
 			componentContext_lazy = () -> UpdateType7Choice.mmObject();
 			isDerived = false;
 			xmlTag = "Modfy";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Modify";
 			definition = "Set of data requested to modify a security.";
 			maxOccurs = 1;
@@ -185,9 +187,9 @@ public class UpdateType7Choice {
 	final static public MMChoiceComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMChoiceComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.choice.UpdateType7Choice.mmAdd, com.tools20022.repository.choice.UpdateType7Choice.mmDelete, com.tools20022.repository.choice.UpdateType7Choice.mmModify);
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+				messageElement_lazy = () -> Arrays.asList(UpdateType7Choice.mmAdd, UpdateType7Choice.mmDelete, UpdateType7Choice.mmModify);
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 				name = "UpdateType7Choice";
 				definition = "Choice between action to request on a security.";
 			}

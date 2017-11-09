@@ -19,6 +19,8 @@ package com.tools20022.repository.codeset;
 
 import com.tools20022.metamodel.MMCode;
 import com.tools20022.metamodel.MMCodeSet;
+import com.tools20022.metamodel.MMRegistrationStatus;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -27,6 +29,17 @@ import java.util.concurrent.atomic.AtomicReference;
  * <p>
  * <strong>Constant fields:</strong>
  * <ul>
+ * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getDerivation derivation}
+ * =
+ * <ul>
+ * <li>
+ * {@linkplain com.tools20022.repository.codeset.SecuritiesSettlementStatus1Code
+ * SecuritiesSettlementStatus1Code}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.codeset.SecuritiesSettlementStatus2Code
+ * SecuritiesSettlementStatus2Code}</li>
+ * </ul>
+ * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getCode code} =
  * <ul>
  * <li>
@@ -44,17 +57,6 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>
  * {@linkplain com.tools20022.repository.codeset.SecuritiesSettlementStatusCode#mmSettled
  * SecuritiesSettlementStatusCode.mmSettled}</li>
- * </ul>
- * </li>
- * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getDerivation derivation}
- * =
- * <ul>
- * <li>
- * {@linkplain com.tools20022.repository.codeset.SecuritiesSettlementStatus1Code
- * SecuritiesSettlementStatus1Code}</li>
- * <li>
- * {@linkplain com.tools20022.repository.codeset.SecuritiesSettlementStatus2Code
- * SecuritiesSettlementStatus2Code}</li>
  * </ul>
  * </li>
  * <li>
@@ -107,7 +109,7 @@ public class SecuritiesSettlementStatusCode {
 	 */
 	public static final MMCode mmPending = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Pending";
 			definition = "Instruction is pending. Settlement at the instructed settlement date is still possible.";
 			owner_lazy = () -> SecuritiesSettlementStatusCode.mmObject();
@@ -140,7 +142,7 @@ public class SecuritiesSettlementStatusCode {
 	 */
 	public static final MMCode mmFailing = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Failing";
 			definition = "Instruction is failing. Settlement at the instructed settlement date is no longer possible.";
 			owner_lazy = () -> SecuritiesSettlementStatusCode.mmObject();
@@ -170,7 +172,7 @@ public class SecuritiesSettlementStatusCode {
 	 */
 	public static final MMCode mmUnsettled = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Unsettled";
 			definition = "Instruction is unsettled.";
 			owner_lazy = () -> SecuritiesSettlementStatusCode.mmObject();
@@ -200,7 +202,7 @@ public class SecuritiesSettlementStatusCode {
 	 */
 	public static final MMCode mmPartialSettlement = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PartialSettlement";
 			definition = "Part of the instruction remains unsettled.";
 			owner_lazy = () -> SecuritiesSettlementStatusCode.mmObject();
@@ -230,7 +232,7 @@ public class SecuritiesSettlementStatusCode {
 	 */
 	public static final MMCode mmSettled = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Settled";
 			definition = "Full settlement.";
 			owner_lazy = () -> SecuritiesSettlementStatusCode.mmObject();
@@ -241,14 +243,13 @@ public class SecuritiesSettlementStatusCode {
 	static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
 				example = Arrays.asList("PEND");
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "SecuritiesSettlementStatusCode";
 				definition = "Provides the status of settlement of an instruction.";
-				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.SecuritiesSettlementStatusCode.mmPending, com.tools20022.repository.codeset.SecuritiesSettlementStatusCode.mmFailing,
-						com.tools20022.repository.codeset.SecuritiesSettlementStatusCode.mmUnsettled, com.tools20022.repository.codeset.SecuritiesSettlementStatusCode.mmPartialSettlement,
-						com.tools20022.repository.codeset.SecuritiesSettlementStatusCode.mmSettled);
+				code_lazy = () -> Arrays.asList(SecuritiesSettlementStatusCode.mmPending, SecuritiesSettlementStatusCode.mmFailing, SecuritiesSettlementStatusCode.mmUnsettled, SecuritiesSettlementStatusCode.mmPartialSettlement,
+						SecuritiesSettlementStatusCode.mmSettled);
 				derivation_lazy = () -> Arrays.asList(SecuritiesSettlementStatus1Code.mmObject(), SecuritiesSettlementStatus2Code.mmObject());
 			}
 		});

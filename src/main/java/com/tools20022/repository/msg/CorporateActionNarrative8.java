@@ -19,8 +19,12 @@ package com.tools20022.repository.msg;
 
 import com.tools20022.metamodel.MMMessageAttribute;
 import com.tools20022.metamodel.MMMessageComponent;
+import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.datatype.Max350Text;
+import com.tools20022.repository.entity.BiddingConditions;
+import com.tools20022.repository.entity.CorporateActionDistribution;
 import com.tools20022.repository.entity.CorporateActionEvent;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.List;
@@ -129,14 +133,14 @@ public class CorporateActionNarrative8 {
 	 */
 	public static final MMMessageAttribute mmInformationToComplyWith = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.BiddingConditions.mmInformationToComplyWith;
+			businessElementTrace_lazy = () -> BiddingConditions.mmInformationToComplyWith;
 			componentContext_lazy = () -> CorporateActionNarrative8.mmObject();
 			isDerived = false;
 			xmlTag = "InfToCmplyWth";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "InformationToComplyWith";
 			definition = "Provides information conditions to the account owner that are to be complied with, for example, not open to US/Canadian residents, Qualified Institutional Buyers (QIB) or Sophisticated Investor Letter (SIL) to be provided.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.CorporateActionNarrative32.mmInformationToComplyWith);
+			nextVersions_lazy = () -> Arrays.asList(CorporateActionNarrative32.mmInformationToComplyWith);
 			minOccurs = 0;
 			simpleType_lazy = () -> Max350Text.mmObject();
 		}
@@ -190,14 +194,14 @@ public class CorporateActionNarrative8 {
 	 */
 	public static final MMMessageAttribute mmDeliveryDetails = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.CorporateActionDistribution.mmCorporateActionProceedsDeliveryInstruction;
+			businessElementTrace_lazy = () -> CorporateActionDistribution.mmCorporateActionProceedsDeliveryInstruction;
 			componentContext_lazy = () -> CorporateActionNarrative8.mmObject();
 			isDerived = false;
 			xmlTag = "DlvryDtls";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "DeliveryDetails";
 			definition = "Provides additional information on the delivery details of the outturned (derived) securities. This narrative is only to be used in case the securities are not eligible at the agent/custodian, and may not be used for settlement instructions.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.CorporateActionNarrative32.mmDeliveryDetails);
+			nextVersions_lazy = () -> Arrays.asList(CorporateActionNarrative32.mmDeliveryDetails);
 			minOccurs = 0;
 			simpleType_lazy = () -> Max350Text.mmObject();
 		}
@@ -248,14 +252,14 @@ public class CorporateActionNarrative8 {
 	 */
 	public static final MMMessageAttribute mmForeignExchangeInstructionsAdditionalInformation = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.CorporateActionEvent.mmExchangeRate;
+			businessElementTrace_lazy = () -> CorporateActionEvent.mmExchangeRate;
 			componentContext_lazy = () -> CorporateActionNarrative8.mmObject();
 			isDerived = false;
 			xmlTag = "FXInstrsAddtlInf";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ForeignExchangeInstructionsAdditionalInformation";
 			definition = "Provides additional details pertaining to foreign exchange instructions.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.CorporateActionNarrative32.mmForeignExchangeInstructionsAdditionalInformation);
+			nextVersions_lazy = () -> Arrays.asList(CorporateActionNarrative32.mmForeignExchangeInstructionsAdditionalInformation);
 			minOccurs = 0;
 			simpleType_lazy = () -> Max350Text.mmObject();
 		}
@@ -297,7 +301,7 @@ public class CorporateActionNarrative8 {
 			componentContext_lazy = () -> CorporateActionNarrative8.mmObject();
 			isDerived = false;
 			xmlTag = "Dsclmr";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Disclaimer";
 			definition = "Disclaimer relative to the information provided in the message. It may be ignored for automated processing. No information about the instruction itself is allowed here.";
 			minOccurs = 0;
@@ -348,10 +352,10 @@ public class CorporateActionNarrative8 {
 			componentContext_lazy = () -> CorporateActionNarrative8.mmObject();
 			isDerived = false;
 			xmlTag = "InstrAddtlInf";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "InstructionAdditionalInformation";
 			definition = "Provides additional details pertaining to the corporate action instruction.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.CorporateActionNarrative32.mmInstructionAdditionalInformation);
+			nextVersions_lazy = () -> Arrays.asList(CorporateActionNarrative32.mmInstructionAdditionalInformation);
 			minOccurs = 0;
 			simpleType_lazy = () -> Max350Text.mmObject();
 		}
@@ -360,12 +364,11 @@ public class CorporateActionNarrative8 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.CorporateActionNarrative8.mmInformationToComplyWith, com.tools20022.repository.msg.CorporateActionNarrative8.mmDeliveryDetails,
-						com.tools20022.repository.msg.CorporateActionNarrative8.mmForeignExchangeInstructionsAdditionalInformation, com.tools20022.repository.msg.CorporateActionNarrative8.mmDisclaimer,
-						com.tools20022.repository.msg.CorporateActionNarrative8.mmInstructionAdditionalInformation);
+				messageElement_lazy = () -> Arrays.asList(CorporateActionNarrative8.mmInformationToComplyWith, CorporateActionNarrative8.mmDeliveryDetails, CorporateActionNarrative8.mmForeignExchangeInstructionsAdditionalInformation,
+						CorporateActionNarrative8.mmDisclaimer, CorporateActionNarrative8.mmInstructionAdditionalInformation);
 				trace_lazy = () -> CorporateActionEvent.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "CorporateActionNarrative8";
 				definition = "Provides additional information such as the information to comply with.";
 				nextVersions_lazy = () -> Arrays.asList(CorporateActionNarrative32.mmObject());

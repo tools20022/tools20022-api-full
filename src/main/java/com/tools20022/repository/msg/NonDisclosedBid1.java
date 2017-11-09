@@ -20,10 +20,14 @@ package com.tools20022.repository.msg;
 import com.tools20022.metamodel.MMMessageAssociationEnd;
 import com.tools20022.metamodel.MMMessageAttribute;
 import com.tools20022.metamodel.MMMessageComponent;
+import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.codeset.CountryCode;
 import com.tools20022.repository.datatype.Max128Text;
 import com.tools20022.repository.datatype.TrueFalseIndicator;
+import com.tools20022.repository.entity.ListTrading;
 import com.tools20022.repository.entity.NonDisclosedListTrading;
+import com.tools20022.repository.entity.SecuritiesOrder;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -118,11 +122,11 @@ public class NonDisclosedBid1 {
 	 */
 	public static final MMMessageAttribute mmBidByCurrency = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.NonDisclosedListTrading.mmBidByCurrency;
+			businessElementTrace_lazy = () -> NonDisclosedListTrading.mmBidByCurrency;
 			componentContext_lazy = () -> NonDisclosedBid1.mmObject();
 			isDerived = false;
 			xmlTag = "BidByCcy";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "BidByCurrency";
 			definition = "Identifies a type of bid based on a common characteristic (the currency) of all securities of a list.";
 			maxOccurs = 1;
@@ -168,11 +172,11 @@ public class NonDisclosedBid1 {
 	 */
 	public static final MMMessageAttribute mmBidBySector = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.NonDisclosedListTrading.mmBidBySector;
+			businessElementTrace_lazy = () -> NonDisclosedListTrading.mmBidBySector;
 			componentContext_lazy = () -> NonDisclosedBid1.mmObject();
 			isDerived = false;
 			xmlTag = "BidBySctr";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "BidBySector";
 			definition = "Identifies a type of bid based on a common characteristic (the sector) of all securities of a list.";
 			maxOccurs = 1;
@@ -218,11 +222,11 @@ public class NonDisclosedBid1 {
 	 */
 	public static final MMMessageAttribute mmBidByIndex = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.NonDisclosedListTrading.mmBidByIndex;
+			businessElementTrace_lazy = () -> NonDisclosedListTrading.mmBidByIndex;
 			componentContext_lazy = () -> NonDisclosedBid1.mmObject();
 			isDerived = false;
 			xmlTag = "BidByIndx";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "BidByIndex";
 			definition = "Identifies a type of bid based on a common characteristic (the index) of all securities of a list.";
 			maxOccurs = 1;
@@ -267,7 +271,7 @@ public class NonDisclosedBid1 {
 			componentContext_lazy = () -> NonDisclosedBid1.mmObject();
 			isDerived = false;
 			xmlTag = "SdInd";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SideIndicator";
 			definition = "Indicates the side of the bid in the case of a non disclosed bidding process. Used instead of buy and sell side.\nTrue = Side 1\nFalse = Side 2";
 			maxOccurs = 1;
@@ -311,11 +315,11 @@ public class NonDisclosedBid1 {
 	 */
 	public static final MMMessageAssociationEnd mmLiquidity = new MMMessageAssociationEnd() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.ListTrading.mmLiquidity;
+			businessElementTrace_lazy = () -> ListTrading.mmLiquidity;
 			componentContext_lazy = () -> NonDisclosedBid1.mmObject();
 			isDerived = false;
 			xmlTag = "Lqdty";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Liquidity";
 			definition = "Provides additionnal details about the liquidity of a financial instrument.";
 			maxOccurs = 1;
@@ -360,11 +364,11 @@ public class NonDisclosedBid1 {
 	 */
 	public static final MMMessageAssociationEnd mmExchangeForPhysicalTrade = new MMMessageAssociationEnd() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.SecuritiesOrder.mmExchangeForPhysicalTrade;
+			businessElementTrace_lazy = () -> SecuritiesOrder.mmExchangeForPhysicalTrade;
 			componentContext_lazy = () -> NonDisclosedBid1.mmObject();
 			isDerived = false;
 			xmlTag = "XchgForPhysTrad";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ExchangeForPhysicalTrade";
 			definition = "Details about the exchange for physical trade parameters.";
 			maxOccurs = 1;
@@ -377,12 +381,11 @@ public class NonDisclosedBid1 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.NonDisclosedBid1.mmBidByCurrency, com.tools20022.repository.msg.NonDisclosedBid1.mmBidBySector,
-						com.tools20022.repository.msg.NonDisclosedBid1.mmBidByIndex, com.tools20022.repository.msg.NonDisclosedBid1.mmSideIndicator, com.tools20022.repository.msg.NonDisclosedBid1.mmLiquidity,
-						com.tools20022.repository.msg.NonDisclosedBid1.mmExchangeForPhysicalTrade);
+				messageElement_lazy = () -> Arrays.asList(NonDisclosedBid1.mmBidByCurrency, NonDisclosedBid1.mmBidBySector, NonDisclosedBid1.mmBidByIndex, NonDisclosedBid1.mmSideIndicator, NonDisclosedBid1.mmLiquidity,
+						NonDisclosedBid1.mmExchangeForPhysicalTrade);
 				trace_lazy = () -> NonDisclosedListTrading.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 				name = "NonDisclosedBid1";
 				definition = "List trading by which the buy-side provides details to the sell-side information about the sector, country, index and potential market impact of the financial instrument to be bought or sold. Using this information, the sell-side firms bid for the trade.";
 			}

@@ -19,7 +19,9 @@ package com.tools20022.repository.codeset;
 
 import com.tools20022.metamodel.MMCode;
 import com.tools20022.metamodel.MMCodeSet;
+import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.codeset.QuoteStatusCode;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -92,7 +94,7 @@ public class QuoteStatus2Code extends QuoteStatusCode {
 	 */
 	public static final MMCode mmCancelSymbol = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CancelSymbol";
 			owner_lazy = () -> QuoteStatus2Code.mmObject();
 		}
@@ -115,7 +117,7 @@ public class QuoteStatus2Code extends QuoteStatusCode {
 	 */
 	public static final MMCode mmCancelSecurity = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CancelSecurity";
 			owner_lazy = () -> QuoteStatus2Code.mmObject();
 		}
@@ -138,7 +140,7 @@ public class QuoteStatus2Code extends QuoteStatusCode {
 	 */
 	public static final MMCode mmCancelUnderlying = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CancelUnderlying";
 			owner_lazy = () -> QuoteStatus2Code.mmObject();
 		}
@@ -161,7 +163,7 @@ public class QuoteStatus2Code extends QuoteStatusCode {
 	 */
 	public static final MMCode mmCancelAll = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CancelAll";
 			owner_lazy = () -> QuoteStatus2Code.mmObject();
 		}
@@ -184,7 +186,7 @@ public class QuoteStatus2Code extends QuoteStatusCode {
 	 */
 	public static final MMCode mmQuoteNotFound = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "QuoteNotFound";
 			owner_lazy = () -> QuoteStatus2Code.mmObject();
 		}
@@ -193,13 +195,12 @@ public class QuoteStatus2Code extends QuoteStatusCode {
 	static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
 				example = Arrays.asList("SYMB");
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "QuoteStatus2Code";
 				definition = "Identifies the status of a quote acknowledgement.";
-				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.QuoteStatus2Code.mmCancelSymbol, com.tools20022.repository.codeset.QuoteStatus2Code.mmCancelSecurity,
-						com.tools20022.repository.codeset.QuoteStatus2Code.mmCancelUnderlying, com.tools20022.repository.codeset.QuoteStatus2Code.mmCancelAll, com.tools20022.repository.codeset.QuoteStatus2Code.mmQuoteNotFound);
+				code_lazy = () -> Arrays.asList(QuoteStatus2Code.mmCancelSymbol, QuoteStatus2Code.mmCancelSecurity, QuoteStatus2Code.mmCancelUnderlying, QuoteStatus2Code.mmCancelAll, QuoteStatus2Code.mmQuoteNotFound);
 				trace_lazy = () -> QuoteStatusCode.mmObject();
 			}
 		});

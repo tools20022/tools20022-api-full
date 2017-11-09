@@ -19,7 +19,9 @@ package com.tools20022.repository.codeset;
 
 import com.tools20022.metamodel.MMCode;
 import com.tools20022.metamodel.MMCodeSet;
+import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.codeset.TransactionReasonCode;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -116,7 +118,7 @@ public class TransactionRejectReason5Code extends TransactionReasonCode {
 	 */
 	public static final MMCode mmIncorrectAccountNumber = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "IncorrectAccountNumber";
 			owner_lazy = () -> TransactionRejectReason5Code.mmObject();
 		}
@@ -139,7 +141,7 @@ public class TransactionRejectReason5Code extends TransactionReasonCode {
 	 */
 	public static final MMCode mmClosedAccountNumber = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ClosedAccountNumber";
 			owner_lazy = () -> TransactionRejectReason5Code.mmObject();
 		}
@@ -162,7 +164,7 @@ public class TransactionRejectReason5Code extends TransactionReasonCode {
 	 */
 	public static final MMCode mmBlockedAccount = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "BlockedAccount";
 			owner_lazy = () -> TransactionRejectReason5Code.mmObject();
 		}
@@ -185,7 +187,7 @@ public class TransactionRejectReason5Code extends TransactionReasonCode {
 	 */
 	public static final MMCode mmTransactionForbidden = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "TransactionForbidden";
 			owner_lazy = () -> TransactionRejectReason5Code.mmObject();
 		}
@@ -208,7 +210,7 @@ public class TransactionRejectReason5Code extends TransactionReasonCode {
 	 */
 	public static final MMCode mmInsufficientFunds = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "InsufficientFunds";
 			owner_lazy = () -> TransactionRejectReason5Code.mmObject();
 		}
@@ -231,7 +233,7 @@ public class TransactionRejectReason5Code extends TransactionReasonCode {
 	 */
 	public static final MMCode mmDuplication = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Duplication";
 			owner_lazy = () -> TransactionRejectReason5Code.mmObject();
 		}
@@ -254,7 +256,7 @@ public class TransactionRejectReason5Code extends TransactionReasonCode {
 	 */
 	public static final MMCode mmMissingCreditorAddress = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "MissingCreditorAddress";
 			owner_lazy = () -> TransactionRejectReason5Code.mmObject();
 		}
@@ -277,7 +279,7 @@ public class TransactionRejectReason5Code extends TransactionReasonCode {
 	 */
 	public static final MMCode mmNoMandate = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "NoMandate";
 			owner_lazy = () -> TransactionRejectReason5Code.mmObject();
 		}
@@ -300,7 +302,7 @@ public class TransactionRejectReason5Code extends TransactionReasonCode {
 	 */
 	public static final MMCode mmRefundRequestByEndCustomer = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "RefundRequestByEndCustomer";
 			owner_lazy = () -> TransactionRejectReason5Code.mmObject();
 		}
@@ -323,7 +325,7 @@ public class TransactionRejectReason5Code extends TransactionReasonCode {
 	 */
 	public static final MMCode mmEndCustomerDeceased = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "EndCustomerDeceased";
 			owner_lazy = () -> TransactionRejectReason5Code.mmObject();
 		}
@@ -346,7 +348,7 @@ public class TransactionRejectReason5Code extends TransactionReasonCode {
 	 */
 	public static final MMCode mmNotSpecifiedReasonCustomerGenerated = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "NotSpecifiedReasonCustomerGenerated";
 			owner_lazy = () -> TransactionRejectReason5Code.mmObject();
 		}
@@ -369,7 +371,7 @@ public class TransactionRejectReason5Code extends TransactionReasonCode {
 	 */
 	public static final MMCode mmNotSpecifiedReasonAgentGenerated = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "NotSpecifiedReasonAgentGenerated";
 			owner_lazy = () -> TransactionRejectReason5Code.mmObject();
 		}
@@ -378,17 +380,15 @@ public class TransactionRejectReason5Code extends TransactionReasonCode {
 	static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
 				example = Arrays.asList("AC01");
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "TransactionRejectReason5Code";
 				definition = "Specifies the reason for a transaction to be rejected or returned by an instructed agent or somebody acting on behalf of an instructed agent.";
-				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.TransactionRejectReason5Code.mmIncorrectAccountNumber, com.tools20022.repository.codeset.TransactionRejectReason5Code.mmClosedAccountNumber,
-						com.tools20022.repository.codeset.TransactionRejectReason5Code.mmBlockedAccount, com.tools20022.repository.codeset.TransactionRejectReason5Code.mmTransactionForbidden,
-						com.tools20022.repository.codeset.TransactionRejectReason5Code.mmInsufficientFunds, com.tools20022.repository.codeset.TransactionRejectReason5Code.mmDuplication,
-						com.tools20022.repository.codeset.TransactionRejectReason5Code.mmMissingCreditorAddress, com.tools20022.repository.codeset.TransactionRejectReason5Code.mmNoMandate,
-						com.tools20022.repository.codeset.TransactionRejectReason5Code.mmRefundRequestByEndCustomer, com.tools20022.repository.codeset.TransactionRejectReason5Code.mmEndCustomerDeceased,
-						com.tools20022.repository.codeset.TransactionRejectReason5Code.mmNotSpecifiedReasonCustomerGenerated, com.tools20022.repository.codeset.TransactionRejectReason5Code.mmNotSpecifiedReasonAgentGenerated);
+				code_lazy = () -> Arrays.asList(TransactionRejectReason5Code.mmIncorrectAccountNumber, TransactionRejectReason5Code.mmClosedAccountNumber, TransactionRejectReason5Code.mmBlockedAccount,
+						TransactionRejectReason5Code.mmTransactionForbidden, TransactionRejectReason5Code.mmInsufficientFunds, TransactionRejectReason5Code.mmDuplication, TransactionRejectReason5Code.mmMissingCreditorAddress,
+						TransactionRejectReason5Code.mmNoMandate, TransactionRejectReason5Code.mmRefundRequestByEndCustomer, TransactionRejectReason5Code.mmEndCustomerDeceased,
+						TransactionRejectReason5Code.mmNotSpecifiedReasonCustomerGenerated, TransactionRejectReason5Code.mmNotSpecifiedReasonAgentGenerated);
 				trace_lazy = () -> TransactionReasonCode.mmObject();
 			}
 		});

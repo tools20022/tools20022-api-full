@@ -19,7 +19,9 @@ package com.tools20022.repository.codeset;
 
 import com.tools20022.metamodel.MMCode;
 import com.tools20022.metamodel.MMCodeSet;
+import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.codeset.PutTypeCode;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -81,7 +83,7 @@ public class PutType1Code extends PutTypeCode {
 	 */
 	public static final MMCode mmMandatory = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Mandatory";
 			owner_lazy = () -> PutType1Code.mmObject();
 		}
@@ -103,7 +105,7 @@ public class PutType1Code extends PutTypeCode {
 	 */
 	public static final MMCode mmOptional = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Optional";
 			owner_lazy = () -> PutType1Code.mmObject();
 		}
@@ -125,7 +127,7 @@ public class PutType1Code extends PutTypeCode {
 	 */
 	public static final MMCode mmBoth = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Both";
 			owner_lazy = () -> PutType1Code.mmObject();
 		}
@@ -134,12 +136,12 @@ public class PutType1Code extends PutTypeCode {
 	static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
 				example = Arrays.asList("MAND");
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "PutType1Code";
 				definition = "Defines the type of execution of the put feature.";
-				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.PutType1Code.mmMandatory, com.tools20022.repository.codeset.PutType1Code.mmOptional, com.tools20022.repository.codeset.PutType1Code.mmBoth);
+				code_lazy = () -> Arrays.asList(PutType1Code.mmMandatory, PutType1Code.mmOptional, PutType1Code.mmBoth);
 				trace_lazy = () -> PutTypeCode.mmObject();
 			}
 		});

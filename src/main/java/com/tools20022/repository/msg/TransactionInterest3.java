@@ -20,8 +20,10 @@ package com.tools20022.repository.msg;
 import com.tools20022.metamodel.MMMessageAssociationEnd;
 import com.tools20022.metamodel.MMMessageAttribute;
 import com.tools20022.metamodel.MMMessageComponent;
+import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.datatype.ActiveOrHistoricCurrencyAndAmount;
 import com.tools20022.repository.entity.InterestCalculation;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.List;
@@ -101,7 +103,7 @@ public class TransactionInterest3 {
 			componentContext_lazy = () -> TransactionInterest3.mmObject();
 			isDerived = false;
 			xmlTag = "TtlIntrstAndTaxAmt";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "TotalInterestAndTaxAmount";
 			definition = "Total amount of interests and taxes included in the entry amount.";
 			maxOccurs = 1;
@@ -143,11 +145,11 @@ public class TransactionInterest3 {
 	 */
 	public static final MMMessageAssociationEnd mmRecord = new MMMessageAssociationEnd() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.InterestCalculation.mmInterest;
+			businessElementTrace_lazy = () -> InterestCalculation.mmInterest;
 			componentContext_lazy = () -> TransactionInterest3.mmObject();
 			isDerived = false;
 			xmlTag = "Rcrd";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Record";
 			definition = "Individual interest record.";
 			minOccurs = 0;
@@ -159,10 +161,10 @@ public class TransactionInterest3 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.TransactionInterest3.mmTotalInterestAndTaxAmount, com.tools20022.repository.msg.TransactionInterest3.mmRecord);
+				messageElement_lazy = () -> Arrays.asList(TransactionInterest3.mmTotalInterestAndTaxAmount, TransactionInterest3.mmRecord);
 				trace_lazy = () -> InterestCalculation.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "TransactionInterest3";
 				definition = "Provide further details on transaction specific interest information that applies to the underlying transaction.";
 			}

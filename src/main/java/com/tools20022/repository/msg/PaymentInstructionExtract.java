@@ -19,10 +19,15 @@ package com.tools20022.repository.msg;
 
 import com.tools20022.metamodel.MMMessageAttribute;
 import com.tools20022.metamodel.MMMessageComponent;
+import com.tools20022.metamodel.MMRegistrationStatus;
+import com.tools20022.repository.area.camt.*;
 import com.tools20022.repository.datatype.CurrencyAndAmount;
 import com.tools20022.repository.datatype.ISODateTime;
 import com.tools20022.repository.datatype.Max35Text;
+import com.tools20022.repository.entity.Payment;
+import com.tools20022.repository.entity.PaymentIdentification;
 import com.tools20022.repository.entity.PaymentInstruction;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -138,11 +143,11 @@ public class PaymentInstructionExtract {
 	 */
 	public static final MMMessageAttribute mmAssignerInstructionIdentification = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.PaymentIdentification.mmExecutionIdentification;
+			businessElementTrace_lazy = () -> PaymentIdentification.mmExecutionIdentification;
 			componentContext_lazy = () -> PaymentInstructionExtract.mmObject();
 			isDerived = false;
 			xmlTag = "AssgnrInstrId";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AssignerInstructionIdentification";
 			definition = "Identification of the payment instruction (eg, field 20 of an MT 103) when meaningful to the case assigner.";
 			maxOccurs = 1;
@@ -188,11 +193,11 @@ public class PaymentInstructionExtract {
 	 */
 	public static final MMMessageAttribute mmAssigneeInstructionIdentification = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.PaymentIdentification.mmExecutionIdentification;
+			businessElementTrace_lazy = () -> PaymentIdentification.mmExecutionIdentification;
 			componentContext_lazy = () -> PaymentInstructionExtract.mmObject();
 			isDerived = false;
 			xmlTag = "AssgneInstrId";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AssigneeInstructionIdentification";
 			definition = "Identification of the payment instruction (eg, field 20 of an MT 103) when meaningful to the case assignee.";
 			maxOccurs = 1;
@@ -240,11 +245,11 @@ public class PaymentInstructionExtract {
 	 */
 	public static final MMMessageAttribute mmCurrencyAmount = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Payment.mmInstructedAmount;
+			businessElementTrace_lazy = () -> Payment.mmInstructedAmount;
 			componentContext_lazy = () -> PaymentInstructionExtract.mmObject();
 			isDerived = false;
 			xmlTag = "CcyAmt";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CurrencyAmount";
 			definition = "Amount of the payment. Depending on the context it can be either the amount settled (UnableToApply) or the instructed amount (RequestToCancel, RequestToModify, ClaimNonReceipt).";
 			maxOccurs = 1;
@@ -287,11 +292,11 @@ public class PaymentInstructionExtract {
 	 */
 	public static final MMMessageAttribute mmValueDate = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Payment.mmValueDate;
+			businessElementTrace_lazy = () -> Payment.mmValueDate;
 			componentContext_lazy = () -> PaymentInstructionExtract.mmObject();
 			isDerived = false;
 			xmlTag = "ValDt";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ValueDate";
 			definition = "Value date of the payment.";
 			maxOccurs = 1;
@@ -303,15 +308,13 @@ public class PaymentInstructionExtract {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.PaymentInstructionExtract.mmAssignerInstructionIdentification,
-						com.tools20022.repository.msg.PaymentInstructionExtract.mmAssigneeInstructionIdentification, com.tools20022.repository.msg.PaymentInstructionExtract.mmCurrencyAmount,
-						com.tools20022.repository.msg.PaymentInstructionExtract.mmValueDate);
-				messageBuildingBlock_lazy = () -> Arrays.asList(com.tools20022.repository.area.camt.RequestToModifyPayment.mmUnderlying, com.tools20022.repository.area.camt.RequestToCancelPayment.mmUnderlying,
-						com.tools20022.repository.area.camt.UnableToApply.mmUnderlying, com.tools20022.repository.area.camt.ClaimNonReceipt.mmUnderlying, com.tools20022.repository.area.camt.AdditionalPaymentInformation.mmUnderlying,
-						com.tools20022.repository.area.camt.ResolutionOfInvestigation.mmCorrectionTransaction, com.tools20022.repository.area.camt.DebitAuthorisationRequest.mmUnderlying);
+				messageElement_lazy = () -> Arrays.asList(PaymentInstructionExtract.mmAssignerInstructionIdentification, PaymentInstructionExtract.mmAssigneeInstructionIdentification, PaymentInstructionExtract.mmCurrencyAmount,
+						PaymentInstructionExtract.mmValueDate);
+				messageBuildingBlock_lazy = () -> Arrays.asList(RequestToModifyPayment.mmUnderlying, RequestToCancelPayment.mmUnderlying, UnableToApply.mmUnderlying, ClaimNonReceipt.mmUnderlying, AdditionalPaymentInformation.mmUnderlying,
+						ResolutionOfInvestigation.mmCorrectionTransaction, DebitAuthorisationRequest.mmUnderlying);
 				trace_lazy = () -> PaymentInstruction.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "PaymentInstructionExtract";
 				definition = "Details of a payment instruction. The information contained in this component is sufficient to retrieve a payment instruction.";
 			}

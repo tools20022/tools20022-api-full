@@ -19,9 +19,11 @@ package com.tools20022.repository.msg;
 
 import com.tools20022.metamodel.MMMessageAttribute;
 import com.tools20022.metamodel.MMMessageComponent;
+import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.codeset.ActiveOrHistoricCurrencyCode;
 import com.tools20022.repository.codeset.UnderlyingContractForDifferenceType3Code;
 import com.tools20022.repository.entity.Derivative;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -104,11 +106,11 @@ public class ContractForDifference2 {
 	 */
 	public static final MMMessageAttribute mmUnderlyingType = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Derivative.mmUnderlyingAsset;
+			businessElementTrace_lazy = () -> Derivative.mmUnderlyingAsset;
 			componentContext_lazy = () -> ContractForDifference2.mmObject();
 			isDerived = false;
 			xmlTag = "UndrlygTp";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "UnderlyingType";
 			definition = "Underlying type of the contract for difference.";
 			maxOccurs = 1;
@@ -150,7 +152,7 @@ public class ContractForDifference2 {
 			componentContext_lazy = () -> ContractForDifference2.mmObject();
 			isDerived = false;
 			xmlTag = "NtnlCcy1";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "NotionalCurrency1";
 			definition = "Currency 1 of the underlying currency pair.";
 			maxOccurs = 1;
@@ -192,7 +194,7 @@ public class ContractForDifference2 {
 			componentContext_lazy = () -> ContractForDifference2.mmObject();
 			isDerived = false;
 			xmlTag = "NtnlCcy2";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "NotionalCurrency2";
 			definition = "Currency 2 of the underlying currency pair.";
 			maxOccurs = 1;
@@ -204,11 +206,10 @@ public class ContractForDifference2 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.ContractForDifference2.mmUnderlyingType, com.tools20022.repository.msg.ContractForDifference2.mmNotionalCurrency1,
-						com.tools20022.repository.msg.ContractForDifference2.mmNotionalCurrency2);
+				messageElement_lazy = () -> Arrays.asList(ContractForDifference2.mmUnderlyingType, ContractForDifference2.mmNotionalCurrency1, ContractForDifference2.mmNotionalCurrency2);
 				trace_lazy = () -> Derivative.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "ContractForDifference2";
 				definition = "Transparency calculation specific details on a contract for difference, spread betting derivatives.";
 			}

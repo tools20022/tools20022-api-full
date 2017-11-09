@@ -19,7 +19,11 @@ package com.tools20022.repository.msg;
 
 import com.tools20022.metamodel.MMMessageAttribute;
 import com.tools20022.metamodel.MMMessageComponent;
+import com.tools20022.metamodel.MMRegistrationStatus;
+import com.tools20022.repository.area.admi.MessageRejectV01;
+import com.tools20022.repository.area.trea.WithdrawalNotificationV01;
 import com.tools20022.repository.datatype.Max35Text;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -103,7 +107,7 @@ public class MessageReference {
 			componentContext_lazy = () -> MessageReference.mmObject();
 			isDerived = false;
 			xmlTag = "Ref";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Reference";
 			definition = "Business reference of the present message assigned by the party issuing the message. This reference must be unique amongst all messages of the same name sent by the same party.";
 			maxOccurs = 1;
@@ -115,10 +119,10 @@ public class MessageReference {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.MessageReference.mmReference);
-				messageBuildingBlock_lazy = () -> Arrays.asList(com.tools20022.repository.area.trea.WithdrawalNotificationV01.mmMatchingSystemUniqueReference, com.tools20022.repository.area.admi.MessageRejectV01.mmRelatedReference);
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				messageElement_lazy = () -> Arrays.asList(MessageReference.mmReference);
+				messageBuildingBlock_lazy = () -> Arrays.asList(WithdrawalNotificationV01.mmMatchingSystemUniqueReference, MessageRejectV01.mmRelatedReference);
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "MessageReference";
 				definition = "Message reference of relevance to the present message.";
 			}

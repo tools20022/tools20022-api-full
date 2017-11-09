@@ -20,6 +20,7 @@ package com.tools20022.repository.area.tsmt;
 import com.tools20022.metamodel.MMMessageBuildingBlock;
 import com.tools20022.metamodel.MMMessageDefinition;
 import com.tools20022.metamodel.MMMessageDefinitionIdentifier;
+import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.area.TradeServicesManagementLatestVersion;
 import com.tools20022.repository.choice.RejectionReason1Choice;
 import com.tools20022.repository.msg.*;
@@ -44,6 +45,9 @@ import java.util.List;
  * <p>
  * <strong>Constant fields:</strong>
  * <ul>
+ * <li>
+ * {@linkplain com.tools20022.metamodel.MMMessageDefinition#getMessageDefinitionIdentifier
+ * messageDefinitionIdentifier} = {@code tsmt.008.001.03}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMMessageDefinition#getBusinessArea
  * businessArea} =
  * {@linkplain com.tools20022.repository.area.TradeServicesManagementLatestVersion
@@ -100,9 +104,6 @@ import java.util.List;
  * </ul>
  * </li>
  * <li>
- * {@linkplain com.tools20022.metamodel.MMMessageDefinition#getMessageDefinitionIdentifier
- * messageDefinitionIdentifier} = {@code tsmt.008.001.03}</li>
- * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
  * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
@@ -144,7 +145,7 @@ public class AmendmentRejectionNotificationV03 {
 	public static final MMMessageBuildingBlock mmNotificationIdentification = new MMMessageBuildingBlock() {
 		{
 			xmlTag = "NtfctnId";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "NotificationIdentification";
 			definition = "Identifies the notification message.";
 			maxOccurs = 1;
@@ -183,7 +184,7 @@ public class AmendmentRejectionNotificationV03 {
 	public static final MMMessageBuildingBlock mmTransactionIdentification = new MMMessageBuildingBlock() {
 		{
 			xmlTag = "TxId";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "TransactionIdentification";
 			definition = "Unique Identification assigned by the matching application to the transaction.\nThis identification is to be used in any communication between the parties.\n";
 			maxOccurs = 1;
@@ -221,7 +222,7 @@ public class AmendmentRejectionNotificationV03 {
 	public static final MMMessageBuildingBlock mmEstablishedBaselineIdentification = new MMMessageBuildingBlock() {
 		{
 			xmlTag = "EstblishdBaselnId";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "EstablishedBaselineIdentification";
 			definition = "Unique identification assigned by the matching application to the baseline when it is established.";
 			maxOccurs = 1;
@@ -257,7 +258,7 @@ public class AmendmentRejectionNotificationV03 {
 	public static final MMMessageBuildingBlock mmTransactionStatus = new MMMessageBuildingBlock() {
 		{
 			xmlTag = "TxSts";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "TransactionStatus";
 			definition = "Identifies the status of the transaction by means of a code.";
 			maxOccurs = 1;
@@ -295,7 +296,7 @@ public class AmendmentRejectionNotificationV03 {
 	public static final MMMessageBuildingBlock mmUserTransactionReference = new MMMessageBuildingBlock() {
 		{
 			xmlTag = "UsrTxRef";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "UserTransactionReference";
 			definition = "Reference to the transaction for each financial institution which is a party to the transaction.";
 			maxOccurs = 2;
@@ -333,7 +334,7 @@ public class AmendmentRejectionNotificationV03 {
 	public static final MMMessageBuildingBlock mmDeltaReportReference = new MMMessageBuildingBlock() {
 		{
 			xmlTag = "DltaRptRef";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "DeltaReportReference";
 			definition = "Reference to the identification of the delta report that contained the amendment.";
 			maxOccurs = 1;
@@ -366,7 +367,7 @@ public class AmendmentRejectionNotificationV03 {
 	public static final MMMessageBuildingBlock mmRejectedAmendmentNumber = new MMMessageBuildingBlock() {
 		{
 			xmlTag = "RjctdAmdmntNb";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "RejectedAmendmentNumber";
 			definition = "Sequence number of the rejected baseline amendment.";
 			maxOccurs = 1;
@@ -401,7 +402,7 @@ public class AmendmentRejectionNotificationV03 {
 	public static final MMMessageBuildingBlock mmInitiator = new MMMessageBuildingBlock() {
 		{
 			xmlTag = "Initr";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Initiator";
 			definition = "Party that has rejected the amendment.";
 			maxOccurs = 1;
@@ -438,7 +439,7 @@ public class AmendmentRejectionNotificationV03 {
 	public static final MMMessageBuildingBlock mmRejectionReason = new MMMessageBuildingBlock() {
 		{
 			xmlTag = "RjctnRsn";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "RejectionReason";
 			definition = "Specifies the reaons for rejecting the amendment.                                                    ";
 			maxOccurs = 1;
@@ -473,7 +474,7 @@ public class AmendmentRejectionNotificationV03 {
 	public static final MMMessageBuildingBlock mmRequestForAction = new MMMessageBuildingBlock() {
 		{
 			xmlTag = "ReqForActn";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "RequestForAction";
 			definition = "Information on the next processing step required.";
 			maxOccurs = 1;
@@ -485,19 +486,17 @@ public class AmendmentRejectionNotificationV03 {
 	final static public MMMessageDefinition mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageDefinition() {
 			{
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "AmendmentRejectionNotificationV03";
 				definition = "Scope\r\nThe AmendmentRejectionNotification message is sent by the matching application to the requester of an amendment.\r\nThis message is used to notify the rejection of an amendment request.\r\nUsage\r\nThe AmendmentRejectionNotification message can be sent by the matching application to pass on information about the rejection of an amendment request that it has obtained through the receipt of an AmendmentRejection message.\r\nIn order to pass on information about the acceptance of an amendment request the matching application sends an AmendmentAcceptanceNotification message.";
 				messageSet_lazy = () -> Arrays.asList(TradeServicesManagementISOPreviousversion.mmObject(), TradeServicesManagementISOLatestversion.mmObject());
 				rootElement = "Document";
 				xmlTag = "AmdmntRjctnNtfctn";
 				businessArea_lazy = () -> TradeServicesManagementLatestVersion.mmObject();
-				messageBuildingBlock_lazy = () -> Arrays.asList(com.tools20022.repository.area.tsmt.AmendmentRejectionNotificationV03.mmNotificationIdentification,
-						com.tools20022.repository.area.tsmt.AmendmentRejectionNotificationV03.mmTransactionIdentification, com.tools20022.repository.area.tsmt.AmendmentRejectionNotificationV03.mmEstablishedBaselineIdentification,
-						com.tools20022.repository.area.tsmt.AmendmentRejectionNotificationV03.mmTransactionStatus, com.tools20022.repository.area.tsmt.AmendmentRejectionNotificationV03.mmUserTransactionReference,
-						com.tools20022.repository.area.tsmt.AmendmentRejectionNotificationV03.mmDeltaReportReference, com.tools20022.repository.area.tsmt.AmendmentRejectionNotificationV03.mmRejectedAmendmentNumber,
-						com.tools20022.repository.area.tsmt.AmendmentRejectionNotificationV03.mmInitiator, com.tools20022.repository.area.tsmt.AmendmentRejectionNotificationV03.mmRejectionReason,
-						com.tools20022.repository.area.tsmt.AmendmentRejectionNotificationV03.mmRequestForAction);
+				messageBuildingBlock_lazy = () -> Arrays.asList(AmendmentRejectionNotificationV03.mmNotificationIdentification, AmendmentRejectionNotificationV03.mmTransactionIdentification,
+						AmendmentRejectionNotificationV03.mmEstablishedBaselineIdentification, AmendmentRejectionNotificationV03.mmTransactionStatus, AmendmentRejectionNotificationV03.mmUserTransactionReference,
+						AmendmentRejectionNotificationV03.mmDeltaReportReference, AmendmentRejectionNotificationV03.mmRejectedAmendmentNumber, AmendmentRejectionNotificationV03.mmInitiator,
+						AmendmentRejectionNotificationV03.mmRejectionReason, AmendmentRejectionNotificationV03.mmRequestForAction);
 				messageDefinitionIdentifier_lazy = () -> new MMMessageDefinitionIdentifier() {
 					{
 						businessArea = "tsmt";

@@ -20,12 +20,14 @@ package com.tools20022.repository.msg;
 import com.tools20022.metamodel.MMMessageAssociationEnd;
 import com.tools20022.metamodel.MMMessageAttribute;
 import com.tools20022.metamodel.MMMessageComponent;
+import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.choice.Quantity1Choice;
 import com.tools20022.repository.codeset.PositionEffect1Code;
 import com.tools20022.repository.datatype.Max35Text;
 import com.tools20022.repository.datatype.PercentageRate;
 import com.tools20022.repository.datatype.YesNoIndicator;
 import com.tools20022.repository.entity.*;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.List;
@@ -136,7 +138,7 @@ public class InstrumentLeg3 {
 			componentContext_lazy = () -> InstrumentLeg3.mmObject();
 			isDerived = false;
 			xmlTag = "LegId";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "LegIdentification";
 			definition = "Used to identify a specific leg.";
 			maxOccurs = 1;
@@ -179,11 +181,11 @@ public class InstrumentLeg3 {
 	 */
 	public static final MMMessageAttribute mmLegOrderQuantity = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.SecuritiesOrder.mmOrderedQuantity;
+			businessElementTrace_lazy = () -> SecuritiesOrder.mmOrderedQuantity;
 			componentContext_lazy = () -> InstrumentLeg3.mmObject();
 			isDerived = false;
 			xmlTag = "LegOrdrQty";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "LegOrderQuantity";
 			definition = "Required for multileg Quote/Order and for each leg.";
 			maxOccurs = 1;
@@ -226,11 +228,11 @@ public class InstrumentLeg3 {
 	 */
 	public static final MMMessageAttribute mmLegPrice = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.SecuritiesPricing.mmPrice;
+			businessElementTrace_lazy = () -> SecuritiesPricing.mmPrice;
 			componentContext_lazy = () -> InstrumentLeg3.mmObject();
 			isDerived = false;
 			xmlTag = "LegPric";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "LegPrice";
 			definition = "Amount of money for which goods or services are offered, sold, or bought.";
 			maxOccurs = 1;
@@ -277,11 +279,11 @@ public class InstrumentLeg3 {
 	 */
 	public static final MMMessageAttribute mmLegOptionRatio = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Option.mmOptionRatio;
+			businessElementTrace_lazy = () -> Option.mmOptionRatio;
 			componentContext_lazy = () -> InstrumentLeg3.mmObject();
 			isDerived = false;
 			xmlTag = "LegOptnRatio";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "LegOptionRatio";
 			definition = "Expresses the risk of an option legValue must be between -1 and 1. A Call Option will require a ratio value between 0 and 1. A Put Option will require a ratio value between -1 and 0.";
 			maxOccurs = 1;
@@ -324,11 +326,11 @@ public class InstrumentLeg3 {
 	 */
 	public static final MMMessageAttribute mmLegPositionEffect = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.SecuritiesOrder.mmPositionEffect;
+			businessElementTrace_lazy = () -> SecuritiesOrder.mmPositionEffect;
 			componentContext_lazy = () -> InstrumentLeg3.mmObject();
 			isDerived = false;
 			xmlTag = "LegPosFct";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "LegPositionEffect";
 			definition = "PositionEffect for leg of a multileg.";
 			maxOccurs = 1;
@@ -374,11 +376,11 @@ public class InstrumentLeg3 {
 	 */
 	public static final MMMessageAttribute mmLegDerivativeCoveredIndicator = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Derivative.mmDerivativeCovered;
+			businessElementTrace_lazy = () -> Derivative.mmDerivativeCovered;
 			componentContext_lazy = () -> InstrumentLeg3.mmObject();
 			isDerived = false;
 			xmlTag = "LegDerivCvrdInd";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "LegDerivativeCoveredIndicator";
 			definition = "Indicates if the CoveredOrUncovered for the leg is different from that specified for the overall multileg security.";
 			maxOccurs = 1;
@@ -419,11 +421,11 @@ public class InstrumentLeg3 {
 	 */
 	public static final MMMessageAssociationEnd mmLegPreAllocationDetails = new MMMessageAssociationEnd() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.SecuritiesOrder.mmSecuritiesOrderAllocation;
+			businessElementTrace_lazy = () -> SecuritiesOrder.mmSecuritiesOrderAllocation;
 			componentContext_lazy = () -> InstrumentLeg3.mmObject();
 			isDerived = false;
 			xmlTag = "LegPreAllcnDtls";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "LegPreAllocationDetails";
 			definition = "Provides pre-allocation information for the order.";
 			maxOccurs = 1;
@@ -467,11 +469,11 @@ public class InstrumentLeg3 {
 	 */
 	public static final MMMessageAssociationEnd mmInstrumentLegDetails = new MMMessageAssociationEnd() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Security.mmIdentification;
+			businessElementTrace_lazy = () -> Security.mmIdentification;
 			componentContext_lazy = () -> InstrumentLeg3.mmObject();
 			isDerived = false;
 			xmlTag = "InstrmLegDtls";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "InstrumentLegDetails";
 			definition = "Provides details about the financial instrument of a particular leg.";
 			maxOccurs = 1;
@@ -517,11 +519,11 @@ public class InstrumentLeg3 {
 	 */
 	public static final MMMessageAssociationEnd mmLegFinancialInstrumentAttributes = new MMMessageAssociationEnd() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Leg.mmRelatedAsset;
+			businessElementTrace_lazy = () -> Leg.mmRelatedAsset;
 			componentContext_lazy = () -> InstrumentLeg3.mmObject();
 			isDerived = false;
 			xmlTag = "LegFinInstrmAttrbts";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "LegFinancialInstrumentAttributes";
 			definition = "Provides details about the financial instrument attibutes of a particular leg.";
 			maxOccurs = 1;
@@ -569,7 +571,7 @@ public class InstrumentLeg3 {
 			componentContext_lazy = () -> InstrumentLeg3.mmObject();
 			isDerived = false;
 			xmlTag = "TradgPties";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "TradingParties";
 			definition = "Parties used for acting parties that applies either to the whole message or to individual sides.";
 			minOccurs = 0;
@@ -617,7 +619,7 @@ public class InstrumentLeg3 {
 			componentContext_lazy = () -> InstrumentLeg3.mmObject();
 			isDerived = false;
 			xmlTag = "CshPties";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CashParties";
 			definition = "Payment processes required to transfer cash from the debtor to the creditor.";
 			maxOccurs = 1;
@@ -664,11 +666,11 @@ public class InstrumentLeg3 {
 	 */
 	public static final MMMessageAssociationEnd mmOtherBusinessParties = new MMMessageAssociationEnd() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Asset.mmAssetPartyRole;
+			businessElementTrace_lazy = () -> Asset.mmAssetPartyRole;
 			componentContext_lazy = () -> InstrumentLeg3.mmObject();
 			isDerived = false;
 			xmlTag = "OthrBizPties";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "OtherBusinessParties";
 			definition = "Chain of parties involved in the settlement of a transaction, including receipts and deliveries, book transfers, treasury deals, or other activities, resulting in the movement of a security or amount of money from one account to another.";
 			maxOccurs = 1;
@@ -719,7 +721,7 @@ public class InstrumentLeg3 {
 			componentContext_lazy = () -> InstrumentLeg3.mmObject();
 			isDerived = false;
 			xmlTag = "RcvgSttlmPties";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ReceivingSettlementParties";
 			definition = "Chain of parties involved in the settlement of a transaction, including receipts and deliveries, book transfers, treasury deals, or other activities, resulting in the movement of a security or amount of money from one account to another.";
 			maxOccurs = 1;
@@ -770,7 +772,7 @@ public class InstrumentLeg3 {
 			componentContext_lazy = () -> InstrumentLeg3.mmObject();
 			isDerived = false;
 			xmlTag = "DlvrgSttlmPties";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "DeliveringSettlementParties";
 			definition = "Chain of parties involved in the settlement of a transaction, including receipts and deliveries, book transfers, treasury deals, or other activities, resulting in the movement of a security or amount of money from one account to another.";
 			maxOccurs = 1;
@@ -812,7 +814,7 @@ public class InstrumentLeg3 {
 			componentContext_lazy = () -> InstrumentLeg3.mmObject();
 			isDerived = false;
 			xmlTag = "AmtsDtls";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AmountsDetails";
 			definition = "Amount of money debited and credited on the books of an account servicer.";
 			minOccurs = 0;
@@ -824,15 +826,12 @@ public class InstrumentLeg3 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.InstrumentLeg3.mmLegIdentification, com.tools20022.repository.msg.InstrumentLeg3.mmLegOrderQuantity,
-						com.tools20022.repository.msg.InstrumentLeg3.mmLegPrice, com.tools20022.repository.msg.InstrumentLeg3.mmLegOptionRatio, com.tools20022.repository.msg.InstrumentLeg3.mmLegPositionEffect,
-						com.tools20022.repository.msg.InstrumentLeg3.mmLegDerivativeCoveredIndicator, com.tools20022.repository.msg.InstrumentLeg3.mmLegPreAllocationDetails,
-						com.tools20022.repository.msg.InstrumentLeg3.mmInstrumentLegDetails, com.tools20022.repository.msg.InstrumentLeg3.mmLegFinancialInstrumentAttributes, com.tools20022.repository.msg.InstrumentLeg3.mmTradingParties,
-						com.tools20022.repository.msg.InstrumentLeg3.mmCashParties, com.tools20022.repository.msg.InstrumentLeg3.mmOtherBusinessParties, com.tools20022.repository.msg.InstrumentLeg3.mmReceivingSettlementParties,
-						com.tools20022.repository.msg.InstrumentLeg3.mmDeliveringSettlementParties, com.tools20022.repository.msg.InstrumentLeg3.mmAmountsDetails);
+				messageElement_lazy = () -> Arrays.asList(InstrumentLeg3.mmLegIdentification, InstrumentLeg3.mmLegOrderQuantity, InstrumentLeg3.mmLegPrice, InstrumentLeg3.mmLegOptionRatio, InstrumentLeg3.mmLegPositionEffect,
+						InstrumentLeg3.mmLegDerivativeCoveredIndicator, InstrumentLeg3.mmLegPreAllocationDetails, InstrumentLeg3.mmInstrumentLegDetails, InstrumentLeg3.mmLegFinancialInstrumentAttributes, InstrumentLeg3.mmTradingParties,
+						InstrumentLeg3.mmCashParties, InstrumentLeg3.mmOtherBusinessParties, InstrumentLeg3.mmReceivingSettlementParties, InstrumentLeg3.mmDeliveringSettlementParties, InstrumentLeg3.mmAmountsDetails);
 				trace_lazy = () -> Leg.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 				name = "InstrumentLeg3";
 				definition = "Additionnal details related to the leg.";
 			}

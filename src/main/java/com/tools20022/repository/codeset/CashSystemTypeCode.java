@@ -19,6 +19,8 @@ package com.tools20022.repository.codeset;
 
 import com.tools20022.metamodel.MMCode;
 import com.tools20022.metamodel.MMCodeSet;
+import com.tools20022.metamodel.MMRegistrationStatus;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -89,7 +91,7 @@ public class CashSystemTypeCode {
 	 */
 	public static final MMCode mmACH = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "ACH";
 			definition = "Automated Clearing House. Payment system that clears cash transfers and settles the proceeds in a lump sum, usually on a multilateral netting basis.";
 			owner_lazy = () -> CashSystemTypeCode.mmObject();
@@ -122,7 +124,7 @@ public class CashSystemTypeCode {
 	 */
 	public static final MMCode mmChequeClearing = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "ChequeClearing";
 			definition = "Payment system that clears physical or truncated cheques and settles the proceeds in a lump sum, usually on a multilateral netting basis.";
 			owner_lazy = () -> CashSystemTypeCode.mmObject();
@@ -155,7 +157,7 @@ public class CashSystemTypeCode {
 	 */
 	public static final MMCode mmRTGS = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "RTGS";
 			definition = "Real Time Gross Settlement System. Payment system that simultaneously clears individual transfers and settles them in central bank money.";
 			owner_lazy = () -> CashSystemTypeCode.mmObject();
@@ -166,12 +168,12 @@ public class CashSystemTypeCode {
 	static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
 				example = Arrays.asList("ACHS");
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "CashSystemTypeCode";
 				definition = "Specifies a type of payment system.";
-				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.CashSystemTypeCode.mmACH, com.tools20022.repository.codeset.CashSystemTypeCode.mmChequeClearing, com.tools20022.repository.codeset.CashSystemTypeCode.mmRTGS);
+				code_lazy = () -> Arrays.asList(CashSystemTypeCode.mmACH, CashSystemTypeCode.mmChequeClearing, CashSystemTypeCode.mmRTGS);
 			}
 		});
 		return mmObject_lazy.get();

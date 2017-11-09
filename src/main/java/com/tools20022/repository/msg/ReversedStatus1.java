@@ -17,15 +17,14 @@
 
 package com.tools20022.repository.msg;
 
-import com.tools20022.metamodel.MMMessageAssociationEnd;
-import com.tools20022.metamodel.MMMessageAttribute;
-import com.tools20022.metamodel.MMMessageComponent;
-import com.tools20022.metamodel.MMXor;
+import com.tools20022.metamodel.*;
 import com.tools20022.repository.choice.ReversedStatus2Choice;
 import com.tools20022.repository.codeset.NoReasonCode;
 import com.tools20022.repository.datatype.Max350Text;
 import com.tools20022.repository.entity.GenericIdentification;
 import com.tools20022.repository.entity.SecuritiesTradeStatusReason;
+import com.tools20022.repository.entity.StatusReason;
+import com.tools20022.repository.GeneratedRepository;
 import java.text.DateFormat;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
@@ -129,10 +128,10 @@ public class ReversedStatus1 {
 			componentContext_lazy = () -> ReversedStatus1.mmObject();
 			isDerived = false;
 			xmlTag = "Rsn";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Reason";
 			definition = "Reason for the reversal status.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.choice.ReversedStatus2Choice.mmReason);
+			nextVersions_lazy = () -> Arrays.asList(ReversedStatus2Choice.mmReason);
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> Max350Text.mmObject();
@@ -185,10 +184,10 @@ public class ReversedStatus1 {
 			componentContext_lazy = () -> ReversedStatus1.mmObject();
 			isDerived = false;
 			xmlTag = "DataSrcSchme";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "DataSourceScheme";
 			definition = "Proprietary identification of the reason for the reversed status.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.choice.ReversedStatus2Choice.mmDataSourceScheme);
+			nextVersions_lazy = () -> Arrays.asList(ReversedStatus2Choice.mmDataSourceScheme);
 			maxOccurs = 1;
 			minOccurs = 1;
 			isComposite = true;
@@ -239,14 +238,14 @@ public class ReversedStatus1 {
 	 */
 	public static final MMMessageAttribute mmNoSpecifiedReason = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.StatusReason.mmNoSpecifiedReason;
+			businessElementTrace_lazy = () -> StatusReason.mmNoSpecifiedReason;
 			componentContext_lazy = () -> ReversedStatus1.mmObject();
 			isDerived = false;
 			xmlTag = "NoSpcfdRsn";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "NoSpecifiedReason";
 			definition = "Indicates that there is no reason available or to report.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.choice.ReversedStatus2Choice.mmNoSpecifiedReason);
+			nextVersions_lazy = () -> Arrays.asList(ReversedStatus2Choice.mmNoSpecifiedReason);
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> NoReasonCode.mmObject();
@@ -258,6 +257,10 @@ public class ReversedStatus1 {
 	 * <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
+	 * <li>{@linkplain com.tools20022.metamodel.MMXor#getMessageComponent
+	 * messageComponent} =
+	 * {@linkplain com.tools20022.repository.msg.ReversedStatus1
+	 * ReversedStatus1}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMXor#getImpactedElements
 	 * impactedElements} =
 	 * <ul>
@@ -271,10 +274,6 @@ public class ReversedStatus1 {
 	 * ReversedStatus1.mmNoSpecifiedReason}</li>
 	 * </ul>
 	 * </li>
-	 * <li>{@linkplain com.tools20022.metamodel.MMXor#getMessageComponent
-	 * messageComponent} =
-	 * {@linkplain com.tools20022.repository.msg.ReversedStatus1
-	 * ReversedStatus1}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
@@ -290,23 +289,21 @@ public class ReversedStatus1 {
 	 */
 	public static final MMXor mmReasonOrDataSourceSchemeOrNoSpecifiedReasonRule = new MMXor() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ReasonOrDataSourceSchemeOrNoSpecifiedReasonRule";
 			definition = "One and only one message element in the list (Reason, DataSourceScheme, NoSpecifiedReason) must be present.";
 			messageComponent_lazy = () -> ReversedStatus1.mmObject();
-			impactedElements_lazy = () -> Arrays.asList(com.tools20022.repository.msg.ReversedStatus1.mmReason, com.tools20022.repository.msg.ReversedStatus1.mmDataSourceScheme,
-					com.tools20022.repository.msg.ReversedStatus1.mmNoSpecifiedReason);
+			impactedElements_lazy = () -> Arrays.asList(ReversedStatus1.mmReason, ReversedStatus1.mmDataSourceScheme, ReversedStatus1.mmNoSpecifiedReason);
 		}
 	};
 
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.ReversedStatus1.mmReason, com.tools20022.repository.msg.ReversedStatus1.mmDataSourceScheme,
-						com.tools20022.repository.msg.ReversedStatus1.mmNoSpecifiedReason);
+				messageElement_lazy = () -> Arrays.asList(ReversedStatus1.mmReason, ReversedStatus1.mmDataSourceScheme, ReversedStatus1.mmNoSpecifiedReason);
 				trace_lazy = () -> SecuritiesTradeStatusReason.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.OBSOLETE;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.OBSOLETE;
 				removalDate = ((Supplier<Date>) (() -> {
 					try {
 						return DateFormat.getDateInstance(java.text.DateFormat.LONG).parse("September 9, 2016");
@@ -317,7 +314,7 @@ public class ReversedStatus1 {
 				name = "ReversedStatus1";
 				definition = "Reason for the reversed status.";
 				nextVersions_lazy = () -> Arrays.asList(ReversedStatus2Choice.mmObject());
-				xors_lazy = () -> Arrays.asList(com.tools20022.repository.msg.ReversedStatus1.mmReasonOrDataSourceSchemeOrNoSpecifiedReasonRule);
+				xors_lazy = () -> Arrays.asList(ReversedStatus1.mmReasonOrDataSourceSchemeOrNoSpecifiedReasonRule);
 			}
 		});
 		return mmObject_lazy.get();

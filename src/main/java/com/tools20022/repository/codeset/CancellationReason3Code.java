@@ -19,7 +19,9 @@ package com.tools20022.repository.codeset;
 
 import com.tools20022.metamodel.MMCode;
 import com.tools20022.metamodel.MMCodeSet;
+import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.codeset.CancellationReasonCode;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -101,7 +103,7 @@ public class CancellationReason3Code extends CancellationReasonCode {
 	 */
 	public static final MMCode mmRequestedByCustomer = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "RequestedByCustomer";
 			owner_lazy = () -> CancellationReason3Code.mmObject();
 		}
@@ -124,7 +126,7 @@ public class CancellationReason3Code extends CancellationReasonCode {
 	 */
 	public static final MMCode mmDuplicatePayment = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "DuplicatePayment";
 			owner_lazy = () -> CancellationReason3Code.mmObject();
 		}
@@ -147,7 +149,7 @@ public class CancellationReason3Code extends CancellationReasonCode {
 	 */
 	public static final MMCode mmIncorrectAgent = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "IncorrectAgent";
 			owner_lazy = () -> CancellationReason3Code.mmObject();
 		}
@@ -170,7 +172,7 @@ public class CancellationReason3Code extends CancellationReasonCode {
 	 */
 	public static final MMCode mmIncorrectCurrency = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "IncorrectCurrency";
 			owner_lazy = () -> CancellationReason3Code.mmObject();
 		}
@@ -193,7 +195,7 @@ public class CancellationReason3Code extends CancellationReasonCode {
 	 */
 	public static final MMCode mmUnduePayment = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "UnduePayment";
 			owner_lazy = () -> CancellationReason3Code.mmObject();
 		}
@@ -216,7 +218,7 @@ public class CancellationReason3Code extends CancellationReasonCode {
 	 */
 	public static final MMCode mmInsufficientDebtorDetails = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "InsufficientDebtorDetails";
 			owner_lazy = () -> CancellationReason3Code.mmObject();
 		}
@@ -239,7 +241,7 @@ public class CancellationReason3Code extends CancellationReasonCode {
 	 */
 	public static final MMCode mmInsufficientCreditorDetails = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "InsufficientCreditorDetails";
 			owner_lazy = () -> CancellationReason3Code.mmObject();
 		}
@@ -248,15 +250,13 @@ public class CancellationReason3Code extends CancellationReasonCode {
 	static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
 				example = Arrays.asList("CUST");
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "CancellationReason3Code";
 				definition = "Specifies the reason for requesting the cancellation of a payment instruction.";
-				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.CancellationReason3Code.mmRequestedByCustomer, com.tools20022.repository.codeset.CancellationReason3Code.mmDuplicatePayment,
-						com.tools20022.repository.codeset.CancellationReason3Code.mmIncorrectAgent, com.tools20022.repository.codeset.CancellationReason3Code.mmIncorrectCurrency,
-						com.tools20022.repository.codeset.CancellationReason3Code.mmUnduePayment, com.tools20022.repository.codeset.CancellationReason3Code.mmInsufficientDebtorDetails,
-						com.tools20022.repository.codeset.CancellationReason3Code.mmInsufficientCreditorDetails);
+				code_lazy = () -> Arrays.asList(CancellationReason3Code.mmRequestedByCustomer, CancellationReason3Code.mmDuplicatePayment, CancellationReason3Code.mmIncorrectAgent, CancellationReason3Code.mmIncorrectCurrency,
+						CancellationReason3Code.mmUnduePayment, CancellationReason3Code.mmInsufficientDebtorDetails, CancellationReason3Code.mmInsufficientCreditorDetails);
 				trace_lazy = () -> CancellationReasonCode.mmObject();
 			}
 		});

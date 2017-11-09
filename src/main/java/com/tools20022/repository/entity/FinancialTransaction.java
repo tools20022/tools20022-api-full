@@ -17,8 +17,12 @@
 
 package com.tools20022.repository.entity;
 
+import com.tools20022.metamodel.MMAggregation;
 import com.tools20022.metamodel.MMBusinessAssociationEnd;
 import com.tools20022.metamodel.MMBusinessComponent;
+import com.tools20022.metamodel.MMRegistrationStatus;
+import com.tools20022.repository.GeneratedRepository;
+import com.tools20022.repository.msg.*;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.List;
@@ -33,29 +37,6 @@ import java.util.List;
  * <p>
  * <strong>Constant fields:</strong>
  * <ul>
- * <li>{@linkplain com.tools20022.metamodel.MMBusinessComponent#getElement
- * element} =
- * <ul>
- * <li>
- * {@linkplain com.tools20022.repository.entity.FinancialTransaction#mmCorporateActionDistribution
- * FinancialTransaction.mmCorporateActionDistribution}</li>
- * <li>
- * {@linkplain com.tools20022.repository.entity.FinancialTransaction#mmInterestManagement
- * FinancialTransaction.mmInterestManagement}</li>
- * <li>
- * {@linkplain com.tools20022.repository.entity.FinancialTransaction#mmTrade
- * FinancialTransaction.mmTrade}</li>
- * <li>
- * {@linkplain com.tools20022.repository.entity.FinancialTransaction#mmCollateralMovement
- * FinancialTransaction.mmCollateralMovement}</li>
- * <li>
- * {@linkplain com.tools20022.repository.entity.FinancialTransaction#mmBankingTransaction
- * FinancialTransaction.mmBankingTransaction}</li>
- * <li>
- * {@linkplain com.tools20022.repository.entity.FinancialTransaction#mmRegulatoryReport
- * FinancialTransaction.mmRegulatoryReport}</li>
- * </ul>
- * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMBusinessComponent#getAssociationDomain
  * associationDomain} =
@@ -78,6 +59,29 @@ import java.util.List;
  * <li>
  * {@linkplain com.tools20022.repository.entity.InterestManagement#mmFinancialTransaction
  * InterestManagement.mmFinancialTransaction}</li>
+ * </ul>
+ * </li>
+ * <li>{@linkplain com.tools20022.metamodel.MMBusinessComponent#getElement
+ * element} =
+ * <ul>
+ * <li>
+ * {@linkplain com.tools20022.repository.entity.FinancialTransaction#mmCorporateActionDistribution
+ * FinancialTransaction.mmCorporateActionDistribution}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.entity.FinancialTransaction#mmInterestManagement
+ * FinancialTransaction.mmInterestManagement}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.entity.FinancialTransaction#mmTrade
+ * FinancialTransaction.mmTrade}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.entity.FinancialTransaction#mmCollateralMovement
+ * FinancialTransaction.mmCollateralMovement}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.entity.FinancialTransaction#mmBankingTransaction
+ * FinancialTransaction.mmBankingTransaction}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.entity.FinancialTransaction#mmRegulatoryReport
+ * FinancialTransaction.mmRegulatoryReport}</li>
  * </ul>
  * </li>
  * <li>
@@ -139,13 +143,13 @@ public class FinancialTransaction {
 		{
 			elementContext_lazy = () -> FinancialTransaction.mmObject();
 			isDerived = false;
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "CorporateActionDistribution";
 			definition = "Distribution of the proceeds of a CA event.";
 			maxOccurs = 1;
 			minOccurs = 1;
 			opposite_lazy = () -> com.tools20022.repository.entity.CorporateActionDistribution.mmFinancialTransaction;
-			aggregation = com.tools20022.metamodel.MMAggregation.NONE;
+			aggregation = MMAggregation.NONE;
 			type_lazy = () -> com.tools20022.repository.entity.CorporateActionDistribution.mmObject();
 		}
 	};
@@ -190,13 +194,13 @@ public class FinancialTransaction {
 		{
 			elementContext_lazy = () -> FinancialTransaction.mmObject();
 			isDerived = false;
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "InterestManagement";
 			definition = "Management of interest which consists into calculating the interest, requesting its payment or distributing the interest proceeds.";
 			maxOccurs = 1;
 			minOccurs = 1;
 			opposite_lazy = () -> com.tools20022.repository.entity.InterestManagement.mmFinancialTransaction;
-			aggregation = com.tools20022.metamodel.MMAggregation.NONE;
+			aggregation = MMAggregation.NONE;
 			type_lazy = () -> com.tools20022.repository.entity.InterestManagement.mmObject();
 		}
 	};
@@ -237,13 +241,13 @@ public class FinancialTransaction {
 		{
 			elementContext_lazy = () -> FinancialTransaction.mmObject();
 			isDerived = false;
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "Trade";
 			definition = "Agreement between two parties to buy and sell assets.";
 			maxOccurs = 1;
 			minOccurs = 1;
 			opposite_lazy = () -> com.tools20022.repository.entity.Trade.mmFinancialTransaction;
-			aggregation = com.tools20022.metamodel.MMAggregation.NONE;
+			aggregation = MMAggregation.NONE;
 			type_lazy = () -> com.tools20022.repository.entity.Trade.mmObject();
 		}
 	};
@@ -286,13 +290,13 @@ public class FinancialTransaction {
 		{
 			elementContext_lazy = () -> FinancialTransaction.mmObject();
 			isDerived = false;
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CollateralMovement";
 			definition = "Collateral in or out as a result of collateral management.";
 			maxOccurs = 1;
 			minOccurs = 1;
 			opposite_lazy = () -> com.tools20022.repository.entity.CollateralMovement.mmFinancialTransaction;
-			aggregation = com.tools20022.metamodel.MMAggregation.NONE;
+			aggregation = MMAggregation.NONE;
 			type_lazy = () -> com.tools20022.repository.entity.CollateralMovement.mmObject();
 		}
 	};
@@ -337,13 +341,13 @@ public class FinancialTransaction {
 		{
 			elementContext_lazy = () -> FinancialTransaction.mmObject();
 			isDerived = false;
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "BankingTransaction";
 			definition = "Transaction executed by the client of a financial institution from/to the account serviced by the financial institution, such as mortgage payment.";
 			maxOccurs = 1;
 			minOccurs = 1;
 			opposite_lazy = () -> com.tools20022.repository.entity.BankingTransaction.mmFinancialTransaction;
-			aggregation = com.tools20022.metamodel.MMAggregation.NONE;
+			aggregation = MMAggregation.NONE;
 			type_lazy = () -> com.tools20022.repository.entity.BankingTransaction.mmObject();
 		}
 	};
@@ -502,33 +506,25 @@ public class FinancialTransaction {
 	 */
 	public static final MMBusinessAssociationEnd mmRegulatoryReport = new MMBusinessAssociationEnd() {
 		{
-			derivation_lazy = () -> Arrays.asList(com.tools20022.repository.msg.CreditTransferTransactionInformation1.mmRegulatoryReporting, com.tools20022.repository.msg.CreditTransferTransactionInformation10.mmRegulatoryReporting,
-					com.tools20022.repository.msg.CreditTransferTransaction1.mmRegulatoryReporting, com.tools20022.repository.msg.CreditTransferTransaction6.mmRegulatoryReporting,
-					com.tools20022.repository.msg.DirectDebitTransactionInformation1.mmRegulatoryReporting, com.tools20022.repository.msg.DirectDebitTransactionInformation9.mmRegulatoryReporting,
-					com.tools20022.repository.msg.DirectDebitTransactionInformation11.mmRegulatoryReporting, com.tools20022.repository.msg.DirectDebitTransactionInformation13.mmRegulatoryReporting,
-					com.tools20022.repository.msg.CreditTransferTransactionInformation2.mmRegulatoryReporting, com.tools20022.repository.msg.CreditTransferTransactionInformation11.mmRegulatoryReporting,
-					com.tools20022.repository.msg.CreditTransferTransaction2.mmRegulatoryReporting, com.tools20022.repository.msg.CreditTransferTransaction7.mmRegulatoryReporting,
-					com.tools20022.repository.msg.DirectDebitTransactionInformation2.mmRegulatoryReporting, com.tools20022.repository.msg.DirectDebitTransactionInformation10.mmRegulatoryReporting,
-					com.tools20022.repository.msg.DirectDebitTransactionInformation12.mmRegulatoryReporting, com.tools20022.repository.msg.DirectDebitTransactionInformation14.mmRegulatoryReporting,
-					com.tools20022.repository.msg.TradeData8.mmRegulatoryReporting, com.tools20022.repository.msg.CreditTransferTransactionInformation14.mmRegulatoryReporting,
-					com.tools20022.repository.msg.CreditTransferTransaction5.mmRegulatoryReporting, com.tools20022.repository.msg.CreditTransferTransaction10.mmRegulatoryReporting,
-					com.tools20022.repository.msg.CreditTransferTransactionInformation7.mmRegulatoryReporting, com.tools20022.repository.msg.CreditTransferTransactionInformation9.mmRegulatoryReporting,
-					com.tools20022.repository.msg.DirectDebitTransactionInformation6.mmRegulatoryReporting, com.tools20022.repository.msg.DirectDebitTransactionInformation8.mmRegulatoryReporting,
-					com.tools20022.repository.msg.TradeData11.mmRegulatoryReporting, com.tools20022.repository.msg.CreditTransferTransaction19.mmRegulatoryReporting,
-					com.tools20022.repository.msg.DirectDebitTransactionInformation17.mmRegulatoryReporting, com.tools20022.repository.msg.DirectDebitTransactionInformation18.mmRegulatoryReporting,
-					com.tools20022.repository.msg.CreditTransferTransaction20.mmRegulatoryReporting, com.tools20022.repository.msg.CreditTransferTransaction21.mmRegulatoryReporting,
-					com.tools20022.repository.msg.CreditTransferTransaction25.mmRegulatoryReporting, com.tools20022.repository.msg.DirectDebitTransactionInformation20.mmRegulatoryReporting,
-					com.tools20022.repository.msg.CreditTransferTransaction26.mmRegulatoryReporting, com.tools20022.repository.msg.DirectDebitTransactionInformation19.mmRegulatoryReporting,
-					com.tools20022.repository.msg.CreditTransferTransaction22.mmRegulatoryReporting, com.tools20022.repository.msg.DirectDebitTransactionInformation21.mmRegulatoryReporting,
-					com.tools20022.repository.msg.DirectDebitTransactionInformation22.mmRegulatoryReporting);
+			derivation_lazy = () -> Arrays.asList(CreditTransferTransactionInformation1.mmRegulatoryReporting, CreditTransferTransactionInformation10.mmRegulatoryReporting, CreditTransferTransaction1.mmRegulatoryReporting,
+					CreditTransferTransaction6.mmRegulatoryReporting, DirectDebitTransactionInformation1.mmRegulatoryReporting, DirectDebitTransactionInformation9.mmRegulatoryReporting,
+					DirectDebitTransactionInformation11.mmRegulatoryReporting, DirectDebitTransactionInformation13.mmRegulatoryReporting, CreditTransferTransactionInformation2.mmRegulatoryReporting,
+					CreditTransferTransactionInformation11.mmRegulatoryReporting, CreditTransferTransaction2.mmRegulatoryReporting, CreditTransferTransaction7.mmRegulatoryReporting, DirectDebitTransactionInformation2.mmRegulatoryReporting,
+					DirectDebitTransactionInformation10.mmRegulatoryReporting, DirectDebitTransactionInformation12.mmRegulatoryReporting, DirectDebitTransactionInformation14.mmRegulatoryReporting, TradeData8.mmRegulatoryReporting,
+					CreditTransferTransactionInformation14.mmRegulatoryReporting, CreditTransferTransaction5.mmRegulatoryReporting, CreditTransferTransaction10.mmRegulatoryReporting,
+					CreditTransferTransactionInformation7.mmRegulatoryReporting, CreditTransferTransactionInformation9.mmRegulatoryReporting, DirectDebitTransactionInformation6.mmRegulatoryReporting,
+					DirectDebitTransactionInformation8.mmRegulatoryReporting, TradeData11.mmRegulatoryReporting, CreditTransferTransaction19.mmRegulatoryReporting, DirectDebitTransactionInformation17.mmRegulatoryReporting,
+					DirectDebitTransactionInformation18.mmRegulatoryReporting, CreditTransferTransaction20.mmRegulatoryReporting, CreditTransferTransaction21.mmRegulatoryReporting, CreditTransferTransaction25.mmRegulatoryReporting,
+					DirectDebitTransactionInformation20.mmRegulatoryReporting, CreditTransferTransaction26.mmRegulatoryReporting, DirectDebitTransactionInformation19.mmRegulatoryReporting, CreditTransferTransaction22.mmRegulatoryReporting,
+					DirectDebitTransactionInformation21.mmRegulatoryReporting, DirectDebitTransactionInformation22.mmRegulatoryReporting);
 			elementContext_lazy = () -> FinancialTransaction.mmObject();
 			isDerived = false;
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "RegulatoryReport";
 			definition = "Information related to a trade and that has to be reported to a regulatory authority.";
 			minOccurs = 0;
 			opposite_lazy = () -> com.tools20022.repository.entity.RegulatoryReport.mmReportedTransaction;
-			aggregation = com.tools20022.metamodel.MMAggregation.NONE;
+			aggregation = MMAggregation.NONE;
 			type_lazy = () -> com.tools20022.repository.entity.RegulatoryReport.mmObject();
 		}
 	};
@@ -536,16 +532,15 @@ public class FinancialTransaction {
 	static public MMBusinessComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMBusinessComponent() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "FinancialTransaction";
 				definition = "Process which includes the order, the execution, the settlement of trades in the financial domain.";
 				associationDomain_lazy = () -> Arrays.asList(com.tools20022.repository.entity.Trade.mmFinancialTransaction, com.tools20022.repository.entity.CorporateActionDistribution.mmFinancialTransaction,
 						com.tools20022.repository.entity.RegulatoryReport.mmReportedTransaction, com.tools20022.repository.entity.CollateralMovement.mmFinancialTransaction,
 						com.tools20022.repository.entity.BankingTransaction.mmFinancialTransaction, com.tools20022.repository.entity.InterestManagement.mmFinancialTransaction);
-				element_lazy = () -> Arrays.asList(com.tools20022.repository.entity.FinancialTransaction.mmCorporateActionDistribution, com.tools20022.repository.entity.FinancialTransaction.mmInterestManagement,
-						com.tools20022.repository.entity.FinancialTransaction.mmTrade, com.tools20022.repository.entity.FinancialTransaction.mmCollateralMovement, com.tools20022.repository.entity.FinancialTransaction.mmBankingTransaction,
-						com.tools20022.repository.entity.FinancialTransaction.mmRegulatoryReport);
+				element_lazy = () -> Arrays.asList(FinancialTransaction.mmCorporateActionDistribution, FinancialTransaction.mmInterestManagement, FinancialTransaction.mmTrade, FinancialTransaction.mmCollateralMovement,
+						FinancialTransaction.mmBankingTransaction, FinancialTransaction.mmRegulatoryReport);
 			}
 		});
 		return mmObject_lazy.get();

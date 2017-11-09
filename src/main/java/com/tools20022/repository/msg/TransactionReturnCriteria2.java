@@ -19,6 +19,8 @@ package com.tools20022.repository.msg;
 
 import com.tools20022.metamodel.MMMessageAssociationEnd;
 import com.tools20022.metamodel.MMMessageComponent;
+import com.tools20022.metamodel.MMRegistrationStatus;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -97,7 +99,7 @@ public class TransactionReturnCriteria2 {
 			componentContext_lazy = () -> TransactionReturnCriteria2.mmObject();
 			isDerived = false;
 			xmlTag = "PmtToRtrCrit";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PaymentToReturnCriteria";
 			definition = "Destination of the payment (be it a member or a system or both).";
 			maxOccurs = 1;
@@ -139,7 +141,7 @@ public class TransactionReturnCriteria2 {
 			componentContext_lazy = () -> TransactionReturnCriteria2.mmObject();
 			isDerived = false;
 			xmlTag = "PmtFrRtrCrit";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PaymentFromReturnCriteria";
 			definition = "Origin of the payment (be it a member or a system or both).";
 			maxOccurs = 1;
@@ -181,7 +183,7 @@ public class TransactionReturnCriteria2 {
 			componentContext_lazy = () -> TransactionReturnCriteria2.mmObject();
 			isDerived = false;
 			xmlTag = "AcctCshNtryRtrCrit";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AccountCashEntryReturnCriteria";
 			definition = "Defines the criteria used to report on the cash entry.";
 			maxOccurs = 1;
@@ -222,7 +224,7 @@ public class TransactionReturnCriteria2 {
 			componentContext_lazy = () -> TransactionReturnCriteria2.mmObject();
 			isDerived = false;
 			xmlTag = "PmtRtrCrit";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PaymentReturnCriteria";
 			definition = "Defines the criteria used to report on the payment.";
 			maxOccurs = 1;
@@ -235,10 +237,10 @@ public class TransactionReturnCriteria2 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.TransactionReturnCriteria2.mmPaymentToReturnCriteria, com.tools20022.repository.msg.TransactionReturnCriteria2.mmPaymentFromReturnCriteria,
-						com.tools20022.repository.msg.TransactionReturnCriteria2.mmAccountCashEntryReturnCriteria, com.tools20022.repository.msg.TransactionReturnCriteria2.mmPaymentReturnCriteria);
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+				messageElement_lazy = () -> Arrays.asList(TransactionReturnCriteria2.mmPaymentToReturnCriteria, TransactionReturnCriteria2.mmPaymentFromReturnCriteria, TransactionReturnCriteria2.mmAccountCashEntryReturnCriteria,
+						TransactionReturnCriteria2.mmPaymentReturnCriteria);
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 				name = "TransactionReturnCriteria2";
 				definition = "Defines the criteria used to report on a payment transaction.";
 			}

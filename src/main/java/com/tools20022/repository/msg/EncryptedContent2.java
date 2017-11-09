@@ -20,8 +20,10 @@ package com.tools20022.repository.msg;
 import com.tools20022.metamodel.MMMessageAssociationEnd;
 import com.tools20022.metamodel.MMMessageAttribute;
 import com.tools20022.metamodel.MMMessageComponent;
+import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.codeset.ContentType1Code;
 import com.tools20022.repository.datatype.Max10000Binary;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -116,10 +118,10 @@ public class EncryptedContent2 {
 			componentContext_lazy = () -> EncryptedContent2.mmObject();
 			isDerived = false;
 			xmlTag = "CnttTp";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ContentType";
 			definition = "Type of data which have been encrypted.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.EncryptedContent3.mmContentType);
+			nextVersions_lazy = () -> Arrays.asList(EncryptedContent3.mmContentType);
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> ContentType1Code.mmObject();
@@ -166,10 +168,10 @@ public class EncryptedContent2 {
 			componentContext_lazy = () -> EncryptedContent2.mmObject();
 			isDerived = false;
 			xmlTag = "CnttNcrptnAlgo";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ContentEncryptionAlgorithm";
 			definition = "Algorithm used to encrypt the data.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.EncryptedContent3.mmContentEncryptionAlgorithm);
+			nextVersions_lazy = () -> Arrays.asList(EncryptedContent3.mmContentEncryptionAlgorithm);
 			maxOccurs = 1;
 			minOccurs = 1;
 			isComposite = true;
@@ -218,10 +220,10 @@ public class EncryptedContent2 {
 			componentContext_lazy = () -> EncryptedContent2.mmObject();
 			isDerived = false;
 			xmlTag = "NcrptdData";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "EncryptedData";
 			definition = "Encrypted data, result of the content encryption.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.EncryptedContent3.mmEncryptedData);
+			nextVersions_lazy = () -> Arrays.asList(EncryptedContent3.mmEncryptedData);
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> Max10000Binary.mmObject();
@@ -231,10 +233,9 @@ public class EncryptedContent2 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.EncryptedContent2.mmContentType, com.tools20022.repository.msg.EncryptedContent2.mmContentEncryptionAlgorithm,
-						com.tools20022.repository.msg.EncryptedContent2.mmEncryptedData);
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				messageElement_lazy = () -> Arrays.asList(EncryptedContent2.mmContentType, EncryptedContent2.mmContentEncryptionAlgorithm, EncryptedContent2.mmEncryptedData);
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "EncryptedContent2";
 				definition = "Encrypted data with an encryption key.";
 				nextVersions_lazy = () -> Arrays.asList(EncryptedContent3.mmObject());

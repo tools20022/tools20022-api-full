@@ -19,7 +19,11 @@ package com.tools20022.repository.msg;
 
 import com.tools20022.metamodel.MMMessageAssociationEnd;
 import com.tools20022.metamodel.MMMessageComponent;
+import com.tools20022.metamodel.MMRegistrationStatus;
+import com.tools20022.repository.area.catm.ManagementPlanReplacementV01;
+import com.tools20022.repository.entity.SystemIdentification;
 import com.tools20022.repository.entity.TerminalManagementAction;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.List;
@@ -120,11 +124,11 @@ public class ManagementPlan1 {
 	 */
 	public static final MMMessageAssociationEnd mmPOIIdentification = new MMMessageAssociationEnd() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.SystemIdentification.mmIdentification;
+			businessElementTrace_lazy = () -> SystemIdentification.mmIdentification;
 			componentContext_lazy = () -> ManagementPlan1.mmObject();
 			isDerived = false;
 			xmlTag = "POIId";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "POIIdentification";
 			definition = "Identification of the point of interaction for terminal management.";
 			maxOccurs = 1;
@@ -171,11 +175,11 @@ public class ManagementPlan1 {
 	 */
 	public static final MMMessageAssociationEnd mmTerminalManagerIdentification = new MMMessageAssociationEnd() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.SystemIdentification.mmIdentification;
+			businessElementTrace_lazy = () -> SystemIdentification.mmIdentification;
 			componentContext_lazy = () -> ManagementPlan1.mmObject();
 			isDerived = false;
 			xmlTag = "TermnlMgrId";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "TerminalManagerIdentification";
 			definition = "Identification of the terminal management system (TMS) sending the management plan.";
 			maxOccurs = 1;
@@ -226,7 +230,7 @@ public class ManagementPlan1 {
 			componentContext_lazy = () -> ManagementPlan1.mmObject();
 			isDerived = false;
 			xmlTag = "DataSet";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "DataSet";
 			definition = "Data set related to the sequence of actions to be performed by a point of interaction (POI).";
 			minOccurs = 1;
@@ -238,12 +242,11 @@ public class ManagementPlan1 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.ManagementPlan1.mmPOIIdentification, com.tools20022.repository.msg.ManagementPlan1.mmTerminalManagerIdentification,
-						com.tools20022.repository.msg.ManagementPlan1.mmDataSet);
-				messageBuildingBlock_lazy = () -> Arrays.asList(com.tools20022.repository.area.catm.ManagementPlanReplacementV01.mmManagementPlan);
+				messageElement_lazy = () -> Arrays.asList(ManagementPlan1.mmPOIIdentification, ManagementPlan1.mmTerminalManagerIdentification, ManagementPlan1.mmDataSet);
+				messageBuildingBlock_lazy = () -> Arrays.asList(ManagementPlanReplacementV01.mmManagementPlan);
 				trace_lazy = () -> TerminalManagementAction.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "ManagementPlan1";
 				definition = "Sequence of terminal management actions to be performed by a point of interaction (POI).";
 				nextVersions_lazy = () -> Arrays.asList(ManagementPlan2.mmObject());

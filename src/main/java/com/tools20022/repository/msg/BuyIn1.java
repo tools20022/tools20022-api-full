@@ -19,9 +19,11 @@ package com.tools20022.repository.msg;
 
 import com.tools20022.metamodel.MMMessageAttribute;
 import com.tools20022.metamodel.MMMessageComponent;
+import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.choice.DateFormat15Choice;
 import com.tools20022.repository.datatype.YesNoIndicator;
 import com.tools20022.repository.entity.BuyIn;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -110,10 +112,10 @@ public class BuyIn1 {
 			componentContext_lazy = () -> BuyIn1.mmObject();
 			isDerived = false;
 			xmlTag = "WrngInd";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "WarningIndicator";
 			definition = "Indicates whether the message is a warning only or a notification.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.BuyIn4.mmWarningIndicator);
+			nextVersions_lazy = () -> Arrays.asList(BuyIn4.mmWarningIndicator);
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> YesNoIndicator.mmObject();
@@ -161,14 +163,14 @@ public class BuyIn1 {
 	 */
 	public static final MMMessageAttribute mmExpectedBuyInDate = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.BuyIn.mmBuyinDate;
+			businessElementTrace_lazy = () -> BuyIn.mmBuyinDate;
 			componentContext_lazy = () -> BuyIn1.mmObject();
 			isDerived = false;
 			xmlTag = "XpctdBuyInDt";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ExpectedBuyInDate";
 			definition = "Provides the date at which the buy will occur.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.BuyIn4.mmExpectedBuyInDate);
+			nextVersions_lazy = () -> Arrays.asList(BuyIn4.mmExpectedBuyInDate);
 			maxOccurs = 1;
 			minOccurs = 1;
 			complexType_lazy = () -> DateFormat15Choice.mmObject();
@@ -178,10 +180,10 @@ public class BuyIn1 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.BuyIn1.mmWarningIndicator, com.tools20022.repository.msg.BuyIn1.mmExpectedBuyInDate);
+				messageElement_lazy = () -> Arrays.asList(BuyIn1.mmWarningIndicator, BuyIn1.mmExpectedBuyInDate);
 				trace_lazy = () -> BuyIn.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 				name = "BuyIn1";
 				definition = "Specifies elements related to the notification (or warn) sent by the central counterparty to the clearing member in the context of the buy in process.";
 				nextVersions_lazy = () -> Arrays.asList(BuyIn4.mmObject());

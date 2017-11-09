@@ -19,6 +19,8 @@ package com.tools20022.repository.codeset;
 
 import com.tools20022.metamodel.MMCode;
 import com.tools20022.metamodel.MMCodeSet;
+import com.tools20022.metamodel.MMRegistrationStatus;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -89,7 +91,7 @@ public class YieldTypeV2Code {
 	 */
 	public static final MMCode mmCurrentYield = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.OBSOLETE;
+			registrationStatus = MMRegistrationStatus.OBSOLETE;
 			name = "CurrentYield";
 			definition = "Annual income (interest or dividends) divided by the current price of the security.";
 			owner_lazy = () -> YieldTypeV2Code.mmObject();
@@ -123,7 +125,7 @@ public class YieldTypeV2Code {
 	 */
 	public static final MMCode mmYieldToMaturity = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.OBSOLETE;
+			registrationStatus = MMRegistrationStatus.OBSOLETE;
 			name = "YieldToMaturity";
 			definition = "Internal rate of return an investor would achieve if he or she purchased that bond at its current dirty price, and held it to maturity, assuming all coupon and principal payments are received as scheduled.";
 			owner_lazy = () -> YieldTypeV2Code.mmObject();
@@ -157,7 +159,7 @@ public class YieldTypeV2Code {
 	 */
 	public static final MMCode mmYieldToCall = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.OBSOLETE;
+			registrationStatus = MMRegistrationStatus.OBSOLETE;
 			name = "YieldToCall";
 			definition = "Specifies the yield of a bond or note if you were to buy and hold the security until the call date. This yield is valid only if the security is called prior to maturity.";
 			owner_lazy = () -> YieldTypeV2Code.mmObject();
@@ -168,13 +170,12 @@ public class YieldTypeV2Code {
 	static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
 				example = Arrays.asList("CUYI");
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.OBSOLETE;
+				registrationStatus = MMRegistrationStatus.OBSOLETE;
 				name = "YieldTypeV2Code";
 				definition = "Type of yield at which the transaction was effected.";
-				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.YieldTypeV2Code.mmCurrentYield, com.tools20022.repository.codeset.YieldTypeV2Code.mmYieldToMaturity,
-						com.tools20022.repository.codeset.YieldTypeV2Code.mmYieldToCall);
+				code_lazy = () -> Arrays.asList(YieldTypeV2Code.mmCurrentYield, YieldTypeV2Code.mmYieldToMaturity, YieldTypeV2Code.mmYieldToCall);
 			}
 		});
 		return mmObject_lazy.get();

@@ -19,7 +19,11 @@ package com.tools20022.repository.msg;
 
 import com.tools20022.metamodel.MMMessageAssociationEnd;
 import com.tools20022.metamodel.MMMessageComponent;
+import com.tools20022.metamodel.MMRegistrationStatus;
+import com.tools20022.repository.area.acmt.*;
 import com.tools20022.repository.entity.Party;
+import com.tools20022.repository.entity.Undertaking;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -143,11 +147,11 @@ public class PartyAndSignature1 {
 	 */
 	public static final MMMessageAssociationEnd mmParty = new MMMessageAssociationEnd() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Party.mmIdentification;
+			businessElementTrace_lazy = () -> Party.mmIdentification;
 			componentContext_lazy = () -> PartyAndSignature1.mmObject();
 			isDerived = false;
 			xmlTag = "Pty";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Party";
 			definition = "Entity involved in an activity.";
 			maxOccurs = 1;
@@ -190,11 +194,11 @@ public class PartyAndSignature1 {
 	 */
 	public static final MMMessageAssociationEnd mmSignature = new MMMessageAssociationEnd() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Undertaking.mmElectronicSignature;
+			businessElementTrace_lazy = () -> Undertaking.mmElectronicSignature;
 			componentContext_lazy = () -> PartyAndSignature1.mmObject();
 			isDerived = false;
 			xmlTag = "Sgntr";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Signature";
 			definition = "Signature of a party.";
 			maxOccurs = 1;
@@ -207,18 +211,15 @@ public class PartyAndSignature1 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.PartyAndSignature1.mmParty, com.tools20022.repository.msg.PartyAndSignature1.mmSignature);
-				messageBuildingBlock_lazy = () -> Arrays.asList(com.tools20022.repository.area.acmt.AccountAdditionalInformationRequestV01.mmDigitalSignature,
-						com.tools20022.repository.area.acmt.AccountClosingAdditionalInformationRequestV01.mmDigitalSignature, com.tools20022.repository.area.acmt.AccountClosingAmendmentRequestV01.mmDigitalSignature,
-						com.tools20022.repository.area.acmt.AccountClosingRequestV01.mmDigitalSignature, com.tools20022.repository.area.acmt.AccountExcludedMandateMaintenanceAmendmentRequestV01.mmDigitalSignature,
-						com.tools20022.repository.area.acmt.AccountExcludedMandateMaintenanceRequestV01.mmDigitalSignature, com.tools20022.repository.area.acmt.AccountMandateMaintenanceAmendmentRequestV01.mmDigitalSignature,
-						com.tools20022.repository.area.acmt.AccountMandateMaintenanceRequestV01.mmDigitalSignature, com.tools20022.repository.area.acmt.AccountOpeningAdditionalInformationRequestV01.mmDigitalSignature,
-						com.tools20022.repository.area.acmt.AccountOpeningAmendmentRequestV01.mmDigitalSignature, com.tools20022.repository.area.acmt.AccountOpeningRequestV01.mmDigitalSignature,
-						com.tools20022.repository.area.acmt.AccountReportRequestV01.mmDigitalSignature, com.tools20022.repository.area.acmt.AccountReportV01.mmDigitalSignature,
-						com.tools20022.repository.area.acmt.AccountRequestAcknowledgementV01.mmDigitalSignature, com.tools20022.repository.area.acmt.AccountRequestRejectionV01.mmDigitalSignature);
+				messageElement_lazy = () -> Arrays.asList(PartyAndSignature1.mmParty, PartyAndSignature1.mmSignature);
+				messageBuildingBlock_lazy = () -> Arrays.asList(AccountAdditionalInformationRequestV01.mmDigitalSignature, AccountClosingAdditionalInformationRequestV01.mmDigitalSignature,
+						AccountClosingAmendmentRequestV01.mmDigitalSignature, AccountClosingRequestV01.mmDigitalSignature, AccountExcludedMandateMaintenanceAmendmentRequestV01.mmDigitalSignature,
+						AccountExcludedMandateMaintenanceRequestV01.mmDigitalSignature, AccountMandateMaintenanceAmendmentRequestV01.mmDigitalSignature, AccountMandateMaintenanceRequestV01.mmDigitalSignature,
+						AccountOpeningAdditionalInformationRequestV01.mmDigitalSignature, AccountOpeningAmendmentRequestV01.mmDigitalSignature, AccountOpeningRequestV01.mmDigitalSignature, AccountReportRequestV01.mmDigitalSignature,
+						AccountReportV01.mmDigitalSignature, AccountRequestAcknowledgementV01.mmDigitalSignature, AccountRequestRejectionV01.mmDigitalSignature);
 				trace_lazy = () -> Party.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "PartyAndSignature1";
 				definition = "Entity involved in an activity.";
 			}

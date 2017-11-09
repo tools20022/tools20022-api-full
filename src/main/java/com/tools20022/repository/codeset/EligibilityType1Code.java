@@ -19,7 +19,9 @@ package com.tools20022.repository.codeset;
 
 import com.tools20022.metamodel.MMCode;
 import com.tools20022.metamodel.MMCodeSet;
+import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.codeset.EligibilityTypeCode;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -86,7 +88,7 @@ public class EligibilityType1Code extends EligibilityTypeCode {
 	 */
 	public static final MMCode mmSecurities = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Securities";
 			owner_lazy = () -> EligibilityType1Code.mmObject();
 		}
@@ -109,7 +111,7 @@ public class EligibilityType1Code extends EligibilityTypeCode {
 	 */
 	public static final MMCode mmIssuerCSD = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "IssuerCSD";
 			owner_lazy = () -> EligibilityType1Code.mmObject();
 		}
@@ -132,7 +134,7 @@ public class EligibilityType1Code extends EligibilityTypeCode {
 	 */
 	public static final MMCode mmCountry = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Country";
 			owner_lazy = () -> EligibilityType1Code.mmObject();
 		}
@@ -141,13 +143,12 @@ public class EligibilityType1Code extends EligibilityTypeCode {
 	static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
 				example = Arrays.asList("SECU");
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "EligibilityType1Code";
 				definition = "Defines the type of eligibility.";
-				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.EligibilityType1Code.mmSecurities, com.tools20022.repository.codeset.EligibilityType1Code.mmIssuerCSD,
-						com.tools20022.repository.codeset.EligibilityType1Code.mmCountry);
+				code_lazy = () -> Arrays.asList(EligibilityType1Code.mmSecurities, EligibilityType1Code.mmIssuerCSD, EligibilityType1Code.mmCountry);
 				trace_lazy = () -> EligibilityTypeCode.mmObject();
 			}
 		});

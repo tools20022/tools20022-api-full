@@ -19,7 +19,9 @@ package com.tools20022.repository.codeset;
 
 import com.tools20022.metamodel.MMCode;
 import com.tools20022.metamodel.MMCodeSet;
+import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.codeset.ActionTypeCode;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -130,10 +132,10 @@ public class ActionType3Code extends ActionTypeCode {
 	 */
 	public static final MMCode mmBusy = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Busy";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.ActionType7Code.mmBusy);
-			previousVersion_lazy = () -> com.tools20022.repository.codeset.ActionType2Code.mmBusy;
+			nextVersions_lazy = () -> Arrays.asList(ActionType7Code.mmBusy);
+			previousVersion_lazy = () -> ActionType2Code.mmBusy;
 			owner_lazy = () -> ActionType3Code.mmObject();
 		}
 	};
@@ -168,10 +170,10 @@ public class ActionType3Code extends ActionTypeCode {
 	 */
 	public static final MMCode mmCaptureCard = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CaptureCard";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.ActionType7Code.mmCaptureCard);
-			previousVersion_lazy = () -> com.tools20022.repository.codeset.ActionType2Code.mmCaptureCard;
+			nextVersions_lazy = () -> Arrays.asList(ActionType7Code.mmCaptureCard);
+			previousVersion_lazy = () -> ActionType2Code.mmCaptureCard;
 			owner_lazy = () -> ActionType3Code.mmObject();
 		}
 	};
@@ -206,10 +208,10 @@ public class ActionType3Code extends ActionTypeCode {
 	 */
 	public static final MMCode mmDisplayMessage = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "DisplayMessage";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.ActionType7Code.mmDisplayMessage);
-			previousVersion_lazy = () -> com.tools20022.repository.codeset.ActionType2Code.mmDisplayMessage;
+			nextVersions_lazy = () -> Arrays.asList(ActionType7Code.mmDisplayMessage);
+			previousVersion_lazy = () -> ActionType2Code.mmDisplayMessage;
 			owner_lazy = () -> ActionType3Code.mmObject();
 		}
 	};
@@ -244,10 +246,10 @@ public class ActionType3Code extends ActionTypeCode {
 	 */
 	public static final MMCode mmForbidOverride = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ForbidOverride";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.ActionType7Code.mmForbidOverride);
-			previousVersion_lazy = () -> com.tools20022.repository.codeset.ActionType2Code.mmForbidOverride;
+			nextVersions_lazy = () -> Arrays.asList(ActionType7Code.mmForbidOverride);
+			previousVersion_lazy = () -> ActionType2Code.mmForbidOverride;
 			owner_lazy = () -> ActionType3Code.mmObject();
 		}
 	};
@@ -282,10 +284,10 @@ public class ActionType3Code extends ActionTypeCode {
 	 */
 	public static final MMCode mmIdentificationRequired = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "IdentificationRequired";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.ActionType7Code.mmIdentificationRequired);
-			previousVersion_lazy = () -> com.tools20022.repository.codeset.ActionType2Code.mmIdentificationRequired;
+			nextVersions_lazy = () -> Arrays.asList(ActionType7Code.mmIdentificationRequired);
+			previousVersion_lazy = () -> ActionType2Code.mmIdentificationRequired;
 			owner_lazy = () -> ActionType3Code.mmObject();
 		}
 	};
@@ -320,10 +322,10 @@ public class ActionType3Code extends ActionTypeCode {
 	 */
 	public static final MMCode mmPINLastTry = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PINLastTry";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.ActionType7Code.mmPINLastTry);
-			previousVersion_lazy = () -> com.tools20022.repository.codeset.ActionType2Code.mmPINLastTry;
+			nextVersions_lazy = () -> Arrays.asList(ActionType7Code.mmPINLastTry);
+			previousVersion_lazy = () -> ActionType2Code.mmPINLastTry;
 			owner_lazy = () -> ActionType3Code.mmObject();
 		}
 	};
@@ -358,10 +360,10 @@ public class ActionType3Code extends ActionTypeCode {
 	 */
 	public static final MMCode mmPINRetry = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PINRetry";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.ActionType7Code.mmPINRetry);
-			previousVersion_lazy = () -> com.tools20022.repository.codeset.ActionType2Code.mmPINRetry;
+			nextVersions_lazy = () -> Arrays.asList(ActionType7Code.mmPINRetry);
+			previousVersion_lazy = () -> ActionType2Code.mmPINRetry;
 			owner_lazy = () -> ActionType3Code.mmObject();
 		}
 	};
@@ -396,10 +398,10 @@ public class ActionType3Code extends ActionTypeCode {
 	 */
 	public static final MMCode mmPrintMessage = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PrintMessage";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.ActionType7Code.mmPrintMessage);
-			previousVersion_lazy = () -> com.tools20022.repository.codeset.ActionType2Code.mmPrintMessage;
+			nextVersions_lazy = () -> Arrays.asList(ActionType7Code.mmPrintMessage);
+			previousVersion_lazy = () -> ActionType2Code.mmPrintMessage;
 			owner_lazy = () -> ActionType3Code.mmObject();
 		}
 	};
@@ -434,10 +436,10 @@ public class ActionType3Code extends ActionTypeCode {
 	 */
 	public static final MMCode mmReferral = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Referral";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.ActionType7Code.mmReferral);
-			previousVersion_lazy = () -> com.tools20022.repository.codeset.ActionType2Code.mmReferral;
+			nextVersions_lazy = () -> Arrays.asList(ActionType7Code.mmReferral);
+			previousVersion_lazy = () -> ActionType2Code.mmReferral;
 			owner_lazy = () -> ActionType3Code.mmObject();
 		}
 	};
@@ -472,10 +474,10 @@ public class ActionType3Code extends ActionTypeCode {
 	 */
 	public static final MMCode mmRequestData = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "RequestData";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.ActionType7Code.mmRequestData);
-			previousVersion_lazy = () -> com.tools20022.repository.codeset.ActionType2Code.mmRequestData;
+			nextVersions_lazy = () -> Arrays.asList(ActionType7Code.mmRequestData);
+			previousVersion_lazy = () -> ActionType2Code.mmRequestData;
 			owner_lazy = () -> ActionType3Code.mmObject();
 		}
 	};
@@ -505,9 +507,9 @@ public class ActionType3Code extends ActionTypeCode {
 	 */
 	public static final MMCode mmAcceptCurrencyConversion = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AcceptCurrencyConversion";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.ActionType7Code.mmAcceptCurrencyConversion);
+			nextVersions_lazy = () -> Arrays.asList(ActionType7Code.mmAcceptCurrencyConversion);
 			owner_lazy = () -> ActionType3Code.mmObject();
 		}
 	};
@@ -515,17 +517,15 @@ public class ActionType3Code extends ActionTypeCode {
 	static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
 				example = Arrays.asList("BUSY");
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "ActionType3Code";
 				definition = "Type of action to be performed by the point of interaction (POI).";
 				nextVersions_lazy = () -> Arrays.asList(ActionType7Code.mmObject());
 				previousVersion_lazy = () -> ActionType2Code.mmObject();
-				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.ActionType3Code.mmBusy, com.tools20022.repository.codeset.ActionType3Code.mmCaptureCard, com.tools20022.repository.codeset.ActionType3Code.mmDisplayMessage,
-						com.tools20022.repository.codeset.ActionType3Code.mmForbidOverride, com.tools20022.repository.codeset.ActionType3Code.mmIdentificationRequired, com.tools20022.repository.codeset.ActionType3Code.mmPINLastTry,
-						com.tools20022.repository.codeset.ActionType3Code.mmPINRetry, com.tools20022.repository.codeset.ActionType3Code.mmPrintMessage, com.tools20022.repository.codeset.ActionType3Code.mmReferral,
-						com.tools20022.repository.codeset.ActionType3Code.mmRequestData, com.tools20022.repository.codeset.ActionType3Code.mmAcceptCurrencyConversion);
+				code_lazy = () -> Arrays.asList(ActionType3Code.mmBusy, ActionType3Code.mmCaptureCard, ActionType3Code.mmDisplayMessage, ActionType3Code.mmForbidOverride, ActionType3Code.mmIdentificationRequired,
+						ActionType3Code.mmPINLastTry, ActionType3Code.mmPINRetry, ActionType3Code.mmPrintMessage, ActionType3Code.mmReferral, ActionType3Code.mmRequestData, ActionType3Code.mmAcceptCurrencyConversion);
 				trace_lazy = () -> ActionTypeCode.mmObject();
 			}
 		});

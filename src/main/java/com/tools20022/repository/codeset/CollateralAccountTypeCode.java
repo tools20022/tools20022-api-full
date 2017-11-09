@@ -19,6 +19,8 @@ package com.tools20022.repository.codeset;
 
 import com.tools20022.metamodel.MMCode;
 import com.tools20022.metamodel.MMCodeSet;
+import com.tools20022.metamodel.MMRegistrationStatus;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -27,6 +29,13 @@ import java.util.concurrent.atomic.AtomicReference;
  * <p>
  * <strong>Constant fields:</strong>
  * <ul>
+ * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getDerivation derivation}
+ * =
+ * <ul>
+ * <li>{@linkplain com.tools20022.repository.codeset.CollateralAccountType1Code
+ * CollateralAccountType1Code}</li>
+ * </ul>
+ * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getCode code} =
  * <ul>
  * <li>
@@ -44,13 +53,6 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>
  * {@linkplain com.tools20022.repository.codeset.CollateralAccountTypeCode#mmDefaultFund
  * CollateralAccountTypeCode.mmDefaultFund}</li>
- * </ul>
- * </li>
- * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getDerivation derivation}
- * =
- * <ul>
- * <li>{@linkplain com.tools20022.repository.codeset.CollateralAccountType1Code
- * CollateralAccountType1Code}</li>
  * </ul>
  * </li>
  * <li>
@@ -104,7 +106,7 @@ public class CollateralAccountTypeCode {
 	 */
 	public static final MMCode mmHouse = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "House";
 			definition = "Specifies that the account is used to post collateral that covers the exposure resulting from trades executed for either the clearing member or its subsidiaries.";
 			owner_lazy = () -> CollateralAccountTypeCode.mmObject();
@@ -138,7 +140,7 @@ public class CollateralAccountTypeCode {
 	 */
 	public static final MMCode mmClient = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Client";
 			definition = "Specifies that the account is used to post collateral that covers the exposure resulting from trades executed for the clearing member's customers.";
 			owner_lazy = () -> CollateralAccountTypeCode.mmObject();
@@ -172,7 +174,7 @@ public class CollateralAccountTypeCode {
 	 */
 	public static final MMCode mmLiquidityProvider = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "LiquidityProvider";
 			definition = "Specifies that the account is used to post collateral that covers the exposure resulting from trades executed for liquidity providers (also known as market maker) activities.";
 			owner_lazy = () -> CollateralAccountTypeCode.mmObject();
@@ -206,7 +208,7 @@ public class CollateralAccountTypeCode {
 	 */
 	public static final MMCode mmMargin = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Margin";
 			definition = "Specifies that the account is used to post collateral that covers the exposure resulting from trades executed for either the clearing member or its subsidiaries, or for the clearing member's customers.";
 			owner_lazy = () -> CollateralAccountTypeCode.mmObject();
@@ -239,7 +241,7 @@ public class CollateralAccountTypeCode {
 	 */
 	public static final MMCode mmDefaultFund = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "DefaultFund";
 			definition = "Specifies that the account is used to post collateral that covers clearing member's default risk.";
 			owner_lazy = () -> CollateralAccountTypeCode.mmObject();
@@ -250,14 +252,13 @@ public class CollateralAccountTypeCode {
 	static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
 				example = Arrays.asList("HOUS");
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "CollateralAccountTypeCode";
 				definition = "Specifies the collateral account type.";
-				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.CollateralAccountTypeCode.mmHouse, com.tools20022.repository.codeset.CollateralAccountTypeCode.mmClient,
-						com.tools20022.repository.codeset.CollateralAccountTypeCode.mmLiquidityProvider, com.tools20022.repository.codeset.CollateralAccountTypeCode.mmMargin,
-						com.tools20022.repository.codeset.CollateralAccountTypeCode.mmDefaultFund);
+				code_lazy = () -> Arrays.asList(CollateralAccountTypeCode.mmHouse, CollateralAccountTypeCode.mmClient, CollateralAccountTypeCode.mmLiquidityProvider, CollateralAccountTypeCode.mmMargin,
+						CollateralAccountTypeCode.mmDefaultFund);
 				derivation_lazy = () -> Arrays.asList(CollateralAccountType1Code.mmObject());
 			}
 		});

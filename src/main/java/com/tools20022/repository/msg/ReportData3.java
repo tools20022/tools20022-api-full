@@ -19,12 +19,15 @@ package com.tools20022.repository.msg;
 
 import com.tools20022.metamodel.MMMessageAttribute;
 import com.tools20022.metamodel.MMMessageComponent;
+import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.codeset.Entry2Code;
 import com.tools20022.repository.datatype.ISODate;
 import com.tools20022.repository.datatype.ISODateTime;
 import com.tools20022.repository.datatype.Max35Text;
 import com.tools20022.repository.datatype.Number;
+import com.tools20022.repository.entity.Balance;
 import com.tools20022.repository.entity.CashBalance;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -114,7 +117,7 @@ public class ReportData3 {
 			componentContext_lazy = () -> ReportData3.mmObject();
 			isDerived = false;
 			xmlTag = "MsgId";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "MessageIdentification";
 			definition = "Identification of the report as assigned by the sender.";
 			maxOccurs = 1;
@@ -156,11 +159,11 @@ public class ReportData3 {
 	 */
 	public static final MMMessageAttribute mmValueDate = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Balance.mmValueDate;
+			businessElementTrace_lazy = () -> Balance.mmValueDate;
 			componentContext_lazy = () -> ReportData3.mmObject();
 			isDerived = false;
 			xmlTag = "ValDt";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ValueDate";
 			definition = "Value date for which the pay-in schedule is generated.";
 			maxOccurs = 1;
@@ -205,11 +208,11 @@ public class ReportData3 {
 	 */
 	public static final MMMessageAttribute mmDateAndTimeStamp = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Balance.mmCalculationDate;
+			businessElementTrace_lazy = () -> Balance.mmCalculationDate;
 			componentContext_lazy = () -> ReportData3.mmObject();
 			isDerived = false;
 			xmlTag = "DtAndTmStmp";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "DateAndTimeStamp";
 			definition = "Date and time on which the report is generated. The offset with UTC may also be specified.";
 			maxOccurs = 1;
@@ -251,11 +254,11 @@ public class ReportData3 {
 	 */
 	public static final MMMessageAttribute mmType = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Balance.mmType;
+			businessElementTrace_lazy = () -> Balance.mmType;
 			componentContext_lazy = () -> ReportData3.mmObject();
 			isDerived = false;
 			xmlTag = "Tp";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Type";
 			definition = "Type of pay-in schedule.";
 			maxOccurs = 1;
@@ -298,7 +301,7 @@ public class ReportData3 {
 			componentContext_lazy = () -> ReportData3.mmObject();
 			isDerived = false;
 			xmlTag = "SttlmSsn";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SettlementSession";
 			definition = "Identifies the settlement session to which the report applies. The first session of the day is 1.";
 			maxOccurs = 1;
@@ -310,11 +313,10 @@ public class ReportData3 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.ReportData3.mmMessageIdentification, com.tools20022.repository.msg.ReportData3.mmValueDate,
-						com.tools20022.repository.msg.ReportData3.mmDateAndTimeStamp, com.tools20022.repository.msg.ReportData3.mmType, com.tools20022.repository.msg.ReportData3.mmSettlementSession);
+				messageElement_lazy = () -> Arrays.asList(ReportData3.mmMessageIdentification, ReportData3.mmValueDate, ReportData3.mmDateAndTimeStamp, ReportData3.mmType, ReportData3.mmSettlementSession);
 				trace_lazy = () -> CashBalance.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "ReportData3";
 				definition = "Numerical representation of the net increases and decreases in an account at a specific point in time. A cash balance is calculated from a sum of cash credits minus a sum of cash debits.";
 				nextVersions_lazy = () -> Arrays.asList(ReportData4.mmObject());

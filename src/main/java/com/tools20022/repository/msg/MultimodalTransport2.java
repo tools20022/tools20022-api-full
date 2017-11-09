@@ -20,9 +20,14 @@ package com.tools20022.repository.msg;
 import com.tools20022.metamodel.MMMessageAssociationEnd;
 import com.tools20022.metamodel.MMMessageAttribute;
 import com.tools20022.metamodel.MMMessageComponent;
+import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.choice.AirportName1Choice;
 import com.tools20022.repository.datatype.Max35Text;
+import com.tools20022.repository.entity.GenericIdentification;
+import com.tools20022.repository.entity.PartyName;
 import com.tools20022.repository.entity.Transport;
+import com.tools20022.repository.entity.TransportBySea;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.List;
@@ -131,11 +136,11 @@ public class MultimodalTransport2 {
 	 */
 	public static final MMMessageAssociationEnd mmDepartureAirport = new MMMessageAssociationEnd() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Transport.mmPlaceOfDeparture;
+			businessElementTrace_lazy = () -> Transport.mmPlaceOfDeparture;
 			componentContext_lazy = () -> MultimodalTransport2.mmObject();
 			isDerived = false;
 			xmlTag = "DprtureAirprt";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "DepartureAirport";
 			definition = "Place from where the goods must leave.";
 			minOccurs = 0;
@@ -177,11 +182,11 @@ public class MultimodalTransport2 {
 	 */
 	public static final MMMessageAssociationEnd mmDestinationAirport = new MMMessageAssociationEnd() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Transport.mmPlaceOfDestination;
+			businessElementTrace_lazy = () -> Transport.mmPlaceOfDestination;
 			componentContext_lazy = () -> MultimodalTransport2.mmObject();
 			isDerived = false;
 			xmlTag = "DstnAirprt";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "DestinationAirport";
 			definition = "Place where the goods must arrive.";
 			minOccurs = 0;
@@ -227,11 +232,11 @@ public class MultimodalTransport2 {
 	 */
 	public static final MMMessageAttribute mmAirCarrierName = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.PartyName.mmName;
+			businessElementTrace_lazy = () -> PartyName.mmName;
 			componentContext_lazy = () -> MultimodalTransport2.mmObject();
 			isDerived = false;
 			xmlTag = "AirCrrierNm";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AirCarrierName";
 			definition = "Identifies the party that is responsible for the conveyance of the goods from one place to another.";
 			minOccurs = 0;
@@ -274,11 +279,11 @@ public class MultimodalTransport2 {
 	 */
 	public static final MMMessageAttribute mmPortOfLoading = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Transport.mmPlaceOfDeparture;
+			businessElementTrace_lazy = () -> Transport.mmPlaceOfDeparture;
 			componentContext_lazy = () -> MultimodalTransport2.mmObject();
 			isDerived = false;
 			xmlTag = "PortOfLoadng";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PortOfLoading";
 			definition = "Identifies the port where the goods are loaded on board the ship.";
 			minOccurs = 0;
@@ -320,11 +325,11 @@ public class MultimodalTransport2 {
 	 */
 	public static final MMMessageAttribute mmPortOfDischarge = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Transport.mmPlaceOfDestination;
+			businessElementTrace_lazy = () -> Transport.mmPlaceOfDestination;
 			componentContext_lazy = () -> MultimodalTransport2.mmObject();
 			isDerived = false;
 			xmlTag = "PortOfDschrge";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PortOfDischarge";
 			definition = "Identifies the port where the goods are discharged.";
 			minOccurs = 0;
@@ -366,11 +371,11 @@ public class MultimodalTransport2 {
 	 */
 	public static final MMMessageAttribute mmVesselName = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.TransportBySea.mmVesselName;
+			businessElementTrace_lazy = () -> TransportBySea.mmVesselName;
 			componentContext_lazy = () -> MultimodalTransport2.mmObject();
 			isDerived = false;
 			xmlTag = "VsslNm";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "VesselName";
 			definition = "Name of a vessel.";
 			minOccurs = 0;
@@ -414,11 +419,11 @@ public class MultimodalTransport2 {
 	 */
 	public static final MMMessageAttribute mmPlaceOfReceipt = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Transport.mmPlaceOfDeparture;
+			businessElementTrace_lazy = () -> Transport.mmPlaceOfDeparture;
 			componentContext_lazy = () -> MultimodalTransport2.mmObject();
 			isDerived = false;
 			xmlTag = "PlcOfRct";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PlaceOfReceipt";
 			definition = "Identifies the location where the goods are received for transportation.";
 			minOccurs = 0;
@@ -460,11 +465,11 @@ public class MultimodalTransport2 {
 	 */
 	public static final MMMessageAttribute mmPlaceOfDelivery = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Transport.mmPlaceOfDestination;
+			businessElementTrace_lazy = () -> Transport.mmPlaceOfDestination;
 			componentContext_lazy = () -> MultimodalTransport2.mmObject();
 			isDerived = false;
 			xmlTag = "PlcOfDlvry";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PlaceOfDelivery";
 			definition = "Identifies the location of delivery of the goods.";
 			minOccurs = 0;
@@ -509,11 +514,11 @@ public class MultimodalTransport2 {
 	 */
 	public static final MMMessageAttribute mmTakingInCharge = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Transport.mmPlaceOfDeparture;
+			businessElementTrace_lazy = () -> Transport.mmPlaceOfDeparture;
 			componentContext_lazy = () -> MultimodalTransport2.mmObject();
 			isDerived = false;
 			xmlTag = "TakngInChrg";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "TakingInCharge";
 			definition = "Identifies the location where the goods are take in charge for transportation.";
 			minOccurs = 0;
@@ -556,11 +561,11 @@ public class MultimodalTransport2 {
 	 */
 	public static final MMMessageAttribute mmPlaceOfFinalDestination = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Transport.mmPlaceOfDestination;
+			businessElementTrace_lazy = () -> Transport.mmPlaceOfDestination;
 			componentContext_lazy = () -> MultimodalTransport2.mmObject();
 			isDerived = false;
 			xmlTag = "PlcOfFnlDstn";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PlaceOfFinalDestination";
 			definition = "Identifies the location of the final destination of the goods.";
 			minOccurs = 0;
@@ -602,11 +607,11 @@ public class MultimodalTransport2 {
 	 */
 	public static final MMMessageAttribute mmTransitLocation = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.GenericIdentification.mmIdentification;
+			businessElementTrace_lazy = () -> GenericIdentification.mmIdentification;
 			componentContext_lazy = () -> MultimodalTransport2.mmObject();
 			isDerived = false;
 			xmlTag = "TrnstLctn";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "TransitLocation";
 			definition = "Specifies a place in a country.";
 			minOccurs = 0;
@@ -651,11 +656,11 @@ public class MultimodalTransport2 {
 	 */
 	public static final MMMessageAttribute mmRoadCarrierName = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.PartyName.mmName;
+			businessElementTrace_lazy = () -> PartyName.mmName;
 			componentContext_lazy = () -> MultimodalTransport2.mmObject();
 			isDerived = false;
 			xmlTag = "RoadCrrierNm";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "RoadCarrierName";
 			definition = "Identifies the party that is responsible for the conveyance of the goods from one place to another.";
 			minOccurs = 0;
@@ -700,11 +705,11 @@ public class MultimodalTransport2 {
 	 */
 	public static final MMMessageAttribute mmRailCarrierName = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.PartyName.mmName;
+			businessElementTrace_lazy = () -> PartyName.mmName;
 			componentContext_lazy = () -> MultimodalTransport2.mmObject();
 			isDerived = false;
 			xmlTag = "RailCrrierNm";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "RailCarrierName";
 			definition = "Identifies the party that is responsible for the conveyance of the goods from one place to another.";
 			minOccurs = 0;
@@ -715,14 +720,12 @@ public class MultimodalTransport2 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.MultimodalTransport2.mmDepartureAirport, com.tools20022.repository.msg.MultimodalTransport2.mmDestinationAirport,
-						com.tools20022.repository.msg.MultimodalTransport2.mmAirCarrierName, com.tools20022.repository.msg.MultimodalTransport2.mmPortOfLoading, com.tools20022.repository.msg.MultimodalTransport2.mmPortOfDischarge,
-						com.tools20022.repository.msg.MultimodalTransport2.mmVesselName, com.tools20022.repository.msg.MultimodalTransport2.mmPlaceOfReceipt, com.tools20022.repository.msg.MultimodalTransport2.mmPlaceOfDelivery,
-						com.tools20022.repository.msg.MultimodalTransport2.mmTakingInCharge, com.tools20022.repository.msg.MultimodalTransport2.mmPlaceOfFinalDestination,
-						com.tools20022.repository.msg.MultimodalTransport2.mmTransitLocation, com.tools20022.repository.msg.MultimodalTransport2.mmRoadCarrierName, com.tools20022.repository.msg.MultimodalTransport2.mmRailCarrierName);
+				messageElement_lazy = () -> Arrays.asList(MultimodalTransport2.mmDepartureAirport, MultimodalTransport2.mmDestinationAirport, MultimodalTransport2.mmAirCarrierName, MultimodalTransport2.mmPortOfLoading,
+						MultimodalTransport2.mmPortOfDischarge, MultimodalTransport2.mmVesselName, MultimodalTransport2.mmPlaceOfReceipt, MultimodalTransport2.mmPlaceOfDelivery, MultimodalTransport2.mmTakingInCharge,
+						MultimodalTransport2.mmPlaceOfFinalDestination, MultimodalTransport2.mmTransitLocation, MultimodalTransport2.mmRoadCarrierName, MultimodalTransport2.mmRailCarrierName);
 				trace_lazy = () -> Transport.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 				name = "MultimodalTransport2";
 				definition = "Information related to multimodal transportation of goods.";
 			}

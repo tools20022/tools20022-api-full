@@ -20,11 +20,13 @@ package com.tools20022.repository.msg;
 import com.tools20022.metamodel.MMMessageAssociationEnd;
 import com.tools20022.metamodel.MMMessageAttribute;
 import com.tools20022.metamodel.MMMessageComponent;
+import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.choice.PartyIdentification24Choice;
 import com.tools20022.repository.choice.PartyIdentification25Choice;
 import com.tools20022.repository.codeset.*;
 import com.tools20022.repository.datatype.ISODateTime;
 import com.tools20022.repository.entity.*;
+import com.tools20022.repository.GeneratedRepository;
 import java.text.DateFormat;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
@@ -145,11 +147,11 @@ public class Quote1 {
 	 */
 	public static final MMMessageAttribute mmType = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.SecuritiesQuoteVariable.mmType;
+			businessElementTrace_lazy = () -> SecuritiesQuoteVariable.mmType;
 			componentContext_lazy = () -> Quote1.mmObject();
 			isDerived = false;
 			xmlTag = "Tp";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Type";
 			definition = "Indicates the scenario in which the quote is (requested to be) used (ie, indicative, firm, restricted tradeable or counter).";
 			maxOccurs = 1;
@@ -192,11 +194,11 @@ public class Quote1 {
 	 */
 	public static final MMMessageAttribute mmQualifier = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.SecuritiesQuoteVariable.mmQualifier;
+			businessElementTrace_lazy = () -> SecuritiesQuoteVariable.mmQualifier;
 			componentContext_lazy = () -> Quote1.mmObject();
 			isDerived = false;
 			xmlTag = "Qlfr";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Qualifier";
 			definition = "Qualifies the use of the quote.";
 			minOccurs = 0;
@@ -237,11 +239,11 @@ public class Quote1 {
 	 */
 	public static final MMMessageAttribute mmValidUntilDateTime = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Quote.mmValidUntilDateTime;
+			businessElementTrace_lazy = () -> Quote.mmValidUntilDateTime;
 			componentContext_lazy = () -> Quote1.mmObject();
 			isDerived = false;
 			xmlTag = "VldUntilDtTm";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ValidUntilDateTime";
 			definition = "Expresses the validity date and time of the Quote.";
 			maxOccurs = 1;
@@ -290,7 +292,7 @@ public class Quote1 {
 			componentContext_lazy = () -> Quote1.mmObject();
 			isDerived = false;
 			xmlTag = "QtOrgtr";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "QuoteOriginator";
 			definition = "Identifies in what capacity(role) the originator of the quote is acting.";
 			maxOccurs = 1;
@@ -335,11 +337,11 @@ public class Quote1 {
 	 */
 	public static final MMMessageAttribute mmQuoteOriginatorRole = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.QuoteOriginator.mmQuoteOriginatorType;
+			businessElementTrace_lazy = () -> QuoteOriginator.mmQuoteOriginatorType;
 			componentContext_lazy = () -> Quote1.mmObject();
 			isDerived = false;
 			xmlTag = "QtOrgtrRole";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "QuoteOriginatorRole";
 			definition = "Identifies in what capacity(role) the originator of the quote is acting.";
 			maxOccurs = 1;
@@ -383,11 +385,11 @@ public class Quote1 {
 	 */
 	public static final MMMessageAttribute mmRequestorEligibility = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.QuoteRequestor.mmRequestorEligibility;
+			businessElementTrace_lazy = () -> QuoteRequestor.mmRequestorEligibility;
 			componentContext_lazy = () -> Quote1.mmObject();
 			isDerived = false;
 			xmlTag = "RqstrElgblty";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "RequestorEligibility";
 			definition = "Identifies if the requestor of the quote is an elligible counterparty.";
 			maxOccurs = 1;
@@ -433,11 +435,11 @@ public class Quote1 {
 	 */
 	public static final MMMessageAttribute mmCurrency = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Quote.mmCurrency;
+			businessElementTrace_lazy = () -> Quote.mmCurrency;
 			componentContext_lazy = () -> Quote1.mmObject();
 			isDerived = false;
 			xmlTag = "Ccy";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Currency";
 			definition = "Can be used to specify the desired currency of the quoted price that may differ from the normal trading currency of the instrument being quote requested.";
 			maxOccurs = 1;
@@ -481,11 +483,11 @@ public class Quote1 {
 	 */
 	public static final MMMessageAssociationEnd mmSpreadAndBenchmarkCurveDetails = new MMMessageAssociationEnd() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Spread.mmBenchmarkCurve;
+			businessElementTrace_lazy = () -> Spread.mmBenchmarkCurve;
 			componentContext_lazy = () -> Quote1.mmObject();
 			isDerived = false;
 			xmlTag = "SprdAndBchmkCrvDtls";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SpreadAndBenchmarkCurveDetails";
 			definition = "Provides details about the benchmark against which the financial instrument is measured.";
 			maxOccurs = 1;
@@ -531,7 +533,7 @@ public class Quote1 {
 			componentContext_lazy = () -> Quote1.mmObject();
 			isDerived = false;
 			xmlTag = "OfferYld";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "OfferYield";
 			definition = "Indicates the offer yield details.";
 			maxOccurs = 1;
@@ -577,7 +579,7 @@ public class Quote1 {
 			componentContext_lazy = () -> Quote1.mmObject();
 			isDerived = false;
 			xmlTag = "MidYld";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "MidYield";
 			definition = "Indicates the mid yield details.";
 			maxOccurs = 1;
@@ -623,7 +625,7 @@ public class Quote1 {
 			componentContext_lazy = () -> Quote1.mmObject();
 			isDerived = false;
 			xmlTag = "BidYld";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "BidYield";
 			definition = "Indicates the bid yield details.";
 			maxOccurs = 1;
@@ -664,7 +666,7 @@ public class Quote1 {
 			componentContext_lazy = () -> Quote1.mmObject();
 			isDerived = false;
 			xmlTag = "SrcOfQt";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SourceOfQuote";
 			definition = "Source of the quote.";
 			maxOccurs = 1;
@@ -710,7 +712,7 @@ public class Quote1 {
 			componentContext_lazy = () -> Quote1.mmObject();
 			isDerived = false;
 			xmlTag = "FinInstrmDtls";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "FinancialInstrumentDetails";
 			definition = "Provides details about the financial instrument.";
 			maxOccurs = 1;
@@ -757,7 +759,7 @@ public class Quote1 {
 			componentContext_lazy = () -> Quote1.mmObject();
 			isDerived = false;
 			xmlTag = "UndrlygFinInstrmDtls";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "UnderlyingFinancialInstrumentDetails";
 			definition = "Provides details about the underlying financial instrument.";
 			minOccurs = 0;
@@ -803,7 +805,7 @@ public class Quote1 {
 			componentContext_lazy = () -> Quote1.mmObject();
 			isDerived = false;
 			xmlTag = "FinInstrmAttrbts";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "FinancialInstrumentAttributes";
 			definition = "Provides details about the financial instrument attributes.";
 			maxOccurs = 1;
@@ -850,7 +852,7 @@ public class Quote1 {
 			componentContext_lazy = () -> Quote1.mmObject();
 			isDerived = false;
 			xmlTag = "Stiptns";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Stipulations";
 			definition = "Provides details about the financial instrument stipulations.";
 			maxOccurs = 1;
@@ -897,7 +899,7 @@ public class Quote1 {
 			componentContext_lazy = () -> Quote1.mmObject();
 			isDerived = false;
 			xmlTag = "UndrlygFinAttrbts";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "UnderlyingFinancialAttributes";
 			definition = "Provides details about the underlying financial instrument attributes.";
 			minOccurs = 0;
@@ -944,7 +946,7 @@ public class Quote1 {
 			componentContext_lazy = () -> Quote1.mmObject();
 			isDerived = false;
 			xmlTag = "UndrlygStiptns";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "UnderlyingStipulations";
 			definition = "Provides details about the underlying financial instrument stipulations.";
 			minOccurs = 0;
@@ -956,15 +958,12 @@ public class Quote1 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.Quote1.mmType, com.tools20022.repository.msg.Quote1.mmQualifier, com.tools20022.repository.msg.Quote1.mmValidUntilDateTime,
-						com.tools20022.repository.msg.Quote1.mmQuoteOriginator, com.tools20022.repository.msg.Quote1.mmQuoteOriginatorRole, com.tools20022.repository.msg.Quote1.mmRequestorEligibility,
-						com.tools20022.repository.msg.Quote1.mmCurrency, com.tools20022.repository.msg.Quote1.mmSpreadAndBenchmarkCurveDetails, com.tools20022.repository.msg.Quote1.mmOfferYield,
-						com.tools20022.repository.msg.Quote1.mmMidYield, com.tools20022.repository.msg.Quote1.mmBidYield, com.tools20022.repository.msg.Quote1.mmSourceOfQuote,
-						com.tools20022.repository.msg.Quote1.mmFinancialInstrumentDetails, com.tools20022.repository.msg.Quote1.mmUnderlyingFinancialInstrumentDetails, com.tools20022.repository.msg.Quote1.mmFinancialInstrumentAttributes,
-						com.tools20022.repository.msg.Quote1.mmStipulations, com.tools20022.repository.msg.Quote1.mmUnderlyingFinancialAttributes, com.tools20022.repository.msg.Quote1.mmUnderlyingStipulations);
+				messageElement_lazy = () -> Arrays.asList(Quote1.mmType, Quote1.mmQualifier, Quote1.mmValidUntilDateTime, Quote1.mmQuoteOriginator, Quote1.mmQuoteOriginatorRole, Quote1.mmRequestorEligibility, Quote1.mmCurrency,
+						Quote1.mmSpreadAndBenchmarkCurveDetails, Quote1.mmOfferYield, Quote1.mmMidYield, Quote1.mmBidYield, Quote1.mmSourceOfQuote, Quote1.mmFinancialInstrumentDetails, Quote1.mmUnderlyingFinancialInstrumentDetails,
+						Quote1.mmFinancialInstrumentAttributes, Quote1.mmStipulations, Quote1.mmUnderlyingFinancialAttributes, Quote1.mmUnderlyingStipulations);
 				trace_lazy = () -> SecuritiesQuoteVariable.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.OBSOLETE;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.OBSOLETE;
 				removalDate = ((Supplier<Date>) (() -> {
 					try {
 						return DateFormat.getDateInstance(java.text.DateFormat.LONG).parse("September 9, 2016");

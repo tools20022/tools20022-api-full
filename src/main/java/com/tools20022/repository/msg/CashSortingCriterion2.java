@@ -20,7 +20,9 @@ package com.tools20022.repository.msg;
 import com.tools20022.metamodel.MMMessageAssociationEnd;
 import com.tools20022.metamodel.MMMessageAttribute;
 import com.tools20022.metamodel.MMMessageComponent;
+import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.choice.SortCriteria1Choice;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.List;
@@ -98,7 +100,7 @@ public class CashSortingCriterion2 {
 			componentContext_lazy = () -> CashSortingCriterion2.mmObject();
 			isDerived = false;
 			xmlTag = "SrtgCritnTp";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SortingCriterionType";
 			definition = "Type of criterion by which the cash flow is being broken down, ie, country, institution, currency code or a user defined type, such as a region or distribution channel.";
 			maxOccurs = 1;
@@ -138,7 +140,7 @@ public class CashSortingCriterion2 {
 			componentContext_lazy = () -> CashSortingCriterion2.mmObject();
 			isDerived = false;
 			xmlTag = "FcstBrkdwnDtls";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ForecastBreakdownDetails";
 			definition = "Parameter for which the cash movements are reported.";
 			minOccurs = 1;
@@ -150,9 +152,9 @@ public class CashSortingCriterion2 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.CashSortingCriterion2.mmSortingCriterionType, com.tools20022.repository.msg.CashSortingCriterion2.mmForecastBreakdownDetails);
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				messageElement_lazy = () -> Arrays.asList(CashSortingCriterion2.mmSortingCriterionType, CashSortingCriterion2.mmForecastBreakdownDetails);
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "CashSortingCriterion2";
 				definition = "Criterion by which the cash movements are broken down.";
 			}

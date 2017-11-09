@@ -19,9 +19,11 @@ package com.tools20022.repository.choice;
 
 import com.tools20022.metamodel.MMChoiceComponent;
 import com.tools20022.metamodel.MMMessageAttribute;
+import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.codeset.SystemClosureReason1Code;
 import com.tools20022.repository.datatype.Max35Text;
 import com.tools20022.repository.entity.SystemStatus;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -97,7 +99,7 @@ public class ClosureReasonChoice {
 			componentContext_lazy = () -> ClosureReasonChoice.mmObject();
 			isDerived = false;
 			xmlTag = "Cd";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Code";
 			definition = "Reason the system is closed/not operating.";
 			maxOccurs = 1;
@@ -138,7 +140,7 @@ public class ClosureReasonChoice {
 			componentContext_lazy = () -> ClosureReasonChoice.mmObject();
 			isDerived = false;
 			xmlTag = "PrtryRsn";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ProprietaryReason";
 			definition = "Type of closure reason is a bilaterally agreed code.";
 			maxOccurs = 1;
@@ -150,10 +152,10 @@ public class ClosureReasonChoice {
 	final static public MMChoiceComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMChoiceComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.choice.ClosureReasonChoice.mmCode, com.tools20022.repository.choice.ClosureReasonChoice.mmProprietaryReason);
+				messageElement_lazy = () -> Arrays.asList(ClosureReasonChoice.mmCode, ClosureReasonChoice.mmProprietaryReason);
 				trace_lazy = () -> SystemStatus.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 				name = "ClosureReasonChoice";
 				definition = "Closure reason is expressed as a code or a bilaterally agreed code.";
 			}

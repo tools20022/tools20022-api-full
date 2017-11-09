@@ -20,7 +20,10 @@ package com.tools20022.repository.msg;
 import com.tools20022.metamodel.MMMessageAssociationEnd;
 import com.tools20022.metamodel.MMMessageAttribute;
 import com.tools20022.metamodel.MMMessageComponent;
+import com.tools20022.metamodel.MMRegistrationStatus;
+import com.tools20022.repository.area.acmt.*;
 import com.tools20022.repository.datatype.Max70Text;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.List;
@@ -159,7 +162,7 @@ public class References4 {
 			componentContext_lazy = () -> References4.mmObject();
 			isDerived = false;
 			xmlTag = "MsgId";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "MessageIdentification";
 			definition = "Identifies a message by a unique identifier and the date and time when the message was created by the sender.";
 			maxOccurs = 1;
@@ -205,7 +208,7 @@ public class References4 {
 			componentContext_lazy = () -> References4.mmObject();
 			isDerived = false;
 			xmlTag = "PrcId";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ProcessIdentification";
 			definition = "Identifies a process by a unique identifier and the date and time when the first message belonging to the process was created by the sender. The process identification remains the same in all messages belonging to the same process, from the initial request message to the final account report closing the process.";
 			maxOccurs = 1;
@@ -247,7 +250,7 @@ public class References4 {
 			componentContext_lazy = () -> References4.mmObject();
 			isDerived = false;
 			xmlTag = "AttchdDocNm";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AttachedDocumentName";
 			definition = "File name of a document logically related to the request.";
 			minOccurs = 0;
@@ -258,19 +261,14 @@ public class References4 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.References4.mmMessageIdentification, com.tools20022.repository.msg.References4.mmProcessIdentification,
-						com.tools20022.repository.msg.References4.mmAttachedDocumentName);
-				messageBuildingBlock_lazy = () -> Arrays.asList(com.tools20022.repository.area.acmt.AccountClosingAmendmentRequestV01.mmReferences, com.tools20022.repository.area.acmt.AccountClosingAmendmentRequestV02.mmReferences,
-						com.tools20022.repository.area.acmt.AccountClosingRequestV01.mmReferences, com.tools20022.repository.area.acmt.AccountClosingRequestV02.mmReferences,
-						com.tools20022.repository.area.acmt.AccountExcludedMandateMaintenanceAmendmentRequestV01.mmReferences, com.tools20022.repository.area.acmt.AccountExcludedMandateMaintenanceAmendmentRequestV02.mmReferences,
-						com.tools20022.repository.area.acmt.AccountExcludedMandateMaintenanceRequestV01.mmReferences, com.tools20022.repository.area.acmt.AccountExcludedMandateMaintenanceRequestV02.mmReferences,
-						com.tools20022.repository.area.acmt.AccountMandateMaintenanceAmendmentRequestV01.mmReferences, com.tools20022.repository.area.acmt.AccountMandateMaintenanceAmendmentRequestV02.mmReferences,
-						com.tools20022.repository.area.acmt.AccountMandateMaintenanceRequestV01.mmReferences, com.tools20022.repository.area.acmt.AccountMandateMaintenanceRequestV02.mmReferences,
-						com.tools20022.repository.area.acmt.AccountOpeningAmendmentRequestV01.mmReferences, com.tools20022.repository.area.acmt.AccountOpeningAmendmentRequestV02.mmReferences,
-						com.tools20022.repository.area.acmt.AccountOpeningRequestV01.mmReferences, com.tools20022.repository.area.acmt.AccountOpeningRequestV02.mmReferences,
-						com.tools20022.repository.area.acmt.AccountReportRequestV01.mmReferences, com.tools20022.repository.area.acmt.AccountReportRequestV02.mmReferences);
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				messageElement_lazy = () -> Arrays.asList(References4.mmMessageIdentification, References4.mmProcessIdentification, References4.mmAttachedDocumentName);
+				messageBuildingBlock_lazy = () -> Arrays.asList(AccountClosingAmendmentRequestV01.mmReferences, AccountClosingAmendmentRequestV02.mmReferences, AccountClosingRequestV01.mmReferences, AccountClosingRequestV02.mmReferences,
+						AccountExcludedMandateMaintenanceAmendmentRequestV01.mmReferences, AccountExcludedMandateMaintenanceAmendmentRequestV02.mmReferences, AccountExcludedMandateMaintenanceRequestV01.mmReferences,
+						AccountExcludedMandateMaintenanceRequestV02.mmReferences, AccountMandateMaintenanceAmendmentRequestV01.mmReferences, AccountMandateMaintenanceAmendmentRequestV02.mmReferences,
+						AccountMandateMaintenanceRequestV01.mmReferences, AccountMandateMaintenanceRequestV02.mmReferences, AccountOpeningAmendmentRequestV01.mmReferences, AccountOpeningAmendmentRequestV02.mmReferences,
+						AccountOpeningRequestV01.mmReferences, AccountOpeningRequestV02.mmReferences, AccountReportRequestV01.mmReferences, AccountReportRequestV02.mmReferences);
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "References4";
 				definition = "Set of elements for the identification of the message and related references.";
 			}

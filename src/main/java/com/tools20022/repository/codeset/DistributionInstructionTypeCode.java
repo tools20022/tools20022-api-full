@@ -19,6 +19,8 @@ package com.tools20022.repository.codeset;
 
 import com.tools20022.metamodel.MMCode;
 import com.tools20022.metamodel.MMCodeSet;
+import com.tools20022.metamodel.MMRegistrationStatus;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -27,6 +29,14 @@ import java.util.concurrent.atomic.AtomicReference;
  * <p>
  * <strong>Constant fields:</strong>
  * <ul>
+ * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getDerivation derivation}
+ * =
+ * <ul>
+ * <li>
+ * {@linkplain com.tools20022.repository.codeset.DistributionInstructionType1Code
+ * DistributionInstructionType1Code}</li>
+ * </ul>
+ * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getCode code} =
  * <ul>
  * <li>
@@ -44,14 +54,6 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>
  * {@linkplain com.tools20022.repository.codeset.DistributionInstructionTypeCode#mmIndividualReturnOrder
  * DistributionInstructionTypeCode.mmIndividualReturnOrder}</li>
- * </ul>
- * </li>
- * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getDerivation derivation}
- * =
- * <ul>
- * <li>
- * {@linkplain com.tools20022.repository.codeset.DistributionInstructionType1Code
- * DistributionInstructionType1Code}</li>
  * </ul>
  * </li>
  * <li>
@@ -105,7 +107,7 @@ public class DistributionInstructionTypeCode {
 	 */
 	public static final MMCode mmGlobalDebitOrder = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "GlobalDebitOrder";
 			definition = "Instruction to debit the positions held under all clients accounts in the underlying resouces of the given event and option. This order applies to all clients who are eligible to participate to the CA event.";
 			owner_lazy = () -> DistributionInstructionTypeCode.mmObject();
@@ -139,7 +141,7 @@ public class DistributionInstructionTypeCode {
 	 */
 	public static final MMCode mmIndividualOrder = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "IndividualOrder";
 			definition = "An instruction, on a per client basis, to debit the position held in the underlying resources (securities and/or cash) and/or the credit of the proceeds (securities and/or cash).";
 			owner_lazy = () -> DistributionInstructionTypeCode.mmObject();
@@ -172,7 +174,7 @@ public class DistributionInstructionTypeCode {
 	 */
 	public static final MMCode mmGlobalReturnOrder = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "GlobalReturnOrder";
 			definition = "Instruction to transfer securities from the clients sequestered balances back to the respective available balances.";
 			owner_lazy = () -> DistributionInstructionTypeCode.mmObject();
@@ -206,7 +208,7 @@ public class DistributionInstructionTypeCode {
 	 */
 	public static final MMCode mmOptionChangeOrder = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "OptionChangeOrder";
 			definition = "Instruction to transfer the position from one sequestered balance (related to a CA option) to another sequestered balalnce (related to another CA option).";
 			owner_lazy = () -> DistributionInstructionTypeCode.mmObject();
@@ -239,7 +241,7 @@ public class DistributionInstructionTypeCode {
 	 */
 	public static final MMCode mmIndividualReturnOrder = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "IndividualReturnOrder";
 			definition = "Instruction to transfer securities from a client sequestered balance back to its available balance.";
 			owner_lazy = () -> DistributionInstructionTypeCode.mmObject();
@@ -250,14 +252,13 @@ public class DistributionInstructionTypeCode {
 	static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
 				example = Arrays.asList("GDEB");
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "DistributionInstructionTypeCode";
 				definition = "Specifies the type of distribution instruction.";
-				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.DistributionInstructionTypeCode.mmGlobalDebitOrder, com.tools20022.repository.codeset.DistributionInstructionTypeCode.mmIndividualOrder,
-						com.tools20022.repository.codeset.DistributionInstructionTypeCode.mmGlobalReturnOrder, com.tools20022.repository.codeset.DistributionInstructionTypeCode.mmOptionChangeOrder,
-						com.tools20022.repository.codeset.DistributionInstructionTypeCode.mmIndividualReturnOrder);
+				code_lazy = () -> Arrays.asList(DistributionInstructionTypeCode.mmGlobalDebitOrder, DistributionInstructionTypeCode.mmIndividualOrder, DistributionInstructionTypeCode.mmGlobalReturnOrder,
+						DistributionInstructionTypeCode.mmOptionChangeOrder, DistributionInstructionTypeCode.mmIndividualReturnOrder);
 				derivation_lazy = () -> Arrays.asList(DistributionInstructionType1Code.mmObject());
 			}
 		});

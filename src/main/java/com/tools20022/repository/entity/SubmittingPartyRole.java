@@ -18,8 +18,10 @@
 package com.tools20022.repository.entity;
 
 import com.tools20022.metamodel.MMBusinessComponent;
+import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.entity.SystemPartyRole;
-import com.tools20022.repository.msg.RequiredSubmission2;
+import com.tools20022.repository.GeneratedRepository;
+import com.tools20022.repository.msg.*;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -33,6 +35,14 @@ import java.util.concurrent.atomic.AtomicReference;
  * <p>
  * <strong>Constant fields:</strong>
  * <ul>
+ * <li>
+ * {@linkplain com.tools20022.metamodel.MMBusinessComponent#getDerivationComponent
+ * derivationComponent} =
+ * <ul>
+ * <li>{@linkplain com.tools20022.repository.msg.RequiredSubmission2
+ * RequiredSubmission2}</li>
+ * </ul>
+ * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMBusinessComponent#getDerivationElement
  * derivationElement} =
@@ -64,14 +74,6 @@ import java.util.concurrent.atomic.AtomicReference;
  * superType} = {@linkplain com.tools20022.repository.entity.SystemPartyRole
  * SystemPartyRole}</li>
  * <li>
- * {@linkplain com.tools20022.metamodel.MMBusinessComponent#getDerivationComponent
- * derivationComponent} =
- * <ul>
- * <li>{@linkplain com.tools20022.repository.msg.RequiredSubmission2
- * RequiredSubmission2}</li>
- * </ul>
- * </li>
- * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
  * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
@@ -95,14 +97,12 @@ public class SubmittingPartyRole extends SystemPartyRole {
 	static public MMBusinessComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMBusinessComponent() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "SubmittingPartyRole";
 				definition = "Specifies the party which submits trade data sets to a system or to a counterparty.";
-				derivationElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.TradePartyIdentification2.mmSubmittingParty, com.tools20022.repository.msg.TradePartyIdentification3.mmSubmittingParty,
-						com.tools20022.repository.msg.TradePartyIdentification5.mmSubmittingParty, com.tools20022.repository.msg.TradePartyIdentification1.mmSubmittingParty,
-						com.tools20022.repository.msg.TradePartyIdentification4.mmSubmittingParty, com.tools20022.repository.msg.SecuritiesTransactionReport2.mmSubmittingParty,
-						com.tools20022.repository.msg.SecuritiesTransactionReport4.mmSubmittingParty);
+				derivationElement_lazy = () -> Arrays.asList(TradePartyIdentification2.mmSubmittingParty, TradePartyIdentification3.mmSubmittingParty, TradePartyIdentification5.mmSubmittingParty,
+						TradePartyIdentification1.mmSubmittingParty, TradePartyIdentification4.mmSubmittingParty, SecuritiesTransactionReport2.mmSubmittingParty, SecuritiesTransactionReport4.mmSubmittingParty);
 				superType_lazy = () -> SystemPartyRole.mmObject();
 				derivationComponent_lazy = () -> Arrays.asList(RequiredSubmission2.mmObject());
 			}

@@ -19,7 +19,10 @@ package com.tools20022.repository.msg;
 
 import com.tools20022.metamodel.MMMessageAssociationEnd;
 import com.tools20022.metamodel.MMMessageComponent;
+import com.tools20022.metamodel.MMRegistrationStatus;
+import com.tools20022.repository.area.caaa.AcceptorAuthorisationResponseV03;
 import com.tools20022.repository.entity.CardPayment;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -135,11 +138,11 @@ public class AcceptorAuthorisationResponse3 {
 			componentContext_lazy = () -> AcceptorAuthorisationResponse3.mmObject();
 			isDerived = false;
 			xmlTag = "Envt";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Environment";
 			definition = "Environment of the transaction.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.AcceptorAuthorisationResponse4.mmEnvironment);
-			previousVersion_lazy = () -> com.tools20022.repository.msg.AcceptorAuthorisationResponse2.mmEnvironment;
+			nextVersions_lazy = () -> Arrays.asList(AcceptorAuthorisationResponse4.mmEnvironment);
+			previousVersion_lazy = () -> AcceptorAuthorisationResponse2.mmEnvironment;
 			maxOccurs = 1;
 			minOccurs = 1;
 			isComposite = true;
@@ -200,11 +203,11 @@ public class AcceptorAuthorisationResponse3 {
 			componentContext_lazy = () -> AcceptorAuthorisationResponse3.mmObject();
 			isDerived = false;
 			xmlTag = "Tx";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Transaction";
 			definition = "Authorisation of a card payment transaction between an acceptor and an acquirer.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.AcceptorAuthorisationResponse4.mmTransaction);
-			previousVersion_lazy = () -> com.tools20022.repository.msg.AcceptorAuthorisationResponse2.mmTransaction;
+			nextVersions_lazy = () -> Arrays.asList(AcceptorAuthorisationResponse4.mmTransaction);
+			previousVersion_lazy = () -> AcceptorAuthorisationResponse2.mmTransaction;
 			maxOccurs = 1;
 			minOccurs = 1;
 			isComposite = true;
@@ -266,11 +269,11 @@ public class AcceptorAuthorisationResponse3 {
 			componentContext_lazy = () -> AcceptorAuthorisationResponse3.mmObject();
 			isDerived = false;
 			xmlTag = "TxRspn";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "TransactionResponse";
 			definition = "Authorisation response from the acquirer.\r\nAuthorisation of a card payment transaction between an acceptor and an acquirer.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.AcceptorAuthorisationResponse4.mmTransactionResponse);
-			previousVersion_lazy = () -> com.tools20022.repository.msg.AcceptorAuthorisationResponse2.mmTransactionResponse;
+			nextVersions_lazy = () -> Arrays.asList(AcceptorAuthorisationResponse4.mmTransactionResponse);
+			previousVersion_lazy = () -> AcceptorAuthorisationResponse2.mmTransactionResponse;
 			maxOccurs = 1;
 			minOccurs = 1;
 			isComposite = true;
@@ -281,12 +284,11 @@ public class AcceptorAuthorisationResponse3 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.AcceptorAuthorisationResponse3.mmEnvironment, com.tools20022.repository.msg.AcceptorAuthorisationResponse3.mmTransaction,
-						com.tools20022.repository.msg.AcceptorAuthorisationResponse3.mmTransactionResponse);
-				messageBuildingBlock_lazy = () -> Arrays.asList(com.tools20022.repository.area.caaa.AcceptorAuthorisationResponseV03.mmAuthorisationResponse);
+				messageElement_lazy = () -> Arrays.asList(AcceptorAuthorisationResponse3.mmEnvironment, AcceptorAuthorisationResponse3.mmTransaction, AcceptorAuthorisationResponse3.mmTransactionResponse);
+				messageBuildingBlock_lazy = () -> Arrays.asList(AcceptorAuthorisationResponseV03.mmAuthorisationResponse);
 				trace_lazy = () -> CardPayment.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "AcceptorAuthorisationResponse3";
 				definition = "Authorisation response from the acquirer.";
 				nextVersions_lazy = () -> Arrays.asList(AcceptorAuthorisationResponse4.mmObject());

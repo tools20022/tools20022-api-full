@@ -19,8 +19,10 @@ package com.tools20022.repository.msg;
 
 import com.tools20022.metamodel.MMMessageAttribute;
 import com.tools20022.metamodel.MMMessageComponent;
+import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.datatype.PercentageRate;
 import com.tools20022.repository.entity.Tolerance;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -100,11 +102,11 @@ public class PercentageTolerance1 {
 	 */
 	public static final MMMessageAttribute mmPlusPercent = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Tolerance.mmPlusPercent;
+			businessElementTrace_lazy = () -> Tolerance.mmPlusPercent;
 			componentContext_lazy = () -> PercentageTolerance1.mmObject();
 			isDerived = false;
 			xmlTag = "PlusPct";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PlusPercent";
 			definition = "Variance in percentage allowed over the agreed dimension. For example, plus 10 percent.";
 			maxOccurs = 1;
@@ -151,11 +153,11 @@ public class PercentageTolerance1 {
 	 */
 	public static final MMMessageAttribute mmMinusPercent = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Tolerance.mmMinusPercent;
+			businessElementTrace_lazy = () -> Tolerance.mmMinusPercent;
 			componentContext_lazy = () -> PercentageTolerance1.mmObject();
 			isDerived = false;
 			xmlTag = "MnsPct";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "MinusPercent";
 			definition = "Variance in percentage allowed below the agreed dimension. For example, minus 10 percent.";
 			maxOccurs = 1;
@@ -167,10 +169,10 @@ public class PercentageTolerance1 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.PercentageTolerance1.mmPlusPercent, com.tools20022.repository.msg.PercentageTolerance1.mmMinusPercent);
+				messageElement_lazy = () -> Arrays.asList(PercentageTolerance1.mmPlusPercent, PercentageTolerance1.mmMinusPercent);
 				trace_lazy = () -> Tolerance.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "PercentageTolerance1";
 				definition = "Variance allowed on a quantity or on a price.";
 			}

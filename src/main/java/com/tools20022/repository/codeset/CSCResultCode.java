@@ -19,6 +19,8 @@ package com.tools20022.repository.codeset;
 
 import com.tools20022.metamodel.MMCode;
 import com.tools20022.metamodel.MMCodeSet;
+import com.tools20022.metamodel.MMRegistrationStatus;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -27,6 +29,13 @@ import java.util.concurrent.atomic.AtomicReference;
  * <p>
  * <strong>Constant fields:</strong>
  * <ul>
+ * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getDerivation derivation}
+ * =
+ * <ul>
+ * <li>{@linkplain com.tools20022.repository.codeset.CSCResult1Code
+ * CSCResult1Code}</li>
+ * </ul>
+ * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getCode code} =
  * <ul>
  * <li>{@linkplain com.tools20022.repository.codeset.CSCResultCode#mmCSCMatch
@@ -43,13 +52,6 @@ import java.util.concurrent.atomic.AtomicReference;
  * CSCResultCode.mmCSCMissing}</li>
  * <li>{@linkplain com.tools20022.repository.codeset.CSCResultCode#mmCSCNotUsed
  * CSCResultCode.mmCSCNotUsed}</li>
- * </ul>
- * </li>
- * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getDerivation derivation}
- * =
- * <ul>
- * <li>{@linkplain com.tools20022.repository.codeset.CSCResult1Code
- * CSCResult1Code}</li>
  * </ul>
  * </li>
  * <li>
@@ -99,7 +101,7 @@ public class CSCResultCode {
 	 */
 	public static final MMCode mmCSCMatch = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "CSCMatch";
 			definition = "Card security code match.";
 			owner_lazy = () -> CSCResultCode.mmObject();
@@ -129,7 +131,7 @@ public class CSCResultCode {
 	 */
 	public static final MMCode mmCSCNoMatch = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "CSCNoMatch";
 			definition = "No card security code match.";
 			owner_lazy = () -> CSCResultCode.mmObject();
@@ -159,7 +161,7 @@ public class CSCResultCode {
 	 */
 	public static final MMCode mmCSCTechnical = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "CSCTechnical";
 			definition = "Card security code not processed for technical reason.";
 			owner_lazy = () -> CSCResultCode.mmObject();
@@ -190,7 +192,7 @@ public class CSCResultCode {
 	 */
 	public static final MMCode mmCSCNotTechnical = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "CSCNotTechnical";
 			definition = "Card security code not processed for non-technical reason.";
 			owner_lazy = () -> CSCResultCode.mmObject();
@@ -220,7 +222,7 @@ public class CSCResultCode {
 	 */
 	public static final MMCode mmCSCMissing = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "CSCMissing";
 			definition = "Card security code missing in request.";
 			owner_lazy = () -> CSCResultCode.mmObject();
@@ -250,7 +252,7 @@ public class CSCResultCode {
 	 */
 	public static final MMCode mmCSCNotUsed = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "CSCNotUsed";
 			definition = "Card security code not used by issuer.";
 			owner_lazy = () -> CSCResultCode.mmObject();
@@ -261,13 +263,12 @@ public class CSCResultCode {
 	static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
 				example = Arrays.asList("CMCH");
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "CSCResultCode";
 				definition = "Result of the printed CSC (Card Security Code) validation.";
-				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.CSCResultCode.mmCSCMatch, com.tools20022.repository.codeset.CSCResultCode.mmCSCNoMatch, com.tools20022.repository.codeset.CSCResultCode.mmCSCTechnical,
-						com.tools20022.repository.codeset.CSCResultCode.mmCSCNotTechnical, com.tools20022.repository.codeset.CSCResultCode.mmCSCMissing, com.tools20022.repository.codeset.CSCResultCode.mmCSCNotUsed);
+				code_lazy = () -> Arrays.asList(CSCResultCode.mmCSCMatch, CSCResultCode.mmCSCNoMatch, CSCResultCode.mmCSCTechnical, CSCResultCode.mmCSCNotTechnical, CSCResultCode.mmCSCMissing, CSCResultCode.mmCSCNotUsed);
 				derivation_lazy = () -> Arrays.asList(CSCResult1Code.mmObject());
 			}
 		});

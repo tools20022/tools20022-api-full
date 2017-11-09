@@ -19,7 +19,13 @@ package com.tools20022.repository.choice;
 
 import com.tools20022.metamodel.MMChoiceComponent;
 import com.tools20022.metamodel.MMMessageAssociationEnd;
+import com.tools20022.metamodel.MMRegistrationStatus;
+import com.tools20022.repository.area.sese.SecuritiesSettlementConditionModificationStatusAdviceV03;
+import com.tools20022.repository.area.sese.SecuritiesSettlementConditionModificationStatusAdviceV04;
+import com.tools20022.repository.area.sese.SecuritiesSettlementConditionModificationStatusAdviceV05;
 import com.tools20022.repository.entity.SecuritiesTradeStatusReason;
+import com.tools20022.repository.entity.StatusReason;
+import com.tools20022.repository.GeneratedRepository;
 import com.tools20022.repository.msg.ProprietaryReason1;
 import com.tools20022.repository.msg.ProprietaryStatusAndReason1;
 import java.util.Arrays;
@@ -150,14 +156,14 @@ public class ProcessingStatus18Choice {
 	 */
 	public static final MMMessageAssociationEnd mmAcknowledgedAccepted = new MMMessageAssociationEnd() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.StatusReason.mmAcknowledgedAcceptedReason;
+			businessElementTrace_lazy = () -> StatusReason.mmAcknowledgedAcceptedReason;
 			componentContext_lazy = () -> ProcessingStatus18Choice.mmObject();
 			isDerived = false;
 			xmlTag = "AckdAccptd";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AcknowledgedAccepted";
 			definition = "Request has been acknowledged by the account servicer.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.choice.ReportItemStatus1Choice.mmAccepted, com.tools20022.repository.choice.ProcessingStatus44Choice.mmAcknowledgedAccepted);
+			nextVersions_lazy = () -> Arrays.asList(ReportItemStatus1Choice.mmAccepted, ProcessingStatus44Choice.mmAcknowledgedAccepted);
 			maxOccurs = 1;
 			minOccurs = 1;
 			isComposite = true;
@@ -211,14 +217,14 @@ public class ProcessingStatus18Choice {
 	 */
 	public static final MMMessageAssociationEnd mmRejected = new MMMessageAssociationEnd() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.StatusReason.mmRejectionReason;
+			businessElementTrace_lazy = () -> StatusReason.mmRejectionReason;
 			componentContext_lazy = () -> ProcessingStatus18Choice.mmObject();
 			isDerived = false;
 			xmlTag = "Rjctd";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Rejected";
 			definition = "Modification Request has been rejected for further processing.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.choice.ReportItemStatus1Choice.mmRejected, com.tools20022.repository.choice.ProcessingStatus44Choice.mmRejected);
+			nextVersions_lazy = () -> Arrays.asList(ReportItemStatus1Choice.mmRejected, ProcessingStatus44Choice.mmRejected);
 			maxOccurs = 1;
 			minOccurs = 1;
 			isComposite = true;
@@ -271,10 +277,10 @@ public class ProcessingStatus18Choice {
 			componentContext_lazy = () -> ProcessingStatus18Choice.mmObject();
 			isDerived = false;
 			xmlTag = "Cmpltd";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Completed";
 			definition = "Modification request was completed.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.choice.ProcessingStatus44Choice.mmCompleted);
+			nextVersions_lazy = () -> Arrays.asList(ProcessingStatus44Choice.mmCompleted);
 			maxOccurs = 1;
 			minOccurs = 1;
 			isComposite = true;
@@ -323,14 +329,14 @@ public class ProcessingStatus18Choice {
 	 */
 	public static final MMMessageAssociationEnd mmDenied = new MMMessageAssociationEnd() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.SecuritiesTradeStatusReason.mmDeniedReason;
+			businessElementTrace_lazy = () -> SecuritiesTradeStatusReason.mmDeniedReason;
 			componentContext_lazy = () -> ProcessingStatus18Choice.mmObject();
 			isDerived = false;
 			xmlTag = "Dnd";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Denied";
 			definition = "Modification request will not be executed.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.choice.ProcessingStatus44Choice.mmDenied);
+			nextVersions_lazy = () -> Arrays.asList(ProcessingStatus44Choice.mmDenied);
 			maxOccurs = 1;
 			minOccurs = 1;
 			isComposite = true;
@@ -383,14 +389,14 @@ public class ProcessingStatus18Choice {
 	 */
 	public static final MMMessageAssociationEnd mmPending = new MMMessageAssociationEnd() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.StatusReason.mmPendingReason;
+			businessElementTrace_lazy = () -> StatusReason.mmPendingReason;
 			componentContext_lazy = () -> ProcessingStatus18Choice.mmObject();
 			isDerived = false;
 			xmlTag = "Pdg";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Pending";
 			definition = "Modification is pending. It is not known at this time whether modification can be affected.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.choice.ProcessingStatus44Choice.mmPending);
+			nextVersions_lazy = () -> Arrays.asList(ProcessingStatus44Choice.mmPending);
 			maxOccurs = 1;
 			minOccurs = 1;
 			isComposite = true;
@@ -447,10 +453,10 @@ public class ProcessingStatus18Choice {
 			componentContext_lazy = () -> ProcessingStatus18Choice.mmObject();
 			isDerived = false;
 			xmlTag = "Prtry";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Proprietary";
 			definition = "Status that cannot be reported using one of the available standard status.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.choice.ProcessingStatus44Choice.mmProprietary);
+			nextVersions_lazy = () -> Arrays.asList(ProcessingStatus44Choice.mmProprietary);
 			maxOccurs = 1;
 			minOccurs = 1;
 			isComposite = true;
@@ -461,15 +467,13 @@ public class ProcessingStatus18Choice {
 	final static public MMChoiceComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMChoiceComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.choice.ProcessingStatus18Choice.mmAcknowledgedAccepted, com.tools20022.repository.choice.ProcessingStatus18Choice.mmRejected,
-						com.tools20022.repository.choice.ProcessingStatus18Choice.mmCompleted, com.tools20022.repository.choice.ProcessingStatus18Choice.mmDenied, com.tools20022.repository.choice.ProcessingStatus18Choice.mmPending,
-						com.tools20022.repository.choice.ProcessingStatus18Choice.mmProprietary);
-				messageBuildingBlock_lazy = () -> Arrays.asList(com.tools20022.repository.area.sese.SecuritiesSettlementConditionModificationStatusAdviceV03.mmProcessingStatus,
-						com.tools20022.repository.area.sese.SecuritiesSettlementConditionModificationStatusAdviceV04.mmProcessingStatus,
-						com.tools20022.repository.area.sese.SecuritiesSettlementConditionModificationStatusAdviceV05.mmProcessingStatus);
+				messageElement_lazy = () -> Arrays.asList(ProcessingStatus18Choice.mmAcknowledgedAccepted, ProcessingStatus18Choice.mmRejected, ProcessingStatus18Choice.mmCompleted, ProcessingStatus18Choice.mmDenied,
+						ProcessingStatus18Choice.mmPending, ProcessingStatus18Choice.mmProprietary);
+				messageBuildingBlock_lazy = () -> Arrays.asList(SecuritiesSettlementConditionModificationStatusAdviceV03.mmProcessingStatus, SecuritiesSettlementConditionModificationStatusAdviceV04.mmProcessingStatus,
+						SecuritiesSettlementConditionModificationStatusAdviceV05.mmProcessingStatus);
 				trace_lazy = () -> SecuritiesTradeStatusReason.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "ProcessingStatus18Choice";
 				definition = "Choice of format for the processing status.";
 				nextVersions_lazy = () -> Arrays.asList(ReportItemStatus1Choice.mmObject(), ProcessingStatus44Choice.mmObject());

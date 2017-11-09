@@ -19,7 +19,9 @@ package com.tools20022.repository.codeset;
 
 import com.tools20022.metamodel.MMCode;
 import com.tools20022.metamodel.MMCodeSet;
+import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.codeset.RoutingTypeCode;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -81,7 +83,7 @@ public class RoutingType1Code extends RoutingTypeCode {
 	 */
 	public static final MMCode mmAllowed = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Allowed";
 			owner_lazy = () -> RoutingType1Code.mmObject();
 		}
@@ -104,7 +106,7 @@ public class RoutingType1Code extends RoutingTypeCode {
 	 */
 	public static final MMCode mmBlocked = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Blocked";
 			owner_lazy = () -> RoutingType1Code.mmObject();
 		}
@@ -113,12 +115,12 @@ public class RoutingType1Code extends RoutingTypeCode {
 	static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
 				example = Arrays.asList("ALLO");
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "RoutingType1Code";
 				definition = "Indicates the type of routing.";
-				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.RoutingType1Code.mmAllowed, com.tools20022.repository.codeset.RoutingType1Code.mmBlocked);
+				code_lazy = () -> Arrays.asList(RoutingType1Code.mmAllowed, RoutingType1Code.mmBlocked);
 				trace_lazy = () -> RoutingTypeCode.mmObject();
 			}
 		});

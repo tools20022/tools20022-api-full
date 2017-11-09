@@ -20,6 +20,8 @@ package com.tools20022.repository.choice;
 import com.tools20022.metamodel.MMChoiceComponent;
 import com.tools20022.metamodel.MMMessageAssociationEnd;
 import com.tools20022.metamodel.MMMessageAttribute;
+import com.tools20022.metamodel.MMRegistrationStatus;
+import com.tools20022.repository.GeneratedRepository;
 import com.tools20022.repository.msg.MarketSpecificAttribute1;
 import com.tools20022.repository.msg.SystemRestriction1;
 import com.tools20022.repository.msg.SystemSecuritiesAccount2;
@@ -101,7 +103,7 @@ public class SecuritiesAccountModification1Choice {
 			componentContext_lazy = () -> SecuritiesAccountModification1Choice.mmObject();
 			isDerived = false;
 			xmlTag = "SysSctiesAcct";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SystemSecuritiesAccount";
 			definition = "Account to or from which a securities entry is made.";
 			maxOccurs = 1;
@@ -145,7 +147,7 @@ public class SecuritiesAccountModification1Choice {
 			componentContext_lazy = () -> SecuritiesAccountModification1Choice.mmObject();
 			isDerived = false;
 			xmlTag = "SysRstrctn";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SystemRestriction";
 			definition = "Defines the specific processing characteristics for a party to ensure configurability of specific requirements, as prescribed by national legal and regulatory requirements and practices.";
 			maxOccurs = 1;
@@ -190,7 +192,7 @@ public class SecuritiesAccountModification1Choice {
 			componentContext_lazy = () -> SecuritiesAccountModification1Choice.mmObject();
 			isDerived = false;
 			xmlTag = "MktSpcfcAttr";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "MarketSpecificAttribute";
 			definition = "Additional attributes defined by a central security depositary for a party.";
 			maxOccurs = 1;
@@ -203,10 +205,10 @@ public class SecuritiesAccountModification1Choice {
 	final static public MMChoiceComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMChoiceComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.choice.SecuritiesAccountModification1Choice.mmSystemSecuritiesAccount,
-						com.tools20022.repository.choice.SecuritiesAccountModification1Choice.mmSystemRestriction, com.tools20022.repository.choice.SecuritiesAccountModification1Choice.mmMarketSpecificAttribute);
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+				messageElement_lazy = () -> Arrays.asList(SecuritiesAccountModification1Choice.mmSystemSecuritiesAccount, SecuritiesAccountModification1Choice.mmSystemRestriction,
+						SecuritiesAccountModification1Choice.mmMarketSpecificAttribute);
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 				name = "SecuritiesAccountModification1Choice";
 				definition = "Identifies which information are involved by a modification request for securities account reference data.";
 			}

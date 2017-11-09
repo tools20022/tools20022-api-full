@@ -19,7 +19,9 @@ package com.tools20022.repository.codeset;
 
 import com.tools20022.metamodel.MMCode;
 import com.tools20022.metamodel.MMCodeSet;
+import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.codeset.PersonIdentificationTypeCode;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -89,7 +91,7 @@ public class PersonIdentificationType4Code extends PersonIdentificationTypeCode 
 	 */
 	public static final MMCode mmPassportNumber = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PassportNumber";
 			owner_lazy = () -> PersonIdentificationType4Code.mmObject();
 		}
@@ -112,7 +114,7 @@ public class PersonIdentificationType4Code extends PersonIdentificationTypeCode 
 	 */
 	public static final MMCode mmDriversLicenseNumber = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "DriversLicenseNumber";
 			owner_lazy = () -> PersonIdentificationType4Code.mmObject();
 		}
@@ -135,7 +137,7 @@ public class PersonIdentificationType4Code extends PersonIdentificationTypeCode 
 	 */
 	public static final MMCode mmEmployeeNumber = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "EmployeeNumber";
 			owner_lazy = () -> PersonIdentificationType4Code.mmObject();
 		}
@@ -158,7 +160,7 @@ public class PersonIdentificationType4Code extends PersonIdentificationTypeCode 
 	 */
 	public static final MMCode mmDriverNumber = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "DriverNumber";
 			owner_lazy = () -> PersonIdentificationType4Code.mmObject();
 		}
@@ -167,13 +169,13 @@ public class PersonIdentificationType4Code extends PersonIdentificationTypeCode 
 	static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
 				example = Arrays.asList("PASS");
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "PersonIdentificationType4Code";
 				definition = "Type of identification used for the Cardholder.";
-				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.PersonIdentificationType4Code.mmPassportNumber, com.tools20022.repository.codeset.PersonIdentificationType4Code.mmDriversLicenseNumber,
-						com.tools20022.repository.codeset.PersonIdentificationType4Code.mmEmployeeNumber, com.tools20022.repository.codeset.PersonIdentificationType4Code.mmDriverNumber);
+				code_lazy = () -> Arrays.asList(PersonIdentificationType4Code.mmPassportNumber, PersonIdentificationType4Code.mmDriversLicenseNumber, PersonIdentificationType4Code.mmEmployeeNumber,
+						PersonIdentificationType4Code.mmDriverNumber);
 				trace_lazy = () -> PersonIdentificationTypeCode.mmObject();
 			}
 		});

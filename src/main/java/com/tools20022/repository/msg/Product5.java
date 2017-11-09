@@ -19,11 +19,15 @@ package com.tools20022.repository.msg;
 
 import com.tools20022.metamodel.MMMessageAttribute;
 import com.tools20022.metamodel.MMMessageComponent;
+import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.codeset.UnitOfMeasure6Code;
 import com.tools20022.repository.datatype.DecimalNumber;
 import com.tools20022.repository.datatype.ImpliedCurrencyAndAmount;
 import com.tools20022.repository.datatype.Max70Text;
 import com.tools20022.repository.entity.Product;
+import com.tools20022.repository.entity.ProductIdentification;
+import com.tools20022.repository.entity.ProductQuantity;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -111,14 +115,14 @@ public class Product5 {
 	 */
 	public static final MMMessageAttribute mmProductCode = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.ProductIdentification.mmIdentifier;
+			businessElementTrace_lazy = () -> ProductIdentification.mmIdentifier;
 			componentContext_lazy = () -> Product5.mmObject();
 			isDerived = false;
 			xmlTag = "PdctCd";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ProductCode";
 			definition = "Product code of the item.";
-			previousVersion_lazy = () -> com.tools20022.repository.msg.Product3.mmProductCode;
+			previousVersion_lazy = () -> Product3.mmProductCode;
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> Max70Text.mmObject();
@@ -161,10 +165,10 @@ public class Product5 {
 			componentContext_lazy = () -> Product5.mmObject();
 			isDerived = false;
 			xmlTag = "AddtlPdctCd";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AdditionalProductCode";
 			definition = "Additional product code related to the product.";
-			previousVersion_lazy = () -> com.tools20022.repository.msg.Product3.mmAdditionalProductCode;
+			previousVersion_lazy = () -> Product3.mmAdditionalProductCode;
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> Max70Text.mmObject();
@@ -208,10 +212,10 @@ public class Product5 {
 			componentContext_lazy = () -> Product5.mmObject();
 			isDerived = false;
 			xmlTag = "AmtLmt";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AmountLimit";
 			definition = "Amount limit for the product.";
-			previousVersion_lazy = () -> com.tools20022.repository.msg.Product3.mmProductAmount;
+			previousVersion_lazy = () -> Product3.mmProductAmount;
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> ImpliedCurrencyAndAmount.mmObject();
@@ -257,14 +261,14 @@ public class Product5 {
 	 */
 	public static final MMMessageAttribute mmQuantityLimit = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.ProductQuantity.mmValue;
+			businessElementTrace_lazy = () -> ProductQuantity.mmValue;
 			componentContext_lazy = () -> Product5.mmObject();
 			isDerived = false;
 			xmlTag = "QtyLmt";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "QuantityLimit";
 			definition = "Quantity limit for the product.";
-			previousVersion_lazy = () -> com.tools20022.repository.msg.Product3.mmProductQuantity;
+			previousVersion_lazy = () -> Product3.mmProductQuantity;
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> DecimalNumber.mmObject();
@@ -310,14 +314,14 @@ public class Product5 {
 	 */
 	public static final MMMessageAttribute mmUnitOfMeasure = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.ProductQuantity.mmUnitOfMeasure;
+			businessElementTrace_lazy = () -> ProductQuantity.mmUnitOfMeasure;
 			componentContext_lazy = () -> Product5.mmObject();
 			isDerived = false;
 			xmlTag = "UnitOfMeasr";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "UnitOfMeasure";
 			definition = "Unit of measure of the item purchased.";
-			previousVersion_lazy = () -> com.tools20022.repository.msg.Product3.mmUnitOfMeasure;
+			previousVersion_lazy = () -> Product3.mmUnitOfMeasure;
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> UnitOfMeasure6Code.mmObject();
@@ -327,11 +331,10 @@ public class Product5 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.Product5.mmProductCode, com.tools20022.repository.msg.Product5.mmAdditionalProductCode, com.tools20022.repository.msg.Product5.mmAmountLimit,
-						com.tools20022.repository.msg.Product5.mmQuantityLimit, com.tools20022.repository.msg.Product5.mmUnitOfMeasure);
+				messageElement_lazy = () -> Arrays.asList(Product5.mmProductCode, Product5.mmAdditionalProductCode, Product5.mmAmountLimit, Product5.mmQuantityLimit, Product5.mmUnitOfMeasure);
 				trace_lazy = () -> Product.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "Product5";
 				definition = "Product to purchase.";
 				previousVersion_lazy = () -> Product3.mmObject();

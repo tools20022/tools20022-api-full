@@ -19,6 +19,8 @@ package com.tools20022.repository.codeset;
 
 import com.tools20022.metamodel.MMCode;
 import com.tools20022.metamodel.MMCodeSet;
+import com.tools20022.metamodel.MMRegistrationStatus;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -27,6 +29,13 @@ import java.util.concurrent.atomic.AtomicReference;
  * <p>
  * <strong>Constant fields:</strong>
  * <ul>
+ * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getDerivation derivation}
+ * =
+ * <ul>
+ * <li>{@linkplain com.tools20022.repository.codeset.SystemPartyType1Code
+ * SystemPartyType1Code}</li>
+ * </ul>
+ * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getCode code} =
  * <ul>
  * <li>
@@ -44,13 +53,6 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>
  * {@linkplain com.tools20022.repository.codeset.SystemPartyTypeCode#mmExternalCentralSecuritiesDepository
  * SystemPartyTypeCode.mmExternalCentralSecuritiesDepository}</li>
- * </ul>
- * </li>
- * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getDerivation derivation}
- * =
- * <ul>
- * <li>{@linkplain com.tools20022.repository.codeset.SystemPartyType1Code
- * SystemPartyType1Code}</li>
  * </ul>
  * </li>
  * <li>
@@ -106,7 +108,7 @@ public class SystemPartyTypeCode {
 	 */
 	public static final MMCode mmCentralSecuritiesDepository = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CentralSecuritiesDepository";
 			definition = "Infrastructure that holds or controls the holding of physical or dematerialised financial instruments belonging to all, or a large portion of, the investors in a securities market. This effects the centralised transfer of ownership of such securities by entries on its books and records.";
 			owner_lazy = () -> SystemPartyTypeCode.mmObject();
@@ -141,7 +143,7 @@ public class SystemPartyTypeCode {
 	 */
 	public static final MMCode mmNationalCentralBank = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "NationalCentralBank";
 			definition = "As system participant, the national central bank is the principal monetary authority of a nation and performs several key functions, including issuing currency and regulating the supply of credit in the economy.";
 			owner_lazy = () -> SystemPartyTypeCode.mmObject();
@@ -176,7 +178,7 @@ public class SystemPartyTypeCode {
 	 */
 	public static final MMCode mmPaymentBank = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PaymentBank";
 			definition = "National central bank or a private bank used to settle the cash leg of securities settlements: it provides the cash account to support the settlement of the securities transactions of another financial institution in central bank money (CeBM).";
 			owner_lazy = () -> SystemPartyTypeCode.mmObject();
@@ -209,7 +211,7 @@ public class SystemPartyTypeCode {
 	 */
 	public static final MMCode mmCentralSecuritiesDepositoryParticipant = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CentralSecuritiesDepositoryParticipant";
 			definition = "Participant of a central securities depositary defined within the system, for which the account holder is the central securities depository.";
 			owner_lazy = () -> SystemPartyTypeCode.mmObject();
@@ -246,7 +248,7 @@ public class SystemPartyTypeCode {
 	 */
 	public static final MMCode mmExternalCentralSecuritiesDepository = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ExternalCentralSecuritiesDepository";
 			definition = "Infrastructure that holds or controls the holding of physical or dematerialised financial instruments belonging to all, or a large portion of, the investors in a securities market. This effects the centralised transfer of ownership of such securities by entries on its books and records.\r\nThe infrastructure is external to the system executing the instruction.";
 			owner_lazy = () -> SystemPartyTypeCode.mmObject();
@@ -257,14 +259,13 @@ public class SystemPartyTypeCode {
 	static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
 				example = Arrays.asList("CSDY");
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "SystemPartyTypeCode";
 				definition = "Specifies the type of the party within a system.";
-				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.SystemPartyTypeCode.mmCentralSecuritiesDepository, com.tools20022.repository.codeset.SystemPartyTypeCode.mmNationalCentralBank,
-						com.tools20022.repository.codeset.SystemPartyTypeCode.mmPaymentBank, com.tools20022.repository.codeset.SystemPartyTypeCode.mmCentralSecuritiesDepositoryParticipant,
-						com.tools20022.repository.codeset.SystemPartyTypeCode.mmExternalCentralSecuritiesDepository);
+				code_lazy = () -> Arrays.asList(SystemPartyTypeCode.mmCentralSecuritiesDepository, SystemPartyTypeCode.mmNationalCentralBank, SystemPartyTypeCode.mmPaymentBank, SystemPartyTypeCode.mmCentralSecuritiesDepositoryParticipant,
+						SystemPartyTypeCode.mmExternalCentralSecuritiesDepository);
 				derivation_lazy = () -> Arrays.asList(SystemPartyType1Code.mmObject());
 			}
 		});

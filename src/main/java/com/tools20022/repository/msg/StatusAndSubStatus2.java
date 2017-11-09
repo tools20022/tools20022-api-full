@@ -19,9 +19,11 @@ package com.tools20022.repository.msg;
 
 import com.tools20022.metamodel.MMMessageAttribute;
 import com.tools20022.metamodel.MMMessageComponent;
+import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.choice.Status27Choice;
 import com.tools20022.repository.datatype.Exact4AlphaNumericText;
 import com.tools20022.repository.entity.TreasuryTradeSettlementStatus;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -109,14 +111,14 @@ public class StatusAndSubStatus2 {
 	 */
 	public static final MMMessageAttribute mmStatusCode = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.TreasuryTradeSettlementStatus.mmTradeStatus;
+			businessElementTrace_lazy = () -> TreasuryTradeSettlementStatus.mmTradeStatus;
 			componentContext_lazy = () -> StatusAndSubStatus2.mmObject();
 			isDerived = false;
 			xmlTag = "StsCd";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "StatusCode";
 			definition = "Status expressed as a code.";
-			previousVersion_lazy = () -> com.tools20022.repository.msg.StatusAndSubStatus1.mmStatusCode;
+			previousVersion_lazy = () -> StatusAndSubStatus1.mmStatusCode;
 			maxOccurs = 1;
 			minOccurs = 1;
 			complexType_lazy = () -> Status27Choice.mmObject();
@@ -163,14 +165,14 @@ public class StatusAndSubStatus2 {
 	 */
 	public static final MMMessageAttribute mmSubStatusCode = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.TreasuryTradeSettlementStatus.mmTradeStatus;
+			businessElementTrace_lazy = () -> TreasuryTradeSettlementStatus.mmTradeStatus;
 			componentContext_lazy = () -> StatusAndSubStatus2.mmObject();
 			isDerived = false;
 			xmlTag = "SubStsCd";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SubStatusCode";
 			definition = "Sub status expressed as a code.";
-			previousVersion_lazy = () -> com.tools20022.repository.msg.StatusAndSubStatus1.mmSubStatusCode;
+			previousVersion_lazy = () -> StatusAndSubStatus1.mmSubStatusCode;
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> Exact4AlphaNumericText.mmObject();
@@ -180,10 +182,10 @@ public class StatusAndSubStatus2 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.StatusAndSubStatus2.mmStatusCode, com.tools20022.repository.msg.StatusAndSubStatus2.mmSubStatusCode);
+				messageElement_lazy = () -> Arrays.asList(StatusAndSubStatus2.mmStatusCode, StatusAndSubStatus2.mmSubStatusCode);
 				trace_lazy = () -> TreasuryTradeSettlementStatus.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "StatusAndSubStatus2";
 				definition = "Specifies the status and optionally the sub status.";
 				previousVersion_lazy = () -> StatusAndSubStatus1.mmObject();

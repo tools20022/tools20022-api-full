@@ -17,13 +17,12 @@
 
 package com.tools20022.repository.entity;
 
-import com.tools20022.metamodel.MMBusinessAssociationEnd;
-import com.tools20022.metamodel.MMBusinessAttribute;
-import com.tools20022.metamodel.MMBusinessComponent;
+import com.tools20022.metamodel.*;
 import com.tools20022.repository.codeset.CapitalTypeCode;
 import com.tools20022.repository.datatype.CurrencyAndAmount;
 import com.tools20022.repository.datatype.DecimalNumber;
 import com.tools20022.repository.datatype.ISODateTime;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -36,6 +35,14 @@ import java.util.concurrent.atomic.AtomicReference;
  * <p>
  * <strong>Constant fields:</strong>
  * <ul>
+ * <li>
+ * {@linkplain com.tools20022.metamodel.MMBusinessComponent#getAssociationDomain
+ * associationDomain} =
+ * <ul>
+ * <li>{@linkplain com.tools20022.repository.entity.Issuance#mmCapitalRaised
+ * Issuance.mmCapitalRaised}</li>
+ * </ul>
+ * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMBusinessComponent#getElement
  * element} =
  * <ul>
@@ -49,14 +56,6 @@ import java.util.concurrent.atomic.AtomicReference;
  * Capital.mmAmount}</li>
  * <li>{@linkplain com.tools20022.repository.entity.Capital#mmUnit
  * Capital.mmUnit}</li>
- * </ul>
- * </li>
- * <li>
- * {@linkplain com.tools20022.metamodel.MMBusinessComponent#getAssociationDomain
- * associationDomain} =
- * <ul>
- * <li>{@linkplain com.tools20022.repository.entity.Issuance#mmCapitalRaised
- * Issuance.mmCapitalRaised}</li>
  * </ul>
  * </li>
  * <li>
@@ -114,13 +113,13 @@ public class Capital {
 		{
 			elementContext_lazy = () -> Capital.mmObject();
 			isDerived = false;
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "AssetIssuance";
 			definition = "Issued asset.";
 			maxOccurs = 1;
 			minOccurs = 0;
 			opposite_lazy = () -> com.tools20022.repository.entity.Issuance.mmCapitalRaised;
-			aggregation = com.tools20022.metamodel.MMAggregation.NONE;
+			aggregation = MMAggregation.NONE;
 			type_lazy = () -> com.tools20022.repository.entity.Issuance.mmObject();
 		}
 	};
@@ -153,7 +152,7 @@ public class Capital {
 		{
 			elementContext_lazy = () -> Capital.mmObject();
 			isDerived = false;
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "Date";
 			definition = "Date/time at which capital amount was recorded.";
 			maxOccurs = 1;
@@ -191,7 +190,7 @@ public class Capital {
 		{
 			elementContext_lazy = () -> Capital.mmObject();
 			isDerived = false;
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "Type";
 			definition = "Specifies the type of capital.";
 			maxOccurs = 1;
@@ -229,7 +228,7 @@ public class Capital {
 		{
 			elementContext_lazy = () -> Capital.mmObject();
 			isDerived = false;
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "Amount";
 			definition = "Capital expressed as a currency and amount.";
 			maxOccurs = 1;
@@ -267,7 +266,7 @@ public class Capital {
 		{
 			elementContext_lazy = () -> Capital.mmObject();
 			isDerived = false;
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "Unit";
 			definition = "Capital expressed as a number of units.";
 			maxOccurs = 1;
@@ -279,13 +278,12 @@ public class Capital {
 	static public MMBusinessComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMBusinessComponent() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "Capital";
 				definition = "Amount of money targeted to be raised through the issuance of a security.";
 				associationDomain_lazy = () -> Arrays.asList(com.tools20022.repository.entity.Issuance.mmCapitalRaised);
-				element_lazy = () -> Arrays.asList(com.tools20022.repository.entity.Capital.mmAssetIssuance, com.tools20022.repository.entity.Capital.mmDate, com.tools20022.repository.entity.Capital.mmType,
-						com.tools20022.repository.entity.Capital.mmAmount, com.tools20022.repository.entity.Capital.mmUnit);
+				element_lazy = () -> Arrays.asList(Capital.mmAssetIssuance, Capital.mmDate, Capital.mmType, Capital.mmAmount, Capital.mmUnit);
 			}
 		});
 		return mmObject_lazy.get();

@@ -20,9 +20,11 @@ package com.tools20022.repository.msg;
 import com.tools20022.metamodel.MMMessageAssociationEnd;
 import com.tools20022.metamodel.MMMessageAttribute;
 import com.tools20022.metamodel.MMMessageComponent;
+import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.choice.InformationDistribution1Choice;
 import com.tools20022.repository.datatype.Max35Text;
 import com.tools20022.repository.datatype.YesNoIndicator;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -95,7 +97,7 @@ public class Notification2 {
 			componentContext_lazy = () -> Notification2.mmObject();
 			isDerived = false;
 			xmlTag = "NtfctnTp";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "NotificationType";
 			definition = "Type of notification.";
 			maxOccurs = 1;
@@ -136,7 +138,7 @@ public class Notification2 {
 			componentContext_lazy = () -> Notification2.mmObject();
 			isDerived = false;
 			xmlTag = "Reqrd";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Required";
 			definition = "Indicates whether the notification is required.";
 			maxOccurs = 1;
@@ -176,7 +178,7 @@ public class Notification2 {
 			componentContext_lazy = () -> Notification2.mmObject();
 			isDerived = false;
 			xmlTag = "DstrbtnTp";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "DistributionType";
 			definition = "Specifies how the notification is sent.";
 			maxOccurs = 1;
@@ -189,10 +191,9 @@ public class Notification2 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.Notification2.mmNotificationType, com.tools20022.repository.msg.Notification2.mmRequired,
-						com.tools20022.repository.msg.Notification2.mmDistributionType);
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				messageElement_lazy = () -> Arrays.asList(Notification2.mmNotificationType, Notification2.mmRequired, Notification2.mmDistributionType);
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "Notification2";
 				definition = "Information about the type of notification required.";
 			}

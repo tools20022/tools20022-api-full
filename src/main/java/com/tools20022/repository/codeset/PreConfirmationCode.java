@@ -19,6 +19,8 @@ package com.tools20022.repository.codeset;
 
 import com.tools20022.metamodel.MMCode;
 import com.tools20022.metamodel.MMCodeSet;
+import com.tools20022.metamodel.MMRegistrationStatus;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -27,6 +29,13 @@ import java.util.concurrent.atomic.AtomicReference;
  * <p>
  * <strong>Constant fields:</strong>
  * <ul>
+ * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getDerivation derivation}
+ * =
+ * <ul>
+ * <li>{@linkplain com.tools20022.repository.codeset.PreConfirmation1Code
+ * PreConfirmation1Code}</li>
+ * </ul>
+ * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getCode code} =
  * <ul>
  * <li>
@@ -35,13 +44,6 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>
  * {@linkplain com.tools20022.repository.codeset.PreConfirmationCode#mmPreConfirmSecurities
  * PreConfirmationCode.mmPreConfirmSecurities}</li>
- * </ul>
- * </li>
- * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getDerivation derivation}
- * =
- * <ul>
- * <li>{@linkplain com.tools20022.repository.codeset.PreConfirmation1Code
- * PreConfirmation1Code}</li>
  * </ul>
  * </li>
  * <li>
@@ -95,7 +97,7 @@ public class PreConfirmationCode {
 	 */
 	public static final MMCode mmPreConfirmCash = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "PreConfirmCash";
 			definition = "Pre-confirmation of the movement of the cash, pending the movement of securities.";
 			owner_lazy = () -> PreConfirmationCode.mmObject();
@@ -128,7 +130,7 @@ public class PreConfirmationCode {
 	 */
 	public static final MMCode mmPreConfirmSecurities = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "PreConfirmSecurities";
 			definition = "Pre-confirmation of the movement of the securities, pending the movement of cash.";
 			owner_lazy = () -> PreConfirmationCode.mmObject();
@@ -139,12 +141,12 @@ public class PreConfirmationCode {
 	static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
 				example = Arrays.asList("PRCA");
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "PreConfirmationCode";
 				definition = "Specifies if there is a pre-confirmation of cash or securities.";
-				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.PreConfirmationCode.mmPreConfirmCash, com.tools20022.repository.codeset.PreConfirmationCode.mmPreConfirmSecurities);
+				code_lazy = () -> Arrays.asList(PreConfirmationCode.mmPreConfirmCash, PreConfirmationCode.mmPreConfirmSecurities);
 				derivation_lazy = () -> Arrays.asList(PreConfirmation1Code.mmObject());
 			}
 		});

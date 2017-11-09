@@ -20,6 +20,7 @@ package com.tools20022.repository.area.supl;
 import com.tools20022.metamodel.MMMessageBuildingBlock;
 import com.tools20022.metamodel.MMMessageDefinition;
 import com.tools20022.metamodel.MMMessageDefinitionIdentifier;
+import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.area.SupplementaryDataLatestVersion;
 import com.tools20022.repository.datatype.ISODateTime;
 import com.tools20022.repository.datatype.Max35Text;
@@ -35,6 +36,9 @@ import java.util.List;
  * <p>
  * <strong>Constant fields:</strong>
  * <ul>
+ * <li>
+ * {@linkplain com.tools20022.metamodel.MMMessageDefinition#getMessageDefinitionIdentifier
+ * messageDefinitionIdentifier} = {@code supl.027.001.01}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMMessageDefinition#getBusinessArea
  * businessArea} =
  * {@linkplain com.tools20022.repository.area.SupplementaryDataLatestVersion
@@ -69,9 +73,6 @@ import java.util.List;
  * InformationResponseSD1V01.mmAccountAndParties}</li>
  * </ul>
  * </li>
- * <li>
- * {@linkplain com.tools20022.metamodel.MMMessageDefinition#getMessageDefinitionIdentifier
- * messageDefinitionIdentifier} = {@code supl.027.001.01}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -111,7 +112,7 @@ public class InformationResponseSD1V01 {
 	public static final MMMessageBuildingBlock mmInvestigationIdentification = new MMMessageBuildingBlock() {
 		{
 			xmlTag = "InvstgtnId";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "InvestigationIdentification";
 			definition = "Information used to identify the request.";
 			maxOccurs = 1;
@@ -145,7 +146,7 @@ public class InformationResponseSD1V01 {
 	public static final MMMessageBuildingBlock mmCreationDateTime = new MMMessageBuildingBlock() {
 		{
 			xmlTag = "CreDtTm";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CreationDateTime";
 			definition = "Date and time of creation of the extension.";
 			maxOccurs = 1;
@@ -180,7 +181,7 @@ public class InformationResponseSD1V01 {
 	public static final MMMessageBuildingBlock mmAccountServicerIdentification = new MMMessageBuildingBlock() {
 		{
 			xmlTag = "AcctSvcrId";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AccountServicerIdentification";
 			definition = "Identifies the account servicing institution.";
 			maxOccurs = 1;
@@ -215,7 +216,7 @@ public class InformationResponseSD1V01 {
 	public static final MMMessageBuildingBlock mmAccountAndParties = new MMMessageBuildingBlock() {
 		{
 			xmlTag = "AcctAndPties";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AccountAndParties";
 			definition = "Requested account and its owners.";
 			minOccurs = 1;
@@ -226,15 +227,15 @@ public class InformationResponseSD1V01 {
 	final static public MMMessageDefinition mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageDefinition() {
 			{
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "InformationResponseSD1V01";
 				definition = "This extends the message InformationRequestResponse.";
 				messageSet_lazy = () -> Arrays.asList(SupplementaryDataISOLatestversion.mmObject());
 				rootElement = "Document";
 				xmlTag = "InfRspnSD1";
 				businessArea_lazy = () -> SupplementaryDataLatestVersion.mmObject();
-				messageBuildingBlock_lazy = () -> Arrays.asList(com.tools20022.repository.area.supl.InformationResponseSD1V01.mmInvestigationIdentification, com.tools20022.repository.area.supl.InformationResponseSD1V01.mmCreationDateTime,
-						com.tools20022.repository.area.supl.InformationResponseSD1V01.mmAccountServicerIdentification, com.tools20022.repository.area.supl.InformationResponseSD1V01.mmAccountAndParties);
+				messageBuildingBlock_lazy = () -> Arrays.asList(InformationResponseSD1V01.mmInvestigationIdentification, InformationResponseSD1V01.mmCreationDateTime, InformationResponseSD1V01.mmAccountServicerIdentification,
+						InformationResponseSD1V01.mmAccountAndParties);
 				messageDefinitionIdentifier_lazy = () -> new MMMessageDefinitionIdentifier() {
 					{
 						businessArea = "supl";

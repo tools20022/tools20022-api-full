@@ -19,7 +19,9 @@ package com.tools20022.repository.codeset;
 
 import com.tools20022.metamodel.MMCode;
 import com.tools20022.metamodel.MMCodeSet;
+import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.codeset.PriceStatusCode;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -76,7 +78,7 @@ public class PriceStatus1Code extends PriceStatusCode {
 	 */
 	public static final MMCode mmPending = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Pending";
 			owner_lazy = () -> PriceStatus1Code.mmObject();
 		}
@@ -99,7 +101,7 @@ public class PriceStatus1Code extends PriceStatusCode {
 	 */
 	public static final MMCode mmNotApplicable = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "NotApplicable";
 			owner_lazy = () -> PriceStatus1Code.mmObject();
 		}
@@ -108,11 +110,11 @@ public class PriceStatus1Code extends PriceStatusCode {
 	static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "PriceStatus1Code";
 				definition = "Specifies the status of the price of a financial instrument.";
-				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.PriceStatus1Code.mmPending, com.tools20022.repository.codeset.PriceStatus1Code.mmNotApplicable);
+				code_lazy = () -> Arrays.asList(PriceStatus1Code.mmPending, PriceStatus1Code.mmNotApplicable);
 				trace_lazy = () -> PriceStatusCode.mmObject();
 			}
 		});

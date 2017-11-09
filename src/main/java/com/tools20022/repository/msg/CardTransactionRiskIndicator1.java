@@ -19,9 +19,11 @@ package com.tools20022.repository.msg;
 
 import com.tools20022.metamodel.MMMessageAttribute;
 import com.tools20022.metamodel.MMMessageComponent;
+import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.codeset.ActionType4Code;
 import com.tools20022.repository.codeset.CardTransactionRiskReason1Code;
 import com.tools20022.repository.datatype.Number;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.List;
@@ -100,7 +102,7 @@ public class CardTransactionRiskIndicator1 {
 			componentContext_lazy = () -> CardTransactionRiskIndicator1.mmObject();
 			isDerived = false;
 			xmlTag = "Rsn";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Reason";
 			definition = "Reason to indicate a certain level of risk for the transaction.";
 			minOccurs = 0;
@@ -140,7 +142,7 @@ public class CardTransactionRiskIndicator1 {
 			componentContext_lazy = () -> CardTransactionRiskIndicator1.mmObject();
 			isDerived = false;
 			xmlTag = "Lvl";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Level";
 			definition = "Level of risk, from 1 to 99.";
 			maxOccurs = 1;
@@ -182,7 +184,7 @@ public class CardTransactionRiskIndicator1 {
 			componentContext_lazy = () -> CardTransactionRiskIndicator1.mmObject();
 			isDerived = false;
 			xmlTag = "RcmmnddActn";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "RecommendedAction";
 			definition = "Recommended action for the issuer.";
 			minOccurs = 0;
@@ -193,10 +195,9 @@ public class CardTransactionRiskIndicator1 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.CardTransactionRiskIndicator1.mmReason, com.tools20022.repository.msg.CardTransactionRiskIndicator1.mmLevel,
-						com.tools20022.repository.msg.CardTransactionRiskIndicator1.mmRecommendedAction);
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				messageElement_lazy = () -> Arrays.asList(CardTransactionRiskIndicator1.mmReason, CardTransactionRiskIndicator1.mmLevel, CardTransactionRiskIndicator1.mmRecommendedAction);
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "CardTransactionRiskIndicator1";
 				definition = "Indicates to the issuer the level of risk of the transaction.";
 			}

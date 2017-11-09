@@ -19,8 +19,10 @@ package com.tools20022.repository.msg;
 
 import com.tools20022.metamodel.MMMessageAttribute;
 import com.tools20022.metamodel.MMMessageComponent;
+import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.datatype.Max1NumericText;
 import com.tools20022.repository.datatype.YesNoIndicator;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -93,7 +95,7 @@ public class ConditionAcceptance1 {
 			componentContext_lazy = () -> ConditionAcceptance1.mmObject();
 			isDerived = false;
 			xmlTag = "CondId";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ConditionIdentification";
 			definition = "Identification of the condition number.";
 			maxOccurs = 1;
@@ -135,7 +137,7 @@ public class ConditionAcceptance1 {
 			componentContext_lazy = () -> ConditionAcceptance1.mmObject();
 			isDerived = false;
 			xmlTag = "AccptncFlg";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AcceptanceFlag";
 			definition = "Indicates whether the condition is accepted or not.";
 			maxOccurs = 1;
@@ -147,9 +149,9 @@ public class ConditionAcceptance1 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.ConditionAcceptance1.mmConditionIdentification, com.tools20022.repository.msg.ConditionAcceptance1.mmAcceptanceFlag);
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+				messageElement_lazy = () -> Arrays.asList(ConditionAcceptance1.mmConditionIdentification, ConditionAcceptance1.mmAcceptanceFlag);
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 				name = "ConditionAcceptance1";
 				definition = "Provides acceptance marker to the identified conditions.";
 			}

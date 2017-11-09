@@ -20,11 +20,15 @@ package com.tools20022.repository.msg;
 import com.tools20022.metamodel.MMMessageAssociationEnd;
 import com.tools20022.metamodel.MMMessageAttribute;
 import com.tools20022.metamodel.MMMessageComponent;
+import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.choice.DerivativePartyIdentification1Choice;
 import com.tools20022.repository.codeset.ActiveOrHistoricCurrencyCode;
 import com.tools20022.repository.datatype.TrueFalseIndicator;
 import com.tools20022.repository.entity.CreditDefaultSwap;
+import com.tools20022.repository.entity.Derivative;
 import com.tools20022.repository.entity.RegistrarRole;
+import com.tools20022.repository.entity.Swaps;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -111,11 +115,11 @@ public class CreditDefaultSwapSingleName2 {
 	 */
 	public static final MMMessageAttribute mmSovereignIssuer = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Swaps.mmSovereignIssuer;
+			businessElementTrace_lazy = () -> Swaps.mmSovereignIssuer;
 			componentContext_lazy = () -> CreditDefaultSwapSingleName2.mmObject();
 			isDerived = false;
 			xmlTag = "SvrgnIssr";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SovereignIssuer";
 			definition = "Reference entity of a single name credit default swap (CDS) or a derivative on single name CDS.";
 			maxOccurs = 1;
@@ -165,7 +169,7 @@ public class CreditDefaultSwapSingleName2 {
 			componentContext_lazy = () -> CreditDefaultSwapSingleName2.mmObject();
 			isDerived = false;
 			xmlTag = "RefPty";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ReferenceParty";
 			definition = "Reference entity of a single name credit default swap (CDS) or a derivative on single name credit default swap (CDS).";
 			maxOccurs = 1;
@@ -210,11 +214,11 @@ public class CreditDefaultSwapSingleName2 {
 	 */
 	public static final MMMessageAttribute mmNotionalCurrency = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Derivative.mmNotionalCurrency;
+			businessElementTrace_lazy = () -> Derivative.mmNotionalCurrency;
 			componentContext_lazy = () -> CreditDefaultSwapSingleName2.mmObject();
 			isDerived = false;
 			xmlTag = "NtnlCcy";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "NotionalCurrency";
 			definition = "Currency in which the notional is denominated.\r\n";
 			maxOccurs = 1;
@@ -226,11 +230,10 @@ public class CreditDefaultSwapSingleName2 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.CreditDefaultSwapSingleName2.mmSovereignIssuer, com.tools20022.repository.msg.CreditDefaultSwapSingleName2.mmReferenceParty,
-						com.tools20022.repository.msg.CreditDefaultSwapSingleName2.mmNotionalCurrency);
+				messageElement_lazy = () -> Arrays.asList(CreditDefaultSwapSingleName2.mmSovereignIssuer, CreditDefaultSwapSingleName2.mmReferenceParty, CreditDefaultSwapSingleName2.mmNotionalCurrency);
 				trace_lazy = () -> CreditDefaultSwap.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "CreditDefaultSwapSingleName2";
 				definition = "Credit default swap derivative specific for reporting on a single name credit default swap.";
 			}

@@ -20,11 +20,14 @@ package com.tools20022.repository.msg;
 import com.tools20022.metamodel.MMMessageAssociationEnd;
 import com.tools20022.metamodel.MMMessageAttribute;
 import com.tools20022.metamodel.MMMessageComponent;
+import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.codeset.HoldingAccountLevel1Code;
 import com.tools20022.repository.datatype.ISODate;
+import com.tools20022.repository.entity.Entry;
 import com.tools20022.repository.entity.SecuritiesAccount;
 import com.tools20022.repository.entity.SecuritiesEntry;
 import com.tools20022.repository.entity.SecuritiesIdentification;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -110,7 +113,7 @@ public class ReportItem1 {
 			componentContext_lazy = () -> ReportItem1.mmObject();
 			isDerived = false;
 			xmlTag = "AcctId";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AccountIdentification";
 			definition = "Unique and unambiguous identification for the account between the account owner and the account servicer.";
 			maxOccurs = 1;
@@ -153,7 +156,7 @@ public class ReportItem1 {
 			componentContext_lazy = () -> ReportItem1.mmObject();
 			isDerived = false;
 			xmlTag = "AcctLvl";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AccountLevel";
 			definition = "Level of the safekeeping account or sub-account of the report item.";
 			maxOccurs = 1;
@@ -199,7 +202,7 @@ public class ReportItem1 {
 			componentContext_lazy = () -> ReportItem1.mmObject();
 			isDerived = false;
 			xmlTag = "FinInstrmId";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "FinancialInstrumentIdentification";
 			definition = "Financial instrument identification of the report item.";
 			maxOccurs = 1;
@@ -242,11 +245,11 @@ public class ReportItem1 {
 	 */
 	public static final MMMessageAttribute mmItemDate = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Entry.mmEntryDate;
+			businessElementTrace_lazy = () -> Entry.mmEntryDate;
 			componentContext_lazy = () -> ReportItem1.mmObject();
 			isDerived = false;
 			xmlTag = "ItmDt";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ItemDate";
 			definition = "Date of the report item.";
 			maxOccurs = 1;
@@ -258,11 +261,10 @@ public class ReportItem1 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.ReportItem1.mmAccountIdentification, com.tools20022.repository.msg.ReportItem1.mmAccountLevel,
-						com.tools20022.repository.msg.ReportItem1.mmFinancialInstrumentIdentification, com.tools20022.repository.msg.ReportItem1.mmItemDate);
+				messageElement_lazy = () -> Arrays.asList(ReportItem1.mmAccountIdentification, ReportItem1.mmAccountLevel, ReportItem1.mmFinancialInstrumentIdentification, ReportItem1.mmItemDate);
 				trace_lazy = () -> SecuritiesEntry.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "ReportItem1";
 				definition = "Account details of the report item.";
 			}

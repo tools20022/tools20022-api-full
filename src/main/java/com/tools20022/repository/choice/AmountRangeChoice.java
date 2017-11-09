@@ -19,7 +19,9 @@ package com.tools20022.repository.choice;
 
 import com.tools20022.metamodel.MMChoiceComponent;
 import com.tools20022.metamodel.MMMessageAssociationEnd;
+import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.entity.AmountRange;
+import com.tools20022.repository.GeneratedRepository;
 import com.tools20022.repository.msg.CurrencyAndAmountRange;
 import com.tools20022.repository.msg.ImpliedCurrencyAndAmountRange;
 import java.util.Arrays;
@@ -104,7 +106,7 @@ public class AmountRangeChoice {
 			componentContext_lazy = () -> AmountRangeChoice.mmObject();
 			isDerived = false;
 			xmlTag = "ImpldCcyAndAmtRg";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ImpliedCurrencyAndAmountRange";
 			definition = "Expresses an amount or an amount range with an explicit debit/credit indicator and where the currency is implied.";
 			maxOccurs = 1;
@@ -153,7 +155,7 @@ public class AmountRangeChoice {
 			componentContext_lazy = () -> AmountRangeChoice.mmObject();
 			isDerived = false;
 			xmlTag = "CcyAndAmtRg";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CurrencyAndAmountRange";
 			definition = "Expresses an amount or an amount range with the currency and where the credit/debit indicator is explicit.";
 			maxOccurs = 1;
@@ -166,10 +168,10 @@ public class AmountRangeChoice {
 	final static public MMChoiceComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMChoiceComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.choice.AmountRangeChoice.mmImpliedCurrencyAndAmountRange, com.tools20022.repository.choice.AmountRangeChoice.mmCurrencyAndAmountRange);
+				messageElement_lazy = () -> Arrays.asList(AmountRangeChoice.mmImpliedCurrencyAndAmountRange, AmountRangeChoice.mmCurrencyAndAmountRange);
 				trace_lazy = () -> AmountRange.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 				name = "AmountRangeChoice";
 				definition = "Search for an amount with or without the currency.";
 			}

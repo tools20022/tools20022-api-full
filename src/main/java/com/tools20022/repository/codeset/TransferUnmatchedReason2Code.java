@@ -19,7 +19,9 @@ package com.tools20022.repository.codeset;
 
 import com.tools20022.metamodel.MMCode;
 import com.tools20022.metamodel.MMCodeSet;
+import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.codeset.UnmatchedStatusReasonCode;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -107,7 +109,7 @@ public class TransferUnmatchedReason2Code extends UnmatchedStatusReasonCode {
 	 */
 	public static final MMCode mmNoMatch = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "NoMatch";
 			owner_lazy = () -> TransferUnmatchedReason2Code.mmObject();
 		}
@@ -130,7 +132,7 @@ public class TransferUnmatchedReason2Code extends UnmatchedStatusReasonCode {
 	 */
 	public static final MMCode mmCounterpartyCancelled = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CounterpartyCancelled";
 			owner_lazy = () -> TransferUnmatchedReason2Code.mmObject();
 		}
@@ -153,7 +155,7 @@ public class TransferUnmatchedReason2Code extends UnmatchedStatusReasonCode {
 	 */
 	public static final MMCode mmTransactionDirection = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "TransactionDirection";
 			owner_lazy = () -> TransferUnmatchedReason2Code.mmObject();
 		}
@@ -176,7 +178,7 @@ public class TransferUnmatchedReason2Code extends UnmatchedStatusReasonCode {
 	 */
 	public static final MMCode mmFinancialInstrument = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "FinancialInstrument";
 			owner_lazy = () -> TransferUnmatchedReason2Code.mmObject();
 		}
@@ -199,7 +201,7 @@ public class TransferUnmatchedReason2Code extends UnmatchedStatusReasonCode {
 	 */
 	public static final MMCode mmPhysicalSettlement = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PhysicalSettlement";
 			owner_lazy = () -> TransferUnmatchedReason2Code.mmObject();
 		}
@@ -222,7 +224,7 @@ public class TransferUnmatchedReason2Code extends UnmatchedStatusReasonCode {
 	 */
 	public static final MMCode mmDuplicate = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Duplicate";
 			owner_lazy = () -> TransferUnmatchedReason2Code.mmObject();
 		}
@@ -245,7 +247,7 @@ public class TransferUnmatchedReason2Code extends UnmatchedStatusReasonCode {
 	 */
 	public static final MMCode mmSettlementPlace = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SettlementPlace";
 			owner_lazy = () -> TransferUnmatchedReason2Code.mmObject();
 		}
@@ -268,7 +270,7 @@ public class TransferUnmatchedReason2Code extends UnmatchedStatusReasonCode {
 	 */
 	public static final MMCode mmSettlementDate = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SettlementDate";
 			owner_lazy = () -> TransferUnmatchedReason2Code.mmObject();
 		}
@@ -291,7 +293,7 @@ public class TransferUnmatchedReason2Code extends UnmatchedStatusReasonCode {
 	 */
 	public static final MMCode mmFinancialInstrumentQuantity = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "FinancialInstrumentQuantity";
 			owner_lazy = () -> TransferUnmatchedReason2Code.mmObject();
 		}
@@ -300,16 +302,14 @@ public class TransferUnmatchedReason2Code extends UnmatchedStatusReasonCode {
 	static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
 				example = Arrays.asList("CMIS");
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "TransferUnmatchedReason2Code";
 				definition = "Specifies the reason for a transfer or settlement instruction unmatched status.";
-				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.TransferUnmatchedReason2Code.mmNoMatch, com.tools20022.repository.codeset.TransferUnmatchedReason2Code.mmCounterpartyCancelled,
-						com.tools20022.repository.codeset.TransferUnmatchedReason2Code.mmTransactionDirection, com.tools20022.repository.codeset.TransferUnmatchedReason2Code.mmFinancialInstrument,
-						com.tools20022.repository.codeset.TransferUnmatchedReason2Code.mmPhysicalSettlement, com.tools20022.repository.codeset.TransferUnmatchedReason2Code.mmDuplicate,
-						com.tools20022.repository.codeset.TransferUnmatchedReason2Code.mmSettlementPlace, com.tools20022.repository.codeset.TransferUnmatchedReason2Code.mmSettlementDate,
-						com.tools20022.repository.codeset.TransferUnmatchedReason2Code.mmFinancialInstrumentQuantity);
+				code_lazy = () -> Arrays.asList(TransferUnmatchedReason2Code.mmNoMatch, TransferUnmatchedReason2Code.mmCounterpartyCancelled, TransferUnmatchedReason2Code.mmTransactionDirection,
+						TransferUnmatchedReason2Code.mmFinancialInstrument, TransferUnmatchedReason2Code.mmPhysicalSettlement, TransferUnmatchedReason2Code.mmDuplicate, TransferUnmatchedReason2Code.mmSettlementPlace,
+						TransferUnmatchedReason2Code.mmSettlementDate, TransferUnmatchedReason2Code.mmFinancialInstrumentQuantity);
 				trace_lazy = () -> UnmatchedStatusReasonCode.mmObject();
 			}
 		});

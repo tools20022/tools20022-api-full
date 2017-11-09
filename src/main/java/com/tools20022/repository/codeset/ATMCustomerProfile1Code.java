@@ -19,7 +19,9 @@ package com.tools20022.repository.codeset;
 
 import com.tools20022.metamodel.MMCode;
 import com.tools20022.metamodel.MMCodeSet;
+import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.codeset.ATMCustomerProfileCode;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -83,7 +85,7 @@ public class ATMCustomerProfile1Code extends ATMCustomerProfileCode {
 	 */
 	public static final MMCode mmCardInformation = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CardInformation";
 			owner_lazy = () -> ATMCustomerProfile1Code.mmObject();
 		}
@@ -106,7 +108,7 @@ public class ATMCustomerProfile1Code extends ATMCustomerProfileCode {
 	 */
 	public static final MMCode mmOtherRequest = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "OtherRequest";
 			owner_lazy = () -> ATMCustomerProfile1Code.mmObject();
 		}
@@ -129,7 +131,7 @@ public class ATMCustomerProfile1Code extends ATMCustomerProfileCode {
 	 */
 	public static final MMCode mmProfileRequest = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ProfileRequest";
 			owner_lazy = () -> ATMCustomerProfile1Code.mmObject();
 		}
@@ -138,12 +140,11 @@ public class ATMCustomerProfile1Code extends ATMCustomerProfileCode {
 	static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "ATMCustomerProfile1Code";
 				definition = "Describes the main way customer information was collected to build up the customer menu and the withdrawal request.";
-				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.ATMCustomerProfile1Code.mmCardInformation, com.tools20022.repository.codeset.ATMCustomerProfile1Code.mmOtherRequest,
-						com.tools20022.repository.codeset.ATMCustomerProfile1Code.mmProfileRequest);
+				code_lazy = () -> Arrays.asList(ATMCustomerProfile1Code.mmCardInformation, ATMCustomerProfile1Code.mmOtherRequest, ATMCustomerProfile1Code.mmProfileRequest);
 				trace_lazy = () -> ATMCustomerProfileCode.mmObject();
 			}
 		});

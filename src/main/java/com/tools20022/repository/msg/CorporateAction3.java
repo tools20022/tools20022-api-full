@@ -20,11 +20,14 @@ package com.tools20022.repository.msg;
 import com.tools20022.metamodel.MMMessageAssociationEnd;
 import com.tools20022.metamodel.MMMessageAttribute;
 import com.tools20022.metamodel.MMMessageComponent;
+import com.tools20022.metamodel.MMRegistrationStatus;
+import com.tools20022.repository.area.seev.CorporateActionNotificationV01;
 import com.tools20022.repository.choice.*;
 import com.tools20022.repository.datatype.Max3Number;
 import com.tools20022.repository.datatype.Max70Text;
 import com.tools20022.repository.datatype.YesNoIndicator;
-import com.tools20022.repository.entity.CorporateActionEvent;
+import com.tools20022.repository.entity.*;
+import com.tools20022.repository.GeneratedRepository;
 import java.text.DateFormat;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
@@ -190,7 +193,7 @@ public class CorporateAction3 {
 			componentContext_lazy = () -> CorporateAction3.mmObject();
 			isDerived = false;
 			xmlTag = "DtDtls";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "DateDetails";
 			definition = "Provides information about the dates related to a corporate action event.";
 			maxOccurs = 1;
@@ -240,7 +243,7 @@ public class CorporateAction3 {
 			componentContext_lazy = () -> CorporateAction3.mmObject();
 			isDerived = false;
 			xmlTag = "PrdDtls";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PeriodDetails";
 			definition = "Provides information about the periods related to a corporate action event.";
 			maxOccurs = 1;
@@ -290,7 +293,7 @@ public class CorporateAction3 {
 			componentContext_lazy = () -> CorporateAction3.mmObject();
 			isDerived = false;
 			xmlTag = "RateAndAmtDtls";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "RateAndAmountDetails";
 			definition = "Provides information about rates and amounts related to a corporate action event.";
 			maxOccurs = 1;
@@ -336,11 +339,11 @@ public class CorporateAction3 {
 	 */
 	public static final MMMessageAssociationEnd mmPriceDetails = new MMMessageAssociationEnd() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.CorporateActionEvent.mmCorporateActionPrice;
+			businessElementTrace_lazy = () -> CorporateActionEvent.mmCorporateActionPrice;
 			componentContext_lazy = () -> CorporateAction3.mmObject();
 			isDerived = false;
 			xmlTag = "PricDtls";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PriceDetails";
 			definition = "Provides information about the prices related to a corporate action event.";
 			maxOccurs = 1;
@@ -387,11 +390,11 @@ public class CorporateAction3 {
 	 */
 	public static final MMMessageAssociationEnd mmSecuritiesQuantity = new MMMessageAssociationEnd() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.CorporateActionEvent.mmSecuritiesQuantity;
+			businessElementTrace_lazy = () -> CorporateActionEvent.mmSecuritiesQuantity;
 			componentContext_lazy = () -> CorporateAction3.mmObject();
 			isDerived = false;
 			xmlTag = "SctiesQty";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SecuritiesQuantity";
 			definition = "Provides information about securities quantity linked to a corporate action.";
 			maxOccurs = 1;
@@ -436,11 +439,11 @@ public class CorporateAction3 {
 	 */
 	public static final MMMessageAttribute mmInterestAccruedNumberOfDays = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.DateTimePeriod.mmNumberOfDays;
+			businessElementTrace_lazy = () -> DateTimePeriod.mmNumberOfDays;
 			componentContext_lazy = () -> CorporateAction3.mmObject();
 			isDerived = false;
 			xmlTag = "IntrstAcrdNbOfDays";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "InterestAccruedNumberOfDays";
 			definition = "Number of days used for calculating the accrued interest amount.";
 			maxOccurs = 1;
@@ -485,11 +488,11 @@ public class CorporateAction3 {
 	 */
 	public static final MMMessageAttribute mmCouponNumber = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.CouponAttached.mmNumber;
+			businessElementTrace_lazy = () -> CouponAttached.mmNumber;
 			componentContext_lazy = () -> CorporateAction3.mmObject();
 			isDerived = false;
 			xmlTag = "CpnNb";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CouponNumber";
 			definition = "Number of the coupon attached/associated with a security.";
 			minOccurs = 0;
@@ -535,11 +538,11 @@ public class CorporateAction3 {
 	 */
 	public static final MMMessageAttribute mmCertificationRequiredIndicator = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.BeneficialOwner.mmCertificationIndicator;
+			businessElementTrace_lazy = () -> BeneficialOwner.mmCertificationIndicator;
 			componentContext_lazy = () -> CorporateAction3.mmObject();
 			isDerived = false;
 			xmlTag = "CertfctnReqrdInd";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CertificationRequiredIndicator";
 			definition = "Indicates whether certification is required from the account owner. \nYes = certification required.\nNo = no certification required.";
 			maxOccurs = 1;
@@ -586,11 +589,11 @@ public class CorporateAction3 {
 	 */
 	public static final MMMessageAttribute mmChargesAppliedIndicator = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.CorporateActionOption.mmChargesAppliedIndicator;
+			businessElementTrace_lazy = () -> CorporateActionOption.mmChargesAppliedIndicator;
 			componentContext_lazy = () -> CorporateAction3.mmObject();
 			isDerived = false;
 			xmlTag = "ChrgsApldInd";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ChargesAppliedIndicator";
 			definition = "Indicates whether charges apply to the holder, for instance redemption charges.";
 			maxOccurs = 1;
@@ -637,11 +640,11 @@ public class CorporateAction3 {
 	 */
 	public static final MMMessageAttribute mmRestrictionIndicator = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.CorporateActionEvent.mmRestrictionIndicator;
+			businessElementTrace_lazy = () -> CorporateActionEvent.mmRestrictionIndicator;
 			componentContext_lazy = () -> CorporateAction3.mmObject();
 			isDerived = false;
 			xmlTag = "RstrctnInd";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "RestrictionIndicator";
 			definition = "Indicates whether there is restrictions apply to the corporate action event or not.\nYes = There is restrictions.\nNo = There is no restrictions.";
 			maxOccurs = 1;
@@ -686,11 +689,11 @@ public class CorporateAction3 {
 	 */
 	public static final MMMessageAttribute mmAccruedInterestIndicator = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.SecuritiesSettlement.mmAccruedInterestIndicator;
+			businessElementTrace_lazy = () -> SecuritiesSettlement.mmAccruedInterestIndicator;
 			componentContext_lazy = () -> CorporateAction3.mmObject();
 			isDerived = false;
 			xmlTag = "AcrdIntrstInd";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AccruedInterestIndicator";
 			definition = "Indicates whether the holder is entitled to accrued interest.";
 			maxOccurs = 1;
@@ -734,11 +737,11 @@ public class CorporateAction3 {
 	 */
 	public static final MMMessageAttribute mmDividendType = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Security.mmDividend;
+			businessElementTrace_lazy = () -> Security.mmDividend;
 			componentContext_lazy = () -> CorporateAction3.mmObject();
 			isDerived = false;
 			xmlTag = "DvddTp";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "DividendType";
 			definition = "Specifies the conditions in which a dividend is paid.";
 			maxOccurs = 1;
@@ -782,11 +785,11 @@ public class CorporateAction3 {
 	 */
 	public static final MMMessageAttribute mmConversionType = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.SecuritiesConversion.mmConversionType;
+			businessElementTrace_lazy = () -> SecuritiesConversion.mmConversionType;
 			componentContext_lazy = () -> CorporateAction3.mmObject();
 			isDerived = false;
 			xmlTag = "ConvsTp";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ConversionType";
 			definition = "Specifies the conversion type of an instrument.";
 			maxOccurs = 1;
@@ -833,11 +836,11 @@ public class CorporateAction3 {
 	 */
 	public static final MMMessageAttribute mmDistributionType = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.CorporateActionServicing.mmCorporateActionDistribution;
+			businessElementTrace_lazy = () -> CorporateActionServicing.mmCorporateActionDistribution;
 			componentContext_lazy = () -> CorporateAction3.mmObject();
 			isDerived = false;
 			xmlTag = "DstrbtnTp";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "DistributionType";
 			definition = "Specifies whether the proceeds of the event will be distributed on a rolling basis rather than on a specific date.";
 			maxOccurs = 1;
@@ -881,11 +884,11 @@ public class CorporateAction3 {
 	 */
 	public static final MMMessageAttribute mmOfferType = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.CorporateActionOption.mmOfferType;
+			businessElementTrace_lazy = () -> CorporateActionOption.mmOfferType;
 			componentContext_lazy = () -> CorporateAction3.mmObject();
 			isDerived = false;
 			xmlTag = "OfferTp";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "OfferType";
 			definition = "Specifies the conditions that apply to the offer.";
 			minOccurs = 0;
@@ -930,11 +933,11 @@ public class CorporateAction3 {
 	 */
 	public static final MMMessageAttribute mmRenounceableEntitlementStatusType = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.CorporateActionSecuritiesEntitlement.mmRenounceableEntitlementStatusType;
+			businessElementTrace_lazy = () -> CorporateActionSecuritiesEntitlement.mmRenounceableEntitlementStatusType;
 			componentContext_lazy = () -> CorporateAction3.mmObject();
 			isDerived = false;
 			xmlTag = "RnncblEntitlmntStsTp";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "RenounceableEntitlementStatusType";
 			definition = "Specifies whether terms of the event allow resale of the rights.";
 			maxOccurs = 1;
@@ -978,11 +981,11 @@ public class CorporateAction3 {
 	 */
 	public static final MMMessageAttribute mmEventStage = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.CorporateActionEvent.mmEventStage;
+			businessElementTrace_lazy = () -> CorporateActionEvent.mmEventStage;
 			componentContext_lazy = () -> CorporateAction3.mmObject();
 			isDerived = false;
 			xmlTag = "EvtStag";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "EventStage";
 			definition = "Stage in the corporate action event life cycle.";
 			minOccurs = 0;
@@ -1028,11 +1031,11 @@ public class CorporateAction3 {
 	 */
 	public static final MMMessageAttribute mmAdditionalBusinessProcessIndicator = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.CorporateActionEvent.mmAdditionalBusinessProcess;
+			businessElementTrace_lazy = () -> CorporateActionEvent.mmAdditionalBusinessProcess;
 			componentContext_lazy = () -> CorporateAction3.mmObject();
 			isDerived = false;
 			xmlTag = "AddtlBizPrcInd";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AdditionalBusinessProcessIndicator";
 			definition = "Specifies the type of the additional business process linked to a corporate action event such as a claim compensation or tax refund.";
 			minOccurs = 0;
@@ -1075,11 +1078,11 @@ public class CorporateAction3 {
 	 */
 	public static final MMMessageAttribute mmChangeType = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.SecuritiesModification.mmChangeType;
+			businessElementTrace_lazy = () -> SecuritiesModification.mmChangeType;
 			componentContext_lazy = () -> CorporateAction3.mmObject();
 			isDerived = false;
 			xmlTag = "ChngTp";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ChangeType";
 			definition = "Specifies the type of change announced.";
 			minOccurs = 0;
@@ -1122,11 +1125,11 @@ public class CorporateAction3 {
 	 */
 	public static final MMMessageAttribute mmIntermediateSecuritiesDistributionType = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.SecuritiesProceedsDefinition.mmIntermediateSecuritiesDistributionType;
+			businessElementTrace_lazy = () -> SecuritiesProceedsDefinition.mmIntermediateSecuritiesDistributionType;
 			componentContext_lazy = () -> CorporateAction3.mmObject();
 			isDerived = false;
 			xmlTag = "IntrmdtSctiesDstrbtnTp";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "IntermediateSecuritiesDistributionType";
 			definition = "Type of intermediates securities distribution.";
 			maxOccurs = 1;
@@ -1174,11 +1177,11 @@ public class CorporateAction3 {
 	 */
 	public static final MMMessageAttribute mmCapitalGainInOutIndicator = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.SecuritiesTax.mmEUCapitalGain;
+			businessElementTrace_lazy = () -> SecuritiesTax.mmEUCapitalGain;
 			componentContext_lazy = () -> CorporateAction3.mmObject();
 			isDerived = false;
 			xmlTag = "CptlGnInOutInd";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CapitalGainInOutIndicator";
 			definition = "Specifies whether the capital gain is in the scope of the EU Savings directive for the income realised upon the sale, refund or redemption of shares and units (...) (Article 6(1d)).";
 			maxOccurs = 1;
@@ -1225,11 +1228,11 @@ public class CorporateAction3 {
 	 */
 	public static final MMMessageAttribute mmTaxableIncomePerShareCalculated = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.SecuritiesTax.mmTaxableIncomePerShareCalculated;
+			businessElementTrace_lazy = () -> SecuritiesTax.mmTaxableIncomePerShareCalculated;
 			componentContext_lazy = () -> CorporateAction3.mmObject();
 			isDerived = false;
 			xmlTag = "TaxblIncmPerShrClctd";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "TaxableIncomePerShareCalculated";
 			definition = "Specifies whether the financial instrument calculates the taxable income per dividend/taxable income per share.";
 			maxOccurs = 1;
@@ -1276,11 +1279,11 @@ public class CorporateAction3 {
 	 */
 	public static final MMMessageAttribute mmElectionType = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.CorporateActionElection.mmElectionType;
+			businessElementTrace_lazy = () -> CorporateActionElection.mmElectionType;
 			componentContext_lazy = () -> CorporateAction3.mmObject();
 			isDerived = false;
 			xmlTag = "ElctnTp";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ElectionType";
 			definition = "Specifies the effect on the holdings of electing a corporate action option.";
 			maxOccurs = 1;
@@ -1324,11 +1327,11 @@ public class CorporateAction3 {
 	 */
 	public static final MMMessageAttribute mmLotteryType = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Lottery.mmLotteryType;
+			businessElementTrace_lazy = () -> Lottery.mmLotteryType;
 			componentContext_lazy = () -> CorporateAction3.mmObject();
 			isDerived = false;
 			xmlTag = "LtryTp";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "LotteryType";
 			definition = "Specifies the type of lottery announced.";
 			maxOccurs = 1;
@@ -1375,11 +1378,11 @@ public class CorporateAction3 {
 	 */
 	public static final MMMessageAttribute mmCertificationType = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.BeneficialOwner.mmCertificationType;
+			businessElementTrace_lazy = () -> BeneficialOwner.mmCertificationType;
 			componentContext_lazy = () -> CorporateAction3.mmObject();
 			isDerived = false;
 			xmlTag = "CertfctnTp";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CertificationType";
 			definition = "Specifies the certification format required, ie, physical or electronic format.";
 			maxOccurs = 1;
@@ -1422,11 +1425,11 @@ public class CorporateAction3 {
 	 */
 	public static final MMMessageAttribute mmNewPlaceOfIncorporation = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.SecuritiesModification.mmNewOrganisationInformation;
+			businessElementTrace_lazy = () -> SecuritiesModification.mmNewOrganisationInformation;
 			componentContext_lazy = () -> CorporateAction3.mmObject();
 			isDerived = false;
 			xmlTag = "NewPlcOfIncorprtn";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "NewPlaceOfIncorporation";
 			definition = "New company's place of incorporation.";
 			maxOccurs = 1;
@@ -1470,7 +1473,7 @@ public class CorporateAction3 {
 			componentContext_lazy = () -> CorporateAction3.mmObject();
 			isDerived = false;
 			xmlTag = "AddtlInf";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AdditionalInformation";
 			definition = "Provides additional information. This field may only be used when the information to be transmitted, cannot be coded.";
 			maxOccurs = 1;
@@ -1483,21 +1486,16 @@ public class CorporateAction3 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.CorporateAction3.mmDateDetails, com.tools20022.repository.msg.CorporateAction3.mmPeriodDetails,
-						com.tools20022.repository.msg.CorporateAction3.mmRateAndAmountDetails, com.tools20022.repository.msg.CorporateAction3.mmPriceDetails, com.tools20022.repository.msg.CorporateAction3.mmSecuritiesQuantity,
-						com.tools20022.repository.msg.CorporateAction3.mmInterestAccruedNumberOfDays, com.tools20022.repository.msg.CorporateAction3.mmCouponNumber,
-						com.tools20022.repository.msg.CorporateAction3.mmCertificationRequiredIndicator, com.tools20022.repository.msg.CorporateAction3.mmChargesAppliedIndicator,
-						com.tools20022.repository.msg.CorporateAction3.mmRestrictionIndicator, com.tools20022.repository.msg.CorporateAction3.mmAccruedInterestIndicator, com.tools20022.repository.msg.CorporateAction3.mmDividendType,
-						com.tools20022.repository.msg.CorporateAction3.mmConversionType, com.tools20022.repository.msg.CorporateAction3.mmDistributionType, com.tools20022.repository.msg.CorporateAction3.mmOfferType,
-						com.tools20022.repository.msg.CorporateAction3.mmRenounceableEntitlementStatusType, com.tools20022.repository.msg.CorporateAction3.mmEventStage,
-						com.tools20022.repository.msg.CorporateAction3.mmAdditionalBusinessProcessIndicator, com.tools20022.repository.msg.CorporateAction3.mmChangeType,
-						com.tools20022.repository.msg.CorporateAction3.mmIntermediateSecuritiesDistributionType, com.tools20022.repository.msg.CorporateAction3.mmCapitalGainInOutIndicator,
-						com.tools20022.repository.msg.CorporateAction3.mmTaxableIncomePerShareCalculated, com.tools20022.repository.msg.CorporateAction3.mmElectionType, com.tools20022.repository.msg.CorporateAction3.mmLotteryType,
-						com.tools20022.repository.msg.CorporateAction3.mmCertificationType, com.tools20022.repository.msg.CorporateAction3.mmNewPlaceOfIncorporation, com.tools20022.repository.msg.CorporateAction3.mmAdditionalInformation);
-				messageBuildingBlock_lazy = () -> Arrays.asList(com.tools20022.repository.area.seev.CorporateActionNotificationV01.mmCorporateActionDetails);
+				messageElement_lazy = () -> Arrays.asList(CorporateAction3.mmDateDetails, CorporateAction3.mmPeriodDetails, CorporateAction3.mmRateAndAmountDetails, CorporateAction3.mmPriceDetails, CorporateAction3.mmSecuritiesQuantity,
+						CorporateAction3.mmInterestAccruedNumberOfDays, CorporateAction3.mmCouponNumber, CorporateAction3.mmCertificationRequiredIndicator, CorporateAction3.mmChargesAppliedIndicator,
+						CorporateAction3.mmRestrictionIndicator, CorporateAction3.mmAccruedInterestIndicator, CorporateAction3.mmDividendType, CorporateAction3.mmConversionType, CorporateAction3.mmDistributionType,
+						CorporateAction3.mmOfferType, CorporateAction3.mmRenounceableEntitlementStatusType, CorporateAction3.mmEventStage, CorporateAction3.mmAdditionalBusinessProcessIndicator, CorporateAction3.mmChangeType,
+						CorporateAction3.mmIntermediateSecuritiesDistributionType, CorporateAction3.mmCapitalGainInOutIndicator, CorporateAction3.mmTaxableIncomePerShareCalculated, CorporateAction3.mmElectionType,
+						CorporateAction3.mmLotteryType, CorporateAction3.mmCertificationType, CorporateAction3.mmNewPlaceOfIncorporation, CorporateAction3.mmAdditionalInformation);
+				messageBuildingBlock_lazy = () -> Arrays.asList(CorporateActionNotificationV01.mmCorporateActionDetails);
 				trace_lazy = () -> CorporateActionEvent.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.OBSOLETE;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.OBSOLETE;
 				removalDate = ((Supplier<Date>) (() -> {
 					try {
 						return DateFormat.getDateInstance(java.text.DateFormat.LONG).parse("May 5, 2016");

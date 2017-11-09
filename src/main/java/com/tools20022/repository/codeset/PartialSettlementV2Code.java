@@ -19,6 +19,8 @@ package com.tools20022.repository.codeset;
 
 import com.tools20022.metamodel.MMCode;
 import com.tools20022.metamodel.MMCodeSet;
+import com.tools20022.metamodel.MMRegistrationStatus;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -27,6 +29,13 @@ import java.util.concurrent.atomic.AtomicReference;
  * <p>
  * <strong>Constant fields:</strong>
  * <ul>
+ * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getDerivation derivation}
+ * =
+ * <ul>
+ * <li>{@linkplain com.tools20022.repository.codeset.PartialSettlement2Code
+ * PartialSettlement2Code}</li>
+ * </ul>
+ * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getCode code} =
  * <ul>
  * <li>
@@ -35,13 +44,6 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>
  * {@linkplain com.tools20022.repository.codeset.PartialSettlementV2Code#mmPartiallyConfirmed
  * PartialSettlementV2Code.mmPartiallyConfirmed}</li>
- * </ul>
- * </li>
- * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getDerivation derivation}
- * =
- * <ul>
- * <li>{@linkplain com.tools20022.repository.codeset.PartialSettlement2Code
- * PartialSettlement2Code}</li>
  * </ul>
  * </li>
  * <li>
@@ -94,7 +96,7 @@ public class PartialSettlementV2Code {
 	 */
 	public static final MMCode mmPartialSettlement = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "PartialSettlement";
 			definition = "Confirmation is for partial settlement. Part of the transaction remains unsettled.";
 			owner_lazy = () -> PartialSettlementV2Code.mmObject();
@@ -127,7 +129,7 @@ public class PartialSettlementV2Code {
 	 */
 	public static final MMCode mmPartiallyConfirmed = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "PartiallyConfirmed";
 			definition = "Confirmation is for partial settlement. No additional settlement will take place.";
 			owner_lazy = () -> PartialSettlementV2Code.mmObject();
@@ -138,12 +140,12 @@ public class PartialSettlementV2Code {
 	static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
 				example = Arrays.asList("PAIN");
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "PartialSettlementV2Code";
 				definition = "Information about partial settlement.";
-				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.PartialSettlementV2Code.mmPartialSettlement, com.tools20022.repository.codeset.PartialSettlementV2Code.mmPartiallyConfirmed);
+				code_lazy = () -> Arrays.asList(PartialSettlementV2Code.mmPartialSettlement, PartialSettlementV2Code.mmPartiallyConfirmed);
 				derivation_lazy = () -> Arrays.asList(PartialSettlement2Code.mmObject());
 			}
 		});

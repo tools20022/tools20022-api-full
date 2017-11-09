@@ -20,11 +20,13 @@ package com.tools20022.repository.msg;
 import com.tools20022.metamodel.MMMessageAssociationEnd;
 import com.tools20022.metamodel.MMMessageAttribute;
 import com.tools20022.metamodel.MMMessageComponent;
+import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.codeset.CardProductType1Code;
 import com.tools20022.repository.datatype.Max30Text;
 import com.tools20022.repository.datatype.Max35Text;
 import com.tools20022.repository.datatype.Max70Text;
 import com.tools20022.repository.entity.PaymentCard;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -121,10 +123,10 @@ public class PaymentCard27 {
 			componentContext_lazy = () -> PaymentCard27.mmObject();
 			isDerived = false;
 			xmlTag = "PrtctdCardData";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ProtectedCardData";
 			definition = "Sensitive data of the card (PlainCardData1 including the envelope), encrypted with a cryptographic key.";
-			previousVersion_lazy = () -> com.tools20022.repository.msg.PaymentCard19.mmProtectedCardData;
+			previousVersion_lazy = () -> PaymentCard19.mmProtectedCardData;
 			maxOccurs = 1;
 			minOccurs = 0;
 			isComposite = true;
@@ -173,10 +175,10 @@ public class PaymentCard27 {
 			componentContext_lazy = () -> PaymentCard27.mmObject();
 			isDerived = false;
 			xmlTag = "PlainCardData";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PlainCardData";
 			definition = "Sensitive data associated with the card performing the transaction.";
-			previousVersion_lazy = () -> com.tools20022.repository.msg.PaymentCard19.mmPlainCardData;
+			previousVersion_lazy = () -> PaymentCard19.mmPlainCardData;
 			maxOccurs = 1;
 			minOccurs = 0;
 			isComposite = true;
@@ -224,10 +226,10 @@ public class PaymentCard27 {
 			componentContext_lazy = () -> PaymentCard27.mmObject();
 			isDerived = false;
 			xmlTag = "PmtAcctRef";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PaymentAccountReference";
 			definition = "Unique reference to the card, used by both merchants and acquirers to link tokenized and non-tokenized transactions associated to the same underlying card.";
-			previousVersion_lazy = () -> com.tools20022.repository.msg.PaymentCard19.mmPaymentAccountReference;
+			previousVersion_lazy = () -> PaymentCard19.mmPaymentAccountReference;
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> Max70Text.mmObject();
@@ -274,10 +276,10 @@ public class PaymentCard27 {
 			componentContext_lazy = () -> PaymentCard27.mmObject();
 			isDerived = false;
 			xmlTag = "MskdPAN";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "MaskedPAN";
 			definition = "Masked PAN to be printed on payment receipts or displayed to the cardholder. Masked digits may be absent or replaced by another character as '*'.";
-			previousVersion_lazy = () -> com.tools20022.repository.msg.PaymentCard19.mmMaskedPAN;
+			previousVersion_lazy = () -> PaymentCard19.mmMaskedPAN;
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> Max30Text.mmObject();
@@ -320,10 +322,10 @@ public class PaymentCard27 {
 			componentContext_lazy = () -> PaymentCard27.mmObject();
 			isDerived = false;
 			xmlTag = "CardBrnd";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CardBrand";
 			definition = "Brand name of the card.";
-			previousVersion_lazy = () -> com.tools20022.repository.msg.PaymentCard19.mmCardBrand;
+			previousVersion_lazy = () -> PaymentCard19.mmCardBrand;
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> Max35Text.mmObject();
@@ -367,10 +369,10 @@ public class PaymentCard27 {
 			componentContext_lazy = () -> PaymentCard27.mmObject();
 			isDerived = false;
 			xmlTag = "CardPdctTp";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CardProductType";
 			definition = "Type of card product.";
-			previousVersion_lazy = () -> com.tools20022.repository.msg.PaymentCard19.mmCardProductType;
+			previousVersion_lazy = () -> PaymentCard19.mmCardProductType;
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> CardProductType1Code.mmObject();
@@ -410,11 +412,11 @@ public class PaymentCard27 {
 	 */
 	public static final MMMessageAttribute mmCardProductSubType = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.PaymentCard.mmCardProgramme;
+			businessElementTrace_lazy = () -> PaymentCard.mmCardProgramme;
 			componentContext_lazy = () -> PaymentCard27.mmObject();
 			isDerived = false;
 			xmlTag = "CardPdctSubTp";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CardProductSubType";
 			definition = "Additionnal information to identify CardProduct";
 			maxOccurs = 1;
@@ -426,12 +428,11 @@ public class PaymentCard27 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.PaymentCard27.mmProtectedCardData, com.tools20022.repository.msg.PaymentCard27.mmPlainCardData,
-						com.tools20022.repository.msg.PaymentCard27.mmPaymentAccountReference, com.tools20022.repository.msg.PaymentCard27.mmMaskedPAN, com.tools20022.repository.msg.PaymentCard27.mmCardBrand,
-						com.tools20022.repository.msg.PaymentCard27.mmCardProductType, com.tools20022.repository.msg.PaymentCard27.mmCardProductSubType);
+				messageElement_lazy = () -> Arrays.asList(PaymentCard27.mmProtectedCardData, PaymentCard27.mmPlainCardData, PaymentCard27.mmPaymentAccountReference, PaymentCard27.mmMaskedPAN, PaymentCard27.mmCardBrand,
+						PaymentCard27.mmCardProductType, PaymentCard27.mmCardProductSubType);
 				trace_lazy = () -> PaymentCard.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "PaymentCard27";
 				definition = "Payment card performing the transaction.";
 				previousVersion_lazy = () -> PaymentCard19.mmObject();

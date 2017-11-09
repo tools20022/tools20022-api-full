@@ -19,7 +19,9 @@ package com.tools20022.repository.choice;
 
 import com.tools20022.metamodel.MMChoiceComponent;
 import com.tools20022.metamodel.MMMessageAssociationEnd;
+import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.entity.SystemBusinessInformation;
+import com.tools20022.repository.GeneratedRepository;
 import com.tools20022.repository.msg.ErrorHandling3;
 import com.tools20022.repository.msg.GeneralBusinessReport3;
 import java.util.Arrays;
@@ -119,10 +121,10 @@ public class GeneralBusinessOrError1Choice {
 			componentContext_lazy = () -> GeneralBusinessOrError1Choice.mmObject();
 			isDerived = false;
 			xmlTag = "OprlErr";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "OperationalError";
 			definition = "Indicates that an operational error has been issued during the processing of the related request.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.choice.GeneralBusinessOrError3Choice.mmOperationalError);
+			nextVersions_lazy = () -> Arrays.asList(GeneralBusinessOrError3Choice.mmOperationalError);
 			minOccurs = 1;
 			isComposite = true;
 			type_lazy = () -> ErrorHandling3.mmObject();
@@ -169,10 +171,10 @@ public class GeneralBusinessOrError1Choice {
 			componentContext_lazy = () -> GeneralBusinessOrError1Choice.mmObject();
 			isDerived = false;
 			xmlTag = "BizRpt";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "BusinessReport";
 			definition = "Reports either on the business information or on a business error.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.choice.GeneralBusinessOrError3Choice.mmBusinessReport);
+			nextVersions_lazy = () -> Arrays.asList(GeneralBusinessOrError3Choice.mmBusinessReport);
 			minOccurs = 1;
 			isComposite = true;
 			type_lazy = () -> GeneralBusinessReport3.mmObject();
@@ -182,10 +184,10 @@ public class GeneralBusinessOrError1Choice {
 	final static public MMChoiceComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMChoiceComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.choice.GeneralBusinessOrError1Choice.mmOperationalError, com.tools20022.repository.choice.GeneralBusinessOrError1Choice.mmBusinessReport);
+				messageElement_lazy = () -> Arrays.asList(GeneralBusinessOrError1Choice.mmOperationalError, GeneralBusinessOrError1Choice.mmBusinessReport);
 				trace_lazy = () -> SystemBusinessInformation.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 				name = "GeneralBusinessOrError1Choice";
 				definition = "It is used to provide some or all of the members with information related to the processing of the system.";
 				nextVersions_lazy = () -> Arrays.asList(GeneralBusinessOrError3Choice.mmObject());

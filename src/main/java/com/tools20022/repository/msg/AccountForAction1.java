@@ -19,9 +19,13 @@ package com.tools20022.repository.msg;
 
 import com.tools20022.metamodel.MMMessageAttribute;
 import com.tools20022.metamodel.MMMessageComponent;
+import com.tools20022.metamodel.MMRegistrationStatus;
+import com.tools20022.repository.area.acmt.*;
 import com.tools20022.repository.choice.AccountIdentification4Choice;
 import com.tools20022.repository.codeset.ActiveCurrencyCode;
+import com.tools20022.repository.entity.Account;
 import com.tools20022.repository.entity.CashAccount;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -183,11 +187,11 @@ public class AccountForAction1 {
 	 */
 	public static final MMMessageAttribute mmIdentification = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Account.mmIdentification;
+			businessElementTrace_lazy = () -> Account.mmIdentification;
 			componentContext_lazy = () -> AccountForAction1.mmObject();
 			isDerived = false;
 			xmlTag = "Id";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Identification";
 			definition = "Unique and unambiguous identification for the account between the account owner and the account servicer.";
 			maxOccurs = 1;
@@ -231,11 +235,11 @@ public class AccountForAction1 {
 	 */
 	public static final MMMessageAttribute mmCurrency = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Account.mmBaseCurrency;
+			businessElementTrace_lazy = () -> Account.mmBaseCurrency;
 			componentContext_lazy = () -> AccountForAction1.mmObject();
 			isDerived = false;
 			xmlTag = "Ccy";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Currency";
 			definition = "Medium of exchange of value.";
 			maxOccurs = 1;
@@ -247,22 +251,18 @@ public class AccountForAction1 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.AccountForAction1.mmIdentification, com.tools20022.repository.msg.AccountForAction1.mmCurrency);
-				messageBuildingBlock_lazy = () -> Arrays.asList(com.tools20022.repository.area.acmt.AccountAdditionalInformationRequestV01.mmAccountIdentification,
-						com.tools20022.repository.area.acmt.AccountAdditionalInformationRequestV02.mmAccountIdentification, com.tools20022.repository.area.acmt.AccountClosingAdditionalInformationRequestV01.mmAccountIdentification,
-						com.tools20022.repository.area.acmt.AccountClosingAdditionalInformationRequestV01.mmBalanceTransferAccount, com.tools20022.repository.area.acmt.AccountClosingAdditionalInformationRequestV02.mmAccountIdentification,
-						com.tools20022.repository.area.acmt.AccountClosingAdditionalInformationRequestV02.mmBalanceTransferAccount, com.tools20022.repository.area.acmt.AccountClosingAmendmentRequestV01.mmAccountIdentification,
-						com.tools20022.repository.area.acmt.AccountClosingAmendmentRequestV01.mmBalanceTransferAccount, com.tools20022.repository.area.acmt.AccountClosingAmendmentRequestV02.mmAccountIdentification,
-						com.tools20022.repository.area.acmt.AccountClosingAmendmentRequestV02.mmBalanceTransferAccount, com.tools20022.repository.area.acmt.AccountClosingRequestV01.mmAccountIdentification,
-						com.tools20022.repository.area.acmt.AccountClosingRequestV01.mmBalanceTransferAccount, com.tools20022.repository.area.acmt.AccountClosingRequestV02.mmBalanceTransferAccount,
-						com.tools20022.repository.area.acmt.AccountMandateMaintenanceAmendmentRequestV01.mmAccountIdentification, com.tools20022.repository.area.acmt.AccountMandateMaintenanceAmendmentRequestV02.mmAccountIdentification,
-						com.tools20022.repository.area.acmt.AccountMandateMaintenanceRequestV01.mmAccountIdentification, com.tools20022.repository.area.acmt.AccountMandateMaintenanceRequestV02.mmAccountIdentification,
-						com.tools20022.repository.area.acmt.AccountReportRequestV01.mmAccountIdentification, com.tools20022.repository.area.acmt.AccountReportRequestV02.mmAccountIdentification,
-						com.tools20022.repository.area.acmt.AccountRequestAcknowledgementV01.mmAccountIdentification, com.tools20022.repository.area.acmt.AccountRequestAcknowledgementV02.mmAccountIdentification,
-						com.tools20022.repository.area.acmt.AccountRequestRejectionV01.mmAccountIdentification, com.tools20022.repository.area.acmt.AccountRequestRejectionV02.mmAccountIdentification);
+				messageElement_lazy = () -> Arrays.asList(AccountForAction1.mmIdentification, AccountForAction1.mmCurrency);
+				messageBuildingBlock_lazy = () -> Arrays.asList(AccountAdditionalInformationRequestV01.mmAccountIdentification, AccountAdditionalInformationRequestV02.mmAccountIdentification,
+						AccountClosingAdditionalInformationRequestV01.mmAccountIdentification, AccountClosingAdditionalInformationRequestV01.mmBalanceTransferAccount, AccountClosingAdditionalInformationRequestV02.mmAccountIdentification,
+						AccountClosingAdditionalInformationRequestV02.mmBalanceTransferAccount, AccountClosingAmendmentRequestV01.mmAccountIdentification, AccountClosingAmendmentRequestV01.mmBalanceTransferAccount,
+						AccountClosingAmendmentRequestV02.mmAccountIdentification, AccountClosingAmendmentRequestV02.mmBalanceTransferAccount, AccountClosingRequestV01.mmAccountIdentification,
+						AccountClosingRequestV01.mmBalanceTransferAccount, AccountClosingRequestV02.mmBalanceTransferAccount, AccountMandateMaintenanceAmendmentRequestV01.mmAccountIdentification,
+						AccountMandateMaintenanceAmendmentRequestV02.mmAccountIdentification, AccountMandateMaintenanceRequestV01.mmAccountIdentification, AccountMandateMaintenanceRequestV02.mmAccountIdentification,
+						AccountReportRequestV01.mmAccountIdentification, AccountReportRequestV02.mmAccountIdentification, AccountRequestAcknowledgementV01.mmAccountIdentification, AccountRequestAcknowledgementV02.mmAccountIdentification,
+						AccountRequestRejectionV01.mmAccountIdentification, AccountRequestRejectionV02.mmAccountIdentification);
 				trace_lazy = () -> CashAccount.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "AccountForAction1";
 				definition = "Account to or from which a cash entry is made.";
 				nextVersions_lazy = () -> Arrays.asList(AccountForAction2.mmObject());

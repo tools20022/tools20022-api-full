@@ -17,13 +17,13 @@
 
 package com.tools20022.repository.entity;
 
-import com.tools20022.metamodel.MMBusinessAssociationEnd;
-import com.tools20022.metamodel.MMBusinessAttribute;
-import com.tools20022.metamodel.MMBusinessComponent;
+import com.tools20022.metamodel.*;
 import com.tools20022.repository.codeset.PaymentMethodCode;
 import com.tools20022.repository.datatype.CurrencyAndAmount;
 import com.tools20022.repository.datatype.ISODateTime;
 import com.tools20022.repository.datatype.Max35Text;
+import com.tools20022.repository.GeneratedRepository;
+import com.tools20022.repository.msg.*;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.List;
@@ -37,6 +37,23 @@ import java.util.List;
  * <p>
  * <strong>Constant fields:</strong>
  * <ul>
+ * <li>
+ * {@linkplain com.tools20022.metamodel.MMBusinessComponent#getAssociationDomain
+ * associationDomain} =
+ * <ul>
+ * <li>{@linkplain com.tools20022.repository.entity.Payment#mmCreditMethod
+ * Payment.mmCreditMethod}</li>
+ * </ul>
+ * </li>
+ * <li>{@linkplain com.tools20022.metamodel.MMBusinessComponent#getSubType
+ * subType} =
+ * <ul>
+ * <li>{@linkplain com.tools20022.repository.entity.ChequeIssue ChequeIssue}</li>
+ * <li>{@linkplain com.tools20022.repository.entity.BookEntry BookEntry}</li>
+ * <li>{@linkplain com.tools20022.repository.entity.AccountEntry AccountEntry}</li>
+ * <li>{@linkplain com.tools20022.repository.entity.CashDelivery CashDelivery}</li>
+ * </ul>
+ * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMBusinessComponent#getElement
  * element} =
  * <ul>
@@ -53,23 +70,6 @@ import java.util.List;
  * CreditInstrument.mmNetAmount}</li>
  * <li>{@linkplain com.tools20022.repository.entity.CreditInstrument#mmDeadline
  * CreditInstrument.mmDeadline}</li>
- * </ul>
- * </li>
- * <li>{@linkplain com.tools20022.metamodel.MMBusinessComponent#getSubType
- * subType} =
- * <ul>
- * <li>{@linkplain com.tools20022.repository.entity.ChequeIssue ChequeIssue}</li>
- * <li>{@linkplain com.tools20022.repository.entity.BookEntry BookEntry}</li>
- * <li>{@linkplain com.tools20022.repository.entity.AccountEntry AccountEntry}</li>
- * <li>{@linkplain com.tools20022.repository.entity.CashDelivery CashDelivery}</li>
- * </ul>
- * </li>
- * <li>
- * {@linkplain com.tools20022.metamodel.MMBusinessComponent#getAssociationDomain
- * associationDomain} =
- * <ul>
- * <li>{@linkplain com.tools20022.repository.entity.Payment#mmCreditMethod
- * Payment.mmCreditMethod}</li>
  * </ul>
  * </li>
  * <li>
@@ -128,12 +128,12 @@ public class CreditInstrument {
 		{
 			elementContext_lazy = () -> CreditInstrument.mmObject();
 			isDerived = false;
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "RelatedPayment";
 			definition = "Payment which uses the credit instrument.";
 			minOccurs = 0;
 			opposite_lazy = () -> com.tools20022.repository.entity.Payment.mmCreditMethod;
-			aggregation = com.tools20022.metamodel.MMAggregation.NONE;
+			aggregation = MMAggregation.NONE;
 			type_lazy = () -> com.tools20022.repository.entity.Payment.mmObject();
 		}
 	};
@@ -261,21 +261,16 @@ public class CreditInstrument {
 	 */
 	public static final MMBusinessAttribute mmMethod = new MMBusinessAttribute() {
 		{
-			derivation_lazy = () -> Arrays.asList(com.tools20022.repository.msg.PaymentInstruction1.mmPaymentMethod, com.tools20022.repository.msg.PaymentInstruction6.mmPaymentMethod,
-					com.tools20022.repository.msg.PaymentInstruction9.mmPaymentMethod, com.tools20022.repository.msg.PaymentInstruction7.mmPaymentMethod, com.tools20022.repository.msg.PaymentInstruction10.mmPaymentMethod,
-					com.tools20022.repository.msg.OriginalTransactionReference1.mmPaymentMethod, com.tools20022.repository.msg.OriginalTransactionReference13.mmPaymentMethod,
-					com.tools20022.repository.msg.OriginalTransactionReference16.mmPaymentMethod, com.tools20022.repository.msg.OriginalTransactionReference15.mmPaymentMethod,
-					com.tools20022.repository.msg.OriginalTransactionReference17.mmPaymentMethod, com.tools20022.repository.msg.PaymentInstruction5.mmPaymentMethod, com.tools20022.repository.msg.PaymentInstruction8.mmPaymentMethod,
-					com.tools20022.repository.msg.PaymentInstruction11.mmPaymentMethod, com.tools20022.repository.msg.PaymentInformation15.mmPaymentMethod, com.tools20022.repository.msg.PaymentMeans1.mmPaymentMethodCode,
-					com.tools20022.repository.msg.OriginalTransactionReference9.mmPaymentMethod, com.tools20022.repository.msg.OriginalTransactionReference12.mmPaymentMethod,
-					com.tools20022.repository.msg.PaymentInstruction14.mmPaymentMethod, com.tools20022.repository.msg.PaymentInstruction16.mmPaymentMethod, com.tools20022.repository.msg.PaymentInstruction15.mmPaymentMethod,
-					com.tools20022.repository.msg.OriginalTransactionReference20.mmPaymentMethod, com.tools20022.repository.msg.PaymentInstruction17.mmPaymentMethod, com.tools20022.repository.msg.PaymentInstruction18.mmPaymentMethod,
-					com.tools20022.repository.msg.PaymentInstruction19.mmPaymentMethod, com.tools20022.repository.msg.PaymentInstruction20.mmPaymentMethod, com.tools20022.repository.msg.OriginalTransactionReference22.mmPaymentMethod,
-					com.tools20022.repository.msg.PaymentInstruction21.mmPaymentMethod, com.tools20022.repository.msg.PaymentInstruction23.mmPaymentMethod, com.tools20022.repository.msg.PaymentInstruction22.mmPaymentMethod,
-					com.tools20022.repository.msg.OriginalTransactionReference24.mmPaymentMethod);
+			derivation_lazy = () -> Arrays.asList(PaymentInstruction1.mmPaymentMethod, PaymentInstruction6.mmPaymentMethod, PaymentInstruction9.mmPaymentMethod, PaymentInstruction7.mmPaymentMethod, PaymentInstruction10.mmPaymentMethod,
+					OriginalTransactionReference1.mmPaymentMethod, OriginalTransactionReference13.mmPaymentMethod, OriginalTransactionReference16.mmPaymentMethod, OriginalTransactionReference15.mmPaymentMethod,
+					OriginalTransactionReference17.mmPaymentMethod, PaymentInstruction5.mmPaymentMethod, PaymentInstruction8.mmPaymentMethod, PaymentInstruction11.mmPaymentMethod, PaymentInformation15.mmPaymentMethod,
+					PaymentMeans1.mmPaymentMethodCode, OriginalTransactionReference9.mmPaymentMethod, OriginalTransactionReference12.mmPaymentMethod, PaymentInstruction14.mmPaymentMethod, PaymentInstruction16.mmPaymentMethod,
+					PaymentInstruction15.mmPaymentMethod, OriginalTransactionReference20.mmPaymentMethod, PaymentInstruction17.mmPaymentMethod, PaymentInstruction18.mmPaymentMethod, PaymentInstruction19.mmPaymentMethod,
+					PaymentInstruction20.mmPaymentMethod, OriginalTransactionReference22.mmPaymentMethod, PaymentInstruction21.mmPaymentMethod, PaymentInstruction23.mmPaymentMethod, PaymentInstruction22.mmPaymentMethod,
+					OriginalTransactionReference24.mmPaymentMethod);
 			elementContext_lazy = () -> CreditInstrument.mmObject();
 			isDerived = false;
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "Method";
 			definition = "Transfer method to be used for the transfer.";
 			maxOccurs = 1;
@@ -326,11 +321,10 @@ public class CreditInstrument {
 	 */
 	public static final MMBusinessAttribute mmCreditInstrumentIdentification = new MMBusinessAttribute() {
 		{
-			derivation_lazy = () -> Arrays.asList(com.tools20022.repository.msg.Cheque5.mmChequeNumber, com.tools20022.repository.msg.Cheque6.mmChequeNumber, com.tools20022.repository.msg.Cheque7.mmChequeNumber,
-					com.tools20022.repository.msg.Cheque3.mmNumber, com.tools20022.repository.msg.Cheque9.mmNumber);
+			derivation_lazy = () -> Arrays.asList(Cheque5.mmChequeNumber, Cheque6.mmChequeNumber, Cheque7.mmChequeNumber, Cheque3.mmNumber, Cheque9.mmNumber);
 			elementContext_lazy = () -> CreditInstrument.mmObject();
 			isDerived = false;
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "CreditInstrumentIdentification";
 			definition = "Identifies the credit instrument.";
 			maxOccurs = 1;
@@ -381,10 +375,10 @@ public class CreditInstrument {
 	 */
 	public static final MMBusinessAttribute mmNetAmount = new MMBusinessAttribute() {
 		{
-			derivation_lazy = () -> Arrays.asList(com.tools20022.repository.msg.LiquidityCreditTransfer1.mmTransferredAmount, com.tools20022.repository.msg.LiquidityDebitTransfer1.mmTransferredAmount);
+			derivation_lazy = () -> Arrays.asList(LiquidityCreditTransfer1.mmTransferredAmount, LiquidityDebitTransfer1.mmTransferredAmount);
 			elementContext_lazy = () -> CreditInstrument.mmObject();
 			isDerived = false;
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "NetAmount";
 			definition = "Amount less fees and charges, that will be exchanged on settlement date of the trade.";
 			maxOccurs = 1;
@@ -422,7 +416,7 @@ public class CreditInstrument {
 		{
 			elementContext_lazy = () -> CreditInstrument.mmObject();
 			isDerived = false;
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "Deadline";
 			definition = "Time by which the amount must be paid in.";
 			maxOccurs = 1;
@@ -434,14 +428,13 @@ public class CreditInstrument {
 	static public MMBusinessComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMBusinessComponent() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "CreditInstrument";
 				definition = "Specifies the instrument to be used for the credit of a payment.";
 				associationDomain_lazy = () -> Arrays.asList(com.tools20022.repository.entity.Payment.mmCreditMethod);
 				subType_lazy = () -> Arrays.asList(ChequeIssue.mmObject(), BookEntry.mmObject(), AccountEntry.mmObject(), CashDelivery.mmObject());
-				element_lazy = () -> Arrays.asList(com.tools20022.repository.entity.CreditInstrument.mmRelatedPayment, com.tools20022.repository.entity.CreditInstrument.mmMethod,
-						com.tools20022.repository.entity.CreditInstrument.mmCreditInstrumentIdentification, com.tools20022.repository.entity.CreditInstrument.mmNetAmount, com.tools20022.repository.entity.CreditInstrument.mmDeadline);
+				element_lazy = () -> Arrays.asList(CreditInstrument.mmRelatedPayment, CreditInstrument.mmMethod, CreditInstrument.mmCreditInstrumentIdentification, CreditInstrument.mmNetAmount, CreditInstrument.mmDeadline);
 			}
 		});
 		return mmObject_lazy.get();

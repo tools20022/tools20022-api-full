@@ -19,7 +19,9 @@ package com.tools20022.repository.codeset;
 
 import com.tools20022.metamodel.MMCode;
 import com.tools20022.metamodel.MMCodeSet;
+import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.codeset.ContentTypeCode;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -113,9 +115,9 @@ public class ContentType1Code extends ContentTypeCode {
 	 */
 	public static final MMCode mmPlainData = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PlainData";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.ContentType2Code.mmPlainData);
+			nextVersions_lazy = () -> Arrays.asList(ContentType2Code.mmPlainData);
 			owner_lazy = () -> ContentType1Code.mmObject();
 		}
 	};
@@ -145,9 +147,9 @@ public class ContentType1Code extends ContentTypeCode {
 	 */
 	public static final MMCode mmSignedData = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SignedData";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.ContentType2Code.mmSignedData);
+			nextVersions_lazy = () -> Arrays.asList(ContentType2Code.mmSignedData);
 			owner_lazy = () -> ContentType1Code.mmObject();
 		}
 	};
@@ -177,9 +179,9 @@ public class ContentType1Code extends ContentTypeCode {
 	 */
 	public static final MMCode mmEnvelopedData = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "EnvelopedData";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.ContentType2Code.mmEnvelopedData);
+			nextVersions_lazy = () -> Arrays.asList(ContentType2Code.mmEnvelopedData);
 			owner_lazy = () -> ContentType1Code.mmObject();
 		}
 	};
@@ -209,9 +211,9 @@ public class ContentType1Code extends ContentTypeCode {
 	 */
 	public static final MMCode mmDigestedData = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "DigestedData";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.ContentType2Code.mmDigestedData);
+			nextVersions_lazy = () -> Arrays.asList(ContentType2Code.mmDigestedData);
 			owner_lazy = () -> ContentType1Code.mmObject();
 		}
 	};
@@ -233,7 +235,7 @@ public class ContentType1Code extends ContentTypeCode {
 	 */
 	public static final MMCode mmEncryptedData = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "EncryptedData";
 			owner_lazy = () -> ContentType1Code.mmObject();
 		}
@@ -264,9 +266,9 @@ public class ContentType1Code extends ContentTypeCode {
 	 */
 	public static final MMCode mmAuthenticatedData = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AuthenticatedData";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.ContentType2Code.mmAuthenticatedData);
+			nextVersions_lazy = () -> Arrays.asList(ContentType2Code.mmAuthenticatedData);
 			owner_lazy = () -> ContentType1Code.mmObject();
 		}
 	};
@@ -274,15 +276,14 @@ public class ContentType1Code extends ContentTypeCode {
 	static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
 				example = Arrays.asList("DATA");
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "ContentType1Code";
 				definition = "Identification of the type of a Cryptographic Message Syntax (CMS) data structure.";
 				nextVersions_lazy = () -> Arrays.asList(ContentType2Code.mmObject());
-				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.ContentType1Code.mmPlainData, com.tools20022.repository.codeset.ContentType1Code.mmSignedData,
-						com.tools20022.repository.codeset.ContentType1Code.mmEnvelopedData, com.tools20022.repository.codeset.ContentType1Code.mmDigestedData, com.tools20022.repository.codeset.ContentType1Code.mmEncryptedData,
-						com.tools20022.repository.codeset.ContentType1Code.mmAuthenticatedData);
+				code_lazy = () -> Arrays.asList(ContentType1Code.mmPlainData, ContentType1Code.mmSignedData, ContentType1Code.mmEnvelopedData, ContentType1Code.mmDigestedData, ContentType1Code.mmEncryptedData,
+						ContentType1Code.mmAuthenticatedData);
 				trace_lazy = () -> ContentTypeCode.mmObject();
 			}
 		});

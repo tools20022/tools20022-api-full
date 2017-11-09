@@ -20,7 +20,9 @@ package com.tools20022.repository.choice;
 import com.tools20022.metamodel.MMChoiceComponent;
 import com.tools20022.metamodel.MMMessageAssociationEnd;
 import com.tools20022.metamodel.MMMessageAttribute;
+import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.datatype.Max35Text;
+import com.tools20022.repository.GeneratedRepository;
 import com.tools20022.repository.msg.CollateralValueCriteria1;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
@@ -96,7 +98,7 @@ public class CollateralValueCriteriaDefinition1Choice {
 			componentContext_lazy = () -> CollateralValueCriteriaDefinition1Choice.mmObject();
 			isDerived = false;
 			xmlTag = "QryNm";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "QueryName";
 			definition = "Recalls the criteria (search and return criteria) defined in a preceding query.";
 			maxOccurs = 1;
@@ -137,7 +139,7 @@ public class CollateralValueCriteriaDefinition1Choice {
 			componentContext_lazy = () -> CollateralValueCriteriaDefinition1Choice.mmObject();
 			isDerived = false;
 			xmlTag = "NewCrit";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "NewCriteria";
 			definition = "Explicitly defines the query criteria.";
 			maxOccurs = 1;
@@ -150,9 +152,9 @@ public class CollateralValueCriteriaDefinition1Choice {
 	final static public MMChoiceComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMChoiceComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.choice.CollateralValueCriteriaDefinition1Choice.mmQueryName, com.tools20022.repository.choice.CollateralValueCriteriaDefinition1Choice.mmNewCriteria);
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+				messageElement_lazy = () -> Arrays.asList(CollateralValueCriteriaDefinition1Choice.mmQueryName, CollateralValueCriteriaDefinition1Choice.mmNewCriteria);
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 				name = "CollateralValueCriteriaDefinition1Choice";
 				definition = "Definition of the collateral value query criteria.";
 			}

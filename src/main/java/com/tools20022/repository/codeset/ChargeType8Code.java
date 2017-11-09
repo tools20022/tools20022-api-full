@@ -19,7 +19,9 @@ package com.tools20022.repository.codeset;
 
 import com.tools20022.metamodel.MMCode;
 import com.tools20022.metamodel.MMCodeSet;
+import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.codeset.ChargeTypeCode;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -114,7 +116,7 @@ public class ChargeType8Code extends ChargeTypeCode {
 	 */
 	public static final MMCode mmSignatureService = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SignatureService";
 			owner_lazy = () -> ChargeType8Code.mmObject();
 		}
@@ -137,7 +139,7 @@ public class ChargeType8Code extends ChargeTypeCode {
 	 */
 	public static final MMCode mmStorageAtDestination = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "StorageAtDestination";
 			owner_lazy = () -> ChargeType8Code.mmObject();
 		}
@@ -160,7 +162,7 @@ public class ChargeType8Code extends ChargeTypeCode {
 	 */
 	public static final MMCode mmStorageAtOrigin = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "StorageAtOrigin";
 			owner_lazy = () -> ChargeType8Code.mmObject();
 		}
@@ -183,7 +185,7 @@ public class ChargeType8Code extends ChargeTypeCode {
 	 */
 	public static final MMCode mmPackaging = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Packaging";
 			owner_lazy = () -> ChargeType8Code.mmObject();
 		}
@@ -206,7 +208,7 @@ public class ChargeType8Code extends ChargeTypeCode {
 	 */
 	public static final MMCode mmPickUp = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PickUp";
 			owner_lazy = () -> ChargeType8Code.mmObject();
 		}
@@ -229,7 +231,7 @@ public class ChargeType8Code extends ChargeTypeCode {
 	 */
 	public static final MMCode mmDangerousGoodsFee = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "DangerousGoodsFee";
 			owner_lazy = () -> ChargeType8Code.mmObject();
 		}
@@ -252,7 +254,7 @@ public class ChargeType8Code extends ChargeTypeCode {
 	 */
 	public static final MMCode mmSecurityCharge = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SecurityCharge";
 			owner_lazy = () -> ChargeType8Code.mmObject();
 		}
@@ -275,7 +277,7 @@ public class ChargeType8Code extends ChargeTypeCode {
 	 */
 	public static final MMCode mmInsurancePremium = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "InsurancePremium";
 			owner_lazy = () -> ChargeType8Code.mmObject();
 		}
@@ -298,7 +300,7 @@ public class ChargeType8Code extends ChargeTypeCode {
 	 */
 	public static final MMCode mmCollectFreight = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CollectFreight";
 			owner_lazy = () -> ChargeType8Code.mmObject();
 		}
@@ -321,7 +323,7 @@ public class ChargeType8Code extends ChargeTypeCode {
 	 */
 	public static final MMCode mmClearanceAndHandlingAtOrigin = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ClearanceAndHandlingAtOrigin";
 			owner_lazy = () -> ChargeType8Code.mmObject();
 		}
@@ -344,7 +346,7 @@ public class ChargeType8Code extends ChargeTypeCode {
 	 */
 	public static final MMCode mmClearanceAndHandlingAtDestination = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ClearanceAndHandlingAtDestination";
 			owner_lazy = () -> ChargeType8Code.mmObject();
 		}
@@ -367,7 +369,7 @@ public class ChargeType8Code extends ChargeTypeCode {
 	 */
 	public static final MMCode mmAirWayBillFee = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AirWayBillFee";
 			owner_lazy = () -> ChargeType8Code.mmObject();
 		}
@@ -390,7 +392,7 @@ public class ChargeType8Code extends ChargeTypeCode {
 	 */
 	public static final MMCode mmTransportCharges = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "TransportCharges";
 			owner_lazy = () -> ChargeType8Code.mmObject();
 		}
@@ -399,17 +401,14 @@ public class ChargeType8Code extends ChargeTypeCode {
 	static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
 				example = Arrays.asList("SIGN");
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "ChargeType8Code";
 				definition = "Identifies charges linked to the conveyance of goods.";
-				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.ChargeType8Code.mmSignatureService, com.tools20022.repository.codeset.ChargeType8Code.mmStorageAtDestination,
-						com.tools20022.repository.codeset.ChargeType8Code.mmStorageAtOrigin, com.tools20022.repository.codeset.ChargeType8Code.mmPackaging, com.tools20022.repository.codeset.ChargeType8Code.mmPickUp,
-						com.tools20022.repository.codeset.ChargeType8Code.mmDangerousGoodsFee, com.tools20022.repository.codeset.ChargeType8Code.mmSecurityCharge, com.tools20022.repository.codeset.ChargeType8Code.mmInsurancePremium,
-						com.tools20022.repository.codeset.ChargeType8Code.mmCollectFreight, com.tools20022.repository.codeset.ChargeType8Code.mmClearanceAndHandlingAtOrigin,
-						com.tools20022.repository.codeset.ChargeType8Code.mmClearanceAndHandlingAtDestination, com.tools20022.repository.codeset.ChargeType8Code.mmAirWayBillFee,
-						com.tools20022.repository.codeset.ChargeType8Code.mmTransportCharges);
+				code_lazy = () -> Arrays.asList(ChargeType8Code.mmSignatureService, ChargeType8Code.mmStorageAtDestination, ChargeType8Code.mmStorageAtOrigin, ChargeType8Code.mmPackaging, ChargeType8Code.mmPickUp,
+						ChargeType8Code.mmDangerousGoodsFee, ChargeType8Code.mmSecurityCharge, ChargeType8Code.mmInsurancePremium, ChargeType8Code.mmCollectFreight, ChargeType8Code.mmClearanceAndHandlingAtOrigin,
+						ChargeType8Code.mmClearanceAndHandlingAtDestination, ChargeType8Code.mmAirWayBillFee, ChargeType8Code.mmTransportCharges);
 				trace_lazy = () -> ChargeTypeCode.mmObject();
 			}
 		});

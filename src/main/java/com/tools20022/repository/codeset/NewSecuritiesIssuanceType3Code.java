@@ -19,7 +19,9 @@ package com.tools20022.repository.codeset;
 
 import com.tools20022.metamodel.MMCode;
 import com.tools20022.metamodel.MMCodeSet;
+import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.codeset.NewSecuritiesIssuanceTypeCode;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -96,9 +98,9 @@ public class NewSecuritiesIssuanceType3Code extends NewSecuritiesIssuanceTypeCod
 	 */
 	public static final MMCode mmDefeasedSecurityIndicator = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "DefeasedSecurityIndicator";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.NewSecuritiesIssuanceType6Code.mmDefeasedSecurityIndicator);
+			nextVersions_lazy = () -> Arrays.asList(NewSecuritiesIssuanceType6Code.mmDefeasedSecurityIndicator);
 			owner_lazy = () -> NewSecuritiesIssuanceType3Code.mmObject();
 		}
 	};
@@ -128,9 +130,9 @@ public class NewSecuritiesIssuanceType3Code extends NewSecuritiesIssuanceTypeCod
 	 */
 	public static final MMCode mmNonDefeasedSecurityIndicator = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "NonDefeasedSecurityIndicator";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.NewSecuritiesIssuanceType6Code.mmNonDefeasedSecurityIndicator);
+			nextVersions_lazy = () -> Arrays.asList(NewSecuritiesIssuanceType6Code.mmNonDefeasedSecurityIndicator);
 			owner_lazy = () -> NewSecuritiesIssuanceType3Code.mmObject();
 		}
 	};
@@ -138,12 +140,12 @@ public class NewSecuritiesIssuanceType3Code extends NewSecuritiesIssuanceTypeCod
 	static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "NewSecuritiesIssuanceType3Code";
 				definition = "Specifies the type of securities proceeds; whether they are defeased or non-defeased.";
 				nextVersions_lazy = () -> Arrays.asList(NewSecuritiesIssuanceType6Code.mmObject());
-				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.NewSecuritiesIssuanceType3Code.mmDefeasedSecurityIndicator, com.tools20022.repository.codeset.NewSecuritiesIssuanceType3Code.mmNonDefeasedSecurityIndicator);
+				code_lazy = () -> Arrays.asList(NewSecuritiesIssuanceType3Code.mmDefeasedSecurityIndicator, NewSecuritiesIssuanceType3Code.mmNonDefeasedSecurityIndicator);
 				trace_lazy = () -> NewSecuritiesIssuanceTypeCode.mmObject();
 			}
 		});

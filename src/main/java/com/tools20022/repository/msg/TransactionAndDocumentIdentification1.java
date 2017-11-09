@@ -19,9 +19,15 @@ package com.tools20022.repository.msg;
 
 import com.tools20022.metamodel.MMMessageAttribute;
 import com.tools20022.metamodel.MMMessageComponent;
+import com.tools20022.metamodel.MMRegistrationStatus;
+import com.tools20022.repository.area.semt.IntraPositionMovementInstructionV01;
+import com.tools20022.repository.area.sese.SecuritiesFinancingInstructionV01;
+import com.tools20022.repository.area.sese.SecuritiesSettlementTransactionAllegementNotificationV01;
+import com.tools20022.repository.area.sese.SecuritiesSettlementTransactionInstructionV01;
 import com.tools20022.repository.choice.DateAndDateTimeChoice;
 import com.tools20022.repository.codeset.CopyDuplicate1Code;
 import com.tools20022.repository.datatype.Max35Text;
+import com.tools20022.repository.GeneratedRepository;
 import java.text.DateFormat;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
@@ -124,7 +130,7 @@ public class TransactionAndDocumentIdentification1 {
 			componentContext_lazy = () -> TransactionAndDocumentIdentification1.mmObject();
 			isDerived = false;
 			xmlTag = "TxId";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "TransactionIdentification";
 			definition = "Unambiguous identification of the transaction as know by the instructing party.";
 			maxOccurs = 1;
@@ -168,7 +174,7 @@ public class TransactionAndDocumentIdentification1 {
 			componentContext_lazy = () -> TransactionAndDocumentIdentification1.mmObject();
 			isDerived = false;
 			xmlTag = "DocId";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "DocumentIdentification";
 			definition = "Unique identifier of the document (message) assigned by the sender of the document.";
 			maxOccurs = 1;
@@ -213,7 +219,7 @@ public class TransactionAndDocumentIdentification1 {
 			componentContext_lazy = () -> TransactionAndDocumentIdentification1.mmObject();
 			isDerived = false;
 			xmlTag = "CreDtTm";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CreationDateTime";
 			definition = "Date and time at which the transaction was created by the instructing party in its business application.";
 			maxOccurs = 1;
@@ -258,7 +264,7 @@ public class TransactionAndDocumentIdentification1 {
 			componentContext_lazy = () -> TransactionAndDocumentIdentification1.mmObject();
 			isDerived = false;
 			xmlTag = "CpyDplct";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CopyDuplicate";
 			definition = "Specifies if this document is a copy, a duplicate, or a duplicate of a copy.";
 			maxOccurs = 1;
@@ -270,14 +276,12 @@ public class TransactionAndDocumentIdentification1 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.TransactionAndDocumentIdentification1.mmTransactionIdentification,
-						com.tools20022.repository.msg.TransactionAndDocumentIdentification1.mmDocumentIdentification, com.tools20022.repository.msg.TransactionAndDocumentIdentification1.mmCreationDateTime,
-						com.tools20022.repository.msg.TransactionAndDocumentIdentification1.mmCopyDuplicate);
-				messageBuildingBlock_lazy = () -> Arrays.asList(com.tools20022.repository.area.sese.SecuritiesFinancingInstructionV01.mmIdentification,
-						com.tools20022.repository.area.sese.SecuritiesSettlementTransactionInstructionV01.mmIdentification, com.tools20022.repository.area.semt.IntraPositionMovementInstructionV01.mmIdentification,
-						com.tools20022.repository.area.sese.SecuritiesSettlementTransactionAllegementNotificationV01.mmIdentification);
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.OBSOLETE;
+				messageElement_lazy = () -> Arrays.asList(TransactionAndDocumentIdentification1.mmTransactionIdentification, TransactionAndDocumentIdentification1.mmDocumentIdentification,
+						TransactionAndDocumentIdentification1.mmCreationDateTime, TransactionAndDocumentIdentification1.mmCopyDuplicate);
+				messageBuildingBlock_lazy = () -> Arrays.asList(SecuritiesFinancingInstructionV01.mmIdentification, SecuritiesSettlementTransactionInstructionV01.mmIdentification, IntraPositionMovementInstructionV01.mmIdentification,
+						SecuritiesSettlementTransactionAllegementNotificationV01.mmIdentification);
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.OBSOLETE;
 				removalDate = ((Supplier<Date>) (() -> {
 					try {
 						return DateFormat.getDateInstance(java.text.DateFormat.LONG).parse("May 5, 2016");

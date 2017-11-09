@@ -20,9 +20,11 @@ package com.tools20022.repository.msg;
 import com.tools20022.metamodel.MMMessageAssociationEnd;
 import com.tools20022.metamodel.MMMessageAttribute;
 import com.tools20022.metamodel.MMMessageComponent;
+import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.choice.AutoExtend1Choice;
 import com.tools20022.repository.datatype.ISODate;
 import com.tools20022.repository.entity.UndertakingExtension;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.List;
@@ -103,11 +105,11 @@ public class AutoExtension1 {
 	 */
 	public static final MMMessageAssociationEnd mmPeriod = new MMMessageAssociationEnd() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.UndertakingExtension.mmAutoExtensionPeriod;
+			businessElementTrace_lazy = () -> UndertakingExtension.mmAutoExtensionPeriod;
 			componentContext_lazy = () -> AutoExtension1.mmObject();
 			isDerived = false;
 			xmlTag = "Prd";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Period";
 			definition = "Indicates that the undertaking is automatically extendable and the period of extension.";
 			maxOccurs = 1;
@@ -153,11 +155,11 @@ public class AutoExtension1 {
 	 */
 	public static final MMMessageAttribute mmFinalExpiryDate = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.UndertakingExtension.mmAutoExtensionFinalExpiryDate;
+			businessElementTrace_lazy = () -> UndertakingExtension.mmAutoExtensionFinalExpiryDate;
 			componentContext_lazy = () -> AutoExtension1.mmObject();
 			isDerived = false;
 			xmlTag = "FnlXpryDt";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "FinalExpiryDate";
 			definition = "Final expiry date after which the undertaking will no longer be subject to automatic extension.";
 			maxOccurs = 1;
@@ -199,7 +201,7 @@ public class AutoExtension1 {
 			componentContext_lazy = () -> AutoExtension1.mmObject();
 			isDerived = false;
 			xmlTag = "NonXtnsnNtfctn";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "NonExtensionNotification";
 			definition = "Details related to the notification of the end of the period for notification of non-extension of the expiry date.";
 			minOccurs = 0;
@@ -211,11 +213,10 @@ public class AutoExtension1 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.AutoExtension1.mmPeriod, com.tools20022.repository.msg.AutoExtension1.mmFinalExpiryDate,
-						com.tools20022.repository.msg.AutoExtension1.mmNonExtensionNotification);
+				messageElement_lazy = () -> Arrays.asList(AutoExtension1.mmPeriod, AutoExtension1.mmFinalExpiryDate, AutoExtension1.mmNonExtensionNotification);
 				trace_lazy = () -> UndertakingExtension.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "AutoExtension1";
 				definition = "Automatic extension information.";
 			}

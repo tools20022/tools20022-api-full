@@ -19,6 +19,8 @@ package com.tools20022.repository.choice;
 
 import com.tools20022.metamodel.MMChoiceComponent;
 import com.tools20022.metamodel.MMMessageAssociationEnd;
+import com.tools20022.metamodel.MMRegistrationStatus;
+import com.tools20022.repository.GeneratedRepository;
 import com.tools20022.repository.msg.KEK1;
 import com.tools20022.repository.msg.KeyTransport1;
 import java.util.Arrays;
@@ -98,7 +100,7 @@ public class Recipient1Choice {
 			componentContext_lazy = () -> Recipient1Choice.mmObject();
 			isDerived = false;
 			xmlTag = "KeyTrnsprt";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "KeyTransport";
 			definition = "Encryption key using previously distributed asymmetric key.";
 			maxOccurs = 1;
@@ -139,7 +141,7 @@ public class Recipient1Choice {
 			componentContext_lazy = () -> Recipient1Choice.mmObject();
 			isDerived = false;
 			xmlTag = "KEK";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "KEK";
 			definition = "Encryption key using previously distributed symmetric key.";
 			maxOccurs = 1;
@@ -152,9 +154,9 @@ public class Recipient1Choice {
 	final static public MMChoiceComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMChoiceComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.choice.Recipient1Choice.mmKeyTransport, com.tools20022.repository.choice.Recipient1Choice.mmKEK);
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				messageElement_lazy = () -> Arrays.asList(Recipient1Choice.mmKeyTransport, Recipient1Choice.mmKEK);
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "Recipient1Choice";
 				definition = "Transport key or key encryption key (KEK) for the recipient.";
 				nextVersions_lazy = () -> Arrays.asList(Recipient2Choice.mmObject());

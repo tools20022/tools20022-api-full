@@ -19,7 +19,9 @@ package com.tools20022.repository.codeset;
 
 import com.tools20022.metamodel.MMCode;
 import com.tools20022.metamodel.MMCodeSet;
+import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.codeset.PlanStatusCode;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -77,7 +79,7 @@ public class PlanStatus1Code extends PlanStatusCode {
 	 */
 	public static final MMCode mmActive = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Active";
 			owner_lazy = () -> PlanStatus1Code.mmObject();
 		}
@@ -100,7 +102,7 @@ public class PlanStatus1Code extends PlanStatusCode {
 	 */
 	public static final MMCode mmClosed = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Closed";
 			owner_lazy = () -> PlanStatus1Code.mmObject();
 		}
@@ -123,7 +125,7 @@ public class PlanStatus1Code extends PlanStatusCode {
 	 */
 	public static final MMCode mmSuspended = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Suspended";
 			owner_lazy = () -> PlanStatus1Code.mmObject();
 		}
@@ -132,11 +134,11 @@ public class PlanStatus1Code extends PlanStatusCode {
 	static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "PlanStatus1Code";
 				definition = "Specifies the status of a plan.";
-				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.PlanStatus1Code.mmActive, com.tools20022.repository.codeset.PlanStatus1Code.mmClosed, com.tools20022.repository.codeset.PlanStatus1Code.mmSuspended);
+				code_lazy = () -> Arrays.asList(PlanStatus1Code.mmActive, PlanStatus1Code.mmClosed, PlanStatus1Code.mmSuspended);
 				trace_lazy = () -> PlanStatusCode.mmObject();
 			}
 		});

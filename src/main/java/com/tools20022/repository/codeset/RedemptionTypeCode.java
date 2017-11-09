@@ -19,6 +19,8 @@ package com.tools20022.repository.codeset;
 
 import com.tools20022.metamodel.MMCode;
 import com.tools20022.metamodel.MMCodeSet;
+import com.tools20022.metamodel.MMRegistrationStatus;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -27,6 +29,13 @@ import java.util.concurrent.atomic.AtomicReference;
  * <p>
  * <strong>Constant fields:</strong>
  * <ul>
+ * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getDerivation derivation}
+ * =
+ * <ul>
+ * <li>{@linkplain com.tools20022.repository.codeset.RedemptionType1Code
+ * RedemptionType1Code}</li>
+ * </ul>
+ * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getCode code} =
  * <ul>
  * <li>
@@ -44,13 +53,6 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>
  * {@linkplain com.tools20022.repository.codeset.RedemptionTypeCode#mmPutable
  * RedemptionTypeCode.mmPutable}</li>
- * </ul>
- * </li>
- * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getDerivation derivation}
- * =
- * <ul>
- * <li>{@linkplain com.tools20022.repository.codeset.RedemptionType1Code
- * RedemptionType1Code}</li>
  * </ul>
  * </li>
  * <li>
@@ -108,7 +110,7 @@ public class RedemptionTypeCode {
 	 */
 	public static final MMCode mmPreFunded = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PreFunded";
 			definition = "Indicates whether an interest bearing instrument is being escrowed or collateralized either by direct obligations guaranteed by the US government, or by other types of securities. The maturity schedules of the securities in the escrow fund are determined in such a way to pay the maturity value, coupon, and premium payments (if any) of the refunded bonds.";
 			owner_lazy = () -> RedemptionTypeCode.mmObject();
@@ -141,7 +143,7 @@ public class RedemptionTypeCode {
 	 */
 	public static final MMCode mmEscrowed = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Escrowed";
 			definition = "Indicates whether an interest bearing instrument is deposited in a fund that will be used to pay debt service on refunded securities.";
 			owner_lazy = () -> RedemptionTypeCode.mmObject();
@@ -174,7 +176,7 @@ public class RedemptionTypeCode {
 	 */
 	public static final MMCode mmConvertible = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Convertible";
 			definition = "Indicates whether the interest bearing instrument is convertible into another type of financial instrument or not.";
 			owner_lazy = () -> RedemptionTypeCode.mmObject();
@@ -207,7 +209,7 @@ public class RedemptionTypeCode {
 	 */
 	public static final MMCode mmCallable = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Callable";
 			definition = "Indicates whether the issuer has the right to pay the bond prior to maturity.";
 			owner_lazy = () -> RedemptionTypeCode.mmObject();
@@ -240,7 +242,7 @@ public class RedemptionTypeCode {
 	 */
 	public static final MMCode mmPutable = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Putable";
 			definition = "Indicates whether the bondholder has the right to redeem the principal amount of a bond prior to final maturity.";
 			owner_lazy = () -> RedemptionTypeCode.mmObject();
@@ -251,13 +253,12 @@ public class RedemptionTypeCode {
 	static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
 				example = Arrays.asList("PFIN");
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "RedemptionTypeCode";
 				definition = "Indicates the redemption type of the interest bearing instrument.";
-				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.RedemptionTypeCode.mmPreFunded, com.tools20022.repository.codeset.RedemptionTypeCode.mmEscrowed,
-						com.tools20022.repository.codeset.RedemptionTypeCode.mmConvertible, com.tools20022.repository.codeset.RedemptionTypeCode.mmCallable, com.tools20022.repository.codeset.RedemptionTypeCode.mmPutable);
+				code_lazy = () -> Arrays.asList(RedemptionTypeCode.mmPreFunded, RedemptionTypeCode.mmEscrowed, RedemptionTypeCode.mmConvertible, RedemptionTypeCode.mmCallable, RedemptionTypeCode.mmPutable);
 				derivation_lazy = () -> Arrays.asList(RedemptionType1Code.mmObject());
 			}
 		});

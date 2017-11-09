@@ -17,13 +17,12 @@
 
 package com.tools20022.repository.entity;
 
-import com.tools20022.metamodel.MMBusinessAssociationEnd;
-import com.tools20022.metamodel.MMBusinessAttribute;
-import com.tools20022.metamodel.MMBusinessComponent;
+import com.tools20022.metamodel.*;
 import com.tools20022.repository.codeset.LanguageCode;
 import com.tools20022.repository.datatype.Max350Text;
 import com.tools20022.repository.datatype.Max35Text;
-import com.tools20022.repository.msg.FinancialInstrumentName1;
+import com.tools20022.repository.GeneratedRepository;
+import com.tools20022.repository.msg.*;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -36,17 +35,12 @@ import java.util.concurrent.atomic.AtomicReference;
  * <p>
  * <strong>Constant fields:</strong>
  * <ul>
- * <li>{@linkplain com.tools20022.metamodel.MMBusinessComponent#getElement
- * element} =
+ * <li>
+ * {@linkplain com.tools20022.metamodel.MMBusinessComponent#getDerivationComponent
+ * derivationComponent} =
  * <ul>
- * <li>{@linkplain com.tools20022.repository.entity.LocalName#mmFullName
- * LocalName.mmFullName}</li>
- * <li>{@linkplain com.tools20022.repository.entity.LocalName#mmRelatedSecurity
- * LocalName.mmRelatedSecurity}</li>
- * <li>{@linkplain com.tools20022.repository.entity.LocalName#mmShortName
- * LocalName.mmShortName}</li>
- * <li>{@linkplain com.tools20022.repository.entity.LocalName#mmLanguage
- * LocalName.mmLanguage}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.FinancialInstrumentName1
+ * FinancialInstrumentName1}</li>
  * </ul>
  * </li>
  * <li>
@@ -58,12 +52,17 @@ import java.util.concurrent.atomic.AtomicReference;
  * SecuritiesIdentification.mmName}</li>
  * </ul>
  * </li>
- * <li>
- * {@linkplain com.tools20022.metamodel.MMBusinessComponent#getDerivationComponent
- * derivationComponent} =
+ * <li>{@linkplain com.tools20022.metamodel.MMBusinessComponent#getElement
+ * element} =
  * <ul>
- * <li>{@linkplain com.tools20022.repository.msg.FinancialInstrumentName1
- * FinancialInstrumentName1}</li>
+ * <li>{@linkplain com.tools20022.repository.entity.LocalName#mmFullName
+ * LocalName.mmFullName}</li>
+ * <li>{@linkplain com.tools20022.repository.entity.LocalName#mmRelatedSecurity
+ * LocalName.mmRelatedSecurity}</li>
+ * <li>{@linkplain com.tools20022.repository.entity.LocalName#mmShortName
+ * LocalName.mmShortName}</li>
+ * <li>{@linkplain com.tools20022.repository.entity.LocalName#mmLanguage
+ * LocalName.mmLanguage}</li>
  * </ul>
  * </li>
  * <li>
@@ -279,28 +278,18 @@ public class LocalName {
 	 */
 	public static final MMBusinessAttribute mmFullName = new MMBusinessAttribute() {
 		{
-			derivation_lazy = () -> Arrays.asList(com.tools20022.repository.msg.FinancialInstrument16.mmName, com.tools20022.repository.msg.SecurityIdentification1.mmName, com.tools20022.repository.msg.FinancialInstrument17.mmName,
-					com.tools20022.repository.msg.FinancialInstrument6.mmName, com.tools20022.repository.msg.FinancialInstrument10.mmName, com.tools20022.repository.msg.FinancialInstrument29.mmName,
-					com.tools20022.repository.msg.FinancialInstrument7.mmName, com.tools20022.repository.msg.FinancialInstrument12.mmName, com.tools20022.repository.msg.FinancialInstrument26.mmName,
-					com.tools20022.repository.msg.FinancialInstrument30.mmName, com.tools20022.repository.msg.FinancialInstrument11.mmName, com.tools20022.repository.msg.FinancialInstrument25.mmName,
-					com.tools20022.repository.msg.FinancialInstrument27.mmName, com.tools20022.repository.msg.FinancialInstrument32.mmName, com.tools20022.repository.msg.FinancialInstrument24.mmName,
-					com.tools20022.repository.msg.FinancialInstrument33.mmName, com.tools20022.repository.msg.FinancialInstrument23.mmName, com.tools20022.repository.msg.FinancialInstrument31.mmName,
-					com.tools20022.repository.msg.FinancialInstrument3.mmName, com.tools20022.repository.msg.FinancialInstrument5.mmName, com.tools20022.repository.msg.FinancialInstrument8.mmName,
-					com.tools20022.repository.msg.FinancialInstrument13.mmName, com.tools20022.repository.msg.FinancialInstrument4.mmName, com.tools20022.repository.msg.FinancialInstrumentAttributes1.mmName,
-					com.tools20022.repository.msg.FinancialInstrument9.mmName, com.tools20022.repository.msg.FinancialInstrument18.mmName, com.tools20022.repository.msg.FinancialInstrument19.mmName,
-					com.tools20022.repository.msg.CommonFinancialInstrumentAttributes1.mmISOSecurityLongName, com.tools20022.repository.msg.FinancialInstrumentName1.mmISOLongName, com.tools20022.repository.msg.FinancialInstrument37.mmName,
-					com.tools20022.repository.msg.FinancialInstrument35.mmName, com.tools20022.repository.msg.FinancialInstrument34.mmName, com.tools20022.repository.msg.FinancialInstrument36.mmName,
-					com.tools20022.repository.msg.Fund2.mmName, com.tools20022.repository.msg.Fund1.mmName, com.tools20022.repository.msg.FinancialInstrument40.mmName, com.tools20022.repository.msg.FinancialInstrument39.mmName,
-					com.tools20022.repository.msg.Fund3.mmName, com.tools20022.repository.msg.Fund4.mmName, com.tools20022.repository.msg.FinancialInstrument51.mmName, com.tools20022.repository.msg.FinancialInstrument50.mmName,
-					com.tools20022.repository.msg.FinancialInstrument45.mmName, com.tools20022.repository.msg.FinancialInstrument49.mmName, com.tools20022.repository.msg.FinancialInstrument48.mmName,
-					com.tools20022.repository.msg.FinancialInstrument47.mmName, com.tools20022.repository.msg.FinancialInstrument46.mmName, com.tools20022.repository.msg.SecurityInstrumentDescription9.mmFullName,
-					com.tools20022.repository.msg.SecurityInstrumentDescription11.mmFullName, com.tools20022.repository.msg.FinancialInstrument57.mmName, com.tools20022.repository.msg.FinancialInstrument56.mmName,
-					com.tools20022.repository.msg.HoldBackInformation2.mmFinancialInstrumentName, com.tools20022.repository.msg.FinancialInstrument55.mmName, com.tools20022.repository.msg.TransparencyDataReport11.mmFullName,
-					com.tools20022.repository.msg.TransparencyDataReport12.mmFullName, com.tools20022.repository.msg.TransparencyDataReport10.mmFullName, com.tools20022.repository.msg.TransparencyDataReport14.mmFullName,
-					com.tools20022.repository.msg.HoldBackInformation3.mmFinancialInstrumentName);
+			derivation_lazy = () -> Arrays.asList(FinancialInstrument16.mmName, SecurityIdentification1.mmName, FinancialInstrument17.mmName, FinancialInstrument6.mmName, FinancialInstrument10.mmName, FinancialInstrument29.mmName,
+					FinancialInstrument7.mmName, FinancialInstrument12.mmName, FinancialInstrument26.mmName, FinancialInstrument30.mmName, FinancialInstrument11.mmName, FinancialInstrument25.mmName, FinancialInstrument27.mmName,
+					FinancialInstrument32.mmName, FinancialInstrument24.mmName, FinancialInstrument33.mmName, FinancialInstrument23.mmName, FinancialInstrument31.mmName, FinancialInstrument3.mmName, FinancialInstrument5.mmName,
+					FinancialInstrument8.mmName, FinancialInstrument13.mmName, FinancialInstrument4.mmName, FinancialInstrumentAttributes1.mmName, FinancialInstrument9.mmName, FinancialInstrument18.mmName, FinancialInstrument19.mmName,
+					CommonFinancialInstrumentAttributes1.mmISOSecurityLongName, FinancialInstrumentName1.mmISOLongName, FinancialInstrument37.mmName, FinancialInstrument35.mmName, FinancialInstrument34.mmName, FinancialInstrument36.mmName,
+					Fund2.mmName, Fund1.mmName, FinancialInstrument40.mmName, FinancialInstrument39.mmName, Fund3.mmName, Fund4.mmName, FinancialInstrument51.mmName, FinancialInstrument50.mmName, FinancialInstrument45.mmName,
+					FinancialInstrument49.mmName, FinancialInstrument48.mmName, FinancialInstrument47.mmName, FinancialInstrument46.mmName, SecurityInstrumentDescription9.mmFullName, SecurityInstrumentDescription11.mmFullName,
+					FinancialInstrument57.mmName, FinancialInstrument56.mmName, HoldBackInformation2.mmFinancialInstrumentName, FinancialInstrument55.mmName, TransparencyDataReport11.mmFullName, TransparencyDataReport12.mmFullName,
+					TransparencyDataReport10.mmFullName, TransparencyDataReport14.mmFullName, HoldBackInformation3.mmFinancialInstrumentName);
 			elementContext_lazy = () -> LocalName.mmObject();
 			isDerived = false;
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "FullName";
 			definition = "Name of the security.";
 			maxOccurs = 1;
@@ -346,13 +335,13 @@ public class LocalName {
 		{
 			elementContext_lazy = () -> LocalName.mmObject();
 			isDerived = false;
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "RelatedSecurity";
 			definition = "Identification which contains a name.";
 			maxOccurs = 1;
 			minOccurs = 0;
 			opposite_lazy = () -> com.tools20022.repository.entity.SecuritiesIdentification.mmName;
-			aggregation = com.tools20022.metamodel.MMAggregation.NONE;
+			aggregation = MMAggregation.NONE;
 			type_lazy = () -> com.tools20022.repository.entity.SecuritiesIdentification.mmObject();
 		}
 	};
@@ -427,14 +416,12 @@ public class LocalName {
 	 */
 	public static final MMBusinessAttribute mmShortName = new MMBusinessAttribute() {
 		{
-			derivation_lazy = () -> Arrays.asList(com.tools20022.repository.msg.CommonFinancialInstrumentAttributes1.mmISOSecurityShortName, com.tools20022.repository.msg.FinancialInstrumentName1.mmISOShortName,
-					com.tools20022.repository.msg.FinancialInstrument51.mmShortName, com.tools20022.repository.msg.FinancialInstrument50.mmShortName, com.tools20022.repository.msg.FinancialInstrument45.mmShortName,
-					com.tools20022.repository.msg.FinancialInstrument49.mmShortName, com.tools20022.repository.msg.FinancialInstrument48.mmShortName, com.tools20022.repository.msg.FinancialInstrument47.mmShortName,
-					com.tools20022.repository.msg.FinancialInstrument46.mmShortName, com.tools20022.repository.msg.SecurityInstrumentDescription9.mmShortName, com.tools20022.repository.msg.FinancialInstrument57.mmShortName,
-					com.tools20022.repository.msg.FinancialInstrument56.mmShortName, com.tools20022.repository.msg.FinancialInstrument55.mmShortName);
+			derivation_lazy = () -> Arrays.asList(CommonFinancialInstrumentAttributes1.mmISOSecurityShortName, FinancialInstrumentName1.mmISOShortName, FinancialInstrument51.mmShortName, FinancialInstrument50.mmShortName,
+					FinancialInstrument45.mmShortName, FinancialInstrument49.mmShortName, FinancialInstrument48.mmShortName, FinancialInstrument47.mmShortName, FinancialInstrument46.mmShortName, SecurityInstrumentDescription9.mmShortName,
+					FinancialInstrument57.mmShortName, FinancialInstrument56.mmShortName, FinancialInstrument55.mmShortName);
 			elementContext_lazy = () -> LocalName.mmObject();
 			isDerived = false;
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "ShortName";
 			definition = "Short name of the security";
 			maxOccurs = 1;
@@ -471,7 +458,7 @@ public class LocalName {
 		{
 			elementContext_lazy = () -> LocalName.mmObject();
 			isDerived = false;
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "Language";
 			definition = "Language in which the security name is expressed.";
 			maxOccurs = 1;
@@ -483,13 +470,12 @@ public class LocalName {
 	static public MMBusinessComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMBusinessComponent() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "LocalName";
 				definition = "Name of the security.";
 				associationDomain_lazy = () -> Arrays.asList(com.tools20022.repository.entity.SecuritiesIdentification.mmName);
-				element_lazy = () -> Arrays.asList(com.tools20022.repository.entity.LocalName.mmFullName, com.tools20022.repository.entity.LocalName.mmRelatedSecurity, com.tools20022.repository.entity.LocalName.mmShortName,
-						com.tools20022.repository.entity.LocalName.mmLanguage);
+				element_lazy = () -> Arrays.asList(LocalName.mmFullName, LocalName.mmRelatedSecurity, LocalName.mmShortName, LocalName.mmLanguage);
 				derivationComponent_lazy = () -> Arrays.asList(FinancialInstrumentName1.mmObject());
 			}
 		});

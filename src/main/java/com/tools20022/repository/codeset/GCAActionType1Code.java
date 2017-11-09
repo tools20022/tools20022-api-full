@@ -19,7 +19,9 @@ package com.tools20022.repository.codeset;
 
 import com.tools20022.metamodel.MMCode;
 import com.tools20022.metamodel.MMCodeSet;
+import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.codeset.GCAActionTypeCode;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -101,7 +103,7 @@ public class GCAActionType1Code extends GCAActionTypeCode {
 	 */
 	public static final MMCode mmContactCustodian = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ContactCustodian";
 			owner_lazy = () -> GCAActionType1Code.mmObject();
 		}
@@ -124,7 +126,7 @@ public class GCAActionType1Code extends GCAActionTypeCode {
 	 */
 	public static final MMCode mmResearchRequired = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ResearchRequired";
 			owner_lazy = () -> GCAActionType1Code.mmObject();
 		}
@@ -147,7 +149,7 @@ public class GCAActionType1Code extends GCAActionTypeCode {
 	 */
 	public static final MMCode mmCustodianContacted = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CustodianContacted";
 			owner_lazy = () -> GCAActionType1Code.mmObject();
 		}
@@ -170,7 +172,7 @@ public class GCAActionType1Code extends GCAActionTypeCode {
 	 */
 	public static final MMCode mmDoNotContactCustodian = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "DoNotContactCustodian";
 			owner_lazy = () -> GCAActionType1Code.mmObject();
 		}
@@ -193,7 +195,7 @@ public class GCAActionType1Code extends GCAActionTypeCode {
 	 */
 	public static final MMCode mmNoFurtherActionRequired = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "NoFurtherActionRequired";
 			owner_lazy = () -> GCAActionType1Code.mmObject();
 		}
@@ -216,7 +218,7 @@ public class GCAActionType1Code extends GCAActionTypeCode {
 	 */
 	public static final MMCode mmNotSupportedByGCA = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "NotSupportedByGCA";
 			owner_lazy = () -> GCAActionType1Code.mmObject();
 		}
@@ -239,7 +241,7 @@ public class GCAActionType1Code extends GCAActionTypeCode {
 	 */
 	public static final MMCode mmInvalid = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Invalid";
 			owner_lazy = () -> GCAActionType1Code.mmObject();
 		}
@@ -248,15 +250,13 @@ public class GCAActionType1Code extends GCAActionTypeCode {
 	static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
 				example = Arrays.asList("RCON");
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "GCAActionType1Code";
 				definition = "Specifies what action needs to be taken by the validation service for this particular record.";
-				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.GCAActionType1Code.mmContactCustodian, com.tools20022.repository.codeset.GCAActionType1Code.mmResearchRequired,
-						com.tools20022.repository.codeset.GCAActionType1Code.mmCustodianContacted, com.tools20022.repository.codeset.GCAActionType1Code.mmDoNotContactCustodian,
-						com.tools20022.repository.codeset.GCAActionType1Code.mmNoFurtherActionRequired, com.tools20022.repository.codeset.GCAActionType1Code.mmNotSupportedByGCA,
-						com.tools20022.repository.codeset.GCAActionType1Code.mmInvalid);
+				code_lazy = () -> Arrays.asList(GCAActionType1Code.mmContactCustodian, GCAActionType1Code.mmResearchRequired, GCAActionType1Code.mmCustodianContacted, GCAActionType1Code.mmDoNotContactCustodian,
+						GCAActionType1Code.mmNoFurtherActionRequired, GCAActionType1Code.mmNotSupportedByGCA, GCAActionType1Code.mmInvalid);
 				trace_lazy = () -> GCAActionTypeCode.mmObject();
 			}
 		});

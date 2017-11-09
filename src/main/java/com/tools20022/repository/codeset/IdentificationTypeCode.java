@@ -19,6 +19,8 @@ package com.tools20022.repository.codeset;
 
 import com.tools20022.metamodel.MMCode;
 import com.tools20022.metamodel.MMCodeSet;
+import com.tools20022.metamodel.MMRegistrationStatus;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -27,6 +29,15 @@ import java.util.concurrent.atomic.AtomicReference;
  * <p>
  * <strong>Constant fields:</strong>
  * <ul>
+ * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getDerivation derivation}
+ * =
+ * <ul>
+ * <li>{@linkplain com.tools20022.repository.codeset.IdentificationType2Code
+ * IdentificationType2Code}</li>
+ * <li>{@linkplain com.tools20022.repository.codeset.IdentificationType1Code
+ * IdentificationType1Code}</li>
+ * </ul>
+ * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getCode code} =
  * <ul>
  * <li>
@@ -47,15 +58,6 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>
  * {@linkplain com.tools20022.repository.codeset.IdentificationTypeCode#mmUserDefined
  * IdentificationTypeCode.mmUserDefined}</li>
- * </ul>
- * </li>
- * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getDerivation derivation}
- * =
- * <ul>
- * <li>{@linkplain com.tools20022.repository.codeset.IdentificationType2Code
- * IdentificationType2Code}</li>
- * <li>{@linkplain com.tools20022.repository.codeset.IdentificationType1Code
- * IdentificationType1Code}</li>
  * </ul>
  * </li>
  * <li>
@@ -103,7 +105,7 @@ public class IdentificationTypeCode {
 	 */
 	public static final MMCode mmBIC = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "BIC";
 			definition = "BIC code defines as a standard format of business identifier code. It is a unique identification code for both financial and non-financial institutions.";
 			owner_lazy = () -> IdentificationTypeCode.mmObject();
@@ -133,7 +135,7 @@ public class IdentificationTypeCode {
 	 */
 	public static final MMCode mmBankSortCode = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "BankSortCode";
 			definition = "Specified source is bank.";
 			owner_lazy = () -> IdentificationTypeCode.mmObject();
@@ -172,7 +174,7 @@ public class IdentificationTypeCode {
 	 */
 	public static final MMCode mmCFETS = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CFETS";
 			definition = "CFETS is an abbreviation of China Foreign Exchange Trade System, which is a sub-institution of the PBC. Its main functions include: providing systems for FX trading, RMB lending, bond trading and exchange rate and interest rate derivatives trading; organizing FX trading, RMB lending, bond trading, and exchange rate and interest rate derivatives trading; providing clearing, information, risk management, and surveillance services on interbank markets; and engaging in other businesses authorized by the PBC.";
 			owner_lazy = () -> IdentificationTypeCode.mmObject();
@@ -206,7 +208,7 @@ public class IdentificationTypeCode {
 	 */
 	public static final MMCode mmCDC = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CDC";
 			definition = "CDC is an abbreviation of China Central Depository & Clearing Co, Ltd, an entity undertake functions of centralized depository and settlement for inter-bank bond market in China.";
 			owner_lazy = () -> IdentificationTypeCode.mmObject();
@@ -240,7 +242,7 @@ public class IdentificationTypeCode {
 	 */
 	public static final MMCode mmRICCode = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "RICCode";
 			definition = "RIC Code is an abbreviation of Reuters Instrument Code. RIC as encoding rule which has been wildly adopted in FX market and defines information including trading category, tenor, trade instrument and so on.";
 			owner_lazy = () -> IdentificationTypeCode.mmObject();
@@ -270,7 +272,7 @@ public class IdentificationTypeCode {
 	 */
 	public static final MMCode mmUserDefined = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "UserDefined";
 			definition = "User defined code.";
 			owner_lazy = () -> IdentificationTypeCode.mmObject();
@@ -281,13 +283,12 @@ public class IdentificationTypeCode {
 	static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "IdentificationTypeCode";
 				definition = "Indicates the type of identification of the party.";
-				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.IdentificationTypeCode.mmBIC, com.tools20022.repository.codeset.IdentificationTypeCode.mmBankSortCode,
-						com.tools20022.repository.codeset.IdentificationTypeCode.mmCFETS, com.tools20022.repository.codeset.IdentificationTypeCode.mmCDC, com.tools20022.repository.codeset.IdentificationTypeCode.mmRICCode,
-						com.tools20022.repository.codeset.IdentificationTypeCode.mmUserDefined);
+				code_lazy = () -> Arrays.asList(IdentificationTypeCode.mmBIC, IdentificationTypeCode.mmBankSortCode, IdentificationTypeCode.mmCFETS, IdentificationTypeCode.mmCDC, IdentificationTypeCode.mmRICCode,
+						IdentificationTypeCode.mmUserDefined);
 				derivation_lazy = () -> Arrays.asList(IdentificationType2Code.mmObject(), IdentificationType1Code.mmObject());
 			}
 		});

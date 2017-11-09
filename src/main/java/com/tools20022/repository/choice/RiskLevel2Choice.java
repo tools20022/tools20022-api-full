@@ -19,7 +19,9 @@ package com.tools20022.repository.choice;
 
 import com.tools20022.metamodel.MMChoiceComponent;
 import com.tools20022.metamodel.MMMessageAttribute;
+import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.codeset.RiskLevel1Code;
+import com.tools20022.repository.GeneratedRepository;
 import com.tools20022.repository.msg.GenericIdentification47;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
@@ -101,10 +103,10 @@ public class RiskLevel2Choice {
 			componentContext_lazy = () -> RiskLevel2Choice.mmObject();
 			isDerived = false;
 			xmlTag = "Cd";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Code";
 			definition = "Risk level expressed as code.";
-			previousVersion_lazy = () -> com.tools20022.repository.choice.RiskLevel1Choice.mmCode;
+			previousVersion_lazy = () -> RiskLevel1Choice.mmCode;
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> RiskLevel1Code.mmObject();
@@ -149,10 +151,10 @@ public class RiskLevel2Choice {
 			componentContext_lazy = () -> RiskLevel2Choice.mmObject();
 			isDerived = false;
 			xmlTag = "Prtry";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Proprietary";
 			definition = "Risk level expressed as a proprietary code.";
-			previousVersion_lazy = () -> com.tools20022.repository.choice.RiskLevel1Choice.mmProprietary;
+			previousVersion_lazy = () -> RiskLevel1Choice.mmProprietary;
 			maxOccurs = 1;
 			minOccurs = 1;
 			complexType_lazy = () -> GenericIdentification47.mmObject();
@@ -162,9 +164,9 @@ public class RiskLevel2Choice {
 	final static public MMChoiceComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMChoiceComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.choice.RiskLevel2Choice.mmCode, com.tools20022.repository.choice.RiskLevel2Choice.mmProprietary);
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				messageElement_lazy = () -> Arrays.asList(RiskLevel2Choice.mmCode, RiskLevel2Choice.mmProprietary);
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "RiskLevel2Choice";
 				definition = "Choice of formats for the specification of the risk level.";
 				previousVersion_lazy = () -> RiskLevel1Choice.mmObject();

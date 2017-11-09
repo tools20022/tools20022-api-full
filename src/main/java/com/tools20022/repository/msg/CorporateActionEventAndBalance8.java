@@ -19,7 +19,10 @@ package com.tools20022.repository.msg;
 
 import com.tools20022.metamodel.MMMessageAssociationEnd;
 import com.tools20022.metamodel.MMMessageComponent;
+import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.entity.CorporateActionEvent;
+import com.tools20022.repository.entity.SecuritiesQuantity;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.List;
@@ -108,7 +111,7 @@ public class CorporateActionEventAndBalance8 {
 			componentContext_lazy = () -> CorporateActionEventAndBalance8.mmObject();
 			isDerived = false;
 			xmlTag = "GnlInf";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "GeneralInformation";
 			definition = "Provides general information related to a corporate action event.";
 			maxOccurs = 1;
@@ -152,11 +155,11 @@ public class CorporateActionEventAndBalance8 {
 	 */
 	public static final MMMessageAssociationEnd mmUnderlyingSecurity = new MMMessageAssociationEnd() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.CorporateActionEvent.mmUnderlyingSecurity;
+			businessElementTrace_lazy = () -> CorporateActionEvent.mmUnderlyingSecurity;
 			componentContext_lazy = () -> CorporateActionEventAndBalance8.mmObject();
 			isDerived = false;
 			xmlTag = "UndrlygScty";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "UnderlyingSecurity";
 			definition = "Security concerned by the corporate action.";
 			maxOccurs = 1;
@@ -201,11 +204,11 @@ public class CorporateActionEventAndBalance8 {
 	 */
 	public static final MMMessageAssociationEnd mmBalance = new MMMessageAssociationEnd() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.SecuritiesQuantity.mmAggregateQuantityBalance;
+			businessElementTrace_lazy = () -> SecuritiesQuantity.mmAggregateQuantityBalance;
 			componentContext_lazy = () -> CorporateActionEventAndBalance8.mmObject();
 			isDerived = false;
 			xmlTag = "Bal";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Balance";
 			definition = "Provides information about the balance related to a corporate action.";
 			maxOccurs = 1;
@@ -249,7 +252,7 @@ public class CorporateActionEventAndBalance8 {
 			componentContext_lazy = () -> CorporateActionEventAndBalance8.mmObject();
 			isDerived = false;
 			xmlTag = "SplmtryData";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SupplementaryData";
 			definition = "Provides additional information related to the event and the balance of the corporate action.";
 			minOccurs = 0;
@@ -261,11 +264,11 @@ public class CorporateActionEventAndBalance8 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.CorporateActionEventAndBalance8.mmGeneralInformation, com.tools20022.repository.msg.CorporateActionEventAndBalance8.mmUnderlyingSecurity,
-						com.tools20022.repository.msg.CorporateActionEventAndBalance8.mmBalance, com.tools20022.repository.msg.CorporateActionEventAndBalance8.mmSupplementaryData);
+				messageElement_lazy = () -> Arrays.asList(CorporateActionEventAndBalance8.mmGeneralInformation, CorporateActionEventAndBalance8.mmUnderlyingSecurity, CorporateActionEventAndBalance8.mmBalance,
+						CorporateActionEventAndBalance8.mmSupplementaryData);
 				trace_lazy = () -> CorporateActionEvent.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 				name = "CorporateActionEventAndBalance8";
 				definition = "Detailed account holdings information report for a corporate action event.";
 			}

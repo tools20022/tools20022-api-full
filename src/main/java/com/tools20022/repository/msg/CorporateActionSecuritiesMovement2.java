@@ -20,10 +20,14 @@ package com.tools20022.repository.msg;
 import com.tools20022.metamodel.MMMessageAssociationEnd;
 import com.tools20022.metamodel.MMMessageAttribute;
 import com.tools20022.metamodel.MMMessageComponent;
+import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.choice.DateAndDateTimeChoice;
 import com.tools20022.repository.choice.UnitOrFaceAmount1Choice;
 import com.tools20022.repository.datatype.Max35Text;
+import com.tools20022.repository.entity.CorporateActionDistribution;
 import com.tools20022.repository.entity.SecuritiesTransfer;
+import com.tools20022.repository.entity.Security;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.List;
@@ -114,11 +118,11 @@ public class CorporateActionSecuritiesMovement2 {
 	 */
 	public static final MMMessageAttribute mmSecurityIdentification = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Security.mmIdentification;
+			businessElementTrace_lazy = () -> Security.mmIdentification;
 			componentContext_lazy = () -> CorporateActionSecuritiesMovement2.mmObject();
 			isDerived = false;
 			xmlTag = "SctyId";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SecurityIdentification";
 			definition = "Identification of the financial instrument.";
 			maxOccurs = 1;
@@ -162,11 +166,11 @@ public class CorporateActionSecuritiesMovement2 {
 	 */
 	public static final MMMessageAttribute mmPostingDateTime = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.CorporateActionDistribution.mmPostingDateTime;
+			businessElementTrace_lazy = () -> CorporateActionDistribution.mmPostingDateTime;
 			componentContext_lazy = () -> CorporateActionSecuritiesMovement2.mmObject();
 			isDerived = false;
 			xmlTag = "PstngDtTm";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PostingDateTime";
 			definition = "Date and time of the posting of the movement.";
 			maxOccurs = 1;
@@ -207,7 +211,7 @@ public class CorporateActionSecuritiesMovement2 {
 			componentContext_lazy = () -> CorporateActionSecuritiesMovement2.mmObject();
 			isDerived = false;
 			xmlTag = "PstngId";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PostingIdentification";
 			definition = "Posting identification of the securities movement.";
 			maxOccurs = 1;
@@ -252,11 +256,11 @@ public class CorporateActionSecuritiesMovement2 {
 	 */
 	public static final MMMessageAttribute mmPostingQuantity = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.CorporateActionDistribution.mmPostingQuantity;
+			businessElementTrace_lazy = () -> CorporateActionDistribution.mmPostingQuantity;
 			componentContext_lazy = () -> CorporateActionSecuritiesMovement2.mmObject();
 			isDerived = false;
 			xmlTag = "PstngQty";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PostingQuantity";
 			definition = "Securities quantity posted as a result of the securities movement.";
 			maxOccurs = 1;
@@ -301,11 +305,11 @@ public class CorporateActionSecuritiesMovement2 {
 	 */
 	public static final MMMessageAssociationEnd mmAccountDetails = new MMMessageAssociationEnd() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.SecuritiesTransfer.mmAccount;
+			businessElementTrace_lazy = () -> SecuritiesTransfer.mmAccount;
 			componentContext_lazy = () -> CorporateActionSecuritiesMovement2.mmObject();
 			isDerived = false;
 			xmlTag = "AcctDtls";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AccountDetails";
 			definition = "Provides information about the account which is debited/credited as a result of the movement.";
 			maxOccurs = 2;
@@ -318,12 +322,11 @@ public class CorporateActionSecuritiesMovement2 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.CorporateActionSecuritiesMovement2.mmSecurityIdentification, com.tools20022.repository.msg.CorporateActionSecuritiesMovement2.mmPostingDateTime,
-						com.tools20022.repository.msg.CorporateActionSecuritiesMovement2.mmPostingIdentification, com.tools20022.repository.msg.CorporateActionSecuritiesMovement2.mmPostingQuantity,
-						com.tools20022.repository.msg.CorporateActionSecuritiesMovement2.mmAccountDetails);
+				messageElement_lazy = () -> Arrays.asList(CorporateActionSecuritiesMovement2.mmSecurityIdentification, CorporateActionSecuritiesMovement2.mmPostingDateTime, CorporateActionSecuritiesMovement2.mmPostingIdentification,
+						CorporateActionSecuritiesMovement2.mmPostingQuantity, CorporateActionSecuritiesMovement2.mmAccountDetails);
 				trace_lazy = () -> SecuritiesTransfer.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "CorporateActionSecuritiesMovement2";
 				definition = "Provides information about the securities movement resulting from the election instruction.";
 			}

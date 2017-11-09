@@ -19,6 +19,8 @@ package com.tools20022.repository.choice;
 
 import com.tools20022.metamodel.MMChoiceComponent;
 import com.tools20022.metamodel.MMMessageAssociationEnd;
+import com.tools20022.metamodel.MMRegistrationStatus;
+import com.tools20022.repository.GeneratedRepository;
 import com.tools20022.repository.msg.IntraPosition4;
 import com.tools20022.repository.msg.TransactionDetails52;
 import java.util.Arrays;
@@ -92,7 +94,7 @@ public class SettlementOrIntraPosition1Choice {
 			componentContext_lazy = () -> SettlementOrIntraPosition1Choice.mmObject();
 			isDerived = false;
 			xmlTag = "IntraPosMvmnt";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "IntraPositionMovement";
 			definition = "Specifies the requested intra-position movement details.";
 			maxOccurs = 1;
@@ -133,7 +135,7 @@ public class SettlementOrIntraPosition1Choice {
 			componentContext_lazy = () -> SettlementOrIntraPosition1Choice.mmObject();
 			isDerived = false;
 			xmlTag = "SttlmTx";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SettlementTransaction";
 			definition = "Specifies the requested settlement transaction details.";
 			maxOccurs = 1;
@@ -146,9 +148,9 @@ public class SettlementOrIntraPosition1Choice {
 	final static public MMChoiceComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMChoiceComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.choice.SettlementOrIntraPosition1Choice.mmIntraPositionMovement, com.tools20022.repository.choice.SettlementOrIntraPosition1Choice.mmSettlementTransaction);
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+				messageElement_lazy = () -> Arrays.asList(SettlementOrIntraPosition1Choice.mmIntraPositionMovement, SettlementOrIntraPosition1Choice.mmSettlementTransaction);
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 				name = "SettlementOrIntraPosition1Choice";
 				definition = "Choice between the intra-position movement or the settlement transaction.";
 			}

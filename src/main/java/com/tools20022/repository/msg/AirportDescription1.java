@@ -19,8 +19,12 @@ package com.tools20022.repository.msg;
 
 import com.tools20022.metamodel.MMMessageAttribute;
 import com.tools20022.metamodel.MMMessageComponent;
+import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.datatype.Max35Text;
+import com.tools20022.repository.entity.GenericIdentification;
 import com.tools20022.repository.entity.Location;
+import com.tools20022.repository.entity.PostalAddress;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -96,11 +100,11 @@ public class AirportDescription1 {
 	 */
 	public static final MMMessageAttribute mmTown = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.PostalAddress.mmTownName;
+			businessElementTrace_lazy = () -> PostalAddress.mmTownName;
 			componentContext_lazy = () -> AirportDescription1.mmObject();
 			isDerived = false;
 			xmlTag = "Twn";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Town";
 			definition = "Identifies the town where the airport is located. For example: London.";
 			maxOccurs = 1;
@@ -144,11 +148,11 @@ public class AirportDescription1 {
 	 */
 	public static final MMMessageAttribute mmAirportName = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.GenericIdentification.mmIdentification;
+			businessElementTrace_lazy = () -> GenericIdentification.mmIdentification;
 			componentContext_lazy = () -> AirportDescription1.mmObject();
 			isDerived = false;
 			xmlTag = "AirprtNm";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AirportName";
 			definition = "Identifies the airport by its name. For example: Heathrow.";
 			maxOccurs = 1;
@@ -160,10 +164,10 @@ public class AirportDescription1 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.AirportDescription1.mmTown, com.tools20022.repository.msg.AirportDescription1.mmAirportName);
+				messageElement_lazy = () -> Arrays.asList(AirportDescription1.mmTown, AirportDescription1.mmAirportName);
 				trace_lazy = () -> Location.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "AirportDescription1";
 				definition = "Identifies an airport by its location and by its name.";
 			}

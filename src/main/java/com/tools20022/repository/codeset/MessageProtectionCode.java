@@ -19,6 +19,8 @@ package com.tools20022.repository.codeset;
 
 import com.tools20022.metamodel.MMCode;
 import com.tools20022.metamodel.MMCodeSet;
+import com.tools20022.metamodel.MMRegistrationStatus;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -27,6 +29,13 @@ import java.util.concurrent.atomic.AtomicReference;
  * <p>
  * <strong>Constant fields:</strong>
  * <ul>
+ * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getDerivation derivation}
+ * =
+ * <ul>
+ * <li>{@linkplain com.tools20022.repository.codeset.MessageProtection1Code
+ * MessageProtection1Code}</li>
+ * </ul>
+ * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getCode code} =
  * <ul>
  * <li>
@@ -41,13 +50,6 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>
  * {@linkplain com.tools20022.repository.codeset.MessageProtectionCode#mmNoProtection
  * MessageProtectionCode.mmNoProtection}</li>
- * </ul>
- * </li>
- * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getDerivation derivation}
- * =
- * <ul>
- * <li>{@linkplain com.tools20022.repository.codeset.MessageProtection1Code
- * MessageProtection1Code}</li>
  * </ul>
  * </li>
  * <li>
@@ -94,7 +96,7 @@ public class MessageProtectionCode {
 	 */
 	public static final MMCode mmEnvelopedMessage = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "EnvelopedMessage";
 			definition = "Messages contain an encrypted body and a MAC or a digital signature computed on the complete message (header plus body after encryption).";
 			owner_lazy = () -> MessageProtectionCode.mmObject();
@@ -126,7 +128,7 @@ public class MessageProtectionCode {
 	 */
 	public static final MMCode mmMACBody = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "MACBody";
 			definition = "Messages contain a MAC or a digital signature computed on the body only.";
 			owner_lazy = () -> MessageProtectionCode.mmObject();
@@ -159,7 +161,7 @@ public class MessageProtectionCode {
 	 */
 	public static final MMCode mmMACMessage = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "MACMessage";
 			definition = "Messages contain a MAC or a digital signature computed on the complete message (header plus body).";
 			owner_lazy = () -> MessageProtectionCode.mmObject();
@@ -192,7 +194,7 @@ public class MessageProtectionCode {
 	 */
 	public static final MMCode mmNoProtection = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "NoProtection";
 			definition = "Messages are not protected, no encryption and no MAC or digital signature.";
 			owner_lazy = () -> MessageProtectionCode.mmObject();
@@ -203,12 +205,11 @@ public class MessageProtectionCode {
 	static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "MessageProtectionCode";
 				definition = "Mechanism used to protect the message of the ATM protocol.";
-				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.MessageProtectionCode.mmEnvelopedMessage, com.tools20022.repository.codeset.MessageProtectionCode.mmMACBody,
-						com.tools20022.repository.codeset.MessageProtectionCode.mmMACMessage, com.tools20022.repository.codeset.MessageProtectionCode.mmNoProtection);
+				code_lazy = () -> Arrays.asList(MessageProtectionCode.mmEnvelopedMessage, MessageProtectionCode.mmMACBody, MessageProtectionCode.mmMACMessage, MessageProtectionCode.mmNoProtection);
 				derivation_lazy = () -> Arrays.asList(MessageProtection1Code.mmObject());
 			}
 		});

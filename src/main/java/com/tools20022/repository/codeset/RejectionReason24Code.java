@@ -19,7 +19,9 @@ package com.tools20022.repository.codeset;
 
 import com.tools20022.metamodel.MMCode;
 import com.tools20022.metamodel.MMCodeSet;
+import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.codeset.RejectionReasonV2Code;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -99,7 +101,7 @@ public class RejectionReason24Code extends RejectionReasonV2Code {
 	 */
 	public static final MMCode mmSafekeepingAccountRejection = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SafekeepingAccountRejection";
 			owner_lazy = () -> RejectionReason24Code.mmObject();
 		}
@@ -122,7 +124,7 @@ public class RejectionReason24Code extends RejectionReasonV2Code {
 	 */
 	public static final MMCode mmInvalidSecurity = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "InvalidSecurity";
 			owner_lazy = () -> RejectionReason24Code.mmObject();
 		}
@@ -145,7 +147,7 @@ public class RejectionReason24Code extends RejectionReasonV2Code {
 	 */
 	public static final MMCode mmMarketDeadlineMissed = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "MarketDeadlineMissed";
 			owner_lazy = () -> RejectionReason24Code.mmObject();
 		}
@@ -168,7 +170,7 @@ public class RejectionReason24Code extends RejectionReasonV2Code {
 	 */
 	public static final MMCode mmReferenceRejection = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ReferenceRejection";
 			owner_lazy = () -> RejectionReason24Code.mmObject();
 		}
@@ -191,7 +193,7 @@ public class RejectionReason24Code extends RejectionReasonV2Code {
 	 */
 	public static final MMCode mmAccountServicerDeadlineMissed = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AccountServicerDeadlineMissed";
 			owner_lazy = () -> RejectionReason24Code.mmObject();
 		}
@@ -214,7 +216,7 @@ public class RejectionReason24Code extends RejectionReasonV2Code {
 	 */
 	public static final MMCode mmOther = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Other";
 			owner_lazy = () -> RejectionReason24Code.mmObject();
 		}
@@ -237,7 +239,7 @@ public class RejectionReason24Code extends RejectionReasonV2Code {
 	 */
 	public static final MMCode mmInvalidRequest = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "InvalidRequest";
 			owner_lazy = () -> RejectionReason24Code.mmObject();
 		}
@@ -246,15 +248,13 @@ public class RejectionReason24Code extends RejectionReasonV2Code {
 	static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
 				example = Arrays.asList("SAFE");
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "RejectionReason24Code";
 				definition = "Specifies the reason why the request has a rejected or repair status.";
-				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.RejectionReason24Code.mmSafekeepingAccountRejection, com.tools20022.repository.codeset.RejectionReason24Code.mmInvalidSecurity,
-						com.tools20022.repository.codeset.RejectionReason24Code.mmMarketDeadlineMissed, com.tools20022.repository.codeset.RejectionReason24Code.mmReferenceRejection,
-						com.tools20022.repository.codeset.RejectionReason24Code.mmAccountServicerDeadlineMissed, com.tools20022.repository.codeset.RejectionReason24Code.mmOther,
-						com.tools20022.repository.codeset.RejectionReason24Code.mmInvalidRequest);
+				code_lazy = () -> Arrays.asList(RejectionReason24Code.mmSafekeepingAccountRejection, RejectionReason24Code.mmInvalidSecurity, RejectionReason24Code.mmMarketDeadlineMissed, RejectionReason24Code.mmReferenceRejection,
+						RejectionReason24Code.mmAccountServicerDeadlineMissed, RejectionReason24Code.mmOther, RejectionReason24Code.mmInvalidRequest);
 				trace_lazy = () -> RejectionReasonV2Code.mmObject();
 			}
 		});

@@ -19,9 +19,11 @@ package com.tools20022.repository.msg;
 
 import com.tools20022.metamodel.MMMessageAttribute;
 import com.tools20022.metamodel.MMMessageComponent;
+import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.datatype.Max105Text;
 import com.tools20022.repository.datatype.Max10Text;
 import com.tools20022.repository.entity.Tax;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -92,7 +94,7 @@ public class TaxReason1 {
 			componentContext_lazy = () -> TaxReason1.mmObject();
 			isDerived = false;
 			xmlTag = "Cd";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Code";
 			definition = "Reason why the service is taxed, in a coded form.";
 			maxOccurs = 1;
@@ -132,7 +134,7 @@ public class TaxReason1 {
 			componentContext_lazy = () -> TaxReason1.mmObject();
 			isDerived = false;
 			xmlTag = "Expltn";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Explanation";
 			definition = "Reason why the service is taxed, in a free-text form.";
 			maxOccurs = 1;
@@ -144,10 +146,10 @@ public class TaxReason1 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.TaxReason1.mmCode, com.tools20022.repository.msg.TaxReason1.mmExplanation);
+				messageElement_lazy = () -> Arrays.asList(TaxReason1.mmCode, TaxReason1.mmExplanation);
 				trace_lazy = () -> Tax.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "TaxReason1";
 				definition = "Reason why the service is taxed.";
 			}

@@ -19,7 +19,9 @@ package com.tools20022.repository.codeset;
 
 import com.tools20022.metamodel.MMCode;
 import com.tools20022.metamodel.MMCodeSet;
+import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.codeset.RateTypeCode;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -84,7 +86,7 @@ public class RateValueType2Code extends RateTypeCode {
 	 */
 	public static final MMCode mmUnknown = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Unknown";
 			owner_lazy = () -> RateValueType2Code.mmObject();
 		}
@@ -107,7 +109,7 @@ public class RateValueType2Code extends RateTypeCode {
 	 */
 	public static final MMCode mmOpen = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Open";
 			owner_lazy = () -> RateValueType2Code.mmObject();
 		}
@@ -130,7 +132,7 @@ public class RateValueType2Code extends RateTypeCode {
 	 */
 	public static final MMCode mmNilPayment = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "NilPayment";
 			owner_lazy = () -> RateValueType2Code.mmObject();
 		}
@@ -139,12 +141,12 @@ public class RateValueType2Code extends RateTypeCode {
 	static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
 				example = Arrays.asList("UKWN");
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "RateValueType2Code";
 				definition = "Specifies the value of a rate.";
-				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.RateValueType2Code.mmUnknown, com.tools20022.repository.codeset.RateValueType2Code.mmOpen, com.tools20022.repository.codeset.RateValueType2Code.mmNilPayment);
+				code_lazy = () -> Arrays.asList(RateValueType2Code.mmUnknown, RateValueType2Code.mmOpen, RateValueType2Code.mmNilPayment);
 				trace_lazy = () -> RateTypeCode.mmObject();
 			}
 		});

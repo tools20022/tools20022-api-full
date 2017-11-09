@@ -20,11 +20,14 @@ package com.tools20022.repository.msg;
 import com.tools20022.metamodel.MMMessageAssociationEnd;
 import com.tools20022.metamodel.MMMessageAttribute;
 import com.tools20022.metamodel.MMMessageComponent;
+import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.choice.FinancialInstrumentQuantityChoice;
 import com.tools20022.repository.codeset.*;
 import com.tools20022.repository.datatype.DirectionIndicator;
 import com.tools20022.repository.entity.SecuritiesIdentification;
+import com.tools20022.repository.entity.SecuritiesOrder;
 import com.tools20022.repository.entity.TradingSession;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -129,7 +132,7 @@ public class TriggeringInstructions {
 			componentContext_lazy = () -> TriggeringInstructions.mmObject();
 			isDerived = false;
 			xmlTag = "Tp";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Type";
 			definition = "Defines when the trigger will hit, i.e. the action specified by the trigger instructions will come into effect.";
 			maxOccurs = 1;
@@ -172,7 +175,7 @@ public class TriggeringInstructions {
 			componentContext_lazy = () -> TriggeringInstructions.mmObject();
 			isDerived = false;
 			xmlTag = "Actn";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Action";
 			definition = "Defines the type of action to take when the trigger hits.";
 			maxOccurs = 1;
@@ -212,7 +215,7 @@ public class TriggeringInstructions {
 			componentContext_lazy = () -> TriggeringInstructions.mmObject();
 			isDerived = false;
 			xmlTag = "Pric";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Price";
 			definition = "The price at which the trigger should hit.";
 			maxOccurs = 1;
@@ -257,7 +260,7 @@ public class TriggeringInstructions {
 			componentContext_lazy = () -> TriggeringInstructions.mmObject();
 			isDerived = false;
 			xmlTag = "PricPrtcnScp";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PriceProtectionScope";
 			definition = "Defines the type of price protection the customer requires on their order.";
 			maxOccurs = 1;
@@ -307,7 +310,7 @@ public class TriggeringInstructions {
 			componentContext_lazy = () -> TriggeringInstructions.mmObject();
 			isDerived = false;
 			xmlTag = "PricDrctn";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PriceDirection";
 			definition = "Indicates the side from which the trigger price is reached.\n\nUp -Trigger if the price of the specified type goes up to or through the specified trigger price.\n\nDown - Trigger if the price of the specified type goes down to or through the specified trigger price.";
 			maxOccurs = 1;
@@ -351,7 +354,7 @@ public class TriggeringInstructions {
 			componentContext_lazy = () -> TriggeringInstructions.mmObject();
 			isDerived = false;
 			xmlTag = "NewPric";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "NewPrice";
 			definition = "The price that the order should have after the trigger has hit. Could be applicable for any trigger type, but must be specified for Trigger Type = PAEX";
 			maxOccurs = 1;
@@ -398,11 +401,11 @@ public class TriggeringInstructions {
 	 */
 	public static final MMMessageAttribute mmOrderType = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.SecuritiesOrder.mmType;
+			businessElementTrace_lazy = () -> SecuritiesOrder.mmType;
 			componentContext_lazy = () -> TriggeringInstructions.mmObject();
 			isDerived = false;
 			xmlTag = "OrdrTp";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "OrderType";
 			definition = "The order type that the order should have after the trigger has hit. Required to express orders that change from limit to market.";
 			maxOccurs = 1;
@@ -447,11 +450,11 @@ public class TriggeringInstructions {
 	 */
 	public static final MMMessageAttribute mmNewQuantity = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.SecuritiesOrder.mmOrderedQuantity;
+			businessElementTrace_lazy = () -> SecuritiesOrder.mmOrderedQuantity;
 			componentContext_lazy = () -> TriggeringInstructions.mmObject();
 			isDerived = false;
 			xmlTag = "NewQty";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "NewQuantity";
 			definition = "The quantity the order should have after the trigger has hit.";
 			maxOccurs = 1;
@@ -493,7 +496,7 @@ public class TriggeringInstructions {
 			componentContext_lazy = () -> TriggeringInstructions.mmObject();
 			isDerived = false;
 			xmlTag = "PricTp";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PriceType";
 			definition = "Type of price that the trigger is compared to.";
 			maxOccurs = 1;
@@ -543,7 +546,7 @@ public class TriggeringInstructions {
 			componentContext_lazy = () -> TriggeringInstructions.mmObject();
 			isDerived = false;
 			xmlTag = "TrggrSctyDtls";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "TriggerSecurityDetails";
 			definition = "Defines the identification of the security whose prices will be tracked by the trigger logic.";
 			maxOccurs = 1;
@@ -590,7 +593,7 @@ public class TriggeringInstructions {
 			componentContext_lazy = () -> TriggeringInstructions.mmObject();
 			isDerived = false;
 			xmlTag = "TradgSsnDtls";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "TradingSessionDetails";
 			definition = "Provides details about the trading session.";
 			maxOccurs = 1;
@@ -603,13 +606,11 @@ public class TriggeringInstructions {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.TriggeringInstructions.mmType, com.tools20022.repository.msg.TriggeringInstructions.mmAction,
-						com.tools20022.repository.msg.TriggeringInstructions.mmPrice, com.tools20022.repository.msg.TriggeringInstructions.mmPriceProtectionScope, com.tools20022.repository.msg.TriggeringInstructions.mmPriceDirection,
-						com.tools20022.repository.msg.TriggeringInstructions.mmNewPrice, com.tools20022.repository.msg.TriggeringInstructions.mmOrderType, com.tools20022.repository.msg.TriggeringInstructions.mmNewQuantity,
-						com.tools20022.repository.msg.TriggeringInstructions.mmPriceType, com.tools20022.repository.msg.TriggeringInstructions.mmTriggerSecurityDetails,
-						com.tools20022.repository.msg.TriggeringInstructions.mmTradingSessionDetails);
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+				messageElement_lazy = () -> Arrays.asList(TriggeringInstructions.mmType, TriggeringInstructions.mmAction, TriggeringInstructions.mmPrice, TriggeringInstructions.mmPriceProtectionScope,
+						TriggeringInstructions.mmPriceDirection, TriggeringInstructions.mmNewPrice, TriggeringInstructions.mmOrderType, TriggeringInstructions.mmNewQuantity, TriggeringInstructions.mmPriceType,
+						TriggeringInstructions.mmTriggerSecurityDetails, TriggeringInstructions.mmTradingSessionDetails);
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 				name = "TriggeringInstructions";
 				definition = "Specifies the conditions under which an order will be triggered/activated by market events as well as it specifies the order's behavior in the market once it has been triggered.";
 			}

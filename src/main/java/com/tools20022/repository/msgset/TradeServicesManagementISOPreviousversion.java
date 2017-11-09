@@ -18,7 +18,9 @@
 package com.tools20022.repository.msgset;
 
 import com.tools20022.metamodel.MMMessageSet;
+import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.area.tsmt.*;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -185,8 +187,8 @@ public class TradeServicesManagementISOPreviousversion {
 	final static public MMMessageSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageSet() {
 			{
-				businessProcessCatalogue_lazy = () -> com.tools20022.repository.GeneratedRepository.mmcatalogue;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+				businessProcessCatalogue_lazy = () -> GeneratedRepository.mmcatalogue;
+				registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 				name = "Trade Services Management - ISO - Previous version";
 				definition = "Set of messages exchanged between a matching application, with integrated workflow management, and its users to cover the establishment of a transaction (also referred to as baseline), the matching of data sets, the amendment of a baseline and related reporting.\r\n";
 				messageDefinition_lazy = () -> Arrays.asList(AcknowledgementV03.mmObject(), ActivityReportV03.mmObject(), ActivityReportRequestV03.mmObject(), ActivityReportSetUpRequestV02.mmObject(), AmendmentAcceptanceV02.mmObject(),

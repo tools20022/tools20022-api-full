@@ -19,7 +19,9 @@ package com.tools20022.repository.choice;
 
 import com.tools20022.metamodel.MMChoiceComponent;
 import com.tools20022.metamodel.MMMessageAssociationEnd;
+import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.entity.Commodity;
+import com.tools20022.repository.GeneratedRepository;
 import com.tools20022.repository.msg.*;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
@@ -109,11 +111,11 @@ public class AssetClassCommodityFertilizer1Choice {
 	 */
 	public static final MMMessageAssociationEnd mmAmmonia = new MMMessageAssociationEnd() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Commodity.mmBaseProduct;
+			businessElementTrace_lazy = () -> Commodity.mmBaseProduct;
 			componentContext_lazy = () -> AssetClassCommodityFertilizer1Choice.mmObject();
 			isDerived = false;
 			xmlTag = "Ammn";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Ammonia";
 			definition = "Ammonia fertilizer commodity derivative.";
 			maxOccurs = 1;
@@ -157,11 +159,11 @@ public class AssetClassCommodityFertilizer1Choice {
 	 */
 	public static final MMMessageAssociationEnd mmDiammoniumPhosphate = new MMMessageAssociationEnd() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Commodity.mmSubProduct;
+			businessElementTrace_lazy = () -> Commodity.mmSubProduct;
 			componentContext_lazy = () -> AssetClassCommodityFertilizer1Choice.mmObject();
 			isDerived = false;
 			xmlTag = "DmmnmPhspht";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "DiammoniumPhosphate";
 			definition = "Diammonium phosphate fertilizer commodity derivative.";
 			maxOccurs = 1;
@@ -205,11 +207,11 @@ public class AssetClassCommodityFertilizer1Choice {
 	 */
 	public static final MMMessageAssociationEnd mmPotash = new MMMessageAssociationEnd() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Commodity.mmSubProduct;
+			businessElementTrace_lazy = () -> Commodity.mmSubProduct;
 			componentContext_lazy = () -> AssetClassCommodityFertilizer1Choice.mmObject();
 			isDerived = false;
 			xmlTag = "Ptsh";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Potash";
 			definition = "Potash fertilizer commodity derivative.";
 			maxOccurs = 1;
@@ -253,11 +255,11 @@ public class AssetClassCommodityFertilizer1Choice {
 	 */
 	public static final MMMessageAssociationEnd mmSulphur = new MMMessageAssociationEnd() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Commodity.mmSubProduct;
+			businessElementTrace_lazy = () -> Commodity.mmSubProduct;
 			componentContext_lazy = () -> AssetClassCommodityFertilizer1Choice.mmObject();
 			isDerived = false;
 			xmlTag = "Slphr";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Sulphur";
 			definition = "Sulphur fertilizer commodity derivative.";
 			maxOccurs = 1;
@@ -301,11 +303,11 @@ public class AssetClassCommodityFertilizer1Choice {
 	 */
 	public static final MMMessageAssociationEnd mmUrea = new MMMessageAssociationEnd() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Commodity.mmSubProduct;
+			businessElementTrace_lazy = () -> Commodity.mmSubProduct;
 			componentContext_lazy = () -> AssetClassCommodityFertilizer1Choice.mmObject();
 			isDerived = false;
 			xmlTag = "Urea";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Urea";
 			definition = "Urea fertilizer commodity derivative.";
 			maxOccurs = 1;
@@ -350,11 +352,11 @@ public class AssetClassCommodityFertilizer1Choice {
 	 */
 	public static final MMMessageAssociationEnd mmUreaAndAmmoniumNitrate = new MMMessageAssociationEnd() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Commodity.mmSubProduct;
+			businessElementTrace_lazy = () -> Commodity.mmSubProduct;
 			componentContext_lazy = () -> AssetClassCommodityFertilizer1Choice.mmObject();
 			isDerived = false;
 			xmlTag = "UreaAndAmmnmNtrt";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "UreaAndAmmoniumNitrate";
 			definition = "Urea and ammonium nitrate fertilizer commodity derivative.";
 			maxOccurs = 1;
@@ -367,12 +369,11 @@ public class AssetClassCommodityFertilizer1Choice {
 	final static public MMChoiceComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMChoiceComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.choice.AssetClassCommodityFertilizer1Choice.mmAmmonia, com.tools20022.repository.choice.AssetClassCommodityFertilizer1Choice.mmDiammoniumPhosphate,
-						com.tools20022.repository.choice.AssetClassCommodityFertilizer1Choice.mmPotash, com.tools20022.repository.choice.AssetClassCommodityFertilizer1Choice.mmSulphur,
-						com.tools20022.repository.choice.AssetClassCommodityFertilizer1Choice.mmUrea, com.tools20022.repository.choice.AssetClassCommodityFertilizer1Choice.mmUreaAndAmmoniumNitrate);
+				messageElement_lazy = () -> Arrays.asList(AssetClassCommodityFertilizer1Choice.mmAmmonia, AssetClassCommodityFertilizer1Choice.mmDiammoniumPhosphate, AssetClassCommodityFertilizer1Choice.mmPotash,
+						AssetClassCommodityFertilizer1Choice.mmSulphur, AssetClassCommodityFertilizer1Choice.mmUrea, AssetClassCommodityFertilizer1Choice.mmUreaAndAmmoniumNitrate);
 				trace_lazy = () -> Commodity.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "AssetClassCommodityFertilizer1Choice";
 				definition = "Defines commodity attributes of a derivative where the type is fertilizer.";
 			}

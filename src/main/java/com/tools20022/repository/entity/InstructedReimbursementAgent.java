@@ -18,7 +18,11 @@
 package com.tools20022.repository.entity;
 
 import com.tools20022.metamodel.MMBusinessComponent;
+import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.entity.CashSettlementInstructionPartyRole;
+import com.tools20022.repository.GeneratedRepository;
+import com.tools20022.repository.msg.SettlementInstruction3;
+import com.tools20022.repository.msg.SettlementInstruction4;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -77,11 +81,11 @@ public class InstructedReimbursementAgent extends CashSettlementInstructionParty
 	static public MMBusinessComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMBusinessComponent() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "InstructedReimbursementAgent";
 				definition = "Agent at which the instructed agent will be reimbursed.\nUsage: If the instructing and instructed agents have the same reimbursement agent, then only InstructedReimbursementAgent is not allowed.\nUsage: If InstructedReimbursementAgent contains a branch of the instructed agent, then the instructed agent will claim reimbursement from that branch/will be paid by that branch.";
-				derivationElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.SettlementInstruction4.mmInstructedReimbursementAgent, com.tools20022.repository.msg.SettlementInstruction3.mmInstructedReimbursementAgent);
+				derivationElement_lazy = () -> Arrays.asList(SettlementInstruction4.mmInstructedReimbursementAgent, SettlementInstruction3.mmInstructedReimbursementAgent);
 				superType_lazy = () -> CashSettlementInstructionPartyRole.mmObject();
 			}
 		});

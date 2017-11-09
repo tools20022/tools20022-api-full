@@ -17,7 +17,11 @@
 
 package com.tools20022.repository.other;
 
+import com.tools20022.metamodel.MMNamespace;
+import com.tools20022.metamodel.MMProcessContent;
+import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.metamodel.MMUserDefined;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.concurrent.atomic.AtomicReference;
 
 /**
@@ -56,12 +60,12 @@ public class ExtensionContents1 {
 	final static public MMUserDefined mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMUserDefined() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "ExtensionContents1";
 				definition = "Technical extension structure that allows to specify any valid XML Structure (e.g. through an XML Schema). The property namespace is set to 'any'. \r\nThe content of the extension MUST NOT be validated by the receiver (processContent=lax).";
-				namespace = com.tools20022.metamodel.MMNamespace.any;
-				processContents = com.tools20022.metamodel.MMProcessContent.LAX;
+				namespace = MMNamespace.any;
+				processContents = MMProcessContent.LAX;
 			}
 		});
 		return mmObject_lazy.get();

@@ -19,6 +19,8 @@ package com.tools20022.repository.codeset;
 
 import com.tools20022.metamodel.MMCode;
 import com.tools20022.metamodel.MMCodeSet;
+import com.tools20022.metamodel.MMRegistrationStatus;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -27,6 +29,17 @@ import java.util.concurrent.atomic.AtomicReference;
  * <p>
  * <strong>Constant fields:</strong>
  * <ul>
+ * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getDerivation derivation}
+ * =
+ * <ul>
+ * <li>
+ * {@linkplain com.tools20022.repository.codeset.InstructionCancellationReason1Code
+ * InstructionCancellationReason1Code}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.codeset.InstructionCancellationReason2Code
+ * InstructionCancellationReason2Code}</li>
+ * </ul>
+ * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getCode code} =
  * <ul>
  * <li>
@@ -59,17 +72,6 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>
  * {@linkplain com.tools20022.repository.codeset.InstructionCancellationReasonCode#mmSecuritiesNoLongerEligible
  * InstructionCancellationReasonCode.mmSecuritiesNoLongerEligible}</li>
- * </ul>
- * </li>
- * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getDerivation derivation}
- * =
- * <ul>
- * <li>
- * {@linkplain com.tools20022.repository.codeset.InstructionCancellationReason1Code
- * InstructionCancellationReason1Code}</li>
- * <li>
- * {@linkplain com.tools20022.repository.codeset.InstructionCancellationReason2Code
- * InstructionCancellationReason2Code}</li>
  * </ul>
  * </li>
  * <li>
@@ -119,7 +121,7 @@ public class InstructionCancellationReasonCode {
 	 */
 	public static final MMCode mmCancelledByYourselves = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CancelledByYourselves";
 			definition = "Instruction has been cancelled as per your request.";
 			owner_lazy = () -> InstructionCancellationReasonCode.mmObject();
@@ -149,7 +151,7 @@ public class InstructionCancellationReasonCode {
 	 */
 	public static final MMCode mmCancelledBySystem = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CancelledBySystem";
 			definition = "Instruction has been cancelled by the settlement system.";
 			owner_lazy = () -> InstructionCancellationReasonCode.mmObject();
@@ -179,7 +181,7 @@ public class InstructionCancellationReasonCode {
 	 */
 	public static final MMCode mmCancelledByAgent = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CancelledByAgent";
 			definition = "Instruction has been cancelled by the agent.";
 			owner_lazy = () -> InstructionCancellationReasonCode.mmObject();
@@ -212,7 +214,7 @@ public class InstructionCancellationReasonCode {
 	 */
 	public static final MMCode mmCancelledByAnotherParty = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CancelledByAnotherParty";
 			definition = "Instruction has been cancelled by another party than the instructing party, for example, market infrastructure such as a stock exchange.";
 			owner_lazy = () -> InstructionCancellationReasonCode.mmObject();
@@ -245,7 +247,7 @@ public class InstructionCancellationReasonCode {
 	 */
 	public static final MMCode mmCancelledDueToTransformation = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CancelledDueToTransformation";
 			definition = "Original instruction has been cancelled and replaced due to a corporate action.";
 			owner_lazy = () -> InstructionCancellationReasonCode.mmObject();
@@ -278,7 +280,7 @@ public class InstructionCancellationReasonCode {
 	 */
 	public static final MMCode mmCancelledDueToSplitPartialSettlement = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CancelledDueToSplitPartialSettlement";
 			definition = "Original instruction has been cancelled and replaced to allow a partial or split settlement.";
 			owner_lazy = () -> InstructionCancellationReasonCode.mmObject();
@@ -309,7 +311,7 @@ public class InstructionCancellationReasonCode {
 	 */
 	public static final MMCode mmCancelledDueToCorporateAction = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CancelledDueToCorporateAction";
 			definition = "Instruction has been cancelled due to a corporate action.";
 			owner_lazy = () -> InstructionCancellationReasonCode.mmObject();
@@ -339,7 +341,7 @@ public class InstructionCancellationReasonCode {
 	 */
 	public static final MMCode mmCancelledByIssuerRegistrar = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CancelledByIssuerRegistrar";
 			definition = "Instruction has been cancelled by the issuer/registrar.";
 			owner_lazy = () -> InstructionCancellationReasonCode.mmObject();
@@ -369,7 +371,7 @@ public class InstructionCancellationReasonCode {
 	 */
 	public static final MMCode mmExpired = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Expired";
 			definition = "Instruction has expired.";
 			owner_lazy = () -> InstructionCancellationReasonCode.mmObject();
@@ -403,7 +405,7 @@ public class InstructionCancellationReasonCode {
 	 */
 	public static final MMCode mmSecuritiesNoLongerEligible = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SecuritiesNoLongerEligible";
 			definition = "Instruction has been cancelled; the security no longer exists or is no longer eligible on the market instructed. For corporate action related cancellation, CORP should be used.";
 			owner_lazy = () -> InstructionCancellationReasonCode.mmObject();
@@ -414,16 +416,15 @@ public class InstructionCancellationReasonCode {
 	static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
 				example = Arrays.asList("CANI");
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "InstructionCancellationReasonCode";
 				definition = "Specifies the reason why the instruction is cancelled.";
-				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.InstructionCancellationReasonCode.mmCancelledByYourselves, com.tools20022.repository.codeset.InstructionCancellationReasonCode.mmCancelledBySystem,
-						com.tools20022.repository.codeset.InstructionCancellationReasonCode.mmCancelledByAgent, com.tools20022.repository.codeset.InstructionCancellationReasonCode.mmCancelledByAnotherParty,
-						com.tools20022.repository.codeset.InstructionCancellationReasonCode.mmCancelledDueToTransformation, com.tools20022.repository.codeset.InstructionCancellationReasonCode.mmCancelledDueToSplitPartialSettlement,
-						com.tools20022.repository.codeset.InstructionCancellationReasonCode.mmCancelledDueToCorporateAction, com.tools20022.repository.codeset.InstructionCancellationReasonCode.mmCancelledByIssuerRegistrar,
-						com.tools20022.repository.codeset.InstructionCancellationReasonCode.mmExpired, com.tools20022.repository.codeset.InstructionCancellationReasonCode.mmSecuritiesNoLongerEligible);
+				code_lazy = () -> Arrays.asList(InstructionCancellationReasonCode.mmCancelledByYourselves, InstructionCancellationReasonCode.mmCancelledBySystem, InstructionCancellationReasonCode.mmCancelledByAgent,
+						InstructionCancellationReasonCode.mmCancelledByAnotherParty, InstructionCancellationReasonCode.mmCancelledDueToTransformation, InstructionCancellationReasonCode.mmCancelledDueToSplitPartialSettlement,
+						InstructionCancellationReasonCode.mmCancelledDueToCorporateAction, InstructionCancellationReasonCode.mmCancelledByIssuerRegistrar, InstructionCancellationReasonCode.mmExpired,
+						InstructionCancellationReasonCode.mmSecuritiesNoLongerEligible);
 				derivation_lazy = () -> Arrays.asList(InstructionCancellationReason1Code.mmObject(), InstructionCancellationReason2Code.mmObject());
 			}
 		});

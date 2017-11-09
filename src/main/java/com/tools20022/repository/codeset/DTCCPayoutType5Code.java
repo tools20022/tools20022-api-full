@@ -19,7 +19,9 @@ package com.tools20022.repository.codeset;
 
 import com.tools20022.metamodel.MMCode;
 import com.tools20022.metamodel.MMCodeSet;
+import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.codeset.DTCCPayoutTypeCode;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -112,9 +114,9 @@ public class DTCCPayoutType5Code extends DTCCPayoutTypeCode {
 	 */
 	public static final MMCode mmCapitalGains = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CapitalGains";
-			previousVersion_lazy = () -> com.tools20022.repository.codeset.DTCCPayoutType3Code.mmCapitalGains;
+			previousVersion_lazy = () -> DTCCPayoutType3Code.mmCapitalGains;
 			owner_lazy = () -> DTCCPayoutType5Code.mmObject();
 		}
 	};
@@ -141,9 +143,9 @@ public class DTCCPayoutType5Code extends DTCCPayoutTypeCode {
 	 */
 	public static final MMCode mmCash = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Cash";
-			previousVersion_lazy = () -> com.tools20022.repository.codeset.DTCCPayoutType3Code.mmCash;
+			previousVersion_lazy = () -> DTCCPayoutType3Code.mmCash;
 			owner_lazy = () -> DTCCPayoutType5Code.mmObject();
 		}
 	};
@@ -170,9 +172,9 @@ public class DTCCPayoutType5Code extends DTCCPayoutTypeCode {
 	 */
 	public static final MMCode mmDividend = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Dividend";
-			previousVersion_lazy = () -> com.tools20022.repository.codeset.DTCCPayoutType3Code.mmDividend;
+			previousVersion_lazy = () -> DTCCPayoutType3Code.mmDividend;
 			owner_lazy = () -> DTCCPayoutType5Code.mmObject();
 		}
 	};
@@ -199,9 +201,9 @@ public class DTCCPayoutType5Code extends DTCCPayoutTypeCode {
 	 */
 	public static final MMCode mmInterest = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Interest";
-			previousVersion_lazy = () -> com.tools20022.repository.codeset.DTCCPayoutType3Code.mmInterest;
+			previousVersion_lazy = () -> DTCCPayoutType3Code.mmInterest;
 			owner_lazy = () -> DTCCPayoutType5Code.mmObject();
 		}
 	};
@@ -228,9 +230,9 @@ public class DTCCPayoutType5Code extends DTCCPayoutTypeCode {
 	 */
 	public static final MMCode mmLongTermCapitalGains = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "LongTermCapitalGains";
-			previousVersion_lazy = () -> com.tools20022.repository.codeset.DTCCPayoutType3Code.mmLongTermCapitalGains;
+			previousVersion_lazy = () -> DTCCPayoutType3Code.mmLongTermCapitalGains;
 			owner_lazy = () -> DTCCPayoutType5Code.mmObject();
 		}
 	};
@@ -257,9 +259,9 @@ public class DTCCPayoutType5Code extends DTCCPayoutTypeCode {
 	 */
 	public static final MMCode mmPremium = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Premium";
-			previousVersion_lazy = () -> com.tools20022.repository.codeset.DTCCPayoutType3Code.mmPremium;
+			previousVersion_lazy = () -> DTCCPayoutType3Code.mmPremium;
 			owner_lazy = () -> DTCCPayoutType5Code.mmObject();
 		}
 	};
@@ -286,9 +288,9 @@ public class DTCCPayoutType5Code extends DTCCPayoutTypeCode {
 	 */
 	public static final MMCode mmPrincipal = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Principal";
-			previousVersion_lazy = () -> com.tools20022.repository.codeset.DTCCPayoutType3Code.mmPrincipal;
+			previousVersion_lazy = () -> DTCCPayoutType3Code.mmPrincipal;
 			owner_lazy = () -> DTCCPayoutType5Code.mmObject();
 		}
 	};
@@ -315,9 +317,9 @@ public class DTCCPayoutType5Code extends DTCCPayoutTypeCode {
 	 */
 	public static final MMCode mmReturnOfCapital = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ReturnOfCapital";
-			previousVersion_lazy = () -> com.tools20022.repository.codeset.DTCCPayoutType3Code.mmReturnOfCapital;
+			previousVersion_lazy = () -> DTCCPayoutType3Code.mmReturnOfCapital;
 			owner_lazy = () -> DTCCPayoutType5Code.mmObject();
 		}
 	};
@@ -344,9 +346,9 @@ public class DTCCPayoutType5Code extends DTCCPayoutTypeCode {
 	 */
 	public static final MMCode mmShortTermCapitalGains = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ShortTermCapitalGains";
-			previousVersion_lazy = () -> com.tools20022.repository.codeset.DTCCPayoutType3Code.mmShortTermCapitalGains;
+			previousVersion_lazy = () -> DTCCPayoutType3Code.mmShortTermCapitalGains;
 			owner_lazy = () -> DTCCPayoutType5Code.mmObject();
 		}
 	};
@@ -368,7 +370,7 @@ public class DTCCPayoutType5Code extends DTCCPayoutTypeCode {
 	 */
 	public static final MMCode mmTaxCredit = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "TaxCredit";
 			owner_lazy = () -> DTCCPayoutType5Code.mmObject();
 		}
@@ -377,15 +379,13 @@ public class DTCCPayoutType5Code extends DTCCPayoutTypeCode {
 	static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 				name = "DTCCPayoutType5Code";
 				definition = "Specifies DTCC (The Depository Trust and Clearing Corporation) defined payout types.";
 				previousVersion_lazy = () -> DTCCPayoutType3Code.mmObject();
-				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.DTCCPayoutType5Code.mmCapitalGains, com.tools20022.repository.codeset.DTCCPayoutType5Code.mmCash,
-						com.tools20022.repository.codeset.DTCCPayoutType5Code.mmDividend, com.tools20022.repository.codeset.DTCCPayoutType5Code.mmInterest, com.tools20022.repository.codeset.DTCCPayoutType5Code.mmLongTermCapitalGains,
-						com.tools20022.repository.codeset.DTCCPayoutType5Code.mmPremium, com.tools20022.repository.codeset.DTCCPayoutType5Code.mmPrincipal, com.tools20022.repository.codeset.DTCCPayoutType5Code.mmReturnOfCapital,
-						com.tools20022.repository.codeset.DTCCPayoutType5Code.mmShortTermCapitalGains, com.tools20022.repository.codeset.DTCCPayoutType5Code.mmTaxCredit);
+				code_lazy = () -> Arrays.asList(DTCCPayoutType5Code.mmCapitalGains, DTCCPayoutType5Code.mmCash, DTCCPayoutType5Code.mmDividend, DTCCPayoutType5Code.mmInterest, DTCCPayoutType5Code.mmLongTermCapitalGains,
+						DTCCPayoutType5Code.mmPremium, DTCCPayoutType5Code.mmPrincipal, DTCCPayoutType5Code.mmReturnOfCapital, DTCCPayoutType5Code.mmShortTermCapitalGains, DTCCPayoutType5Code.mmTaxCredit);
 				trace_lazy = () -> DTCCPayoutTypeCode.mmObject();
 			}
 		});

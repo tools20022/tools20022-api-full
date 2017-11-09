@@ -19,7 +19,9 @@ package com.tools20022.repository.codeset;
 
 import com.tools20022.metamodel.MMCode;
 import com.tools20022.metamodel.MMCodeSet;
+import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.codeset.CorporateActionEventStatusCode;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -86,7 +88,7 @@ public class CorporateActionEventStatus2Code extends CorporateActionEventStatusC
 	 */
 	public static final MMCode mmActive = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Active";
 			owner_lazy = () -> CorporateActionEventStatus2Code.mmObject();
 		}
@@ -109,7 +111,7 @@ public class CorporateActionEventStatus2Code extends CorporateActionEventStatusC
 	 */
 	public static final MMCode mmCancelled = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Cancelled";
 			owner_lazy = () -> CorporateActionEventStatus2Code.mmObject();
 		}
@@ -132,7 +134,7 @@ public class CorporateActionEventStatus2Code extends CorporateActionEventStatusC
 	 */
 	public static final MMCode mmInactive = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Inactive";
 			owner_lazy = () -> CorporateActionEventStatus2Code.mmObject();
 		}
@@ -141,13 +143,12 @@ public class CorporateActionEventStatus2Code extends CorporateActionEventStatusC
 	static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
 				example = Arrays.asList("ACTI");
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "CorporateActionEventStatus2Code";
 				definition = "Specifies the status of the CA option.";
-				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.CorporateActionEventStatus2Code.mmActive, com.tools20022.repository.codeset.CorporateActionEventStatus2Code.mmCancelled,
-						com.tools20022.repository.codeset.CorporateActionEventStatus2Code.mmInactive);
+				code_lazy = () -> Arrays.asList(CorporateActionEventStatus2Code.mmActive, CorporateActionEventStatus2Code.mmCancelled, CorporateActionEventStatus2Code.mmInactive);
 				trace_lazy = () -> CorporateActionEventStatusCode.mmObject();
 			}
 		});

@@ -20,10 +20,14 @@ package com.tools20022.repository.msg;
 import com.tools20022.metamodel.MMMessageAssociationEnd;
 import com.tools20022.metamodel.MMMessageAttribute;
 import com.tools20022.metamodel.MMMessageComponent;
+import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.codeset.LanguageCode;
 import com.tools20022.repository.datatype.Max140Text;
 import com.tools20022.repository.datatype.Max70Text;
 import com.tools20022.repository.entity.Organisation;
+import com.tools20022.repository.entity.OrganisationName;
+import com.tools20022.repository.entity.Party;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -111,14 +115,14 @@ public class Organisation19 {
 	 */
 	public static final MMMessageAssociationEnd mmIdentification = new MMMessageAssociationEnd() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Party.mmIdentification;
+			businessElementTrace_lazy = () -> Party.mmIdentification;
 			componentContext_lazy = () -> Organisation19.mmObject();
 			isDerived = false;
 			xmlTag = "Id";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Identification";
 			definition = "Identification of the card acceptor.";
-			previousVersion_lazy = () -> com.tools20022.repository.msg.Organisation18.mmIdentification;
+			previousVersion_lazy = () -> Organisation18.mmIdentification;
 			maxOccurs = 1;
 			minOccurs = 1;
 			isComposite = true;
@@ -168,14 +172,14 @@ public class Organisation19 {
 	 */
 	public static final MMMessageAttribute mmCommonName = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.OrganisationName.mmShortName;
+			businessElementTrace_lazy = () -> OrganisationName.mmShortName;
 			componentContext_lazy = () -> Organisation19.mmObject();
 			isDerived = false;
 			xmlTag = "CmonNm";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CommonName";
 			definition = "Name of the card acceptor as appearing on the receipt or the statement of account of the cardholder.\r\nIt correspond to the ISO 8583, field number 43.";
-			previousVersion_lazy = () -> com.tools20022.repository.msg.Organisation18.mmCommonName;
+			previousVersion_lazy = () -> Organisation18.mmCommonName;
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> Max70Text.mmObject();
@@ -221,10 +225,10 @@ public class Organisation19 {
 			componentContext_lazy = () -> Organisation19.mmObject();
 			isDerived = false;
 			xmlTag = "SelctdLang";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SelectedLanguage";
 			definition = "Selected language of the card acceptor. Reference ISO 639-1 (alpha-2) and ISO 639-2 (alpha-3).";
-			previousVersion_lazy = () -> com.tools20022.repository.msg.Organisation18.mmSelectedLanguage;
+			previousVersion_lazy = () -> Organisation18.mmSelectedLanguage;
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> LanguageCode.mmObject();
@@ -267,10 +271,10 @@ public class Organisation19 {
 			componentContext_lazy = () -> Organisation19.mmObject();
 			isDerived = false;
 			xmlTag = "SchmeData";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SchemeData";
 			definition = "Additional card acceptor data required by a card scheme.";
-			previousVersion_lazy = () -> com.tools20022.repository.msg.Organisation18.mmSchemeData;
+			previousVersion_lazy = () -> Organisation18.mmSchemeData;
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> Max140Text.mmObject();
@@ -280,11 +284,10 @@ public class Organisation19 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.Organisation19.mmIdentification, com.tools20022.repository.msg.Organisation19.mmCommonName,
-						com.tools20022.repository.msg.Organisation19.mmSelectedLanguage, com.tools20022.repository.msg.Organisation19.mmSchemeData);
+				messageElement_lazy = () -> Arrays.asList(Organisation19.mmIdentification, Organisation19.mmCommonName, Organisation19.mmSelectedLanguage, Organisation19.mmSchemeData);
 				trace_lazy = () -> Organisation.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "Organisation19";
 				definition = "Card acceptor performing the transaction.";
 				previousVersion_lazy = () -> Organisation18.mmObject();

@@ -19,8 +19,10 @@ package com.tools20022.repository.msg;
 
 import com.tools20022.metamodel.MMMessageAttribute;
 import com.tools20022.metamodel.MMMessageComponent;
+import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.datatype.Max350Text;
 import com.tools20022.repository.entity.Investor;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -96,11 +98,11 @@ public class DeMinimusNotApplicable1 {
 	 */
 	public static final MMMessageAttribute mmRestrictedPersonReason = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Investor.mmRestrictedPersonReason;
+			businessElementTrace_lazy = () -> Investor.mmRestrictedPersonReason;
 			componentContext_lazy = () -> DeMinimusNotApplicable1.mmObject();
 			isDerived = false;
 			xmlTag = "RstrctdPrsnRsn";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "RestrictedPersonReason";
 			definition = "Reason for the restricted person.";
 			maxOccurs = 1;
@@ -112,10 +114,10 @@ public class DeMinimusNotApplicable1 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.DeMinimusNotApplicable1.mmRestrictedPersonReason);
+				messageElement_lazy = () -> Arrays.asList(DeMinimusNotApplicable1.mmRestrictedPersonReason);
 				trace_lazy = () -> Investor.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "DeMinimusNotApplicable1";
 				definition = "Conditions applicable when the investor is not covered by the \"de minimis\" exemption.";
 			}

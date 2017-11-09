@@ -20,7 +20,9 @@ package com.tools20022.repository.choice;
 import com.tools20022.metamodel.MMChoiceComponent;
 import com.tools20022.metamodel.MMMessageAssociationEnd;
 import com.tools20022.metamodel.MMMessageAttribute;
+import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.datatype.Max35Text;
+import com.tools20022.repository.GeneratedRepository;
 import com.tools20022.repository.msg.TransactionCriteria4;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
@@ -114,10 +116,10 @@ public class TransactionCriteria1Choice {
 			componentContext_lazy = () -> TransactionCriteria1Choice.mmObject();
 			isDerived = false;
 			xmlTag = "QryNm";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "QueryName";
 			definition = "Recalls the criteria (search and return criteria) defined in a preceding query.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.choice.TransactionCriteria2Choice.mmQueryName);
+			nextVersions_lazy = () -> Arrays.asList(TransactionCriteria2Choice.mmQueryName);
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> Max35Text.mmObject();
@@ -163,10 +165,10 @@ public class TransactionCriteria1Choice {
 			componentContext_lazy = () -> TransactionCriteria1Choice.mmObject();
 			isDerived = false;
 			xmlTag = "NewCrit";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "NewCriteria";
 			definition = "Explicitly defines the query criteria.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.choice.TransactionCriteria2Choice.mmNewCriteria);
+			nextVersions_lazy = () -> Arrays.asList(TransactionCriteria2Choice.mmNewCriteria);
 			maxOccurs = 1;
 			minOccurs = 1;
 			isComposite = true;
@@ -177,9 +179,9 @@ public class TransactionCriteria1Choice {
 	final static public MMChoiceComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMChoiceComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.choice.TransactionCriteria1Choice.mmQueryName, com.tools20022.repository.choice.TransactionCriteria1Choice.mmNewCriteria);
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+				messageElement_lazy = () -> Arrays.asList(TransactionCriteria1Choice.mmQueryName, TransactionCriteria1Choice.mmNewCriteria);
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 				name = "TransactionCriteria1Choice";
 				definition = "Defines the information that is searched either implicitly by recalling a previous query or explicitly by defining the criteria.";
 				nextVersions_lazy = () -> Arrays.asList(TransactionCriteria2Choice.mmObject());

@@ -17,12 +17,11 @@
 
 package com.tools20022.repository.entity;
 
-import com.tools20022.metamodel.MMBusinessAssociationEnd;
-import com.tools20022.metamodel.MMBusinessAttribute;
-import com.tools20022.metamodel.MMBusinessComponent;
+import com.tools20022.metamodel.*;
 import com.tools20022.repository.datatype.ActiveCurrencyAndAmount;
 import com.tools20022.repository.datatype.ISODate;
 import com.tools20022.repository.entity.ObligationFulfilment;
+import com.tools20022.repository.GeneratedRepository;
 import com.tools20022.repository.msg.*;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
@@ -40,22 +39,16 @@ import java.util.List;
  * <p>
  * <strong>Constant fields:</strong>
  * <ul>
- * <li>{@linkplain com.tools20022.metamodel.MMBusinessComponent#getElement
- * element} =
+ * <li>
+ * {@linkplain com.tools20022.metamodel.MMBusinessComponent#getDerivationComponent
+ * derivationComponent} =
  * <ul>
- * <li>
- * {@linkplain com.tools20022.repository.entity.BuyIn#mmSecuritiesCompensation
- * BuyIn.mmSecuritiesCompensation}</li>
- * <li>{@linkplain com.tools20022.repository.entity.BuyIn#mmBuyinDate
- * BuyIn.mmBuyinDate}</li>
- * <li>{@linkplain com.tools20022.repository.entity.BuyIn#mmBuyInPrice
- * BuyIn.mmBuyInPrice}</li>
- * <li>{@linkplain com.tools20022.repository.entity.BuyIn#mmFees BuyIn.mmFees}</li>
- * <li>{@linkplain com.tools20022.repository.entity.BuyIn#mmCashCompensation
- * BuyIn.mmCashCompensation}</li>
- * <li>
- * {@linkplain com.tools20022.repository.entity.BuyIn#mmRelatedSecuritiesClearingProcess
- * BuyIn.mmRelatedSecuritiesClearingProcess}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.BuyIn3 BuyIn3}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.CashCompensation1
+ * CashCompensation1}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.BuyIn2 BuyIn2}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.BuyIn1 BuyIn1}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.BuyIn4 BuyIn4}</li>
  * </ul>
  * </li>
  * <li>
@@ -79,16 +72,22 @@ import java.util.List;
  * superType} =
  * {@linkplain com.tools20022.repository.entity.ObligationFulfilment
  * ObligationFulfilment}</li>
- * <li>
- * {@linkplain com.tools20022.metamodel.MMBusinessComponent#getDerivationComponent
- * derivationComponent} =
+ * <li>{@linkplain com.tools20022.metamodel.MMBusinessComponent#getElement
+ * element} =
  * <ul>
- * <li>{@linkplain com.tools20022.repository.msg.BuyIn3 BuyIn3}</li>
- * <li>{@linkplain com.tools20022.repository.msg.CashCompensation1
- * CashCompensation1}</li>
- * <li>{@linkplain com.tools20022.repository.msg.BuyIn2 BuyIn2}</li>
- * <li>{@linkplain com.tools20022.repository.msg.BuyIn1 BuyIn1}</li>
- * <li>{@linkplain com.tools20022.repository.msg.BuyIn4 BuyIn4}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.entity.BuyIn#mmSecuritiesCompensation
+ * BuyIn.mmSecuritiesCompensation}</li>
+ * <li>{@linkplain com.tools20022.repository.entity.BuyIn#mmBuyinDate
+ * BuyIn.mmBuyinDate}</li>
+ * <li>{@linkplain com.tools20022.repository.entity.BuyIn#mmBuyInPrice
+ * BuyIn.mmBuyInPrice}</li>
+ * <li>{@linkplain com.tools20022.repository.entity.BuyIn#mmFees BuyIn.mmFees}</li>
+ * <li>{@linkplain com.tools20022.repository.entity.BuyIn#mmCashCompensation
+ * BuyIn.mmCashCompensation}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.entity.BuyIn#mmRelatedSecuritiesClearingProcess
+ * BuyIn.mmRelatedSecuritiesClearingProcess}</li>
  * </ul>
  * </li>
  * <li>
@@ -157,15 +156,15 @@ public class BuyIn extends ObligationFulfilment {
 	 */
 	public static final MMBusinessAssociationEnd mmSecuritiesCompensation = new MMBusinessAssociationEnd() {
 		{
-			derivation_lazy = () -> Arrays.asList(com.tools20022.repository.msg.BuyIn3.mmInitialQuantity, com.tools20022.repository.msg.BuyIn3.mmUncoveredQuantity, com.tools20022.repository.msg.BuyIn2.mmSecuritiesBuyIn);
+			derivation_lazy = () -> Arrays.asList(BuyIn3.mmInitialQuantity, BuyIn3.mmUncoveredQuantity, BuyIn2.mmSecuritiesBuyIn);
 			elementContext_lazy = () -> BuyIn.mmObject();
 			isDerived = false;
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "SecuritiesCompensation";
 			definition = "Securities bought in a buy-in process.";
 			minOccurs = 0;
 			opposite_lazy = () -> com.tools20022.repository.entity.SecuritiesQuantity.mmRelatedBuyIn;
-			aggregation = com.tools20022.metamodel.MMAggregation.NONE;
+			aggregation = MMAggregation.NONE;
 			type_lazy = () -> com.tools20022.repository.entity.SecuritiesQuantity.mmObject();
 		}
 	};
@@ -207,10 +206,10 @@ public class BuyIn extends ObligationFulfilment {
 	 */
 	public static final MMBusinessAttribute mmBuyinDate = new MMBusinessAttribute() {
 		{
-			derivation_lazy = () -> Arrays.asList(com.tools20022.repository.msg.BuyIn2.mmDate, com.tools20022.repository.msg.BuyIn1.mmExpectedBuyInDate, com.tools20022.repository.msg.BuyIn4.mmExpectedBuyInDate);
+			derivation_lazy = () -> Arrays.asList(BuyIn2.mmDate, BuyIn1.mmExpectedBuyInDate, BuyIn4.mmExpectedBuyInDate);
 			elementContext_lazy = () -> BuyIn.mmObject();
 			isDerived = false;
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "BuyinDate";
 			definition = "Date at which the buy-in occurs.";
 			maxOccurs = 1;
@@ -260,15 +259,15 @@ public class BuyIn extends ObligationFulfilment {
 	 */
 	public static final MMBusinessAssociationEnd mmBuyInPrice = new MMBusinessAssociationEnd() {
 		{
-			derivation_lazy = () -> Arrays.asList(com.tools20022.repository.msg.BuyIn2.mmPrice);
+			derivation_lazy = () -> Arrays.asList(BuyIn2.mmPrice);
 			elementContext_lazy = () -> BuyIn.mmObject();
 			isDerived = false;
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "BuyInPrice";
 			definition = "Provides the price of the buy-in.";
 			minOccurs = 0;
 			opposite_lazy = () -> com.tools20022.repository.entity.SecuritiesPricing.mmRelatedBuyIn;
-			aggregation = com.tools20022.metamodel.MMAggregation.NONE;
+			aggregation = MMAggregation.NONE;
 			type_lazy = () -> com.tools20022.repository.entity.SecuritiesPricing.mmObject();
 		}
 	};
@@ -313,10 +312,10 @@ public class BuyIn extends ObligationFulfilment {
 	 */
 	public static final MMBusinessAttribute mmFees = new MMBusinessAttribute() {
 		{
-			derivation_lazy = () -> Arrays.asList(com.tools20022.repository.msg.SecuritiesCompensation1.mmFees, com.tools20022.repository.msg.CashCompensation1.mmFees);
+			derivation_lazy = () -> Arrays.asList(SecuritiesCompensation1.mmFees, CashCompensation1.mmFees);
 			elementContext_lazy = () -> BuyIn.mmObject();
 			isDerived = false;
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "Fees";
 			definition = "Fees related to a cash compensation or to a securities compensation in a buy-in process";
 			maxOccurs = 1;
@@ -372,15 +371,15 @@ public class BuyIn extends ObligationFulfilment {
 	 */
 	public static final MMBusinessAssociationEnd mmCashCompensation = new MMBusinessAssociationEnd() {
 		{
-			derivation_lazy = () -> Arrays.asList(com.tools20022.repository.msg.BuyIn2.mmRequiredCashCompensation);
+			derivation_lazy = () -> Arrays.asList(BuyIn2.mmRequiredCashCompensation);
 			elementContext_lazy = () -> BuyIn.mmObject();
 			isDerived = false;
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "CashCompensation";
 			definition = "In case securities are not available to be bought-in by the buyer/CCP, a cash compensation is required from the seller. It is derived from the association ResultingObligation between ObligationFulfillment and Obligation.";
 			minOccurs = 0;
 			opposite_lazy = () -> com.tools20022.repository.entity.PaymentObligation.mmPaymentSourceBuyIn;
-			aggregation = com.tools20022.metamodel.MMAggregation.NONE;
+			aggregation = MMAggregation.NONE;
 			type_lazy = () -> com.tools20022.repository.entity.PaymentObligation.mmObject();
 		}
 	};
@@ -421,13 +420,13 @@ public class BuyIn extends ObligationFulfilment {
 		{
 			elementContext_lazy = () -> BuyIn.mmObject();
 			isDerived = false;
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "RelatedSecuritiesClearingProcess";
 			definition = "Clearing process which includes the buy-in.";
 			maxOccurs = 1;
 			minOccurs = 0;
 			opposite_lazy = () -> com.tools20022.repository.entity.SecuritiesClearing.mmBuyIn;
-			aggregation = com.tools20022.metamodel.MMAggregation.NONE;
+			aggregation = MMAggregation.NONE;
 			type_lazy = () -> com.tools20022.repository.entity.SecuritiesClearing.mmObject();
 		}
 	};
@@ -435,15 +434,14 @@ public class BuyIn extends ObligationFulfilment {
 	static public MMBusinessComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMBusinessComponent() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "BuyIn";
 				definition = "Process in which the buyer/CCP repurchases shares of stock because the seller either failed to deliver the shares or did not deliver them in a timely fashion. The seller has to make up the price difference if the new shares are more expensive than originally agreed to.";
 				associationDomain_lazy = () -> Arrays.asList(com.tools20022.repository.entity.SecuritiesPricing.mmRelatedBuyIn, com.tools20022.repository.entity.PaymentObligation.mmPaymentSourceBuyIn,
 						com.tools20022.repository.entity.SecuritiesQuantity.mmRelatedBuyIn, com.tools20022.repository.entity.SecuritiesClearing.mmBuyIn);
 				superType_lazy = () -> ObligationFulfilment.mmObject();
-				element_lazy = () -> Arrays.asList(com.tools20022.repository.entity.BuyIn.mmSecuritiesCompensation, com.tools20022.repository.entity.BuyIn.mmBuyinDate, com.tools20022.repository.entity.BuyIn.mmBuyInPrice,
-						com.tools20022.repository.entity.BuyIn.mmFees, com.tools20022.repository.entity.BuyIn.mmCashCompensation, com.tools20022.repository.entity.BuyIn.mmRelatedSecuritiesClearingProcess);
+				element_lazy = () -> Arrays.asList(BuyIn.mmSecuritiesCompensation, BuyIn.mmBuyinDate, BuyIn.mmBuyInPrice, BuyIn.mmFees, BuyIn.mmCashCompensation, BuyIn.mmRelatedSecuritiesClearingProcess);
 				derivationComponent_lazy = () -> Arrays.asList(BuyIn3.mmObject(), CashCompensation1.mmObject(), BuyIn2.mmObject(), BuyIn1.mmObject(), BuyIn4.mmObject());
 			}
 		});

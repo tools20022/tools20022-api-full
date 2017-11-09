@@ -19,7 +19,10 @@ package com.tools20022.repository.choice;
 
 import com.tools20022.metamodel.MMChoiceComponent;
 import com.tools20022.metamodel.MMMessageAssociationEnd;
+import com.tools20022.metamodel.MMRegistrationStatus;
+import com.tools20022.repository.area.semt.TotalPortfolioValuationReportV01;
 import com.tools20022.repository.entity.Balance;
+import com.tools20022.repository.GeneratedRepository;
 import com.tools20022.repository.msg.BalanceDetails5;
 import com.tools20022.repository.msg.BalanceDetails6;
 import java.util.Arrays;
@@ -109,7 +112,7 @@ public class PortfolioBalance1 {
 			componentContext_lazy = () -> PortfolioBalance1.mmObject();
 			isDerived = false;
 			xmlTag = "SummryBal";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SummaryBalance";
 			definition = "Summary balance information.";
 			minOccurs = 1;
@@ -154,7 +157,7 @@ public class PortfolioBalance1 {
 			componentContext_lazy = () -> PortfolioBalance1.mmObject();
 			isDerived = false;
 			xmlTag = "DtldBal";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "DetailedBalance";
 			definition = "Detailed balance information.";
 			minOccurs = 1;
@@ -166,11 +169,11 @@ public class PortfolioBalance1 {
 	final static public MMChoiceComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMChoiceComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.choice.PortfolioBalance1.mmSummaryBalance, com.tools20022.repository.choice.PortfolioBalance1.mmDetailedBalance);
-				messageBuildingBlock_lazy = () -> Arrays.asList(com.tools20022.repository.area.semt.TotalPortfolioValuationReportV01.mmBalance);
+				messageElement_lazy = () -> Arrays.asList(PortfolioBalance1.mmSummaryBalance, PortfolioBalance1.mmDetailedBalance);
+				messageBuildingBlock_lazy = () -> Arrays.asList(TotalPortfolioValuationReportV01.mmBalance);
 				trace_lazy = () -> Balance.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "PortfolioBalance1";
 				definition = "Balance breakdown information.";
 			}

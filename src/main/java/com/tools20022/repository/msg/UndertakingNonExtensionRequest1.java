@@ -19,7 +19,11 @@ package com.tools20022.repository.msg;
 
 import com.tools20022.metamodel.MMMessageAssociationEnd;
 import com.tools20022.metamodel.MMMessageComponent;
+import com.tools20022.metamodel.MMRegistrationStatus;
+import com.tools20022.repository.area.tsrv.UndertakingNonExtensionRequestV01;
+import com.tools20022.repository.entity.Party;
 import com.tools20022.repository.entity.Undertaking;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -104,11 +108,11 @@ public class UndertakingNonExtensionRequest1 {
 	 */
 	public static final MMMessageAssociationEnd mmRequestingParty = new MMMessageAssociationEnd() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Party.mmIdentification;
+			businessElementTrace_lazy = () -> Party.mmIdentification;
 			componentContext_lazy = () -> UndertakingNonExtensionRequest1.mmObject();
 			isDerived = false;
 			xmlTag = "RqstngPty";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "RequestingParty";
 			definition = "Details related to the requesting party.";
 			maxOccurs = 1;
@@ -155,7 +159,7 @@ public class UndertakingNonExtensionRequest1 {
 			componentContext_lazy = () -> UndertakingNonExtensionRequest1.mmObject();
 			isDerived = false;
 			xmlTag = "UdrtkgId";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "UndertakingIdentification";
 			definition = "Details related to the identification of the undertaking.";
 			maxOccurs = 1;
@@ -168,11 +172,11 @@ public class UndertakingNonExtensionRequest1 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.UndertakingNonExtensionRequest1.mmRequestingParty, com.tools20022.repository.msg.UndertakingNonExtensionRequest1.mmUndertakingIdentification);
-				messageBuildingBlock_lazy = () -> Arrays.asList(com.tools20022.repository.area.tsrv.UndertakingNonExtensionRequestV01.mmUndertakingNonExtensionRequestDetails);
+				messageElement_lazy = () -> Arrays.asList(UndertakingNonExtensionRequest1.mmRequestingParty, UndertakingNonExtensionRequest1.mmUndertakingIdentification);
+				messageBuildingBlock_lazy = () -> Arrays.asList(UndertakingNonExtensionRequestV01.mmUndertakingNonExtensionRequestDetails);
 				trace_lazy = () -> Undertaking.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "UndertakingNonExtensionRequest1";
 				definition = "Details of the non extension request.";
 			}

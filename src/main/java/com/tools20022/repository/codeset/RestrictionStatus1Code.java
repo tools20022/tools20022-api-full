@@ -19,7 +19,9 @@ package com.tools20022.repository.codeset;
 
 import com.tools20022.metamodel.MMCode;
 import com.tools20022.metamodel.MMCodeSet;
+import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.codeset.RestrictionStatusCode;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -77,7 +79,7 @@ public class RestrictionStatus1Code extends RestrictionStatusCode {
 	 */
 	public static final MMCode mmActive = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Active";
 			owner_lazy = () -> RestrictionStatus1Code.mmObject();
 		}
@@ -100,7 +102,7 @@ public class RestrictionStatus1Code extends RestrictionStatusCode {
 	 */
 	public static final MMCode mmInactive = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Inactive";
 			owner_lazy = () -> RestrictionStatus1Code.mmObject();
 		}
@@ -109,11 +111,11 @@ public class RestrictionStatus1Code extends RestrictionStatusCode {
 	static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "RestrictionStatus1Code";
 				definition = "Specifies the status of a restriction.";
-				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.RestrictionStatus1Code.mmActive, com.tools20022.repository.codeset.RestrictionStatus1Code.mmInactive);
+				code_lazy = () -> Arrays.asList(RestrictionStatus1Code.mmActive, RestrictionStatus1Code.mmInactive);
 				trace_lazy = () -> RestrictionStatusCode.mmObject();
 			}
 		});

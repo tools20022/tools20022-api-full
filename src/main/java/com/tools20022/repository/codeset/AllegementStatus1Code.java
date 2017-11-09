@@ -19,7 +19,9 @@ package com.tools20022.repository.codeset;
 
 import com.tools20022.metamodel.MMCode;
 import com.tools20022.metamodel.MMCodeSet;
+import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.codeset.AllegementStatusCode;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -83,7 +85,7 @@ public class AllegementStatus1Code extends AllegementStatusCode {
 	 */
 	public static final MMCode mmCancelled = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Cancelled";
 			owner_lazy = () -> AllegementStatus1Code.mmObject();
 		}
@@ -106,7 +108,7 @@ public class AllegementStatus1Code extends AllegementStatusCode {
 	 */
 	public static final MMCode mmRemoved = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Removed";
 			owner_lazy = () -> AllegementStatus1Code.mmObject();
 		}
@@ -115,12 +117,12 @@ public class AllegementStatus1Code extends AllegementStatusCode {
 	static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
 				example = Arrays.asList("CANC");
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "AllegementStatus1Code";
 				definition = "Specifies the status of an allegement.";
-				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.AllegementStatus1Code.mmCancelled, com.tools20022.repository.codeset.AllegementStatus1Code.mmRemoved);
+				code_lazy = () -> Arrays.asList(AllegementStatus1Code.mmCancelled, AllegementStatus1Code.mmRemoved);
 				trace_lazy = () -> AllegementStatusCode.mmObject();
 			}
 		});

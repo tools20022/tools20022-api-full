@@ -19,9 +19,12 @@ package com.tools20022.repository.msg;
 
 import com.tools20022.metamodel.MMMessageAttribute;
 import com.tools20022.metamodel.MMMessageComponent;
+import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.codeset.IndependentAmountConventionType1Code;
 import com.tools20022.repository.datatype.ActiveCurrencyAndAmount;
 import com.tools20022.repository.entity.IndependentAmount;
+import com.tools20022.repository.entity.IndependentAmountTerm;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -104,7 +107,7 @@ public class IndependentAmount1 {
 			componentContext_lazy = () -> IndependentAmount1.mmObject();
 			isDerived = false;
 			xmlTag = "Amt";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Amount";
 			definition = "Provides the independant amount.";
 			maxOccurs = 1;
@@ -156,11 +159,11 @@ public class IndependentAmount1 {
 	 */
 	public static final MMMessageAttribute mmConvention = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.IndependentAmountTerm.mmConvention;
+			businessElementTrace_lazy = () -> IndependentAmountTerm.mmConvention;
 			componentContext_lazy = () -> IndependentAmount1.mmObject();
 			isDerived = false;
 			xmlTag = "Cnvntn";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Convention";
 			definition = "Determines how the independent amount was applied in the calculation. \r\nIt is either:\r\n- before threshold, effectively acting as an add on to exposure, \r\n- after threshold where the amount is an add on to the credit support amount and forms part of the variation margin requirement,\r\n- segregated where it is treated independently of variation margin for segregation purposes.";
 			maxOccurs = 1;
@@ -172,10 +175,10 @@ public class IndependentAmount1 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.IndependentAmount1.mmAmount, com.tools20022.repository.msg.IndependentAmount1.mmConvention);
+				messageElement_lazy = () -> Arrays.asList(IndependentAmount1.mmAmount, IndependentAmount1.mmConvention);
 				trace_lazy = () -> IndependentAmount.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "IndependentAmount1";
 				definition = "Indicates the independent amount and how it was applied in the calculation.";
 			}

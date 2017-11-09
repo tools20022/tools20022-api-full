@@ -19,7 +19,9 @@ package com.tools20022.repository.codeset;
 
 import com.tools20022.metamodel.MMCode;
 import com.tools20022.metamodel.MMCodeSet;
+import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.codeset.InterestRateTypeCode;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -77,7 +79,7 @@ public class InterestRateType1Code extends InterestRateTypeCode {
 	 */
 	public static final MMCode mmFixed = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Fixed";
 			owner_lazy = () -> InterestRateType1Code.mmObject();
 		}
@@ -100,7 +102,7 @@ public class InterestRateType1Code extends InterestRateTypeCode {
 	 */
 	public static final MMCode mmVariable = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Variable";
 			owner_lazy = () -> InterestRateType1Code.mmObject();
 		}
@@ -109,11 +111,11 @@ public class InterestRateType1Code extends InterestRateTypeCode {
 	static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "InterestRateType1Code";
 				definition = "Specifies the type of interest rate.";
-				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.InterestRateType1Code.mmFixed, com.tools20022.repository.codeset.InterestRateType1Code.mmVariable);
+				code_lazy = () -> Arrays.asList(InterestRateType1Code.mmFixed, InterestRateType1Code.mmVariable);
 				trace_lazy = () -> InterestRateTypeCode.mmObject();
 			}
 		});

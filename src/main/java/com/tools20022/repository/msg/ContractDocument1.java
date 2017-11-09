@@ -19,10 +19,14 @@ package com.tools20022.repository.msg;
 
 import com.tools20022.metamodel.MMMessageAttribute;
 import com.tools20022.metamodel.MMMessageComponent;
+import com.tools20022.metamodel.MMRegistrationStatus;
+import com.tools20022.repository.area.acmt.*;
 import com.tools20022.repository.datatype.ISODate;
 import com.tools20022.repository.datatype.Max35Text;
 import com.tools20022.repository.datatype.Max6Text;
 import com.tools20022.repository.entity.AccountContract;
+import com.tools20022.repository.entity.Agreement;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -157,11 +161,11 @@ public class ContractDocument1 {
 	 */
 	public static final MMMessageAttribute mmReference = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Agreement.mmDescription;
+			businessElementTrace_lazy = () -> Agreement.mmDescription;
 			componentContext_lazy = () -> ContractDocument1.mmObject();
 			isDerived = false;
 			xmlTag = "Ref";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Reference";
 			definition = "Account contract established between the organisation or the group to which the organisation belongs, and the account servicer. This contract has to be applied for the new account to be opened and maintained.";
 			maxOccurs = 1;
@@ -204,11 +208,11 @@ public class ContractDocument1 {
 	 */
 	public static final MMMessageAttribute mmSignOffDate = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Agreement.mmDateSigned;
+			businessElementTrace_lazy = () -> Agreement.mmDateSigned;
 			componentContext_lazy = () -> ContractDocument1.mmObject();
 			isDerived = false;
 			xmlTag = "SgnOffDt";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SignOffDate";
 			definition = "Signoff date of the document.";
 			maxOccurs = 1;
@@ -251,11 +255,11 @@ public class ContractDocument1 {
 	 */
 	public static final MMMessageAttribute mmVersion = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Agreement.mmVersion;
+			businessElementTrace_lazy = () -> Agreement.mmVersion;
 			componentContext_lazy = () -> ContractDocument1.mmObject();
 			isDerived = false;
 			xmlTag = "Vrsn";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Version";
 			definition = "Identification of the version of the contract.";
 			maxOccurs = 1;
@@ -267,21 +271,16 @@ public class ContractDocument1 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays
-						.asList(com.tools20022.repository.msg.ContractDocument1.mmReference, com.tools20022.repository.msg.ContractDocument1.mmSignOffDate, com.tools20022.repository.msg.ContractDocument1.mmVersion);
-				messageBuildingBlock_lazy = () -> Arrays.asList(com.tools20022.repository.area.acmt.AccountExcludedMandateMaintenanceAmendmentRequestV01.mmUnderlyingMasterAgreement,
-						com.tools20022.repository.area.acmt.AccountExcludedMandateMaintenanceAmendmentRequestV02.mmUnderlyingMasterAgreement,
-						com.tools20022.repository.area.acmt.AccountExcludedMandateMaintenanceRequestV01.mmUnderlyingMasterAgreement,
-						com.tools20022.repository.area.acmt.AccountExcludedMandateMaintenanceRequestV02.mmUnderlyingMasterAgreement,
-						com.tools20022.repository.area.acmt.AccountMandateMaintenanceAmendmentRequestV01.mmUnderlyingMasterAgreement,
-						com.tools20022.repository.area.acmt.AccountMandateMaintenanceAmendmentRequestV02.mmUnderlyingMasterAgreement, com.tools20022.repository.area.acmt.AccountMandateMaintenanceRequestV01.mmUnderlyingMasterAgreement,
-						com.tools20022.repository.area.acmt.AccountMandateMaintenanceRequestV02.mmUnderlyingMasterAgreement, com.tools20022.repository.area.acmt.AccountOpeningAdditionalInformationRequestV01.mmUnderlyingMasterAgreement,
-						com.tools20022.repository.area.acmt.AccountOpeningAdditionalInformationRequestV02.mmUnderlyingMasterAgreement, com.tools20022.repository.area.acmt.AccountOpeningAmendmentRequestV01.mmUnderlyingMasterAgreement,
-						com.tools20022.repository.area.acmt.AccountOpeningAmendmentRequestV02.mmUnderlyingMasterAgreement, com.tools20022.repository.area.acmt.AccountOpeningRequestV01.mmUnderlyingMasterAgreement,
-						com.tools20022.repository.area.acmt.AccountOpeningRequestV02.mmUnderlyingMasterAgreement);
+				messageElement_lazy = () -> Arrays.asList(ContractDocument1.mmReference, ContractDocument1.mmSignOffDate, ContractDocument1.mmVersion);
+				messageBuildingBlock_lazy = () -> Arrays.asList(AccountExcludedMandateMaintenanceAmendmentRequestV01.mmUnderlyingMasterAgreement, AccountExcludedMandateMaintenanceAmendmentRequestV02.mmUnderlyingMasterAgreement,
+						AccountExcludedMandateMaintenanceRequestV01.mmUnderlyingMasterAgreement, AccountExcludedMandateMaintenanceRequestV02.mmUnderlyingMasterAgreement,
+						AccountMandateMaintenanceAmendmentRequestV01.mmUnderlyingMasterAgreement, AccountMandateMaintenanceAmendmentRequestV02.mmUnderlyingMasterAgreement, AccountMandateMaintenanceRequestV01.mmUnderlyingMasterAgreement,
+						AccountMandateMaintenanceRequestV02.mmUnderlyingMasterAgreement, AccountOpeningAdditionalInformationRequestV01.mmUnderlyingMasterAgreement, AccountOpeningAdditionalInformationRequestV02.mmUnderlyingMasterAgreement,
+						AccountOpeningAmendmentRequestV01.mmUnderlyingMasterAgreement, AccountOpeningAmendmentRequestV02.mmUnderlyingMasterAgreement, AccountOpeningRequestV01.mmUnderlyingMasterAgreement,
+						AccountOpeningRequestV02.mmUnderlyingMasterAgreement);
 				trace_lazy = () -> AccountContract.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "ContractDocument1";
 				definition = "Document that contains the information of the contract agreed between both parties.";
 			}

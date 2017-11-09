@@ -20,9 +20,11 @@ package com.tools20022.repository.choice;
 import com.tools20022.metamodel.MMChoiceComponent;
 import com.tools20022.metamodel.MMMessageAssociationEnd;
 import com.tools20022.metamodel.MMMessageAttribute;
+import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.datatype.PercentageRate;
 import com.tools20022.repository.entity.Interest;
 import com.tools20022.repository.entity.VariableInterest;
+import com.tools20022.repository.GeneratedRepository;
 import com.tools20022.repository.msg.FloatingInterestRate4;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
@@ -123,15 +125,15 @@ public class InterestRate2Choice {
 	 */
 	public static final MMMessageAttribute mmFixed = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Interest.mmRate;
+			businessElementTrace_lazy = () -> Interest.mmRate;
 			componentContext_lazy = () -> InterestRate2Choice.mmObject();
 			isDerived = false;
 			xmlTag = "Fxd";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Fixed";
 			definition = "Indicates that the rate is fixed.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.choice.InterestRate6Choice.mmFixed);
-			previousVersion_lazy = () -> com.tools20022.repository.choice.InterestRate1Choice.mmFixedInterestRate;
+			nextVersions_lazy = () -> Arrays.asList(InterestRate6Choice.mmFixed);
+			previousVersion_lazy = () -> InterestRate1Choice.mmFixedInterestRate;
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> PercentageRate.mmObject();
@@ -188,11 +190,11 @@ public class InterestRate2Choice {
 			componentContext_lazy = () -> InterestRate2Choice.mmObject();
 			isDerived = false;
 			xmlTag = "Fltg";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Floating";
 			definition = "Provides details about the variable rate.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.choice.InterestRate6Choice.mmFloating);
-			previousVersion_lazy = () -> com.tools20022.repository.choice.InterestRate1Choice.mmVariableInterestRate;
+			nextVersions_lazy = () -> Arrays.asList(InterestRate6Choice.mmFloating);
+			previousVersion_lazy = () -> InterestRate1Choice.mmVariableInterestRate;
 			maxOccurs = 1;
 			minOccurs = 1;
 			isComposite = true;
@@ -203,10 +205,10 @@ public class InterestRate2Choice {
 	final static public MMChoiceComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMChoiceComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.choice.InterestRate2Choice.mmFixed, com.tools20022.repository.choice.InterestRate2Choice.mmFloating);
+				messageElement_lazy = () -> Arrays.asList(InterestRate2Choice.mmFixed, InterestRate2Choice.mmFloating);
 				trace_lazy = () -> Interest.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "InterestRate2Choice";
 				definition = "Choice between a fixed rate and a floating rate.";
 				nextVersions_lazy = () -> Arrays.asList(InterestRate6Choice.mmObject());

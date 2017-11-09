@@ -19,7 +19,12 @@ package com.tools20022.repository.msg;
 
 import com.tools20022.metamodel.MMMessageAssociationEnd;
 import com.tools20022.metamodel.MMMessageComponent;
+import com.tools20022.metamodel.MMRegistrationStatus;
+import com.tools20022.repository.area.seev.AgentCANotificationCancellationRequestV01;
 import com.tools20022.repository.entity.CorporateActionNotification;
+import com.tools20022.repository.entity.CorporateActionOptionServicing;
+import com.tools20022.repository.entity.CorporateActionServicing;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.List;
@@ -108,11 +113,11 @@ public class CorporateActionNotificationAdvice1 {
 	 */
 	public static final MMMessageAssociationEnd mmCorporateActionDetails = new MMMessageAssociationEnd() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.CorporateActionServicing.mmEvent;
+			businessElementTrace_lazy = () -> CorporateActionServicing.mmEvent;
 			componentContext_lazy = () -> CorporateActionNotificationAdvice1.mmObject();
 			isDerived = false;
 			xmlTag = "CorpActnDtls";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CorporateActionDetails";
 			definition = "Provides detailed information about the corporate action event.";
 			maxOccurs = 1;
@@ -155,11 +160,11 @@ public class CorporateActionNotificationAdvice1 {
 	 */
 	public static final MMMessageAssociationEnd mmCorporateActionOptionDetails = new MMMessageAssociationEnd() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.CorporateActionOptionServicing.mmRelatedOption;
+			businessElementTrace_lazy = () -> CorporateActionOptionServicing.mmRelatedOption;
 			componentContext_lazy = () -> CorporateActionNotificationAdvice1.mmObject();
 			isDerived = false;
 			xmlTag = "CorpActnOptnDtls";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CorporateActionOptionDetails";
 			definition = "Provides information about an option of a CA event.";
 			minOccurs = 0;
@@ -171,12 +176,11 @@ public class CorporateActionNotificationAdvice1 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.CorporateActionNotificationAdvice1.mmCorporateActionDetails,
-						com.tools20022.repository.msg.CorporateActionNotificationAdvice1.mmCorporateActionOptionDetails);
-				messageBuildingBlock_lazy = () -> Arrays.asList(com.tools20022.repository.area.seev.AgentCANotificationCancellationRequestV01.mmCorporateActionNotificationDetails);
+				messageElement_lazy = () -> Arrays.asList(CorporateActionNotificationAdvice1.mmCorporateActionDetails, CorporateActionNotificationAdvice1.mmCorporateActionOptionDetails);
+				messageBuildingBlock_lazy = () -> Arrays.asList(AgentCANotificationCancellationRequestV01.mmCorporateActionNotificationDetails);
 				trace_lazy = () -> CorporateActionNotification.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "CorporateActionNotificationAdvice1";
 				definition = "Provides detailed information about an announcement.";
 			}

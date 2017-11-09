@@ -20,8 +20,10 @@ package com.tools20022.repository.choice;
 import com.tools20022.metamodel.MMChoiceComponent;
 import com.tools20022.metamodel.MMMessageAssociationEnd;
 import com.tools20022.metamodel.MMMessageAttribute;
+import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.codeset.FATCASourceStatus1Code;
 import com.tools20022.repository.entity.FATCAStatus;
+import com.tools20022.repository.GeneratedRepository;
 import com.tools20022.repository.msg.GenericIdentification47;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
@@ -112,14 +114,14 @@ public class FATCASource1Choice {
 	 */
 	public static final MMMessageAttribute mmCode = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.FATCAStatus.mmFATCASourceStatus;
+			businessElementTrace_lazy = () -> FATCAStatus.mmFATCASourceStatus;
 			componentContext_lazy = () -> FATCASource1Choice.mmObject();
 			isDerived = false;
 			xmlTag = "Cd";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Code";
 			definition = "Source of the Foreign Account Tax Compliance Act (FATCA) status expressed as a code.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.choice.CRSSource1Choice.mmCode);
+			nextVersions_lazy = () -> Arrays.asList(CRSSource1Choice.mmCode);
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> FATCASourceStatus1Code.mmObject();
@@ -169,10 +171,10 @@ public class FATCASource1Choice {
 			componentContext_lazy = () -> FATCASource1Choice.mmObject();
 			isDerived = false;
 			xmlTag = "Prtry";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Proprietary";
 			definition = "Source of Foreign Account Tax Compliance Act (FATCA) status expressed as a proprietary code.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.choice.CRSSource1Choice.mmProprietary);
+			nextVersions_lazy = () -> Arrays.asList(CRSSource1Choice.mmProprietary);
 			maxOccurs = 1;
 			minOccurs = 1;
 			isComposite = true;
@@ -183,10 +185,10 @@ public class FATCASource1Choice {
 	final static public MMChoiceComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMChoiceComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.choice.FATCASource1Choice.mmCode, com.tools20022.repository.choice.FATCASource1Choice.mmProprietary);
+				messageElement_lazy = () -> Arrays.asList(FATCASource1Choice.mmCode, FATCASource1Choice.mmProprietary);
 				trace_lazy = () -> FATCAStatus.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "FATCASource1Choice";
 				definition = "Choice of formats for the source of the Foreign Account Tax Compliance Act (FATCA) ";
 			}

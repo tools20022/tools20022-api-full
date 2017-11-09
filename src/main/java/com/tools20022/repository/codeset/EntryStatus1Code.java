@@ -19,6 +19,8 @@ package com.tools20022.repository.codeset;
 
 import com.tools20022.metamodel.MMCode;
 import com.tools20022.metamodel.MMCodeSet;
+import com.tools20022.metamodel.MMRegistrationStatus;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -87,7 +89,7 @@ public class EntryStatus1Code {
 	 */
 	public static final MMCode mmBooked = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "Booked";
 			definition = "Entry is on the books of the account servicer and value has been applied to the account owner.";
 			owner_lazy = () -> EntryStatus1Code.mmObject();
@@ -120,7 +122,7 @@ public class EntryStatus1Code {
 	 */
 	public static final MMCode mmPending = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "Pending";
 			definition = "Entry is on the books of the account servicer and value has not yet been applied to the account owner.";
 			owner_lazy = () -> EntryStatus1Code.mmObject();
@@ -153,7 +155,7 @@ public class EntryStatus1Code {
 	 */
 	public static final MMCode mmFuture = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "Future";
 			definition = "Entry is on the books of the account servicer and value will be applied to the account owner at a future date and time.";
 			owner_lazy = () -> EntryStatus1Code.mmObject();
@@ -164,12 +166,12 @@ public class EntryStatus1Code {
 	static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
 				example = Arrays.asList("BOOK");
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "EntryStatus1Code";
 				definition = "Specifies the status of an entry.";
-				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.EntryStatus1Code.mmBooked, com.tools20022.repository.codeset.EntryStatus1Code.mmPending, com.tools20022.repository.codeset.EntryStatus1Code.mmFuture);
+				code_lazy = () -> Arrays.asList(EntryStatus1Code.mmBooked, EntryStatus1Code.mmPending, EntryStatus1Code.mmFuture);
 			}
 		});
 		return mmObject_lazy.get();

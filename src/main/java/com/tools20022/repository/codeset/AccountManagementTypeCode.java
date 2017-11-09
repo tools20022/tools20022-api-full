@@ -19,6 +19,8 @@ package com.tools20022.repository.codeset;
 
 import com.tools20022.metamodel.MMCode;
 import com.tools20022.metamodel.MMCodeSet;
+import com.tools20022.metamodel.MMRegistrationStatus;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -29,6 +31,17 @@ import java.util.concurrent.atomic.AtomicReference;
  * <p>
  * <strong>Constant fields:</strong>
  * <ul>
+ * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getDerivation derivation}
+ * =
+ * <ul>
+ * <li>{@linkplain com.tools20022.repository.codeset.AccountManagementType2Code
+ * AccountManagementType2Code}</li>
+ * <li>{@linkplain com.tools20022.repository.codeset.AccountManagementType1Code
+ * AccountManagementType1Code}</li>
+ * <li>{@linkplain com.tools20022.repository.codeset.AccountManagementType3Code
+ * AccountManagementType3Code}</li>
+ * </ul>
+ * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getCode code} =
  * <ul>
  * <li>
@@ -46,17 +59,6 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>
  * {@linkplain com.tools20022.repository.codeset.AccountManagementTypeCode#mmAccountStatus
  * AccountManagementTypeCode.mmAccountStatus}</li>
- * </ul>
- * </li>
- * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getDerivation derivation}
- * =
- * <ul>
- * <li>{@linkplain com.tools20022.repository.codeset.AccountManagementType2Code
- * AccountManagementType2Code}</li>
- * <li>{@linkplain com.tools20022.repository.codeset.AccountManagementType1Code
- * AccountManagementType1Code}</li>
- * <li>{@linkplain com.tools20022.repository.codeset.AccountManagementType3Code
- * AccountManagementType3Code}</li>
  * </ul>
  * </li>
  * <li>
@@ -108,7 +110,7 @@ public class AccountManagementTypeCode {
 	 */
 	public static final MMCode mmAccountOpening = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AccountOpening";
 			definition = "Refers to an account opening instruction message.";
 			owner_lazy = () -> AccountManagementTypeCode.mmObject();
@@ -138,7 +140,7 @@ public class AccountManagementTypeCode {
 	 */
 	public static final MMCode mmAccountModification = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AccountModification";
 			definition = "Refers to an account modification instruction message.";
 			owner_lazy = () -> AccountManagementTypeCode.mmObject();
@@ -168,7 +170,7 @@ public class AccountManagementTypeCode {
 	 */
 	public static final MMCode mmGetAccountDetails = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "GetAccountDetails";
 			definition = "Refers to a get account details message.";
 			owner_lazy = () -> AccountManagementTypeCode.mmObject();
@@ -198,7 +200,7 @@ public class AccountManagementTypeCode {
 	 */
 	public static final MMCode mmAccountClosure = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AccountClosure";
 			definition = "Refers to an account closure instruction message.";
 			owner_lazy = () -> AccountManagementTypeCode.mmObject();
@@ -228,7 +230,7 @@ public class AccountManagementTypeCode {
 	 */
 	public static final MMCode mmAccountStatus = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AccountStatus";
 			definition = "Refers to the account status.";
 			owner_lazy = () -> AccountManagementTypeCode.mmObject();
@@ -239,14 +241,13 @@ public class AccountManagementTypeCode {
 	static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
 				example = Arrays.asList("ACCO");
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "AccountManagementTypeCode";
 				definition = "Refers to an account management instruction, that is, either an account opening instruction or an account modification instruction or a get account details message.";
-				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.AccountManagementTypeCode.mmAccountOpening, com.tools20022.repository.codeset.AccountManagementTypeCode.mmAccountModification,
-						com.tools20022.repository.codeset.AccountManagementTypeCode.mmGetAccountDetails, com.tools20022.repository.codeset.AccountManagementTypeCode.mmAccountClosure,
-						com.tools20022.repository.codeset.AccountManagementTypeCode.mmAccountStatus);
+				code_lazy = () -> Arrays.asList(AccountManagementTypeCode.mmAccountOpening, AccountManagementTypeCode.mmAccountModification, AccountManagementTypeCode.mmGetAccountDetails, AccountManagementTypeCode.mmAccountClosure,
+						AccountManagementTypeCode.mmAccountStatus);
 				derivation_lazy = () -> Arrays.asList(AccountManagementType2Code.mmObject(), AccountManagementType1Code.mmObject(), AccountManagementType3Code.mmObject());
 			}
 		});

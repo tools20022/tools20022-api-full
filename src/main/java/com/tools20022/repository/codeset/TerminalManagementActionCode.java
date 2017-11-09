@@ -19,6 +19,8 @@ package com.tools20022.repository.codeset;
 
 import com.tools20022.metamodel.MMCode;
 import com.tools20022.metamodel.MMCodeSet;
+import com.tools20022.metamodel.MMRegistrationStatus;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -28,6 +30,20 @@ import java.util.concurrent.atomic.AtomicReference;
  * <p>
  * <strong>Constant fields:</strong>
  * <ul>
+ * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getDerivation derivation}
+ * =
+ * <ul>
+ * <li>
+ * {@linkplain com.tools20022.repository.codeset.TerminalManagementAction1Code
+ * TerminalManagementAction1Code}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.codeset.TerminalManagementAction3Code
+ * TerminalManagementAction3Code}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.codeset.TerminalManagementAction2Code
+ * TerminalManagementAction2Code}</li>
+ * </ul>
+ * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getCode code} =
  * <ul>
  * <li>
@@ -57,20 +73,6 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>
  * {@linkplain com.tools20022.repository.codeset.TerminalManagementActionCode#mmCreate
  * TerminalManagementActionCode.mmCreate}</li>
- * </ul>
- * </li>
- * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getDerivation derivation}
- * =
- * <ul>
- * <li>
- * {@linkplain com.tools20022.repository.codeset.TerminalManagementAction1Code
- * TerminalManagementAction1Code}</li>
- * <li>
- * {@linkplain com.tools20022.repository.codeset.TerminalManagementAction3Code
- * TerminalManagementAction3Code}</li>
- * <li>
- * {@linkplain com.tools20022.repository.codeset.TerminalManagementAction2Code
- * TerminalManagementAction2Code}</li>
  * </ul>
  * </li>
  * <li>
@@ -122,7 +124,7 @@ public class TerminalManagementActionCode {
 	 */
 	public static final MMCode mmActivate = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "Activate";
 			definition = "Data set must be activated.";
 			owner_lazy = () -> TerminalManagementActionCode.mmObject();
@@ -152,7 +154,7 @@ public class TerminalManagementActionCode {
 	 */
 	public static final MMCode mmDeactivate = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "Deactivate";
 			definition = "Data set must be deactivated.";
 			owner_lazy = () -> TerminalManagementActionCode.mmObject();
@@ -182,7 +184,7 @@ public class TerminalManagementActionCode {
 	 */
 	public static final MMCode mmDelete = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "Delete";
 			definition = "Data set must be deleted.";
 			owner_lazy = () -> TerminalManagementActionCode.mmObject();
@@ -212,7 +214,7 @@ public class TerminalManagementActionCode {
 	 */
 	public static final MMCode mmDownload = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "Download";
 			definition = "Data set must be downloaded.";
 			owner_lazy = () -> TerminalManagementActionCode.mmObject();
@@ -242,7 +244,7 @@ public class TerminalManagementActionCode {
 	 */
 	public static final MMCode mmInstall = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "Install";
 			definition = "Data set must be installed.";
 			owner_lazy = () -> TerminalManagementActionCode.mmObject();
@@ -272,7 +274,7 @@ public class TerminalManagementActionCode {
 	 */
 	public static final MMCode mmRestart = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "Restart";
 			definition = "Point of interaction must be restarted.";
 			owner_lazy = () -> TerminalManagementActionCode.mmObject();
@@ -302,7 +304,7 @@ public class TerminalManagementActionCode {
 	 */
 	public static final MMCode mmUpload = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "Upload";
 			definition = "Data set must be uploaded.";
 			owner_lazy = () -> TerminalManagementActionCode.mmObject();
@@ -332,7 +334,7 @@ public class TerminalManagementActionCode {
 	 */
 	public static final MMCode mmUpdate = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Update";
 			definition = "Update, or replacement of the data set.";
 			owner_lazy = () -> TerminalManagementActionCode.mmObject();
@@ -362,7 +364,7 @@ public class TerminalManagementActionCode {
 	 */
 	public static final MMCode mmCreate = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Create";
 			definition = "Creation or addition of a new data set.";
 			owner_lazy = () -> TerminalManagementActionCode.mmObject();
@@ -373,16 +375,13 @@ public class TerminalManagementActionCode {
 	static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
 				example = Arrays.asList("ACTV");
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "TerminalManagementActionCode";
 				definition = "Types of terminal management action to be performed by a point of interaction.";
-				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.TerminalManagementActionCode.mmActivate, com.tools20022.repository.codeset.TerminalManagementActionCode.mmDeactivate,
-						com.tools20022.repository.codeset.TerminalManagementActionCode.mmDelete, com.tools20022.repository.codeset.TerminalManagementActionCode.mmDownload,
-						com.tools20022.repository.codeset.TerminalManagementActionCode.mmInstall, com.tools20022.repository.codeset.TerminalManagementActionCode.mmRestart,
-						com.tools20022.repository.codeset.TerminalManagementActionCode.mmUpload, com.tools20022.repository.codeset.TerminalManagementActionCode.mmUpdate,
-						com.tools20022.repository.codeset.TerminalManagementActionCode.mmCreate);
+				code_lazy = () -> Arrays.asList(TerminalManagementActionCode.mmActivate, TerminalManagementActionCode.mmDeactivate, TerminalManagementActionCode.mmDelete, TerminalManagementActionCode.mmDownload,
+						TerminalManagementActionCode.mmInstall, TerminalManagementActionCode.mmRestart, TerminalManagementActionCode.mmUpload, TerminalManagementActionCode.mmUpdate, TerminalManagementActionCode.mmCreate);
 				derivation_lazy = () -> Arrays.asList(TerminalManagementAction1Code.mmObject(), TerminalManagementAction3Code.mmObject(), TerminalManagementAction2Code.mmObject());
 			}
 		});

@@ -19,6 +19,8 @@ package com.tools20022.repository.codeset;
 
 import com.tools20022.metamodel.MMCode;
 import com.tools20022.metamodel.MMCodeSet;
+import com.tools20022.metamodel.MMRegistrationStatus;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -27,6 +29,15 @@ import java.util.concurrent.atomic.AtomicReference;
  * <p>
  * <strong>Constant fields:</strong>
  * <ul>
+ * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getDerivation derivation}
+ * =
+ * <ul>
+ * <li>{@linkplain com.tools20022.repository.codeset.AttributeType1Code
+ * AttributeType1Code}</li>
+ * <li>{@linkplain com.tools20022.repository.codeset.AttributeType2Code
+ * AttributeType2Code}</li>
+ * </ul>
+ * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getCode code} =
  * <ul>
  * <li>
@@ -50,15 +61,6 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>
  * {@linkplain com.tools20022.repository.codeset.AttributeTypeCode#mmChallengePassword
  * AttributeTypeCode.mmChallengePassword}</li>
- * </ul>
- * </li>
- * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getDerivation derivation}
- * =
- * <ul>
- * <li>{@linkplain com.tools20022.repository.codeset.AttributeType1Code
- * AttributeType1Code}</li>
- * <li>{@linkplain com.tools20022.repository.codeset.AttributeType2Code
- * AttributeType2Code}</li>
  * </ul>
  * </li>
  * <li>
@@ -110,7 +112,7 @@ public class AttributeTypeCode {
 	 */
 	public static final MMCode mmCommonName = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "CommonName";
 			definition = "Common name of the attribute (ASN.1 Object Identifier: id-at-commonName).";
 			owner_lazy = () -> AttributeTypeCode.mmObject();
@@ -142,7 +144,7 @@ public class AttributeTypeCode {
 	 */
 	public static final MMCode mmLocality = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "Locality";
 			definition = "Locality of the attribute (ASN.1 Object Identifier: id-at-localityName).";
 			owner_lazy = () -> AttributeTypeCode.mmObject();
@@ -175,7 +177,7 @@ public class AttributeTypeCode {
 	 */
 	public static final MMCode mmOrganisationName = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "OrganisationName";
 			definition = "Organization name of the attribute  (ASN.1 Object Identifier: id-at-organizationName).";
 			owner_lazy = () -> AttributeTypeCode.mmObject();
@@ -208,7 +210,7 @@ public class AttributeTypeCode {
 	 */
 	public static final MMCode mmOrganisationUnitName = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "OrganisationUnitName";
 			definition = "Organization unit name of the attribute (ASN.1 Object Identifier: id-at-organizationalUnitName).";
 			owner_lazy = () -> AttributeTypeCode.mmObject();
@@ -241,7 +243,7 @@ public class AttributeTypeCode {
 	 */
 	public static final MMCode mmCountryName = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "CountryName";
 			definition = "Country name of the attribute (ASN.1 Object Identifier: id-at-countryName).";
 			owner_lazy = () -> AttributeTypeCode.mmObject();
@@ -271,7 +273,7 @@ public class AttributeTypeCode {
 	 */
 	public static final MMCode mmEmailAddress = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "EmailAddress";
 			definition = "Email address of the certificate subject.";
 			owner_lazy = () -> AttributeTypeCode.mmObject();
@@ -302,7 +304,7 @@ public class AttributeTypeCode {
 	 */
 	public static final MMCode mmChallengePassword = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ChallengePassword";
 			definition = "Password by which an entity may request certificate revocation";
 			owner_lazy = () -> AttributeTypeCode.mmObject();
@@ -313,14 +315,13 @@ public class AttributeTypeCode {
 	static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
 				example = Arrays.asList("CNAT");
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "AttributeTypeCode";
 				definition = "Type of attribute of a distinguished name (DN).";
-				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.AttributeTypeCode.mmCommonName, com.tools20022.repository.codeset.AttributeTypeCode.mmLocality,
-						com.tools20022.repository.codeset.AttributeTypeCode.mmOrganisationName, com.tools20022.repository.codeset.AttributeTypeCode.mmOrganisationUnitName, com.tools20022.repository.codeset.AttributeTypeCode.mmCountryName,
-						com.tools20022.repository.codeset.AttributeTypeCode.mmEmailAddress, com.tools20022.repository.codeset.AttributeTypeCode.mmChallengePassword);
+				code_lazy = () -> Arrays.asList(AttributeTypeCode.mmCommonName, AttributeTypeCode.mmLocality, AttributeTypeCode.mmOrganisationName, AttributeTypeCode.mmOrganisationUnitName, AttributeTypeCode.mmCountryName,
+						AttributeTypeCode.mmEmailAddress, AttributeTypeCode.mmChallengePassword);
 				derivation_lazy = () -> Arrays.asList(AttributeType1Code.mmObject(), AttributeType2Code.mmObject());
 			}
 		});

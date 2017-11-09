@@ -19,6 +19,8 @@ package com.tools20022.repository.codeset;
 
 import com.tools20022.metamodel.MMCode;
 import com.tools20022.metamodel.MMCodeSet;
+import com.tools20022.metamodel.MMRegistrationStatus;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -27,6 +29,13 @@ import java.util.concurrent.atomic.AtomicReference;
  * <p>
  * <strong>Constant fields:</strong>
  * <ul>
+ * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getDerivation derivation}
+ * =
+ * <ul>
+ * <li>{@linkplain com.tools20022.repository.codeset.InstalmentPlan1Code
+ * InstalmentPlan1Code}</li>
+ * </ul>
+ * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getCode code} =
  * <ul>
  * <li>
@@ -38,13 +47,6 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>
  * {@linkplain com.tools20022.repository.codeset.InstalmentPlanCode#mmDeferredInstalment
  * InstalmentPlanCode.mmDeferredInstalment}</li>
- * </ul>
- * </li>
- * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getDerivation derivation}
- * =
- * <ul>
- * <li>{@linkplain com.tools20022.repository.codeset.InstalmentPlan1Code
- * InstalmentPlan1Code}</li>
  * </ul>
  * </li>
  * <li>
@@ -89,7 +91,7 @@ public class InstalmentPlanCode {
 	 */
 	public static final MMCode mmEqualPayment = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "EqualPayment";
 			definition = "The payment is split in several instalments of equal amounts.";
 			owner_lazy = () -> InstalmentPlanCode.mmObject();
@@ -120,7 +122,7 @@ public class InstalmentPlanCode {
 	 */
 	public static final MMCode mmInequalPayment = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "InequalPayment";
 			definition = "The payment is split in several instalments of different amounts.";
 			owner_lazy = () -> InstalmentPlanCode.mmObject();
@@ -150,7 +152,7 @@ public class InstalmentPlanCode {
 	 */
 	public static final MMCode mmDeferredInstalment = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "DeferredInstalment";
 			definition = "The first instalment is deferred.";
 			owner_lazy = () -> InstalmentPlanCode.mmObject();
@@ -161,12 +163,11 @@ public class InstalmentPlanCode {
 	static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "InstalmentPlanCode";
 				definition = "Type of instalment plan.";
-				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.InstalmentPlanCode.mmEqualPayment, com.tools20022.repository.codeset.InstalmentPlanCode.mmInequalPayment,
-						com.tools20022.repository.codeset.InstalmentPlanCode.mmDeferredInstalment);
+				code_lazy = () -> Arrays.asList(InstalmentPlanCode.mmEqualPayment, InstalmentPlanCode.mmInequalPayment, InstalmentPlanCode.mmDeferredInstalment);
 				derivation_lazy = () -> Arrays.asList(InstalmentPlan1Code.mmObject());
 			}
 		});

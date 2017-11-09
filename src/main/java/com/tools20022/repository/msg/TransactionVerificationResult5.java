@@ -19,11 +19,13 @@ package com.tools20022.repository.msg;
 
 import com.tools20022.metamodel.MMMessageAttribute;
 import com.tools20022.metamodel.MMMessageComponent;
+import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.codeset.AuthenticationEntity2Code;
 import com.tools20022.repository.codeset.AuthenticationMethod7Code;
 import com.tools20022.repository.codeset.Verification1Code;
 import com.tools20022.repository.datatype.Max140Binary;
 import com.tools20022.repository.datatype.Max500Text;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -114,10 +116,10 @@ public class TransactionVerificationResult5 {
 			componentContext_lazy = () -> TransactionVerificationResult5.mmObject();
 			isDerived = false;
 			xmlTag = "Mtd";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Method";
 			definition = "Method of verification that has been performed.";
-			previousVersion_lazy = () -> com.tools20022.repository.msg.TransactionVerificationResult4.mmMethod;
+			previousVersion_lazy = () -> TransactionVerificationResult4.mmMethod;
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> AuthenticationMethod7Code.mmObject();
@@ -162,10 +164,10 @@ public class TransactionVerificationResult5 {
 			componentContext_lazy = () -> TransactionVerificationResult5.mmObject();
 			isDerived = false;
 			xmlTag = "VrfctnNtty";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "VerificationEntity";
 			definition = "Entity or device that has performed the verification.";
-			previousVersion_lazy = () -> com.tools20022.repository.msg.TransactionVerificationResult4.mmVerificationEntity;
+			previousVersion_lazy = () -> TransactionVerificationResult4.mmVerificationEntity;
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> AuthenticationEntity2Code.mmObject();
@@ -210,10 +212,10 @@ public class TransactionVerificationResult5 {
 			componentContext_lazy = () -> TransactionVerificationResult5.mmObject();
 			isDerived = false;
 			xmlTag = "Rslt";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Result";
 			definition = "Result of the verification.";
-			previousVersion_lazy = () -> com.tools20022.repository.msg.TransactionVerificationResult4.mmResult;
+			previousVersion_lazy = () -> TransactionVerificationResult4.mmResult;
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> Verification1Code.mmObject();
@@ -257,10 +259,10 @@ public class TransactionVerificationResult5 {
 			componentContext_lazy = () -> TransactionVerificationResult5.mmObject();
 			isDerived = false;
 			xmlTag = "AddtlRslt";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AdditionalResult";
 			definition = "Additional result of the verification.";
-			previousVersion_lazy = () -> com.tools20022.repository.msg.TransactionVerificationResult4.mmAdditionalResult;
+			previousVersion_lazy = () -> TransactionVerificationResult4.mmAdditionalResult;
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> Max500Text.mmObject();
@@ -301,7 +303,7 @@ public class TransactionVerificationResult5 {
 			componentContext_lazy = () -> TransactionVerificationResult5.mmObject();
 			isDerived = false;
 			xmlTag = "AuthntcnTkn";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AuthenticationToken";
 			definition = "Token provided to the ATM for further proof of authentication.";
 			maxOccurs = 1;
@@ -313,11 +315,10 @@ public class TransactionVerificationResult5 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.TransactionVerificationResult5.mmMethod, com.tools20022.repository.msg.TransactionVerificationResult5.mmVerificationEntity,
-						com.tools20022.repository.msg.TransactionVerificationResult5.mmResult, com.tools20022.repository.msg.TransactionVerificationResult5.mmAdditionalResult,
-						com.tools20022.repository.msg.TransactionVerificationResult5.mmAuthenticationToken);
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				messageElement_lazy = () -> Arrays.asList(TransactionVerificationResult5.mmMethod, TransactionVerificationResult5.mmVerificationEntity, TransactionVerificationResult5.mmResult,
+						TransactionVerificationResult5.mmAdditionalResult, TransactionVerificationResult5.mmAuthenticationToken);
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "TransactionVerificationResult5";
 				definition = "Result of performed verifications for the transaction.";
 				previousVersion_lazy = () -> TransactionVerificationResult4.mmObject();

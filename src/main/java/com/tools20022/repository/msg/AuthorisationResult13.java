@@ -20,9 +20,12 @@ package com.tools20022.repository.msg;
 import com.tools20022.metamodel.MMMessageAssociationEnd;
 import com.tools20022.metamodel.MMMessageAttribute;
 import com.tools20022.metamodel.MMMessageComponent;
+import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.codeset.PartyType16Code;
 import com.tools20022.repository.datatype.Min6Max8Text;
 import com.tools20022.repository.entity.CardPaymentValidation;
+import com.tools20022.repository.entity.PartyIdentificationInformation;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.List;
@@ -112,11 +115,11 @@ public class AuthorisationResult13 {
 	 */
 	public static final MMMessageAttribute mmAuthorisationEntity = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.PartyIdentificationInformation.mmOtherIdentification;
+			businessElementTrace_lazy = () -> PartyIdentificationInformation.mmOtherIdentification;
 			componentContext_lazy = () -> AuthorisationResult13.mmObject();
 			isDerived = false;
 			xmlTag = "AuthstnNtty";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AuthorisationEntity";
 			definition = "Type of party that has delivered or declined the card payment authorisation (the party is not identified).";
 			maxOccurs = 1;
@@ -158,11 +161,11 @@ public class AuthorisationResult13 {
 	 */
 	public static final MMMessageAssociationEnd mmAuthorisationResponse = new MMMessageAssociationEnd() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.CardPaymentValidation.mmResponse;
+			businessElementTrace_lazy = () -> CardPaymentValidation.mmResponse;
 			componentContext_lazy = () -> AuthorisationResult13.mmObject();
 			isDerived = false;
 			xmlTag = "AuthstnRspn";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AuthorisationResponse";
 			definition = "Result of the authorisation.";
 			maxOccurs = 1;
@@ -205,7 +208,7 @@ public class AuthorisationResult13 {
 			componentContext_lazy = () -> AuthorisationResult13.mmObject();
 			isDerived = false;
 			xmlTag = "RspnTrac";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ResponseTrace";
 			definition = "Trace of response by the entities in the path from the issuer to the ATM.";
 			minOccurs = 0;
@@ -249,11 +252,11 @@ public class AuthorisationResult13 {
 	 */
 	public static final MMMessageAttribute mmAuthorisationCode = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.CardPaymentValidation.mmAuthorisationCode;
+			businessElementTrace_lazy = () -> CardPaymentValidation.mmAuthorisationCode;
 			componentContext_lazy = () -> AuthorisationResult13.mmObject();
 			isDerived = false;
 			xmlTag = "AuthstnCd";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AuthorisationCode";
 			definition = "Value assigned by the authorising party.";
 			maxOccurs = 1;
@@ -297,11 +300,11 @@ public class AuthorisationResult13 {
 	 */
 	public static final MMMessageAssociationEnd mmAction = new MMMessageAssociationEnd() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.CardPaymentValidation.mmCardPayment;
+			businessElementTrace_lazy = () -> CardPaymentValidation.mmCardPayment;
 			componentContext_lazy = () -> AuthorisationResult13.mmObject();
 			isDerived = false;
 			xmlTag = "Actn";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Action";
 			definition = "Sequence of actions to be performed by the ATM to complete the transaction.";
 			minOccurs = 0;
@@ -313,11 +316,11 @@ public class AuthorisationResult13 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.AuthorisationResult13.mmAuthorisationEntity, com.tools20022.repository.msg.AuthorisationResult13.mmAuthorisationResponse,
-						com.tools20022.repository.msg.AuthorisationResult13.mmResponseTrace, com.tools20022.repository.msg.AuthorisationResult13.mmAuthorisationCode, com.tools20022.repository.msg.AuthorisationResult13.mmAction);
+				messageElement_lazy = () -> Arrays.asList(AuthorisationResult13.mmAuthorisationEntity, AuthorisationResult13.mmAuthorisationResponse, AuthorisationResult13.mmResponseTrace, AuthorisationResult13.mmAuthorisationCode,
+						AuthorisationResult13.mmAction);
 				trace_lazy = () -> CardPaymentValidation.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "AuthorisationResult13";
 				definition = "Outcome of the withdrawal authorisation.";
 			}

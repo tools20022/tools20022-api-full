@@ -20,8 +20,13 @@ package com.tools20022.repository.msg;
 import com.tools20022.metamodel.MMMessageAssociationEnd;
 import com.tools20022.metamodel.MMMessageAttribute;
 import com.tools20022.metamodel.MMMessageComponent;
+import com.tools20022.metamodel.MMRegistrationStatus;
+import com.tools20022.repository.area.secl.TradeLegNotificationCancellationV03;
+import com.tools20022.repository.area.secl.TradeLegNotificationV03;
 import com.tools20022.repository.choice.PartyIdentification33Choice;
+import com.tools20022.repository.entity.ClearingMemberRole;
 import com.tools20022.repository.entity.PartyIdentificationInformation;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -122,7 +127,7 @@ public class PartyIdentificationAndAccount31 {
 			componentContext_lazy = () -> PartyIdentificationAndAccount31.mmObject();
 			isDerived = false;
 			xmlTag = "Id";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Identification";
 			definition = "Identification of the party.";
 			maxOccurs = 1;
@@ -169,7 +174,7 @@ public class PartyIdentificationAndAccount31 {
 			componentContext_lazy = () -> PartyIdentificationAndAccount31.mmObject();
 			isDerived = false;
 			xmlTag = "AltrnId";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AlternateIdentification";
 			definition = "Alternate identification for a party.";
 			maxOccurs = 1;
@@ -211,7 +216,7 @@ public class PartyIdentificationAndAccount31 {
 			componentContext_lazy = () -> PartyIdentificationAndAccount31.mmObject();
 			isDerived = false;
 			xmlTag = "AddtlInf";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AdditionalInformation";
 			definition = "Provides additional information to a party identification.";
 			maxOccurs = 1;
@@ -258,11 +263,11 @@ public class PartyIdentificationAndAccount31 {
 	 */
 	public static final MMMessageAssociationEnd mmClearingAccount = new MMMessageAssociationEnd() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.ClearingMemberRole.mmClearingAccount;
+			businessElementTrace_lazy = () -> ClearingMemberRole.mmClearingAccount;
 			componentContext_lazy = () -> PartyIdentificationAndAccount31.mmObject();
 			isDerived = false;
 			xmlTag = "ClrAcct";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ClearingAccount";
 			definition = "Identifies the clearing member account at the Central counterparty through which the trade must be cleared (sometimes called position account).";
 			maxOccurs = 1;
@@ -275,12 +280,12 @@ public class PartyIdentificationAndAccount31 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.PartyIdentificationAndAccount31.mmIdentification, com.tools20022.repository.msg.PartyIdentificationAndAccount31.mmAlternateIdentification,
-						com.tools20022.repository.msg.PartyIdentificationAndAccount31.mmAdditionalInformation, com.tools20022.repository.msg.PartyIdentificationAndAccount31.mmClearingAccount);
-				messageBuildingBlock_lazy = () -> Arrays.asList(com.tools20022.repository.area.secl.TradeLegNotificationV03.mmNonClearingMember, com.tools20022.repository.area.secl.TradeLegNotificationCancellationV03.mmNonClearingMember);
+				messageElement_lazy = () -> Arrays.asList(PartyIdentificationAndAccount31.mmIdentification, PartyIdentificationAndAccount31.mmAlternateIdentification, PartyIdentificationAndAccount31.mmAdditionalInformation,
+						PartyIdentificationAndAccount31.mmClearingAccount);
+				messageBuildingBlock_lazy = () -> Arrays.asList(TradeLegNotificationV03.mmNonClearingMember, TradeLegNotificationCancellationV03.mmNonClearingMember);
 				trace_lazy = () -> PartyIdentificationInformation.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "PartyIdentificationAndAccount31";
 				definition = "Party and account details.";
 			}

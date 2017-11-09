@@ -17,12 +17,11 @@
 
 package com.tools20022.repository.entity;
 
-import com.tools20022.metamodel.MMBusinessAssociationEnd;
-import com.tools20022.metamodel.MMBusinessAttribute;
-import com.tools20022.metamodel.MMBusinessComponent;
+import com.tools20022.metamodel.*;
 import com.tools20022.repository.choice.*;
 import com.tools20022.repository.datatype.Max35Text;
 import com.tools20022.repository.entity.TradeIdentification;
+import com.tools20022.repository.GeneratedRepository;
 import com.tools20022.repository.msg.*;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
@@ -38,163 +37,6 @@ import java.util.concurrent.atomic.AtomicReference;
  * <p>
  * <strong>Constant fields:</strong>
  * <ul>
- * <li>{@linkplain com.tools20022.metamodel.MMBusinessComponent#getElement
- * element} =
- * <ul>
- * <li>
- * {@linkplain com.tools20022.repository.entity.SecuritiesTradeIdentification#mmIdentifiedTrade
- * SecuritiesTradeIdentification.mmIdentifiedTrade}</li>
- * <li>
- * {@linkplain com.tools20022.repository.entity.SecuritiesTradeIdentification#mmMarketInfrastructureTransactionIdentification
- * SecuritiesTradeIdentification.mmMarketInfrastructureTransactionIdentification
- * }</li>
- * <li>
- * {@linkplain com.tools20022.repository.entity.SecuritiesTradeIdentification#mmProcessorTransactionIdentification
- * SecuritiesTradeIdentification.mmProcessorTransactionIdentification}</li>
- * <li>
- * {@linkplain com.tools20022.repository.entity.SecuritiesTradeIdentification#mmPoolIdentification
- * SecuritiesTradeIdentification.mmPoolIdentification}</li>
- * <li>
- * {@linkplain com.tools20022.repository.entity.SecuritiesTradeIdentification#mmCollateralTransactionIdentification
- * SecuritiesTradeIdentification.mmCollateralTransactionIdentification}</li>
- * <li>
- * {@linkplain com.tools20022.repository.entity.SecuritiesTradeIdentification#mmClientTripartyCollateralTransactionIdentification
- * SecuritiesTradeIdentification.
- * mmClientTripartyCollateralTransactionIdentification}</li>
- * <li>
- * {@linkplain com.tools20022.repository.entity.SecuritiesTradeIdentification#mmTripartyAgentCollateralTransactionIdentification
- * SecuritiesTradeIdentification.
- * mmTripartyAgentCollateralTransactionIdentification}</li>
- * <li>
- * {@linkplain com.tools20022.repository.entity.SecuritiesTradeIdentification#mmBasketIdentification
- * SecuritiesTradeIdentification.mmBasketIdentification}</li>
- * <li>
- * {@linkplain com.tools20022.repository.entity.SecuritiesTradeIdentification#mmProgramIdentification
- * SecuritiesTradeIdentification.mmProgramIdentification}</li>
- * <li>
- * {@linkplain com.tools20022.repository.entity.SecuritiesTradeIdentification#mmBlockIdentification
- * SecuritiesTradeIdentification.mmBlockIdentification}</li>
- * <li>
- * {@linkplain com.tools20022.repository.entity.SecuritiesTradeIdentification#mmAllocationIdentification
- * SecuritiesTradeIdentification.mmAllocationIdentification}</li>
- * <li>
- * {@linkplain com.tools20022.repository.entity.SecuritiesTradeIdentification#mmComplianceIdentification
- * SecuritiesTradeIdentification.mmComplianceIdentification}</li>
- * <li>
- * {@linkplain com.tools20022.repository.entity.SecuritiesTradeIdentification#mmCSDTransactionIdentification
- * SecuritiesTradeIdentification.mmCSDTransactionIdentification}</li>
- * <li>
- * {@linkplain com.tools20022.repository.entity.SecuritiesTradeIdentification#mmCentralCounterpartyTransactionIdentification
- * SecuritiesTradeIdentification.mmCentralCounterpartyTransactionIdentification}
- * </li>
- * <li>
- * {@linkplain com.tools20022.repository.entity.SecuritiesTradeIdentification#mmCancellationRequestIdentification
- * SecuritiesTradeIdentification.mmCancellationRequestIdentification}</li>
- * </ul>
- * </li>
- * <li>
- * {@linkplain com.tools20022.metamodel.MMBusinessComponent#getAssociationDomain
- * associationDomain} =
- * <ul>
- * <li>
- * {@linkplain com.tools20022.repository.entity.SecuritiesTrade#mmSecuritiesTradeRelatedIdentifications
- * SecuritiesTrade.mmSecuritiesTradeRelatedIdentifications}</li>
- * </ul>
- * </li>
- * <li>
- * {@linkplain com.tools20022.metamodel.MMBusinessComponent#getDerivationElement
- * derivationElement} =
- * <ul>
- * <li>
- * {@linkplain com.tools20022.repository.msg.Identification1#mmIdentification
- * Identification1.mmIdentification}</li>
- * <li>
- * {@linkplain com.tools20022.repository.msg.Identification4#mmIdentification
- * Identification4.mmIdentification}</li>
- * <li>{@linkplain com.tools20022.repository.msg.Linkages1#mmReference
- * Linkages1.mmReference}</li>
- * <li>{@linkplain com.tools20022.repository.msg.Linkages21#mmReference
- * Linkages21.mmReference}</li>
- * <li>{@linkplain com.tools20022.repository.msg.Linkages4#mmReference
- * Linkages4.mmReference}</li>
- * <li>{@linkplain com.tools20022.repository.msg.Linkages22#mmReference
- * Linkages22.mmReference}</li>
- * <li>{@linkplain com.tools20022.repository.msg.Linkages9#mmReference
- * Linkages9.mmReference}</li>
- * <li>{@linkplain com.tools20022.repository.msg.Linkages14#mmReference
- * Linkages14.mmReference}</li>
- * <li>{@linkplain com.tools20022.repository.msg.Linkages17#mmReference
- * Linkages17.mmReference}</li>
- * <li>{@linkplain com.tools20022.repository.msg.Linkages24#mmReference
- * Linkages24.mmReference}</li>
- * <li>{@linkplain com.tools20022.repository.msg.Linkages3#mmReference
- * Linkages3.mmReference}</li>
- * <li>{@linkplain com.tools20022.repository.msg.Linkages6#mmReference
- * Linkages6.mmReference}</li>
- * <li>{@linkplain com.tools20022.repository.msg.Linkages10#mmReference
- * Linkages10.mmReference}</li>
- * <li>{@linkplain com.tools20022.repository.msg.Linkages11#mmReference
- * Linkages11.mmReference}</li>
- * <li>{@linkplain com.tools20022.repository.msg.Linkages16#mmReference
- * Linkages16.mmReference}</li>
- * <li>{@linkplain com.tools20022.repository.msg.Linkages23#mmReference
- * Linkages23.mmReference}</li>
- * <li>{@linkplain com.tools20022.repository.msg.Linkages7#mmReference
- * Linkages7.mmReference}</li>
- * <li>{@linkplain com.tools20022.repository.msg.Linkages12#mmReference
- * Linkages12.mmReference}</li>
- * <li>{@linkplain com.tools20022.repository.msg.Linkages15#mmReference
- * Linkages15.mmReference}</li>
- * <li>{@linkplain com.tools20022.repository.msg.Linkages18#mmReference
- * Linkages18.mmReference}</li>
- * <li>{@linkplain com.tools20022.repository.msg.Linkages2#mmReference
- * Linkages2.mmReference}</li>
- * <li>{@linkplain com.tools20022.repository.msg.Linkages8#mmReference
- * Linkages8.mmReference}</li>
- * <li>{@linkplain com.tools20022.repository.msg.Linkages5#mmReference
- * Linkages5.mmReference}</li>
- * <li>{@linkplain com.tools20022.repository.msg.Linkages13#mmReference
- * Linkages13.mmReference}</li>
- * <li>{@linkplain com.tools20022.repository.msg.Linkages19#mmReference
- * Linkages19.mmReference}</li>
- * <li>{@linkplain com.tools20022.repository.msg.Linkages25#mmReference
- * Linkages25.mmReference}</li>
- * <li>{@linkplain com.tools20022.repository.msg.Linkages26#mmReference
- * Linkages26.mmReference}</li>
- * <li>
- * {@linkplain com.tools20022.repository.msg.Identification14#mmIdentification
- * Identification14.mmIdentification}</li>
- * <li>
- * {@linkplain com.tools20022.repository.msg.MessageAndBusinessReference7#mmReference
- * MessageAndBusinessReference7.mmReference}</li>
- * <li>{@linkplain com.tools20022.repository.msg.Linkages36#mmReference
- * Linkages36.mmReference}</li>
- * <li>{@linkplain com.tools20022.repository.msg.Linkages37#mmReference
- * Linkages37.mmReference}</li>
- * <li>{@linkplain com.tools20022.repository.msg.Linkages38#mmReference
- * Linkages38.mmReference}</li>
- * <li>{@linkplain com.tools20022.repository.msg.Linkages40#mmReference
- * Linkages40.mmReference}</li>
- * <li>
- * {@linkplain com.tools20022.repository.msg.MessageAndBusinessReference8#mmReference
- * MessageAndBusinessReference8.mmReference}</li>
- * <li>{@linkplain com.tools20022.repository.msg.Linkages43#mmReference
- * Linkages43.mmReference}</li>
- * <li>{@linkplain com.tools20022.repository.msg.Linkages42#mmReference
- * Linkages42.mmReference}</li>
- * <li>
- * {@linkplain com.tools20022.repository.msg.Identification16#mmIdentification
- * Identification16.mmIdentification}</li>
- * <li>{@linkplain com.tools20022.repository.msg.Linkages49#mmReference
- * Linkages49.mmReference}</li>
- * <li>{@linkplain com.tools20022.repository.msg.Linkages48#mmReference
- * Linkages48.mmReference}</li>
- * </ul>
- * </li>
- * <li>{@linkplain com.tools20022.metamodel.MMBusinessComponent#getSuperType
- * superType} =
- * {@linkplain com.tools20022.repository.entity.TradeIdentification
- * TradeIdentification}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMBusinessComponent#getDerivationComponent
  * derivationComponent} =
@@ -486,6 +328,163 @@ import java.util.concurrent.atomic.AtomicReference;
  * </ul>
  * </li>
  * <li>
+ * {@linkplain com.tools20022.metamodel.MMBusinessComponent#getAssociationDomain
+ * associationDomain} =
+ * <ul>
+ * <li>
+ * {@linkplain com.tools20022.repository.entity.SecuritiesTrade#mmSecuritiesTradeRelatedIdentifications
+ * SecuritiesTrade.mmSecuritiesTradeRelatedIdentifications}</li>
+ * </ul>
+ * </li>
+ * <li>
+ * {@linkplain com.tools20022.metamodel.MMBusinessComponent#getDerivationElement
+ * derivationElement} =
+ * <ul>
+ * <li>
+ * {@linkplain com.tools20022.repository.msg.Identification1#mmIdentification
+ * Identification1.mmIdentification}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.msg.Identification4#mmIdentification
+ * Identification4.mmIdentification}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.Linkages1#mmReference
+ * Linkages1.mmReference}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.Linkages21#mmReference
+ * Linkages21.mmReference}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.Linkages4#mmReference
+ * Linkages4.mmReference}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.Linkages22#mmReference
+ * Linkages22.mmReference}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.Linkages9#mmReference
+ * Linkages9.mmReference}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.Linkages14#mmReference
+ * Linkages14.mmReference}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.Linkages17#mmReference
+ * Linkages17.mmReference}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.Linkages24#mmReference
+ * Linkages24.mmReference}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.Linkages3#mmReference
+ * Linkages3.mmReference}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.Linkages6#mmReference
+ * Linkages6.mmReference}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.Linkages10#mmReference
+ * Linkages10.mmReference}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.Linkages11#mmReference
+ * Linkages11.mmReference}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.Linkages16#mmReference
+ * Linkages16.mmReference}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.Linkages23#mmReference
+ * Linkages23.mmReference}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.Linkages7#mmReference
+ * Linkages7.mmReference}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.Linkages12#mmReference
+ * Linkages12.mmReference}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.Linkages15#mmReference
+ * Linkages15.mmReference}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.Linkages18#mmReference
+ * Linkages18.mmReference}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.Linkages2#mmReference
+ * Linkages2.mmReference}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.Linkages8#mmReference
+ * Linkages8.mmReference}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.Linkages5#mmReference
+ * Linkages5.mmReference}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.Linkages13#mmReference
+ * Linkages13.mmReference}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.Linkages19#mmReference
+ * Linkages19.mmReference}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.Linkages25#mmReference
+ * Linkages25.mmReference}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.Linkages26#mmReference
+ * Linkages26.mmReference}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.msg.Identification14#mmIdentification
+ * Identification14.mmIdentification}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.msg.MessageAndBusinessReference7#mmReference
+ * MessageAndBusinessReference7.mmReference}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.Linkages36#mmReference
+ * Linkages36.mmReference}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.Linkages37#mmReference
+ * Linkages37.mmReference}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.Linkages38#mmReference
+ * Linkages38.mmReference}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.Linkages40#mmReference
+ * Linkages40.mmReference}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.msg.MessageAndBusinessReference8#mmReference
+ * MessageAndBusinessReference8.mmReference}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.Linkages43#mmReference
+ * Linkages43.mmReference}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.Linkages42#mmReference
+ * Linkages42.mmReference}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.msg.Identification16#mmIdentification
+ * Identification16.mmIdentification}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.Linkages49#mmReference
+ * Linkages49.mmReference}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.Linkages48#mmReference
+ * Linkages48.mmReference}</li>
+ * </ul>
+ * </li>
+ * <li>{@linkplain com.tools20022.metamodel.MMBusinessComponent#getSuperType
+ * superType} =
+ * {@linkplain com.tools20022.repository.entity.TradeIdentification
+ * TradeIdentification}</li>
+ * <li>{@linkplain com.tools20022.metamodel.MMBusinessComponent#getElement
+ * element} =
+ * <ul>
+ * <li>
+ * {@linkplain com.tools20022.repository.entity.SecuritiesTradeIdentification#mmIdentifiedTrade
+ * SecuritiesTradeIdentification.mmIdentifiedTrade}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.entity.SecuritiesTradeIdentification#mmMarketInfrastructureTransactionIdentification
+ * SecuritiesTradeIdentification.mmMarketInfrastructureTransactionIdentification
+ * }</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.entity.SecuritiesTradeIdentification#mmProcessorTransactionIdentification
+ * SecuritiesTradeIdentification.mmProcessorTransactionIdentification}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.entity.SecuritiesTradeIdentification#mmPoolIdentification
+ * SecuritiesTradeIdentification.mmPoolIdentification}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.entity.SecuritiesTradeIdentification#mmCollateralTransactionIdentification
+ * SecuritiesTradeIdentification.mmCollateralTransactionIdentification}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.entity.SecuritiesTradeIdentification#mmClientTripartyCollateralTransactionIdentification
+ * SecuritiesTradeIdentification.
+ * mmClientTripartyCollateralTransactionIdentification}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.entity.SecuritiesTradeIdentification#mmTripartyAgentCollateralTransactionIdentification
+ * SecuritiesTradeIdentification.
+ * mmTripartyAgentCollateralTransactionIdentification}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.entity.SecuritiesTradeIdentification#mmBasketIdentification
+ * SecuritiesTradeIdentification.mmBasketIdentification}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.entity.SecuritiesTradeIdentification#mmProgramIdentification
+ * SecuritiesTradeIdentification.mmProgramIdentification}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.entity.SecuritiesTradeIdentification#mmBlockIdentification
+ * SecuritiesTradeIdentification.mmBlockIdentification}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.entity.SecuritiesTradeIdentification#mmAllocationIdentification
+ * SecuritiesTradeIdentification.mmAllocationIdentification}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.entity.SecuritiesTradeIdentification#mmComplianceIdentification
+ * SecuritiesTradeIdentification.mmComplianceIdentification}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.entity.SecuritiesTradeIdentification#mmCSDTransactionIdentification
+ * SecuritiesTradeIdentification.mmCSDTransactionIdentification}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.entity.SecuritiesTradeIdentification#mmCentralCounterpartyTransactionIdentification
+ * SecuritiesTradeIdentification.mmCentralCounterpartyTransactionIdentification}
+ * </li>
+ * <li>
+ * {@linkplain com.tools20022.repository.entity.SecuritiesTradeIdentification#mmCancellationRequestIdentification
+ * SecuritiesTradeIdentification.mmCancellationRequestIdentification}</li>
+ * </ul>
+ * </li>
+ * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
  * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
@@ -544,13 +543,13 @@ public class SecuritiesTradeIdentification extends TradeIdentification {
 		{
 			elementContext_lazy = () -> SecuritiesTradeIdentification.mmObject();
 			isDerived = false;
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "IdentifiedTrade";
 			definition = "Trade for which one or more identifications are provided.";
 			maxOccurs = 1;
 			minOccurs = 1;
 			opposite_lazy = () -> com.tools20022.repository.entity.SecuritiesTrade.mmSecuritiesTradeRelatedIdentifications;
-			aggregation = com.tools20022.metamodel.MMAggregation.NONE;
+			aggregation = MMAggregation.NONE;
 			type_lazy = () -> com.tools20022.repository.entity.SecuritiesTrade.mmObject();
 		}
 	};
@@ -1146,97 +1145,70 @@ public class SecuritiesTradeIdentification extends TradeIdentification {
 	 */
 	public static final MMBusinessAttribute mmMarketInfrastructureTransactionIdentification = new MMBusinessAttribute() {
 		{
-			derivation_lazy = () -> Arrays.asList(com.tools20022.repository.msg.TransactionIdentifications3.mmMarketInfrastructureTransactionIdentification,
-					com.tools20022.repository.msg.TransactionIdentifications10.mmMarketInfrastructureTransactionIdentification, com.tools20022.repository.msg.TransactionIdentifications15.mmMarketInfrastructureTransactionIdentification,
-					com.tools20022.repository.msg.TransactionIdentifications19.mmMarketInfrastructureTransactionIdentification, com.tools20022.repository.msg.TransactionDetails41.mmMarketInfrastructureTransactionIdentification,
-					com.tools20022.repository.msg.TransactionDetails43.mmMarketInfrastructureTransactionIdentification, com.tools20022.repository.choice.References5Choice.mmMarketInfrastructureTransactionIdentification,
-					com.tools20022.repository.choice.References11Choice.mmMarketInfrastructureTransactionIdentification, com.tools20022.repository.choice.References19Choice.mmMarketInfrastructureTransactionIdentification,
-					com.tools20022.repository.choice.References21Choice.mmMarketInfrastructureTransactionIdentification, com.tools20022.repository.choice.References27Choice.mmMarketInfrastructureTransactionIdentification,
-					com.tools20022.repository.choice.References33Choice.mmMarketInfrastructureTransactionIdentification, com.tools20022.repository.choice.References14Choice.mmMarketInfrastructureTransactionIdentification,
-					com.tools20022.repository.choice.References16Choice.mmMarketInfrastructureTransactionIdentification, com.tools20022.repository.choice.References25Choice.mmMarketInfrastructureTransactionIdentification,
-					com.tools20022.repository.choice.References32Choice.mmMarketInfrastructureTransactionIdentification, com.tools20022.repository.msg.References1.mmMarketInfrastructureTransactionIdentification,
-					com.tools20022.repository.choice.References6Choice.mmMarketInfrastructureTransactionIdentification, com.tools20022.repository.msg.References2.mmMarketInfrastructureTransactionIdentification,
-					com.tools20022.repository.choice.References10Choice.mmMarketInfrastructureTransactionIdentification, com.tools20022.repository.msg.References7.mmMarketInfrastructureTransactionIdentification,
-					com.tools20022.repository.choice.References13Choice.mmMarketInfrastructureTransactionIdentification, com.tools20022.repository.msg.References8.mmMarketInfrastructureTransactionIdentification,
-					com.tools20022.repository.choice.References15Choice.mmMarketInfrastructureTransactionIdentification, com.tools20022.repository.msg.References9.mmMarketInfrastructureTransactionIdentification,
-					com.tools20022.repository.choice.References24Choice.mmMarketInfrastructureTransactionIdentification, com.tools20022.repository.msg.References13.mmMarketInfrastructureTransactionIdentification,
-					com.tools20022.repository.choice.References31Choice.mmMarketInfrastructureTransactionIdentification, com.tools20022.repository.msg.SettlementTypeAndIdentification1.mmMarketInfrastructureTransactionIdentification,
-					com.tools20022.repository.msg.SettlementTypeAndIdentification8.mmMarketInfrastructureTransactionIdentification,
-					com.tools20022.repository.msg.SettlementTypeAndIdentification9.mmMarketInfrastructureTransactionIdentification,
-					com.tools20022.repository.msg.SettlementTypeAndIdentification11.mmMarketInfrastructureTransactionIdentification,
-					com.tools20022.repository.msg.SettlementTypeAndIdentification15.mmMarketInfrastructureTransactionIdentification,
-					com.tools20022.repository.msg.SettlementTypeAndIdentification17.mmMarketInfrastructureTransactionIdentification,
-					com.tools20022.repository.msg.SettlementTypeAndIdentification10.mmMarketInfrastructureTransactionIdentification,
-					com.tools20022.repository.msg.SettlementTypeAndIdentification12.mmMarketInfrastructureTransactionIdentification, com.tools20022.repository.msg.TransactionIdentifications2.mmMarketInfrastructureTransactionIdentification,
-					com.tools20022.repository.msg.TransactionIdentifications7.mmMarketInfrastructureTransactionIdentification, com.tools20022.repository.msg.TransactionIdentifications9.mmMarketInfrastructureTransactionIdentification,
-					com.tools20022.repository.msg.TransactionIdentifications13.mmMarketInfrastructureTransactionIdentification, com.tools20022.repository.msg.TransactionIdentifications16.mmMarketInfrastructureTransactionIdentification,
-					com.tools20022.repository.msg.TransactionIdentifications22.mmMarketInfrastructureTransactionIdentification, com.tools20022.repository.msg.Transaction7.mmMarketInfrastructureTransactionIdentification,
-					com.tools20022.repository.msg.Transaction8.mmMarketInfrastructureTransactionIdentification, com.tools20022.repository.msg.Transaction9.mmMarketInfrastructureTransactionIdentification,
-					com.tools20022.repository.msg.Transaction10.mmMarketInfrastructureTransactionIdentification, com.tools20022.repository.msg.Transaction14.mmMarketInfrastructureTransactionIdentification,
-					com.tools20022.repository.msg.Transaction12.mmMarketInfrastructureTransactionIdentification, com.tools20022.repository.msg.Transaction15.mmMarketInfrastructureTransactionIdentification,
-					com.tools20022.repository.msg.Transaction16.mmMarketInfrastructureTransactionIdentification, com.tools20022.repository.msg.Transaction20.mmMarketInfrastructureTransactionIdentification,
-					com.tools20022.repository.msg.Transaction19.mmMarketInfrastructureTransactionIdentification, com.tools20022.repository.msg.Transaction23.mmMarketInfrastructureTransactionIdentification,
-					com.tools20022.repository.msg.Transaction22.mmMarketInfrastructureTransactionIdentification, com.tools20022.repository.msg.Transaction28.mmMarketInfrastructureTransactionIdentification,
-					com.tools20022.repository.msg.Transaction27.mmMarketInfrastructureTransactionIdentification, com.tools20022.repository.msg.Transaction30.mmMarketInfrastructureTransactionIdentification,
-					com.tools20022.repository.msg.Transaction31.mmMarketInfrastructureTransactionIdentification, com.tools20022.repository.msg.Transaction6.mmMarketInfrastructureTransactionIdentification,
-					com.tools20022.repository.msg.Transaction11.mmMarketInfrastructureTransactionIdentification, com.tools20022.repository.msg.Transaction13.mmMarketInfrastructureTransactionIdentification,
-					com.tools20022.repository.msg.Transaction17.mmMarketInfrastructureTransactionIdentification, com.tools20022.repository.msg.Transaction18.mmMarketInfrastructureTransactionIdentification,
-					com.tools20022.repository.msg.Transaction21.mmMarketInfrastructureTransactionIdentification, com.tools20022.repository.msg.Transaction29.mmMarketInfrastructureTransactionIdentification,
-					com.tools20022.repository.msg.Transaction32.mmMarketInfrastructureTransactionIdentification, com.tools20022.repository.msg.Identification2.mmMarketInfrastructureTransactionIdentification,
-					com.tools20022.repository.choice.IdentificationReference8Choice.mmMarketInfrastructureTransactionIdentification,
-					com.tools20022.repository.choice.IdentificationReference11Choice.mmMarketInfrastructureTransactionIdentification, com.tools20022.repository.msg.TransactionReferences3.mmMarketInfrastructureTransactionIdentification,
-					com.tools20022.repository.msg.TransactionDetails13.mmMarketInfrastructureTransactionIdentification, com.tools20022.repository.msg.SecuritiesTradeDetails4.mmMarketInfrastructureTransactionIdentification,
-					com.tools20022.repository.msg.SecuritiesTradeDetails17.mmMarketInfrastructureTransactionIdentification, com.tools20022.repository.msg.Identification7.mmMarketInfrastructureTransactionIdentification,
-					com.tools20022.repository.msg.TransactionIdentifications4.mmMarketInfrastructureTransactionIdentification, com.tools20022.repository.msg.TransactionIdentifications11.mmMarketInfrastructureTransactionIdentification,
-					com.tools20022.repository.msg.TransactionDetails11.mmMarketInfrastructureTransactionIdentification, com.tools20022.repository.msg.Identification6.mmMarketInfrastructureTransactionIdentification,
-					com.tools20022.repository.msg.TransactionDetails21.mmMarketInfrastructureTransactionIdentification, com.tools20022.repository.msg.SecuritiesTradeDetails10.mmMarketInfrastructureTransactionIdentification,
-					com.tools20022.repository.msg.SecuritiesTradeDetails22.mmMarketInfrastructureTransactionIdentification, com.tools20022.repository.msg.SecuritiesTradeDetails23.mmMarketInfrastructureTransactionIdentification,
-					com.tools20022.repository.msg.SecuritiesTradeDetails29.mmMarketInfrastructureTransactionIdentification, com.tools20022.repository.msg.TransactionIdentification2.mmMarketInfrastructureTransactionIdentification,
-					com.tools20022.repository.msg.TransactionIdentification3.mmMarketInfrastructureTransactionIdentification, com.tools20022.repository.msg.TransactionIdentifications18.mmMarketInfrastructureTransactionIdentification,
-					com.tools20022.repository.msg.TransactionIdentifications20.mmMarketInfrastructureTransactionIdentification, com.tools20022.repository.msg.Identification5.mmMarketInfrastructureTransactionIdentification,
-					com.tools20022.repository.msg.Identification8.mmMarketInfrastructureTransactionIdentification, com.tools20022.repository.msg.Identification11.mmMarketInfrastructureTransactionIdentification,
-					com.tools20022.repository.msg.Identification13.mmMarketInfrastructureTransactionIdentification, com.tools20022.repository.msg.TransactionDetails15.mmMarketInfrastructureTransactionIdentification,
-					com.tools20022.repository.msg.TransactionIdentifications8.mmMarketInfrastructureTransactionIdentification, com.tools20022.repository.msg.TransactionIdentifications14.mmMarketInfrastructureTransactionIdentification,
-					com.tools20022.repository.msg.TransactionIdentifications17.mmMarketInfrastructureTransactionIdentification, com.tools20022.repository.msg.TransactionIdentifications23.mmMarketInfrastructureTransactionIdentification,
-					com.tools20022.repository.msg.Identification9.mmMarketInfrastructureTransactionIdentification, com.tools20022.repository.msg.TransactionIdentifications5.mmMarketInfrastructureTransactionIdentification,
-					com.tools20022.repository.msg.TransactionIdentifications12.mmMarketInfrastructureTransactionIdentification, com.tools20022.repository.choice.References34Choice.mmMarketInfrastructureTransactionIdentification,
-					com.tools20022.repository.msg.References14.mmMarketInfrastructureTransactionIdentification, com.tools20022.repository.msg.IntraBalanceMovement1.mmMarketInfrastructureTransactionIdentification,
-					com.tools20022.repository.msg.Transaction25.mmMarketInfrastructureTransactionIdentification, com.tools20022.repository.choice.References36Choice.mmMarketInfrastructureTransactionIdentification,
-					com.tools20022.repository.choice.References35Choice.mmMarketInfrastructureTransactionIdentification, com.tools20022.repository.msg.TransactionIdentifications24.mmMarketInfrastructureTransactionIdentification,
-					com.tools20022.repository.msg.Identification3.mmMarketInfrastructureTransactionIdentification, com.tools20022.repository.msg.Transaction34.mmMarketInfrastructureTransactionIdentification,
-					com.tools20022.repository.msg.TransactionIdentifications25.mmMarketInfrastructureTransactionIdentification, com.tools20022.repository.msg.TransactionDetails64.mmMarketInfrastructureTransactionIdentification,
-					com.tools20022.repository.msg.Transaction35.mmMarketInfrastructureTransactionIdentification, com.tools20022.repository.msg.Transaction36.mmMarketInfrastructureTransactionIdentification,
-					com.tools20022.repository.msg.SecuritiesTradeDetails35.mmMarketInfrastructureTransactionIdentification, com.tools20022.repository.msg.References16.mmMarketInfrastructureTransactionIdentification,
-					com.tools20022.repository.msg.TransactionIdentifications26.mmMarketInfrastructureTransactionIdentification, com.tools20022.repository.msg.Transaction38.mmMarketInfrastructureTransactionIdentification,
-					com.tools20022.repository.msg.TransactionDetails65.mmMarketInfrastructureTransactionIdentification, com.tools20022.repository.msg.SecuritiesTradeDetails42.mmMarketInfrastructureTransactionIdentification,
-					com.tools20022.repository.msg.References17.mmMarketInfrastructureTransactionIdentification, com.tools20022.repository.msg.Transaction39.mmMarketInfrastructureTransactionIdentification,
-					com.tools20022.repository.msg.Transaction37.mmMarketInfrastructureTransactionIdentification, com.tools20022.repository.msg.Transaction41.mmMarketInfrastructureTransactionIdentification,
-					com.tools20022.repository.msg.Transaction40.mmMarketInfrastructureTransactionIdentification, com.tools20022.repository.msg.Transaction43.mmMarketInfrastructureTransactionIdentification,
-					com.tools20022.repository.msg.Transaction42.mmMarketInfrastructureTransactionIdentification, com.tools20022.repository.msg.SecuritiesTradeDetails49.mmMarketInfrastructureTransactionIdentification,
-					com.tools20022.repository.msg.Transaction47.mmMarketInfrastructureTransactionIdentification, com.tools20022.repository.msg.TransactionDetails76.mmMarketInfrastructureTransactionIdentification,
-					com.tools20022.repository.msg.Transaction45.mmMarketInfrastructureTransactionIdentification, com.tools20022.repository.msg.Transaction46.mmMarketInfrastructureTransactionIdentification,
-					com.tools20022.repository.msg.TransactionIdentification6.mmMarketInfrastructureTransactionIdentification, com.tools20022.repository.msg.TransactionIdentifications29.mmMarketInfrastructureTransactionIdentification,
-					com.tools20022.repository.msg.SettlementTypeAndIdentification19.mmMarketInfrastructureTransactionIdentification,
-					com.tools20022.repository.msg.TransactionIdentifications31.mmMarketInfrastructureTransactionIdentification, com.tools20022.repository.msg.TransactionIdentifications33.mmMarketInfrastructureTransactionIdentification,
-					com.tools20022.repository.msg.TransactionIdentifications30.mmMarketInfrastructureTransactionIdentification, com.tools20022.repository.choice.References46Choice.mmMarketInfrastructureTransactionIdentification,
-					com.tools20022.repository.msg.Identification15.mmMarketInfrastructureTransactionIdentification, com.tools20022.repository.choice.References41Choice.mmMarketInfrastructureTransactionIdentification,
-					com.tools20022.repository.choice.References42Choice.mmMarketInfrastructureTransactionIdentification, com.tools20022.repository.msg.References18.mmMarketInfrastructureTransactionIdentification,
-					com.tools20022.repository.msg.Transaction49.mmMarketInfrastructureTransactionIdentification, com.tools20022.repository.msg.TransactionIdentifications39.mmMarketInfrastructureTransactionIdentification,
-					com.tools20022.repository.msg.SecuritiesTradeDetails61.mmMarketInfrastructureTransactionIdentification, com.tools20022.repository.msg.TransactionIdentification7.mmMarketInfrastructureTransactionIdentification,
-					com.tools20022.repository.msg.TransactionIdentifications37.mmMarketInfrastructureTransactionIdentification, com.tools20022.repository.msg.TransactionIdentifications34.mmMarketInfrastructureTransactionIdentification,
-					com.tools20022.repository.msg.SettlementTypeAndIdentification24.mmMarketInfrastructureTransactionIdentification, com.tools20022.repository.msg.TransactionDetails85.mmMarketInfrastructureTransactionIdentification,
-					com.tools20022.repository.msg.TransactionIdentifications38.mmMarketInfrastructureTransactionIdentification, com.tools20022.repository.msg.Identification24.mmMarketInfrastructureTransactionIdentification,
-					com.tools20022.repository.msg.Transaction50.mmMarketInfrastructureTransactionIdentification, com.tools20022.repository.choice.References50Choice.mmMarketInfrastructureTransactionIdentification,
-					com.tools20022.repository.choice.References51Choice.mmMarketInfrastructureTransactionIdentification, com.tools20022.repository.msg.Transaction48.mmMarketInfrastructureTransactionIdentification,
-					com.tools20022.repository.msg.References21.mmMarketInfrastructureTransactionIdentification, com.tools20022.repository.choice.References54Choice.mmMarketInfrastructureTransactionIdentification,
-					com.tools20022.repository.msg.Transaction53.mmMarketInfrastructureTransactionIdentification, com.tools20022.repository.msg.SecuritiesTradeDetails68.mmMarketInfrastructureTransactionIdentification,
-					com.tools20022.repository.msg.Transaction54.mmMarketInfrastructureTransactionIdentification, com.tools20022.repository.msg.Transaction52.mmMarketInfrastructureTransactionIdentification,
-					com.tools20022.repository.msg.SecuritiesTradeDetails69.mmMarketInfrastructureTransactionIdentification, com.tools20022.repository.msg.Transaction57.mmMarketInfrastructureTransactionIdentification,
-					com.tools20022.repository.msg.Transaction56.mmMarketInfrastructureTransactionIdentification, com.tools20022.repository.msg.Transaction55.mmMarketInfrastructureTransactionIdentification,
-					com.tools20022.repository.msg.TransactionDetails101.mmMarketInfrastructureTransactionIdentification);
+			derivation_lazy = () -> Arrays.asList(TransactionIdentifications3.mmMarketInfrastructureTransactionIdentification, TransactionIdentifications10.mmMarketInfrastructureTransactionIdentification,
+					TransactionIdentifications15.mmMarketInfrastructureTransactionIdentification, TransactionIdentifications19.mmMarketInfrastructureTransactionIdentification,
+					TransactionDetails41.mmMarketInfrastructureTransactionIdentification, TransactionDetails43.mmMarketInfrastructureTransactionIdentification, References5Choice.mmMarketInfrastructureTransactionIdentification,
+					References11Choice.mmMarketInfrastructureTransactionIdentification, References19Choice.mmMarketInfrastructureTransactionIdentification, References21Choice.mmMarketInfrastructureTransactionIdentification,
+					References27Choice.mmMarketInfrastructureTransactionIdentification, References33Choice.mmMarketInfrastructureTransactionIdentification, References14Choice.mmMarketInfrastructureTransactionIdentification,
+					References16Choice.mmMarketInfrastructureTransactionIdentification, References25Choice.mmMarketInfrastructureTransactionIdentification, References32Choice.mmMarketInfrastructureTransactionIdentification,
+					References1.mmMarketInfrastructureTransactionIdentification, References6Choice.mmMarketInfrastructureTransactionIdentification, References2.mmMarketInfrastructureTransactionIdentification,
+					References10Choice.mmMarketInfrastructureTransactionIdentification, References7.mmMarketInfrastructureTransactionIdentification, References13Choice.mmMarketInfrastructureTransactionIdentification,
+					References8.mmMarketInfrastructureTransactionIdentification, References15Choice.mmMarketInfrastructureTransactionIdentification, References9.mmMarketInfrastructureTransactionIdentification,
+					References24Choice.mmMarketInfrastructureTransactionIdentification, References13.mmMarketInfrastructureTransactionIdentification, References31Choice.mmMarketInfrastructureTransactionIdentification,
+					SettlementTypeAndIdentification1.mmMarketInfrastructureTransactionIdentification, SettlementTypeAndIdentification8.mmMarketInfrastructureTransactionIdentification,
+					SettlementTypeAndIdentification9.mmMarketInfrastructureTransactionIdentification, SettlementTypeAndIdentification11.mmMarketInfrastructureTransactionIdentification,
+					SettlementTypeAndIdentification15.mmMarketInfrastructureTransactionIdentification, SettlementTypeAndIdentification17.mmMarketInfrastructureTransactionIdentification,
+					SettlementTypeAndIdentification10.mmMarketInfrastructureTransactionIdentification, SettlementTypeAndIdentification12.mmMarketInfrastructureTransactionIdentification,
+					TransactionIdentifications2.mmMarketInfrastructureTransactionIdentification, TransactionIdentifications7.mmMarketInfrastructureTransactionIdentification,
+					TransactionIdentifications9.mmMarketInfrastructureTransactionIdentification, TransactionIdentifications13.mmMarketInfrastructureTransactionIdentification,
+					TransactionIdentifications16.mmMarketInfrastructureTransactionIdentification, TransactionIdentifications22.mmMarketInfrastructureTransactionIdentification, Transaction7.mmMarketInfrastructureTransactionIdentification,
+					Transaction8.mmMarketInfrastructureTransactionIdentification, Transaction9.mmMarketInfrastructureTransactionIdentification, Transaction10.mmMarketInfrastructureTransactionIdentification,
+					Transaction14.mmMarketInfrastructureTransactionIdentification, Transaction12.mmMarketInfrastructureTransactionIdentification, Transaction15.mmMarketInfrastructureTransactionIdentification,
+					Transaction16.mmMarketInfrastructureTransactionIdentification, Transaction20.mmMarketInfrastructureTransactionIdentification, Transaction19.mmMarketInfrastructureTransactionIdentification,
+					Transaction23.mmMarketInfrastructureTransactionIdentification, Transaction22.mmMarketInfrastructureTransactionIdentification, Transaction28.mmMarketInfrastructureTransactionIdentification,
+					Transaction27.mmMarketInfrastructureTransactionIdentification, Transaction30.mmMarketInfrastructureTransactionIdentification, Transaction31.mmMarketInfrastructureTransactionIdentification,
+					Transaction6.mmMarketInfrastructureTransactionIdentification, Transaction11.mmMarketInfrastructureTransactionIdentification, Transaction13.mmMarketInfrastructureTransactionIdentification,
+					Transaction17.mmMarketInfrastructureTransactionIdentification, Transaction18.mmMarketInfrastructureTransactionIdentification, Transaction21.mmMarketInfrastructureTransactionIdentification,
+					Transaction29.mmMarketInfrastructureTransactionIdentification, Transaction32.mmMarketInfrastructureTransactionIdentification, Identification2.mmMarketInfrastructureTransactionIdentification,
+					IdentificationReference8Choice.mmMarketInfrastructureTransactionIdentification, IdentificationReference11Choice.mmMarketInfrastructureTransactionIdentification,
+					TransactionReferences3.mmMarketInfrastructureTransactionIdentification, TransactionDetails13.mmMarketInfrastructureTransactionIdentification, SecuritiesTradeDetails4.mmMarketInfrastructureTransactionIdentification,
+					SecuritiesTradeDetails17.mmMarketInfrastructureTransactionIdentification, Identification7.mmMarketInfrastructureTransactionIdentification, TransactionIdentifications4.mmMarketInfrastructureTransactionIdentification,
+					TransactionIdentifications11.mmMarketInfrastructureTransactionIdentification, TransactionDetails11.mmMarketInfrastructureTransactionIdentification, Identification6.mmMarketInfrastructureTransactionIdentification,
+					TransactionDetails21.mmMarketInfrastructureTransactionIdentification, SecuritiesTradeDetails10.mmMarketInfrastructureTransactionIdentification, SecuritiesTradeDetails22.mmMarketInfrastructureTransactionIdentification,
+					SecuritiesTradeDetails23.mmMarketInfrastructureTransactionIdentification, SecuritiesTradeDetails29.mmMarketInfrastructureTransactionIdentification,
+					TransactionIdentification2.mmMarketInfrastructureTransactionIdentification, TransactionIdentification3.mmMarketInfrastructureTransactionIdentification,
+					TransactionIdentifications18.mmMarketInfrastructureTransactionIdentification, TransactionIdentifications20.mmMarketInfrastructureTransactionIdentification,
+					Identification5.mmMarketInfrastructureTransactionIdentification, Identification8.mmMarketInfrastructureTransactionIdentification, Identification11.mmMarketInfrastructureTransactionIdentification,
+					Identification13.mmMarketInfrastructureTransactionIdentification, TransactionDetails15.mmMarketInfrastructureTransactionIdentification, TransactionIdentifications8.mmMarketInfrastructureTransactionIdentification,
+					TransactionIdentifications14.mmMarketInfrastructureTransactionIdentification, TransactionIdentifications17.mmMarketInfrastructureTransactionIdentification,
+					TransactionIdentifications23.mmMarketInfrastructureTransactionIdentification, Identification9.mmMarketInfrastructureTransactionIdentification, TransactionIdentifications5.mmMarketInfrastructureTransactionIdentification,
+					TransactionIdentifications12.mmMarketInfrastructureTransactionIdentification, References34Choice.mmMarketInfrastructureTransactionIdentification, References14.mmMarketInfrastructureTransactionIdentification,
+					IntraBalanceMovement1.mmMarketInfrastructureTransactionIdentification, Transaction25.mmMarketInfrastructureTransactionIdentification, References36Choice.mmMarketInfrastructureTransactionIdentification,
+					References35Choice.mmMarketInfrastructureTransactionIdentification, TransactionIdentifications24.mmMarketInfrastructureTransactionIdentification, Identification3.mmMarketInfrastructureTransactionIdentification,
+					Transaction34.mmMarketInfrastructureTransactionIdentification, TransactionIdentifications25.mmMarketInfrastructureTransactionIdentification, TransactionDetails64.mmMarketInfrastructureTransactionIdentification,
+					Transaction35.mmMarketInfrastructureTransactionIdentification, Transaction36.mmMarketInfrastructureTransactionIdentification, SecuritiesTradeDetails35.mmMarketInfrastructureTransactionIdentification,
+					References16.mmMarketInfrastructureTransactionIdentification, TransactionIdentifications26.mmMarketInfrastructureTransactionIdentification, Transaction38.mmMarketInfrastructureTransactionIdentification,
+					TransactionDetails65.mmMarketInfrastructureTransactionIdentification, SecuritiesTradeDetails42.mmMarketInfrastructureTransactionIdentification, References17.mmMarketInfrastructureTransactionIdentification,
+					Transaction39.mmMarketInfrastructureTransactionIdentification, Transaction37.mmMarketInfrastructureTransactionIdentification, Transaction41.mmMarketInfrastructureTransactionIdentification,
+					Transaction40.mmMarketInfrastructureTransactionIdentification, Transaction43.mmMarketInfrastructureTransactionIdentification, Transaction42.mmMarketInfrastructureTransactionIdentification,
+					SecuritiesTradeDetails49.mmMarketInfrastructureTransactionIdentification, Transaction47.mmMarketInfrastructureTransactionIdentification, TransactionDetails76.mmMarketInfrastructureTransactionIdentification,
+					Transaction45.mmMarketInfrastructureTransactionIdentification, Transaction46.mmMarketInfrastructureTransactionIdentification, TransactionIdentification6.mmMarketInfrastructureTransactionIdentification,
+					TransactionIdentifications29.mmMarketInfrastructureTransactionIdentification, SettlementTypeAndIdentification19.mmMarketInfrastructureTransactionIdentification,
+					TransactionIdentifications31.mmMarketInfrastructureTransactionIdentification, TransactionIdentifications33.mmMarketInfrastructureTransactionIdentification,
+					TransactionIdentifications30.mmMarketInfrastructureTransactionIdentification, References46Choice.mmMarketInfrastructureTransactionIdentification, Identification15.mmMarketInfrastructureTransactionIdentification,
+					References41Choice.mmMarketInfrastructureTransactionIdentification, References42Choice.mmMarketInfrastructureTransactionIdentification, References18.mmMarketInfrastructureTransactionIdentification,
+					Transaction49.mmMarketInfrastructureTransactionIdentification, TransactionIdentifications39.mmMarketInfrastructureTransactionIdentification, SecuritiesTradeDetails61.mmMarketInfrastructureTransactionIdentification,
+					TransactionIdentification7.mmMarketInfrastructureTransactionIdentification, TransactionIdentifications37.mmMarketInfrastructureTransactionIdentification,
+					TransactionIdentifications34.mmMarketInfrastructureTransactionIdentification, SettlementTypeAndIdentification24.mmMarketInfrastructureTransactionIdentification,
+					TransactionDetails85.mmMarketInfrastructureTransactionIdentification, TransactionIdentifications38.mmMarketInfrastructureTransactionIdentification, Identification24.mmMarketInfrastructureTransactionIdentification,
+					Transaction50.mmMarketInfrastructureTransactionIdentification, References50Choice.mmMarketInfrastructureTransactionIdentification, References51Choice.mmMarketInfrastructureTransactionIdentification,
+					Transaction48.mmMarketInfrastructureTransactionIdentification, References21.mmMarketInfrastructureTransactionIdentification, References54Choice.mmMarketInfrastructureTransactionIdentification,
+					Transaction53.mmMarketInfrastructureTransactionIdentification, SecuritiesTradeDetails68.mmMarketInfrastructureTransactionIdentification, Transaction54.mmMarketInfrastructureTransactionIdentification,
+					Transaction52.mmMarketInfrastructureTransactionIdentification, SecuritiesTradeDetails69.mmMarketInfrastructureTransactionIdentification, Transaction57.mmMarketInfrastructureTransactionIdentification,
+					Transaction56.mmMarketInfrastructureTransactionIdentification, Transaction55.mmMarketInfrastructureTransactionIdentification, TransactionDetails101.mmMarketInfrastructureTransactionIdentification);
 			elementContext_lazy = () -> SecuritiesTradeIdentification.mmObject();
 			isDerived = false;
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "MarketInfrastructureTransactionIdentification";
 			definition = "Identification of a transaction assigned by a market infrastructure other than a central securities depository, for example, Target2-Securities.";
 			maxOccurs = 1;
@@ -1680,76 +1652,51 @@ public class SecuritiesTradeIdentification extends TradeIdentification {
 	 */
 	public static final MMBusinessAttribute mmProcessorTransactionIdentification = new MMBusinessAttribute() {
 		{
-			derivation_lazy = () -> Arrays.asList(com.tools20022.repository.msg.TransactionIdentifications10.mmProcessorTransactionIdentification,
-					com.tools20022.repository.msg.TransactionIdentifications15.mmProcessorTransactionIdentification, com.tools20022.repository.msg.TransactionIdentifications19.mmProcessorTransactionIdentification,
-					com.tools20022.repository.msg.TransactionDetails41.mmProcessorTransactionIdentification, com.tools20022.repository.msg.TransactionDetails43.mmProcessorTransactionIdentification,
-					com.tools20022.repository.msg.AdditionalParameters8.mmProcessorTransactionIdentification, com.tools20022.repository.msg.AdditionalParameters9.mmProcessorTransactionIdentification,
-					com.tools20022.repository.msg.AdditionalParameters10.mmProcessorTransactionIdentification, com.tools20022.repository.msg.AdditionalParameters11.mmProcessorTransactionIdentification,
-					com.tools20022.repository.choice.References19Choice.mmProcessorTransactionIdentification, com.tools20022.repository.choice.References21Choice.mmProcessorTransactionIdentification,
-					com.tools20022.repository.choice.References27Choice.mmProcessorTransactionIdentification, com.tools20022.repository.choice.References33Choice.mmProcessorTransactionIdentification,
-					com.tools20022.repository.msg.References7.mmProcessorTransactionIdentification, com.tools20022.repository.msg.References8.mmProcessorTransactionIdentification,
-					com.tools20022.repository.msg.References9.mmProcessorTransactionIdentification, com.tools20022.repository.msg.References13.mmProcessorTransactionIdentification,
-					com.tools20022.repository.msg.SettlementTypeAndIdentification9.mmProcessorTransactionIdentification, com.tools20022.repository.msg.SettlementTypeAndIdentification11.mmProcessorTransactionIdentification,
-					com.tools20022.repository.msg.SettlementTypeAndIdentification15.mmProcessorTransactionIdentification, com.tools20022.repository.msg.SettlementTypeAndIdentification17.mmProcessorTransactionIdentification,
-					com.tools20022.repository.msg.SettlementTypeAndIdentification10.mmProcessorTransactionIdentification, com.tools20022.repository.msg.SettlementTypeAndIdentification12.mmProcessorTransactionIdentification,
-					com.tools20022.repository.msg.TransactionIdentifications9.mmProcessorTransactionIdentification, com.tools20022.repository.msg.TransactionIdentifications13.mmProcessorTransactionIdentification,
-					com.tools20022.repository.msg.TransactionIdentifications16.mmProcessorTransactionIdentification, com.tools20022.repository.msg.TransactionIdentifications22.mmProcessorTransactionIdentification,
-					com.tools20022.repository.msg.Transaction14.mmProcessorTransactionIdentification, com.tools20022.repository.msg.Transaction12.mmProcessorTransactionIdentification,
-					com.tools20022.repository.msg.Transaction15.mmProcessorTransactionIdentification, com.tools20022.repository.msg.Transaction16.mmProcessorTransactionIdentification,
-					com.tools20022.repository.msg.Transaction20.mmProcessorTransactionIdentification, com.tools20022.repository.msg.Transaction19.mmProcessorTransactionIdentification,
-					com.tools20022.repository.msg.Transaction23.mmProcessorTransactionIdentification, com.tools20022.repository.msg.Transaction22.mmProcessorTransactionIdentification,
-					com.tools20022.repository.msg.Transaction28.mmProcessorTransactionIdentification, com.tools20022.repository.msg.Transaction27.mmProcessorTransactionIdentification,
-					com.tools20022.repository.msg.Transaction30.mmProcessorTransactionIdentification, com.tools20022.repository.msg.Transaction31.mmProcessorTransactionIdentification,
-					com.tools20022.repository.msg.Transaction13.mmProcessorTransactionIdentification, com.tools20022.repository.msg.Transaction17.mmProcessorTransactionIdentification,
-					com.tools20022.repository.msg.Transaction18.mmProcessorTransactionIdentification, com.tools20022.repository.msg.Transaction21.mmProcessorTransactionIdentification,
-					com.tools20022.repository.msg.Transaction29.mmProcessorTransactionIdentification, com.tools20022.repository.msg.Transaction32.mmProcessorTransactionIdentification,
-					com.tools20022.repository.msg.SecuritiesTradeDetails18.mmProcessorTransactionIdentification, com.tools20022.repository.msg.SecuritiesTradeDetails17.mmProcessorTransactionIdentification,
-					com.tools20022.repository.msg.Identification7.mmProcessorTransactionIdentification, com.tools20022.repository.msg.TransactionIdentifications11.mmProcessorTransactionIdentification,
-					com.tools20022.repository.msg.Identification6.mmProcessorTransactionIdentification, com.tools20022.repository.msg.SecuritiesTradeDetails21.mmProcessorTransactionIdentification,
-					com.tools20022.repository.msg.SecuritiesTradeDetails22.mmProcessorTransactionIdentification, com.tools20022.repository.msg.SecuritiesTradeDetails23.mmProcessorTransactionIdentification,
-					com.tools20022.repository.msg.SecuritiesTradeDetails29.mmProcessorTransactionIdentification, com.tools20022.repository.msg.TransactionIdentification2.mmProcessorTransactionIdentification,
-					com.tools20022.repository.msg.TransactionIdentification3.mmProcessorTransactionIdentification, com.tools20022.repository.msg.TransactionIdentifications18.mmProcessorTransactionIdentification,
-					com.tools20022.repository.msg.TransactionIdentifications20.mmProcessorTransactionIdentification, com.tools20022.repository.msg.Identification8.mmProcessorTransactionIdentification,
-					com.tools20022.repository.msg.Identification11.mmProcessorTransactionIdentification, com.tools20022.repository.msg.Identification13.mmProcessorTransactionIdentification,
-					com.tools20022.repository.msg.TransactionIdentifications14.mmProcessorTransactionIdentification, com.tools20022.repository.msg.TransactionIdentifications17.mmProcessorTransactionIdentification,
-					com.tools20022.repository.msg.TransactionIdentifications23.mmProcessorTransactionIdentification, com.tools20022.repository.msg.Identification9.mmProcessorTransactionIdentification,
-					com.tools20022.repository.msg.TransactionIdentifications12.mmProcessorTransactionIdentification, com.tools20022.repository.msg.References14.mmProcessorTransactionIdentification,
-					com.tools20022.repository.msg.Transaction25.mmProcessorTransactionIdentification, com.tools20022.repository.choice.References36Choice.mmProcessorTransactionIdentification,
-					com.tools20022.repository.choice.References35Choice.mmProcessorTransactionIdentification, com.tools20022.repository.msg.TransactionIdentifications24.mmProcessorTransactionIdentification,
-					com.tools20022.repository.msg.AdditionalParameters16.mmProcessorTransactionIdentification, com.tools20022.repository.msg.Transaction34.mmProcessorTransactionIdentification,
-					com.tools20022.repository.msg.TransactionIdentifications25.mmProcessorTransactionIdentification, com.tools20022.repository.msg.TransactionDetails64.mmProcessorTransactionIdentification,
-					com.tools20022.repository.msg.Transaction35.mmProcessorTransactionIdentification, com.tools20022.repository.msg.Transaction36.mmProcessorTransactionIdentification,
-					com.tools20022.repository.msg.SecuritiesTradeDetails35.mmProcessorTransactionIdentification, com.tools20022.repository.msg.SecuritiesTradeDetails36.mmProcessorTransactionIdentification,
-					com.tools20022.repository.msg.References16.mmProcessorTransactionIdentification, com.tools20022.repository.msg.TransactionIdentifications26.mmProcessorTransactionIdentification,
-					com.tools20022.repository.msg.SecuritiesTradeDetails41.mmProcessorTransactionIdentification, com.tools20022.repository.msg.Transaction38.mmProcessorTransactionIdentification,
-					com.tools20022.repository.msg.TransactionDetails65.mmProcessorTransactionIdentification, com.tools20022.repository.msg.SecuritiesTradeDetails42.mmProcessorTransactionIdentification,
-					com.tools20022.repository.msg.References17.mmProcessorTransactionIdentification, com.tools20022.repository.msg.Transaction39.mmProcessorTransactionIdentification,
-					com.tools20022.repository.msg.Transaction37.mmProcessorTransactionIdentification, com.tools20022.repository.msg.Transaction41.mmProcessorTransactionIdentification,
-					com.tools20022.repository.msg.Transaction40.mmProcessorTransactionIdentification, com.tools20022.repository.msg.Transaction43.mmProcessorTransactionIdentification,
-					com.tools20022.repository.msg.Transaction42.mmProcessorTransactionIdentification, com.tools20022.repository.msg.SecuritiesTradeDetails49.mmProcessorTransactionIdentification,
-					com.tools20022.repository.msg.Transaction47.mmProcessorTransactionIdentification, com.tools20022.repository.msg.TransactionDetails76.mmProcessorTransactionIdentification,
-					com.tools20022.repository.msg.Transaction45.mmProcessorTransactionIdentification, com.tools20022.repository.msg.Transaction46.mmProcessorTransactionIdentification,
-					com.tools20022.repository.msg.TransactionIdentification6.mmProcessorTransactionIdentification, com.tools20022.repository.msg.TransactionIdentifications29.mmProcessorTransactionIdentification,
-					com.tools20022.repository.msg.SettlementTypeAndIdentification19.mmProcessorTransactionIdentification, com.tools20022.repository.msg.TransactionIdentifications31.mmProcessorTransactionIdentification,
-					com.tools20022.repository.msg.TransactionIdentifications33.mmProcessorTransactionIdentification, com.tools20022.repository.msg.AdditionalParameters21.mmProcessorTransactionIdentification,
-					com.tools20022.repository.msg.SecuritiesTradeDetails54.mmProcessorTransactionIdentification, com.tools20022.repository.msg.TransactionIdentifications30.mmProcessorTransactionIdentification,
-					com.tools20022.repository.msg.Identification15.mmProcessorTransactionIdentification, com.tools20022.repository.choice.References42Choice.mmProcessorTransactionIdentification,
-					com.tools20022.repository.msg.References18.mmProcessorTransactionIdentification, com.tools20022.repository.msg.Transaction49.mmProcessorTransactionIdentification,
-					com.tools20022.repository.msg.TransactionIdentifications39.mmProcessorTransactionIdentification, com.tools20022.repository.msg.SecuritiesTradeDetails61.mmProcessorTransactionIdentification,
-					com.tools20022.repository.msg.TransactionIdentification7.mmProcessorTransactionIdentification, com.tools20022.repository.msg.TransactionIdentifications37.mmProcessorTransactionIdentification,
-					com.tools20022.repository.msg.AdditionalParameters25.mmProcessorTransactionIdentification, com.tools20022.repository.msg.TransactionIdentifications34.mmProcessorTransactionIdentification,
-					com.tools20022.repository.msg.SettlementTypeAndIdentification24.mmProcessorTransactionIdentification, com.tools20022.repository.msg.TransactionDetails85.mmProcessorTransactionIdentification,
-					com.tools20022.repository.msg.TransactionIdentifications38.mmProcessorTransactionIdentification, com.tools20022.repository.msg.SecuritiesTradeDetails60.mmProcessorTransactionIdentification,
-					com.tools20022.repository.msg.Identification24.mmProcessorTransactionIdentification, com.tools20022.repository.msg.Transaction50.mmProcessorTransactionIdentification,
-					com.tools20022.repository.choice.References51Choice.mmProcessorTransactionIdentification, com.tools20022.repository.msg.Transaction48.mmProcessorTransactionIdentification,
-					com.tools20022.repository.msg.References21.mmProcessorTransactionIdentification, com.tools20022.repository.msg.Transaction53.mmProcessorTransactionIdentification,
-					com.tools20022.repository.msg.SecuritiesTradeDetails68.mmProcessorTransactionIdentification, com.tools20022.repository.msg.Transaction54.mmProcessorTransactionIdentification,
-					com.tools20022.repository.msg.Transaction52.mmProcessorTransactionIdentification, com.tools20022.repository.msg.SecuritiesTradeDetails69.mmProcessorTransactionIdentification,
-					com.tools20022.repository.msg.Transaction57.mmProcessorTransactionIdentification, com.tools20022.repository.msg.Transaction56.mmProcessorTransactionIdentification,
-					com.tools20022.repository.msg.Transaction55.mmProcessorTransactionIdentification, com.tools20022.repository.msg.TransactionDetails101.mmProcessorTransactionIdentification);
+			derivation_lazy = () -> Arrays.asList(TransactionIdentifications10.mmProcessorTransactionIdentification, TransactionIdentifications15.mmProcessorTransactionIdentification,
+					TransactionIdentifications19.mmProcessorTransactionIdentification, TransactionDetails41.mmProcessorTransactionIdentification, TransactionDetails43.mmProcessorTransactionIdentification,
+					AdditionalParameters8.mmProcessorTransactionIdentification, AdditionalParameters9.mmProcessorTransactionIdentification, AdditionalParameters10.mmProcessorTransactionIdentification,
+					AdditionalParameters11.mmProcessorTransactionIdentification, References19Choice.mmProcessorTransactionIdentification, References21Choice.mmProcessorTransactionIdentification,
+					References27Choice.mmProcessorTransactionIdentification, References33Choice.mmProcessorTransactionIdentification, References7.mmProcessorTransactionIdentification, References8.mmProcessorTransactionIdentification,
+					References9.mmProcessorTransactionIdentification, References13.mmProcessorTransactionIdentification, SettlementTypeAndIdentification9.mmProcessorTransactionIdentification,
+					SettlementTypeAndIdentification11.mmProcessorTransactionIdentification, SettlementTypeAndIdentification15.mmProcessorTransactionIdentification, SettlementTypeAndIdentification17.mmProcessorTransactionIdentification,
+					SettlementTypeAndIdentification10.mmProcessorTransactionIdentification, SettlementTypeAndIdentification12.mmProcessorTransactionIdentification, TransactionIdentifications9.mmProcessorTransactionIdentification,
+					TransactionIdentifications13.mmProcessorTransactionIdentification, TransactionIdentifications16.mmProcessorTransactionIdentification, TransactionIdentifications22.mmProcessorTransactionIdentification,
+					Transaction14.mmProcessorTransactionIdentification, Transaction12.mmProcessorTransactionIdentification, Transaction15.mmProcessorTransactionIdentification, Transaction16.mmProcessorTransactionIdentification,
+					Transaction20.mmProcessorTransactionIdentification, Transaction19.mmProcessorTransactionIdentification, Transaction23.mmProcessorTransactionIdentification, Transaction22.mmProcessorTransactionIdentification,
+					Transaction28.mmProcessorTransactionIdentification, Transaction27.mmProcessorTransactionIdentification, Transaction30.mmProcessorTransactionIdentification, Transaction31.mmProcessorTransactionIdentification,
+					Transaction13.mmProcessorTransactionIdentification, Transaction17.mmProcessorTransactionIdentification, Transaction18.mmProcessorTransactionIdentification, Transaction21.mmProcessorTransactionIdentification,
+					Transaction29.mmProcessorTransactionIdentification, Transaction32.mmProcessorTransactionIdentification, SecuritiesTradeDetails18.mmProcessorTransactionIdentification,
+					SecuritiesTradeDetails17.mmProcessorTransactionIdentification, Identification7.mmProcessorTransactionIdentification, TransactionIdentifications11.mmProcessorTransactionIdentification,
+					Identification6.mmProcessorTransactionIdentification, SecuritiesTradeDetails21.mmProcessorTransactionIdentification, SecuritiesTradeDetails22.mmProcessorTransactionIdentification,
+					SecuritiesTradeDetails23.mmProcessorTransactionIdentification, SecuritiesTradeDetails29.mmProcessorTransactionIdentification, TransactionIdentification2.mmProcessorTransactionIdentification,
+					TransactionIdentification3.mmProcessorTransactionIdentification, TransactionIdentifications18.mmProcessorTransactionIdentification, TransactionIdentifications20.mmProcessorTransactionIdentification,
+					Identification8.mmProcessorTransactionIdentification, Identification11.mmProcessorTransactionIdentification, Identification13.mmProcessorTransactionIdentification,
+					TransactionIdentifications14.mmProcessorTransactionIdentification, TransactionIdentifications17.mmProcessorTransactionIdentification, TransactionIdentifications23.mmProcessorTransactionIdentification,
+					Identification9.mmProcessorTransactionIdentification, TransactionIdentifications12.mmProcessorTransactionIdentification, References14.mmProcessorTransactionIdentification,
+					Transaction25.mmProcessorTransactionIdentification, References36Choice.mmProcessorTransactionIdentification, References35Choice.mmProcessorTransactionIdentification,
+					TransactionIdentifications24.mmProcessorTransactionIdentification, AdditionalParameters16.mmProcessorTransactionIdentification, Transaction34.mmProcessorTransactionIdentification,
+					TransactionIdentifications25.mmProcessorTransactionIdentification, TransactionDetails64.mmProcessorTransactionIdentification, Transaction35.mmProcessorTransactionIdentification,
+					Transaction36.mmProcessorTransactionIdentification, SecuritiesTradeDetails35.mmProcessorTransactionIdentification, SecuritiesTradeDetails36.mmProcessorTransactionIdentification,
+					References16.mmProcessorTransactionIdentification, TransactionIdentifications26.mmProcessorTransactionIdentification, SecuritiesTradeDetails41.mmProcessorTransactionIdentification,
+					Transaction38.mmProcessorTransactionIdentification, TransactionDetails65.mmProcessorTransactionIdentification, SecuritiesTradeDetails42.mmProcessorTransactionIdentification,
+					References17.mmProcessorTransactionIdentification, Transaction39.mmProcessorTransactionIdentification, Transaction37.mmProcessorTransactionIdentification, Transaction41.mmProcessorTransactionIdentification,
+					Transaction40.mmProcessorTransactionIdentification, Transaction43.mmProcessorTransactionIdentification, Transaction42.mmProcessorTransactionIdentification, SecuritiesTradeDetails49.mmProcessorTransactionIdentification,
+					Transaction47.mmProcessorTransactionIdentification, TransactionDetails76.mmProcessorTransactionIdentification, Transaction45.mmProcessorTransactionIdentification, Transaction46.mmProcessorTransactionIdentification,
+					TransactionIdentification6.mmProcessorTransactionIdentification, TransactionIdentifications29.mmProcessorTransactionIdentification, SettlementTypeAndIdentification19.mmProcessorTransactionIdentification,
+					TransactionIdentifications31.mmProcessorTransactionIdentification, TransactionIdentifications33.mmProcessorTransactionIdentification, AdditionalParameters21.mmProcessorTransactionIdentification,
+					SecuritiesTradeDetails54.mmProcessorTransactionIdentification, TransactionIdentifications30.mmProcessorTransactionIdentification, Identification15.mmProcessorTransactionIdentification,
+					References42Choice.mmProcessorTransactionIdentification, References18.mmProcessorTransactionIdentification, Transaction49.mmProcessorTransactionIdentification,
+					TransactionIdentifications39.mmProcessorTransactionIdentification, SecuritiesTradeDetails61.mmProcessorTransactionIdentification, TransactionIdentification7.mmProcessorTransactionIdentification,
+					TransactionIdentifications37.mmProcessorTransactionIdentification, AdditionalParameters25.mmProcessorTransactionIdentification, TransactionIdentifications34.mmProcessorTransactionIdentification,
+					SettlementTypeAndIdentification24.mmProcessorTransactionIdentification, TransactionDetails85.mmProcessorTransactionIdentification, TransactionIdentifications38.mmProcessorTransactionIdentification,
+					SecuritiesTradeDetails60.mmProcessorTransactionIdentification, Identification24.mmProcessorTransactionIdentification, Transaction50.mmProcessorTransactionIdentification,
+					References51Choice.mmProcessorTransactionIdentification, Transaction48.mmProcessorTransactionIdentification, References21.mmProcessorTransactionIdentification, Transaction53.mmProcessorTransactionIdentification,
+					SecuritiesTradeDetails68.mmProcessorTransactionIdentification, Transaction54.mmProcessorTransactionIdentification, Transaction52.mmProcessorTransactionIdentification,
+					SecuritiesTradeDetails69.mmProcessorTransactionIdentification, Transaction57.mmProcessorTransactionIdentification, Transaction56.mmProcessorTransactionIdentification, Transaction55.mmProcessorTransactionIdentification,
+					TransactionDetails101.mmProcessorTransactionIdentification);
 			elementContext_lazy = () -> SecuritiesTradeIdentification.mmObject();
 			isDerived = false;
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "ProcessorTransactionIdentification";
 			definition = "Identification of the transaction assigned by the processor of the instruction other than the account owner the account servicer and the market infrastructure.";
 			maxOccurs = 1;
@@ -2318,82 +2265,49 @@ public class SecuritiesTradeIdentification extends TradeIdentification {
 	 */
 	public static final MMBusinessAttribute mmPoolIdentification = new MMBusinessAttribute() {
 		{
-			derivation_lazy = () -> Arrays.asList(com.tools20022.repository.choice.References1Choice.mmPoolIdentification, com.tools20022.repository.choice.References12Choice.mmPoolIdentification,
-					com.tools20022.repository.choice.References28Choice.mmPoolIdentification, com.tools20022.repository.msg.AdditionalParameters3.mmPoolIdentification,
-					com.tools20022.repository.msg.AdditionalParameters7.mmPoolIdentification, com.tools20022.repository.msg.AdditionalParameters8.mmPoolIdentification,
-					com.tools20022.repository.msg.AdditionalParameters9.mmPoolIdentification, com.tools20022.repository.msg.AdditionalParameters10.mmPoolIdentification,
-					com.tools20022.repository.msg.AdditionalParameters11.mmPoolIdentification, com.tools20022.repository.choice.References5Choice.mmPoolIdentification,
-					com.tools20022.repository.choice.References11Choice.mmPoolIdentification, com.tools20022.repository.choice.References19Choice.mmPoolIdentification,
-					com.tools20022.repository.choice.References21Choice.mmPoolIdentification, com.tools20022.repository.choice.References27Choice.mmPoolIdentification,
-					com.tools20022.repository.choice.References33Choice.mmPoolIdentification, com.tools20022.repository.msg.TransactionTypeAndAdditionalParameters3.mmPoolIdentification,
-					com.tools20022.repository.msg.TransactionTypeAndAdditionalParameters6.mmPoolIdentification, com.tools20022.repository.choice.References14Choice.mmPoolIdentification,
-					com.tools20022.repository.choice.References16Choice.mmPoolIdentification, com.tools20022.repository.choice.References25Choice.mmPoolIdentification,
-					com.tools20022.repository.choice.References32Choice.mmPoolIdentification, com.tools20022.repository.msg.References1.mmPoolIdentification, com.tools20022.repository.choice.References6Choice.mmPoolIdentification,
-					com.tools20022.repository.msg.References2.mmPoolIdentification, com.tools20022.repository.choice.References10Choice.mmPoolIdentification, com.tools20022.repository.msg.References7.mmPoolIdentification,
-					com.tools20022.repository.choice.References13Choice.mmPoolIdentification, com.tools20022.repository.msg.References8.mmPoolIdentification, com.tools20022.repository.choice.References15Choice.mmPoolIdentification,
-					com.tools20022.repository.msg.References9.mmPoolIdentification, com.tools20022.repository.choice.References24Choice.mmPoolIdentification, com.tools20022.repository.msg.References13.mmPoolIdentification,
-					com.tools20022.repository.choice.References31Choice.mmPoolIdentification, com.tools20022.repository.msg.SettlementTypeAndIdentification1.mmPoolIdentification,
-					com.tools20022.repository.msg.SettlementTypeAndIdentification8.mmPoolIdentification, com.tools20022.repository.msg.SettlementTypeAndIdentification9.mmPoolIdentification,
-					com.tools20022.repository.msg.SettlementTypeAndIdentification11.mmPoolIdentification, com.tools20022.repository.msg.SettlementTypeAndIdentification15.mmPoolIdentification,
-					com.tools20022.repository.msg.SettlementTypeAndIdentification17.mmPoolIdentification, com.tools20022.repository.msg.SettlementTypeAndIdentification10.mmPoolIdentification,
-					com.tools20022.repository.msg.SettlementTypeAndIdentification12.mmPoolIdentification, com.tools20022.repository.msg.TransactionDetails5.mmPoolIdentification,
-					com.tools20022.repository.msg.TransactionDetails9.mmPoolIdentification, com.tools20022.repository.msg.TransactionDetails22.mmPoolIdentification, com.tools20022.repository.msg.TransactionDetails23.mmPoolIdentification,
-					com.tools20022.repository.msg.TransactionDetails36.mmPoolIdentification, com.tools20022.repository.msg.TransactionDetails47.mmPoolIdentification, com.tools20022.repository.msg.TransactionDetails53.mmPoolIdentification,
-					com.tools20022.repository.msg.TransactionDetails58.mmPoolIdentification, com.tools20022.repository.msg.Transaction7.mmPoolIdentification, com.tools20022.repository.msg.Transaction8.mmPoolIdentification,
-					com.tools20022.repository.msg.Transaction9.mmPoolIdentification, com.tools20022.repository.msg.Transaction10.mmPoolIdentification, com.tools20022.repository.msg.Transaction14.mmPoolIdentification,
-					com.tools20022.repository.msg.Transaction12.mmPoolIdentification, com.tools20022.repository.msg.Transaction15.mmPoolIdentification, com.tools20022.repository.msg.Transaction16.mmPoolIdentification,
-					com.tools20022.repository.msg.Transaction20.mmPoolIdentification, com.tools20022.repository.msg.Transaction19.mmPoolIdentification, com.tools20022.repository.msg.Transaction23.mmPoolIdentification,
-					com.tools20022.repository.msg.Transaction22.mmPoolIdentification, com.tools20022.repository.msg.Transaction28.mmPoolIdentification, com.tools20022.repository.msg.Transaction27.mmPoolIdentification,
-					com.tools20022.repository.msg.Transaction30.mmPoolIdentification, com.tools20022.repository.msg.Transaction31.mmPoolIdentification, com.tools20022.repository.msg.Transaction6.mmPoolIdentification,
-					com.tools20022.repository.msg.Transaction11.mmPoolIdentification, com.tools20022.repository.msg.Transaction13.mmPoolIdentification, com.tools20022.repository.msg.Transaction17.mmPoolIdentification,
-					com.tools20022.repository.msg.Transaction18.mmPoolIdentification, com.tools20022.repository.msg.Transaction21.mmPoolIdentification, com.tools20022.repository.msg.Transaction29.mmPoolIdentification,
-					com.tools20022.repository.msg.Transaction32.mmPoolIdentification, com.tools20022.repository.msg.Identification2.mmPoolIdentification, com.tools20022.repository.choice.IdentificationReference8Choice.mmPoolIdentification,
-					com.tools20022.repository.choice.IdentificationReference11Choice.mmPoolIdentification, com.tools20022.repository.msg.TransactionTypeAndAdditionalParameters2.mmPoolIdentification,
-					com.tools20022.repository.msg.TransactionTypeAndAdditionalParameters7.mmPoolIdentification, com.tools20022.repository.msg.SecuritiesFinancingTransactionDetails2.mmPoolIdentification,
-					com.tools20022.repository.msg.SecuritiesFinancingTransactionDetails8.mmPoolIdentification, com.tools20022.repository.msg.SecuritiesTradeDetails4.mmPoolIdentification,
-					com.tools20022.repository.msg.SecuritiesTradeDetails17.mmPoolIdentification, com.tools20022.repository.msg.Identification7.mmPoolIdentification, com.tools20022.repository.msg.Identification6.mmPoolIdentification,
-					com.tools20022.repository.msg.TransactionTypeAndAdditionalParameters5.mmPoolIdentification, com.tools20022.repository.msg.TransactionTypeAndAdditionalParameters8.mmPoolIdentification,
-					com.tools20022.repository.msg.SecuritiesFinancingTransactionDetails6.mmPoolIdentification, com.tools20022.repository.msg.SecuritiesFinancingTransactionDetails10.mmPoolIdentification,
-					com.tools20022.repository.msg.SecuritiesFinancingTransactionDetails17.mmPoolIdentification, com.tools20022.repository.msg.SecuritiesFinancingTransactionDetails18.mmPoolIdentification,
-					com.tools20022.repository.msg.SecuritiesTradeDetails10.mmPoolIdentification, com.tools20022.repository.msg.SecuritiesTradeDetails22.mmPoolIdentification,
-					com.tools20022.repository.msg.SecuritiesTradeDetails23.mmPoolIdentification, com.tools20022.repository.msg.SecuritiesTradeDetails29.mmPoolIdentification,
-					com.tools20022.repository.msg.Identification5.mmPoolIdentification, com.tools20022.repository.msg.Identification8.mmPoolIdentification, com.tools20022.repository.msg.Identification11.mmPoolIdentification,
-					com.tools20022.repository.msg.Identification13.mmPoolIdentification, com.tools20022.repository.msg.Identification9.mmPoolIdentification, com.tools20022.repository.choice.References34Choice.mmPoolIdentification,
-					com.tools20022.repository.msg.References14.mmPoolIdentification, com.tools20022.repository.msg.Transaction25.mmPoolIdentification, com.tools20022.repository.choice.References36Choice.mmPoolIdentification,
-					com.tools20022.repository.choice.References35Choice.mmPoolIdentification, com.tools20022.repository.msg.Identification3.mmPoolIdentification, com.tools20022.repository.msg.AdditionalParameters16.mmPoolIdentification,
-					com.tools20022.repository.msg.TransactionDetails61.mmPoolIdentification, com.tools20022.repository.msg.Transaction34.mmPoolIdentification,
-					com.tools20022.repository.msg.SecuritiesFinancingTransactionDetails21.mmPoolIdentification, com.tools20022.repository.msg.Transaction35.mmPoolIdentification,
-					com.tools20022.repository.msg.Transaction36.mmPoolIdentification, com.tools20022.repository.msg.SecuritiesTradeDetails35.mmPoolIdentification, com.tools20022.repository.msg.References16.mmPoolIdentification,
-					com.tools20022.repository.msg.SecuritiesFinancingTransactionDetails22.mmPoolIdentification, com.tools20022.repository.msg.Transaction38.mmPoolIdentification,
-					com.tools20022.repository.msg.TransactionDetails66.mmPoolIdentification, com.tools20022.repository.msg.SecuritiesTradeDetails42.mmPoolIdentification, com.tools20022.repository.msg.References17.mmPoolIdentification,
-					com.tools20022.repository.msg.Transaction39.mmPoolIdentification, com.tools20022.repository.msg.Transaction37.mmPoolIdentification,
-					com.tools20022.repository.msg.SecuritiesFinancingTransactionDetails24.mmPoolIdentification, com.tools20022.repository.msg.Transaction41.mmPoolIdentification,
-					com.tools20022.repository.msg.TransactionDetails70.mmPoolIdentification, com.tools20022.repository.msg.Transaction40.mmPoolIdentification, com.tools20022.repository.msg.Transaction43.mmPoolIdentification,
-					com.tools20022.repository.msg.TransactionDetails71.mmPoolIdentification, com.tools20022.repository.msg.SecuritiesFinancingTransactionDetails25.mmPoolIdentification,
-					com.tools20022.repository.msg.Transaction42.mmPoolIdentification, com.tools20022.repository.msg.SecuritiesTradeDetails49.mmPoolIdentification, com.tools20022.repository.msg.Transaction47.mmPoolIdentification,
-					com.tools20022.repository.msg.SecuritiesFinancingTransactionDetails26.mmPoolIdentification, com.tools20022.repository.msg.TransactionDetails79.mmPoolIdentification,
-					com.tools20022.repository.msg.Transaction45.mmPoolIdentification, com.tools20022.repository.msg.Transaction46.mmPoolIdentification, com.tools20022.repository.msg.SettlementTypeAndIdentification19.mmPoolIdentification,
-					com.tools20022.repository.msg.TransactionTypeAndAdditionalParameters10.mmPoolIdentification, com.tools20022.repository.msg.TransactionTypeAndAdditionalParameters11.mmPoolIdentification,
-					com.tools20022.repository.msg.AdditionalParameters21.mmPoolIdentification, com.tools20022.repository.choice.References46Choice.mmPoolIdentification, com.tools20022.repository.msg.Identification15.mmPoolIdentification,
-					com.tools20022.repository.choice.References41Choice.mmPoolIdentification, com.tools20022.repository.choice.References47Choice.mmPoolIdentification,
-					com.tools20022.repository.choice.References42Choice.mmPoolIdentification, com.tools20022.repository.msg.References18.mmPoolIdentification,
-					com.tools20022.repository.msg.SecuritiesFinancingTransactionDetails33.mmPoolIdentification, com.tools20022.repository.msg.Transaction49.mmPoolIdentification,
-					com.tools20022.repository.msg.TransactionTypeAndAdditionalParameters14.mmPoolIdentification, com.tools20022.repository.msg.TransactionTypeAndAdditionalParameters12.mmPoolIdentification,
-					com.tools20022.repository.msg.SecuritiesTradeDetails61.mmPoolIdentification, com.tools20022.repository.msg.AdditionalParameters25.mmPoolIdentification,
-					com.tools20022.repository.msg.SettlementTypeAndIdentification24.mmPoolIdentification, com.tools20022.repository.msg.TransactionDetails87.mmPoolIdentification,
-					com.tools20022.repository.choice.References58Choice.mmPoolIdentification, com.tools20022.repository.msg.Identification24.mmPoolIdentification, com.tools20022.repository.msg.Transaction50.mmPoolIdentification,
-					com.tools20022.repository.choice.References50Choice.mmPoolIdentification, com.tools20022.repository.choice.References51Choice.mmPoolIdentification, com.tools20022.repository.msg.Transaction48.mmPoolIdentification,
-					com.tools20022.repository.msg.References21.mmPoolIdentification, com.tools20022.repository.choice.References54Choice.mmPoolIdentification, com.tools20022.repository.msg.Transaction53.mmPoolIdentification,
-					com.tools20022.repository.msg.SecuritiesTradeDetails68.mmPoolIdentification, com.tools20022.repository.msg.TransactionDetails97.mmPoolIdentification,
-					com.tools20022.repository.msg.TransactionTypeAndAdditionalParameters17.mmPoolIdentification, com.tools20022.repository.msg.TransactionTypeAndAdditionalParameters16.mmPoolIdentification,
-					com.tools20022.repository.msg.SecuritiesFinancingTransactionDetails35.mmPoolIdentification, com.tools20022.repository.msg.Transaction54.mmPoolIdentification,
-					com.tools20022.repository.msg.Transaction52.mmPoolIdentification, com.tools20022.repository.msg.TransactionTypeAndAdditionalParameters19.mmPoolIdentification,
-					com.tools20022.repository.msg.SecuritiesTradeDetails69.mmPoolIdentification, com.tools20022.repository.msg.TransactionTypeAndAdditionalParameters20.mmPoolIdentification,
-					com.tools20022.repository.msg.Transaction57.mmPoolIdentification, com.tools20022.repository.msg.SecuritiesFinancingTransactionDetails36.mmPoolIdentification,
-					com.tools20022.repository.msg.Transaction56.mmPoolIdentification, com.tools20022.repository.msg.TransactionDetails100.mmPoolIdentification, com.tools20022.repository.msg.Transaction55.mmPoolIdentification);
+			derivation_lazy = () -> Arrays.asList(References1Choice.mmPoolIdentification, References12Choice.mmPoolIdentification, References28Choice.mmPoolIdentification, AdditionalParameters3.mmPoolIdentification,
+					AdditionalParameters7.mmPoolIdentification, AdditionalParameters8.mmPoolIdentification, AdditionalParameters9.mmPoolIdentification, AdditionalParameters10.mmPoolIdentification,
+					AdditionalParameters11.mmPoolIdentification, References5Choice.mmPoolIdentification, References11Choice.mmPoolIdentification, References19Choice.mmPoolIdentification, References21Choice.mmPoolIdentification,
+					References27Choice.mmPoolIdentification, References33Choice.mmPoolIdentification, TransactionTypeAndAdditionalParameters3.mmPoolIdentification, TransactionTypeAndAdditionalParameters6.mmPoolIdentification,
+					References14Choice.mmPoolIdentification, References16Choice.mmPoolIdentification, References25Choice.mmPoolIdentification, References32Choice.mmPoolIdentification, References1.mmPoolIdentification,
+					References6Choice.mmPoolIdentification, References2.mmPoolIdentification, References10Choice.mmPoolIdentification, References7.mmPoolIdentification, References13Choice.mmPoolIdentification,
+					References8.mmPoolIdentification, References15Choice.mmPoolIdentification, References9.mmPoolIdentification, References24Choice.mmPoolIdentification, References13.mmPoolIdentification,
+					References31Choice.mmPoolIdentification, SettlementTypeAndIdentification1.mmPoolIdentification, SettlementTypeAndIdentification8.mmPoolIdentification, SettlementTypeAndIdentification9.mmPoolIdentification,
+					SettlementTypeAndIdentification11.mmPoolIdentification, SettlementTypeAndIdentification15.mmPoolIdentification, SettlementTypeAndIdentification17.mmPoolIdentification,
+					SettlementTypeAndIdentification10.mmPoolIdentification, SettlementTypeAndIdentification12.mmPoolIdentification, TransactionDetails5.mmPoolIdentification, TransactionDetails9.mmPoolIdentification,
+					TransactionDetails22.mmPoolIdentification, TransactionDetails23.mmPoolIdentification, TransactionDetails36.mmPoolIdentification, TransactionDetails47.mmPoolIdentification, TransactionDetails53.mmPoolIdentification,
+					TransactionDetails58.mmPoolIdentification, Transaction7.mmPoolIdentification, Transaction8.mmPoolIdentification, Transaction9.mmPoolIdentification, Transaction10.mmPoolIdentification, Transaction14.mmPoolIdentification,
+					Transaction12.mmPoolIdentification, Transaction15.mmPoolIdentification, Transaction16.mmPoolIdentification, Transaction20.mmPoolIdentification, Transaction19.mmPoolIdentification, Transaction23.mmPoolIdentification,
+					Transaction22.mmPoolIdentification, Transaction28.mmPoolIdentification, Transaction27.mmPoolIdentification, Transaction30.mmPoolIdentification, Transaction31.mmPoolIdentification, Transaction6.mmPoolIdentification,
+					Transaction11.mmPoolIdentification, Transaction13.mmPoolIdentification, Transaction17.mmPoolIdentification, Transaction18.mmPoolIdentification, Transaction21.mmPoolIdentification, Transaction29.mmPoolIdentification,
+					Transaction32.mmPoolIdentification, Identification2.mmPoolIdentification, IdentificationReference8Choice.mmPoolIdentification, IdentificationReference11Choice.mmPoolIdentification,
+					TransactionTypeAndAdditionalParameters2.mmPoolIdentification, TransactionTypeAndAdditionalParameters7.mmPoolIdentification, SecuritiesFinancingTransactionDetails2.mmPoolIdentification,
+					SecuritiesFinancingTransactionDetails8.mmPoolIdentification, SecuritiesTradeDetails4.mmPoolIdentification, SecuritiesTradeDetails17.mmPoolIdentification, Identification7.mmPoolIdentification,
+					Identification6.mmPoolIdentification, TransactionTypeAndAdditionalParameters5.mmPoolIdentification, TransactionTypeAndAdditionalParameters8.mmPoolIdentification,
+					SecuritiesFinancingTransactionDetails6.mmPoolIdentification, SecuritiesFinancingTransactionDetails10.mmPoolIdentification, SecuritiesFinancingTransactionDetails17.mmPoolIdentification,
+					SecuritiesFinancingTransactionDetails18.mmPoolIdentification, SecuritiesTradeDetails10.mmPoolIdentification, SecuritiesTradeDetails22.mmPoolIdentification, SecuritiesTradeDetails23.mmPoolIdentification,
+					SecuritiesTradeDetails29.mmPoolIdentification, Identification5.mmPoolIdentification, Identification8.mmPoolIdentification, Identification11.mmPoolIdentification, Identification13.mmPoolIdentification,
+					Identification9.mmPoolIdentification, References34Choice.mmPoolIdentification, References14.mmPoolIdentification, Transaction25.mmPoolIdentification, References36Choice.mmPoolIdentification,
+					References35Choice.mmPoolIdentification, Identification3.mmPoolIdentification, AdditionalParameters16.mmPoolIdentification, TransactionDetails61.mmPoolIdentification, Transaction34.mmPoolIdentification,
+					SecuritiesFinancingTransactionDetails21.mmPoolIdentification, Transaction35.mmPoolIdentification, Transaction36.mmPoolIdentification, SecuritiesTradeDetails35.mmPoolIdentification, References16.mmPoolIdentification,
+					SecuritiesFinancingTransactionDetails22.mmPoolIdentification, Transaction38.mmPoolIdentification, TransactionDetails66.mmPoolIdentification, SecuritiesTradeDetails42.mmPoolIdentification,
+					References17.mmPoolIdentification, Transaction39.mmPoolIdentification, Transaction37.mmPoolIdentification, SecuritiesFinancingTransactionDetails24.mmPoolIdentification, Transaction41.mmPoolIdentification,
+					TransactionDetails70.mmPoolIdentification, Transaction40.mmPoolIdentification, Transaction43.mmPoolIdentification, TransactionDetails71.mmPoolIdentification, SecuritiesFinancingTransactionDetails25.mmPoolIdentification,
+					Transaction42.mmPoolIdentification, SecuritiesTradeDetails49.mmPoolIdentification, Transaction47.mmPoolIdentification, SecuritiesFinancingTransactionDetails26.mmPoolIdentification,
+					TransactionDetails79.mmPoolIdentification, Transaction45.mmPoolIdentification, Transaction46.mmPoolIdentification, SettlementTypeAndIdentification19.mmPoolIdentification,
+					TransactionTypeAndAdditionalParameters10.mmPoolIdentification, TransactionTypeAndAdditionalParameters11.mmPoolIdentification, AdditionalParameters21.mmPoolIdentification, References46Choice.mmPoolIdentification,
+					Identification15.mmPoolIdentification, References41Choice.mmPoolIdentification, References47Choice.mmPoolIdentification, References42Choice.mmPoolIdentification, References18.mmPoolIdentification,
+					SecuritiesFinancingTransactionDetails33.mmPoolIdentification, Transaction49.mmPoolIdentification, TransactionTypeAndAdditionalParameters14.mmPoolIdentification,
+					TransactionTypeAndAdditionalParameters12.mmPoolIdentification, SecuritiesTradeDetails61.mmPoolIdentification, AdditionalParameters25.mmPoolIdentification, SettlementTypeAndIdentification24.mmPoolIdentification,
+					TransactionDetails87.mmPoolIdentification, References58Choice.mmPoolIdentification, Identification24.mmPoolIdentification, Transaction50.mmPoolIdentification, References50Choice.mmPoolIdentification,
+					References51Choice.mmPoolIdentification, Transaction48.mmPoolIdentification, References21.mmPoolIdentification, References54Choice.mmPoolIdentification, Transaction53.mmPoolIdentification,
+					SecuritiesTradeDetails68.mmPoolIdentification, TransactionDetails97.mmPoolIdentification, TransactionTypeAndAdditionalParameters17.mmPoolIdentification, TransactionTypeAndAdditionalParameters16.mmPoolIdentification,
+					SecuritiesFinancingTransactionDetails35.mmPoolIdentification, Transaction54.mmPoolIdentification, Transaction52.mmPoolIdentification, TransactionTypeAndAdditionalParameters19.mmPoolIdentification,
+					SecuritiesTradeDetails69.mmPoolIdentification, TransactionTypeAndAdditionalParameters20.mmPoolIdentification, Transaction57.mmPoolIdentification, SecuritiesFinancingTransactionDetails36.mmPoolIdentification,
+					Transaction56.mmPoolIdentification, TransactionDetails100.mmPoolIdentification, Transaction55.mmPoolIdentification);
 			elementContext_lazy = () -> SecuritiesTradeIdentification.mmObject();
 			isDerived = false;
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "PoolIdentification";
 			definition = "Collective reference identifying a set of messages.";
 			maxOccurs = 1;
@@ -2692,52 +2606,38 @@ public class SecuritiesTradeIdentification extends TradeIdentification {
 	 */
 	public static final MMBusinessAttribute mmCollateralTransactionIdentification = new MMBusinessAttribute() {
 		{
-			derivation_lazy = () -> Arrays.asList(com.tools20022.repository.msg.SecuritiesTradeDetails25.mmCollateralTransactionIdentification, com.tools20022.repository.msg.SecuritiesTradeDetails26.mmCollateralTransactionIdentification,
-					com.tools20022.repository.msg.SecuritiesTradeDetails27.mmCollateralTransactionIdentification, com.tools20022.repository.msg.SecuritiesTradeDetails28.mmCollateralTransactionIdentification,
-					com.tools20022.repository.msg.SecuritiesTradeDetails2.mmCollateralTransactionIdentification, com.tools20022.repository.msg.SecuritiesTradeDetails16.mmCollateralTransactionIdentification,
-					com.tools20022.repository.msg.SecuritiesTradeDetails1.mmCollateralTransactionIdentification, com.tools20022.repository.msg.SecuritiesTradeDetails15.mmCollateralTransactionIdentification,
-					com.tools20022.repository.msg.TransactionDetails53.mmClientCollateralInstructionIdentification, com.tools20022.repository.msg.TransactionDetails58.mmClientCollateralInstructionIdentification,
-					com.tools20022.repository.msg.Transaction28.mmClientCollateralInstructionIdentification, com.tools20022.repository.msg.Transaction27.mmClientCollateralInstructionIdentification,
-					com.tools20022.repository.msg.Transaction30.mmClientCollateralInstructionIdentification, com.tools20022.repository.msg.Transaction31.mmClientCollateralInstructionIdentification,
-					com.tools20022.repository.msg.Transaction29.mmClientCollateralInstructionIdentification, com.tools20022.repository.msg.Transaction32.mmClientCollateralInstructionIdentification,
-					com.tools20022.repository.choice.IdentificationReference8Choice.mmCollateralTransactionIdentification, com.tools20022.repository.choice.IdentificationReference11Choice.mmCollateralTransactionIdentification,
-					com.tools20022.repository.msg.SecuritiesTradeDetails8.mmCollateralTransactionIdentification, com.tools20022.repository.msg.SecuritiesTradeDetails18.mmCollateralTransactionIdentification,
-					com.tools20022.repository.msg.SecuritiesTradeDetails4.mmCollateralTransactionIdentification, com.tools20022.repository.msg.SecuritiesTradeDetails17.mmCollateralTransactionIdentification,
-					com.tools20022.repository.msg.SecuritiesTradeDetails9.mmCollateralTransactionIdentification, com.tools20022.repository.msg.SecuritiesTradeDetails21.mmCollateralTransactionIdentification,
-					com.tools20022.repository.msg.SecuritiesTradeDetails10.mmCollateralTransactionIdentification, com.tools20022.repository.msg.SecuritiesTradeDetails22.mmCollateralTransactionIdentification,
-					com.tools20022.repository.msg.SecuritiesTradeDetails23.mmCollateralTransactionIdentification, com.tools20022.repository.msg.SecuritiesTradeDetails29.mmCollateralTransactionIdentification,
-					com.tools20022.repository.msg.TransactionDetails61.mmClientCollateralInstructionIdentification, com.tools20022.repository.msg.Transaction34.mmClientCollateralInstructionIdentification,
-					com.tools20022.repository.msg.Transaction35.mmClientCollateralInstructionIdentification, com.tools20022.repository.msg.Transaction36.mmClientCollateralInstructionIdentification,
-					com.tools20022.repository.msg.SecuritiesTradeDetails31.mmCollateralTransactionIdentification, com.tools20022.repository.msg.SecuritiesTradeDetails33.mmCollateralTransactionIdentification,
-					com.tools20022.repository.msg.SecuritiesTradeDetails35.mmCollateralTransactionIdentification, com.tools20022.repository.msg.SecuritiesTradeDetails36.mmCollateralTransactionIdentification,
-					com.tools20022.repository.msg.SecuritiesTradeDetails34.mmCollateralTransactionIdentification, com.tools20022.repository.msg.SecuritiesTradeDetails32.mmCollateralTransactionIdentification,
-					com.tools20022.repository.msg.SecuritiesTradeDetails44.mmCollateralTransactionIdentification, com.tools20022.repository.msg.SecuritiesTradeDetails43.mmCollateralTransactionIdentification,
-					com.tools20022.repository.msg.SecuritiesTradeDetails41.mmCollateralTransactionIdentification, com.tools20022.repository.msg.Transaction38.mmClientCollateralInstructionIdentification,
-					com.tools20022.repository.msg.TransactionDetails66.mmClientCollateralInstructionIdentification, com.tools20022.repository.msg.SecuritiesTradeDetails42.mmCollateralTransactionIdentification,
-					com.tools20022.repository.msg.Transaction39.mmClientCollateralInstructionIdentification, com.tools20022.repository.msg.SecuritiesTradeDetails46.mmCollateralTransactionIdentification,
-					com.tools20022.repository.msg.SecuritiesTradeDetails47.mmCollateralTransactionIdentification, com.tools20022.repository.msg.Transaction37.mmClientCollateralInstructionIdentification,
-					com.tools20022.repository.msg.Transaction41.mmClientCollateralInstructionIdentification, com.tools20022.repository.msg.TransactionDetails70.mmClientCollateralInstructionIdentification,
-					com.tools20022.repository.msg.Transaction40.mmClientCollateralInstructionIdentification, com.tools20022.repository.msg.Transaction43.mmClientCollateralInstructionIdentification,
-					com.tools20022.repository.msg.TransactionDetails71.mmClientCollateralInstructionIdentification, com.tools20022.repository.msg.Transaction42.mmClientCollateralInstructionIdentification,
-					com.tools20022.repository.msg.SecuritiesTradeDetails49.mmCollateralTransactionIdentification, com.tools20022.repository.msg.Transaction47.mmClientCollateralInstructionIdentification,
-					com.tools20022.repository.msg.TransactionDetails79.mmClientCollateralInstructionIdentification, com.tools20022.repository.msg.Transaction45.mmClientCollateralInstructionIdentification,
-					com.tools20022.repository.msg.Transaction46.mmClientCollateralInstructionIdentification, com.tools20022.repository.msg.SecuritiesTradeDetails51.mmCollateralTransactionIdentification,
-					com.tools20022.repository.msg.SecuritiesTradeDetails53.mmCollateralTransactionIdentification, com.tools20022.repository.msg.SecuritiesTradeDetails54.mmCollateralTransactionIdentification,
-					com.tools20022.repository.msg.SecuritiesTradeDetails52.mmCollateralTransactionIdentification, com.tools20022.repository.msg.SecuritiesTradeDetails50.mmCollateralTransactionIdentification,
-					com.tools20022.repository.msg.Transaction49.mmClientCollateralInstructionIdentification, com.tools20022.repository.msg.SecuritiesTradeDetails61.mmCollateralTransactionIdentification,
-					com.tools20022.repository.msg.SecuritiesTradeDetails63.mmCollateralTransactionIdentification, com.tools20022.repository.msg.SecuritiesTradeDetails62.mmCollateralTransactionIdentification,
-					com.tools20022.repository.msg.TransactionDetails87.mmClientCollateralInstructionIdentification, com.tools20022.repository.msg.SecuritiesTradeDetails60.mmCollateralTransactionIdentification,
-					com.tools20022.repository.msg.Transaction50.mmClientCollateralInstructionIdentification, com.tools20022.repository.msg.Transaction48.mmClientCollateralInstructionIdentification,
-					com.tools20022.repository.msg.SecuritiesTradeDetails65.mmCollateralTransactionIdentification, com.tools20022.repository.msg.SecuritiesTradeDetails66.mmCollateralTransactionIdentification,
-					com.tools20022.repository.msg.SecuritiesTradeDetails67.mmCollateralTransactionIdentification, com.tools20022.repository.msg.Transaction53.mmClientCollateralInstructionIdentification,
-					com.tools20022.repository.msg.SecuritiesTradeDetails68.mmCollateralTransactionIdentification, com.tools20022.repository.msg.TransactionDetails97.mmClientCollateralInstructionIdentification,
-					com.tools20022.repository.msg.Transaction54.mmClientCollateralInstructionIdentification, com.tools20022.repository.msg.Transaction52.mmClientCollateralInstructionIdentification,
-					com.tools20022.repository.msg.SecuritiesTradeDetails69.mmCollateralTransactionIdentification, com.tools20022.repository.msg.Transaction57.mmClientCollateralInstructionIdentification,
-					com.tools20022.repository.msg.SecuritiesTradeDetails70.mmCollateralTransactionIdentification, com.tools20022.repository.msg.Transaction56.mmClientCollateralInstructionIdentification,
-					com.tools20022.repository.msg.TransactionDetails100.mmClientCollateralInstructionIdentification, com.tools20022.repository.msg.Transaction55.mmClientCollateralInstructionIdentification);
+			derivation_lazy = () -> Arrays.asList(SecuritiesTradeDetails25.mmCollateralTransactionIdentification, SecuritiesTradeDetails26.mmCollateralTransactionIdentification,
+					SecuritiesTradeDetails27.mmCollateralTransactionIdentification, SecuritiesTradeDetails28.mmCollateralTransactionIdentification, SecuritiesTradeDetails2.mmCollateralTransactionIdentification,
+					SecuritiesTradeDetails16.mmCollateralTransactionIdentification, SecuritiesTradeDetails1.mmCollateralTransactionIdentification, SecuritiesTradeDetails15.mmCollateralTransactionIdentification,
+					TransactionDetails53.mmClientCollateralInstructionIdentification, TransactionDetails58.mmClientCollateralInstructionIdentification, Transaction28.mmClientCollateralInstructionIdentification,
+					Transaction27.mmClientCollateralInstructionIdentification, Transaction30.mmClientCollateralInstructionIdentification, Transaction31.mmClientCollateralInstructionIdentification,
+					Transaction29.mmClientCollateralInstructionIdentification, Transaction32.mmClientCollateralInstructionIdentification, IdentificationReference8Choice.mmCollateralTransactionIdentification,
+					IdentificationReference11Choice.mmCollateralTransactionIdentification, SecuritiesTradeDetails8.mmCollateralTransactionIdentification, SecuritiesTradeDetails18.mmCollateralTransactionIdentification,
+					SecuritiesTradeDetails4.mmCollateralTransactionIdentification, SecuritiesTradeDetails17.mmCollateralTransactionIdentification, SecuritiesTradeDetails9.mmCollateralTransactionIdentification,
+					SecuritiesTradeDetails21.mmCollateralTransactionIdentification, SecuritiesTradeDetails10.mmCollateralTransactionIdentification, SecuritiesTradeDetails22.mmCollateralTransactionIdentification,
+					SecuritiesTradeDetails23.mmCollateralTransactionIdentification, SecuritiesTradeDetails29.mmCollateralTransactionIdentification, TransactionDetails61.mmClientCollateralInstructionIdentification,
+					Transaction34.mmClientCollateralInstructionIdentification, Transaction35.mmClientCollateralInstructionIdentification, Transaction36.mmClientCollateralInstructionIdentification,
+					SecuritiesTradeDetails31.mmCollateralTransactionIdentification, SecuritiesTradeDetails33.mmCollateralTransactionIdentification, SecuritiesTradeDetails35.mmCollateralTransactionIdentification,
+					SecuritiesTradeDetails36.mmCollateralTransactionIdentification, SecuritiesTradeDetails34.mmCollateralTransactionIdentification, SecuritiesTradeDetails32.mmCollateralTransactionIdentification,
+					SecuritiesTradeDetails44.mmCollateralTransactionIdentification, SecuritiesTradeDetails43.mmCollateralTransactionIdentification, SecuritiesTradeDetails41.mmCollateralTransactionIdentification,
+					Transaction38.mmClientCollateralInstructionIdentification, TransactionDetails66.mmClientCollateralInstructionIdentification, SecuritiesTradeDetails42.mmCollateralTransactionIdentification,
+					Transaction39.mmClientCollateralInstructionIdentification, SecuritiesTradeDetails46.mmCollateralTransactionIdentification, SecuritiesTradeDetails47.mmCollateralTransactionIdentification,
+					Transaction37.mmClientCollateralInstructionIdentification, Transaction41.mmClientCollateralInstructionIdentification, TransactionDetails70.mmClientCollateralInstructionIdentification,
+					Transaction40.mmClientCollateralInstructionIdentification, Transaction43.mmClientCollateralInstructionIdentification, TransactionDetails71.mmClientCollateralInstructionIdentification,
+					Transaction42.mmClientCollateralInstructionIdentification, SecuritiesTradeDetails49.mmCollateralTransactionIdentification, Transaction47.mmClientCollateralInstructionIdentification,
+					TransactionDetails79.mmClientCollateralInstructionIdentification, Transaction45.mmClientCollateralInstructionIdentification, Transaction46.mmClientCollateralInstructionIdentification,
+					SecuritiesTradeDetails51.mmCollateralTransactionIdentification, SecuritiesTradeDetails53.mmCollateralTransactionIdentification, SecuritiesTradeDetails54.mmCollateralTransactionIdentification,
+					SecuritiesTradeDetails52.mmCollateralTransactionIdentification, SecuritiesTradeDetails50.mmCollateralTransactionIdentification, Transaction49.mmClientCollateralInstructionIdentification,
+					SecuritiesTradeDetails61.mmCollateralTransactionIdentification, SecuritiesTradeDetails63.mmCollateralTransactionIdentification, SecuritiesTradeDetails62.mmCollateralTransactionIdentification,
+					TransactionDetails87.mmClientCollateralInstructionIdentification, SecuritiesTradeDetails60.mmCollateralTransactionIdentification, Transaction50.mmClientCollateralInstructionIdentification,
+					Transaction48.mmClientCollateralInstructionIdentification, SecuritiesTradeDetails65.mmCollateralTransactionIdentification, SecuritiesTradeDetails66.mmCollateralTransactionIdentification,
+					SecuritiesTradeDetails67.mmCollateralTransactionIdentification, Transaction53.mmClientCollateralInstructionIdentification, SecuritiesTradeDetails68.mmCollateralTransactionIdentification,
+					TransactionDetails97.mmClientCollateralInstructionIdentification, Transaction54.mmClientCollateralInstructionIdentification, Transaction52.mmClientCollateralInstructionIdentification,
+					SecuritiesTradeDetails69.mmCollateralTransactionIdentification, Transaction57.mmClientCollateralInstructionIdentification, SecuritiesTradeDetails70.mmCollateralTransactionIdentification,
+					Transaction56.mmClientCollateralInstructionIdentification, TransactionDetails100.mmClientCollateralInstructionIdentification, Transaction55.mmClientCollateralInstructionIdentification);
 			elementContext_lazy = () -> SecuritiesTradeIdentification.mmObject();
 			isDerived = false;
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "CollateralTransactionIdentification";
 			definition = "Unambiguous identification of a collateral transaction.";
 			maxOccurs = 1;
@@ -3157,69 +3057,53 @@ public class SecuritiesTradeIdentification extends TradeIdentification {
 	 */
 	public static final MMBusinessAttribute mmClientTripartyCollateralTransactionIdentification = new MMBusinessAttribute() {
 		{
-			derivation_lazy = () -> Arrays.asList(com.tools20022.repository.msg.AdditionalParameters3.mmMarketInfrastructureTransactionIdentification,
-					com.tools20022.repository.msg.AdditionalParameters7.mmMarketInfrastructureTransactionIdentification, com.tools20022.repository.msg.AdditionalParameters8.mmMarketInfrastructureTransactionIdentification,
-					com.tools20022.repository.msg.AdditionalParameters9.mmMarketInfrastructureTransactionIdentification, com.tools20022.repository.msg.AdditionalParameters10.mmMarketInfrastructureTransactionIdentification,
-					com.tools20022.repository.msg.AdditionalParameters11.mmMarketInfrastructureTransactionIdentification, com.tools20022.repository.msg.AdditionalParameters2.mmClientTripartyCollateralTransactionIdentification,
-					com.tools20022.repository.msg.AdditionalParameters6.mmClientTripartyCollateralTransactionIdentification, com.tools20022.repository.msg.AdditionalParameters12.mmClientTripartyCollateralTransactionIdentification,
-					com.tools20022.repository.msg.AdditionalParameters13.mmClientTripartyCollateralTransactionIdentification, com.tools20022.repository.msg.AdditionalParameters17.mmClientTripartyCollateralTransactionIdentification,
-					com.tools20022.repository.msg.AdditionalParameters17.mmClientCollateralInstructionIdentification, com.tools20022.repository.msg.AdditionalParameters20.mmClientTripartyCollateralTransactionIdentification,
-					com.tools20022.repository.msg.AdditionalParameters20.mmClientCollateralInstructionIdentification, com.tools20022.repository.msg.TransactionDetails5.mmClientTripartyCollateralTransactionIdentification,
-					com.tools20022.repository.msg.TransactionDetails9.mmClientTripartyCollateralTransactionIdentification, com.tools20022.repository.msg.TransactionDetails22.mmClientTripartyCollateralTransactionIdentification,
-					com.tools20022.repository.msg.TransactionDetails23.mmClientTripartyCollateralTransactionIdentification, com.tools20022.repository.msg.TransactionDetails36.mmClientTripartyCollateralTransactionIdentification,
-					com.tools20022.repository.msg.TransactionDetails47.mmClientTripartyCollateralTransactionIdentification, com.tools20022.repository.msg.TransactionDetails53.mmClientTripartyCollateralTransactionIdentification,
-					com.tools20022.repository.msg.TransactionDetails58.mmClientTripartyCollateralTransactionIdentification, com.tools20022.repository.msg.Transaction7.mmClientTripartyCollateralTransactionIdentification,
-					com.tools20022.repository.msg.Transaction8.mmClientTripartyCollateralTransactionIdentification, com.tools20022.repository.msg.Transaction9.mmClientTripartyCollateralTransactionIdentification,
-					com.tools20022.repository.msg.Transaction10.mmClientTripartyCollateralTransactionIdentification, com.tools20022.repository.msg.Transaction14.mmClientTripartyCollateralTransactionIdentification,
-					com.tools20022.repository.msg.Transaction12.mmClientTripartyCollateralTransactionIdentification, com.tools20022.repository.msg.Transaction15.mmClientTripartyCollateralTransactionIdentification,
-					com.tools20022.repository.msg.Transaction16.mmClientTripartyCollateralTransactionIdentification, com.tools20022.repository.msg.Transaction20.mmClientTripartyCollateralTransactionIdentification,
-					com.tools20022.repository.msg.Transaction19.mmClientTripartyCollateralTransactionIdentification, com.tools20022.repository.msg.Transaction23.mmClientTripartyCollateralTransactionIdentification,
-					com.tools20022.repository.msg.Transaction22.mmClientTripartyCollateralTransactionIdentification, com.tools20022.repository.msg.Transaction28.mmClientTripartyCollateralTransactionIdentification,
-					com.tools20022.repository.msg.Transaction27.mmClientTripartyCollateralTransactionIdentification, com.tools20022.repository.msg.Transaction30.mmClientTripartyCollateralTransactionIdentification,
-					com.tools20022.repository.msg.Transaction31.mmClientTripartyCollateralTransactionIdentification, com.tools20022.repository.msg.Transaction6.mmClientTripartyCollateralTransactionIdentification,
-					com.tools20022.repository.msg.Transaction11.mmClientTripartyCollateralTransactionIdentification, com.tools20022.repository.msg.Transaction13.mmClientTripartyCollateralTransactionIdentification,
-					com.tools20022.repository.msg.Transaction17.mmClientTripartyCollateralTransactionIdentification, com.tools20022.repository.msg.Transaction18.mmClientTripartyCollateralTransactionIdentification,
-					com.tools20022.repository.msg.Transaction21.mmClientTripartyCollateralTransactionIdentification, com.tools20022.repository.msg.Transaction29.mmClientTripartyCollateralTransactionIdentification,
-					com.tools20022.repository.msg.Transaction32.mmClientTripartyCollateralTransactionIdentification, com.tools20022.repository.msg.SecuritiesFinancingTransactionDetails2.mmClientTripartyCollateralTransactionIdentification,
-					com.tools20022.repository.msg.SecuritiesFinancingTransactionDetails8.mmClientTripartyCollateralTransactionIdentification,
-					com.tools20022.repository.msg.AdditionalParameters4.mmClientTripartyCollateralTransactionIdentification,
-					com.tools20022.repository.msg.SecuritiesFinancingTransactionDetails6.mmClientTripartyCollateralTransactionIdentification,
-					com.tools20022.repository.msg.SecuritiesFinancingTransactionDetails10.mmClientTripartyCollateralTransactionIdentification,
-					com.tools20022.repository.msg.SecuritiesFinancingTransactionDetails17.mmClientTripartyCollateralTransactionIdentification,
-					com.tools20022.repository.msg.SecuritiesFinancingTransactionDetails18.mmClientTripartyCollateralTransactionIdentification,
-					com.tools20022.repository.msg.AdditionalParameters5.mmClientTripartyCollateralTransactionIdentification, com.tools20022.repository.msg.AdditionalParameters14.mmClientTripartyCollateralTransactionIdentification,
-					com.tools20022.repository.msg.AdditionalParameters15.mmClientTripartyCollateralTransactionIdentification, com.tools20022.repository.msg.Transaction25.mmClientTripartyCollateralTransactionIdentification,
-					com.tools20022.repository.msg.AdditionalParameters16.mmMarketInfrastructureTransactionIdentification, com.tools20022.repository.msg.TransactionDetails61.mmClientTripartyCollateralTransactionIdentification,
-					com.tools20022.repository.msg.Transaction34.mmClientTripartyCollateralTransactionIdentification, com.tools20022.repository.msg.SecuritiesFinancingTransactionDetails21.mmClientTripartyCollateralTransactionIdentification,
-					com.tools20022.repository.msg.Transaction35.mmClientTripartyCollateralTransactionIdentification, com.tools20022.repository.msg.Transaction36.mmClientTripartyCollateralTransactionIdentification,
-					com.tools20022.repository.msg.SecuritiesFinancingTransactionDetails22.mmClientTripartyCollateralTransactionIdentification, com.tools20022.repository.msg.Transaction38.mmClientTripartyCollateralTransactionIdentification,
-					com.tools20022.repository.msg.TransactionDetails66.mmClientTripartyCollateralTransactionIdentification, com.tools20022.repository.msg.Transaction39.mmClientTripartyCollateralTransactionIdentification,
-					com.tools20022.repository.msg.Transaction37.mmClientTripartyCollateralTransactionIdentification, com.tools20022.repository.msg.SecuritiesFinancingTransactionDetails24.mmClientTripartyCollateralTransactionIdentification,
-					com.tools20022.repository.msg.Transaction41.mmClientTripartyCollateralTransactionIdentification, com.tools20022.repository.msg.TransactionDetails70.mmClientTripartyCollateralTransactionIdentification,
-					com.tools20022.repository.msg.Transaction40.mmClientTripartyCollateralTransactionIdentification, com.tools20022.repository.msg.Transaction43.mmClientTripartyCollateralTransactionIdentification,
-					com.tools20022.repository.msg.TransactionDetails71.mmClientTripartyCollateralTransactionIdentification,
-					com.tools20022.repository.msg.SecuritiesFinancingTransactionDetails25.mmClientTripartyCollateralTransactionIdentification, com.tools20022.repository.msg.Transaction42.mmClientTripartyCollateralTransactionIdentification,
-					com.tools20022.repository.msg.Transaction47.mmClientTripartyCollateralTransactionIdentification, com.tools20022.repository.msg.SecuritiesFinancingTransactionDetails26.mmClientTripartyCollateralTransactionIdentification,
-					com.tools20022.repository.msg.TransactionDetails79.mmClientTripartyCollateralTransactionIdentification, com.tools20022.repository.msg.Transaction45.mmClientTripartyCollateralTransactionIdentification,
-					com.tools20022.repository.msg.Transaction46.mmClientTripartyCollateralTransactionIdentification, com.tools20022.repository.msg.AdditionalParameters23.mmClientTripartyCollateralTransactionIdentification,
-					com.tools20022.repository.msg.AdditionalParameters22.mmClientTripartyCollateralTransactionIdentification, com.tools20022.repository.msg.AdditionalParameters22.mmClientCollateralInstructionIdentification,
-					com.tools20022.repository.msg.AdditionalParameters21.mmMarketInfrastructureTransactionIdentification,
-					com.tools20022.repository.msg.SecuritiesFinancingTransactionDetails33.mmClientTripartyCollateralTransactionIdentification, com.tools20022.repository.msg.Transaction49.mmClientTripartyCollateralTransactionIdentification,
-					com.tools20022.repository.msg.AdditionalParameters25.mmMarketInfrastructureTransactionIdentification, com.tools20022.repository.msg.AdditionalParameters28.mmClientTripartyCollateralTransactionIdentification,
-					com.tools20022.repository.msg.AdditionalParameters27.mmClientTripartyCollateralTransactionIdentification, com.tools20022.repository.msg.AdditionalParameters27.mmClientCollateralInstructionIdentification,
-					com.tools20022.repository.msg.TransactionDetails87.mmClientTripartyCollateralTransactionIdentification, com.tools20022.repository.msg.Transaction50.mmClientTripartyCollateralTransactionIdentification,
-					com.tools20022.repository.msg.Transaction48.mmClientTripartyCollateralTransactionIdentification, com.tools20022.repository.msg.AdditionalParameters29.mmClientTripartyCollateralTransactionIdentification,
-					com.tools20022.repository.msg.AdditionalParameters29.mmClientCollateralInstructionIdentification, com.tools20022.repository.msg.AdditionalParameters30.mmClientTripartyCollateralTransactionIdentification,
-					com.tools20022.repository.msg.Transaction53.mmClientTripartyCollateralTransactionIdentification, com.tools20022.repository.msg.TransactionDetails97.mmClientTripartyCollateralTransactionIdentification,
-					com.tools20022.repository.msg.SecuritiesFinancingTransactionDetails35.mmClientTripartyCollateralTransactionIdentification, com.tools20022.repository.msg.Transaction54.mmClientTripartyCollateralTransactionIdentification,
-					com.tools20022.repository.msg.Transaction52.mmClientTripartyCollateralTransactionIdentification, com.tools20022.repository.msg.AdditionalParameters31.mmClientTripartyCollateralTransactionIdentification,
-					com.tools20022.repository.msg.AdditionalParameters31.mmClientCollateralInstructionIdentification, com.tools20022.repository.msg.Transaction57.mmClientTripartyCollateralTransactionIdentification,
-					com.tools20022.repository.msg.SecuritiesFinancingTransactionDetails36.mmClientTripartyCollateralTransactionIdentification,
-					com.tools20022.repository.msg.AdditionalParameters32.mmClientTripartyCollateralTransactionIdentification, com.tools20022.repository.msg.Transaction56.mmClientTripartyCollateralTransactionIdentification,
-					com.tools20022.repository.msg.TransactionDetails100.mmClientTripartyCollateralTransactionIdentification, com.tools20022.repository.msg.Transaction55.mmClientTripartyCollateralTransactionIdentification);
+			derivation_lazy = () -> Arrays.asList(AdditionalParameters3.mmMarketInfrastructureTransactionIdentification, AdditionalParameters7.mmMarketInfrastructureTransactionIdentification,
+					AdditionalParameters8.mmMarketInfrastructureTransactionIdentification, AdditionalParameters9.mmMarketInfrastructureTransactionIdentification, AdditionalParameters10.mmMarketInfrastructureTransactionIdentification,
+					AdditionalParameters11.mmMarketInfrastructureTransactionIdentification, AdditionalParameters2.mmClientTripartyCollateralTransactionIdentification,
+					AdditionalParameters6.mmClientTripartyCollateralTransactionIdentification, AdditionalParameters12.mmClientTripartyCollateralTransactionIdentification,
+					AdditionalParameters13.mmClientTripartyCollateralTransactionIdentification, AdditionalParameters17.mmClientTripartyCollateralTransactionIdentification, AdditionalParameters17.mmClientCollateralInstructionIdentification,
+					AdditionalParameters20.mmClientTripartyCollateralTransactionIdentification, AdditionalParameters20.mmClientCollateralInstructionIdentification, TransactionDetails5.mmClientTripartyCollateralTransactionIdentification,
+					TransactionDetails9.mmClientTripartyCollateralTransactionIdentification, TransactionDetails22.mmClientTripartyCollateralTransactionIdentification,
+					TransactionDetails23.mmClientTripartyCollateralTransactionIdentification, TransactionDetails36.mmClientTripartyCollateralTransactionIdentification,
+					TransactionDetails47.mmClientTripartyCollateralTransactionIdentification, TransactionDetails53.mmClientTripartyCollateralTransactionIdentification,
+					TransactionDetails58.mmClientTripartyCollateralTransactionIdentification, Transaction7.mmClientTripartyCollateralTransactionIdentification, Transaction8.mmClientTripartyCollateralTransactionIdentification,
+					Transaction9.mmClientTripartyCollateralTransactionIdentification, Transaction10.mmClientTripartyCollateralTransactionIdentification, Transaction14.mmClientTripartyCollateralTransactionIdentification,
+					Transaction12.mmClientTripartyCollateralTransactionIdentification, Transaction15.mmClientTripartyCollateralTransactionIdentification, Transaction16.mmClientTripartyCollateralTransactionIdentification,
+					Transaction20.mmClientTripartyCollateralTransactionIdentification, Transaction19.mmClientTripartyCollateralTransactionIdentification, Transaction23.mmClientTripartyCollateralTransactionIdentification,
+					Transaction22.mmClientTripartyCollateralTransactionIdentification, Transaction28.mmClientTripartyCollateralTransactionIdentification, Transaction27.mmClientTripartyCollateralTransactionIdentification,
+					Transaction30.mmClientTripartyCollateralTransactionIdentification, Transaction31.mmClientTripartyCollateralTransactionIdentification, Transaction6.mmClientTripartyCollateralTransactionIdentification,
+					Transaction11.mmClientTripartyCollateralTransactionIdentification, Transaction13.mmClientTripartyCollateralTransactionIdentification, Transaction17.mmClientTripartyCollateralTransactionIdentification,
+					Transaction18.mmClientTripartyCollateralTransactionIdentification, Transaction21.mmClientTripartyCollateralTransactionIdentification, Transaction29.mmClientTripartyCollateralTransactionIdentification,
+					Transaction32.mmClientTripartyCollateralTransactionIdentification, SecuritiesFinancingTransactionDetails2.mmClientTripartyCollateralTransactionIdentification,
+					SecuritiesFinancingTransactionDetails8.mmClientTripartyCollateralTransactionIdentification, AdditionalParameters4.mmClientTripartyCollateralTransactionIdentification,
+					SecuritiesFinancingTransactionDetails6.mmClientTripartyCollateralTransactionIdentification, SecuritiesFinancingTransactionDetails10.mmClientTripartyCollateralTransactionIdentification,
+					SecuritiesFinancingTransactionDetails17.mmClientTripartyCollateralTransactionIdentification, SecuritiesFinancingTransactionDetails18.mmClientTripartyCollateralTransactionIdentification,
+					AdditionalParameters5.mmClientTripartyCollateralTransactionIdentification, AdditionalParameters14.mmClientTripartyCollateralTransactionIdentification,
+					AdditionalParameters15.mmClientTripartyCollateralTransactionIdentification, Transaction25.mmClientTripartyCollateralTransactionIdentification, AdditionalParameters16.mmMarketInfrastructureTransactionIdentification,
+					TransactionDetails61.mmClientTripartyCollateralTransactionIdentification, Transaction34.mmClientTripartyCollateralTransactionIdentification,
+					SecuritiesFinancingTransactionDetails21.mmClientTripartyCollateralTransactionIdentification, Transaction35.mmClientTripartyCollateralTransactionIdentification,
+					Transaction36.mmClientTripartyCollateralTransactionIdentification, SecuritiesFinancingTransactionDetails22.mmClientTripartyCollateralTransactionIdentification,
+					Transaction38.mmClientTripartyCollateralTransactionIdentification, TransactionDetails66.mmClientTripartyCollateralTransactionIdentification, Transaction39.mmClientTripartyCollateralTransactionIdentification,
+					Transaction37.mmClientTripartyCollateralTransactionIdentification, SecuritiesFinancingTransactionDetails24.mmClientTripartyCollateralTransactionIdentification,
+					Transaction41.mmClientTripartyCollateralTransactionIdentification, TransactionDetails70.mmClientTripartyCollateralTransactionIdentification, Transaction40.mmClientTripartyCollateralTransactionIdentification,
+					Transaction43.mmClientTripartyCollateralTransactionIdentification, TransactionDetails71.mmClientTripartyCollateralTransactionIdentification,
+					SecuritiesFinancingTransactionDetails25.mmClientTripartyCollateralTransactionIdentification, Transaction42.mmClientTripartyCollateralTransactionIdentification,
+					Transaction47.mmClientTripartyCollateralTransactionIdentification, SecuritiesFinancingTransactionDetails26.mmClientTripartyCollateralTransactionIdentification,
+					TransactionDetails79.mmClientTripartyCollateralTransactionIdentification, Transaction45.mmClientTripartyCollateralTransactionIdentification, Transaction46.mmClientTripartyCollateralTransactionIdentification,
+					AdditionalParameters23.mmClientTripartyCollateralTransactionIdentification, AdditionalParameters22.mmClientTripartyCollateralTransactionIdentification, AdditionalParameters22.mmClientCollateralInstructionIdentification,
+					AdditionalParameters21.mmMarketInfrastructureTransactionIdentification, SecuritiesFinancingTransactionDetails33.mmClientTripartyCollateralTransactionIdentification,
+					Transaction49.mmClientTripartyCollateralTransactionIdentification, AdditionalParameters25.mmMarketInfrastructureTransactionIdentification, AdditionalParameters28.mmClientTripartyCollateralTransactionIdentification,
+					AdditionalParameters27.mmClientTripartyCollateralTransactionIdentification, AdditionalParameters27.mmClientCollateralInstructionIdentification, TransactionDetails87.mmClientTripartyCollateralTransactionIdentification,
+					Transaction50.mmClientTripartyCollateralTransactionIdentification, Transaction48.mmClientTripartyCollateralTransactionIdentification, AdditionalParameters29.mmClientTripartyCollateralTransactionIdentification,
+					AdditionalParameters29.mmClientCollateralInstructionIdentification, AdditionalParameters30.mmClientTripartyCollateralTransactionIdentification, Transaction53.mmClientTripartyCollateralTransactionIdentification,
+					TransactionDetails97.mmClientTripartyCollateralTransactionIdentification, SecuritiesFinancingTransactionDetails35.mmClientTripartyCollateralTransactionIdentification,
+					Transaction54.mmClientTripartyCollateralTransactionIdentification, Transaction52.mmClientTripartyCollateralTransactionIdentification, AdditionalParameters31.mmClientTripartyCollateralTransactionIdentification,
+					AdditionalParameters31.mmClientCollateralInstructionIdentification, Transaction57.mmClientTripartyCollateralTransactionIdentification,
+					SecuritiesFinancingTransactionDetails36.mmClientTripartyCollateralTransactionIdentification, AdditionalParameters32.mmClientTripartyCollateralTransactionIdentification,
+					Transaction56.mmClientTripartyCollateralTransactionIdentification, TransactionDetails100.mmClientTripartyCollateralTransactionIdentification, Transaction55.mmClientTripartyCollateralTransactionIdentification);
 			elementContext_lazy = () -> SecuritiesTradeIdentification.mmObject();
 			isDerived = false;
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "ClientTripartyCollateralTransactionIdentification";
 			definition = "Unique reference identifying the triparty collateral management transaction from the client's point of view.";
 			maxOccurs = 1;
@@ -3730,95 +3614,62 @@ public class SecuritiesTradeIdentification extends TradeIdentification {
 	 */
 	public static final MMBusinessAttribute mmTripartyAgentCollateralTransactionIdentification = new MMBusinessAttribute() {
 		{
-			derivation_lazy = () -> Arrays.asList(com.tools20022.repository.msg.AdditionalParameters2.mmTripartyAgentCollateralTransactionIdentification,
-					com.tools20022.repository.msg.AdditionalParameters6.mmTripartyAgentCollateralTransactionIdentification, com.tools20022.repository.msg.AdditionalParameters12.mmTripartyAgentCollateralTransactionIdentification,
-					com.tools20022.repository.msg.AdditionalParameters13.mmTripartyAgentCollateralTransactionIdentification, com.tools20022.repository.msg.AdditionalParameters17.mmTripartyAgentCollateralTransactionIdentification,
-					com.tools20022.repository.msg.AdditionalParameters17.mmTripartyCollateralInstructionIdentification, com.tools20022.repository.msg.AdditionalParameters20.mmTripartyAgentCollateralTransactionIdentification,
-					com.tools20022.repository.msg.AdditionalParameters20.mmTripartyCollateralInstructionIdentification, com.tools20022.repository.msg.TransactionDetails5.mmTripartyAgentCollateralTransactionIdentification,
-					com.tools20022.repository.msg.TransactionDetails9.mmTripartyAgentCollateralTransactionIdentification, com.tools20022.repository.msg.TransactionDetails22.mmTripartyAgentCollateralTransactionIdentification,
-					com.tools20022.repository.msg.TransactionDetails23.mmTripartyAgentCollateralTransactionIdentification, com.tools20022.repository.msg.TransactionDetails36.mmTripartyAgentCollateralTransactionIdentification,
-					com.tools20022.repository.msg.TransactionDetails47.mmTripartyAgentCollateralTransactionIdentification, com.tools20022.repository.msg.TransactionDetails53.mmTripartyAgentCollateralTransactionIdentification,
-					com.tools20022.repository.msg.TransactionDetails53.mmTripartyCollateralInstructionIdentification, com.tools20022.repository.msg.TransactionDetails58.mmTripartyAgentCollateralTransactionIdentification,
-					com.tools20022.repository.msg.TransactionDetails58.mmTripartyCollateralInstructionIdentification, com.tools20022.repository.msg.Transaction7.mmTripartyAgentCollateralTransactionIdentification,
-					com.tools20022.repository.msg.Transaction8.mmTripartyAgentCollateralTransactionIdentification, com.tools20022.repository.msg.Transaction9.mmTripartyAgentCollateralTransactionIdentification,
-					com.tools20022.repository.msg.Transaction10.mmTripartyAgentCollateralTransactionIdentification, com.tools20022.repository.msg.Transaction14.mmTripartyAgentCollateralTransactionIdentification,
-					com.tools20022.repository.msg.Transaction12.mmTripartyAgentCollateralTransactionIdentification, com.tools20022.repository.msg.Transaction15.mmTripartyAgentCollateralTransactionIdentification,
-					com.tools20022.repository.msg.Transaction16.mmTripartyAgentCollateralTransactionIdentification, com.tools20022.repository.msg.Transaction20.mmTripartyAgentCollateralTransactionIdentification,
-					com.tools20022.repository.msg.Transaction19.mmTripartyAgentCollateralTransactionIdentification, com.tools20022.repository.msg.Transaction23.mmTripartyAgentCollateralTransactionIdentification,
-					com.tools20022.repository.msg.Transaction22.mmTripartyAgentCollateralTransactionIdentification, com.tools20022.repository.msg.Transaction28.mmTripartyAgentCollateralTransactionIdentification,
-					com.tools20022.repository.msg.Transaction28.mmTripartyCollateralInstructionIdentification, com.tools20022.repository.msg.Transaction27.mmTripartyAgentCollateralTransactionIdentification,
-					com.tools20022.repository.msg.Transaction27.mmTripartyCollateralInstructionIdentification, com.tools20022.repository.msg.Transaction30.mmTripartyAgentCollateralTransactionIdentification,
-					com.tools20022.repository.msg.Transaction30.mmTripartyCollateralInstructionIdentification, com.tools20022.repository.msg.Transaction31.mmTripartyAgentCollateralTransactionIdentification,
-					com.tools20022.repository.msg.Transaction31.mmTripartyCollateralInstructionIdentification, com.tools20022.repository.msg.Transaction6.mmTripartyAgentCollateralTransactionIdentification,
-					com.tools20022.repository.msg.Transaction11.mmTripartyAgentCollateralTransactionIdentification, com.tools20022.repository.msg.Transaction13.mmTripartyAgentCollateralTransactionIdentification,
-					com.tools20022.repository.msg.Transaction17.mmTripartyAgentCollateralTransactionIdentification, com.tools20022.repository.msg.Transaction18.mmTripartyAgentCollateralTransactionIdentification,
-					com.tools20022.repository.msg.Transaction21.mmTripartyAgentCollateralTransactionIdentification, com.tools20022.repository.msg.Transaction29.mmTripartyAgentCollateralTransactionIdentification,
-					com.tools20022.repository.msg.Transaction29.mmTripartyCollateralInstructionIdentification, com.tools20022.repository.msg.Transaction32.mmTripartyAgentCollateralTransactionIdentification,
-					com.tools20022.repository.msg.Transaction32.mmTripartyCollateralInstructionIdentification, com.tools20022.repository.msg.SecuritiesFinancingTransactionDetails2.mmTripartyAgentCollateralTransactionIdentification,
-					com.tools20022.repository.msg.SecuritiesFinancingTransactionDetails8.mmTripartyAgentCollateralTransactionIdentification,
-					com.tools20022.repository.msg.AdditionalParameters4.mmTripartyAgentCollateralTransactionIdentification,
-					com.tools20022.repository.msg.SecuritiesFinancingTransactionDetails6.mmTripartyAgentCollateralTransactionIdentification,
-					com.tools20022.repository.msg.SecuritiesFinancingTransactionDetails10.mmTripartyAgentCollateralTransactionIdentification,
-					com.tools20022.repository.msg.SecuritiesFinancingTransactionDetails17.mmTripartyAgentCollateralTransactionIdentification,
-					com.tools20022.repository.msg.SecuritiesFinancingTransactionDetails18.mmTripartyAgentCollateralTransactionIdentification,
-					com.tools20022.repository.msg.AdditionalParameters5.mmTripartyAgentCollateralTransactionIdentification, com.tools20022.repository.msg.AdditionalParameters14.mmTripartyAgentCollateralTransactionIdentification,
-					com.tools20022.repository.msg.AdditionalParameters15.mmTripartyAgentCollateralTransactionIdentification, com.tools20022.repository.msg.Transaction25.mmTripartyAgentCollateralTransactionIdentification,
-					com.tools20022.repository.msg.TransactionDetails61.mmTripartyAgentCollateralTransactionIdentification, com.tools20022.repository.msg.TransactionDetails61.mmTripartyCollateralInstructionIdentification,
-					com.tools20022.repository.msg.Transaction34.mmTripartyAgentCollateralTransactionIdentification, com.tools20022.repository.msg.Transaction34.mmTripartyCollateralInstructionIdentification,
-					com.tools20022.repository.msg.SecuritiesFinancingTransactionDetails21.mmTripartyAgentCollateralTransactionIdentification, com.tools20022.repository.msg.Transaction35.mmTripartyAgentCollateralTransactionIdentification,
-					com.tools20022.repository.msg.Transaction35.mmTripartyCollateralInstructionIdentification, com.tools20022.repository.msg.Transaction36.mmTripartyAgentCollateralTransactionIdentification,
-					com.tools20022.repository.msg.Transaction36.mmTripartyCollateralInstructionIdentification, com.tools20022.repository.msg.SecuritiesFinancingTransactionDetails22.mmTripartyAgentCollateralTransactionIdentification,
-					com.tools20022.repository.msg.Transaction38.mmTripartyAgentCollateralTransactionIdentification, com.tools20022.repository.msg.Transaction38.mmTripartyCollateralInstructionIdentification,
-					com.tools20022.repository.msg.TransactionDetails66.mmTripartyAgentCollateralTransactionIdentification, com.tools20022.repository.msg.TransactionDetails66.mmTripartyCollateralInstructionIdentification,
-					com.tools20022.repository.msg.Transaction39.mmTripartyAgentCollateralTransactionIdentification, com.tools20022.repository.msg.Transaction39.mmTripartyCollateralInstructionIdentification,
-					com.tools20022.repository.msg.Transaction37.mmTripartyAgentCollateralTransactionIdentification, com.tools20022.repository.msg.Transaction37.mmTripartyCollateralInstructionIdentification,
-					com.tools20022.repository.msg.SecuritiesFinancingTransactionDetails24.mmTripartyAgentCollateralTransactionIdentification, com.tools20022.repository.msg.Transaction41.mmTripartyAgentCollateralTransactionIdentification,
-					com.tools20022.repository.msg.Transaction41.mmTripartyCollateralInstructionIdentification, com.tools20022.repository.msg.TransactionDetails70.mmTripartyAgentCollateralTransactionIdentification,
-					com.tools20022.repository.msg.TransactionDetails70.mmTripartyCollateralInstructionIdentification, com.tools20022.repository.msg.Transaction40.mmTripartyAgentCollateralTransactionIdentification,
-					com.tools20022.repository.msg.Transaction40.mmTripartyCollateralInstructionIdentification, com.tools20022.repository.msg.Transaction43.mmTripartyAgentCollateralTransactionIdentification,
-					com.tools20022.repository.msg.Transaction43.mmTripartyCollateralInstructionIdentification, com.tools20022.repository.msg.TransactionDetails71.mmTripartyAgentCollateralTransactionIdentification,
-					com.tools20022.repository.msg.TransactionDetails71.mmTripartyCollateralInstructionIdentification, com.tools20022.repository.msg.SecuritiesFinancingTransactionDetails25.mmTripartyAgentCollateralTransactionIdentification,
-					com.tools20022.repository.msg.Transaction42.mmTripartyAgentCollateralTransactionIdentification, com.tools20022.repository.msg.Transaction42.mmTripartyCollateralInstructionIdentification,
-					com.tools20022.repository.msg.Transaction47.mmTripartyAgentCollateralTransactionIdentification, com.tools20022.repository.msg.Transaction47.mmTripartyCollateralInstructionIdentification,
-					com.tools20022.repository.msg.SecuritiesFinancingTransactionDetails26.mmTripartyAgentCollateralTransactionIdentification,
-					com.tools20022.repository.msg.TransactionDetails79.mmTripartyAgentCollateralTransactionIdentification, com.tools20022.repository.msg.TransactionDetails79.mmTripartyCollateralInstructionIdentification,
-					com.tools20022.repository.msg.Transaction45.mmTripartyAgentCollateralTransactionIdentification, com.tools20022.repository.msg.Transaction45.mmTripartyCollateralInstructionIdentification,
-					com.tools20022.repository.msg.Transaction46.mmTripartyAgentCollateralTransactionIdentification, com.tools20022.repository.msg.Transaction46.mmTripartyCollateralInstructionIdentification,
-					com.tools20022.repository.msg.AdditionalParameters23.mmTripartyAgentCollateralTransactionIdentification, com.tools20022.repository.msg.AdditionalParameters22.mmTripartyAgentCollateralTransactionIdentification,
-					com.tools20022.repository.msg.AdditionalParameters22.mmTripartyCollateralInstructionIdentification,
-					com.tools20022.repository.msg.SecuritiesFinancingTransactionDetails33.mmTripartyAgentCollateralTransactionIdentification, com.tools20022.repository.msg.Transaction49.mmTripartyAgentCollateralTransactionIdentification,
-					com.tools20022.repository.msg.Transaction49.mmTripartyCollateralInstructionIdentification, com.tools20022.repository.msg.AdditionalParameters28.mmTripartyAgentCollateralTransactionIdentification,
-					com.tools20022.repository.msg.AdditionalParameters27.mmTripartyAgentCollateralTransactionIdentification, com.tools20022.repository.msg.AdditionalParameters27.mmTripartyCollateralInstructionIdentification,
-					com.tools20022.repository.msg.TransactionDetails87.mmTripartyAgentCollateralTransactionIdentification, com.tools20022.repository.msg.TransactionDetails87.mmTripartyCollateralInstructionIdentification,
-					com.tools20022.repository.msg.Transaction50.mmTripartyAgentCollateralTransactionIdentification, com.tools20022.repository.msg.Transaction50.mmTripartyCollateralInstructionIdentification,
-					com.tools20022.repository.msg.Transaction48.mmTripartyAgentCollateralTransactionIdentification, com.tools20022.repository.msg.Transaction48.mmTripartyCollateralInstructionIdentification,
-					com.tools20022.repository.msg.AdditionalParameters29.mmTripartyAgentServiceProviderCollateralTransactionIdentification,
-					com.tools20022.repository.msg.AdditionalParameters29.mmTripartyAgentServiceProviderCollateralInstructionIdentification,
-					com.tools20022.repository.msg.AdditionalParameters30.mmTripartyAgentServiceProviderCollateralTransactionIdentification,
-					com.tools20022.repository.msg.Transaction53.mmTripartyAgentServiceProviderCollateralTransactionIdentification,
-					com.tools20022.repository.msg.Transaction53.mmTripartyAgentServiceProviderCollateralInstructionIdentification,
-					com.tools20022.repository.msg.TransactionDetails97.mmTripartyAgentServiceProviderCollateralTransactionIdentification,
-					com.tools20022.repository.msg.TransactionDetails97.mmTripartyAgentServiceProviderCollateralInstructionIdentification,
-					com.tools20022.repository.msg.SecuritiesFinancingTransactionDetails35.mmTripartyAgentServiceProviderCollateralTransactionIdentification,
-					com.tools20022.repository.msg.Transaction54.mmTripartyAgentServiceProviderCollateralTransactionIdentification,
-					com.tools20022.repository.msg.Transaction54.mmTripartyAgentServiceProviderCollateralInstructionIdentification,
-					com.tools20022.repository.msg.Transaction52.mmTripartyAgentServiceProviderCollateralTransactionIdentification,
-					com.tools20022.repository.msg.Transaction52.mmTripartyAgentServiceProviderCollateralInstructionIdentification,
-					com.tools20022.repository.msg.AdditionalParameters31.mmTripartyAgentServiceProviderCollateralTransactionIdentification,
-					com.tools20022.repository.msg.AdditionalParameters31.mmTripartyAgentServiceProviderCollateralInstructionIdentification,
-					com.tools20022.repository.msg.Transaction57.mmTripartyAgentServiceProviderCollateralTransactionIdentification,
-					com.tools20022.repository.msg.Transaction57.mmTripartyAgentServiceProviderCollateralInstructionIdentification,
-					com.tools20022.repository.msg.SecuritiesFinancingTransactionDetails36.mmTripartyAgentServiceProviderCollateralTransactionIdentification,
-					com.tools20022.repository.msg.AdditionalParameters32.mmTripartyAgentServiceProviderCollateralTransactionIdentification,
-					com.tools20022.repository.msg.Transaction56.mmTripartyAgentServiceProviderCollateralTransactionIdentification,
-					com.tools20022.repository.msg.Transaction56.mmTripartyAgentServiceProviderCollateralInstructionIdentification,
-					com.tools20022.repository.msg.TransactionDetails100.mmTripartyAgentServiceProviderCollateralTransactionIdentification,
-					com.tools20022.repository.msg.TransactionDetails100.mmTripartyAgentServiceProviderCollateralInstructionIdentification,
-					com.tools20022.repository.msg.Transaction55.mmTripartyAgentServiceProviderCollateralTransactionIdentification,
-					com.tools20022.repository.msg.Transaction55.mmTripartyAgentServiceProviderCollateralInstructionIdentification);
+			derivation_lazy = () -> Arrays.asList(AdditionalParameters2.mmTripartyAgentCollateralTransactionIdentification, AdditionalParameters6.mmTripartyAgentCollateralTransactionIdentification,
+					AdditionalParameters12.mmTripartyAgentCollateralTransactionIdentification, AdditionalParameters13.mmTripartyAgentCollateralTransactionIdentification,
+					AdditionalParameters17.mmTripartyAgentCollateralTransactionIdentification, AdditionalParameters17.mmTripartyCollateralInstructionIdentification, AdditionalParameters20.mmTripartyAgentCollateralTransactionIdentification,
+					AdditionalParameters20.mmTripartyCollateralInstructionIdentification, TransactionDetails5.mmTripartyAgentCollateralTransactionIdentification, TransactionDetails9.mmTripartyAgentCollateralTransactionIdentification,
+					TransactionDetails22.mmTripartyAgentCollateralTransactionIdentification, TransactionDetails23.mmTripartyAgentCollateralTransactionIdentification, TransactionDetails36.mmTripartyAgentCollateralTransactionIdentification,
+					TransactionDetails47.mmTripartyAgentCollateralTransactionIdentification, TransactionDetails53.mmTripartyAgentCollateralTransactionIdentification, TransactionDetails53.mmTripartyCollateralInstructionIdentification,
+					TransactionDetails58.mmTripartyAgentCollateralTransactionIdentification, TransactionDetails58.mmTripartyCollateralInstructionIdentification, Transaction7.mmTripartyAgentCollateralTransactionIdentification,
+					Transaction8.mmTripartyAgentCollateralTransactionIdentification, Transaction9.mmTripartyAgentCollateralTransactionIdentification, Transaction10.mmTripartyAgentCollateralTransactionIdentification,
+					Transaction14.mmTripartyAgentCollateralTransactionIdentification, Transaction12.mmTripartyAgentCollateralTransactionIdentification, Transaction15.mmTripartyAgentCollateralTransactionIdentification,
+					Transaction16.mmTripartyAgentCollateralTransactionIdentification, Transaction20.mmTripartyAgentCollateralTransactionIdentification, Transaction19.mmTripartyAgentCollateralTransactionIdentification,
+					Transaction23.mmTripartyAgentCollateralTransactionIdentification, Transaction22.mmTripartyAgentCollateralTransactionIdentification, Transaction28.mmTripartyAgentCollateralTransactionIdentification,
+					Transaction28.mmTripartyCollateralInstructionIdentification, Transaction27.mmTripartyAgentCollateralTransactionIdentification, Transaction27.mmTripartyCollateralInstructionIdentification,
+					Transaction30.mmTripartyAgentCollateralTransactionIdentification, Transaction30.mmTripartyCollateralInstructionIdentification, Transaction31.mmTripartyAgentCollateralTransactionIdentification,
+					Transaction31.mmTripartyCollateralInstructionIdentification, Transaction6.mmTripartyAgentCollateralTransactionIdentification, Transaction11.mmTripartyAgentCollateralTransactionIdentification,
+					Transaction13.mmTripartyAgentCollateralTransactionIdentification, Transaction17.mmTripartyAgentCollateralTransactionIdentification, Transaction18.mmTripartyAgentCollateralTransactionIdentification,
+					Transaction21.mmTripartyAgentCollateralTransactionIdentification, Transaction29.mmTripartyAgentCollateralTransactionIdentification, Transaction29.mmTripartyCollateralInstructionIdentification,
+					Transaction32.mmTripartyAgentCollateralTransactionIdentification, Transaction32.mmTripartyCollateralInstructionIdentification, SecuritiesFinancingTransactionDetails2.mmTripartyAgentCollateralTransactionIdentification,
+					SecuritiesFinancingTransactionDetails8.mmTripartyAgentCollateralTransactionIdentification, AdditionalParameters4.mmTripartyAgentCollateralTransactionIdentification,
+					SecuritiesFinancingTransactionDetails6.mmTripartyAgentCollateralTransactionIdentification, SecuritiesFinancingTransactionDetails10.mmTripartyAgentCollateralTransactionIdentification,
+					SecuritiesFinancingTransactionDetails17.mmTripartyAgentCollateralTransactionIdentification, SecuritiesFinancingTransactionDetails18.mmTripartyAgentCollateralTransactionIdentification,
+					AdditionalParameters5.mmTripartyAgentCollateralTransactionIdentification, AdditionalParameters14.mmTripartyAgentCollateralTransactionIdentification,
+					AdditionalParameters15.mmTripartyAgentCollateralTransactionIdentification, Transaction25.mmTripartyAgentCollateralTransactionIdentification, TransactionDetails61.mmTripartyAgentCollateralTransactionIdentification,
+					TransactionDetails61.mmTripartyCollateralInstructionIdentification, Transaction34.mmTripartyAgentCollateralTransactionIdentification, Transaction34.mmTripartyCollateralInstructionIdentification,
+					SecuritiesFinancingTransactionDetails21.mmTripartyAgentCollateralTransactionIdentification, Transaction35.mmTripartyAgentCollateralTransactionIdentification, Transaction35.mmTripartyCollateralInstructionIdentification,
+					Transaction36.mmTripartyAgentCollateralTransactionIdentification, Transaction36.mmTripartyCollateralInstructionIdentification, SecuritiesFinancingTransactionDetails22.mmTripartyAgentCollateralTransactionIdentification,
+					Transaction38.mmTripartyAgentCollateralTransactionIdentification, Transaction38.mmTripartyCollateralInstructionIdentification, TransactionDetails66.mmTripartyAgentCollateralTransactionIdentification,
+					TransactionDetails66.mmTripartyCollateralInstructionIdentification, Transaction39.mmTripartyAgentCollateralTransactionIdentification, Transaction39.mmTripartyCollateralInstructionIdentification,
+					Transaction37.mmTripartyAgentCollateralTransactionIdentification, Transaction37.mmTripartyCollateralInstructionIdentification, SecuritiesFinancingTransactionDetails24.mmTripartyAgentCollateralTransactionIdentification,
+					Transaction41.mmTripartyAgentCollateralTransactionIdentification, Transaction41.mmTripartyCollateralInstructionIdentification, TransactionDetails70.mmTripartyAgentCollateralTransactionIdentification,
+					TransactionDetails70.mmTripartyCollateralInstructionIdentification, Transaction40.mmTripartyAgentCollateralTransactionIdentification, Transaction40.mmTripartyCollateralInstructionIdentification,
+					Transaction43.mmTripartyAgentCollateralTransactionIdentification, Transaction43.mmTripartyCollateralInstructionIdentification, TransactionDetails71.mmTripartyAgentCollateralTransactionIdentification,
+					TransactionDetails71.mmTripartyCollateralInstructionIdentification, SecuritiesFinancingTransactionDetails25.mmTripartyAgentCollateralTransactionIdentification,
+					Transaction42.mmTripartyAgentCollateralTransactionIdentification, Transaction42.mmTripartyCollateralInstructionIdentification, Transaction47.mmTripartyAgentCollateralTransactionIdentification,
+					Transaction47.mmTripartyCollateralInstructionIdentification, SecuritiesFinancingTransactionDetails26.mmTripartyAgentCollateralTransactionIdentification,
+					TransactionDetails79.mmTripartyAgentCollateralTransactionIdentification, TransactionDetails79.mmTripartyCollateralInstructionIdentification, Transaction45.mmTripartyAgentCollateralTransactionIdentification,
+					Transaction45.mmTripartyCollateralInstructionIdentification, Transaction46.mmTripartyAgentCollateralTransactionIdentification, Transaction46.mmTripartyCollateralInstructionIdentification,
+					AdditionalParameters23.mmTripartyAgentCollateralTransactionIdentification, AdditionalParameters22.mmTripartyAgentCollateralTransactionIdentification, AdditionalParameters22.mmTripartyCollateralInstructionIdentification,
+					SecuritiesFinancingTransactionDetails33.mmTripartyAgentCollateralTransactionIdentification, Transaction49.mmTripartyAgentCollateralTransactionIdentification, Transaction49.mmTripartyCollateralInstructionIdentification,
+					AdditionalParameters28.mmTripartyAgentCollateralTransactionIdentification, AdditionalParameters27.mmTripartyAgentCollateralTransactionIdentification, AdditionalParameters27.mmTripartyCollateralInstructionIdentification,
+					TransactionDetails87.mmTripartyAgentCollateralTransactionIdentification, TransactionDetails87.mmTripartyCollateralInstructionIdentification, Transaction50.mmTripartyAgentCollateralTransactionIdentification,
+					Transaction50.mmTripartyCollateralInstructionIdentification, Transaction48.mmTripartyAgentCollateralTransactionIdentification, Transaction48.mmTripartyCollateralInstructionIdentification,
+					AdditionalParameters29.mmTripartyAgentServiceProviderCollateralTransactionIdentification, AdditionalParameters29.mmTripartyAgentServiceProviderCollateralInstructionIdentification,
+					AdditionalParameters30.mmTripartyAgentServiceProviderCollateralTransactionIdentification, Transaction53.mmTripartyAgentServiceProviderCollateralTransactionIdentification,
+					Transaction53.mmTripartyAgentServiceProviderCollateralInstructionIdentification, TransactionDetails97.mmTripartyAgentServiceProviderCollateralTransactionIdentification,
+					TransactionDetails97.mmTripartyAgentServiceProviderCollateralInstructionIdentification, SecuritiesFinancingTransactionDetails35.mmTripartyAgentServiceProviderCollateralTransactionIdentification,
+					Transaction54.mmTripartyAgentServiceProviderCollateralTransactionIdentification, Transaction54.mmTripartyAgentServiceProviderCollateralInstructionIdentification,
+					Transaction52.mmTripartyAgentServiceProviderCollateralTransactionIdentification, Transaction52.mmTripartyAgentServiceProviderCollateralInstructionIdentification,
+					AdditionalParameters31.mmTripartyAgentServiceProviderCollateralTransactionIdentification, AdditionalParameters31.mmTripartyAgentServiceProviderCollateralInstructionIdentification,
+					Transaction57.mmTripartyAgentServiceProviderCollateralTransactionIdentification, Transaction57.mmTripartyAgentServiceProviderCollateralInstructionIdentification,
+					SecuritiesFinancingTransactionDetails36.mmTripartyAgentServiceProviderCollateralTransactionIdentification, AdditionalParameters32.mmTripartyAgentServiceProviderCollateralTransactionIdentification,
+					Transaction56.mmTripartyAgentServiceProviderCollateralTransactionIdentification, Transaction56.mmTripartyAgentServiceProviderCollateralInstructionIdentification,
+					TransactionDetails100.mmTripartyAgentServiceProviderCollateralTransactionIdentification, TransactionDetails100.mmTripartyAgentServiceProviderCollateralInstructionIdentification,
+					Transaction55.mmTripartyAgentServiceProviderCollateralTransactionIdentification, Transaction55.mmTripartyAgentServiceProviderCollateralInstructionIdentification);
 			elementContext_lazy = () -> SecuritiesTradeIdentification.mmObject();
 			isDerived = false;
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "TripartyAgentCollateralTransactionIdentification";
 			definition = "Unique reference identifying the triparty collateral management transaction from the triparty agent's point of view.";
 			maxOccurs = 1;
@@ -3892,13 +3743,12 @@ public class SecuritiesTradeIdentification extends TradeIdentification {
 	 */
 	public static final MMBusinessAttribute mmBasketIdentification = new MMBusinessAttribute() {
 		{
-			derivation_lazy = () -> Arrays.asList(com.tools20022.repository.msg.Identification2.mmBasketIdentification, com.tools20022.repository.msg.Identification7.mmBasketIdentification,
-					com.tools20022.repository.msg.Identification6.mmBasketIdentification, com.tools20022.repository.msg.Identification5.mmBasketIdentification, com.tools20022.repository.msg.Identification8.mmBasketIdentification,
-					com.tools20022.repository.msg.Identification11.mmBasketIdentification, com.tools20022.repository.msg.Identification13.mmBasketIdentification, com.tools20022.repository.msg.Identification9.mmBasketIdentification,
-					com.tools20022.repository.msg.Identification3.mmBasketIdentification, com.tools20022.repository.msg.Identification15.mmBasketIdentification, com.tools20022.repository.msg.Identification24.mmBasketIdentification);
+			derivation_lazy = () -> Arrays.asList(Identification2.mmBasketIdentification, Identification7.mmBasketIdentification, Identification6.mmBasketIdentification, Identification5.mmBasketIdentification,
+					Identification8.mmBasketIdentification, Identification11.mmBasketIdentification, Identification13.mmBasketIdentification, Identification9.mmBasketIdentification, Identification3.mmBasketIdentification,
+					Identification15.mmBasketIdentification, Identification24.mmBasketIdentification);
 			elementContext_lazy = () -> SecuritiesTradeIdentification.mmObject();
 			isDerived = false;
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "BasketIdentification";
 			definition = "Identification of a basket trade.";
 			maxOccurs = 1;
@@ -3972,13 +3822,12 @@ public class SecuritiesTradeIdentification extends TradeIdentification {
 	 */
 	public static final MMBusinessAttribute mmProgramIdentification = new MMBusinessAttribute() {
 		{
-			derivation_lazy = () -> Arrays.asList(com.tools20022.repository.msg.Identification2.mmProgramIdentification, com.tools20022.repository.msg.Identification7.mmProgramIdentification,
-					com.tools20022.repository.msg.Identification6.mmProgramIdentification, com.tools20022.repository.msg.Identification5.mmProgramIdentification, com.tools20022.repository.msg.Identification8.mmProgramIdentification,
-					com.tools20022.repository.msg.Identification11.mmProgramIdentification, com.tools20022.repository.msg.Identification13.mmProgramIdentification, com.tools20022.repository.msg.Identification9.mmProgramIdentification,
-					com.tools20022.repository.msg.Identification3.mmProgramIdentification, com.tools20022.repository.msg.Identification15.mmProgramIdentification, com.tools20022.repository.msg.Identification24.mmProgramIdentification);
+			derivation_lazy = () -> Arrays.asList(Identification2.mmProgramIdentification, Identification7.mmProgramIdentification, Identification6.mmProgramIdentification, Identification5.mmProgramIdentification,
+					Identification8.mmProgramIdentification, Identification11.mmProgramIdentification, Identification13.mmProgramIdentification, Identification9.mmProgramIdentification, Identification3.mmProgramIdentification,
+					Identification15.mmProgramIdentification, Identification24.mmProgramIdentification);
 			elementContext_lazy = () -> SecuritiesTradeIdentification.mmObject();
 			isDerived = false;
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "ProgramIdentification";
 			definition = "Program reference which identifies a program trade.";
 			maxOccurs = 1;
@@ -4028,10 +3877,10 @@ public class SecuritiesTradeIdentification extends TradeIdentification {
 	 */
 	public static final MMBusinessAttribute mmBlockIdentification = new MMBusinessAttribute() {
 		{
-			derivation_lazy = () -> Arrays.asList(com.tools20022.repository.choice.IdentificationReference8Choice.mmBlockIdentification, com.tools20022.repository.choice.IdentificationReference11Choice.mmBlockIdentification);
+			derivation_lazy = () -> Arrays.asList(IdentificationReference8Choice.mmBlockIdentification, IdentificationReference11Choice.mmBlockIdentification);
 			elementContext_lazy = () -> SecuritiesTradeIdentification.mmObject();
 			isDerived = false;
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "BlockIdentification";
 			definition = "Reference of the linked message at the trade/block level which identifies a centrally matched transaction.";
 			maxOccurs = 1;
@@ -4099,14 +3948,12 @@ public class SecuritiesTradeIdentification extends TradeIdentification {
 	 */
 	public static final MMBusinessAttribute mmAllocationIdentification = new MMBusinessAttribute() {
 		{
-			derivation_lazy = () -> Arrays.asList(com.tools20022.repository.choice.IdentificationReference8Choice.mmAllocationIdentification,
-					com.tools20022.repository.choice.IdentificationReference8Choice.mmIndividualAllocationIdentification, com.tools20022.repository.choice.IdentificationReference8Choice.mmSecondaryAllocationIdentification,
-					com.tools20022.repository.choice.IdentificationReference11Choice.mmAllocationIdentification, com.tools20022.repository.choice.IdentificationReference11Choice.mmIndividualAllocationIdentification,
-					com.tools20022.repository.choice.IdentificationReference11Choice.mmSecondaryAllocationIdentification, com.tools20022.repository.msg.TradeLeg8.mmAllocationIdentification,
-					com.tools20022.repository.msg.TradeLeg10.mmAllocationIdentification, com.tools20022.repository.msg.TradeLeg9.mmAllocationIdentification);
+			derivation_lazy = () -> Arrays.asList(IdentificationReference8Choice.mmAllocationIdentification, IdentificationReference8Choice.mmIndividualAllocationIdentification,
+					IdentificationReference8Choice.mmSecondaryAllocationIdentification, IdentificationReference11Choice.mmAllocationIdentification, IdentificationReference11Choice.mmIndividualAllocationIdentification,
+					IdentificationReference11Choice.mmSecondaryAllocationIdentification, TradeLeg8.mmAllocationIdentification, TradeLeg10.mmAllocationIdentification, TradeLeg9.mmAllocationIdentification);
 			elementContext_lazy = () -> SecuritiesTradeIdentification.mmObject();
 			isDerived = false;
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "AllocationIdentification";
 			definition = "Identification at the allocation level.";
 			maxOccurs = 1;
@@ -4158,11 +4005,10 @@ public class SecuritiesTradeIdentification extends TradeIdentification {
 	 */
 	public static final MMBusinessAttribute mmComplianceIdentification = new MMBusinessAttribute() {
 		{
-			derivation_lazy = () -> Arrays.asList(com.tools20022.repository.choice.IdentificationReference8Choice.mmComplianceIdentification, com.tools20022.repository.choice.IdentificationReference11Choice.mmComplianceIdentification,
-					com.tools20022.repository.msg.OrderParameters1.mmComplianceIdentification);
+			derivation_lazy = () -> Arrays.asList(IdentificationReference8Choice.mmComplianceIdentification, IdentificationReference11Choice.mmComplianceIdentification, OrderParameters1.mmComplianceIdentification);
 			elementContext_lazy = () -> SecuritiesTradeIdentification.mmObject();
 			isDerived = false;
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "ComplianceIdentification";
 			definition = "Identification which represents this transaction for compliance purposes.";
 			maxOccurs = 1;
@@ -4203,7 +4049,7 @@ public class SecuritiesTradeIdentification extends TradeIdentification {
 		{
 			elementContext_lazy = () -> SecuritiesTradeIdentification.mmObject();
 			isDerived = false;
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "CSDTransactionIdentification";
 			definition = "Identification given by the central securities depository  to the transaction.";
 			maxOccurs = 1;
@@ -4255,11 +4101,11 @@ public class SecuritiesTradeIdentification extends TradeIdentification {
 	 */
 	public static final MMBusinessAttribute mmCentralCounterpartyTransactionIdentification = new MMBusinessAttribute() {
 		{
-			derivation_lazy = () -> Arrays.asList(com.tools20022.repository.msg.SettlementObligation1.mmCentralCounterpartyTransactionIdentification,
-					com.tools20022.repository.msg.SettlementObligation6.mmCentralCounterpartyTransactionIdentification, com.tools20022.repository.msg.SettlementObligation7.mmCentralCounterpartyTransactionIdentification);
+			derivation_lazy = () -> Arrays.asList(SettlementObligation1.mmCentralCounterpartyTransactionIdentification, SettlementObligation6.mmCentralCounterpartyTransactionIdentification,
+					SettlementObligation7.mmCentralCounterpartyTransactionIdentification);
 			elementContext_lazy = () -> SecuritiesTradeIdentification.mmObject();
 			isDerived = false;
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "CentralCounterpartyTransactionIdentification";
 			definition = "Identification of the transaction assigned by the central counterparty.";
 			maxOccurs = 1;
@@ -4324,13 +4170,11 @@ public class SecuritiesTradeIdentification extends TradeIdentification {
 	 */
 	public static final MMBusinessAttribute mmCancellationRequestIdentification = new MMBusinessAttribute() {
 		{
-			derivation_lazy = () -> Arrays.asList(com.tools20022.repository.choice.IdentificationReference11Choice.mmCancellationRequestIdentification, com.tools20022.repository.msg.InvestmentFundOrder5.mmCancellationReference,
-					com.tools20022.repository.msg.InvestmentFundOrder2.mmCancellationReference, com.tools20022.repository.msg.InvestmentFundOrder6.mmCancellationReference,
-					com.tools20022.repository.msg.InvestmentFundOrder11.mmCancellationReference, com.tools20022.repository.msg.InvestmentFundOrder9.mmCancellationReference,
-					com.tools20022.repository.msg.InvestmentFundOrder8.mmCancellationReference);
+			derivation_lazy = () -> Arrays.asList(IdentificationReference11Choice.mmCancellationRequestIdentification, InvestmentFundOrder5.mmCancellationReference, InvestmentFundOrder2.mmCancellationReference,
+					InvestmentFundOrder6.mmCancellationReference, InvestmentFundOrder11.mmCancellationReference, InvestmentFundOrder9.mmCancellationReference, InvestmentFundOrder8.mmCancellationReference);
 			elementContext_lazy = () -> SecuritiesTradeIdentification.mmObject();
 			isDerived = false;
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "CancellationRequestIdentification";
 			definition = "Unambiguous identification of the cancellation request as known by the instructing party.";
 			maxOccurs = 1;
@@ -4342,32 +4186,24 @@ public class SecuritiesTradeIdentification extends TradeIdentification {
 	static public MMBusinessComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMBusinessComponent() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "SecuritiesTradeIdentification";
 				definition = "Specifies the different identifications associated with a securities transaction.";
 				associationDomain_lazy = () -> Arrays.asList(com.tools20022.repository.entity.SecuritiesTrade.mmSecuritiesTradeRelatedIdentifications);
-				derivationElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.Identification1.mmIdentification, com.tools20022.repository.msg.Identification4.mmIdentification,
-						com.tools20022.repository.msg.Linkages1.mmReference, com.tools20022.repository.msg.Linkages21.mmReference, com.tools20022.repository.msg.Linkages4.mmReference, com.tools20022.repository.msg.Linkages22.mmReference,
-						com.tools20022.repository.msg.Linkages9.mmReference, com.tools20022.repository.msg.Linkages14.mmReference, com.tools20022.repository.msg.Linkages17.mmReference, com.tools20022.repository.msg.Linkages24.mmReference,
-						com.tools20022.repository.msg.Linkages3.mmReference, com.tools20022.repository.msg.Linkages6.mmReference, com.tools20022.repository.msg.Linkages10.mmReference, com.tools20022.repository.msg.Linkages11.mmReference,
-						com.tools20022.repository.msg.Linkages16.mmReference, com.tools20022.repository.msg.Linkages23.mmReference, com.tools20022.repository.msg.Linkages7.mmReference, com.tools20022.repository.msg.Linkages12.mmReference,
-						com.tools20022.repository.msg.Linkages15.mmReference, com.tools20022.repository.msg.Linkages18.mmReference, com.tools20022.repository.msg.Linkages2.mmReference, com.tools20022.repository.msg.Linkages8.mmReference,
-						com.tools20022.repository.msg.Linkages5.mmReference, com.tools20022.repository.msg.Linkages13.mmReference, com.tools20022.repository.msg.Linkages19.mmReference, com.tools20022.repository.msg.Linkages25.mmReference,
-						com.tools20022.repository.msg.Linkages26.mmReference, com.tools20022.repository.msg.Identification14.mmIdentification, com.tools20022.repository.msg.MessageAndBusinessReference7.mmReference,
-						com.tools20022.repository.msg.Linkages36.mmReference, com.tools20022.repository.msg.Linkages37.mmReference, com.tools20022.repository.msg.Linkages38.mmReference, com.tools20022.repository.msg.Linkages40.mmReference,
-						com.tools20022.repository.msg.MessageAndBusinessReference8.mmReference, com.tools20022.repository.msg.Linkages43.mmReference, com.tools20022.repository.msg.Linkages42.mmReference,
-						com.tools20022.repository.msg.Identification16.mmIdentification, com.tools20022.repository.msg.Linkages49.mmReference, com.tools20022.repository.msg.Linkages48.mmReference);
+				derivationElement_lazy = () -> Arrays.asList(Identification1.mmIdentification, Identification4.mmIdentification, Linkages1.mmReference, Linkages21.mmReference, Linkages4.mmReference, Linkages22.mmReference,
+						Linkages9.mmReference, Linkages14.mmReference, Linkages17.mmReference, Linkages24.mmReference, Linkages3.mmReference, Linkages6.mmReference, Linkages10.mmReference, Linkages11.mmReference, Linkages16.mmReference,
+						Linkages23.mmReference, Linkages7.mmReference, Linkages12.mmReference, Linkages15.mmReference, Linkages18.mmReference, Linkages2.mmReference, Linkages8.mmReference, Linkages5.mmReference, Linkages13.mmReference,
+						Linkages19.mmReference, Linkages25.mmReference, Linkages26.mmReference, Identification14.mmIdentification, MessageAndBusinessReference7.mmReference, Linkages36.mmReference, Linkages37.mmReference,
+						Linkages38.mmReference, Linkages40.mmReference, MessageAndBusinessReference8.mmReference, Linkages43.mmReference, Linkages42.mmReference, Identification16.mmIdentification, Linkages49.mmReference,
+						Linkages48.mmReference);
 				superType_lazy = () -> TradeIdentification.mmObject();
-				element_lazy = () -> Arrays.asList(com.tools20022.repository.entity.SecuritiesTradeIdentification.mmIdentifiedTrade,
-						com.tools20022.repository.entity.SecuritiesTradeIdentification.mmMarketInfrastructureTransactionIdentification, com.tools20022.repository.entity.SecuritiesTradeIdentification.mmProcessorTransactionIdentification,
-						com.tools20022.repository.entity.SecuritiesTradeIdentification.mmPoolIdentification, com.tools20022.repository.entity.SecuritiesTradeIdentification.mmCollateralTransactionIdentification,
-						com.tools20022.repository.entity.SecuritiesTradeIdentification.mmClientTripartyCollateralTransactionIdentification,
-						com.tools20022.repository.entity.SecuritiesTradeIdentification.mmTripartyAgentCollateralTransactionIdentification, com.tools20022.repository.entity.SecuritiesTradeIdentification.mmBasketIdentification,
-						com.tools20022.repository.entity.SecuritiesTradeIdentification.mmProgramIdentification, com.tools20022.repository.entity.SecuritiesTradeIdentification.mmBlockIdentification,
-						com.tools20022.repository.entity.SecuritiesTradeIdentification.mmAllocationIdentification, com.tools20022.repository.entity.SecuritiesTradeIdentification.mmComplianceIdentification,
-						com.tools20022.repository.entity.SecuritiesTradeIdentification.mmCSDTransactionIdentification, com.tools20022.repository.entity.SecuritiesTradeIdentification.mmCentralCounterpartyTransactionIdentification,
-						com.tools20022.repository.entity.SecuritiesTradeIdentification.mmCancellationRequestIdentification);
+				element_lazy = () -> Arrays.asList(SecuritiesTradeIdentification.mmIdentifiedTrade, SecuritiesTradeIdentification.mmMarketInfrastructureTransactionIdentification,
+						SecuritiesTradeIdentification.mmProcessorTransactionIdentification, SecuritiesTradeIdentification.mmPoolIdentification, SecuritiesTradeIdentification.mmCollateralTransactionIdentification,
+						SecuritiesTradeIdentification.mmClientTripartyCollateralTransactionIdentification, SecuritiesTradeIdentification.mmTripartyAgentCollateralTransactionIdentification,
+						SecuritiesTradeIdentification.mmBasketIdentification, SecuritiesTradeIdentification.mmProgramIdentification, SecuritiesTradeIdentification.mmBlockIdentification,
+						SecuritiesTradeIdentification.mmAllocationIdentification, SecuritiesTradeIdentification.mmComplianceIdentification, SecuritiesTradeIdentification.mmCSDTransactionIdentification,
+						SecuritiesTradeIdentification.mmCentralCounterpartyTransactionIdentification, SecuritiesTradeIdentification.mmCancellationRequestIdentification);
 				derivationComponent_lazy = () -> Arrays.asList(References11.mmObject(), Identification1.mmObject(), TransactionIdentifications3.mmObject(), TransactionIdentifications10.mmObject(), TransactionIdentifications15.mmObject(),
 						Identification4.mmObject(), TransactionIdentifications19.mmObject(), References1Choice.mmObject(), Linkages1.mmObject(), Linkages21.mmObject(), References12Choice.mmObject(), Linkages4.mmObject(),
 						References28Choice.mmObject(), Linkages22.mmObject(), References5Choice.mmObject(), References11Choice.mmObject(), References19Choice.mmObject(), References21Choice.mmObject(), References27Choice.mmObject(),

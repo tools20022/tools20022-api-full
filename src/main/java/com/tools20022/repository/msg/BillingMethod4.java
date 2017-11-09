@@ -19,8 +19,10 @@ package com.tools20022.repository.msg;
 
 import com.tools20022.metamodel.MMMessageAttribute;
 import com.tools20022.metamodel.MMMessageComponent;
+import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.entity.CashAccountService;
 import com.tools20022.repository.entity.Tax;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.List;
@@ -103,7 +105,7 @@ public class BillingMethod4 {
 			componentContext_lazy = () -> BillingMethod4.mmObject();
 			isDerived = false;
 			xmlTag = "SvcDtl";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ServiceDetail";
 			definition = "Specifies the details of the taxable services using tax calculation method C.";
 			minOccurs = 1;
@@ -153,7 +155,7 @@ public class BillingMethod4 {
 			componentContext_lazy = () -> BillingMethod4.mmObject();
 			isDerived = false;
 			xmlTag = "TaxClctn";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "TaxCalculation";
 			definition = "Total amount of service charge to be taxed in the tax region’s host currency along with the supporting tax calculations. \n\nUsage: Used for tax calculation method C only, and only one per tax region may be specified.";
 			maxOccurs = 1;
@@ -165,10 +167,10 @@ public class BillingMethod4 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.BillingMethod4.mmServiceDetail, com.tools20022.repository.msg.BillingMethod4.mmTaxCalculation);
+				messageElement_lazy = () -> Arrays.asList(BillingMethod4.mmServiceDetail, BillingMethod4.mmTaxCalculation);
 				trace_lazy = () -> Tax.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "BillingMethod4";
 				definition = "Provides the details for the tax calculation method C.";
 			}

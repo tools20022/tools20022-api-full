@@ -19,7 +19,9 @@ package com.tools20022.repository.codeset;
 
 import com.tools20022.metamodel.MMCode;
 import com.tools20022.metamodel.MMCodeSet;
+import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.codeset.PaymentTimeCode;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -101,7 +103,7 @@ public class PaymentTime1Code extends PaymentTimeCode {
 	 */
 	public static final MMCode mmPaymentOnDelivery = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PaymentOnDelivery";
 			owner_lazy = () -> PaymentTime1Code.mmObject();
 		}
@@ -124,7 +126,7 @@ public class PaymentTime1Code extends PaymentTimeCode {
 	 */
 	public static final MMCode mmEndOfMonthOfDelivery = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "EndOfMonthOfDelivery";
 			owner_lazy = () -> PaymentTime1Code.mmObject();
 		}
@@ -147,7 +149,7 @@ public class PaymentTime1Code extends PaymentTimeCode {
 	 */
 	public static final MMCode mmEndOfPeriodAfterDelivery = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "EndOfPeriodAfterDelivery";
 			owner_lazy = () -> PaymentTime1Code.mmObject();
 		}
@@ -170,7 +172,7 @@ public class PaymentTime1Code extends PaymentTimeCode {
 	 */
 	public static final MMCode mmEndOfPeriodAfterEndOfDeliveryMonth = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "EndOfPeriodAfterEndOfDeliveryMonth";
 			owner_lazy = () -> PaymentTime1Code.mmObject();
 		}
@@ -193,7 +195,7 @@ public class PaymentTime1Code extends PaymentTimeCode {
 	 */
 	public static final MMCode mmPaymentOnReceiptOfInvoice = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PaymentOnReceiptOfInvoice";
 			owner_lazy = () -> PaymentTime1Code.mmObject();
 		}
@@ -216,7 +218,7 @@ public class PaymentTime1Code extends PaymentTimeCode {
 	 */
 	public static final MMCode mmEndOfPeriodAfterEndOfReceiptMonth = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "EndOfPeriodAfterEndOfReceiptMonth";
 			owner_lazy = () -> PaymentTime1Code.mmObject();
 		}
@@ -239,7 +241,7 @@ public class PaymentTime1Code extends PaymentTimeCode {
 	 */
 	public static final MMCode mmEndOfPeriodAfterReceipt = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "EndOfPeriodAfterReceipt";
 			owner_lazy = () -> PaymentTime1Code.mmObject();
 		}
@@ -262,7 +264,7 @@ public class PaymentTime1Code extends PaymentTimeCode {
 	 */
 	public static final MMCode mmEndOfMonthOfReceipt = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "EndOfMonthOfReceipt";
 			owner_lazy = () -> PaymentTime1Code.mmObject();
 		}
@@ -271,15 +273,13 @@ public class PaymentTime1Code extends PaymentTimeCode {
 	static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
 				example = Arrays.asList("CASH");
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "PaymentTime1Code";
 				definition = "Specifies the payment conditions.";
-				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.PaymentTime1Code.mmPaymentOnDelivery, com.tools20022.repository.codeset.PaymentTime1Code.mmEndOfMonthOfDelivery,
-						com.tools20022.repository.codeset.PaymentTime1Code.mmEndOfPeriodAfterDelivery, com.tools20022.repository.codeset.PaymentTime1Code.mmEndOfPeriodAfterEndOfDeliveryMonth,
-						com.tools20022.repository.codeset.PaymentTime1Code.mmPaymentOnReceiptOfInvoice, com.tools20022.repository.codeset.PaymentTime1Code.mmEndOfPeriodAfterEndOfReceiptMonth,
-						com.tools20022.repository.codeset.PaymentTime1Code.mmEndOfPeriodAfterReceipt, com.tools20022.repository.codeset.PaymentTime1Code.mmEndOfMonthOfReceipt);
+				code_lazy = () -> Arrays.asList(PaymentTime1Code.mmPaymentOnDelivery, PaymentTime1Code.mmEndOfMonthOfDelivery, PaymentTime1Code.mmEndOfPeriodAfterDelivery, PaymentTime1Code.mmEndOfPeriodAfterEndOfDeliveryMonth,
+						PaymentTime1Code.mmPaymentOnReceiptOfInvoice, PaymentTime1Code.mmEndOfPeriodAfterEndOfReceiptMonth, PaymentTime1Code.mmEndOfPeriodAfterReceipt, PaymentTime1Code.mmEndOfMonthOfReceipt);
 				trace_lazy = () -> PaymentTimeCode.mmObject();
 			}
 		});

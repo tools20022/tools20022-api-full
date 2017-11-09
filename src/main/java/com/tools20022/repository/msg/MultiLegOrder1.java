@@ -20,8 +20,11 @@ package com.tools20022.repository.msg;
 import com.tools20022.metamodel.MMMessageAssociationEnd;
 import com.tools20022.metamodel.MMMessageAttribute;
 import com.tools20022.metamodel.MMMessageComponent;
+import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.codeset.MultilegReportType1Code;
+import com.tools20022.repository.entity.Asset;
 import com.tools20022.repository.entity.SecuritiesOrder;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.List;
@@ -102,7 +105,7 @@ public class MultiLegOrder1 {
 			componentContext_lazy = () -> MultiLegOrder1.mmObject();
 			isDerived = false;
 			xmlTag = "RptTpReq";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ReportTypeRequest";
 			definition = "Indicates the method of execution reporting requested by issuer of the order.";
 			maxOccurs = 1;
@@ -146,7 +149,7 @@ public class MultiLegOrder1 {
 			componentContext_lazy = () -> MultiLegOrder1.mmObject();
 			isDerived = false;
 			xmlTag = "OrdrDtls";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "OrderDetails";
 			definition = "Provides order details.";
 			maxOccurs = 1;
@@ -188,11 +191,11 @@ public class MultiLegOrder1 {
 	 */
 	public static final MMMessageAssociationEnd mmLegGroupDetails = new MMMessageAssociationEnd() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Asset.mmLegAdditionalInformation;
+			businessElementTrace_lazy = () -> Asset.mmLegAdditionalInformation;
 			componentContext_lazy = () -> MultiLegOrder1.mmObject();
 			isDerived = false;
 			xmlTag = "LegGrpDtls";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "LegGroupDetails";
 			definition = "Provides details about each intrument leg.";
 			minOccurs = 0;
@@ -204,11 +207,10 @@ public class MultiLegOrder1 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.MultiLegOrder1.mmReportTypeRequest, com.tools20022.repository.msg.MultiLegOrder1.mmOrderDetails,
-						com.tools20022.repository.msg.MultiLegOrder1.mmLegGroupDetails);
+				messageElement_lazy = () -> Arrays.asList(MultiLegOrder1.mmReportTypeRequest, MultiLegOrder1.mmOrderDetails, MultiLegOrder1.mmLegGroupDetails);
 				trace_lazy = () -> SecuritiesOrder.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 				name = "MultiLegOrder1";
 				definition = "Provides details about the multileg order.";
 			}

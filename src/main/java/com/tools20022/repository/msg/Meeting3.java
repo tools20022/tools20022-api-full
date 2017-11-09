@@ -20,12 +20,17 @@ package com.tools20022.repository.msg;
 import com.tools20022.metamodel.MMMessageAssociationEnd;
 import com.tools20022.metamodel.MMMessageAttribute;
 import com.tools20022.metamodel.MMMessageComponent;
+import com.tools20022.metamodel.MMRegistrationStatus;
+import com.tools20022.repository.area.seev.MeetingNotificationV03;
+import com.tools20022.repository.area.seev.MeetingNotificationV04;
 import com.tools20022.repository.choice.DateFormat2Choice;
 import com.tools20022.repository.choice.LocationFormat1Choice;
 import com.tools20022.repository.choice.QuorumQuantity1Choice;
 import com.tools20022.repository.codeset.MeetingDateStatus1Code;
 import com.tools20022.repository.datatype.YesNoIndicator;
 import com.tools20022.repository.entity.Meeting;
+import com.tools20022.repository.entity.Quorum;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.List;
@@ -134,14 +139,14 @@ public class Meeting3 {
 	 */
 	public static final MMMessageAttribute mmDateAndTime = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Meeting.mmDateAndTime;
+			businessElementTrace_lazy = () -> Meeting.mmDateAndTime;
 			componentContext_lazy = () -> Meeting3.mmObject();
 			isDerived = false;
 			xmlTag = "DtAndTm";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "DateAndTime";
 			definition = "Date and time at which the meeting will take place.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.Meeting4.mmDateAndTime);
+			nextVersions_lazy = () -> Arrays.asList(Meeting4.mmDateAndTime);
 			maxOccurs = 1;
 			minOccurs = 1;
 			complexType_lazy = () -> DateFormat2Choice.mmObject();
@@ -189,14 +194,14 @@ public class Meeting3 {
 	 */
 	public static final MMMessageAttribute mmDateStatus = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Meeting.mmDateStatus;
+			businessElementTrace_lazy = () -> Meeting.mmDateStatus;
 			componentContext_lazy = () -> Meeting3.mmObject();
 			isDerived = false;
 			xmlTag = "DtSts";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "DateStatus";
 			definition = "Indicates the status of a meeting date.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.Meeting4.mmDateStatus);
+			nextVersions_lazy = () -> Arrays.asList(Meeting4.mmDateStatus);
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> MeetingDateStatus1Code.mmObject();
@@ -247,14 +252,14 @@ public class Meeting3 {
 	 */
 	public static final MMMessageAttribute mmQuorumRequired = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Quorum.mmQuorumRequired;
+			businessElementTrace_lazy = () -> Quorum.mmQuorumRequired;
 			componentContext_lazy = () -> Meeting3.mmObject();
 			isDerived = false;
 			xmlTag = "QrmReqrd";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "QuorumRequired";
 			definition = "Specifies whether a minimum number of security representation is required to hold a meeting.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.Meeting4.mmQuorumRequired);
+			nextVersions_lazy = () -> Arrays.asList(Meeting4.mmQuorumRequired);
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> YesNoIndicator.mmObject();
@@ -301,14 +306,14 @@ public class Meeting3 {
 	 */
 	public static final MMMessageAssociationEnd mmLocation = new MMMessageAssociationEnd() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Meeting.mmMeetingLocation;
+			businessElementTrace_lazy = () -> Meeting.mmMeetingLocation;
 			componentContext_lazy = () -> Meeting3.mmObject();
 			isDerived = false;
 			xmlTag = "Lctn";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Location";
 			definition = "Specifies location where meeting will take place.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.Meeting4.mmLocation);
+			nextVersions_lazy = () -> Arrays.asList(Meeting4.mmLocation);
 			maxOccurs = 5;
 			minOccurs = 1;
 			isComposite = true;
@@ -358,14 +363,14 @@ public class Meeting3 {
 	 */
 	public static final MMMessageAttribute mmQuorumQuantity = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Quorum.mmQuantity;
+			businessElementTrace_lazy = () -> Quorum.mmQuantity;
 			componentContext_lazy = () -> Meeting3.mmObject();
 			isDerived = false;
 			xmlTag = "QrmQty";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "QuorumQuantity";
 			definition = "Minimum quantity of securities required to hold a meeting.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.Meeting4.mmQuorumQuantity);
+			nextVersions_lazy = () -> Arrays.asList(Meeting4.mmQuorumQuantity);
 			maxOccurs = 1;
 			minOccurs = 0;
 			complexType_lazy = () -> QuorumQuantity1Choice.mmObject();
@@ -375,12 +380,11 @@ public class Meeting3 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.Meeting3.mmDateAndTime, com.tools20022.repository.msg.Meeting3.mmDateStatus, com.tools20022.repository.msg.Meeting3.mmQuorumRequired,
-						com.tools20022.repository.msg.Meeting3.mmLocation, com.tools20022.repository.msg.Meeting3.mmQuorumQuantity);
-				messageBuildingBlock_lazy = () -> Arrays.asList(com.tools20022.repository.area.seev.MeetingNotificationV03.mmMeetingDetails, com.tools20022.repository.area.seev.MeetingNotificationV04.mmMeetingDetails);
+				messageElement_lazy = () -> Arrays.asList(Meeting3.mmDateAndTime, Meeting3.mmDateStatus, Meeting3.mmQuorumRequired, Meeting3.mmLocation, Meeting3.mmQuorumQuantity);
+				messageBuildingBlock_lazy = () -> Arrays.asList(MeetingNotificationV03.mmMeetingDetails, MeetingNotificationV04.mmMeetingDetails);
 				trace_lazy = () -> Meeting.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "Meeting3";
 				definition = "Specifies the physical parameters of a shareholders meeting. Several dates and places can be defined for a meeting";
 				nextVersions_lazy = () -> Arrays.asList(Meeting4.mmObject());

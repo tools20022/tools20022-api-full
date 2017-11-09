@@ -19,6 +19,8 @@ package com.tools20022.repository.codeset;
 
 import com.tools20022.metamodel.MMCode;
 import com.tools20022.metamodel.MMCodeSet;
+import com.tools20022.metamodel.MMRegistrationStatus;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -28,6 +30,12 @@ import java.util.concurrent.atomic.AtomicReference;
  * <p>
  * <strong>Constant fields:</strong>
  * <ul>
+ * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getDerivation derivation}
+ * =
+ * <ul>
+ * <li>{@linkplain com.tools20022.repository.codeset.DTCLate1Code DTCLate1Code}</li>
+ * </ul>
+ * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getCode code} =
  * <ul>
  * <li>
@@ -36,12 +44,6 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>
  * {@linkplain com.tools20022.repository.codeset.DTCLateCode#mmLateAnnouncementPending
  * DTCLateCode.mmLateAnnouncementPending}</li>
- * </ul>
- * </li>
- * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getDerivation derivation}
- * =
- * <ul>
- * <li>{@linkplain com.tools20022.repository.codeset.DTCLate1Code DTCLate1Code}</li>
  * </ul>
  * </li>
  * <li>
@@ -95,7 +97,7 @@ public class DTCLateCode {
 	 */
 	public static final MMCode mmLateAnnouncement = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "LateAnnouncement";
 			definition = "Informs both internal and external users that the announcement was added after the position capture date.";
 			owner_lazy = () -> DTCLateCode.mmObject();
@@ -127,7 +129,7 @@ public class DTCLateCode {
 	 */
 	public static final MMCode mmLateAnnouncementPending = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "LateAnnouncementPending";
 			definition = "Informs both internal and external users that the announcement is late, however, it has not gone through the position capture stage.";
 			owner_lazy = () -> DTCLateCode.mmObject();
@@ -138,12 +140,12 @@ public class DTCLateCode {
 	static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
 				example = Arrays.asList("LATE");
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "DTCLateCode";
 				definition = "Specifies late announcements: wither the announcement was made before or after position capture.";
-				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.DTCLateCode.mmLateAnnouncement, com.tools20022.repository.codeset.DTCLateCode.mmLateAnnouncementPending);
+				code_lazy = () -> Arrays.asList(DTCLateCode.mmLateAnnouncement, DTCLateCode.mmLateAnnouncementPending);
 				derivation_lazy = () -> Arrays.asList(DTCLate1Code.mmObject());
 			}
 		});

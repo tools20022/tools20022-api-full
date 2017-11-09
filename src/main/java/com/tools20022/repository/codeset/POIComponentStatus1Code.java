@@ -19,7 +19,9 @@ package com.tools20022.repository.codeset;
 
 import com.tools20022.metamodel.MMCode;
 import com.tools20022.metamodel.MMCodeSet;
+import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.codeset.POIComponentStatusCode;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -90,7 +92,7 @@ public class POIComponentStatus1Code extends POIComponentStatusCode {
 	 */
 	public static final MMCode mmWaitingActivation = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "WaitingActivation";
 			owner_lazy = () -> POIComponentStatus1Code.mmObject();
 		}
@@ -113,7 +115,7 @@ public class POIComponentStatus1Code extends POIComponentStatusCode {
 	 */
 	public static final MMCode mmOutOfOrder = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "OutOfOrder";
 			owner_lazy = () -> POIComponentStatus1Code.mmObject();
 		}
@@ -136,7 +138,7 @@ public class POIComponentStatus1Code extends POIComponentStatusCode {
 	 */
 	public static final MMCode mmInOperation = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "InOperation";
 			owner_lazy = () -> POIComponentStatus1Code.mmObject();
 		}
@@ -159,7 +161,7 @@ public class POIComponentStatus1Code extends POIComponentStatusCode {
 	 */
 	public static final MMCode mmDeactivated = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Deactivated";
 			owner_lazy = () -> POIComponentStatus1Code.mmObject();
 		}
@@ -168,13 +170,12 @@ public class POIComponentStatus1Code extends POIComponentStatusCode {
 	static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
 				example = Arrays.asList("WAIT");
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "POIComponentStatus1Code";
 				definition = "Status of a component belonging to a POI Terminal (Point of Interaction).";
-				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.POIComponentStatus1Code.mmWaitingActivation, com.tools20022.repository.codeset.POIComponentStatus1Code.mmOutOfOrder,
-						com.tools20022.repository.codeset.POIComponentStatus1Code.mmInOperation, com.tools20022.repository.codeset.POIComponentStatus1Code.mmDeactivated);
+				code_lazy = () -> Arrays.asList(POIComponentStatus1Code.mmWaitingActivation, POIComponentStatus1Code.mmOutOfOrder, POIComponentStatus1Code.mmInOperation, POIComponentStatus1Code.mmDeactivated);
 				trace_lazy = () -> POIComponentStatusCode.mmObject();
 			}
 		});

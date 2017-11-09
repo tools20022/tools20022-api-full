@@ -20,11 +20,14 @@ package com.tools20022.repository.msg;
 import com.tools20022.metamodel.MMMessageAssociationEnd;
 import com.tools20022.metamodel.MMMessageAttribute;
 import com.tools20022.metamodel.MMMessageComponent;
+import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.choice.AssetClassCommodity3Choice;
 import com.tools20022.repository.codeset.AssetClassTransactionType1Code;
 import com.tools20022.repository.codeset.AssetPriceType1Code;
 import com.tools20022.repository.entity.Commodity;
+import com.tools20022.repository.entity.SecuritiesPricing;
 import com.tools20022.repository.entity.SecuritiesTrade;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -106,7 +109,7 @@ public class DerivativeCommodity2 {
 			componentContext_lazy = () -> DerivativeCommodity2.mmObject();
 			isDerived = false;
 			xmlTag = "Pdct";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Product";
 			definition = "Commodity product attributes.";
 			maxOccurs = 1;
@@ -151,11 +154,11 @@ public class DerivativeCommodity2 {
 	 */
 	public static final MMMessageAttribute mmTransactionType = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.SecuritiesTrade.mmTransactionType;
+			businessElementTrace_lazy = () -> SecuritiesTrade.mmTransactionType;
 			componentContext_lazy = () -> DerivativeCommodity2.mmObject();
 			isDerived = false;
 			xmlTag = "TxTp";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "TransactionType";
 			definition = "Transaction type as specified by the trading venue.";
 			maxOccurs = 1;
@@ -199,11 +202,11 @@ public class DerivativeCommodity2 {
 	 */
 	public static final MMMessageAttribute mmFinalPriceType = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.SecuritiesPricing.mmPriceType;
+			businessElementTrace_lazy = () -> SecuritiesPricing.mmPriceType;
 			componentContext_lazy = () -> DerivativeCommodity2.mmObject();
 			isDerived = false;
 			xmlTag = "FnlPricTp";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "FinalPriceType";
 			definition = "Final price type as specified by the trading venue.";
 			maxOccurs = 1;
@@ -215,11 +218,10 @@ public class DerivativeCommodity2 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.DerivativeCommodity2.mmProduct, com.tools20022.repository.msg.DerivativeCommodity2.mmTransactionType,
-						com.tools20022.repository.msg.DerivativeCommodity2.mmFinalPriceType);
+				messageElement_lazy = () -> Arrays.asList(DerivativeCommodity2.mmProduct, DerivativeCommodity2.mmTransactionType, DerivativeCommodity2.mmFinalPriceType);
 				trace_lazy = () -> SecuritiesTrade.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "DerivativeCommodity2";
 				definition = "Defines the details of a commodity derivative. ";
 			}

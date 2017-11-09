@@ -19,11 +19,13 @@ package com.tools20022.repository.msg;
 
 import com.tools20022.metamodel.MMMessageAttribute;
 import com.tools20022.metamodel.MMMessageComponent;
+import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.choice.BookingUnit1Choice;
 import com.tools20022.repository.codeset.BookingType1Code;
 import com.tools20022.repository.codeset.DayBookingInstruction1Code;
 import com.tools20022.repository.codeset.PreAllocationMethod1Code;
 import com.tools20022.repository.entity.SecuritiesPostTradeBooking;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -103,11 +105,11 @@ public class Booking1 {
 	 */
 	public static final MMMessageAttribute mmDayBooking = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.SecuritiesPostTradeBooking.mmDayBooking;
+			businessElementTrace_lazy = () -> SecuritiesPostTradeBooking.mmDayBooking;
 			componentContext_lazy = () -> Booking1.mmObject();
 			isDerived = false;
 			xmlTag = "DayBookg";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "DayBooking";
 			definition = "Indicates whether or not automatic booking can occur.";
 			maxOccurs = 1;
@@ -153,11 +155,11 @@ public class Booking1 {
 	 */
 	public static final MMMessageAttribute mmBookingUnit = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.SecuritiesPostTradeBooking.mmBookingUnit;
+			businessElementTrace_lazy = () -> SecuritiesPostTradeBooking.mmBookingUnit;
 			componentContext_lazy = () -> Booking1.mmObject();
 			isDerived = false;
 			xmlTag = "BookgUnit";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "BookingUnit";
 			definition = "Indicates what constitutes a bookable unit, ie, a partial execution, or an aggregated execution.";
 			maxOccurs = 1;
@@ -200,11 +202,11 @@ public class Booking1 {
 	 */
 	public static final MMMessageAttribute mmPreAllocationMethod = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.SecuritiesPostTradeBooking.mmPreAllocationMethod;
+			businessElementTrace_lazy = () -> SecuritiesPostTradeBooking.mmPreAllocationMethod;
 			componentContext_lazy = () -> Booking1.mmObject();
 			isDerived = false;
 			xmlTag = "PreAllcnMtd";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PreAllocationMethod";
 			definition = "Indicates the method of preallocation.";
 			maxOccurs = 1;
@@ -247,11 +249,11 @@ public class Booking1 {
 	 */
 	public static final MMMessageAttribute mmBookingType = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.SecuritiesPostTradeBooking.mmBookingType;
+			businessElementTrace_lazy = () -> SecuritiesPostTradeBooking.mmBookingType;
 			componentContext_lazy = () -> Booking1.mmObject();
 			isDerived = false;
 			xmlTag = "BookgTp";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "BookingType";
 			definition = "Method for booking out an order.";
 			maxOccurs = 1;
@@ -263,11 +265,10 @@ public class Booking1 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.Booking1.mmDayBooking, com.tools20022.repository.msg.Booking1.mmBookingUnit, com.tools20022.repository.msg.Booking1.mmPreAllocationMethod,
-						com.tools20022.repository.msg.Booking1.mmBookingType);
+				messageElement_lazy = () -> Arrays.asList(Booking1.mmDayBooking, Booking1.mmBookingUnit, Booking1.mmPreAllocationMethod, Booking1.mmBookingType);
 				trace_lazy = () -> SecuritiesPostTradeBooking.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 				name = "Booking1";
 				definition = "Information used to book the executions of a trade.";
 			}

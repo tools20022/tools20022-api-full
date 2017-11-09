@@ -20,10 +20,14 @@ package com.tools20022.repository.msg;
 import com.tools20022.metamodel.MMMessageAssociationEnd;
 import com.tools20022.metamodel.MMMessageAttribute;
 import com.tools20022.metamodel.MMMessageComponent;
+import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.datatype.ActiveCurrencyAndAmount;
 import com.tools20022.repository.datatype.Max35Text;
+import com.tools20022.repository.entity.Adjustment;
 import com.tools20022.repository.entity.Charges;
+import com.tools20022.repository.entity.Commission;
 import com.tools20022.repository.entity.InvestmentFundTax;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.List;
@@ -120,11 +124,11 @@ public class TotalFeesAndTaxes40 {
 	 */
 	public static final MMMessageAttribute mmTotalOverheadApplied = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Adjustment.mmAmount;
+			businessElementTrace_lazy = () -> Adjustment.mmAmount;
 			componentContext_lazy = () -> TotalFeesAndTaxes40.mmObject();
 			isDerived = false;
 			xmlTag = "TtlOvrhdApld";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "TotalOverheadApplied";
 			definition = "Total amount of overhead applied to the transaction that impacts the settlement amount.";
 			maxOccurs = 1;
@@ -174,7 +178,7 @@ public class TotalFeesAndTaxes40 {
 			componentContext_lazy = () -> TotalFeesAndTaxes40.mmObject();
 			isDerived = false;
 			xmlTag = "TtlFees";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "TotalFees";
 			definition = "Total amount of fees (charge/commissions) applied to the transaction that impacts the settlement amount.";
 			maxOccurs = 1;
@@ -225,7 +229,7 @@ public class TotalFeesAndTaxes40 {
 			componentContext_lazy = () -> TotalFeesAndTaxes40.mmObject();
 			isDerived = false;
 			xmlTag = "TtlTaxs";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "TotalTaxes";
 			definition = "Total amount of taxes applied to the transaction that impacts the settlement amount.";
 			maxOccurs = 1;
@@ -272,11 +276,11 @@ public class TotalFeesAndTaxes40 {
 	 */
 	public static final MMMessageAttribute mmCommercialAgreementReference = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Commission.mmCommercialAgreementReference;
+			businessElementTrace_lazy = () -> Commission.mmCommercialAgreementReference;
 			componentContext_lazy = () -> TotalFeesAndTaxes40.mmObject();
 			isDerived = false;
 			xmlTag = "ComrclAgrmtRef";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CommercialAgreementReference";
 			definition = "Reference to the agreement established between the fund and another party. This element, amongst others, defines the conditions of the commissions.";
 			maxOccurs = 1;
@@ -327,10 +331,10 @@ public class TotalFeesAndTaxes40 {
 			componentContext_lazy = () -> TotalFeesAndTaxes40.mmObject();
 			isDerived = false;
 			xmlTag = "IndvFee";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "IndividualFee";
 			definition = "Individual fee (charge/commission).";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.FeeAndTax1.mmIndividualFee);
+			nextVersions_lazy = () -> Arrays.asList(FeeAndTax1.mmIndividualFee);
 			minOccurs = 0;
 			isComposite = true;
 			type_lazy = () -> com.tools20022.repository.msg.Fee2.mmObject();
@@ -380,10 +384,10 @@ public class TotalFeesAndTaxes40 {
 			componentContext_lazy = () -> TotalFeesAndTaxes40.mmObject();
 			isDerived = false;
 			xmlTag = "IndvTax";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "IndividualTax";
 			definition = "Individual tax.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.FeeAndTax1.mmIndividualTax);
+			nextVersions_lazy = () -> Arrays.asList(FeeAndTax1.mmIndividualTax);
 			minOccurs = 0;
 			isComposite = true;
 			type_lazy = () -> com.tools20022.repository.msg.Tax31.mmObject();
@@ -393,12 +397,11 @@ public class TotalFeesAndTaxes40 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.TotalFeesAndTaxes40.mmTotalOverheadApplied, com.tools20022.repository.msg.TotalFeesAndTaxes40.mmTotalFees,
-						com.tools20022.repository.msg.TotalFeesAndTaxes40.mmTotalTaxes, com.tools20022.repository.msg.TotalFeesAndTaxes40.mmCommercialAgreementReference, com.tools20022.repository.msg.TotalFeesAndTaxes40.mmIndividualFee,
-						com.tools20022.repository.msg.TotalFeesAndTaxes40.mmIndividualTax);
+				messageElement_lazy = () -> Arrays.asList(TotalFeesAndTaxes40.mmTotalOverheadApplied, TotalFeesAndTaxes40.mmTotalFees, TotalFeesAndTaxes40.mmTotalTaxes, TotalFeesAndTaxes40.mmCommercialAgreementReference,
+						TotalFeesAndTaxes40.mmIndividualFee, TotalFeesAndTaxes40.mmIndividualTax);
 				trace_lazy = () -> InvestmentFundTax.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "TotalFeesAndTaxes40";
 				definition = "Amount of money associated with a service.";
 				previousVersion_lazy = () -> TotalCharges3.mmObject();

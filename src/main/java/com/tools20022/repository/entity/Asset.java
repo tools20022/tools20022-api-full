@@ -17,16 +17,16 @@
 
 package com.tools20022.repository.entity;
 
-import com.tools20022.metamodel.MMBusinessAssociationEnd;
-import com.tools20022.metamodel.MMBusinessAttribute;
-import com.tools20022.metamodel.MMBusinessComponent;
+import com.tools20022.metamodel.*;
 import com.tools20022.repository.choice.FinancialInstrumentProperties1Choice;
 import com.tools20022.repository.choice.InstrumentSubStructureType1Choice;
+import com.tools20022.repository.choice.TwoLegTransactionType1Choice;
 import com.tools20022.repository.codeset.FinancialAssetTypeCategoryCode;
 import com.tools20022.repository.codeset.InstrumentSubStructureTypeCode;
 import com.tools20022.repository.datatype.CurrencyAndAmount;
 import com.tools20022.repository.datatype.ISODateTime;
 import com.tools20022.repository.datatype.PercentageRate;
+import com.tools20022.repository.GeneratedRepository;
 import com.tools20022.repository.msg.*;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
@@ -41,160 +41,6 @@ import java.util.List;
  * <p>
  * <strong>Constant fields:</strong>
  * <ul>
- * <li>{@linkplain com.tools20022.metamodel.MMBusinessComponent#getElement
- * element} =
- * <ul>
- * <li>{@linkplain com.tools20022.repository.entity.Asset#mmExpiryDate
- * Asset.mmExpiryDate}</li>
- * <li>{@linkplain com.tools20022.repository.entity.Asset#mmMaturityDate
- * Asset.mmMaturityDate}</li>
- * <li>{@linkplain com.tools20022.repository.entity.Asset#mmDerivative
- * Asset.mmDerivative}</li>
- * <li>{@linkplain com.tools20022.repository.entity.Asset#mmAssetValue
- * Asset.mmAssetValue}</li>
- * <li>{@linkplain com.tools20022.repository.entity.Asset#mmAssetClassification
- * Asset.mmAssetClassification}</li>
- * <li>
- * {@linkplain com.tools20022.repository.entity.Asset#mmFinancialAssetCategory
- * Asset.mmFinancialAssetCategory}</li>
- * <li>{@linkplain com.tools20022.repository.entity.Asset#mmAssetPartyRole
- * Asset.mmAssetPartyRole}</li>
- * <li>{@linkplain com.tools20022.repository.entity.Asset#mmIssuance
- * Asset.mmIssuance}</li>
- * <li>{@linkplain com.tools20022.repository.entity.Asset#mmPortfolio
- * Asset.mmPortfolio}</li>
- * <li>{@linkplain com.tools20022.repository.entity.Asset#mmInvestmentAmount
- * Asset.mmInvestmentAmount}</li>
- * <li>{@linkplain com.tools20022.repository.entity.Asset#mmInvestmentRate
- * Asset.mmInvestmentRate}</li>
- * <li>{@linkplain com.tools20022.repository.entity.Asset#mmEffectiveDate
- * Asset.mmEffectiveDate}</li>
- * <li>
- * {@linkplain com.tools20022.repository.entity.Asset#mmFinancialInstrumentSubStructure
- * Asset.mmFinancialInstrumentSubStructure}</li>
- * <li>{@linkplain com.tools20022.repository.entity.Asset#mmInvestmentPlan
- * Asset.mmInvestmentPlan}</li>
- * <li>{@linkplain com.tools20022.repository.entity.Asset#mmTrade Asset.mmTrade}
- * </li>
- * <li>{@linkplain com.tools20022.repository.entity.Asset#mmTranche
- * Asset.mmTranche}</li>
- * <li>
- * {@linkplain com.tools20022.repository.entity.Asset#mmLegAdditionalInformation
- * Asset.mmLegAdditionalInformation}</li>
- * <li>
- * {@linkplain com.tools20022.repository.entity.Asset#mmStandingSettlementInstruction
- * Asset.mmStandingSettlementInstruction}</li>
- * </ul>
- * </li>
- * <li>{@linkplain com.tools20022.metamodel.MMBusinessComponent#getSubType
- * subType} =
- * <ul>
- * <li>{@linkplain com.tools20022.repository.entity.Security Security}</li>
- * <li>{@linkplain com.tools20022.repository.entity.Derivative Derivative}</li>
- * <li>{@linkplain com.tools20022.repository.entity.Money Money}</li>
- * <li>{@linkplain com.tools20022.repository.entity.LetterOfCredit
- * LetterOfCredit}</li>
- * <li>{@linkplain com.tools20022.repository.entity.Guarantee Guarantee}</li>
- * <li>{@linkplain com.tools20022.repository.entity.Commodity Commodity}</li>
- * </ul>
- * </li>
- * <li>
- * {@linkplain com.tools20022.metamodel.MMBusinessComponent#getAssociationDomain
- * associationDomain} =
- * <ul>
- * <li>{@linkplain com.tools20022.repository.entity.Trade#mmAsset Trade.mmAsset}
- * </li>
- * <li>{@linkplain com.tools20022.repository.entity.InvestmentPlan#mmAsset
- * InvestmentPlan.mmAsset}</li>
- * <li>
- * {@linkplain com.tools20022.repository.entity.Portfolio#mmAssetDescription
- * Portfolio.mmAssetDescription}</li>
- * <li>{@linkplain com.tools20022.repository.entity.AssetHolding#mmAsset
- * AssetHolding.mmAsset}</li>
- * <li>{@linkplain com.tools20022.repository.entity.AssetPartyRole#mmAsset
- * AssetPartyRole.mmAsset}</li>
- * <li>{@linkplain com.tools20022.repository.entity.AssetClassification#mmAsset
- * AssetClassification.mmAsset}</li>
- * <li>
- * {@linkplain com.tools20022.repository.entity.Derivative#mmUnderlyingAsset
- * Derivative.mmUnderlyingAsset}</li>
- * <li>{@linkplain com.tools20022.repository.entity.Issuance#mmIssuedAsset
- * Issuance.mmIssuedAsset}</li>
- * <li>
- * {@linkplain com.tools20022.repository.entity.StandingSettlementInstruction#mmAsset
- * StandingSettlementInstruction.mmAsset}</li>
- * <li>{@linkplain com.tools20022.repository.entity.Leg#mmRelatedAsset
- * Leg.mmRelatedAsset}</li>
- * <li>{@linkplain com.tools20022.repository.entity.Tranche#mmAsset
- * Tranche.mmAsset}</li>
- * </ul>
- * </li>
- * <li>
- * {@linkplain com.tools20022.metamodel.MMBusinessComponent#getDerivationElement
- * derivationElement} =
- * <ul>
- * <li>
- * {@linkplain com.tools20022.repository.msg.FinancialInstrumentAttributes1#mmProperties
- * FinancialInstrumentAttributes1.mmProperties}</li>
- * <li>
- * {@linkplain com.tools20022.repository.msg.FinancialInstrumentAttributes1#mmAdditionalUnderlyingAttributes
- * FinancialInstrumentAttributes1.mmAdditionalUnderlyingAttributes}</li>
- * <li>
- * {@linkplain com.tools20022.repository.msg.OtherCollateral1#mmOtherTypeOfCollateral
- * OtherCollateral1.mmOtherTypeOfCollateral}</li>
- * <li>
- * {@linkplain com.tools20022.repository.msg.CollateralSubstitution1#mmOtherCollateral
- * CollateralSubstitution1.mmOtherCollateral}</li>
- * <li>
- * {@linkplain com.tools20022.repository.msg.CollateralValuation1#mmOtherCollateralDetails
- * CollateralValuation1.mmOtherCollateralDetails}</li>
- * <li>
- * {@linkplain com.tools20022.repository.msg.SecurityAttributes1#mmFinancialInstrumentType
- * SecurityAttributes1.mmFinancialInstrumentType}</li>
- * <li>
- * {@linkplain com.tools20022.repository.msg.CollateralSubstitution2#mmOtherCollateral
- * CollateralSubstitution2.mmOtherCollateral}</li>
- * <li>
- * {@linkplain com.tools20022.repository.msg.CollateralValuation2#mmOtherCollateral
- * CollateralValuation2.mmOtherCollateral}</li>
- * <li>
- * {@linkplain com.tools20022.repository.msg.OtherCollateral2#mmOtherTypeOfCollateral
- * OtherCollateral2.mmOtherTypeOfCollateral}</li>
- * <li>
- * {@linkplain com.tools20022.repository.msg.OtherCollateral3#mmLetterOfCreditIdentification
- * OtherCollateral3.mmLetterOfCreditIdentification}</li>
- * <li>
- * {@linkplain com.tools20022.repository.msg.OtherCollateral3#mmOtherTypeOfCollateral
- * OtherCollateral3.mmOtherTypeOfCollateral}</li>
- * <li>
- * {@linkplain com.tools20022.repository.msg.OtherCollateral4#mmOtherTypeOfCollateral
- * OtherCollateral4.mmOtherTypeOfCollateral}</li>
- * <li>
- * {@linkplain com.tools20022.repository.msg.CollateralSubstitution3#mmOtherCollateral
- * CollateralSubstitution3.mmOtherCollateral}</li>
- * <li>
- * {@linkplain com.tools20022.repository.msg.CollateralSubstitution5#mmOtherCollateral
- * CollateralSubstitution5.mmOtherCollateral}</li>
- * <li>
- * {@linkplain com.tools20022.repository.msg.CollateralSubstitution4#mmOtherCollateral
- * CollateralSubstitution4.mmOtherCollateral}</li>
- * <li>
- * {@linkplain com.tools20022.repository.msg.OtherCollateral7#mmOtherTypeOfCollateral
- * OtherCollateral7.mmOtherTypeOfCollateral}</li>
- * <li>
- * {@linkplain com.tools20022.repository.msg.CollateralValuation5#mmOtherCollateral
- * CollateralValuation5.mmOtherCollateral}</li>
- * <li>
- * {@linkplain com.tools20022.repository.msg.OtherCollateral6#mmLetterOfCreditIdentification
- * OtherCollateral6.mmLetterOfCreditIdentification}</li>
- * <li>
- * {@linkplain com.tools20022.repository.msg.OtherCollateral6#mmOtherTypeOfCollateral
- * OtherCollateral6.mmOtherTypeOfCollateral}</li>
- * <li>
- * {@linkplain com.tools20022.repository.msg.OtherCollateral5#mmOtherTypeOfCollateral
- * OtherCollateral5.mmOtherTypeOfCollateral}</li>
- * </ul>
- * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMBusinessComponent#getDerivationComponent
  * derivationComponent} =
@@ -430,6 +276,160 @@ import java.util.List;
  * <li>
  * {@linkplain com.tools20022.repository.msg.FinancialInstrumentAttributes83
  * FinancialInstrumentAttributes83}</li>
+ * </ul>
+ * </li>
+ * <li>
+ * {@linkplain com.tools20022.metamodel.MMBusinessComponent#getAssociationDomain
+ * associationDomain} =
+ * <ul>
+ * <li>{@linkplain com.tools20022.repository.entity.Trade#mmAsset Trade.mmAsset}
+ * </li>
+ * <li>{@linkplain com.tools20022.repository.entity.InvestmentPlan#mmAsset
+ * InvestmentPlan.mmAsset}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.entity.Portfolio#mmAssetDescription
+ * Portfolio.mmAssetDescription}</li>
+ * <li>{@linkplain com.tools20022.repository.entity.AssetHolding#mmAsset
+ * AssetHolding.mmAsset}</li>
+ * <li>{@linkplain com.tools20022.repository.entity.AssetPartyRole#mmAsset
+ * AssetPartyRole.mmAsset}</li>
+ * <li>{@linkplain com.tools20022.repository.entity.AssetClassification#mmAsset
+ * AssetClassification.mmAsset}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.entity.Derivative#mmUnderlyingAsset
+ * Derivative.mmUnderlyingAsset}</li>
+ * <li>{@linkplain com.tools20022.repository.entity.Issuance#mmIssuedAsset
+ * Issuance.mmIssuedAsset}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.entity.StandingSettlementInstruction#mmAsset
+ * StandingSettlementInstruction.mmAsset}</li>
+ * <li>{@linkplain com.tools20022.repository.entity.Leg#mmRelatedAsset
+ * Leg.mmRelatedAsset}</li>
+ * <li>{@linkplain com.tools20022.repository.entity.Tranche#mmAsset
+ * Tranche.mmAsset}</li>
+ * </ul>
+ * </li>
+ * <li>
+ * {@linkplain com.tools20022.metamodel.MMBusinessComponent#getDerivationElement
+ * derivationElement} =
+ * <ul>
+ * <li>
+ * {@linkplain com.tools20022.repository.msg.FinancialInstrumentAttributes1#mmProperties
+ * FinancialInstrumentAttributes1.mmProperties}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.msg.FinancialInstrumentAttributes1#mmAdditionalUnderlyingAttributes
+ * FinancialInstrumentAttributes1.mmAdditionalUnderlyingAttributes}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.msg.OtherCollateral1#mmOtherTypeOfCollateral
+ * OtherCollateral1.mmOtherTypeOfCollateral}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.msg.CollateralSubstitution1#mmOtherCollateral
+ * CollateralSubstitution1.mmOtherCollateral}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.msg.CollateralValuation1#mmOtherCollateralDetails
+ * CollateralValuation1.mmOtherCollateralDetails}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.msg.SecurityAttributes1#mmFinancialInstrumentType
+ * SecurityAttributes1.mmFinancialInstrumentType}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.msg.CollateralSubstitution2#mmOtherCollateral
+ * CollateralSubstitution2.mmOtherCollateral}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.msg.CollateralValuation2#mmOtherCollateral
+ * CollateralValuation2.mmOtherCollateral}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.msg.OtherCollateral2#mmOtherTypeOfCollateral
+ * OtherCollateral2.mmOtherTypeOfCollateral}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.msg.OtherCollateral3#mmLetterOfCreditIdentification
+ * OtherCollateral3.mmLetterOfCreditIdentification}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.msg.OtherCollateral3#mmOtherTypeOfCollateral
+ * OtherCollateral3.mmOtherTypeOfCollateral}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.msg.OtherCollateral4#mmOtherTypeOfCollateral
+ * OtherCollateral4.mmOtherTypeOfCollateral}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.msg.CollateralSubstitution3#mmOtherCollateral
+ * CollateralSubstitution3.mmOtherCollateral}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.msg.CollateralSubstitution5#mmOtherCollateral
+ * CollateralSubstitution5.mmOtherCollateral}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.msg.CollateralSubstitution4#mmOtherCollateral
+ * CollateralSubstitution4.mmOtherCollateral}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.msg.OtherCollateral7#mmOtherTypeOfCollateral
+ * OtherCollateral7.mmOtherTypeOfCollateral}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.msg.CollateralValuation5#mmOtherCollateral
+ * CollateralValuation5.mmOtherCollateral}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.msg.OtherCollateral6#mmLetterOfCreditIdentification
+ * OtherCollateral6.mmLetterOfCreditIdentification}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.msg.OtherCollateral6#mmOtherTypeOfCollateral
+ * OtherCollateral6.mmOtherTypeOfCollateral}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.msg.OtherCollateral5#mmOtherTypeOfCollateral
+ * OtherCollateral5.mmOtherTypeOfCollateral}</li>
+ * </ul>
+ * </li>
+ * <li>{@linkplain com.tools20022.metamodel.MMBusinessComponent#getSubType
+ * subType} =
+ * <ul>
+ * <li>{@linkplain com.tools20022.repository.entity.Security Security}</li>
+ * <li>{@linkplain com.tools20022.repository.entity.Derivative Derivative}</li>
+ * <li>{@linkplain com.tools20022.repository.entity.Money Money}</li>
+ * <li>{@linkplain com.tools20022.repository.entity.LetterOfCredit
+ * LetterOfCredit}</li>
+ * <li>{@linkplain com.tools20022.repository.entity.Guarantee Guarantee}</li>
+ * <li>{@linkplain com.tools20022.repository.entity.Commodity Commodity}</li>
+ * </ul>
+ * </li>
+ * <li>{@linkplain com.tools20022.metamodel.MMBusinessComponent#getElement
+ * element} =
+ * <ul>
+ * <li>{@linkplain com.tools20022.repository.entity.Asset#mmExpiryDate
+ * Asset.mmExpiryDate}</li>
+ * <li>{@linkplain com.tools20022.repository.entity.Asset#mmMaturityDate
+ * Asset.mmMaturityDate}</li>
+ * <li>{@linkplain com.tools20022.repository.entity.Asset#mmDerivative
+ * Asset.mmDerivative}</li>
+ * <li>{@linkplain com.tools20022.repository.entity.Asset#mmAssetValue
+ * Asset.mmAssetValue}</li>
+ * <li>{@linkplain com.tools20022.repository.entity.Asset#mmAssetClassification
+ * Asset.mmAssetClassification}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.entity.Asset#mmFinancialAssetCategory
+ * Asset.mmFinancialAssetCategory}</li>
+ * <li>{@linkplain com.tools20022.repository.entity.Asset#mmAssetPartyRole
+ * Asset.mmAssetPartyRole}</li>
+ * <li>{@linkplain com.tools20022.repository.entity.Asset#mmIssuance
+ * Asset.mmIssuance}</li>
+ * <li>{@linkplain com.tools20022.repository.entity.Asset#mmPortfolio
+ * Asset.mmPortfolio}</li>
+ * <li>{@linkplain com.tools20022.repository.entity.Asset#mmInvestmentAmount
+ * Asset.mmInvestmentAmount}</li>
+ * <li>{@linkplain com.tools20022.repository.entity.Asset#mmInvestmentRate
+ * Asset.mmInvestmentRate}</li>
+ * <li>{@linkplain com.tools20022.repository.entity.Asset#mmEffectiveDate
+ * Asset.mmEffectiveDate}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.entity.Asset#mmFinancialInstrumentSubStructure
+ * Asset.mmFinancialInstrumentSubStructure}</li>
+ * <li>{@linkplain com.tools20022.repository.entity.Asset#mmInvestmentPlan
+ * Asset.mmInvestmentPlan}</li>
+ * <li>{@linkplain com.tools20022.repository.entity.Asset#mmTrade Asset.mmTrade}
+ * </li>
+ * <li>{@linkplain com.tools20022.repository.entity.Asset#mmTranche
+ * Asset.mmTranche}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.entity.Asset#mmLegAdditionalInformation
+ * Asset.mmLegAdditionalInformation}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.entity.Asset#mmStandingSettlementInstruction
+ * Asset.mmStandingSettlementInstruction}</li>
  * </ul>
  * </li>
  * <li>
@@ -695,41 +695,25 @@ public class Asset {
 	 */
 	public static final MMBusinessAttribute mmExpiryDate = new MMBusinessAttribute() {
 		{
-			derivation_lazy = () -> Arrays.asList(com.tools20022.repository.msg.FinancialInstrumentAttributes8.mmExpiryDate, com.tools20022.repository.msg.FinancialInstrumentAttributes20.mmExpiryDate,
-					com.tools20022.repository.msg.FinancialInstrumentAttributes35.mmExpiryDate, com.tools20022.repository.msg.FinancialInstrumentAttributes41.mmExpiryDate,
-					com.tools20022.repository.msg.FinancialInstrumentAttributes6.mmExpiryDate, com.tools20022.repository.msg.FinancialInstrumentAttributes9.mmExpiryDate,
-					com.tools20022.repository.msg.FinancialInstrumentAttributes18.mmExpiryDate, com.tools20022.repository.msg.FinancialInstrumentAttributes22.mmExpiryDate,
-					com.tools20022.repository.msg.FinancialInstrumentAttributes32.mmExpiryDate, com.tools20022.repository.msg.FinancialInstrumentAttributes38.mmExpiryDate,
-					com.tools20022.repository.msg.FinancialInstrumentAttributes7.mmExpiryDate, com.tools20022.repository.msg.FinancialInstrumentAttributes11.mmExpiryDate,
-					com.tools20022.repository.msg.FinancialInstrumentAttributes19.mmExpiryDate, com.tools20022.repository.msg.FinancialInstrumentAttributes23.mmExpiryDate,
-					com.tools20022.repository.msg.FinancialInstrumentAttributes33.mmExpiryDate, com.tools20022.repository.msg.FinancialInstrumentAttributes39.mmExpiryDate,
-					com.tools20022.repository.msg.FinancialInstrumentAttributes43.mmExpiryDate, com.tools20022.repository.msg.FinancialInstrumentAttributes45.mmExpiryDate,
-					com.tools20022.repository.msg.FinancialInstrumentAttributes3.mmExpiryDate, com.tools20022.repository.msg.FinancialInstrumentAttributes12.mmExpiryDate,
-					com.tools20022.repository.msg.FinancialInstrumentAttributes17.mmExpiryDate, com.tools20022.repository.msg.FinancialInstrumentAttributes25.mmExpiryDate,
-					com.tools20022.repository.msg.FinancialInstrumentAttributes46.mmExpiryDate, com.tools20022.repository.msg.FinancialInstrumentAttributes47.mmExpiryDate,
-					com.tools20022.repository.msg.FinancialInstrumentAttributes4.mmExpiryDate, com.tools20022.repository.msg.FinancialInstrumentAttributes13.mmExpiryDate,
-					com.tools20022.repository.msg.FinancialInstrumentAttributes21.mmExpiryDate, com.tools20022.repository.msg.FinancialInstrumentAttributes26.mmExpiryDate,
-					com.tools20022.repository.msg.FinancialInstrumentAttributes36.mmExpiryDate, com.tools20022.repository.msg.FinancialInstrumentAttributes42.mmExpiryDate,
-					com.tools20022.repository.msg.FinancialInstrumentAttributes27.mmExpiryDate, com.tools20022.repository.msg.FinancialInstrumentAttributes14.mmExpiryDate,
-					com.tools20022.repository.msg.FinancialInstrumentAttributes30.mmExpiryDate, com.tools20022.repository.msg.FinancialInstrumentAttributes28.mmExpiryDate, com.tools20022.repository.msg.Option1.mmExpiryDate,
-					com.tools20022.repository.msg.Warrant1.mmExpiryDate, com.tools20022.repository.msg.Future1.mmExpiryDate, com.tools20022.repository.msg.FinancialInstrumentStipulations.mmExpirationDate,
-					com.tools20022.repository.msg.FinancialInstrumentAttributes31.mmExpiryDate, com.tools20022.repository.msg.FinancialInstrumentStipulations2.mmExpirationDate,
-					com.tools20022.repository.msg.FinancialInstrumentAttributes44.mmExpiryDate, com.tools20022.repository.msg.FinancialInstrumentAttributes15.mmExpiryDate, com.tools20022.repository.msg.OtherCollateral1.mmExpiryDate,
-					com.tools20022.repository.msg.FinancialInstrumentAttributes29.mmExpiryDate, com.tools20022.repository.msg.Debt2.mmExpirationDate, com.tools20022.repository.msg.CommonFinancialInstrumentAttributes1.mmExpiryDate,
-					com.tools20022.repository.msg.FinancialInstrumentAttributes2.mmExpiryDate, com.tools20022.repository.msg.FinancialInstrumentAttributes48.mmExpiryDate,
-					com.tools20022.repository.msg.FinancialInstrumentAttributes50.mmExpiryDate, com.tools20022.repository.msg.FinancialInstrumentAttributes55.mmExpiryDate,
-					com.tools20022.repository.msg.FinancialInstrumentAttributes57.mmExpiryDate, com.tools20022.repository.msg.OtherCollateral2.mmExpiryDate, com.tools20022.repository.msg.OtherCollateral3.mmExpiryDate,
-					com.tools20022.repository.msg.OtherCollateral4.mmExpiryDate, com.tools20022.repository.msg.FinancialInstrumentAttributes63.mmExpiryDate, com.tools20022.repository.msg.FinancialInstrumentAttributes64.mmExpiryDate,
-					com.tools20022.repository.msg.FinancialInstrumentAttributes68.mmExpiryDate, com.tools20022.repository.msg.FinancialInstrumentAttributes66.mmExpiryDate,
-					com.tools20022.repository.msg.FinancialInstrumentAttributes65.mmExpiryDate, com.tools20022.repository.msg.OtherCollateral7.mmExpiryDate, com.tools20022.repository.msg.OtherCollateral6.mmExpiryDate,
-					com.tools20022.repository.msg.OtherCollateral5.mmExpiryDate, com.tools20022.repository.msg.FinancialInstrumentAttributes73.mmExpiryDate, com.tools20022.repository.msg.FinancialInstrumentAttributes70.mmExpiryDate,
-					com.tools20022.repository.msg.FinancialInstrumentAttributes69.mmExpiryDate, com.tools20022.repository.msg.FinancialInstrumentAttributes75.mmExpiryDate,
-					com.tools20022.repository.msg.FinancialInstrumentAttributes78.mmExpiryDate, com.tools20022.repository.msg.FinancialInstrumentAttributes79.mmExpiryDate,
-					com.tools20022.repository.msg.FinancialInstrumentAttributes81.mmExpiryDate, com.tools20022.repository.msg.FinancialInstrumentAttributes85.mmExpiryDate,
-					com.tools20022.repository.msg.FinancialInstrumentAttributes84.mmExpiryDate);
+			derivation_lazy = () -> Arrays.asList(FinancialInstrumentAttributes8.mmExpiryDate, FinancialInstrumentAttributes20.mmExpiryDate, FinancialInstrumentAttributes35.mmExpiryDate, FinancialInstrumentAttributes41.mmExpiryDate,
+					FinancialInstrumentAttributes6.mmExpiryDate, FinancialInstrumentAttributes9.mmExpiryDate, FinancialInstrumentAttributes18.mmExpiryDate, FinancialInstrumentAttributes22.mmExpiryDate,
+					FinancialInstrumentAttributes32.mmExpiryDate, FinancialInstrumentAttributes38.mmExpiryDate, FinancialInstrumentAttributes7.mmExpiryDate, FinancialInstrumentAttributes11.mmExpiryDate,
+					FinancialInstrumentAttributes19.mmExpiryDate, FinancialInstrumentAttributes23.mmExpiryDate, FinancialInstrumentAttributes33.mmExpiryDate, FinancialInstrumentAttributes39.mmExpiryDate,
+					FinancialInstrumentAttributes43.mmExpiryDate, FinancialInstrumentAttributes45.mmExpiryDate, FinancialInstrumentAttributes3.mmExpiryDate, FinancialInstrumentAttributes12.mmExpiryDate,
+					FinancialInstrumentAttributes17.mmExpiryDate, FinancialInstrumentAttributes25.mmExpiryDate, FinancialInstrumentAttributes46.mmExpiryDate, FinancialInstrumentAttributes47.mmExpiryDate,
+					FinancialInstrumentAttributes4.mmExpiryDate, FinancialInstrumentAttributes13.mmExpiryDate, FinancialInstrumentAttributes21.mmExpiryDate, FinancialInstrumentAttributes26.mmExpiryDate,
+					FinancialInstrumentAttributes36.mmExpiryDate, FinancialInstrumentAttributes42.mmExpiryDate, FinancialInstrumentAttributes27.mmExpiryDate, FinancialInstrumentAttributes14.mmExpiryDate,
+					FinancialInstrumentAttributes30.mmExpiryDate, FinancialInstrumentAttributes28.mmExpiryDate, Option1.mmExpiryDate, Warrant1.mmExpiryDate, Future1.mmExpiryDate, FinancialInstrumentStipulations.mmExpirationDate,
+					FinancialInstrumentAttributes31.mmExpiryDate, FinancialInstrumentStipulations2.mmExpirationDate, FinancialInstrumentAttributes44.mmExpiryDate, FinancialInstrumentAttributes15.mmExpiryDate, OtherCollateral1.mmExpiryDate,
+					FinancialInstrumentAttributes29.mmExpiryDate, Debt2.mmExpirationDate, CommonFinancialInstrumentAttributes1.mmExpiryDate, FinancialInstrumentAttributes2.mmExpiryDate, FinancialInstrumentAttributes48.mmExpiryDate,
+					FinancialInstrumentAttributes50.mmExpiryDate, FinancialInstrumentAttributes55.mmExpiryDate, FinancialInstrumentAttributes57.mmExpiryDate, OtherCollateral2.mmExpiryDate, OtherCollateral3.mmExpiryDate,
+					OtherCollateral4.mmExpiryDate, FinancialInstrumentAttributes63.mmExpiryDate, FinancialInstrumentAttributes64.mmExpiryDate, FinancialInstrumentAttributes68.mmExpiryDate, FinancialInstrumentAttributes66.mmExpiryDate,
+					FinancialInstrumentAttributes65.mmExpiryDate, OtherCollateral7.mmExpiryDate, OtherCollateral6.mmExpiryDate, OtherCollateral5.mmExpiryDate, FinancialInstrumentAttributes73.mmExpiryDate,
+					FinancialInstrumentAttributes70.mmExpiryDate, FinancialInstrumentAttributes69.mmExpiryDate, FinancialInstrumentAttributes75.mmExpiryDate, FinancialInstrumentAttributes78.mmExpiryDate,
+					FinancialInstrumentAttributes79.mmExpiryDate, FinancialInstrumentAttributes81.mmExpiryDate, FinancialInstrumentAttributes85.mmExpiryDate, FinancialInstrumentAttributes84.mmExpiryDate);
 			elementContext_lazy = () -> Asset.mmObject();
 			isDerived = false;
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "ExpiryDate";
 			definition = "Date on which an order, a privilege, an entitlement or an offer terminates. For an interest bearing asset, it is the date/time at which it becomes due and has to be repaid.";
 			maxOccurs = 1;
@@ -1129,62 +1113,37 @@ public class Asset {
 	 */
 	public static final MMBusinessAttribute mmMaturityDate = new MMBusinessAttribute() {
 		{
-			derivation_lazy = () -> Arrays.asList(com.tools20022.repository.msg.FinancialInstrumentAttributes8.mmMaturityDate, com.tools20022.repository.msg.FinancialInstrumentAttributes20.mmMaturityDate,
-					com.tools20022.repository.msg.FinancialInstrumentAttributes35.mmMaturityDate, com.tools20022.repository.msg.FinancialInstrumentAttributes41.mmMaturityDate,
-					com.tools20022.repository.msg.FinancialInstrumentAttributes6.mmMaturityDate, com.tools20022.repository.msg.FinancialInstrumentAttributes9.mmMaturityDate,
-					com.tools20022.repository.msg.FinancialInstrumentAttributes18.mmMaturityDate, com.tools20022.repository.msg.FinancialInstrumentAttributes22.mmMaturityDate,
-					com.tools20022.repository.msg.FinancialInstrumentAttributes32.mmMaturityDate, com.tools20022.repository.msg.FinancialInstrumentAttributes38.mmMaturityDate,
-					com.tools20022.repository.msg.FinancialInstrumentAttributes7.mmMaturityDate, com.tools20022.repository.msg.FinancialInstrumentAttributes5.mmMaturityDate,
-					com.tools20022.repository.msg.FinancialInstrumentAttributes11.mmMaturityDate, com.tools20022.repository.msg.FinancialInstrumentAttributes10.mmMaturityDate,
-					com.tools20022.repository.msg.FinancialInstrumentAttributes19.mmMaturityDate, com.tools20022.repository.msg.FinancialInstrumentAttributes16.mmMaturityDate,
-					com.tools20022.repository.msg.FinancialInstrumentAttributes23.mmMaturityDate, com.tools20022.repository.msg.FinancialInstrumentAttributes24.mmMaturityDate,
-					com.tools20022.repository.msg.FinancialInstrumentAttributes33.mmMaturityDate, com.tools20022.repository.msg.FinancialInstrumentAttributes34.mmMaturityDate,
-					com.tools20022.repository.msg.FinancialInstrumentAttributes39.mmMaturityDate, com.tools20022.repository.msg.FinancialInstrumentAttributes40.mmMaturityDate,
-					com.tools20022.repository.msg.FinancialInstrumentAttributes43.mmMaturityDate, com.tools20022.repository.msg.FinancialInstrumentAttributes45.mmMaturityDate,
-					com.tools20022.repository.msg.CorporateActionDate1.mmMaturityDate, com.tools20022.repository.msg.CorporateActionDate13.mmMaturityDate, com.tools20022.repository.msg.CorporateActionDate14.mmNewMaturityDate,
-					com.tools20022.repository.msg.CorporateActionDate21.mmNewMaturityDate, com.tools20022.repository.msg.CorporateActionDate22.mmNewMaturityDate, com.tools20022.repository.msg.CorporateActionDate25.mmNewMaturityDate,
-					com.tools20022.repository.msg.CorporateActionDate27.mmNewMaturityDate, com.tools20022.repository.msg.CorporateActionDate28.mmNewMaturityDate, com.tools20022.repository.msg.FinancialInstrumentAttributes4.mmMaturityDate,
-					com.tools20022.repository.msg.FinancialInstrumentAttributes13.mmMaturityDate, com.tools20022.repository.msg.FinancialInstrumentAttributes21.mmMaturityDate,
-					com.tools20022.repository.msg.FinancialInstrumentAttributes26.mmMaturityDate, com.tools20022.repository.msg.FinancialInstrumentAttributes36.mmMaturityDate,
-					com.tools20022.repository.msg.FinancialInstrumentAttributes42.mmMaturityDate, com.tools20022.repository.msg.FinancialInstrumentAttributes27.mmMaturityDate,
-					com.tools20022.repository.msg.FinancialInstrumentAttributes14.mmMaturityDate, com.tools20022.repository.msg.FinancialInstrumentAttributes30.mmMaturityDate,
-					com.tools20022.repository.msg.FinancialInstrumentAttributes28.mmMaturityDate, com.tools20022.repository.msg.Equity1.mmMaturityDate, com.tools20022.repository.msg.Debt1.mmMaturityDate,
-					com.tools20022.repository.msg.FinancialInstrumentStipulations.mmMaturityDate, com.tools20022.repository.msg.FinancialInstrumentAttributes31.mmMaturityDate,
-					com.tools20022.repository.msg.FinancialInstrumentStipulations2.mmMaturityDate, com.tools20022.repository.msg.FinancialInstrumentAttributes44.mmMaturityDate,
-					com.tools20022.repository.msg.CorporateActionDate2.mmMaturityDate, com.tools20022.repository.msg.SecurityInstrumentDescription1.mmMaturityDate,
-					com.tools20022.repository.msg.SecurityInstrumentDescription2.mmMaturityDate, com.tools20022.repository.msg.FinancialInstrumentAttributes15.mmMaturityDate,
-					com.tools20022.repository.msg.SecuritiesCollateral1.mmMaturityDate, com.tools20022.repository.msg.CashCollateral1.mmMaturityDate, com.tools20022.repository.msg.FinancialInstrumentAttributes29.mmMaturityDate,
-					com.tools20022.repository.msg.Equity2.mmMaturityDate, com.tools20022.repository.msg.Debt2.mmMaturityDate, com.tools20022.repository.msg.FinancialInstrumentAttributes2.mmMaturityDate,
-					com.tools20022.repository.msg.FinancialInstrumentAttributes48.mmMaturityDate, com.tools20022.repository.msg.FinancialInstrumentAttributes50.mmMaturityDate,
-					com.tools20022.repository.msg.FinancialInstrumentAttributes49.mmMaturityDate, com.tools20022.repository.msg.FinancialInstrumentAttributes55.mmMaturityDate,
-					com.tools20022.repository.msg.FinancialInstrumentAttributes57.mmMaturityDate, com.tools20022.repository.msg.FinancialInstrumentAttributes56.mmMaturityDate,
-					com.tools20022.repository.msg.CorporateActionConfirmationSecuritiesMovementDetailsSD2.mmMaturityDate, com.tools20022.repository.msg.SecuritiesCollateral2.mmMaturityDate,
-					com.tools20022.repository.msg.CashCollateral3.mmMaturityDate, com.tools20022.repository.msg.SecuritiesCollateral3.mmMaturityDate, com.tools20022.repository.msg.CashCollateral4.mmMaturityDate,
-					com.tools20022.repository.msg.CashCollateral2.mmMaturityDate, com.tools20022.repository.msg.SecuritiesCollateral4.mmMaturityDate, com.tools20022.repository.msg.CashCollateral5.mmMaturityDate,
-					com.tools20022.repository.msg.CorporateActionConfirmationSecuritiesMovementDetailsSD3.mmMaturityDate, com.tools20022.repository.msg.ForeignExchangeSwapTransaction1.mmMaturityDate,
-					com.tools20022.repository.msg.UnsecuredMarketTransaction1.mmMaturityDate, com.tools20022.repository.msg.OvernightIndexSwapTransaction1.mmMaturityDate,
-					com.tools20022.repository.msg.SecuredMarketTransaction1.mmMaturityDate, com.tools20022.repository.msg.DebtInstrument2.mmMaturityDate, com.tools20022.repository.msg.LoanContractTranche1.mmExpectedDate,
-					com.tools20022.repository.msg.LoanContractTranche1.mmDueDate, com.tools20022.repository.msg.LoanContract1.mmMaturityDate, com.tools20022.repository.msg.FinancialInstrumentAttributes63.mmMaturityDate,
-					com.tools20022.repository.msg.FinancialInstrumentAttributes64.mmMaturityDate, com.tools20022.repository.msg.FinancialInstrumentAttributes66.mmMaturityDate,
-					com.tools20022.repository.msg.FinancialInstrumentAttributes65.mmMaturityDate, com.tools20022.repository.msg.FinancialInstrumentAttributes67.mmMaturityDate,
-					com.tools20022.repository.msg.CorporateActionDate44.mmNewMaturityDate, com.tools20022.repository.msg.SecuritiesCollateral6.mmMaturityDate, com.tools20022.repository.msg.SecuritiesCollateral5.mmMaturityDate,
-					com.tools20022.repository.msg.SecuritiesCollateral7.mmMaturityDate, com.tools20022.repository.msg.FinancialInstrumentAttributes70.mmMaturityDate,
-					com.tools20022.repository.msg.FinancialInstrumentAttributes69.mmMaturityDate, com.tools20022.repository.msg.CorporateActionDate58.mmNewMaturityDate,
-					com.tools20022.repository.msg.FinancialInstrumentAttributes71.mmMaturityDate, com.tools20022.repository.msg.FinancialInstrumentAttributes75.mmMaturityDate,
-					com.tools20022.repository.msg.FinancialInstrumentAttributes78.mmMaturityDate, com.tools20022.repository.msg.CorporateActionConfirmationSecuritiesMovementDetailsSD4.mmMaturityDate,
-					com.tools20022.repository.msg.UnsecuredMarketTransaction2.mmMaturityDate, com.tools20022.repository.msg.ForeignExchangeSwapTransaction2.mmMaturityDate,
-					com.tools20022.repository.msg.SecuredMarketTransaction2.mmMaturityDate, com.tools20022.repository.msg.UnsecuredMarketTransaction3.mmMaturityDate,
-					com.tools20022.repository.msg.OvernightIndexSwapTransaction3.mmMaturityDate, com.tools20022.repository.msg.SecuredMarketTransaction3.mmMaturityDate, com.tools20022.repository.msg.DebtInstrument4.mmMaturityDate,
-					com.tools20022.repository.msg.TransparencyDataReport10.mmMaturityDate, com.tools20022.repository.msg.DebtInstrument5.mmIssuanceDate, com.tools20022.repository.msg.InterestRateDerivative5.mmUnderlyingSwapMaturityDate,
-					com.tools20022.repository.msg.BondDerivative2.mmMaturityDate, com.tools20022.repository.msg.FinancialInstrumentAttributes79.mmMaturityDate, com.tools20022.repository.msg.FinancialInstrumentAttributes81.mmMaturityDate,
-					com.tools20022.repository.msg.FinancialInstrumentAttributes80.mmMaturityDate, com.tools20022.repository.msg.CorporateActionConfirmationSecuritiesMovementDetailsSD5.mmMaturityDate,
-					com.tools20022.repository.msg.SecuritiesCollateral8.mmMaturityDate, com.tools20022.repository.msg.FinancialInstrumentAttributes85.mmMaturityDate,
-					com.tools20022.repository.msg.FinancialInstrumentAttributes84.mmMaturityDate, com.tools20022.repository.msg.FinancialInstrumentAttributes83.mmMaturityDate,
-					com.tools20022.repository.msg.SecuredMarketTransaction4.mmMaturityDate, com.tools20022.repository.msg.ForeignExchangeSwapTransaction3.mmMaturityDate,
-					com.tools20022.repository.msg.OvernightIndexSwapTransaction4.mmMaturityDate, com.tools20022.repository.msg.UnsecuredMarketTransaction4.mmMaturityDate);
+			derivation_lazy = () -> Arrays.asList(FinancialInstrumentAttributes8.mmMaturityDate, FinancialInstrumentAttributes20.mmMaturityDate, FinancialInstrumentAttributes35.mmMaturityDate,
+					FinancialInstrumentAttributes41.mmMaturityDate, FinancialInstrumentAttributes6.mmMaturityDate, FinancialInstrumentAttributes9.mmMaturityDate, FinancialInstrumentAttributes18.mmMaturityDate,
+					FinancialInstrumentAttributes22.mmMaturityDate, FinancialInstrumentAttributes32.mmMaturityDate, FinancialInstrumentAttributes38.mmMaturityDate, FinancialInstrumentAttributes7.mmMaturityDate,
+					FinancialInstrumentAttributes5.mmMaturityDate, FinancialInstrumentAttributes11.mmMaturityDate, FinancialInstrumentAttributes10.mmMaturityDate, FinancialInstrumentAttributes19.mmMaturityDate,
+					FinancialInstrumentAttributes16.mmMaturityDate, FinancialInstrumentAttributes23.mmMaturityDate, FinancialInstrumentAttributes24.mmMaturityDate, FinancialInstrumentAttributes33.mmMaturityDate,
+					FinancialInstrumentAttributes34.mmMaturityDate, FinancialInstrumentAttributes39.mmMaturityDate, FinancialInstrumentAttributes40.mmMaturityDate, FinancialInstrumentAttributes43.mmMaturityDate,
+					FinancialInstrumentAttributes45.mmMaturityDate, CorporateActionDate1.mmMaturityDate, CorporateActionDate13.mmMaturityDate, CorporateActionDate14.mmNewMaturityDate, CorporateActionDate21.mmNewMaturityDate,
+					CorporateActionDate22.mmNewMaturityDate, CorporateActionDate25.mmNewMaturityDate, CorporateActionDate27.mmNewMaturityDate, CorporateActionDate28.mmNewMaturityDate, FinancialInstrumentAttributes4.mmMaturityDate,
+					FinancialInstrumentAttributes13.mmMaturityDate, FinancialInstrumentAttributes21.mmMaturityDate, FinancialInstrumentAttributes26.mmMaturityDate, FinancialInstrumentAttributes36.mmMaturityDate,
+					FinancialInstrumentAttributes42.mmMaturityDate, FinancialInstrumentAttributes27.mmMaturityDate, FinancialInstrumentAttributes14.mmMaturityDate, FinancialInstrumentAttributes30.mmMaturityDate,
+					FinancialInstrumentAttributes28.mmMaturityDate, Equity1.mmMaturityDate, Debt1.mmMaturityDate, FinancialInstrumentStipulations.mmMaturityDate, FinancialInstrumentAttributes31.mmMaturityDate,
+					FinancialInstrumentStipulations2.mmMaturityDate, FinancialInstrumentAttributes44.mmMaturityDate, CorporateActionDate2.mmMaturityDate, SecurityInstrumentDescription1.mmMaturityDate,
+					SecurityInstrumentDescription2.mmMaturityDate, FinancialInstrumentAttributes15.mmMaturityDate, SecuritiesCollateral1.mmMaturityDate, CashCollateral1.mmMaturityDate, FinancialInstrumentAttributes29.mmMaturityDate,
+					Equity2.mmMaturityDate, Debt2.mmMaturityDate, FinancialInstrumentAttributes2.mmMaturityDate, FinancialInstrumentAttributes48.mmMaturityDate, FinancialInstrumentAttributes50.mmMaturityDate,
+					FinancialInstrumentAttributes49.mmMaturityDate, FinancialInstrumentAttributes55.mmMaturityDate, FinancialInstrumentAttributes57.mmMaturityDate, FinancialInstrumentAttributes56.mmMaturityDate,
+					CorporateActionConfirmationSecuritiesMovementDetailsSD2.mmMaturityDate, SecuritiesCollateral2.mmMaturityDate, CashCollateral3.mmMaturityDate, SecuritiesCollateral3.mmMaturityDate, CashCollateral4.mmMaturityDate,
+					CashCollateral2.mmMaturityDate, SecuritiesCollateral4.mmMaturityDate, CashCollateral5.mmMaturityDate, CorporateActionConfirmationSecuritiesMovementDetailsSD3.mmMaturityDate,
+					ForeignExchangeSwapTransaction1.mmMaturityDate, UnsecuredMarketTransaction1.mmMaturityDate, OvernightIndexSwapTransaction1.mmMaturityDate, SecuredMarketTransaction1.mmMaturityDate, DebtInstrument2.mmMaturityDate,
+					LoanContractTranche1.mmExpectedDate, LoanContractTranche1.mmDueDate, LoanContract1.mmMaturityDate, FinancialInstrumentAttributes63.mmMaturityDate, FinancialInstrumentAttributes64.mmMaturityDate,
+					FinancialInstrumentAttributes66.mmMaturityDate, FinancialInstrumentAttributes65.mmMaturityDate, FinancialInstrumentAttributes67.mmMaturityDate, CorporateActionDate44.mmNewMaturityDate,
+					SecuritiesCollateral6.mmMaturityDate, SecuritiesCollateral5.mmMaturityDate, SecuritiesCollateral7.mmMaturityDate, FinancialInstrumentAttributes70.mmMaturityDate, FinancialInstrumentAttributes69.mmMaturityDate,
+					CorporateActionDate58.mmNewMaturityDate, FinancialInstrumentAttributes71.mmMaturityDate, FinancialInstrumentAttributes75.mmMaturityDate, FinancialInstrumentAttributes78.mmMaturityDate,
+					CorporateActionConfirmationSecuritiesMovementDetailsSD4.mmMaturityDate, UnsecuredMarketTransaction2.mmMaturityDate, ForeignExchangeSwapTransaction2.mmMaturityDate, SecuredMarketTransaction2.mmMaturityDate,
+					UnsecuredMarketTransaction3.mmMaturityDate, OvernightIndexSwapTransaction3.mmMaturityDate, SecuredMarketTransaction3.mmMaturityDate, DebtInstrument4.mmMaturityDate, TransparencyDataReport10.mmMaturityDate,
+					DebtInstrument5.mmIssuanceDate, InterestRateDerivative5.mmUnderlyingSwapMaturityDate, BondDerivative2.mmMaturityDate, FinancialInstrumentAttributes79.mmMaturityDate, FinancialInstrumentAttributes81.mmMaturityDate,
+					FinancialInstrumentAttributes80.mmMaturityDate, CorporateActionConfirmationSecuritiesMovementDetailsSD5.mmMaturityDate, SecuritiesCollateral8.mmMaturityDate, FinancialInstrumentAttributes85.mmMaturityDate,
+					FinancialInstrumentAttributes84.mmMaturityDate, FinancialInstrumentAttributes83.mmMaturityDate, SecuredMarketTransaction4.mmMaturityDate, ForeignExchangeSwapTransaction3.mmMaturityDate,
+					OvernightIndexSwapTransaction4.mmMaturityDate, UnsecuredMarketTransaction4.mmMaturityDate);
 			elementContext_lazy = () -> Asset.mmObject();
 			isDerived = false;
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "MaturityDate";
 			definition = "Planned date, at the time of issuance, on which an interest bearing financial instrument becomes due and principal is repaid by the issuer to the investor.";
 			maxOccurs = 1;
@@ -1289,23 +1248,20 @@ public class Asset {
 	 */
 	public static final MMBusinessAssociationEnd mmDerivative = new MMBusinessAssociationEnd() {
 		{
-			derivation_lazy = () -> Arrays.asList(com.tools20022.repository.msg.AggregateBalanceInformation8.mmAdditionalDerivativeAttributes, com.tools20022.repository.msg.AggregateBalanceInformation11.mmAdditionalDerivativeAttributes,
-					com.tools20022.repository.msg.AggregateBalanceInformation13.mmAdditionalDerivativeAttributes, com.tools20022.repository.msg.AggregateBalanceInformation15.mmAdditionalDerivativeAttributes,
-					com.tools20022.repository.msg.AggregateBalanceInformation17.mmAdditionalDerivativeAttributes, com.tools20022.repository.msg.AggregateBalanceInformation19.mmAdditionalDerivativeAttributes,
-					com.tools20022.repository.msg.AggregateBalanceInformation22.mmAdditionalDerivativeAttributes, com.tools20022.repository.msg.AggregateBalanceInformation23.mmAdditionalDerivativeAttributes,
-					com.tools20022.repository.choice.TwoLegTransactionType1Choice.mmFutureOrOptionDetails, com.tools20022.repository.msg.FinancialInstrument28.mmDerivative,
-					com.tools20022.repository.msg.FinancialInstrument2.mmAdditionalDerivativeAttributes, com.tools20022.repository.msg.AggregateBalanceInformation26.mmAdditionalDerivativeAttributes,
-					com.tools20022.repository.msg.AggregateBalanceInformation27.mmAdditionalDerivativeAttributes, com.tools20022.repository.msg.AggregateBalanceInformation31.mmAdditionalDerivativeAttributes,
-					com.tools20022.repository.msg.AggregateBalanceInformation32.mmAdditionalDerivativeAttributes, com.tools20022.repository.msg.SecuritiesReferenceDataReport5.mmDerivativeInstrumentAttributes,
-					com.tools20022.repository.msg.TransparencyDataReport10.mmDerivative, com.tools20022.repository.msg.SecurityInstrumentDescription13.mmDerivativeInstrumentAttributes);
+			derivation_lazy = () -> Arrays.asList(AggregateBalanceInformation8.mmAdditionalDerivativeAttributes, AggregateBalanceInformation11.mmAdditionalDerivativeAttributes,
+					AggregateBalanceInformation13.mmAdditionalDerivativeAttributes, AggregateBalanceInformation15.mmAdditionalDerivativeAttributes, AggregateBalanceInformation17.mmAdditionalDerivativeAttributes,
+					AggregateBalanceInformation19.mmAdditionalDerivativeAttributes, AggregateBalanceInformation22.mmAdditionalDerivativeAttributes, AggregateBalanceInformation23.mmAdditionalDerivativeAttributes,
+					TwoLegTransactionType1Choice.mmFutureOrOptionDetails, FinancialInstrument28.mmDerivative, FinancialInstrument2.mmAdditionalDerivativeAttributes, AggregateBalanceInformation26.mmAdditionalDerivativeAttributes,
+					AggregateBalanceInformation27.mmAdditionalDerivativeAttributes, AggregateBalanceInformation31.mmAdditionalDerivativeAttributes, AggregateBalanceInformation32.mmAdditionalDerivativeAttributes,
+					SecuritiesReferenceDataReport5.mmDerivativeInstrumentAttributes, TransparencyDataReport10.mmDerivative, SecurityInstrumentDescription13.mmDerivativeInstrumentAttributes);
 			elementContext_lazy = () -> Asset.mmObject();
 			isDerived = false;
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "Derivative";
 			definition = "Specifies the parameters of a derivative instrument based on a specific asset.";
 			minOccurs = 0;
 			opposite_lazy = () -> com.tools20022.repository.entity.Derivative.mmUnderlyingAsset;
-			aggregation = com.tools20022.metamodel.MMAggregation.NONE;
+			aggregation = MMAggregation.NONE;
 			type_lazy = () -> com.tools20022.repository.entity.Derivative.mmObject();
 		}
 	};
@@ -1430,28 +1386,21 @@ public class Asset {
 	 */
 	public static final MMBusinessAssociationEnd mmAssetValue = new MMBusinessAssociationEnd() {
 		{
-			derivation_lazy = () -> Arrays.asList(com.tools20022.repository.msg.QuantityBreakdown4.mmAccountBaseCurrencyAmounts, com.tools20022.repository.msg.QuantityBreakdown4.mmInstrumentCurrencyAmounts,
-					com.tools20022.repository.msg.QuantityBreakdown4.mmAlternateReportingCurrencyAmounts, com.tools20022.repository.msg.QuantityBreakdown8.mmAccountBaseCurrencyAmounts,
-					com.tools20022.repository.msg.QuantityBreakdown8.mmInstrumentCurrencyAmounts, com.tools20022.repository.msg.QuantityBreakdown8.mmAlternateReportingCurrencyAmounts,
-					com.tools20022.repository.msg.QuantityBreakdown14.mmAccountBaseCurrencyAmounts, com.tools20022.repository.msg.QuantityBreakdown14.mmInstrumentCurrencyAmounts,
-					com.tools20022.repository.msg.QuantityBreakdown14.mmAlternateReportingCurrencyAmounts, com.tools20022.repository.msg.QuantityBreakdown19.mmAccountBaseCurrencyAmounts,
-					com.tools20022.repository.msg.QuantityBreakdown19.mmInstrumentCurrencyAmounts, com.tools20022.repository.msg.QuantityBreakdown19.mmAlternateReportingCurrencyAmounts,
-					com.tools20022.repository.msg.QuantityBreakdown24.mmAccountBaseCurrencyAmounts, com.tools20022.repository.msg.QuantityBreakdown24.mmInstrumentCurrencyAmounts,
-					com.tools20022.repository.msg.QuantityBreakdown24.mmAlternateReportingCurrencyAmounts, com.tools20022.repository.msg.QuantityBreakdown25.mmAccountBaseCurrencyAmounts,
-					com.tools20022.repository.msg.QuantityBreakdown25.mmInstrumentCurrencyAmounts, com.tools20022.repository.msg.QuantityBreakdown25.mmAlternateReportingCurrencyAmounts,
-					com.tools20022.repository.msg.QuantityBreakDown2.mmAccountBaseCurrencyAmounts, com.tools20022.repository.msg.QuantityBreakDown2.mmInstrumentCurrencyAmounts,
-					com.tools20022.repository.msg.QuantityBreakDown2.mmAlternateReportingCurrencyAmounts, com.tools20022.repository.msg.QuantityBreakdown28.mmAccountBaseCurrencyAmounts,
-					com.tools20022.repository.msg.QuantityBreakdown28.mmInstrumentCurrencyAmounts, com.tools20022.repository.msg.QuantityBreakdown28.mmAlternateReportingCurrencyAmounts,
-					com.tools20022.repository.msg.QuantityBreakdown39.mmAccountBaseCurrencyAmounts, com.tools20022.repository.msg.QuantityBreakdown39.mmInstrumentCurrencyAmounts,
-					com.tools20022.repository.msg.QuantityBreakdown39.mmAlternateReportingCurrencyAmounts);
+			derivation_lazy = () -> Arrays.asList(QuantityBreakdown4.mmAccountBaseCurrencyAmounts, QuantityBreakdown4.mmInstrumentCurrencyAmounts, QuantityBreakdown4.mmAlternateReportingCurrencyAmounts,
+					QuantityBreakdown8.mmAccountBaseCurrencyAmounts, QuantityBreakdown8.mmInstrumentCurrencyAmounts, QuantityBreakdown8.mmAlternateReportingCurrencyAmounts, QuantityBreakdown14.mmAccountBaseCurrencyAmounts,
+					QuantityBreakdown14.mmInstrumentCurrencyAmounts, QuantityBreakdown14.mmAlternateReportingCurrencyAmounts, QuantityBreakdown19.mmAccountBaseCurrencyAmounts, QuantityBreakdown19.mmInstrumentCurrencyAmounts,
+					QuantityBreakdown19.mmAlternateReportingCurrencyAmounts, QuantityBreakdown24.mmAccountBaseCurrencyAmounts, QuantityBreakdown24.mmInstrumentCurrencyAmounts, QuantityBreakdown24.mmAlternateReportingCurrencyAmounts,
+					QuantityBreakdown25.mmAccountBaseCurrencyAmounts, QuantityBreakdown25.mmInstrumentCurrencyAmounts, QuantityBreakdown25.mmAlternateReportingCurrencyAmounts, QuantityBreakDown2.mmAccountBaseCurrencyAmounts,
+					QuantityBreakDown2.mmInstrumentCurrencyAmounts, QuantityBreakDown2.mmAlternateReportingCurrencyAmounts, QuantityBreakdown28.mmAccountBaseCurrencyAmounts, QuantityBreakdown28.mmInstrumentCurrencyAmounts,
+					QuantityBreakdown28.mmAlternateReportingCurrencyAmounts, QuantityBreakdown39.mmAccountBaseCurrencyAmounts, QuantityBreakdown39.mmInstrumentCurrencyAmounts, QuantityBreakdown39.mmAlternateReportingCurrencyAmounts);
 			elementContext_lazy = () -> Asset.mmObject();
 			isDerived = false;
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "AssetValue";
 			definition = "Specifies the different values of an asset.";
 			minOccurs = 0;
 			opposite_lazy = () -> com.tools20022.repository.entity.AssetHolding.mmAsset;
-			aggregation = com.tools20022.metamodel.MMAggregation.NONE;
+			aggregation = MMAggregation.NONE;
 			type_lazy = () -> com.tools20022.repository.entity.AssetHolding.mmObject();
 		}
 	};
@@ -1531,20 +1480,17 @@ public class Asset {
 	 */
 	public static final MMBusinessAssociationEnd mmAssetClassification = new MMBusinessAssociationEnd() {
 		{
-			derivation_lazy = () -> Arrays.asList(com.tools20022.repository.msg.AdditionalInformation3.mmClassificationType, com.tools20022.repository.msg.AdditionalInformation4.mmClassificationType,
-					com.tools20022.repository.msg.AdditionalInformation7.mmClassificationType, com.tools20022.repository.msg.AdditionalInformation8.mmClassificationType,
-					com.tools20022.repository.msg.FinancialInstrumentAttributes1.mmProductType, com.tools20022.repository.msg.CommonFinancialInstrumentAttributes1.mmClassificationType,
-					com.tools20022.repository.msg.AdditionalInformation9.mmClassificationType, com.tools20022.repository.msg.AdditionalInformation10.mmClassificationType,
-					com.tools20022.repository.msg.AdditionalInformation11.mmClassificationType, com.tools20022.repository.msg.AdditionalInformation12.mmClassificationType,
-					com.tools20022.repository.msg.AdditionalInformation13.mmClassificationType, com.tools20022.repository.msg.AdditionalInformation14.mmClassificationType);
+			derivation_lazy = () -> Arrays.asList(AdditionalInformation3.mmClassificationType, AdditionalInformation4.mmClassificationType, AdditionalInformation7.mmClassificationType, AdditionalInformation8.mmClassificationType,
+					FinancialInstrumentAttributes1.mmProductType, CommonFinancialInstrumentAttributes1.mmClassificationType, AdditionalInformation9.mmClassificationType, AdditionalInformation10.mmClassificationType,
+					AdditionalInformation11.mmClassificationType, AdditionalInformation12.mmClassificationType, AdditionalInformation13.mmClassificationType, AdditionalInformation14.mmClassificationType);
 			elementContext_lazy = () -> Asset.mmObject();
 			isDerived = false;
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "AssetClassification";
 			definition = "Classification of the asset.";
 			minOccurs = 0;
 			opposite_lazy = () -> com.tools20022.repository.entity.AssetClassification.mmAsset;
-			aggregation = com.tools20022.metamodel.MMAggregation.NONE;
+			aggregation = MMAggregation.NONE;
 			type_lazy = () -> com.tools20022.repository.entity.AssetClassification.mmObject();
 		}
 	};
@@ -1586,10 +1532,10 @@ public class Asset {
 	 */
 	public static final MMBusinessAttribute mmFinancialAssetCategory = new MMBusinessAttribute() {
 		{
-			derivation_lazy = () -> Arrays.asList(com.tools20022.repository.msg.BalanceDetails6.mmCategory, com.tools20022.repository.msg.DerivativeForeignExchange3.mmFXType);
+			derivation_lazy = () -> Arrays.asList(BalanceDetails6.mmCategory, DerivativeForeignExchange3.mmFXType);
 			elementContext_lazy = () -> Asset.mmObject();
 			isDerived = false;
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "FinancialAssetCategory";
 			definition = "Categorization of financial asset type.";
 			maxOccurs = 1;
@@ -1643,16 +1589,16 @@ public class Asset {
 	 */
 	public static final MMBusinessAssociationEnd mmAssetPartyRole = new MMBusinessAssociationEnd() {
 		{
-			derivation_lazy = () -> Arrays.asList(com.tools20022.repository.msg.InstrumentLeg2.mmOtherBusinessParties, com.tools20022.repository.msg.InstrumentLeg3.mmOtherBusinessParties);
+			derivation_lazy = () -> Arrays.asList(InstrumentLeg2.mmOtherBusinessParties, InstrumentLeg3.mmOtherBusinessParties);
 			elementContext_lazy = () -> Asset.mmObject();
 			isDerived = false;
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "AssetPartyRole";
 			definition = "Party which plays a role for a specific asset.";
 			maxOccurs = 1;
 			minOccurs = 0;
 			opposite_lazy = () -> com.tools20022.repository.entity.AssetPartyRole.mmAsset;
-			aggregation = com.tools20022.metamodel.MMAggregation.NONE;
+			aggregation = MMAggregation.NONE;
 			type_lazy = () -> com.tools20022.repository.entity.AssetPartyRole.mmObject();
 		}
 	};
@@ -1700,15 +1646,15 @@ public class Asset {
 	 */
 	public static final MMBusinessAssociationEnd mmIssuance = new MMBusinessAssociationEnd() {
 		{
-			derivation_lazy = () -> Arrays.asList(com.tools20022.repository.msg.Debt2.mmGlobalType, com.tools20022.repository.msg.CommonFinancialInstrumentAttributes1.mmIssuance);
+			derivation_lazy = () -> Arrays.asList(Debt2.mmGlobalType, CommonFinancialInstrumentAttributes1.mmIssuance);
 			elementContext_lazy = () -> Asset.mmObject();
 			isDerived = false;
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "Issuance";
 			definition = "Details regarding the issuance of an asset.";
 			minOccurs = 1;
 			opposite_lazy = () -> com.tools20022.repository.entity.Issuance.mmIssuedAsset;
-			aggregation = com.tools20022.metamodel.MMAggregation.NONE;
+			aggregation = MMAggregation.NONE;
 			type_lazy = () -> com.tools20022.repository.entity.Issuance.mmObject();
 		}
 	};
@@ -1749,13 +1695,13 @@ public class Asset {
 		{
 			elementContext_lazy = () -> Asset.mmObject();
 			isDerived = false;
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "Portfolio";
 			definition = "Asset which is part of a portfolio.";
 			maxOccurs = 1;
 			minOccurs = 0;
 			opposite_lazy = () -> com.tools20022.repository.entity.Portfolio.mmAssetDescription;
-			aggregation = com.tools20022.metamodel.MMAggregation.NONE;
+			aggregation = MMAggregation.NONE;
 			type_lazy = () -> com.tools20022.repository.entity.Portfolio.mmObject();
 		}
 	};
@@ -1789,7 +1735,7 @@ public class Asset {
 		{
 			elementContext_lazy = () -> Asset.mmObject();
 			isDerived = false;
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "InvestmentAmount";
 			definition = "Invested amount of the portfolio asset.";
 			maxOccurs = 1;
@@ -1827,7 +1773,7 @@ public class Asset {
 		{
 			elementContext_lazy = () -> Asset.mmObject();
 			isDerived = false;
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "InvestmentRate";
 			definition = "Invested percentage of the portfolio asset.";
 			maxOccurs = 1;
@@ -1866,7 +1812,7 @@ public class Asset {
 		{
 			elementContext_lazy = () -> Asset.mmObject();
 			isDerived = false;
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "EffectiveDate";
 			definition = "Cut off date/time for the information of the specified portfolio asset.";
 			maxOccurs = 1;
@@ -1916,11 +1862,10 @@ public class Asset {
 	 */
 	public static final MMBusinessAttribute mmFinancialInstrumentSubStructure = new MMBusinessAttribute() {
 		{
-			derivation_lazy = () -> Arrays.asList(com.tools20022.repository.choice.InstrumentSubStructureType1Choice.mmCode, com.tools20022.repository.choice.InstrumentSubStructureType1Choice.mmProprietary,
-					com.tools20022.repository.msg.Debt2.mmInstrumentStructureType);
+			derivation_lazy = () -> Arrays.asList(InstrumentSubStructureType1Choice.mmCode, InstrumentSubStructureType1Choice.mmProprietary, Debt2.mmInstrumentStructureType);
 			elementContext_lazy = () -> Asset.mmObject();
 			isDerived = false;
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "FinancialInstrumentSubStructure";
 			definition = "Indicates the type of deal for structured finance.";
 			maxOccurs = 1;
@@ -1965,13 +1910,13 @@ public class Asset {
 		{
 			elementContext_lazy = () -> Asset.mmObject();
 			isDerived = false;
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "InvestmentPlan";
 			definition = "Investment plan that invests in a specific asset.";
 			maxOccurs = 1;
 			minOccurs = 0;
 			opposite_lazy = () -> com.tools20022.repository.entity.InvestmentPlan.mmAsset;
-			aggregation = com.tools20022.metamodel.MMAggregation.NONE;
+			aggregation = MMAggregation.NONE;
 			type_lazy = () -> com.tools20022.repository.entity.InvestmentPlan.mmObject();
 		}
 	};
@@ -2010,12 +1955,12 @@ public class Asset {
 		{
 			elementContext_lazy = () -> Asset.mmObject();
 			isDerived = false;
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Trade";
 			definition = "Trade which which involves a specific asset.";
 			minOccurs = 0;
 			opposite_lazy = () -> com.tools20022.repository.entity.Trade.mmAsset;
-			aggregation = com.tools20022.metamodel.MMAggregation.NONE;
+			aggregation = MMAggregation.NONE;
 			type_lazy = () -> com.tools20022.repository.entity.Trade.mmObject();
 		}
 	};
@@ -2062,16 +2007,16 @@ public class Asset {
 	 */
 	public static final MMBusinessAssociationEnd mmTranche = new MMBusinessAssociationEnd() {
 		{
-			derivation_lazy = () -> Arrays.asList(com.tools20022.repository.msg.LoanContract1.mmTranche);
+			derivation_lazy = () -> Arrays.asList(LoanContract1.mmTranche);
 			elementContext_lazy = () -> Asset.mmObject();
 			isDerived = false;
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Tranche";
 			definition = "One of a number of related assets offered as part of the same transaction.";
 			maxOccurs = 1;
 			minOccurs = 1;
 			opposite_lazy = () -> com.tools20022.repository.entity.Tranche.mmAsset;
-			aggregation = com.tools20022.metamodel.MMAggregation.NONE;
+			aggregation = MMAggregation.NONE;
 			type_lazy = () -> com.tools20022.repository.entity.Tranche.mmObject();
 		}
 	};
@@ -2132,17 +2077,16 @@ public class Asset {
 	 */
 	public static final MMBusinessAssociationEnd mmLegAdditionalInformation = new MMBusinessAssociationEnd() {
 		{
-			derivation_lazy = () -> Arrays.asList(com.tools20022.repository.msg.FinancialInstrumentAttributes1.mmLegAttributes, com.tools20022.repository.msg.QuoteEntry2.mmInstrumentLegGroupDetails,
-					com.tools20022.repository.msg.QuoteEntry2.mmLegFinancialInstrumentAttributes, com.tools20022.repository.msg.QuoteEntry1.mmInstrumentLegGroupDetails, com.tools20022.repository.msg.MultiLegOrder1.mmLegGroupDetails,
-					com.tools20022.repository.msg.IndicationOfInterest1.mmInstrumentLegGroupDetails);
+			derivation_lazy = () -> Arrays.asList(FinancialInstrumentAttributes1.mmLegAttributes, QuoteEntry2.mmInstrumentLegGroupDetails, QuoteEntry2.mmLegFinancialInstrumentAttributes, QuoteEntry1.mmInstrumentLegGroupDetails,
+					MultiLegOrder1.mmLegGroupDetails, IndicationOfInterest1.mmInstrumentLegGroupDetails);
 			elementContext_lazy = () -> Asset.mmObject();
 			isDerived = false;
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "LegAdditionalInformation";
 			definition = "Provides details about the leg.";
 			minOccurs = 0;
 			opposite_lazy = () -> com.tools20022.repository.entity.Leg.mmRelatedAsset;
-			aggregation = com.tools20022.metamodel.MMAggregation.NONE;
+			aggregation = MMAggregation.NONE;
 			type_lazy = () -> com.tools20022.repository.entity.Leg.mmObject();
 		}
 	};
@@ -2185,13 +2129,13 @@ public class Asset {
 		{
 			elementContext_lazy = () -> Asset.mmObject();
 			isDerived = false;
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "StandingSettlementInstruction";
 			definition = "Standing settlement instruction for which an asset is specified.";
 			maxOccurs = 1;
 			minOccurs = 1;
 			opposite_lazy = () -> com.tools20022.repository.entity.StandingSettlementInstruction.mmAsset;
-			aggregation = com.tools20022.metamodel.MMAggregation.NONE;
+			aggregation = MMAggregation.NONE;
 			type_lazy = () -> com.tools20022.repository.entity.StandingSettlementInstruction.mmObject();
 		}
 	};
@@ -2199,31 +2143,23 @@ public class Asset {
 	static public MMBusinessComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMBusinessComponent() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "Asset";
 				definition = "Tangible items of value to a business.";
 				associationDomain_lazy = () -> Arrays.asList(com.tools20022.repository.entity.Trade.mmAsset, com.tools20022.repository.entity.InvestmentPlan.mmAsset, com.tools20022.repository.entity.Portfolio.mmAssetDescription,
 						com.tools20022.repository.entity.AssetHolding.mmAsset, com.tools20022.repository.entity.AssetPartyRole.mmAsset, com.tools20022.repository.entity.AssetClassification.mmAsset,
 						com.tools20022.repository.entity.Derivative.mmUnderlyingAsset, com.tools20022.repository.entity.Issuance.mmIssuedAsset, com.tools20022.repository.entity.StandingSettlementInstruction.mmAsset,
 						com.tools20022.repository.entity.Leg.mmRelatedAsset, com.tools20022.repository.entity.Tranche.mmAsset);
-				derivationElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.FinancialInstrumentAttributes1.mmProperties, com.tools20022.repository.msg.FinancialInstrumentAttributes1.mmAdditionalUnderlyingAttributes,
-						com.tools20022.repository.msg.OtherCollateral1.mmOtherTypeOfCollateral, com.tools20022.repository.msg.CollateralSubstitution1.mmOtherCollateral,
-						com.tools20022.repository.msg.CollateralValuation1.mmOtherCollateralDetails, com.tools20022.repository.msg.SecurityAttributes1.mmFinancialInstrumentType,
-						com.tools20022.repository.msg.CollateralSubstitution2.mmOtherCollateral, com.tools20022.repository.msg.CollateralValuation2.mmOtherCollateral, com.tools20022.repository.msg.OtherCollateral2.mmOtherTypeOfCollateral,
-						com.tools20022.repository.msg.OtherCollateral3.mmLetterOfCreditIdentification, com.tools20022.repository.msg.OtherCollateral3.mmOtherTypeOfCollateral,
-						com.tools20022.repository.msg.OtherCollateral4.mmOtherTypeOfCollateral, com.tools20022.repository.msg.CollateralSubstitution3.mmOtherCollateral,
-						com.tools20022.repository.msg.CollateralSubstitution5.mmOtherCollateral, com.tools20022.repository.msg.CollateralSubstitution4.mmOtherCollateral,
-						com.tools20022.repository.msg.OtherCollateral7.mmOtherTypeOfCollateral, com.tools20022.repository.msg.CollateralValuation5.mmOtherCollateral,
-						com.tools20022.repository.msg.OtherCollateral6.mmLetterOfCreditIdentification, com.tools20022.repository.msg.OtherCollateral6.mmOtherTypeOfCollateral,
-						com.tools20022.repository.msg.OtherCollateral5.mmOtherTypeOfCollateral);
+				derivationElement_lazy = () -> Arrays.asList(FinancialInstrumentAttributes1.mmProperties, FinancialInstrumentAttributes1.mmAdditionalUnderlyingAttributes, OtherCollateral1.mmOtherTypeOfCollateral,
+						CollateralSubstitution1.mmOtherCollateral, CollateralValuation1.mmOtherCollateralDetails, SecurityAttributes1.mmFinancialInstrumentType, CollateralSubstitution2.mmOtherCollateral,
+						CollateralValuation2.mmOtherCollateral, OtherCollateral2.mmOtherTypeOfCollateral, OtherCollateral3.mmLetterOfCreditIdentification, OtherCollateral3.mmOtherTypeOfCollateral, OtherCollateral4.mmOtherTypeOfCollateral,
+						CollateralSubstitution3.mmOtherCollateral, CollateralSubstitution5.mmOtherCollateral, CollateralSubstitution4.mmOtherCollateral, OtherCollateral7.mmOtherTypeOfCollateral, CollateralValuation5.mmOtherCollateral,
+						OtherCollateral6.mmLetterOfCreditIdentification, OtherCollateral6.mmOtherTypeOfCollateral, OtherCollateral5.mmOtherTypeOfCollateral);
 				subType_lazy = () -> Arrays.asList(Security.mmObject(), com.tools20022.repository.entity.Derivative.mmObject(), Money.mmObject(), LetterOfCredit.mmObject(), Guarantee.mmObject(), Commodity.mmObject());
-				element_lazy = () -> Arrays.asList(com.tools20022.repository.entity.Asset.mmExpiryDate, com.tools20022.repository.entity.Asset.mmMaturityDate, com.tools20022.repository.entity.Asset.mmDerivative,
-						com.tools20022.repository.entity.Asset.mmAssetValue, com.tools20022.repository.entity.Asset.mmAssetClassification, com.tools20022.repository.entity.Asset.mmFinancialAssetCategory,
-						com.tools20022.repository.entity.Asset.mmAssetPartyRole, com.tools20022.repository.entity.Asset.mmIssuance, com.tools20022.repository.entity.Asset.mmPortfolio,
-						com.tools20022.repository.entity.Asset.mmInvestmentAmount, com.tools20022.repository.entity.Asset.mmInvestmentRate, com.tools20022.repository.entity.Asset.mmEffectiveDate,
-						com.tools20022.repository.entity.Asset.mmFinancialInstrumentSubStructure, com.tools20022.repository.entity.Asset.mmInvestmentPlan, com.tools20022.repository.entity.Asset.mmTrade,
-						com.tools20022.repository.entity.Asset.mmTranche, com.tools20022.repository.entity.Asset.mmLegAdditionalInformation, com.tools20022.repository.entity.Asset.mmStandingSettlementInstruction);
+				element_lazy = () -> Arrays.asList(Asset.mmExpiryDate, Asset.mmMaturityDate, Asset.mmDerivative, Asset.mmAssetValue, Asset.mmAssetClassification, Asset.mmFinancialAssetCategory, Asset.mmAssetPartyRole, Asset.mmIssuance,
+						Asset.mmPortfolio, Asset.mmInvestmentAmount, Asset.mmInvestmentRate, Asset.mmEffectiveDate, Asset.mmFinancialInstrumentSubStructure, Asset.mmInvestmentPlan, Asset.mmTrade, Asset.mmTranche,
+						Asset.mmLegAdditionalInformation, Asset.mmStandingSettlementInstruction);
 				derivationComponent_lazy = () -> Arrays.asList(FinancialInstrumentAttributes8.mmObject(), FinancialInstrumentAttributes20.mmObject(), FinancialInstrumentAttributes35.mmObject(), FinancialInstrumentAttributes41.mmObject(),
 						FinancialInstrumentAttributes6.mmObject(), FinancialInstrumentAttributes9.mmObject(), FinancialInstrumentAttributes18.mmObject(), FinancialInstrumentAttributes22.mmObject(),
 						FinancialInstrumentAttributes32.mmObject(), FinancialInstrumentAttributes38.mmObject(), FinancialInstrumentAttributes7.mmObject(), FinancialInstrumentAttributes5.mmObject(),

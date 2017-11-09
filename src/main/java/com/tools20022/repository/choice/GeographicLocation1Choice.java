@@ -19,6 +19,8 @@ package com.tools20022.repository.choice;
 
 import com.tools20022.metamodel.MMChoiceComponent;
 import com.tools20022.metamodel.MMMessageAssociationEnd;
+import com.tools20022.metamodel.MMRegistrationStatus;
+import com.tools20022.repository.GeneratedRepository;
 import com.tools20022.repository.msg.GeographicCoordinates1;
 import com.tools20022.repository.msg.UTMCoordinates1;
 import java.util.Arrays;
@@ -97,7 +99,7 @@ public class GeographicLocation1Choice {
 			componentContext_lazy = () -> GeographicLocation1Choice.mmObject();
 			isDerived = false;
 			xmlTag = "GeogcCordints";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "GeographicCoordinates";
 			definition = "Location on the earth specified by two numbers representing vertical and horizontal position.";
 			maxOccurs = 1;
@@ -141,7 +143,7 @@ public class GeographicLocation1Choice {
 			componentContext_lazy = () -> GeographicLocation1Choice.mmObject();
 			isDerived = false;
 			xmlTag = "UTMCordints";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "UTMCoordinates";
 			definition = "Location on the earth specified by the Universal Transverse Mercator coordinate system, using the WGS84 geodesic system.";
 			maxOccurs = 1;
@@ -154,9 +156,9 @@ public class GeographicLocation1Choice {
 	final static public MMChoiceComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMChoiceComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.choice.GeographicLocation1Choice.mmGeographicCoordinates, com.tools20022.repository.choice.GeographicLocation1Choice.mmUTMCoordinates);
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				messageElement_lazy = () -> Arrays.asList(GeographicLocation1Choice.mmGeographicCoordinates, GeographicLocation1Choice.mmUTMCoordinates);
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "GeographicLocation1Choice";
 				definition = "Geographic location of the ATM specified by geographic coordinates or UTM coordinates.";
 			}

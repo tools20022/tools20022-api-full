@@ -19,7 +19,9 @@ package com.tools20022.repository.codeset;
 
 import com.tools20022.metamodel.MMCode;
 import com.tools20022.metamodel.MMCodeSet;
+import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.codeset.FinancialInstrumentReportingClassificationCode;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -86,7 +88,7 @@ public class EquityInstrumentReportingClassification1Code extends FinancialInstr
 	 */
 	public static final MMCode mmShare = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Share";
 			owner_lazy = () -> EquityInstrumentReportingClassification1Code.mmObject();
 		}
@@ -109,7 +111,7 @@ public class EquityInstrumentReportingClassification1Code extends FinancialInstr
 	 */
 	public static final MMCode mmOther = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Other";
 			owner_lazy = () -> EquityInstrumentReportingClassification1Code.mmObject();
 		}
@@ -132,7 +134,7 @@ public class EquityInstrumentReportingClassification1Code extends FinancialInstr
 	 */
 	public static final MMCode mmElectronicTradedFund = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ElectronicTradedFund";
 			owner_lazy = () -> EquityInstrumentReportingClassification1Code.mmObject();
 		}
@@ -155,7 +157,7 @@ public class EquityInstrumentReportingClassification1Code extends FinancialInstr
 	 */
 	public static final MMCode mmDepositaryReceipt = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "DepositaryReceipt";
 			owner_lazy = () -> EquityInstrumentReportingClassification1Code.mmObject();
 		}
@@ -178,7 +180,7 @@ public class EquityInstrumentReportingClassification1Code extends FinancialInstr
 	 */
 	public static final MMCode mmCertificate = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Certificate";
 			owner_lazy = () -> EquityInstrumentReportingClassification1Code.mmObject();
 		}
@@ -187,13 +189,12 @@ public class EquityInstrumentReportingClassification1Code extends FinancialInstr
 	static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "EquityInstrumentReportingClassification1Code";
 				definition = "Specifies the equity financial instruments.";
-				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.EquityInstrumentReportingClassification1Code.mmShare, com.tools20022.repository.codeset.EquityInstrumentReportingClassification1Code.mmOther,
-						com.tools20022.repository.codeset.EquityInstrumentReportingClassification1Code.mmElectronicTradedFund, com.tools20022.repository.codeset.EquityInstrumentReportingClassification1Code.mmDepositaryReceipt,
-						com.tools20022.repository.codeset.EquityInstrumentReportingClassification1Code.mmCertificate);
+				code_lazy = () -> Arrays.asList(EquityInstrumentReportingClassification1Code.mmShare, EquityInstrumentReportingClassification1Code.mmOther, EquityInstrumentReportingClassification1Code.mmElectronicTradedFund,
+						EquityInstrumentReportingClassification1Code.mmDepositaryReceipt, EquityInstrumentReportingClassification1Code.mmCertificate);
 				trace_lazy = () -> FinancialInstrumentReportingClassificationCode.mmObject();
 			}
 		});

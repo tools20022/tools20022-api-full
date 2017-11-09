@@ -19,7 +19,9 @@ package com.tools20022.repository.codeset;
 
 import com.tools20022.metamodel.MMCode;
 import com.tools20022.metamodel.MMCodeSet;
+import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.codeset.AlgorithmCode;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -98,9 +100,9 @@ public class Algorithm15Code extends AlgorithmCode {
 	 */
 	public static final MMCode mmAES128CBC = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AES128CBC";
-			previousVersion_lazy = () -> com.tools20022.repository.codeset.Algorithm6Code.mmAES128CBC;
+			previousVersion_lazy = () -> Algorithm6Code.mmAES128CBC;
 			owner_lazy = () -> Algorithm15Code.mmObject();
 		}
 	};
@@ -127,9 +129,9 @@ public class Algorithm15Code extends AlgorithmCode {
 	 */
 	public static final MMCode mmDES112CBC = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "DES112CBC";
-			previousVersion_lazy = () -> com.tools20022.repository.codeset.Algorithm6Code.mmDES112CBC;
+			previousVersion_lazy = () -> Algorithm6Code.mmDES112CBC;
 			owner_lazy = () -> Algorithm15Code.mmObject();
 		}
 	};
@@ -151,7 +153,7 @@ public class Algorithm15Code extends AlgorithmCode {
 	 */
 	public static final MMCode mmAES192CBC = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AES192CBC";
 			owner_lazy = () -> Algorithm15Code.mmObject();
 		}
@@ -174,7 +176,7 @@ public class Algorithm15Code extends AlgorithmCode {
 	 */
 	public static final MMCode mmAES256CBC = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AES256CBC";
 			owner_lazy = () -> Algorithm15Code.mmObject();
 		}
@@ -183,14 +185,13 @@ public class Algorithm15Code extends AlgorithmCode {
 	static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
 				example = Arrays.asList("EA2C");
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "Algorithm15Code";
 				definition = "Cryptographic algorithms for encryptions with a symmetric cryptographic key.";
 				previousVersion_lazy = () -> Algorithm6Code.mmObject();
-				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.Algorithm15Code.mmAES128CBC, com.tools20022.repository.codeset.Algorithm15Code.mmDES112CBC, com.tools20022.repository.codeset.Algorithm15Code.mmAES192CBC,
-						com.tools20022.repository.codeset.Algorithm15Code.mmAES256CBC);
+				code_lazy = () -> Arrays.asList(Algorithm15Code.mmAES128CBC, Algorithm15Code.mmDES112CBC, Algorithm15Code.mmAES192CBC, Algorithm15Code.mmAES256CBC);
 				trace_lazy = () -> AlgorithmCode.mmObject();
 			}
 		});

@@ -19,6 +19,8 @@ package com.tools20022.repository.codeset;
 
 import com.tools20022.metamodel.MMCode;
 import com.tools20022.metamodel.MMCodeSet;
+import com.tools20022.metamodel.MMRegistrationStatus;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -27,6 +29,19 @@ import java.util.concurrent.atomic.AtomicReference;
  * <p>
  * <strong>Constant fields:</strong>
  * <ul>
+ * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getDerivation derivation}
+ * =
+ * <ul>
+ * <li>{@linkplain com.tools20022.repository.codeset.AccountStatus2Code
+ * AccountStatus2Code}</li>
+ * <li>{@linkplain com.tools20022.repository.codeset.AccountStatus1Code
+ * AccountStatus1Code}</li>
+ * <li>{@linkplain com.tools20022.repository.codeset.AccountStatus3Code
+ * AccountStatus3Code}</li>
+ * <li>{@linkplain com.tools20022.repository.codeset.AccountStatus4Code
+ * AccountStatus4Code}</li>
+ * </ul>
+ * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getCode code} =
  * <ul>
  * <li>
@@ -44,19 +59,6 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>
  * {@linkplain com.tools20022.repository.codeset.AccountStatusCode#mmPending
  * AccountStatusCode.mmPending}</li>
- * </ul>
- * </li>
- * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getDerivation derivation}
- * =
- * <ul>
- * <li>{@linkplain com.tools20022.repository.codeset.AccountStatus2Code
- * AccountStatus2Code}</li>
- * <li>{@linkplain com.tools20022.repository.codeset.AccountStatus1Code
- * AccountStatus1Code}</li>
- * <li>{@linkplain com.tools20022.repository.codeset.AccountStatus3Code
- * AccountStatus3Code}</li>
- * <li>{@linkplain com.tools20022.repository.codeset.AccountStatus4Code
- * AccountStatus4Code}</li>
  * </ul>
  * </li>
  * <li>
@@ -106,7 +108,7 @@ public class AccountStatusCode {
 	 */
 	public static final MMCode mmEnabled = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "Enabled";
 			definition = "Account can be used for its intended purpose.";
 			owner_lazy = () -> AccountStatusCode.mmObject();
@@ -139,7 +141,7 @@ public class AccountStatusCode {
 	 */
 	public static final MMCode mmDisabled = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "Disabled";
 			definition = "Account cannot be used for its intended purpose, either temporarily or permanently.";
 			owner_lazy = () -> AccountStatusCode.mmObject();
@@ -169,7 +171,7 @@ public class AccountStatusCode {
 	 */
 	public static final MMCode mmDeleted = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "Deleted";
 			definition = "Account cannot be used any longer.";
 			owner_lazy = () -> AccountStatusCode.mmObject();
@@ -203,7 +205,7 @@ public class AccountStatusCode {
 	 */
 	public static final MMCode mmProForma = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "ProForma";
 			definition = "Account is temporary and can be partially used for its intended purpose. The account will be fully available for use when the account servicer has received all relevant documents.";
 			owner_lazy = () -> AccountStatusCode.mmObject();
@@ -233,7 +235,7 @@ public class AccountStatusCode {
 	 */
 	public static final MMCode mmPending = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Pending";
 			definition = "Account change is pending approval.";
 			owner_lazy = () -> AccountStatusCode.mmObject();
@@ -244,13 +246,12 @@ public class AccountStatusCode {
 	static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
 				example = Arrays.asList("ENAB");
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "AccountStatusCode";
 				definition = "Specifies the current state of an account.";
-				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.AccountStatusCode.mmEnabled, com.tools20022.repository.codeset.AccountStatusCode.mmDisabled, com.tools20022.repository.codeset.AccountStatusCode.mmDeleted,
-						com.tools20022.repository.codeset.AccountStatusCode.mmProForma, com.tools20022.repository.codeset.AccountStatusCode.mmPending);
+				code_lazy = () -> Arrays.asList(AccountStatusCode.mmEnabled, AccountStatusCode.mmDisabled, AccountStatusCode.mmDeleted, AccountStatusCode.mmProForma, AccountStatusCode.mmPending);
 				derivation_lazy = () -> Arrays.asList(AccountStatus2Code.mmObject(), AccountStatus1Code.mmObject(), AccountStatus3Code.mmObject(), AccountStatus4Code.mmObject());
 			}
 		});

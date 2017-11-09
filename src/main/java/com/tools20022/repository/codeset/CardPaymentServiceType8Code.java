@@ -19,7 +19,9 @@ package com.tools20022.repository.codeset;
 
 import com.tools20022.metamodel.MMCode;
 import com.tools20022.metamodel.MMCodeSet;
+import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.codeset.CardPaymentServiceTypeCode;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -125,7 +127,7 @@ public class CardPaymentServiceType8Code extends CardPaymentServiceTypeCode {
 	 */
 	public static final MMCode mmAggregation = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Aggregation";
 			owner_lazy = () -> CardPaymentServiceType8Code.mmObject();
 		}
@@ -148,7 +150,7 @@ public class CardPaymentServiceType8Code extends CardPaymentServiceTypeCode {
 	 */
 	public static final MMCode mmCashBack = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CashBack";
 			owner_lazy = () -> CardPaymentServiceType8Code.mmObject();
 		}
@@ -171,7 +173,7 @@ public class CardPaymentServiceType8Code extends CardPaymentServiceTypeCode {
 	 */
 	public static final MMCode mmChosenWithdrawal = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ChosenWithdrawal";
 			owner_lazy = () -> CardPaymentServiceType8Code.mmObject();
 		}
@@ -194,7 +196,7 @@ public class CardPaymentServiceType8Code extends CardPaymentServiceTypeCode {
 	 */
 	public static final MMCode mmDCC = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "DCC";
 			owner_lazy = () -> CardPaymentServiceType8Code.mmObject();
 		}
@@ -217,7 +219,7 @@ public class CardPaymentServiceType8Code extends CardPaymentServiceTypeCode {
 	 */
 	public static final MMCode mmGratuity = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Gratuity";
 			owner_lazy = () -> CardPaymentServiceType8Code.mmObject();
 		}
@@ -240,7 +242,7 @@ public class CardPaymentServiceType8Code extends CardPaymentServiceTypeCode {
 	 */
 	public static final MMCode mmAcceptorInstalment = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AcceptorInstalment";
 			owner_lazy = () -> CardPaymentServiceType8Code.mmObject();
 		}
@@ -263,7 +265,7 @@ public class CardPaymentServiceType8Code extends CardPaymentServiceTypeCode {
 	 */
 	public static final MMCode mmIssuerInstalment = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "IssuerInstalment";
 			owner_lazy = () -> CardPaymentServiceType8Code.mmObject();
 		}
@@ -286,7 +288,7 @@ public class CardPaymentServiceType8Code extends CardPaymentServiceTypeCode {
 	 */
 	public static final MMCode mmLoyalty = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Loyalty";
 			owner_lazy = () -> CardPaymentServiceType8Code.mmObject();
 		}
@@ -309,7 +311,7 @@ public class CardPaymentServiceType8Code extends CardPaymentServiceTypeCode {
 	 */
 	public static final MMCode mmNoShow = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "NoShow";
 			owner_lazy = () -> CardPaymentServiceType8Code.mmObject();
 		}
@@ -332,7 +334,7 @@ public class CardPaymentServiceType8Code extends CardPaymentServiceTypeCode {
 	 */
 	public static final MMCode mmPreAuthorisedWithdrawal = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PreAuthorisedWithdrawal";
 			owner_lazy = () -> CardPaymentServiceType8Code.mmObject();
 		}
@@ -355,7 +357,7 @@ public class CardPaymentServiceType8Code extends CardPaymentServiceTypeCode {
 	 */
 	public static final MMCode mmProfileWithdrawal = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ProfileWithdrawal";
 			owner_lazy = () -> CardPaymentServiceType8Code.mmObject();
 		}
@@ -378,7 +380,7 @@ public class CardPaymentServiceType8Code extends CardPaymentServiceTypeCode {
 	 */
 	public static final MMCode mmPurchaseCorporate = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PurchaseCorporate";
 			owner_lazy = () -> CardPaymentServiceType8Code.mmObject();
 		}
@@ -401,7 +403,7 @@ public class CardPaymentServiceType8Code extends CardPaymentServiceTypeCode {
 	 */
 	public static final MMCode mmRecurringPayment = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "RecurringPayment";
 			owner_lazy = () -> CardPaymentServiceType8Code.mmObject();
 		}
@@ -424,7 +426,7 @@ public class CardPaymentServiceType8Code extends CardPaymentServiceTypeCode {
 	 */
 	public static final MMCode mmSolicitedAvailableFunds = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SolicitedAvailableFunds";
 			owner_lazy = () -> CardPaymentServiceType8Code.mmObject();
 		}
@@ -447,7 +449,7 @@ public class CardPaymentServiceType8Code extends CardPaymentServiceTypeCode {
 	 */
 	public static final MMCode mmStandardWithdrawal = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "StandardWithdrawal";
 			owner_lazy = () -> CardPaymentServiceType8Code.mmObject();
 		}
@@ -470,7 +472,7 @@ public class CardPaymentServiceType8Code extends CardPaymentServiceTypeCode {
 	 */
 	public static final MMCode mmVoiceAuthorisation = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "VoiceAuthorisation";
 			owner_lazy = () -> CardPaymentServiceType8Code.mmObject();
 		}
@@ -493,7 +495,7 @@ public class CardPaymentServiceType8Code extends CardPaymentServiceTypeCode {
 	 */
 	public static final MMCode mmNonRefundable = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "NonRefundable";
 			owner_lazy = () -> CardPaymentServiceType8Code.mmObject();
 		}
@@ -516,7 +518,7 @@ public class CardPaymentServiceType8Code extends CardPaymentServiceTypeCode {
 	 */
 	public static final MMCode mmInstant = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Instant";
 			owner_lazy = () -> CardPaymentServiceType8Code.mmObject();
 		}
@@ -525,19 +527,15 @@ public class CardPaymentServiceType8Code extends CardPaymentServiceTypeCode {
 	static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "CardPaymentServiceType8Code";
 				definition = "Main card service transaction.";
-				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.CardPaymentServiceType8Code.mmAggregation, com.tools20022.repository.codeset.CardPaymentServiceType8Code.mmCashBack,
-						com.tools20022.repository.codeset.CardPaymentServiceType8Code.mmChosenWithdrawal, com.tools20022.repository.codeset.CardPaymentServiceType8Code.mmDCC,
-						com.tools20022.repository.codeset.CardPaymentServiceType8Code.mmGratuity, com.tools20022.repository.codeset.CardPaymentServiceType8Code.mmAcceptorInstalment,
-						com.tools20022.repository.codeset.CardPaymentServiceType8Code.mmIssuerInstalment, com.tools20022.repository.codeset.CardPaymentServiceType8Code.mmLoyalty,
-						com.tools20022.repository.codeset.CardPaymentServiceType8Code.mmNoShow, com.tools20022.repository.codeset.CardPaymentServiceType8Code.mmPreAuthorisedWithdrawal,
-						com.tools20022.repository.codeset.CardPaymentServiceType8Code.mmProfileWithdrawal, com.tools20022.repository.codeset.CardPaymentServiceType8Code.mmPurchaseCorporate,
-						com.tools20022.repository.codeset.CardPaymentServiceType8Code.mmRecurringPayment, com.tools20022.repository.codeset.CardPaymentServiceType8Code.mmSolicitedAvailableFunds,
-						com.tools20022.repository.codeset.CardPaymentServiceType8Code.mmStandardWithdrawal, com.tools20022.repository.codeset.CardPaymentServiceType8Code.mmVoiceAuthorisation,
-						com.tools20022.repository.codeset.CardPaymentServiceType8Code.mmNonRefundable, com.tools20022.repository.codeset.CardPaymentServiceType8Code.mmInstant);
+				code_lazy = () -> Arrays.asList(CardPaymentServiceType8Code.mmAggregation, CardPaymentServiceType8Code.mmCashBack, CardPaymentServiceType8Code.mmChosenWithdrawal, CardPaymentServiceType8Code.mmDCC,
+						CardPaymentServiceType8Code.mmGratuity, CardPaymentServiceType8Code.mmAcceptorInstalment, CardPaymentServiceType8Code.mmIssuerInstalment, CardPaymentServiceType8Code.mmLoyalty, CardPaymentServiceType8Code.mmNoShow,
+						CardPaymentServiceType8Code.mmPreAuthorisedWithdrawal, CardPaymentServiceType8Code.mmProfileWithdrawal, CardPaymentServiceType8Code.mmPurchaseCorporate, CardPaymentServiceType8Code.mmRecurringPayment,
+						CardPaymentServiceType8Code.mmSolicitedAvailableFunds, CardPaymentServiceType8Code.mmStandardWithdrawal, CardPaymentServiceType8Code.mmVoiceAuthorisation, CardPaymentServiceType8Code.mmNonRefundable,
+						CardPaymentServiceType8Code.mmInstant);
 				trace_lazy = () -> CardPaymentServiceTypeCode.mmObject();
 			}
 		});

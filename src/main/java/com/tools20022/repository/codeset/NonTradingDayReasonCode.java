@@ -19,6 +19,8 @@ package com.tools20022.repository.codeset;
 
 import com.tools20022.metamodel.MMCode;
 import com.tools20022.metamodel.MMCodeSet;
+import com.tools20022.metamodel.MMRegistrationStatus;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -27,6 +29,13 @@ import java.util.concurrent.atomic.AtomicReference;
  * <p>
  * <strong>Constant fields:</strong>
  * <ul>
+ * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getDerivation derivation}
+ * =
+ * <ul>
+ * <li>{@linkplain com.tools20022.repository.codeset.NonTradingDayReason1Code
+ * NonTradingDayReason1Code}</li>
+ * </ul>
+ * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getCode code} =
  * <ul>
  * <li>
@@ -47,13 +56,6 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>
  * {@linkplain com.tools20022.repository.codeset.NonTradingDayReasonCode#mmWeekend
  * NonTradingDayReasonCode.mmWeekend}</li>
- * </ul>
- * </li>
- * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getDerivation derivation}
- * =
- * <ul>
- * <li>{@linkplain com.tools20022.repository.codeset.NonTradingDayReason1Code
- * NonTradingDayReason1Code}</li>
  * </ul>
  * </li>
  * <li>
@@ -100,7 +102,7 @@ public class NonTradingDayReasonCode {
 	 */
 	public static final MMCode mmOther = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Other";
 			definition = "Other reasons a day is a non-trading day e.g. technical fault, company specific non-trading day not known in advance";
 			owner_lazy = () -> NonTradingDayReasonCode.mmObject();
@@ -131,7 +133,7 @@ public class NonTradingDayReasonCode {
 	 */
 	public static final MMCode mmTradingHoliday = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "TradingHoliday";
 			definition = "The date is a full day trading holiday with no trades performed.";
 			owner_lazy = () -> NonTradingDayReasonCode.mmObject();
@@ -162,7 +164,7 @@ public class NonTradingDayReasonCode {
 	 */
 	public static final MMCode mmHalfDay = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "HalfDay";
 			definition = "Trading venue was open for an amount of time, up to half the day.";
 			owner_lazy = () -> NonTradingDayReasonCode.mmObject();
@@ -192,7 +194,7 @@ public class NonTradingDayReasonCode {
 	 */
 	public static final MMCode mmBankHoliday = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "BankHoliday";
 			definition = "Date is a bank holiday.";
 			owner_lazy = () -> NonTradingDayReasonCode.mmObject();
@@ -222,7 +224,7 @@ public class NonTradingDayReasonCode {
 	 */
 	public static final MMCode mmPublicHoliday = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PublicHoliday";
 			definition = "Date is a public holiday.";
 			owner_lazy = () -> NonTradingDayReasonCode.mmObject();
@@ -252,7 +254,7 @@ public class NonTradingDayReasonCode {
 	 */
 	public static final MMCode mmWeekend = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Weekend";
 			definition = "Date being reported falls during the weekend.";
 			owner_lazy = () -> NonTradingDayReasonCode.mmObject();
@@ -263,13 +265,12 @@ public class NonTradingDayReasonCode {
 	static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "NonTradingDayReasonCode";
 				definition = "Specifies the reason capturing a non trading day.";
-				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.NonTradingDayReasonCode.mmOther, com.tools20022.repository.codeset.NonTradingDayReasonCode.mmTradingHoliday,
-						com.tools20022.repository.codeset.NonTradingDayReasonCode.mmHalfDay, com.tools20022.repository.codeset.NonTradingDayReasonCode.mmBankHoliday,
-						com.tools20022.repository.codeset.NonTradingDayReasonCode.mmPublicHoliday, com.tools20022.repository.codeset.NonTradingDayReasonCode.mmWeekend);
+				code_lazy = () -> Arrays.asList(NonTradingDayReasonCode.mmOther, NonTradingDayReasonCode.mmTradingHoliday, NonTradingDayReasonCode.mmHalfDay, NonTradingDayReasonCode.mmBankHoliday, NonTradingDayReasonCode.mmPublicHoliday,
+						NonTradingDayReasonCode.mmWeekend);
 				derivation_lazy = () -> Arrays.asList(NonTradingDayReason1Code.mmObject());
 			}
 		});

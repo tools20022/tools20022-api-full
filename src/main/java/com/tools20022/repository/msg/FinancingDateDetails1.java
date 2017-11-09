@@ -19,8 +19,11 @@ package com.tools20022.repository.msg;
 
 import com.tools20022.metamodel.MMMessageAttribute;
 import com.tools20022.metamodel.MMMessageComponent;
+import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.datatype.ISODate;
 import com.tools20022.repository.entity.BookEntry;
+import com.tools20022.repository.entity.Entry;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.List;
@@ -104,11 +107,11 @@ public class FinancingDateDetails1 {
 	 */
 	public static final MMMessageAttribute mmBookDate = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Entry.mmEntryDate;
+			businessElementTrace_lazy = () -> Entry.mmEntryDate;
 			componentContext_lazy = () -> FinancingDateDetails1.mmObject();
 			isDerived = false;
 			xmlTag = "BookDt";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "BookDate";
 			definition = "Date on which the financing transaction has been booked in an account.";
 			minOccurs = 0;
@@ -150,11 +153,11 @@ public class FinancingDateDetails1 {
 	 */
 	public static final MMMessageAttribute mmCreditDate = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Entry.mmEntryDate;
+			businessElementTrace_lazy = () -> Entry.mmEntryDate;
 			componentContext_lazy = () -> FinancingDateDetails1.mmObject();
 			isDerived = false;
 			xmlTag = "CdtDt";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CreditDate";
 			definition = "Date on which a financed amount has been credited.";
 			maxOccurs = 1;
@@ -197,11 +200,11 @@ public class FinancingDateDetails1 {
 	 */
 	public static final MMMessageAttribute mmDebitDate = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Entry.mmEntryDate;
+			businessElementTrace_lazy = () -> Entry.mmEntryDate;
 			componentContext_lazy = () -> FinancingDateDetails1.mmObject();
 			isDerived = false;
 			xmlTag = "DbtDt";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "DebitDate";
 			definition = "Date on which a financed amount has been debited.";
 			maxOccurs = 1;
@@ -213,11 +216,10 @@ public class FinancingDateDetails1 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.FinancingDateDetails1.mmBookDate, com.tools20022.repository.msg.FinancingDateDetails1.mmCreditDate,
-						com.tools20022.repository.msg.FinancingDateDetails1.mmDebitDate);
+				messageElement_lazy = () -> Arrays.asList(FinancingDateDetails1.mmBookDate, FinancingDateDetails1.mmCreditDate, FinancingDateDetails1.mmDebitDate);
 				trace_lazy = () -> BookEntry.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "FinancingDateDetails1";
 				definition = "Includes a set of dates (e.g. credit date) related to settlement of the financing amount.";
 			}

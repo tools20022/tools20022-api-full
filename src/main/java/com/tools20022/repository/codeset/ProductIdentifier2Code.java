@@ -19,7 +19,9 @@ package com.tools20022.repository.codeset;
 
 import com.tools20022.metamodel.MMCode;
 import com.tools20022.metamodel.MMCodeSet;
+import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.codeset.ProductIdentifierCode;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -110,7 +112,7 @@ public class ProductIdentifier2Code extends ProductIdentifierCode {
 	 */
 	public static final MMCode mmBuyersItemNumber = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "BuyersItemNumber";
 			owner_lazy = () -> ProductIdentifier2Code.mmObject();
 		}
@@ -133,7 +135,7 @@ public class ProductIdentifier2Code extends ProductIdentifierCode {
 	 */
 	public static final MMCode mmCommercialDescriptionCodeName = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CommercialDescriptionCodeName";
 			owner_lazy = () -> ProductIdentifier2Code.mmObject();
 		}
@@ -156,7 +158,7 @@ public class ProductIdentifier2Code extends ProductIdentifierCode {
 	 */
 	public static final MMCode mmEAN = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "EAN";
 			owner_lazy = () -> ProductIdentifier2Code.mmObject();
 		}
@@ -179,7 +181,7 @@ public class ProductIdentifier2Code extends ProductIdentifierCode {
 	 */
 	public static final MMCode mmHarmonizedTariffCodeName = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "HarmonizedTariffCodeName";
 			owner_lazy = () -> ProductIdentifier2Code.mmObject();
 		}
@@ -202,7 +204,7 @@ public class ProductIdentifier2Code extends ProductIdentifierCode {
 	 */
 	public static final MMCode mmManufacturersItemNumber = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ManufacturersItemNumber";
 			owner_lazy = () -> ProductIdentifier2Code.mmObject();
 		}
@@ -225,7 +227,7 @@ public class ProductIdentifier2Code extends ProductIdentifierCode {
 	 */
 	public static final MMCode mmModelNumber = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ModelNumber";
 			owner_lazy = () -> ProductIdentifier2Code.mmObject();
 		}
@@ -248,7 +250,7 @@ public class ProductIdentifier2Code extends ProductIdentifierCode {
 	 */
 	public static final MMCode mmPartNumber = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PartNumber";
 			owner_lazy = () -> ProductIdentifier2Code.mmObject();
 		}
@@ -271,7 +273,7 @@ public class ProductIdentifier2Code extends ProductIdentifierCode {
 	 */
 	public static final MMCode mmQuotaCategory = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "QuotaCategory";
 			owner_lazy = () -> ProductIdentifier2Code.mmObject();
 		}
@@ -294,7 +296,7 @@ public class ProductIdentifier2Code extends ProductIdentifierCode {
 	 */
 	public static final MMCode mmStyleNumber = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "StyleNumber";
 			owner_lazy = () -> ProductIdentifier2Code.mmObject();
 		}
@@ -317,7 +319,7 @@ public class ProductIdentifier2Code extends ProductIdentifierCode {
 	 */
 	public static final MMCode mmSuppliersItemNumber = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SuppliersItemNumber";
 			owner_lazy = () -> ProductIdentifier2Code.mmObject();
 		}
@@ -340,7 +342,7 @@ public class ProductIdentifier2Code extends ProductIdentifierCode {
 	 */
 	public static final MMCode mmUniversalProductCode = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "UniversalProductCode";
 			owner_lazy = () -> ProductIdentifier2Code.mmObject();
 		}
@@ -349,17 +351,14 @@ public class ProductIdentifier2Code extends ProductIdentifierCode {
 	static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
 				example = Arrays.asList("BINR");
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "ProductIdentifier2Code";
 				definition = "Specifies the type of identifier of a product.";
-				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.ProductIdentifier2Code.mmBuyersItemNumber, com.tools20022.repository.codeset.ProductIdentifier2Code.mmCommercialDescriptionCodeName,
-						com.tools20022.repository.codeset.ProductIdentifier2Code.mmEAN, com.tools20022.repository.codeset.ProductIdentifier2Code.mmHarmonizedTariffCodeName,
-						com.tools20022.repository.codeset.ProductIdentifier2Code.mmManufacturersItemNumber, com.tools20022.repository.codeset.ProductIdentifier2Code.mmModelNumber,
-						com.tools20022.repository.codeset.ProductIdentifier2Code.mmPartNumber, com.tools20022.repository.codeset.ProductIdentifier2Code.mmQuotaCategory,
-						com.tools20022.repository.codeset.ProductIdentifier2Code.mmStyleNumber, com.tools20022.repository.codeset.ProductIdentifier2Code.mmSuppliersItemNumber,
-						com.tools20022.repository.codeset.ProductIdentifier2Code.mmUniversalProductCode);
+				code_lazy = () -> Arrays.asList(ProductIdentifier2Code.mmBuyersItemNumber, ProductIdentifier2Code.mmCommercialDescriptionCodeName, ProductIdentifier2Code.mmEAN, ProductIdentifier2Code.mmHarmonizedTariffCodeName,
+						ProductIdentifier2Code.mmManufacturersItemNumber, ProductIdentifier2Code.mmModelNumber, ProductIdentifier2Code.mmPartNumber, ProductIdentifier2Code.mmQuotaCategory, ProductIdentifier2Code.mmStyleNumber,
+						ProductIdentifier2Code.mmSuppliersItemNumber, ProductIdentifier2Code.mmUniversalProductCode);
 				trace_lazy = () -> ProductIdentifierCode.mmObject();
 			}
 		});

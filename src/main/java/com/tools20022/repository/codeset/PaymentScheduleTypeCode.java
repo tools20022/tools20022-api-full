@@ -19,6 +19,8 @@ package com.tools20022.repository.codeset;
 
 import com.tools20022.metamodel.MMCode;
 import com.tools20022.metamodel.MMCodeSet;
+import com.tools20022.metamodel.MMRegistrationStatus;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -27,6 +29,13 @@ import java.util.concurrent.atomic.AtomicReference;
  * <p>
  * <strong>Constant fields:</strong>
  * <ul>
+ * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getDerivation derivation}
+ * =
+ * <ul>
+ * <li>{@linkplain com.tools20022.repository.codeset.PaymentScheduleType1Code
+ * PaymentScheduleType1Code}</li>
+ * </ul>
+ * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getCode code} =
  * <ul>
  * <li>
@@ -35,13 +44,6 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>
  * {@linkplain com.tools20022.repository.codeset.PaymentScheduleTypeCode#mmEstimated
  * PaymentScheduleTypeCode.mmEstimated}</li>
- * </ul>
- * </li>
- * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getDerivation derivation}
- * =
- * <ul>
- * <li>{@linkplain com.tools20022.repository.codeset.PaymentScheduleType1Code
- * PaymentScheduleType1Code}</li>
  * </ul>
  * </li>
  * <li>
@@ -85,7 +87,7 @@ public class PaymentScheduleTypeCode {
 	 */
 	public static final MMCode mmContract = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Contract";
 			definition = "Payment schedule is defined as per contract.";
 			owner_lazy = () -> PaymentScheduleTypeCode.mmObject();
@@ -115,7 +117,7 @@ public class PaymentScheduleTypeCode {
 	 */
 	public static final MMCode mmEstimated = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Estimated";
 			definition = "Payment schedule is estimated.";
 			owner_lazy = () -> PaymentScheduleTypeCode.mmObject();
@@ -126,11 +128,11 @@ public class PaymentScheduleTypeCode {
 	static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "PaymentScheduleTypeCode";
 				definition = "Specifies a payment schedule type.";
-				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.PaymentScheduleTypeCode.mmContract, com.tools20022.repository.codeset.PaymentScheduleTypeCode.mmEstimated);
+				code_lazy = () -> Arrays.asList(PaymentScheduleTypeCode.mmContract, PaymentScheduleTypeCode.mmEstimated);
 				derivation_lazy = () -> Arrays.asList(PaymentScheduleType1Code.mmObject());
 			}
 		});

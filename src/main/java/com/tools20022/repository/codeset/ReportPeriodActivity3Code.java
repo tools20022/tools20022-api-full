@@ -19,7 +19,9 @@ package com.tools20022.repository.codeset;
 
 import com.tools20022.metamodel.MMCode;
 import com.tools20022.metamodel.MMCodeSet;
+import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.codeset.ReportPeriodActivityCode;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -78,7 +80,7 @@ public class ReportPeriodActivity3Code extends ReportPeriodActivityCode {
 	 */
 	public static final MMCode mmNoTransaction = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "NoTransaction";
 			owner_lazy = () -> ReportPeriodActivity3Code.mmObject();
 		}
@@ -101,7 +103,7 @@ public class ReportPeriodActivity3Code extends ReportPeriodActivityCode {
 	 */
 	public static final MMCode mmNoReportFromAgent = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "NoReportFromAgent";
 			owner_lazy = () -> ReportPeriodActivity3Code.mmObject();
 		}
@@ -110,11 +112,11 @@ public class ReportPeriodActivity3Code extends ReportPeriodActivityCode {
 	static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "ReportPeriodActivity3Code";
 				definition = "Specifies the type of report activity for a specific reporting period.";
-				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.ReportPeriodActivity3Code.mmNoTransaction, com.tools20022.repository.codeset.ReportPeriodActivity3Code.mmNoReportFromAgent);
+				code_lazy = () -> Arrays.asList(ReportPeriodActivity3Code.mmNoTransaction, ReportPeriodActivity3Code.mmNoReportFromAgent);
 				trace_lazy = () -> ReportPeriodActivityCode.mmObject();
 			}
 		});

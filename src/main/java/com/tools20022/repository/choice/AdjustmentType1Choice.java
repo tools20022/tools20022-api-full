@@ -19,9 +19,11 @@ package com.tools20022.repository.choice;
 
 import com.tools20022.metamodel.MMChoiceComponent;
 import com.tools20022.metamodel.MMMessageAttribute;
+import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.codeset.AdjustmentType2Code;
 import com.tools20022.repository.datatype.Max35Text;
 import com.tools20022.repository.entity.Adjustment;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -104,11 +106,11 @@ public class AdjustmentType1Choice {
 	 */
 	public static final MMMessageAttribute mmType = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Adjustment.mmType;
+			businessElementTrace_lazy = () -> Adjustment.mmType;
 			componentContext_lazy = () -> AdjustmentType1Choice.mmObject();
 			isDerived = false;
 			xmlTag = "Tp";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Type";
 			definition = "Specifies the type of adjustment applied to the amount of goods/services by means of a code.";
 			maxOccurs = 1;
@@ -152,11 +154,11 @@ public class AdjustmentType1Choice {
 	 */
 	public static final MMMessageAttribute mmOtherAdjustmentType = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Adjustment.mmType;
+			businessElementTrace_lazy = () -> Adjustment.mmType;
 			componentContext_lazy = () -> AdjustmentType1Choice.mmObject();
 			isDerived = false;
 			xmlTag = "OthrAdjstmntTp";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "OtherAdjustmentType";
 			definition = "Specifies a type of adjustment not present in the code list.";
 			maxOccurs = 1;
@@ -168,10 +170,10 @@ public class AdjustmentType1Choice {
 	final static public MMChoiceComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMChoiceComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.choice.AdjustmentType1Choice.mmType, com.tools20022.repository.choice.AdjustmentType1Choice.mmOtherAdjustmentType);
+				messageElement_lazy = () -> Arrays.asList(AdjustmentType1Choice.mmType, AdjustmentType1Choice.mmOtherAdjustmentType);
 				trace_lazy = () -> Adjustment.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "AdjustmentType1Choice";
 				definition = "Specifies the type of adjustment applied to the amount of goods/services by means of a code or free text.";
 			}

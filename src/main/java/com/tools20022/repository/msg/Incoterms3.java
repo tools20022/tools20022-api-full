@@ -20,9 +20,11 @@ package com.tools20022.repository.msg;
 import com.tools20022.metamodel.MMMessageAssociationEnd;
 import com.tools20022.metamodel.MMMessageAttribute;
 import com.tools20022.metamodel.MMMessageComponent;
+import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.choice.Incoterms4Choice;
 import com.tools20022.repository.datatype.Max35Text;
 import com.tools20022.repository.entity.Incoterms;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -107,14 +109,14 @@ public class Incoterms3 {
 	 */
 	public static final MMMessageAssociationEnd mmIncotermsCode = new MMMessageAssociationEnd() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Incoterms.mmCode;
+			businessElementTrace_lazy = () -> Incoterms.mmCode;
 			componentContext_lazy = () -> Incoterms3.mmObject();
 			isDerived = false;
 			xmlTag = "IncotrmsCd";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "IncotermsCode";
 			definition = "Specifies the Incoterms.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.Incoterms4.mmIncotermsCode);
+			nextVersions_lazy = () -> Arrays.asList(Incoterms4.mmIncotermsCode);
 			maxOccurs = 1;
 			minOccurs = 1;
 			isComposite = true;
@@ -166,14 +168,14 @@ public class Incoterms3 {
 	 */
 	public static final MMMessageAttribute mmLocation = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Incoterms.mmLocation;
+			businessElementTrace_lazy = () -> Incoterms.mmLocation;
 			componentContext_lazy = () -> Incoterms3.mmObject();
 			isDerived = false;
 			xmlTag = "Lctn";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Location";
 			definition = "Location where the Incoterms are actioned. Reference UN/ECE Recommendation 16 - LOCODE - Code for Trade and Transport Locations (www.unece.org/cefact/recommendations).";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.Incoterms4.mmLocation);
+			nextVersions_lazy = () -> Arrays.asList(Incoterms4.mmLocation);
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> Max35Text.mmObject();
@@ -183,10 +185,10 @@ public class Incoterms3 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.Incoterms3.mmIncotermsCode, com.tools20022.repository.msg.Incoterms3.mmLocation);
+				messageElement_lazy = () -> Arrays.asList(Incoterms3.mmIncotermsCode, Incoterms3.mmLocation);
 				trace_lazy = () -> Incoterms.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "Incoterms3";
 				definition = "Specifies the applicable Incoterm and associated location.";
 				nextVersions_lazy = () -> Arrays.asList(Incoterms4.mmObject());

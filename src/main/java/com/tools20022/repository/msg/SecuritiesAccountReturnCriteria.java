@@ -19,7 +19,9 @@ package com.tools20022.repository.msg;
 
 import com.tools20022.metamodel.MMMessageAttribute;
 import com.tools20022.metamodel.MMMessageComponent;
+import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.datatype.RequestedIndicator;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -117,7 +119,7 @@ public class SecuritiesAccountReturnCriteria {
 			componentContext_lazy = () -> SecuritiesAccountReturnCriteria.mmObject();
 			isDerived = false;
 			xmlTag = "AcctId";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AccountIdentification";
 			definition = "Indicates whether the identification of the account is requested.";
 			maxOccurs = 1;
@@ -162,7 +164,7 @@ public class SecuritiesAccountReturnCriteria {
 			componentContext_lazy = () -> SecuritiesAccountReturnCriteria.mmObject();
 			isDerived = false;
 			xmlTag = "PtyId";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PartyIdentification";
 			definition = "Indicates whether the identification of the party owning the account is requested.";
 			maxOccurs = 1;
@@ -206,7 +208,7 @@ public class SecuritiesAccountReturnCriteria {
 			componentContext_lazy = () -> SecuritiesAccountReturnCriteria.mmObject();
 			isDerived = false;
 			xmlTag = "PtyTp";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PartyType";
 			definition = "Indicates whether the type of the party owning the account is requested.";
 			maxOccurs = 1;
@@ -248,7 +250,7 @@ public class SecuritiesAccountReturnCriteria {
 			componentContext_lazy = () -> SecuritiesAccountReturnCriteria.mmObject();
 			isDerived = false;
 			xmlTag = "AcctSvcr";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AccountServicer";
 			definition = "Indicates whether the account servicer is requested.";
 			maxOccurs = 1;
@@ -290,7 +292,7 @@ public class SecuritiesAccountReturnCriteria {
 			componentContext_lazy = () -> SecuritiesAccountReturnCriteria.mmObject();
 			isDerived = false;
 			xmlTag = "AcctTp";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AccountType";
 			definition = "Indicates whether the account type is requested.";
 			maxOccurs = 1;
@@ -333,7 +335,7 @@ public class SecuritiesAccountReturnCriteria {
 			componentContext_lazy = () -> SecuritiesAccountReturnCriteria.mmObject();
 			isDerived = false;
 			xmlTag = "OpngDt";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "OpeningDate";
 			definition = "Indicates whether the opening date for the account is requested.";
 			maxOccurs = 1;
@@ -376,7 +378,7 @@ public class SecuritiesAccountReturnCriteria {
 			componentContext_lazy = () -> SecuritiesAccountReturnCriteria.mmObject();
 			isDerived = false;
 			xmlTag = "ClsgDt";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ClosingDate";
 			definition = "Indicates whether the closing date for the account is requested.";
 			maxOccurs = 1;
@@ -421,7 +423,7 @@ public class SecuritiesAccountReturnCriteria {
 			componentContext_lazy = () -> SecuritiesAccountReturnCriteria.mmObject();
 			isDerived = false;
 			xmlTag = "EndInvstrFlg";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "EndInvestorFlag";
 			definition = "Specifies information to identify securities accounts where allocation instructions are posted.";
 			maxOccurs = 1;
@@ -464,7 +466,7 @@ public class SecuritiesAccountReturnCriteria {
 			componentContext_lazy = () -> SecuritiesAccountReturnCriteria.mmObject();
 			isDerived = false;
 			xmlTag = "PricgSchme";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PricingScheme";
 			definition = "Defines how the price is applied to the securities account.";
 			maxOccurs = 1;
@@ -476,13 +478,11 @@ public class SecuritiesAccountReturnCriteria {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.SecuritiesAccountReturnCriteria.mmAccountIdentification, com.tools20022.repository.msg.SecuritiesAccountReturnCriteria.mmPartyIdentification,
-						com.tools20022.repository.msg.SecuritiesAccountReturnCriteria.mmPartyType, com.tools20022.repository.msg.SecuritiesAccountReturnCriteria.mmAccountServicer,
-						com.tools20022.repository.msg.SecuritiesAccountReturnCriteria.mmAccountType, com.tools20022.repository.msg.SecuritiesAccountReturnCriteria.mmOpeningDate,
-						com.tools20022.repository.msg.SecuritiesAccountReturnCriteria.mmClosingDate, com.tools20022.repository.msg.SecuritiesAccountReturnCriteria.mmEndInvestorFlag,
-						com.tools20022.repository.msg.SecuritiesAccountReturnCriteria.mmPricingScheme);
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+				messageElement_lazy = () -> Arrays.asList(SecuritiesAccountReturnCriteria.mmAccountIdentification, SecuritiesAccountReturnCriteria.mmPartyIdentification, SecuritiesAccountReturnCriteria.mmPartyType,
+						SecuritiesAccountReturnCriteria.mmAccountServicer, SecuritiesAccountReturnCriteria.mmAccountType, SecuritiesAccountReturnCriteria.mmOpeningDate, SecuritiesAccountReturnCriteria.mmClosingDate,
+						SecuritiesAccountReturnCriteria.mmEndInvestorFlag, SecuritiesAccountReturnCriteria.mmPricingScheme);
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 				name = "SecuritiesAccountReturnCriteria";
 				definition = "Return criteria for information to be returned in the report deriving from a query about securities account reference data. ";
 			}

@@ -19,8 +19,13 @@ package com.tools20022.repository.msg;
 
 import com.tools20022.metamodel.MMMessageAttribute;
 import com.tools20022.metamodel.MMMessageComponent;
+import com.tools20022.metamodel.MMRegistrationStatus;
+import com.tools20022.repository.area.tsmt.DataSetSubmissionV03;
+import com.tools20022.repository.area.tsmt.DataSetSubmissionV04;
+import com.tools20022.repository.area.tsmt.DataSetSubmissionV05;
 import com.tools20022.repository.datatype.Max35Text;
 import com.tools20022.repository.datatype.YesNoIndicator;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -120,7 +125,7 @@ public class DataSetSubmissionReferences3 {
 			componentContext_lazy = () -> DataSetSubmissionReferences3.mmObject();
 			isDerived = false;
 			xmlTag = "TxId";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "TransactionIdentification";
 			definition = "Unique identification assigned by the matching application to the transaction.\nThis identification is to be used in any communication between the parties.";
 			maxOccurs = 1;
@@ -163,7 +168,7 @@ public class DataSetSubmissionReferences3 {
 			componentContext_lazy = () -> DataSetSubmissionReferences3.mmObject();
 			isDerived = false;
 			xmlTag = "PurchsOrdrRef";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PurchaseOrderReference";
 			definition = "Reference to the purchase order of the underlying transaction.";
 			maxOccurs = 1;
@@ -207,7 +212,7 @@ public class DataSetSubmissionReferences3 {
 			componentContext_lazy = () -> DataSetSubmissionReferences3.mmObject();
 			isDerived = false;
 			xmlTag = "SubmitrTxRef";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SubmitterTransactionReference";
 			definition = "Provides reference to the transaction for the financial institution that submits the data set.";
 			maxOccurs = 1;
@@ -253,7 +258,7 @@ public class DataSetSubmissionReferences3 {
 			componentContext_lazy = () -> DataSetSubmissionReferences3.mmObject();
 			isDerived = false;
 			xmlTag = "ForcdMtch";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ForcedMatch";
 			definition = "Specifies that this message should force the matching application to match all data sets it has received so far for the transaction identified by the transaction identification.";
 			maxOccurs = 1;
@@ -265,12 +270,11 @@ public class DataSetSubmissionReferences3 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.DataSetSubmissionReferences3.mmTransactionIdentification, com.tools20022.repository.msg.DataSetSubmissionReferences3.mmPurchaseOrderReference,
-						com.tools20022.repository.msg.DataSetSubmissionReferences3.mmSubmitterTransactionReference, com.tools20022.repository.msg.DataSetSubmissionReferences3.mmForcedMatch);
-				messageBuildingBlock_lazy = () -> Arrays.asList(com.tools20022.repository.area.tsmt.DataSetSubmissionV03.mmRelatedTransactionReferences,
-						com.tools20022.repository.area.tsmt.DataSetSubmissionV04.mmRelatedTransactionReferences, com.tools20022.repository.area.tsmt.DataSetSubmissionV05.mmRelatedTransactionReferences);
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				messageElement_lazy = () -> Arrays.asList(DataSetSubmissionReferences3.mmTransactionIdentification, DataSetSubmissionReferences3.mmPurchaseOrderReference, DataSetSubmissionReferences3.mmSubmitterTransactionReference,
+						DataSetSubmissionReferences3.mmForcedMatch);
+				messageBuildingBlock_lazy = () -> Arrays.asList(DataSetSubmissionV03.mmRelatedTransactionReferences, DataSetSubmissionV04.mmRelatedTransactionReferences, DataSetSubmissionV05.mmRelatedTransactionReferences);
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "DataSetSubmissionReferences3";
 				definition = "Provides references to the submitted data set both for the matching application and for the user.";
 			}

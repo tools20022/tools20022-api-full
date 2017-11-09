@@ -20,7 +20,9 @@ package com.tools20022.repository.choice;
 import com.tools20022.metamodel.MMChoiceComponent;
 import com.tools20022.metamodel.MMMessageAssociationEnd;
 import com.tools20022.metamodel.MMMessageAttribute;
+import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.codeset.NoReasonCode;
+import com.tools20022.repository.GeneratedRepository;
 import com.tools20022.repository.msg.ClosurePendingStatusReason1;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
@@ -105,10 +107,10 @@ public class ClosurePendingStatusReason1Choice {
 			componentContext_lazy = () -> ClosurePendingStatusReason1Choice.mmObject();
 			isDerived = false;
 			xmlTag = "NoSpcfdRsn";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "NoSpecifiedReason";
 			definition = "There is no reason available or to report for the closure pending status.";
-			previousVersion_lazy = () -> com.tools20022.repository.choice.ClosedStatusReason1Choice.mmNoSpecifiedReason;
+			previousVersion_lazy = () -> ClosedStatusReason1Choice.mmNoSpecifiedReason;
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> NoReasonCode.mmObject();
@@ -152,10 +154,10 @@ public class ClosurePendingStatusReason1Choice {
 			componentContext_lazy = () -> ClosurePendingStatusReason1Choice.mmObject();
 			isDerived = false;
 			xmlTag = "Rsn";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Reason";
 			definition = "Reason for the closure pending status.";
-			previousVersion_lazy = () -> com.tools20022.repository.choice.ClosedStatusReason1Choice.mmReason;
+			previousVersion_lazy = () -> ClosedStatusReason1Choice.mmReason;
 			minOccurs = 1;
 			isComposite = true;
 			type_lazy = () -> ClosurePendingStatusReason1.mmObject();
@@ -165,9 +167,9 @@ public class ClosurePendingStatusReason1Choice {
 	final static public MMChoiceComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMChoiceComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.choice.ClosurePendingStatusReason1Choice.mmNoSpecifiedReason, com.tools20022.repository.choice.ClosurePendingStatusReason1Choice.mmReason);
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				messageElement_lazy = () -> Arrays.asList(ClosurePendingStatusReason1Choice.mmNoSpecifiedReason, ClosurePendingStatusReason1Choice.mmReason);
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "ClosurePendingStatusReason1Choice";
 				definition = "Choice of formats for a closure pending status reason.";
 				previousVersion_lazy = () -> ClosedStatusReason1Choice.mmObject();

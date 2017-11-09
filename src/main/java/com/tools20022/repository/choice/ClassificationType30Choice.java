@@ -19,8 +19,10 @@ package com.tools20022.repository.choice;
 
 import com.tools20022.metamodel.MMChoiceComponent;
 import com.tools20022.metamodel.MMMessageAttribute;
+import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.datatype.CFIIdentifier;
 import com.tools20022.repository.entity.AssetClassification;
+import com.tools20022.repository.GeneratedRepository;
 import com.tools20022.repository.msg.GenericIdentification36;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
@@ -114,14 +116,14 @@ public class ClassificationType30Choice {
 	 */
 	public static final MMMessageAttribute mmClassificationFinancialInstrument = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.AssetClassification.mmClassificationType;
+			businessElementTrace_lazy = () -> AssetClassification.mmClassificationType;
 			componentContext_lazy = () -> ClassificationType30Choice.mmObject();
 			isDerived = false;
 			xmlTag = "ClssfctnFinInstrm";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ClassificationFinancialInstrument";
 			definition = "ISO 10962 Classification of Financial Instrument (CFI)";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.choice.ClassificationType32Choice.mmClassificationFinancialInstrument);
+			nextVersions_lazy = () -> Arrays.asList(ClassificationType32Choice.mmClassificationFinancialInstrument);
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> CFIIdentifier.mmObject();
@@ -171,14 +173,14 @@ public class ClassificationType30Choice {
 	 */
 	public static final MMMessageAttribute mmAlternateClassification = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.AssetClassification.mmClassificationType;
+			businessElementTrace_lazy = () -> AssetClassification.mmClassificationType;
 			componentContext_lazy = () -> ClassificationType30Choice.mmObject();
 			isDerived = false;
 			xmlTag = "AltrnClssfctn";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AlternateClassification";
 			definition = "Proprietary classification of financial instrument.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.choice.ClassificationType32Choice.mmAlternateClassification);
+			nextVersions_lazy = () -> Arrays.asList(ClassificationType32Choice.mmAlternateClassification);
 			maxOccurs = 1;
 			minOccurs = 1;
 			complexType_lazy = () -> GenericIdentification36.mmObject();
@@ -188,11 +190,10 @@ public class ClassificationType30Choice {
 	final static public MMChoiceComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMChoiceComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.choice.ClassificationType30Choice.mmClassificationFinancialInstrument,
-						com.tools20022.repository.choice.ClassificationType30Choice.mmAlternateClassification);
+				messageElement_lazy = () -> Arrays.asList(ClassificationType30Choice.mmClassificationFinancialInstrument, ClassificationType30Choice.mmAlternateClassification);
 				trace_lazy = () -> AssetClassification.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "ClassificationType30Choice";
 				definition = "Choice of format for the classification.";
 				nextVersions_lazy = () -> Arrays.asList(ClassificationType32Choice.mmObject());

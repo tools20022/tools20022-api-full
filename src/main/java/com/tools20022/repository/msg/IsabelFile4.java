@@ -19,9 +19,11 @@ package com.tools20022.repository.msg;
 
 import com.tools20022.metamodel.MMMessageAttribute;
 import com.tools20022.metamodel.MMMessageComponent;
+import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.datatype.Max100AlphaNumericUnderscoreText;
 import com.tools20022.repository.datatype.Max16Text;
 import com.tools20022.repository.datatype.Max256Text;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -92,7 +94,7 @@ public class IsabelFile4 {
 			componentContext_lazy = () -> IsabelFile4.mmObject();
 			isDerived = false;
 			xmlTag = "Frmt";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Format";
 			definition = "Format of the file.";
 			maxOccurs = 1;
@@ -133,7 +135,7 @@ public class IsabelFile4 {
 			componentContext_lazy = () -> IsabelFile4.mmObject();
 			isDerived = false;
 			xmlTag = "Nm";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Name";
 			definition = "Name of the mime file.";
 			maxOccurs = 1;
@@ -173,7 +175,7 @@ public class IsabelFile4 {
 			componentContext_lazy = () -> IsabelFile4.mmObject();
 			isDerived = false;
 			xmlTag = "MIMETp";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "MIMEType";
 			definition = "Type of the mime file.";
 			maxOccurs = 1;
@@ -185,9 +187,9 @@ public class IsabelFile4 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.IsabelFile4.mmFormat, com.tools20022.repository.msg.IsabelFile4.mmName, com.tools20022.repository.msg.IsabelFile4.mmMIMEType);
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+				messageElement_lazy = () -> Arrays.asList(IsabelFile4.mmFormat, IsabelFile4.mmName, IsabelFile4.mmMIMEType);
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 				name = "IsabelFile4";
 				definition = "Specifies the parameters for an Isabel reporting file.";
 			}

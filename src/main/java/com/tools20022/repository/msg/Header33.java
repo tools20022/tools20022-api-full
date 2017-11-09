@@ -19,10 +19,13 @@ package com.tools20022.repository.msg;
 
 import com.tools20022.metamodel.MMMessageAttribute;
 import com.tools20022.metamodel.MMMessageComponent;
+import com.tools20022.metamodel.MMRegistrationStatus;
+import com.tools20022.repository.area.catp.ATMRejectV02;
 import com.tools20022.repository.datatype.ISODateTime;
 import com.tools20022.repository.datatype.Max35Text;
 import com.tools20022.repository.datatype.Max3NumericText;
 import com.tools20022.repository.datatype.Max6Text;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.List;
@@ -117,7 +120,7 @@ public class Header33 {
 			componentContext_lazy = () -> Header33.mmObject();
 			isDerived = false;
 			xmlTag = "MsgFctn";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "MessageFunction";
 			definition = "Identifies the type of process related to the message.";
 			maxOccurs = 1;
@@ -157,7 +160,7 @@ public class Header33 {
 			componentContext_lazy = () -> Header33.mmObject();
 			isDerived = false;
 			xmlTag = "PrtcolVrsn";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ProtocolVersion";
 			definition = "Version of the ATM protocol specifications.";
 			maxOccurs = 1;
@@ -198,7 +201,7 @@ public class Header33 {
 			componentContext_lazy = () -> Header33.mmObject();
 			isDerived = false;
 			xmlTag = "XchgId";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ExchangeIdentification";
 			definition = "Unique identification of an exchange occurrence.";
 			maxOccurs = 1;
@@ -238,7 +241,7 @@ public class Header33 {
 			componentContext_lazy = () -> Header33.mmObject();
 			isDerived = false;
 			xmlTag = "CreDtTm";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CreationDateTime";
 			definition = "Date and time at which the message was created.";
 			maxOccurs = 1;
@@ -279,7 +282,7 @@ public class Header33 {
 			componentContext_lazy = () -> Header33.mmObject();
 			isDerived = false;
 			xmlTag = "InitgPty";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "InitiatingParty";
 			definition = "Unique identification of the partner that has initiated the exchange.";
 			maxOccurs = 1;
@@ -322,7 +325,7 @@ public class Header33 {
 			componentContext_lazy = () -> Header33.mmObject();
 			isDerived = false;
 			xmlTag = "RcptPty";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "RecipientParty";
 			definition = "Unique identification of the partner that is the recipient of the message exchange.";
 			maxOccurs = 1;
@@ -363,7 +366,7 @@ public class Header33 {
 			componentContext_lazy = () -> Header33.mmObject();
 			isDerived = false;
 			xmlTag = "PrcStat";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ProcessState";
 			definition = "State of the sender of the message inside the process flow.";
 			maxOccurs = 1;
@@ -406,7 +409,7 @@ public class Header33 {
 			componentContext_lazy = () -> Header33.mmObject();
 			isDerived = false;
 			xmlTag = "Tracblt";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Traceability";
 			definition = "Identification of partners involved in exchange from the merchant to the issuer, with the relative timestamp of their exchanges.";
 			minOccurs = 0;
@@ -417,12 +420,11 @@ public class Header33 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.Header33.mmMessageFunction, com.tools20022.repository.msg.Header33.mmProtocolVersion, com.tools20022.repository.msg.Header33.mmExchangeIdentification,
-						com.tools20022.repository.msg.Header33.mmCreationDateTime, com.tools20022.repository.msg.Header33.mmInitiatingParty, com.tools20022.repository.msg.Header33.mmRecipientParty,
-						com.tools20022.repository.msg.Header33.mmProcessState, com.tools20022.repository.msg.Header33.mmTraceability);
-				messageBuildingBlock_lazy = () -> Arrays.asList(com.tools20022.repository.area.catp.ATMRejectV02.mmHeader);
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				messageElement_lazy = () -> Arrays.asList(Header33.mmMessageFunction, Header33.mmProtocolVersion, Header33.mmExchangeIdentification, Header33.mmCreationDateTime, Header33.mmInitiatingParty, Header33.mmRecipientParty,
+						Header33.mmProcessState, Header33.mmTraceability);
+				messageBuildingBlock_lazy = () -> Arrays.asList(ATMRejectV02.mmHeader);
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "Header33";
 				definition = "Information related to the protocol management on a segment of the path from the ATM to the acquirer.";
 			}

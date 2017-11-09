@@ -20,7 +20,9 @@ package com.tools20022.repository.msg;
 import com.tools20022.metamodel.MMMessageAssociationEnd;
 import com.tools20022.metamodel.MMMessageAttribute;
 import com.tools20022.metamodel.MMMessageComponent;
+import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.datatype.ISODate;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.List;
@@ -104,10 +106,10 @@ public class BusinessDay4 {
 			componentContext_lazy = () -> BusinessDay4.mmObject();
 			isDerived = false;
 			xmlTag = "SysDt";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SystemDate";
 			definition = "Date for which the availability information is provided.";
-			previousVersion_lazy = () -> com.tools20022.repository.msg.BusinessDay2.mmSystemDate;
+			previousVersion_lazy = () -> BusinessDay2.mmSystemDate;
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> ISODate.mmObject();
@@ -152,10 +154,10 @@ public class BusinessDay4 {
 			componentContext_lazy = () -> BusinessDay4.mmObject();
 			isDerived = false;
 			xmlTag = "SysSts";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SystemStatus";
 			definition = "Status of a system and the period of time during which the status is valid.";
-			previousVersion_lazy = () -> com.tools20022.repository.msg.BusinessDay2.mmSystemStatus;
+			previousVersion_lazy = () -> BusinessDay2.mmSystemStatus;
 			maxOccurs = 1;
 			minOccurs = 0;
 			isComposite = true;
@@ -202,10 +204,10 @@ public class BusinessDay4 {
 			componentContext_lazy = () -> BusinessDay4.mmObject();
 			isDerived = false;
 			xmlTag = "SysInfPerCcy";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SystemInformationPerCurrency";
 			definition = "Information relating to system operations and foreseen events relating to the operation of the system.";
-			previousVersion_lazy = () -> com.tools20022.repository.msg.BusinessDay2.mmSystemInformationPerCurrency;
+			previousVersion_lazy = () -> BusinessDay2.mmSystemInformationPerCurrency;
 			minOccurs = 0;
 			isComposite = true;
 			type_lazy = () -> com.tools20022.repository.msg.SystemAvailabilityAndEvents1.mmObject();
@@ -215,10 +217,9 @@ public class BusinessDay4 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.BusinessDay4.mmSystemDate, com.tools20022.repository.msg.BusinessDay4.mmSystemStatus,
-						com.tools20022.repository.msg.BusinessDay4.mmSystemInformationPerCurrency);
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				messageElement_lazy = () -> Arrays.asList(BusinessDay4.mmSystemDate, BusinessDay4.mmSystemStatus, BusinessDay4.mmSystemInformationPerCurrency);
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "BusinessDay4";
 				definition = "Payment system operational information, such as opening, closure, session period or events, given per currency.";
 				previousVersion_lazy = () -> BusinessDay2.mmObject();

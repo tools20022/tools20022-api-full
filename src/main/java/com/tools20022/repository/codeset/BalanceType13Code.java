@@ -19,7 +19,9 @@ package com.tools20022.repository.codeset;
 
 import com.tools20022.metamodel.MMCode;
 import com.tools20022.metamodel.MMCodeSet;
+import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.codeset.BalanceTypeCode;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -103,7 +105,7 @@ public class BalanceType13Code extends BalanceTypeCode {
 	 */
 	public static final MMCode mmInvestments = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Investments";
 			owner_lazy = () -> BalanceType13Code.mmObject();
 		}
@@ -126,7 +128,7 @@ public class BalanceType13Code extends BalanceTypeCode {
 	 */
 	public static final MMCode mmCashAndCashEquivalents = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CashAndCashEquivalents";
 			owner_lazy = () -> BalanceType13Code.mmObject();
 		}
@@ -149,7 +151,7 @@ public class BalanceType13Code extends BalanceTypeCode {
 	 */
 	public static final MMCode mmBorrowings = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Borrowings";
 			owner_lazy = () -> BalanceType13Code.mmObject();
 		}
@@ -172,7 +174,7 @@ public class BalanceType13Code extends BalanceTypeCode {
 	 */
 	public static final MMCode mmRevenues = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Revenues";
 			owner_lazy = () -> BalanceType13Code.mmObject();
 		}
@@ -195,7 +197,7 @@ public class BalanceType13Code extends BalanceTypeCode {
 	 */
 	public static final MMCode mmExpenses = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Expenses";
 			owner_lazy = () -> BalanceType13Code.mmObject();
 		}
@@ -218,7 +220,7 @@ public class BalanceType13Code extends BalanceTypeCode {
 	 */
 	public static final MMCode mmInvestorInflowOutflow = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "InvestorInflowOutflow";
 			owner_lazy = () -> BalanceType13Code.mmObject();
 		}
@@ -241,7 +243,7 @@ public class BalanceType13Code extends BalanceTypeCode {
 	 */
 	public static final MMCode mmOther = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Other";
 			owner_lazy = () -> BalanceType13Code.mmObject();
 		}
@@ -264,7 +266,7 @@ public class BalanceType13Code extends BalanceTypeCode {
 	 */
 	public static final MMCode mmPayables = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Payables";
 			owner_lazy = () -> BalanceType13Code.mmObject();
 		}
@@ -287,7 +289,7 @@ public class BalanceType13Code extends BalanceTypeCode {
 	 */
 	public static final MMCode mmReceivables = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Receivables";
 			owner_lazy = () -> BalanceType13Code.mmObject();
 		}
@@ -296,15 +298,13 @@ public class BalanceType13Code extends BalanceTypeCode {
 	static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
 				example = Arrays.asList("INVE");
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "BalanceType13Code";
 				definition = "Specifies the kind of the balance.";
-				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.BalanceType13Code.mmInvestments, com.tools20022.repository.codeset.BalanceType13Code.mmCashAndCashEquivalents,
-						com.tools20022.repository.codeset.BalanceType13Code.mmBorrowings, com.tools20022.repository.codeset.BalanceType13Code.mmRevenues, com.tools20022.repository.codeset.BalanceType13Code.mmExpenses,
-						com.tools20022.repository.codeset.BalanceType13Code.mmInvestorInflowOutflow, com.tools20022.repository.codeset.BalanceType13Code.mmOther, com.tools20022.repository.codeset.BalanceType13Code.mmPayables,
-						com.tools20022.repository.codeset.BalanceType13Code.mmReceivables);
+				code_lazy = () -> Arrays.asList(BalanceType13Code.mmInvestments, BalanceType13Code.mmCashAndCashEquivalents, BalanceType13Code.mmBorrowings, BalanceType13Code.mmRevenues, BalanceType13Code.mmExpenses,
+						BalanceType13Code.mmInvestorInflowOutflow, BalanceType13Code.mmOther, BalanceType13Code.mmPayables, BalanceType13Code.mmReceivables);
 				trace_lazy = () -> BalanceTypeCode.mmObject();
 			}
 		});

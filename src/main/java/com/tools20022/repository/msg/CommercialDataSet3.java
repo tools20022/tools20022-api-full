@@ -19,8 +19,14 @@ package com.tools20022.repository.msg;
 
 import com.tools20022.metamodel.MMMessageAssociationEnd;
 import com.tools20022.metamodel.MMMessageComponent;
+import com.tools20022.metamodel.MMRegistrationStatus;
+import com.tools20022.repository.area.tsmt.DataSetSubmissionV03;
+import com.tools20022.repository.area.tsmt.ForwardDataSetSubmissionReportV03;
 import com.tools20022.repository.entity.CommercialTrade;
 import com.tools20022.repository.entity.Goods;
+import com.tools20022.repository.entity.Party;
+import com.tools20022.repository.entity.PaymentInstruction;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.List;
@@ -138,10 +144,10 @@ public class CommercialDataSet3 {
 			componentContext_lazy = () -> CommercialDataSet3.mmObject();
 			isDerived = false;
 			xmlTag = "DataSetId";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "DataSetIdentification";
 			definition = "Identifies the commercial data set";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.CommercialDataSet4.mmDataSetIdentification);
+			nextVersions_lazy = () -> Arrays.asList(CommercialDataSet4.mmDataSetIdentification);
 			maxOccurs = 1;
 			minOccurs = 1;
 			isComposite = true;
@@ -190,10 +196,10 @@ public class CommercialDataSet3 {
 			componentContext_lazy = () -> CommercialDataSet3.mmObject();
 			isDerived = false;
 			xmlTag = "ComrclDocRef";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CommercialDocumentReference";
 			definition = "Reference to the identification of  the underlying commercial document.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.CommercialDataSet4.mmCommercialDocumentReference);
+			nextVersions_lazy = () -> Arrays.asList(CommercialDataSet4.mmCommercialDocumentReference);
 			maxOccurs = 1;
 			minOccurs = 1;
 			isComposite = true;
@@ -242,14 +248,14 @@ public class CommercialDataSet3 {
 	 */
 	public static final MMMessageAssociationEnd mmBuyer = new MMMessageAssociationEnd() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Party.mmIdentification;
+			businessElementTrace_lazy = () -> Party.mmIdentification;
 			componentContext_lazy = () -> CommercialDataSet3.mmObject();
 			isDerived = false;
 			xmlTag = "Buyr";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Buyer";
 			definition = "Party that buys goods or services, or a financial instrument.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.CommercialDataSet4.mmBuyer);
+			nextVersions_lazy = () -> Arrays.asList(CommercialDataSet4.mmBuyer);
 			maxOccurs = 1;
 			minOccurs = 1;
 			isComposite = true;
@@ -299,14 +305,14 @@ public class CommercialDataSet3 {
 	 */
 	public static final MMMessageAssociationEnd mmSeller = new MMMessageAssociationEnd() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Party.mmIdentification;
+			businessElementTrace_lazy = () -> Party.mmIdentification;
 			componentContext_lazy = () -> CommercialDataSet3.mmObject();
 			isDerived = false;
 			xmlTag = "Sellr";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Seller";
 			definition = "Party that sells goods or services, or a financial instrument.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.CommercialDataSet4.mmSeller);
+			nextVersions_lazy = () -> Arrays.asList(CommercialDataSet4.mmSeller);
 			maxOccurs = 1;
 			minOccurs = 1;
 			isComposite = true;
@@ -355,14 +361,14 @@ public class CommercialDataSet3 {
 	 */
 	public static final MMMessageAssociationEnd mmBillTo = new MMMessageAssociationEnd() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Party.mmIdentification;
+			businessElementTrace_lazy = () -> Party.mmIdentification;
 			componentContext_lazy = () -> CommercialDataSet3.mmObject();
 			isDerived = false;
 			xmlTag = "BllTo";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "BillTo";
 			definition = "Party to be invoiced for the purchase.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.CommercialDataSet4.mmBillTo);
+			nextVersions_lazy = () -> Arrays.asList(CommercialDataSet4.mmBillTo);
 			maxOccurs = 1;
 			minOccurs = 0;
 			isComposite = true;
@@ -415,10 +421,10 @@ public class CommercialDataSet3 {
 			componentContext_lazy = () -> CommercialDataSet3.mmObject();
 			isDerived = false;
 			xmlTag = "Goods";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Goods";
 			definition = "Information about the goods and/or services of the underlying transaction.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.CommercialDataSet4.mmGoods);
+			nextVersions_lazy = () -> Arrays.asList(CommercialDataSet4.mmGoods);
 			minOccurs = 1;
 			isComposite = true;
 			type_lazy = () -> com.tools20022.repository.msg.LineItem9.mmObject();
@@ -467,14 +473,14 @@ public class CommercialDataSet3 {
 	 */
 	public static final MMMessageAssociationEnd mmPaymentTerms = new MMMessageAssociationEnd() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.CommercialTrade.mmPaymentObligation;
+			businessElementTrace_lazy = () -> CommercialTrade.mmPaymentObligation;
 			componentContext_lazy = () -> CommercialDataSet3.mmObject();
 			isDerived = false;
 			xmlTag = "PmtTerms";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PaymentTerms";
 			definition = "Specifies the payment terms by means of a code and a limit in time.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.CommercialDataSet4.mmPaymentTerms);
+			nextVersions_lazy = () -> Arrays.asList(CommercialDataSet4.mmPaymentTerms);
 			minOccurs = 1;
 			isComposite = true;
 			type_lazy = () -> com.tools20022.repository.msg.PaymentTerms1.mmObject();
@@ -522,14 +528,14 @@ public class CommercialDataSet3 {
 	 */
 	public static final MMMessageAssociationEnd mmSettlementTerms = new MMMessageAssociationEnd() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.PaymentInstruction.mmSettlementInstruction;
+			businessElementTrace_lazy = () -> PaymentInstruction.mmSettlementInstruction;
 			componentContext_lazy = () -> CommercialDataSet3.mmObject();
 			isDerived = false;
 			xmlTag = "SttlmTerms";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SettlementTerms";
 			definition = "Specifies how the transaction should be settled.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.CommercialDataSet4.mmSettlementTerms);
+			nextVersions_lazy = () -> Arrays.asList(CommercialDataSet4.mmSettlementTerms);
 			maxOccurs = 1;
 			minOccurs = 1;
 			isComposite = true;
@@ -540,13 +546,12 @@ public class CommercialDataSet3 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.CommercialDataSet3.mmDataSetIdentification, com.tools20022.repository.msg.CommercialDataSet3.mmCommercialDocumentReference,
-						com.tools20022.repository.msg.CommercialDataSet3.mmBuyer, com.tools20022.repository.msg.CommercialDataSet3.mmSeller, com.tools20022.repository.msg.CommercialDataSet3.mmBillTo,
-						com.tools20022.repository.msg.CommercialDataSet3.mmGoods, com.tools20022.repository.msg.CommercialDataSet3.mmPaymentTerms, com.tools20022.repository.msg.CommercialDataSet3.mmSettlementTerms);
-				messageBuildingBlock_lazy = () -> Arrays.asList(com.tools20022.repository.area.tsmt.DataSetSubmissionV03.mmCommercialDataSet, com.tools20022.repository.area.tsmt.ForwardDataSetSubmissionReportV03.mmCommercialDataSet);
+				messageElement_lazy = () -> Arrays.asList(CommercialDataSet3.mmDataSetIdentification, CommercialDataSet3.mmCommercialDocumentReference, CommercialDataSet3.mmBuyer, CommercialDataSet3.mmSeller, CommercialDataSet3.mmBillTo,
+						CommercialDataSet3.mmGoods, CommercialDataSet3.mmPaymentTerms, CommercialDataSet3.mmSettlementTerms);
+				messageBuildingBlock_lazy = () -> Arrays.asList(DataSetSubmissionV03.mmCommercialDataSet, ForwardDataSetSubmissionReportV03.mmCommercialDataSet);
 				trace_lazy = () -> CommercialTrade.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "CommercialDataSet3";
 				definition = "Goods or services that are part of a commercial trade agreement.";
 				nextVersions_lazy = () -> Arrays.asList(CommercialDataSet4.mmObject());

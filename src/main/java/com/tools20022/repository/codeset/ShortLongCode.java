@@ -19,6 +19,8 @@ package com.tools20022.repository.codeset;
 
 import com.tools20022.metamodel.MMCode;
 import com.tools20022.metamodel.MMCodeSet;
+import com.tools20022.metamodel.MMRegistrationStatus;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -28,19 +30,19 @@ import java.util.concurrent.atomic.AtomicReference;
  * <p>
  * <strong>Constant fields:</strong>
  * <ul>
+ * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getDerivation derivation}
+ * =
+ * <ul>
+ * <li>{@linkplain com.tools20022.repository.codeset.ShortLong1Code
+ * ShortLong1Code}</li>
+ * </ul>
+ * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getCode code} =
  * <ul>
  * <li>{@linkplain com.tools20022.repository.codeset.ShortLongCode#mmShort
  * ShortLongCode.mmShort}</li>
  * <li>{@linkplain com.tools20022.repository.codeset.ShortLongCode#mmLong
  * ShortLongCode.mmLong}</li>
- * </ul>
- * </li>
- * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getDerivation derivation}
- * =
- * <ul>
- * <li>{@linkplain com.tools20022.repository.codeset.ShortLong1Code
- * ShortLong1Code}</li>
  * </ul>
  * </li>
  * <li>
@@ -92,7 +94,7 @@ public class ShortLongCode {
 	 */
 	public static final MMCode mmShort = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Short";
 			definition = "Position is short, that is, the balance is negative.";
 			owner_lazy = () -> ShortLongCode.mmObject();
@@ -122,7 +124,7 @@ public class ShortLongCode {
 	 */
 	public static final MMCode mmLong = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Long";
 			definition = "Position is long, that is, the balance is positive.";
 			owner_lazy = () -> ShortLongCode.mmObject();
@@ -133,12 +135,12 @@ public class ShortLongCode {
 	static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
 				example = Arrays.asList("SHOR");
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "ShortLongCode";
 				definition = "Specifies whether the securities position is short or long, that is, whether the balance is a negative or positive balance.";
-				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.ShortLongCode.mmShort, com.tools20022.repository.codeset.ShortLongCode.mmLong);
+				code_lazy = () -> Arrays.asList(ShortLongCode.mmShort, ShortLongCode.mmLong);
 				derivation_lazy = () -> Arrays.asList(ShortLong1Code.mmObject());
 			}
 		});

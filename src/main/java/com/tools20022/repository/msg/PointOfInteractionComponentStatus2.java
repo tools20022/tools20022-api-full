@@ -19,9 +19,12 @@ package com.tools20022.repository.msg;
 
 import com.tools20022.metamodel.MMMessageAttribute;
 import com.tools20022.metamodel.MMMessageComponent;
+import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.codeset.POIComponentStatus1Code;
 import com.tools20022.repository.datatype.Max256Text;
+import com.tools20022.repository.entity.SystemIdentification;
 import com.tools20022.repository.entity.SystemStatus;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -125,15 +128,15 @@ public class PointOfInteractionComponentStatus2 {
 	 */
 	public static final MMMessageAttribute mmVersionNumber = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.SystemIdentification.mmSystemVersion;
+			businessElementTrace_lazy = () -> SystemIdentification.mmSystemVersion;
 			componentContext_lazy = () -> PointOfInteractionComponentStatus2.mmObject();
 			isDerived = false;
 			xmlTag = "VrsnNb";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "VersionNumber";
 			definition = "Current version of the component that might include the release number.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.PointOfInteractionComponentStatus3.mmVersionNumber);
-			previousVersion_lazy = () -> com.tools20022.repository.msg.PointOfInteractionComponentStatus1.mmVersionNumber;
+			nextVersions_lazy = () -> Arrays.asList(PointOfInteractionComponentStatus3.mmVersionNumber);
+			previousVersion_lazy = () -> PointOfInteractionComponentStatus1.mmVersionNumber;
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> Max256Text.mmObject();
@@ -188,15 +191,15 @@ public class PointOfInteractionComponentStatus2 {
 	 */
 	public static final MMMessageAttribute mmStatus = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.SystemStatus.mmStatus;
+			businessElementTrace_lazy = () -> SystemStatus.mmStatus;
 			componentContext_lazy = () -> PointOfInteractionComponentStatus2.mmObject();
 			isDerived = false;
 			xmlTag = "Sts";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Status";
 			definition = "Current status of the component.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.PointOfInteractionComponentStatus3.mmStatus);
-			previousVersion_lazy = () -> com.tools20022.repository.msg.PointOfInteractionComponentStatus1.mmStatus;
+			nextVersions_lazy = () -> Arrays.asList(PointOfInteractionComponentStatus3.mmStatus);
+			previousVersion_lazy = () -> PointOfInteractionComponentStatus1.mmStatus;
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> POIComponentStatus1Code.mmObject();
@@ -206,10 +209,10 @@ public class PointOfInteractionComponentStatus2 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.PointOfInteractionComponentStatus2.mmVersionNumber, com.tools20022.repository.msg.PointOfInteractionComponentStatus2.mmStatus);
+				messageElement_lazy = () -> Arrays.asList(PointOfInteractionComponentStatus2.mmVersionNumber, PointOfInteractionComponentStatus2.mmStatus);
 				trace_lazy = () -> SystemStatus.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "PointOfInteractionComponentStatus2";
 				definition = "Status of a POI component (Point of Interaction).";
 				nextVersions_lazy = () -> Arrays.asList(PointOfInteractionComponentStatus3.mmObject());

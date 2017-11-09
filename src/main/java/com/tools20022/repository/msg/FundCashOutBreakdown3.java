@@ -20,12 +20,14 @@ package com.tools20022.repository.msg;
 import com.tools20022.metamodel.MMMessageAssociationEnd;
 import com.tools20022.metamodel.MMMessageAttribute;
 import com.tools20022.metamodel.MMMessageComponent;
+import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.choice.InvestmentFundTransactionOutType1Choice;
 import com.tools20022.repository.choice.QuantityType1Choice;
 import com.tools20022.repository.codeset.ActiveCurrencyCode;
 import com.tools20022.repository.datatype.ActiveOrHistoricCurrencyAndAmount;
 import com.tools20022.repository.datatype.YesNoIndicator;
-import com.tools20022.repository.entity.FundsCashFlow;
+import com.tools20022.repository.entity.*;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.List;
@@ -134,14 +136,14 @@ public class FundCashOutBreakdown3 {
 	 */
 	public static final MMMessageAttribute mmAmount = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.SecuritiesQuantity.mmAmount;
+			businessElementTrace_lazy = () -> SecuritiesQuantity.mmAmount;
 			componentContext_lazy = () -> FundCashOutBreakdown3.mmObject();
 			isDerived = false;
 			xmlTag = "Amt";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Amount";
 			definition = "Amount of cash flow out, expressed as an amount of money.";
-			previousVersion_lazy = () -> com.tools20022.repository.msg.FundCashOutBreakdown2.mmAmount;
+			previousVersion_lazy = () -> FundCashOutBreakdown2.mmAmount;
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> ActiveOrHistoricCurrencyAndAmount.mmObject();
@@ -189,14 +191,14 @@ public class FundCashOutBreakdown3 {
 	 */
 	public static final MMMessageAttribute mmUnitsNumber = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.SecuritiesQuantity.mmUnit;
+			businessElementTrace_lazy = () -> SecuritiesQuantity.mmUnit;
 			componentContext_lazy = () -> FundCashOutBreakdown3.mmObject();
 			isDerived = false;
 			xmlTag = "UnitsNb";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "UnitsNumber";
 			definition = "Amount of the cash flow out, expressed as a number of units.";
-			previousVersion_lazy = () -> com.tools20022.repository.msg.FundCashOutBreakdown2.mmUnitsNumber;
+			previousVersion_lazy = () -> FundCashOutBreakdown2.mmUnitsNumber;
 			maxOccurs = 1;
 			minOccurs = 0;
 			complexType_lazy = () -> com.tools20022.repository.msg.FinancialInstrumentQuantity1.mmObject();
@@ -245,10 +247,10 @@ public class FundCashOutBreakdown3 {
 			componentContext_lazy = () -> FundCashOutBreakdown3.mmObject();
 			isDerived = false;
 			xmlTag = "NewAmtInd";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "NewAmountIndicator";
 			definition = "Indicates whether the cash flow is an item that did not appear on the previously sent report, for example, because it was received close to cut-off time.";
-			previousVersion_lazy = () -> com.tools20022.repository.msg.FundCashOutBreakdown2.mmNewAmountIndicator;
+			previousVersion_lazy = () -> FundCashOutBreakdown2.mmNewAmountIndicator;
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> YesNoIndicator.mmObject();
@@ -292,11 +294,11 @@ public class FundCashOutBreakdown3 {
 	 */
 	public static final MMMessageAssociationEnd mmInvestmentFundTransactionOutType = new MMMessageAssociationEnd() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.InvestmentFundTransaction.mmType;
+			businessElementTrace_lazy = () -> InvestmentFundTransaction.mmType;
 			componentContext_lazy = () -> FundCashOutBreakdown3.mmObject();
 			isDerived = false;
 			xmlTag = "InvstmtFndTxOutTp";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "InvestmentFundTransactionOutType";
 			definition = "Type of transaction that resulted in the cash-out movement, for example, redemption, switch-out. ";
 			maxOccurs = 1;
@@ -342,11 +344,11 @@ public class FundCashOutBreakdown3 {
 	 */
 	public static final MMMessageAssociationEnd mmOriginalOrderQuantityType = new MMMessageAssociationEnd() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.SecuritiesOrder.mmQuantityType;
+			businessElementTrace_lazy = () -> SecuritiesOrder.mmQuantityType;
 			componentContext_lazy = () -> FundCashOutBreakdown3.mmObject();
 			isDerived = false;
 			xmlTag = "OrgnlOrdrQtyTp";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "OriginalOrderQuantityType";
 			definition = "Specifies how the original order was expressed that resulted in the cash-out movement, that is cash or units.";
 			maxOccurs = 1;
@@ -393,14 +395,14 @@ public class FundCashOutBreakdown3 {
 	 */
 	public static final MMMessageAssociationEnd mmChargeDetails = new MMMessageAssociationEnd() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.InvestmentFundTransaction.mmTransactionCharge;
+			businessElementTrace_lazy = () -> InvestmentFundTransaction.mmTransactionCharge;
 			componentContext_lazy = () -> FundCashOutBreakdown3.mmObject();
 			isDerived = false;
 			xmlTag = "ChrgDtls";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ChargeDetails";
 			definition = "Charge for the placement of an order.";
-			previousVersion_lazy = () -> com.tools20022.repository.msg.FundCashOutBreakdown2.mmChargeDetails;
+			previousVersion_lazy = () -> FundCashOutBreakdown2.mmChargeDetails;
 			minOccurs = 0;
 			isComposite = true;
 			type_lazy = () -> com.tools20022.repository.msg.Charge26.mmObject();
@@ -448,14 +450,14 @@ public class FundCashOutBreakdown3 {
 	 */
 	public static final MMMessageAssociationEnd mmCommissionDetails = new MMMessageAssociationEnd() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Trade.mmTradeCommission;
+			businessElementTrace_lazy = () -> Trade.mmTradeCommission;
 			componentContext_lazy = () -> FundCashOutBreakdown3.mmObject();
 			isDerived = false;
 			xmlTag = "ComssnDtls";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CommissionDetails";
 			definition = "Information related to the commission applied to an order, for example, back-end or front-end commission.";
-			previousVersion_lazy = () -> com.tools20022.repository.msg.FundCashOutBreakdown2.mmCommissionDetails;
+			previousVersion_lazy = () -> FundCashOutBreakdown2.mmCommissionDetails;
 			minOccurs = 0;
 			isComposite = true;
 			type_lazy = () -> com.tools20022.repository.msg.Commission21.mmObject();
@@ -497,11 +499,11 @@ public class FundCashOutBreakdown3 {
 	 */
 	public static final MMMessageAttribute mmSettlementCurrency = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.SecuritiesOrder.mmSettlementCurrency;
+			businessElementTrace_lazy = () -> SecuritiesOrder.mmSettlementCurrency;
 			componentContext_lazy = () -> FundCashOutBreakdown3.mmObject();
 			isDerived = false;
 			xmlTag = "SttlmCcy";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SettlementCurrency";
 			definition = "Settlement currency for the transaction.";
 			maxOccurs = 1;
@@ -513,13 +515,11 @@ public class FundCashOutBreakdown3 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.FundCashOutBreakdown3.mmAmount, com.tools20022.repository.msg.FundCashOutBreakdown3.mmUnitsNumber,
-						com.tools20022.repository.msg.FundCashOutBreakdown3.mmNewAmountIndicator, com.tools20022.repository.msg.FundCashOutBreakdown3.mmInvestmentFundTransactionOutType,
-						com.tools20022.repository.msg.FundCashOutBreakdown3.mmOriginalOrderQuantityType, com.tools20022.repository.msg.FundCashOutBreakdown3.mmChargeDetails,
-						com.tools20022.repository.msg.FundCashOutBreakdown3.mmCommissionDetails, com.tools20022.repository.msg.FundCashOutBreakdown3.mmSettlementCurrency);
+				messageElement_lazy = () -> Arrays.asList(FundCashOutBreakdown3.mmAmount, FundCashOutBreakdown3.mmUnitsNumber, FundCashOutBreakdown3.mmNewAmountIndicator, FundCashOutBreakdown3.mmInvestmentFundTransactionOutType,
+						FundCashOutBreakdown3.mmOriginalOrderQuantityType, FundCashOutBreakdown3.mmChargeDetails, FundCashOutBreakdown3.mmCommissionDetails, FundCashOutBreakdown3.mmSettlementCurrency);
 				trace_lazy = () -> FundsCashFlow.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "FundCashOutBreakdown3";
 				definition = "Breakdown of cash movements out of a fund as a result of investment funds transactions, eg, redemptions or switch-out.";
 				previousVersion_lazy = () -> FundCashOutBreakdown2.mmObject();

@@ -19,8 +19,10 @@ package com.tools20022.repository.msg;
 
 import com.tools20022.metamodel.MMMessageAttribute;
 import com.tools20022.metamodel.MMMessageComponent;
+import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.datatype.Max35Text;
-import com.tools20022.repository.entity.CreditTransfer;
+import com.tools20022.repository.entity.*;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -141,14 +143,14 @@ public class CreditTransfer8 {
 	 */
 	public static final MMMessageAttribute mmReference = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.PaymentIdentification.mmCreditorReference;
+			businessElementTrace_lazy = () -> PaymentIdentification.mmCreditorReference;
 			componentContext_lazy = () -> CreditTransfer8.mmObject();
 			isDerived = false;
 			xmlTag = "Ref";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Reference";
 			definition = "Information supplied to enable the matching of an entry with the items that the transfer is intended to settle, such as commercial invoices in an accounts' receivable system.";
-			previousVersion_lazy = () -> com.tools20022.repository.msg.CreditTransfer6.mmReference;
+			previousVersion_lazy = () -> CreditTransfer6.mmReference;
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> Max35Text.mmObject();
@@ -198,14 +200,14 @@ public class CreditTransfer8 {
 	 */
 	public static final MMMessageAttribute mmDebtor = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Party.mmIdentification;
+			businessElementTrace_lazy = () -> Party.mmIdentification;
 			componentContext_lazy = () -> CreditTransfer8.mmObject();
 			isDerived = false;
 			xmlTag = "Dbtr";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Debtor";
 			definition = "Party that owes an amount of money to the (ultimate) creditor. In the context of the payment model, the debtor is also the debit account owner.";
-			previousVersion_lazy = () -> com.tools20022.repository.msg.CreditTransfer6.mmDebtor;
+			previousVersion_lazy = () -> CreditTransfer6.mmDebtor;
 			maxOccurs = 1;
 			minOccurs = 0;
 			complexType_lazy = () -> com.tools20022.repository.msg.PartyIdentification113.mmObject();
@@ -255,14 +257,14 @@ public class CreditTransfer8 {
 	 */
 	public static final MMMessageAttribute mmDebtorAccount = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.PaymentPartyRole.mmCashAccount;
+			businessElementTrace_lazy = () -> PaymentPartyRole.mmCashAccount;
 			componentContext_lazy = () -> CreditTransfer8.mmObject();
 			isDerived = false;
 			xmlTag = "DbtrAcct";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "DebtorAccount";
 			definition = "Unambiguous identification of the account of the debtor to which a debit entry will be made as a result of the transaction.";
-			previousVersion_lazy = () -> com.tools20022.repository.msg.CreditTransfer6.mmDebtorAccount;
+			previousVersion_lazy = () -> CreditTransfer6.mmDebtorAccount;
 			maxOccurs = 1;
 			minOccurs = 0;
 			complexType_lazy = () -> com.tools20022.repository.msg.AccountIdentificationAndName5.mmObject();
@@ -310,14 +312,14 @@ public class CreditTransfer8 {
 	 */
 	public static final MMMessageAttribute mmDebtorAgent = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Party.mmIdentification;
+			businessElementTrace_lazy = () -> Party.mmIdentification;
 			componentContext_lazy = () -> CreditTransfer8.mmObject();
 			isDerived = false;
 			xmlTag = "DbtrAgt";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "DebtorAgent";
 			definition = "Financial institution servicing an account for the debtor.";
-			previousVersion_lazy = () -> com.tools20022.repository.msg.CreditTransfer6.mmDebtorAgent;
+			previousVersion_lazy = () -> CreditTransfer6.mmDebtorAgent;
 			maxOccurs = 1;
 			minOccurs = 0;
 			complexType_lazy = () -> com.tools20022.repository.msg.FinancialInstitutionIdentification10.mmObject();
@@ -364,14 +366,14 @@ public class CreditTransfer8 {
 	 */
 	public static final MMMessageAttribute mmDebtorAgentAccount = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.PaymentPartyRole.mmCashAccount;
+			businessElementTrace_lazy = () -> PaymentPartyRole.mmCashAccount;
 			componentContext_lazy = () -> CreditTransfer8.mmObject();
 			isDerived = false;
 			xmlTag = "DbtrAgtAcct";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "DebtorAgentAccount";
 			definition = "Identifies the account of the debtor's agent.";
-			previousVersion_lazy = () -> com.tools20022.repository.msg.CreditTransfer6.mmDebtorAgentAccount;
+			previousVersion_lazy = () -> CreditTransfer6.mmDebtorAgentAccount;
 			maxOccurs = 1;
 			minOccurs = 0;
 			complexType_lazy = () -> com.tools20022.repository.msg.AccountIdentificationAndName5.mmObject();
@@ -419,14 +421,14 @@ public class CreditTransfer8 {
 	 */
 	public static final MMMessageAttribute mmIntermediaryAgent1 = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Organisation.mmOrganisationIdentification;
+			businessElementTrace_lazy = () -> Organisation.mmOrganisationIdentification;
 			componentContext_lazy = () -> CreditTransfer8.mmObject();
 			isDerived = false;
 			xmlTag = "IntrmyAgt1";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "IntermediaryAgent1";
 			definition = "Agent between the debtor's agent and the creditor's agent.";
-			previousVersion_lazy = () -> com.tools20022.repository.msg.CreditTransfer6.mmIntermediaryAgent1;
+			previousVersion_lazy = () -> CreditTransfer6.mmIntermediaryAgent1;
 			maxOccurs = 1;
 			minOccurs = 0;
 			complexType_lazy = () -> com.tools20022.repository.msg.FinancialInstitutionIdentification10.mmObject();
@@ -476,14 +478,14 @@ public class CreditTransfer8 {
 	 */
 	public static final MMMessageAttribute mmIntermediaryAgent1Account = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.PaymentPartyRole.mmCashAccount;
+			businessElementTrace_lazy = () -> PaymentPartyRole.mmCashAccount;
 			componentContext_lazy = () -> CreditTransfer8.mmObject();
 			isDerived = false;
 			xmlTag = "IntrmyAgt1Acct";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "IntermediaryAgent1Account";
 			definition = "Unambiguous identification of the account of the intermediary agent 1 at its servicing agent in the payment chain.";
-			previousVersion_lazy = () -> com.tools20022.repository.msg.CreditTransfer6.mmIntermediaryAgent1Account;
+			previousVersion_lazy = () -> CreditTransfer6.mmIntermediaryAgent1Account;
 			maxOccurs = 1;
 			minOccurs = 0;
 			complexType_lazy = () -> com.tools20022.repository.msg.AccountIdentificationAndName5.mmObject();
@@ -531,14 +533,14 @@ public class CreditTransfer8 {
 	 */
 	public static final MMMessageAttribute mmIntermediaryAgent2 = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Organisation.mmOrganisationIdentification;
+			businessElementTrace_lazy = () -> Organisation.mmOrganisationIdentification;
 			componentContext_lazy = () -> CreditTransfer8.mmObject();
 			isDerived = false;
 			xmlTag = "IntrmyAgt2";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "IntermediaryAgent2";
 			definition = "Agent between the debtor's agent and the creditor's agent.";
-			previousVersion_lazy = () -> com.tools20022.repository.msg.CreditTransfer6.mmIntermediaryAgent2;
+			previousVersion_lazy = () -> CreditTransfer6.mmIntermediaryAgent2;
 			maxOccurs = 1;
 			minOccurs = 0;
 			complexType_lazy = () -> com.tools20022.repository.msg.FinancialInstitutionIdentification10.mmObject();
@@ -588,14 +590,14 @@ public class CreditTransfer8 {
 	 */
 	public static final MMMessageAttribute mmIntermediaryAgent2Account = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.PaymentPartyRole.mmCashAccount;
+			businessElementTrace_lazy = () -> PaymentPartyRole.mmCashAccount;
 			componentContext_lazy = () -> CreditTransfer8.mmObject();
 			isDerived = false;
 			xmlTag = "IntrmyAgt2Acct";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "IntermediaryAgent2Account";
 			definition = "Unambiguous identification of the account of the intermediary agent 2 at its servicing agent in the payment chain.";
-			previousVersion_lazy = () -> com.tools20022.repository.msg.CreditTransfer6.mmIntermediaryAgent2Account;
+			previousVersion_lazy = () -> CreditTransfer6.mmIntermediaryAgent2Account;
 			maxOccurs = 1;
 			minOccurs = 0;
 			complexType_lazy = () -> com.tools20022.repository.msg.AccountIdentificationAndName5.mmObject();
@@ -643,14 +645,14 @@ public class CreditTransfer8 {
 	 */
 	public static final MMMessageAttribute mmCreditorAgent = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Organisation.mmOrganisationIdentification;
+			businessElementTrace_lazy = () -> Organisation.mmOrganisationIdentification;
 			componentContext_lazy = () -> CreditTransfer8.mmObject();
 			isDerived = false;
 			xmlTag = "CdtrAgt";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CreditorAgent";
 			definition = "Financial institution servicing an account for the creditor.";
-			previousVersion_lazy = () -> com.tools20022.repository.msg.CreditTransfer6.mmCreditorAgent;
+			previousVersion_lazy = () -> CreditTransfer6.mmCreditorAgent;
 			maxOccurs = 1;
 			minOccurs = 1;
 			complexType_lazy = () -> com.tools20022.repository.msg.FinancialInstitutionIdentification10.mmObject();
@@ -701,14 +703,14 @@ public class CreditTransfer8 {
 	 */
 	public static final MMMessageAttribute mmCreditorAgentAccount = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Account.mmIdentification;
+			businessElementTrace_lazy = () -> Account.mmIdentification;
 			componentContext_lazy = () -> CreditTransfer8.mmObject();
 			isDerived = false;
 			xmlTag = "CdtrAgtAcct";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CreditorAgentAccount";
 			definition = "Unambiguous identification of the account of the creditor agent at its servicing agent to which a credit entry will be made as a result of the payment transaction.";
-			previousVersion_lazy = () -> com.tools20022.repository.msg.CreditTransfer6.mmCreditorAgentAccount;
+			previousVersion_lazy = () -> CreditTransfer6.mmCreditorAgentAccount;
 			maxOccurs = 1;
 			minOccurs = 0;
 			complexType_lazy = () -> com.tools20022.repository.msg.AccountIdentificationAndName5.mmObject();
@@ -758,14 +760,14 @@ public class CreditTransfer8 {
 	 */
 	public static final MMMessageAttribute mmCreditor = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Party.mmIdentification;
+			businessElementTrace_lazy = () -> Party.mmIdentification;
 			componentContext_lazy = () -> CreditTransfer8.mmObject();
 			isDerived = false;
 			xmlTag = "Cdtr";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Creditor";
 			definition = "Party that receives an amount of money from the debtor. In the context of the payment model, the creditor is also the credit account owner.";
-			previousVersion_lazy = () -> com.tools20022.repository.msg.CreditTransfer6.mmCreditor;
+			previousVersion_lazy = () -> CreditTransfer6.mmCreditor;
 			maxOccurs = 1;
 			minOccurs = 0;
 			complexType_lazy = () -> com.tools20022.repository.msg.PartyIdentification113.mmObject();
@@ -815,14 +817,14 @@ public class CreditTransfer8 {
 	 */
 	public static final MMMessageAttribute mmCreditorAccount = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.PaymentPartyRole.mmCashAccount;
+			businessElementTrace_lazy = () -> PaymentPartyRole.mmCashAccount;
 			componentContext_lazy = () -> CreditTransfer8.mmObject();
 			isDerived = false;
 			xmlTag = "CdtrAcct";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CreditorAccount";
 			definition = "Unambiguous identification of the account of the creditor to which a credit entry will be posted as a result of the payment transaction.";
-			previousVersion_lazy = () -> com.tools20022.repository.msg.CreditTransfer6.mmCreditorAccount;
+			previousVersion_lazy = () -> CreditTransfer6.mmCreditorAccount;
 			maxOccurs = 1;
 			minOccurs = 1;
 			complexType_lazy = () -> com.tools20022.repository.msg.AccountIdentificationAndName5.mmObject();
@@ -832,14 +834,12 @@ public class CreditTransfer8 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.CreditTransfer8.mmReference, com.tools20022.repository.msg.CreditTransfer8.mmDebtor, com.tools20022.repository.msg.CreditTransfer8.mmDebtorAccount,
-						com.tools20022.repository.msg.CreditTransfer8.mmDebtorAgent, com.tools20022.repository.msg.CreditTransfer8.mmDebtorAgentAccount, com.tools20022.repository.msg.CreditTransfer8.mmIntermediaryAgent1,
-						com.tools20022.repository.msg.CreditTransfer8.mmIntermediaryAgent1Account, com.tools20022.repository.msg.CreditTransfer8.mmIntermediaryAgent2,
-						com.tools20022.repository.msg.CreditTransfer8.mmIntermediaryAgent2Account, com.tools20022.repository.msg.CreditTransfer8.mmCreditorAgent, com.tools20022.repository.msg.CreditTransfer8.mmCreditorAgentAccount,
-						com.tools20022.repository.msg.CreditTransfer8.mmCreditor, com.tools20022.repository.msg.CreditTransfer8.mmCreditorAccount);
+				messageElement_lazy = () -> Arrays.asList(CreditTransfer8.mmReference, CreditTransfer8.mmDebtor, CreditTransfer8.mmDebtorAccount, CreditTransfer8.mmDebtorAgent, CreditTransfer8.mmDebtorAgentAccount,
+						CreditTransfer8.mmIntermediaryAgent1, CreditTransfer8.mmIntermediaryAgent1Account, CreditTransfer8.mmIntermediaryAgent2, CreditTransfer8.mmIntermediaryAgent2Account, CreditTransfer8.mmCreditorAgent,
+						CreditTransfer8.mmCreditorAgentAccount, CreditTransfer8.mmCreditor, CreditTransfer8.mmCreditorAccount);
 				trace_lazy = () -> CreditTransfer.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "CreditTransfer8";
 				definition = "Payment instrument between a debtor and a creditor, which flows through one or more financial institutions or systems.";
 				previousVersion_lazy = () -> CreditTransfer6.mmObject();

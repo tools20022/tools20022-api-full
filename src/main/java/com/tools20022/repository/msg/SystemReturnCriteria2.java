@@ -19,7 +19,9 @@ package com.tools20022.repository.msg;
 
 import com.tools20022.metamodel.MMMessageAttribute;
 import com.tools20022.metamodel.MMMessageComponent;
+import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.datatype.RequestedIndicator;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -100,7 +102,7 @@ public class SystemReturnCriteria2 {
 			componentContext_lazy = () -> SystemReturnCriteria2.mmObject();
 			isDerived = false;
 			xmlTag = "SysIdInd";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SystemIdentificationIndicator";
 			definition = "Indicates whether the system identification is requested.";
 			maxOccurs = 1;
@@ -143,7 +145,7 @@ public class SystemReturnCriteria2 {
 			componentContext_lazy = () -> SystemReturnCriteria2.mmObject();
 			isDerived = false;
 			xmlTag = "MmbIdInd";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "MemberIdentificationIndicator";
 			definition = "Indicates whether the member identification is requested.";
 			maxOccurs = 1;
@@ -186,7 +188,7 @@ public class SystemReturnCriteria2 {
 			componentContext_lazy = () -> SystemReturnCriteria2.mmObject();
 			isDerived = false;
 			xmlTag = "CtryIdInd";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CountryIdentificationIndicator";
 			definition = "Indicates whether the country identification is requested.";
 			maxOccurs = 1;
@@ -229,7 +231,7 @@ public class SystemReturnCriteria2 {
 			componentContext_lazy = () -> SystemReturnCriteria2.mmObject();
 			isDerived = false;
 			xmlTag = "AcctIdInd";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AccountIdentificationIndicator";
 			definition = "Indicates whether the account identification is requested.";
 			maxOccurs = 1;
@@ -241,10 +243,10 @@ public class SystemReturnCriteria2 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.SystemReturnCriteria2.mmSystemIdentificationIndicator, com.tools20022.repository.msg.SystemReturnCriteria2.mmMemberIdentificationIndicator,
-						com.tools20022.repository.msg.SystemReturnCriteria2.mmCountryIdentificationIndicator, com.tools20022.repository.msg.SystemReturnCriteria2.mmAccountIdentificationIndicator);
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				messageElement_lazy = () -> Arrays.asList(SystemReturnCriteria2.mmSystemIdentificationIndicator, SystemReturnCriteria2.mmMemberIdentificationIndicator, SystemReturnCriteria2.mmCountryIdentificationIndicator,
+						SystemReturnCriteria2.mmAccountIdentificationIndicator);
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "SystemReturnCriteria2";
 				definition = "Defines the criteria used to report on a system or a member of the system.";
 			}

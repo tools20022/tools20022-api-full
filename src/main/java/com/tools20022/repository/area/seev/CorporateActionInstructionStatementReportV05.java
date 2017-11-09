@@ -20,6 +20,7 @@ package com.tools20022.repository.area.seev;
 import com.tools20022.metamodel.MMMessageBuildingBlock;
 import com.tools20022.metamodel.MMMessageDefinition;
 import com.tools20022.metamodel.MMMessageDefinitionIdentifier;
+import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.area.SecuritiesEventsPreviousVersion;
 import com.tools20022.repository.msg.AccountIdentification33;
 import com.tools20022.repository.msg.Pagination;
@@ -48,6 +49,9 @@ import java.util.List;
  * <p>
  * <strong>Constant fields:</strong>
  * <ul>
+ * <li>
+ * {@linkplain com.tools20022.metamodel.MMMessageDefinition#getMessageDefinitionIdentifier
+ * messageDefinitionIdentifier} = {@code seev.042.001.05}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMMessageDefinition#getBusinessArea
  * businessArea} =
  * {@linkplain com.tools20022.repository.area.SecuritiesEventsPreviousVersion
@@ -82,9 +86,6 @@ import java.util.List;
  * CorporateActionInstructionStatementReportV05.mmSupplementaryData}</li>
  * </ul>
  * </li>
- * <li>
- * {@linkplain com.tools20022.metamodel.MMMessageDefinition#getMessageDefinitionIdentifier
- * messageDefinitionIdentifier} = {@code seev.042.001.05}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -155,11 +156,11 @@ public class CorporateActionInstructionStatementReportV05 {
 	public static final MMMessageBuildingBlock mmPagination = new MMMessageBuildingBlock() {
 		{
 			xmlTag = "Pgntn";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Pagination";
 			definition = "Page number of the message (within a statement) and continuation indicator to indicate that the statement is to continue or that the message is the last page of the statement.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.area.seev.CorporateActionInstructionStatementReportV06.mmPagination);
-			previousVersion_lazy = () -> com.tools20022.repository.area.seev.CorporateActionInstructionStatementReportV04.mmPagination;
+			nextVersions_lazy = () -> Arrays.asList(CorporateActionInstructionStatementReportV06.mmPagination);
+			previousVersion_lazy = () -> CorporateActionInstructionStatementReportV04.mmPagination;
 			maxOccurs = 1;
 			minOccurs = 1;
 			complexType_lazy = () -> Pagination.mmObject();
@@ -206,11 +207,11 @@ public class CorporateActionInstructionStatementReportV05 {
 	public static final MMMessageBuildingBlock mmStatementGeneralDetails = new MMMessageBuildingBlock() {
 		{
 			xmlTag = "StmtGnlDtls";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "StatementGeneralDetails";
 			definition = "General characteristics related to a statement which reports information.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.area.seev.CorporateActionInstructionStatementReportV06.mmStatementGeneralDetails);
-			previousVersion_lazy = () -> com.tools20022.repository.area.seev.CorporateActionInstructionStatementReportV04.mmStatementGeneralDetails;
+			nextVersions_lazy = () -> Arrays.asList(CorporateActionInstructionStatementReportV06.mmStatementGeneralDetails);
+			previousVersion_lazy = () -> CorporateActionInstructionStatementReportV04.mmStatementGeneralDetails;
 			maxOccurs = 1;
 			minOccurs = 1;
 			complexType_lazy = () -> Statement47.mmObject();
@@ -261,11 +262,11 @@ public class CorporateActionInstructionStatementReportV05 {
 	public static final MMMessageBuildingBlock mmAccountAndStatementDetails = new MMMessageBuildingBlock() {
 		{
 			xmlTag = "AcctAndStmtDtls";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AccountAndStatementDetails";
 			definition = "Account information and detailed account holdings information report for corporate action events.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.area.seev.CorporateActionInstructionStatementReportV06.mmAccountAndStatementDetails);
-			previousVersion_lazy = () -> com.tools20022.repository.area.seev.CorporateActionInstructionStatementReportV04.mmAccountAndStatementDetails;
+			nextVersions_lazy = () -> Arrays.asList(CorporateActionInstructionStatementReportV06.mmAccountAndStatementDetails);
+			previousVersion_lazy = () -> CorporateActionInstructionStatementReportV04.mmAccountAndStatementDetails;
 			minOccurs = 1;
 			complexType_lazy = () -> AccountIdentification33.mmObject();
 		}
@@ -313,11 +314,11 @@ public class CorporateActionInstructionStatementReportV05 {
 	public static final MMMessageBuildingBlock mmSupplementaryData = new MMMessageBuildingBlock() {
 		{
 			xmlTag = "SplmtryData";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SupplementaryData";
 			definition = "Additional information that can not be captured in the structured fields and/or any other specific block.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.area.seev.CorporateActionInstructionStatementReportV06.mmSupplementaryData);
-			previousVersion_lazy = () -> com.tools20022.repository.area.seev.CorporateActionInstructionStatementReportV04.mmSupplementaryData;
+			nextVersions_lazy = () -> Arrays.asList(CorporateActionInstructionStatementReportV06.mmSupplementaryData);
+			previousVersion_lazy = () -> CorporateActionInstructionStatementReportV04.mmSupplementaryData;
 			minOccurs = 0;
 			complexType_lazy = () -> SupplementaryData1.mmObject();
 		}
@@ -326,7 +327,7 @@ public class CorporateActionInstructionStatementReportV05 {
 	final static public MMMessageDefinition mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageDefinition() {
 			{
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "CorporateActionInstructionStatementReportV05";
 				definition = "Scope\r\nAn account servicer sends the CorporateActionInstructionStatementReport message to an account owner or its designated agent to report balances at the safekeeping account level for one or more corporate action events or at the corporate action event level for one or more safekeeping accounts.\r\nUsage\r\nThe message may also be used to:\r\n- re-send a message previously sent (the sub-function of the message is Duplicate),\r\n- provide a third party with a copy of a message for information (the sub-function of the message is Copy),\r\n- re-send to a third party a copy of a message for information (the sub-function of the message is Copy Duplicate),\r\nusing the relevant elements in the business application header (BAH).";
 				nextVersions_lazy = () -> Arrays.asList(CorporateActionInstructionStatementReportV06.mmObject());
@@ -335,9 +336,8 @@ public class CorporateActionInstructionStatementReportV05 {
 				rootElement = "Document";
 				xmlTag = "CorpActnInstrStmtRpt";
 				businessArea_lazy = () -> SecuritiesEventsPreviousVersion.mmObject();
-				messageBuildingBlock_lazy = () -> Arrays.asList(com.tools20022.repository.area.seev.CorporateActionInstructionStatementReportV05.mmPagination,
-						com.tools20022.repository.area.seev.CorporateActionInstructionStatementReportV05.mmStatementGeneralDetails,
-						com.tools20022.repository.area.seev.CorporateActionInstructionStatementReportV05.mmAccountAndStatementDetails, com.tools20022.repository.area.seev.CorporateActionInstructionStatementReportV05.mmSupplementaryData);
+				messageBuildingBlock_lazy = () -> Arrays.asList(CorporateActionInstructionStatementReportV05.mmPagination, CorporateActionInstructionStatementReportV05.mmStatementGeneralDetails,
+						CorporateActionInstructionStatementReportV05.mmAccountAndStatementDetails, CorporateActionInstructionStatementReportV05.mmSupplementaryData);
 				messageDefinitionIdentifier_lazy = () -> new MMMessageDefinitionIdentifier() {
 					{
 						businessArea = "seev";

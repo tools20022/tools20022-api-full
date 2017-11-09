@@ -19,7 +19,9 @@ package com.tools20022.repository.codeset;
 
 import com.tools20022.metamodel.MMCode;
 import com.tools20022.metamodel.MMCodeSet;
+import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.codeset.PriceProtectionScopeCode;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -87,7 +89,7 @@ public class PriceProtectionScope1Code extends PriceProtectionScopeCode {
 	 */
 	public static final MMCode mmLocal = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Local";
 			owner_lazy = () -> PriceProtectionScope1Code.mmObject();
 		}
@@ -110,7 +112,7 @@ public class PriceProtectionScope1Code extends PriceProtectionScopeCode {
 	 */
 	public static final MMCode mmNational = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "National";
 			owner_lazy = () -> PriceProtectionScope1Code.mmObject();
 		}
@@ -133,7 +135,7 @@ public class PriceProtectionScope1Code extends PriceProtectionScopeCode {
 	 */
 	public static final MMCode mmGlobal = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Global";
 			owner_lazy = () -> PriceProtectionScope1Code.mmObject();
 		}
@@ -142,13 +144,12 @@ public class PriceProtectionScope1Code extends PriceProtectionScopeCode {
 	static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
 				example = Arrays.asList("LOCA");
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "PriceProtectionScope1Code";
 				definition = "Defines the type of price protection the customer requires on their order.";
-				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.PriceProtectionScope1Code.mmLocal, com.tools20022.repository.codeset.PriceProtectionScope1Code.mmNational,
-						com.tools20022.repository.codeset.PriceProtectionScope1Code.mmGlobal);
+				code_lazy = () -> Arrays.asList(PriceProtectionScope1Code.mmLocal, PriceProtectionScope1Code.mmNational, PriceProtectionScope1Code.mmGlobal);
 				trace_lazy = () -> PriceProtectionScopeCode.mmObject();
 			}
 		});

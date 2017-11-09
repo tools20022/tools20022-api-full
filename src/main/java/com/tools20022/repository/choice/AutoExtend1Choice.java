@@ -19,8 +19,10 @@ package com.tools20022.repository.choice;
 
 import com.tools20022.metamodel.MMChoiceComponent;
 import com.tools20022.metamodel.MMMessageAttribute;
+import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.datatype.ISODate;
 import com.tools20022.repository.datatype.Number;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -94,7 +96,7 @@ public class AutoExtend1Choice {
 			componentContext_lazy = () -> AutoExtend1Choice.mmObject();
 			isDerived = false;
 			xmlTag = "Days";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Days";
 			definition = "Number of days.";
 			maxOccurs = 1;
@@ -135,7 +137,7 @@ public class AutoExtend1Choice {
 			componentContext_lazy = () -> AutoExtend1Choice.mmObject();
 			isDerived = false;
 			xmlTag = "Mnths";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Months";
 			definition = "Number of months";
 			maxOccurs = 1;
@@ -176,7 +178,7 @@ public class AutoExtend1Choice {
 			componentContext_lazy = () -> AutoExtend1Choice.mmObject();
 			isDerived = false;
 			xmlTag = "Yrs";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Years";
 			definition = "Number of years.";
 			maxOccurs = 1;
@@ -217,7 +219,7 @@ public class AutoExtend1Choice {
 			componentContext_lazy = () -> AutoExtend1Choice.mmObject();
 			isDerived = false;
 			xmlTag = "Dt";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Date";
 			definition = "Auto extension end date.";
 			maxOccurs = 1;
@@ -229,10 +231,9 @@ public class AutoExtend1Choice {
 	final static public MMChoiceComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMChoiceComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.choice.AutoExtend1Choice.mmDays, com.tools20022.repository.choice.AutoExtend1Choice.mmMonths, com.tools20022.repository.choice.AutoExtend1Choice.mmYears,
-						com.tools20022.repository.choice.AutoExtend1Choice.mmDate);
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				messageElement_lazy = () -> Arrays.asList(AutoExtend1Choice.mmDays, AutoExtend1Choice.mmMonths, AutoExtend1Choice.mmYears, AutoExtend1Choice.mmDate);
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "AutoExtend1Choice";
 				definition = "Choice of format for the auto extend period.";
 			}

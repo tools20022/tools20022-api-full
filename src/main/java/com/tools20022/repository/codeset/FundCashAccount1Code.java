@@ -19,7 +19,9 @@ package com.tools20022.repository.codeset;
 
 import com.tools20022.metamodel.MMCode;
 import com.tools20022.metamodel.MMCodeSet;
+import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.codeset.FundCashAccountCode;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -92,7 +94,7 @@ public class FundCashAccount1Code extends FundCashAccountCode {
 	 */
 	public static final MMCode mmCashAccount = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CashAccount";
 			owner_lazy = () -> FundCashAccount1Code.mmObject();
 		}
@@ -115,7 +117,7 @@ public class FundCashAccount1Code extends FundCashAccountCode {
 	 */
 	public static final MMCode mmPensionFundOrdinary = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PensionFundOrdinary";
 			owner_lazy = () -> FundCashAccount1Code.mmObject();
 		}
@@ -138,7 +140,7 @@ public class FundCashAccount1Code extends FundCashAccountCode {
 	 */
 	public static final MMCode mmPensionFundSpecial = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PensionFundSpecial";
 			owner_lazy = () -> FundCashAccount1Code.mmObject();
 		}
@@ -161,7 +163,7 @@ public class FundCashAccount1Code extends FundCashAccountCode {
 	 */
 	public static final MMCode mmRetirementScheme = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "RetirementScheme";
 			owner_lazy = () -> FundCashAccount1Code.mmObject();
 		}
@@ -184,7 +186,7 @@ public class FundCashAccount1Code extends FundCashAccountCode {
 	 */
 	public static final MMCode mmOther = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Other";
 			owner_lazy = () -> FundCashAccount1Code.mmObject();
 		}
@@ -193,13 +195,13 @@ public class FundCashAccount1Code extends FundCashAccountCode {
 	static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
 				example = Arrays.asList("CASH");
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "FundCashAccount1Code";
 				definition = "Specifies the cash account type.";
-				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.FundCashAccount1Code.mmCashAccount, com.tools20022.repository.codeset.FundCashAccount1Code.mmPensionFundOrdinary,
-						com.tools20022.repository.codeset.FundCashAccount1Code.mmPensionFundSpecial, com.tools20022.repository.codeset.FundCashAccount1Code.mmRetirementScheme, com.tools20022.repository.codeset.FundCashAccount1Code.mmOther);
+				code_lazy = () -> Arrays.asList(FundCashAccount1Code.mmCashAccount, FundCashAccount1Code.mmPensionFundOrdinary, FundCashAccount1Code.mmPensionFundSpecial, FundCashAccount1Code.mmRetirementScheme,
+						FundCashAccount1Code.mmOther);
 				trace_lazy = () -> FundCashAccountCode.mmObject();
 			}
 		});

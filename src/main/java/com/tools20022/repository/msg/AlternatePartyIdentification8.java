@@ -19,10 +19,14 @@ package com.tools20022.repository.msg;
 
 import com.tools20022.metamodel.MMMessageAttribute;
 import com.tools20022.metamodel.MMMessageComponent;
+import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.choice.IdentificationType43Choice;
 import com.tools20022.repository.codeset.CountryCode;
 import com.tools20022.repository.datatype.Max35Text;
+import com.tools20022.repository.entity.Country;
+import com.tools20022.repository.entity.GenericIdentification;
 import com.tools20022.repository.entity.PartyIdentificationInformation;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -122,10 +126,10 @@ public class AlternatePartyIdentification8 {
 			componentContext_lazy = () -> AlternatePartyIdentification8.mmObject();
 			isDerived = false;
 			xmlTag = "IdTp";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "IdentificationType";
 			definition = "Specifies the type of alternate identification of the party identified.";
-			previousVersion_lazy = () -> com.tools20022.repository.msg.AlternatePartyIdentification5.mmIdentificationType;
+			previousVersion_lazy = () -> AlternatePartyIdentification5.mmIdentificationType;
 			maxOccurs = 1;
 			minOccurs = 1;
 			complexType_lazy = () -> IdentificationType43Choice.mmObject();
@@ -172,14 +176,14 @@ public class AlternatePartyIdentification8 {
 	 */
 	public static final MMMessageAttribute mmCountry = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Country.mmCode;
+			businessElementTrace_lazy = () -> Country.mmCode;
 			componentContext_lazy = () -> AlternatePartyIdentification8.mmObject();
 			isDerived = false;
 			xmlTag = "Ctry";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Country";
 			definition = "Nation with its own government, occupying a particular territory.";
-			previousVersion_lazy = () -> com.tools20022.repository.msg.AlternatePartyIdentification5.mmCountry;
+			previousVersion_lazy = () -> AlternatePartyIdentification5.mmCountry;
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> CountryCode.mmObject();
@@ -225,14 +229,14 @@ public class AlternatePartyIdentification8 {
 	 */
 	public static final MMMessageAttribute mmAlternateIdentification = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.GenericIdentification.mmIdentification;
+			businessElementTrace_lazy = () -> GenericIdentification.mmIdentification;
 			componentContext_lazy = () -> AlternatePartyIdentification8.mmObject();
 			isDerived = false;
 			xmlTag = "AltrnId";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AlternateIdentification";
 			definition = "Alternate identification for a party.";
-			previousVersion_lazy = () -> com.tools20022.repository.msg.AlternatePartyIdentification5.mmAlternateIdentification;
+			previousVersion_lazy = () -> AlternatePartyIdentification5.mmAlternateIdentification;
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> Max35Text.mmObject();
@@ -242,11 +246,10 @@ public class AlternatePartyIdentification8 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.AlternatePartyIdentification8.mmIdentificationType, com.tools20022.repository.msg.AlternatePartyIdentification8.mmCountry,
-						com.tools20022.repository.msg.AlternatePartyIdentification8.mmAlternateIdentification);
+				messageElement_lazy = () -> Arrays.asList(AlternatePartyIdentification8.mmIdentificationType, AlternatePartyIdentification8.mmCountry, AlternatePartyIdentification8.mmAlternateIdentification);
 				trace_lazy = () -> PartyIdentificationInformation.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "AlternatePartyIdentification8";
 				definition = "Alternate identification for a party using an identification type, a country code and a text field.";
 				previousVersion_lazy = () -> AlternatePartyIdentification5.mmObject();

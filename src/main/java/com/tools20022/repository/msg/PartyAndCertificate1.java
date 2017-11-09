@@ -20,9 +20,11 @@ package com.tools20022.repository.msg;
 import com.tools20022.metamodel.MMMessageAssociationEnd;
 import com.tools20022.metamodel.MMMessageAttribute;
 import com.tools20022.metamodel.MMMessageComponent;
+import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.datatype.Max10KBinary;
 import com.tools20022.repository.datatype.Max15PlusSignedNumericText;
-import com.tools20022.repository.entity.MandateHolder;
+import com.tools20022.repository.entity.*;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -110,11 +112,11 @@ public class PartyAndCertificate1 {
 	 */
 	public static final MMMessageAssociationEnd mmParty = new MMMessageAssociationEnd() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Party.mmIdentification;
+			businessElementTrace_lazy = () -> Party.mmIdentification;
 			componentContext_lazy = () -> PartyAndCertificate1.mmObject();
 			isDerived = false;
 			xmlTag = "Pty";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Party";
 			definition = "Entity involved in an activity.";
 			maxOccurs = 1;
@@ -159,11 +161,11 @@ public class PartyAndCertificate1 {
 	 */
 	public static final MMMessageAttribute mmCertificate = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.ElectronicSignature.mmRelatedSecurityCertificate;
+			businessElementTrace_lazy = () -> ElectronicSignature.mmRelatedSecurityCertificate;
 			componentContext_lazy = () -> PartyAndCertificate1.mmObject();
 			isDerived = false;
 			xmlTag = "Cert";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Certificate";
 			definition = "Security certificate used to sign electronically.";
 			maxOccurs = 1;
@@ -207,11 +209,11 @@ public class PartyAndCertificate1 {
 	 */
 	public static final MMMessageAttribute mmSignatureOrder = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.SignatureCondition.mmSignatureOrder;
+			businessElementTrace_lazy = () -> SignatureCondition.mmSignatureOrder;
 			componentContext_lazy = () -> PartyAndCertificate1.mmObject();
 			isDerived = false;
 			xmlTag = "SgntrOrdr";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SignatureOrder";
 			definition = "Order in which the mandate holder has to sign.";
 			maxOccurs = 1;
@@ -253,11 +255,11 @@ public class PartyAndCertificate1 {
 	 */
 	public static final MMMessageAssociationEnd mmAuthorisation = new MMMessageAssociationEnd() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.BankOperation.mmOperationThreshold;
+			businessElementTrace_lazy = () -> BankOperation.mmOperationThreshold;
 			componentContext_lazy = () -> PartyAndCertificate1.mmObject();
 			isDerived = false;
 			xmlTag = "Authstn";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Authorisation";
 			definition = "Authorisation granted to a mandate holder.";
 			maxOccurs = 1;
@@ -270,11 +272,10 @@ public class PartyAndCertificate1 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.PartyAndCertificate1.mmParty, com.tools20022.repository.msg.PartyAndCertificate1.mmCertificate,
-						com.tools20022.repository.msg.PartyAndCertificate1.mmSignatureOrder, com.tools20022.repository.msg.PartyAndCertificate1.mmAuthorisation);
+				messageElement_lazy = () -> Arrays.asList(PartyAndCertificate1.mmParty, PartyAndCertificate1.mmCertificate, PartyAndCertificate1.mmSignatureOrder, PartyAndCertificate1.mmAuthorisation);
 				trace_lazy = () -> MandateHolder.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "PartyAndCertificate1";
 				definition = "Entity involved in an activity.";
 				nextVersions_lazy = () -> Arrays.asList(PartyAndCertificate2.mmObject());

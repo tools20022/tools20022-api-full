@@ -20,11 +20,15 @@ package com.tools20022.repository.msg;
 import com.tools20022.metamodel.MMMessageAssociationEnd;
 import com.tools20022.metamodel.MMMessageAttribute;
 import com.tools20022.metamodel.MMMessageComponent;
+import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.choice.LinkageType1Choice;
 import com.tools20022.repository.choice.PriorityNumeric1Choice;
 import com.tools20022.repository.codeset.ClearingChannel2Code;
 import com.tools20022.repository.datatype.YesNoIndicator;
+import com.tools20022.repository.entity.PaymentProcessing;
 import com.tools20022.repository.entity.SecuritiesSettlement;
+import com.tools20022.repository.entity.SecuritiesTrade;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.List;
@@ -118,11 +122,11 @@ public class RequestDetails10 {
 	 */
 	public static final MMMessageAssociationEnd mmReference = new MMMessageAssociationEnd() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.SecuritiesTrade.mmSecuritiesTradeRelatedIdentifications;
+			businessElementTrace_lazy = () -> SecuritiesTrade.mmSecuritiesTradeRelatedIdentifications;
 			componentContext_lazy = () -> RequestDetails10.mmObject();
 			isDerived = false;
 			xmlTag = "Ref";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Reference";
 			definition = "References of the transaction for which the intra-balance modification is requested.";
 			maxOccurs = 1;
@@ -165,7 +169,7 @@ public class RequestDetails10 {
 			componentContext_lazy = () -> RequestDetails10.mmObject();
 			isDerived = false;
 			xmlTag = "Lkg";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Linkage";
 			definition = "Specifies the type of linkage requested.";
 			maxOccurs = 1;
@@ -209,7 +213,7 @@ public class RequestDetails10 {
 			componentContext_lazy = () -> RequestDetails10.mmObject();
 			isDerived = false;
 			xmlTag = "Prty";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Priority";
 			definition = "Specifies whether the transaction is to be executed with a high priority.";
 			maxOccurs = 1;
@@ -251,7 +255,7 @@ public class RequestDetails10 {
 			componentContext_lazy = () -> RequestDetails10.mmObject();
 			isDerived = false;
 			xmlTag = "OthrPrcg";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "OtherProcessing";
 			definition = "Specifies another type of processing change request.";
 			minOccurs = 0;
@@ -294,11 +298,11 @@ public class RequestDetails10 {
 	 */
 	public static final MMMessageAttribute mmPartialSettlementIndicator = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.SecuritiesSettlement.mmPartialSettlementIndicator;
+			businessElementTrace_lazy = () -> SecuritiesSettlement.mmPartialSettlementIndicator;
 			componentContext_lazy = () -> RequestDetails10.mmObject();
 			isDerived = false;
 			xmlTag = "PrtlSttlmInd";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PartialSettlementIndicator";
 			definition = "Specifies whether partial settlement is allowed.";
 			maxOccurs = 1;
@@ -345,11 +349,11 @@ public class RequestDetails10 {
 	 */
 	public static final MMMessageAttribute mmClearingChannel = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.PaymentProcessing.mmClearingChannel;
+			businessElementTrace_lazy = () -> PaymentProcessing.mmClearingChannel;
 			componentContext_lazy = () -> RequestDetails10.mmObject();
 			isDerived = false;
 			xmlTag = "ClrChanl";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ClearingChannel";
 			definition = "Specifies the clearing channel to be used to process the payment instruction.";
 			maxOccurs = 1;
@@ -388,7 +392,7 @@ public class RequestDetails10 {
 			componentContext_lazy = () -> RequestDetails10.mmObject();
 			isDerived = false;
 			xmlTag = "Lnkgs";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Linkages";
 			definition = "Information regarding the linkage requested.";
 			minOccurs = 0;
@@ -400,12 +404,11 @@ public class RequestDetails10 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.RequestDetails10.mmReference, com.tools20022.repository.msg.RequestDetails10.mmLinkage, com.tools20022.repository.msg.RequestDetails10.mmPriority,
-						com.tools20022.repository.msg.RequestDetails10.mmOtherProcessing, com.tools20022.repository.msg.RequestDetails10.mmPartialSettlementIndicator, com.tools20022.repository.msg.RequestDetails10.mmClearingChannel,
-						com.tools20022.repository.msg.RequestDetails10.mmLinkages);
+				messageElement_lazy = () -> Arrays.asList(RequestDetails10.mmReference, RequestDetails10.mmLinkage, RequestDetails10.mmPriority, RequestDetails10.mmOtherProcessing, RequestDetails10.mmPartialSettlementIndicator,
+						RequestDetails10.mmClearingChannel, RequestDetails10.mmLinkages);
 				trace_lazy = () -> SecuritiesSettlement.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 				name = "RequestDetails10";
 				definition = "Details of the request providing  the changes and references of the instruction.";
 			}

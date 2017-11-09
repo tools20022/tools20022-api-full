@@ -20,8 +20,12 @@ package com.tools20022.repository.msg;
 import com.tools20022.metamodel.MMMessageAssociationEnd;
 import com.tools20022.metamodel.MMMessageAttribute;
 import com.tools20022.metamodel.MMMessageComponent;
+import com.tools20022.metamodel.MMRegistrationStatus;
+import com.tools20022.repository.area.tsrv.UndertakingAmendmentAdviceV01;
 import com.tools20022.repository.entity.AmendmentOfUndertaking;
+import com.tools20022.repository.entity.Undertaking;
 import com.tools20022.repository.entity.UndertakingAdvisingParty;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.List;
@@ -119,7 +123,7 @@ public class Amendment2 {
 			componentContext_lazy = () -> Amendment2.mmObject();
 			isDerived = false;
 			xmlTag = "UdrtkgAmdmntMsg";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "UndertakingAmendmentMessage";
 			definition = "Contents of the related Undertaking Amendment message.";
 			maxOccurs = 1;
@@ -168,7 +172,7 @@ public class Amendment2 {
 			componentContext_lazy = () -> Amendment2.mmObject();
 			isDerived = false;
 			xmlTag = "FrstAdvsgPtyAddtlInf";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "FirstAdvisingPartyAdditionalInformation";
 			definition = "Additional information related to the first advising party.";
 			maxOccurs = 1;
@@ -216,7 +220,7 @@ public class Amendment2 {
 			componentContext_lazy = () -> Amendment2.mmObject();
 			isDerived = false;
 			xmlTag = "ScndAdvsgPtyAddtlInf";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SecondAdvisingPartyAdditionalInformation";
 			definition = "Additional information related to the second advising party.";
 			maxOccurs = 1;
@@ -259,11 +263,11 @@ public class Amendment2 {
 	 */
 	public static final MMMessageAssociationEnd mmConfirmationDetails = new MMMessageAssociationEnd() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.AmendmentOfUndertaking.mmUndertaking;
+			businessElementTrace_lazy = () -> AmendmentOfUndertaking.mmUndertaking;
 			componentContext_lazy = () -> Amendment2.mmObject();
 			isDerived = false;
 			xmlTag = "ConfDtls";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ConfirmationDetails";
 			definition = "Details concerning the confirmation of the proposed amendment.";
 			maxOccurs = 1;
@@ -308,11 +312,11 @@ public class Amendment2 {
 	 */
 	public static final MMMessageAssociationEnd mmDigitalSignature = new MMMessageAssociationEnd() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Undertaking.mmElectronicSignature;
+			businessElementTrace_lazy = () -> Undertaking.mmElectronicSignature;
 			componentContext_lazy = () -> Amendment2.mmObject();
 			isDerived = false;
 			xmlTag = "DgtlSgntr";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "DigitalSignature";
 			definition = "Digital signature of the party providing additional undertaking amendment advice details.";
 			maxOccurs = 3;
@@ -325,12 +329,12 @@ public class Amendment2 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.Amendment2.mmUndertakingAmendmentMessage, com.tools20022.repository.msg.Amendment2.mmFirstAdvisingPartyAdditionalInformation,
-						com.tools20022.repository.msg.Amendment2.mmSecondAdvisingPartyAdditionalInformation, com.tools20022.repository.msg.Amendment2.mmConfirmationDetails, com.tools20022.repository.msg.Amendment2.mmDigitalSignature);
-				messageBuildingBlock_lazy = () -> Arrays.asList(com.tools20022.repository.area.tsrv.UndertakingAmendmentAdviceV01.mmUndertakingAmendmentAdviceDetails);
+				messageElement_lazy = () -> Arrays.asList(Amendment2.mmUndertakingAmendmentMessage, Amendment2.mmFirstAdvisingPartyAdditionalInformation, Amendment2.mmSecondAdvisingPartyAdditionalInformation,
+						Amendment2.mmConfirmationDetails, Amendment2.mmDigitalSignature);
+				messageBuildingBlock_lazy = () -> Arrays.asList(UndertakingAmendmentAdviceV01.mmUndertakingAmendmentAdviceDetails);
 				trace_lazy = () -> AmendmentOfUndertaking.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "Amendment2";
 				definition = "Details of the amendment.";
 			}

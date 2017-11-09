@@ -19,7 +19,9 @@ package com.tools20022.repository.choice;
 
 import com.tools20022.metamodel.MMChoiceComponent;
 import com.tools20022.metamodel.MMMessageAttribute;
+import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.datatype.YesNoIndicator;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -96,7 +98,7 @@ public class DefaultProcessingOrStandingInstruction1Choice {
 			componentContext_lazy = () -> DefaultProcessingOrStandingInstruction1Choice.mmObject();
 			isDerived = false;
 			xmlTag = "DfltOptnInd";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "DefaultOptionIndicator";
 			definition = "Indicates whether the option, for example, currency option, will be selected by default if no instruction is provided by the account owner.";
 			maxOccurs = 1;
@@ -141,7 +143,7 @@ public class DefaultProcessingOrStandingInstruction1Choice {
 			componentContext_lazy = () -> DefaultProcessingOrStandingInstruction1Choice.mmObject();
 			isDerived = false;
 			xmlTag = "StgInstrInd";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "StandingInstructionIndicator";
 			definition = "Indicates whether an account owner has placed a standing order to select this corporate action option.";
 			maxOccurs = 1;
@@ -153,10 +155,9 @@ public class DefaultProcessingOrStandingInstruction1Choice {
 	final static public MMChoiceComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMChoiceComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.choice.DefaultProcessingOrStandingInstruction1Choice.mmDefaultOptionIndicator,
-						com.tools20022.repository.choice.DefaultProcessingOrStandingInstruction1Choice.mmStandingInstructionIndicator);
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				messageElement_lazy = () -> Arrays.asList(DefaultProcessingOrStandingInstruction1Choice.mmDefaultOptionIndicator, DefaultProcessingOrStandingInstruction1Choice.mmStandingInstructionIndicator);
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "DefaultProcessingOrStandingInstruction1Choice";
 				definition = "Choice between default processing or standing instruction.";
 			}

@@ -20,7 +20,9 @@ package com.tools20022.repository.msg;
 import com.tools20022.metamodel.MMMessageAssociationEnd;
 import com.tools20022.metamodel.MMMessageAttribute;
 import com.tools20022.metamodel.MMMessageComponent;
+import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.datatype.BICFIIdentifier;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.List;
@@ -96,7 +98,7 @@ public class DirectoryInformation1 {
 			componentContext_lazy = () -> DirectoryInformation1.mmObject();
 			isDerived = false;
 			xmlTag = "PtcptInf";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ParticipantInformation";
 			definition = "Information about participant.";
 			maxOccurs = 1;
@@ -139,7 +141,7 @@ public class DirectoryInformation1 {
 			componentContext_lazy = () -> DirectoryInformation1.mmObject();
 			isDerived = false;
 			xmlTag = "PtcptSwiftIdrsList";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ParticipantSWIFTIdentifiersList";
 			definition = "SWIFT assigned BIC.";
 			minOccurs = 0;
@@ -179,7 +181,7 @@ public class DirectoryInformation1 {
 			componentContext_lazy = () -> DirectoryInformation1.mmObject();
 			isDerived = false;
 			xmlTag = "Accts";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Accounts";
 			definition = "Account information.";
 			minOccurs = 0;
@@ -191,10 +193,9 @@ public class DirectoryInformation1 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.DirectoryInformation1.mmParticipantInformation, com.tools20022.repository.msg.DirectoryInformation1.mmParticipantSWIFTIdentifiersList,
-						com.tools20022.repository.msg.DirectoryInformation1.mmAccounts);
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+				messageElement_lazy = () -> Arrays.asList(DirectoryInformation1.mmParticipantInformation, DirectoryInformation1.mmParticipantSWIFTIdentifiersList, DirectoryInformation1.mmAccounts);
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 				name = "DirectoryInformation1";
 				definition = "Participant details from National BIC directory.";
 			}

@@ -19,7 +19,9 @@ package com.tools20022.repository.codeset;
 
 import com.tools20022.metamodel.MMCode;
 import com.tools20022.metamodel.MMCodeSet;
+import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.codeset.UserInterfaceCode;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -89,7 +91,7 @@ public class UserInterface1Code extends UserInterfaceCode {
 	 */
 	public static final MMCode mmCardholderDisplay = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CardholderDisplay";
 			owner_lazy = () -> UserInterface1Code.mmObject();
 		}
@@ -112,7 +114,7 @@ public class UserInterface1Code extends UserInterfaceCode {
 	 */
 	public static final MMCode mmCardholderReceipt = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CardholderReceipt";
 			owner_lazy = () -> UserInterface1Code.mmObject();
 		}
@@ -135,7 +137,7 @@ public class UserInterface1Code extends UserInterfaceCode {
 	 */
 	public static final MMCode mmMerchantDisplay = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "MerchantDisplay";
 			owner_lazy = () -> UserInterface1Code.mmObject();
 		}
@@ -158,7 +160,7 @@ public class UserInterface1Code extends UserInterfaceCode {
 	 */
 	public static final MMCode mmMerchantReceipt = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "MerchantReceipt";
 			owner_lazy = () -> UserInterface1Code.mmObject();
 		}
@@ -167,13 +169,12 @@ public class UserInterface1Code extends UserInterfaceCode {
 	static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
 				example = Arrays.asList("CDSP");
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "UserInterface1Code";
 				definition = "Type of user interface to display or print information.";
-				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.UserInterface1Code.mmCardholderDisplay, com.tools20022.repository.codeset.UserInterface1Code.mmCardholderReceipt,
-						com.tools20022.repository.codeset.UserInterface1Code.mmMerchantDisplay, com.tools20022.repository.codeset.UserInterface1Code.mmMerchantReceipt);
+				code_lazy = () -> Arrays.asList(UserInterface1Code.mmCardholderDisplay, UserInterface1Code.mmCardholderReceipt, UserInterface1Code.mmMerchantDisplay, UserInterface1Code.mmMerchantReceipt);
 				trace_lazy = () -> UserInterfaceCode.mmObject();
 			}
 		});

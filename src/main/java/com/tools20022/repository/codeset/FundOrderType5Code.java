@@ -19,7 +19,9 @@ package com.tools20022.repository.codeset;
 
 import com.tools20022.metamodel.MMCode;
 import com.tools20022.metamodel.MMCodeSet;
+import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.codeset.FundOrderTypeCode;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -89,7 +91,7 @@ public class FundOrderType5Code extends FundOrderTypeCode {
 	 */
 	public static final MMCode mmNormalStaffPortion = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "NormalStaffPortion";
 			owner_lazy = () -> FundOrderType5Code.mmObject();
 		}
@@ -112,7 +114,7 @@ public class FundOrderType5Code extends FundOrderTypeCode {
 	 */
 	public static final MMCode mmNormalClientPortion = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "NormalClientPortion";
 			owner_lazy = () -> FundOrderType5Code.mmObject();
 		}
@@ -135,7 +137,7 @@ public class FundOrderType5Code extends FundOrderTypeCode {
 	 */
 	public static final MMCode mmStaffWithSavingsPlan = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "StaffWithSavingsPlan";
 			owner_lazy = () -> FundOrderType5Code.mmObject();
 		}
@@ -158,7 +160,7 @@ public class FundOrderType5Code extends FundOrderTypeCode {
 	 */
 	public static final MMCode mmClientWithSavingsPlan = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ClientWithSavingsPlan";
 			owner_lazy = () -> FundOrderType5Code.mmObject();
 		}
@@ -167,13 +169,12 @@ public class FundOrderType5Code extends FundOrderTypeCode {
 	static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
 				example = Arrays.asList("NSPN");
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "FundOrderType5Code";
 				definition = "Specifies the category of the investment fund order.";
-				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.FundOrderType5Code.mmNormalStaffPortion, com.tools20022.repository.codeset.FundOrderType5Code.mmNormalClientPortion,
-						com.tools20022.repository.codeset.FundOrderType5Code.mmStaffWithSavingsPlan, com.tools20022.repository.codeset.FundOrderType5Code.mmClientWithSavingsPlan);
+				code_lazy = () -> Arrays.asList(FundOrderType5Code.mmNormalStaffPortion, FundOrderType5Code.mmNormalClientPortion, FundOrderType5Code.mmStaffWithSavingsPlan, FundOrderType5Code.mmClientWithSavingsPlan);
 				trace_lazy = () -> FundOrderTypeCode.mmObject();
 			}
 		});

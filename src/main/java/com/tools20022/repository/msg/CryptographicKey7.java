@@ -19,12 +19,14 @@ package com.tools20022.repository.msg;
 
 import com.tools20022.metamodel.MMMessageAttribute;
 import com.tools20022.metamodel.MMMessageComponent;
+import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.codeset.ATMStatus3Code;
 import com.tools20022.repository.codeset.CryptographicKeyType3Code;
 import com.tools20022.repository.codeset.FailureReason6Code;
 import com.tools20022.repository.codeset.KeyUsage1Code;
 import com.tools20022.repository.datatype.*;
 import com.tools20022.repository.datatype.Number;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.List;
@@ -149,11 +151,11 @@ public class CryptographicKey7 {
 			componentContext_lazy = () -> CryptographicKey7.mmObject();
 			isDerived = false;
 			xmlTag = "Nm";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Name";
 			definition = "Name or label of the key.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.CryptographicKey8.mmName);
-			previousVersion_lazy = () -> com.tools20022.repository.msg.CryptographicKey6.mmName;
+			nextVersions_lazy = () -> Arrays.asList(CryptographicKey8.mmName);
+			previousVersion_lazy = () -> CryptographicKey6.mmName;
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> Max140Text.mmObject();
@@ -205,11 +207,11 @@ public class CryptographicKey7 {
 			componentContext_lazy = () -> CryptographicKey7.mmObject();
 			isDerived = false;
 			xmlTag = "Id";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Identification";
 			definition = "Name of the cryptographic key.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.CryptographicKey8.mmIdentification);
-			previousVersion_lazy = () -> com.tools20022.repository.msg.CryptographicKey6.mmIdentification;
+			nextVersions_lazy = () -> Arrays.asList(CryptographicKey8.mmIdentification);
+			previousVersion_lazy = () -> CryptographicKey6.mmIdentification;
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> Max140Text.mmObject();
@@ -256,10 +258,10 @@ public class CryptographicKey7 {
 			componentContext_lazy = () -> CryptographicKey7.mmObject();
 			isDerived = false;
 			xmlTag = "SctyDomnId";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SecurityDomainIdentification";
 			definition = "Identification of the security domain.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.CryptographicKey8.mmSecurityDomainIdentification);
+			nextVersions_lazy = () -> Arrays.asList(CryptographicKey8.mmSecurityDomainIdentification);
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> Max35Text.mmObject();
@@ -307,10 +309,10 @@ public class CryptographicKey7 {
 			componentContext_lazy = () -> CryptographicKey7.mmObject();
 			isDerived = false;
 			xmlTag = "AddtlId";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AdditionalIdentification";
 			definition = "Additional identification of the key, for instance to derive the key.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.CryptographicKey8.mmAdditionalIdentification);
+			nextVersions_lazy = () -> Arrays.asList(CryptographicKey8.mmAdditionalIdentification);
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> Max35Binary.mmObject();
@@ -362,11 +364,11 @@ public class CryptographicKey7 {
 			componentContext_lazy = () -> CryptographicKey7.mmObject();
 			isDerived = false;
 			xmlTag = "Vrsn";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Version";
 			definition = "Version of the cryptographic key.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.CryptographicKey8.mmVersion);
-			previousVersion_lazy = () -> com.tools20022.repository.msg.CryptographicKey6.mmVersion;
+			nextVersions_lazy = () -> Arrays.asList(CryptographicKey8.mmVersion);
+			previousVersion_lazy = () -> CryptographicKey6.mmVersion;
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> Max256Text.mmObject();
@@ -405,7 +407,7 @@ public class CryptographicKey7 {
 			componentContext_lazy = () -> CryptographicKey7.mmObject();
 			isDerived = false;
 			xmlTag = "SeqCntr";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SequenceCounter";
 			definition = "Sequence counter of the cryptographic key.";
 			maxOccurs = 1;
@@ -459,11 +461,11 @@ public class CryptographicKey7 {
 			componentContext_lazy = () -> CryptographicKey7.mmObject();
 			isDerived = false;
 			xmlTag = "Tp";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Type";
 			definition = "Type of algorithm used by the cryptographic key.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.CryptographicKey8.mmType);
-			previousVersion_lazy = () -> com.tools20022.repository.msg.CryptographicKey6.mmType;
+			nextVersions_lazy = () -> Arrays.asList(CryptographicKey8.mmType);
+			previousVersion_lazy = () -> CryptographicKey6.mmType;
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> CryptographicKeyType3Code.mmObject();
@@ -516,11 +518,11 @@ public class CryptographicKey7 {
 			componentContext_lazy = () -> CryptographicKey7.mmObject();
 			isDerived = false;
 			xmlTag = "Fctn";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Function";
 			definition = "Allowed usage of the key.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.CryptographicKey8.mmFunction);
-			previousVersion_lazy = () -> com.tools20022.repository.msg.CryptographicKey6.mmFunction;
+			nextVersions_lazy = () -> Arrays.asList(CryptographicKey8.mmFunction);
+			previousVersion_lazy = () -> CryptographicKey6.mmFunction;
 			minOccurs = 1;
 			simpleType_lazy = () -> KeyUsage1Code.mmObject();
 		}
@@ -571,11 +573,11 @@ public class CryptographicKey7 {
 			componentContext_lazy = () -> CryptographicKey7.mmObject();
 			isDerived = false;
 			xmlTag = "ActvtnDt";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ActivationDate";
 			definition = "Date and time on which the key must be activated.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.CryptographicKey8.mmActivationDate);
-			previousVersion_lazy = () -> com.tools20022.repository.msg.CryptographicKey6.mmActivationDate;
+			nextVersions_lazy = () -> Arrays.asList(CryptographicKey8.mmActivationDate);
+			previousVersion_lazy = () -> CryptographicKey6.mmActivationDate;
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> ISODateTime.mmObject();
@@ -627,11 +629,11 @@ public class CryptographicKey7 {
 			componentContext_lazy = () -> CryptographicKey7.mmObject();
 			isDerived = false;
 			xmlTag = "DeactvtnDt";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "DeactivationDate";
 			definition = "Date and time on which the key must be deactivated.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.CryptographicKey8.mmDeactivationDate);
-			previousVersion_lazy = () -> com.tools20022.repository.msg.CryptographicKey6.mmDeactivationDate;
+			nextVersions_lazy = () -> Arrays.asList(CryptographicKey8.mmDeactivationDate);
+			previousVersion_lazy = () -> CryptographicKey6.mmDeactivationDate;
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> ISODateTime.mmObject();
@@ -678,10 +680,10 @@ public class CryptographicKey7 {
 			componentContext_lazy = () -> CryptographicKey7.mmObject();
 			isDerived = false;
 			xmlTag = "KeyChckVal";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "KeyCheckValue";
 			definition = "Value for checking a cryptographic key.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.CryptographicKey8.mmKeyCheckValue);
+			nextVersions_lazy = () -> Arrays.asList(CryptographicKey8.mmKeyCheckValue);
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> Max35Binary.mmObject();
@@ -721,7 +723,7 @@ public class CryptographicKey7 {
 			componentContext_lazy = () -> CryptographicKey7.mmObject();
 			isDerived = false;
 			xmlTag = "CurSts";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CurrentStatus";
 			definition = "Current status of the key.";
 			maxOccurs = 1;
@@ -763,7 +765,7 @@ public class CryptographicKey7 {
 			componentContext_lazy = () -> CryptographicKey7.mmObject();
 			isDerived = false;
 			xmlTag = "FailrRsn";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "FailureReason";
 			definition = "Reason for which the key has been stopped.";
 			maxOccurs = 1;
@@ -775,13 +777,11 @@ public class CryptographicKey7 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.CryptographicKey7.mmName, com.tools20022.repository.msg.CryptographicKey7.mmIdentification,
-						com.tools20022.repository.msg.CryptographicKey7.mmSecurityDomainIdentification, com.tools20022.repository.msg.CryptographicKey7.mmAdditionalIdentification, com.tools20022.repository.msg.CryptographicKey7.mmVersion,
-						com.tools20022.repository.msg.CryptographicKey7.mmSequenceCounter, com.tools20022.repository.msg.CryptographicKey7.mmType, com.tools20022.repository.msg.CryptographicKey7.mmFunction,
-						com.tools20022.repository.msg.CryptographicKey7.mmActivationDate, com.tools20022.repository.msg.CryptographicKey7.mmDeactivationDate, com.tools20022.repository.msg.CryptographicKey7.mmKeyCheckValue,
-						com.tools20022.repository.msg.CryptographicKey7.mmCurrentStatus, com.tools20022.repository.msg.CryptographicKey7.mmFailureReason);
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				messageElement_lazy = () -> Arrays.asList(CryptographicKey7.mmName, CryptographicKey7.mmIdentification, CryptographicKey7.mmSecurityDomainIdentification, CryptographicKey7.mmAdditionalIdentification,
+						CryptographicKey7.mmVersion, CryptographicKey7.mmSequenceCounter, CryptographicKey7.mmType, CryptographicKey7.mmFunction, CryptographicKey7.mmActivationDate, CryptographicKey7.mmDeactivationDate,
+						CryptographicKey7.mmKeyCheckValue, CryptographicKey7.mmCurrentStatus, CryptographicKey7.mmFailureReason);
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "CryptographicKey7";
 				definition = "Cryptographic Key component.";
 				nextVersions_lazy = () -> Arrays.asList(CryptographicKey8.mmObject());

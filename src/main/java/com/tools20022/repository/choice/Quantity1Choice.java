@@ -19,8 +19,10 @@ package com.tools20022.repository.choice;
 
 import com.tools20022.metamodel.MMChoiceComponent;
 import com.tools20022.metamodel.MMMessageAttribute;
+import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.codeset.RelativeSize1Code;
 import com.tools20022.repository.entity.SecuritiesQuantity;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -105,7 +107,7 @@ public class Quantity1Choice {
 			componentContext_lazy = () -> Quantity1Choice.mmObject();
 			isDerived = false;
 			xmlTag = "Qty";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Quantity";
 			definition = "Quantity is expressed in units, face amount or amortised amount.";
 			maxOccurs = 1;
@@ -154,7 +156,7 @@ public class Quantity1Choice {
 			componentContext_lazy = () -> Quantity1Choice.mmObject();
 			isDerived = false;
 			xmlTag = "RltvSz";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "RelativeSize";
 			definition = "Quantity expressed in relative size (small, medium or large).";
 			maxOccurs = 1;
@@ -166,10 +168,10 @@ public class Quantity1Choice {
 	final static public MMChoiceComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMChoiceComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.choice.Quantity1Choice.mmQuantity, com.tools20022.repository.choice.Quantity1Choice.mmRelativeSize);
+				messageElement_lazy = () -> Arrays.asList(Quantity1Choice.mmQuantity, Quantity1Choice.mmRelativeSize);
 				trace_lazy = () -> SecuritiesQuantity.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 				name = "Quantity1Choice";
 				definition = "Choice between the quantity expressed in units or face amounts or amortised amount and a relative size (small, medium or large).";
 			}

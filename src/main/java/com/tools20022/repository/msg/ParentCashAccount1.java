@@ -19,9 +19,11 @@ package com.tools20022.repository.msg;
 
 import com.tools20022.metamodel.MMMessageAttribute;
 import com.tools20022.metamodel.MMMessageComponent;
+import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.codeset.AccountLevel1Code;
 import com.tools20022.repository.entity.AccountServicerRole;
 import com.tools20022.repository.entity.CashAccount;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -115,14 +117,14 @@ public class ParentCashAccount1 {
 	 */
 	public static final MMMessageAttribute mmLevel = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.CashAccount.mmLevel;
+			businessElementTrace_lazy = () -> CashAccount.mmLevel;
 			componentContext_lazy = () -> ParentCashAccount1.mmObject();
 			isDerived = false;
 			xmlTag = "Lvl";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Level";
 			definition = "Defines the parent account level within a hierarchy.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.ParentCashAccount2.mmLevel);
+			nextVersions_lazy = () -> Arrays.asList(ParentCashAccount2.mmLevel);
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> AccountLevel1Code.mmObject();
@@ -177,10 +179,10 @@ public class ParentCashAccount1 {
 			componentContext_lazy = () -> ParentCashAccount1.mmObject();
 			isDerived = false;
 			xmlTag = "Id";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Identification";
 			definition = "Unique and unambiguous identification for the parent account between the parent account owner and the parent account servicer.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.ParentCashAccount2.mmIdentification);
+			nextVersions_lazy = () -> Arrays.asList(ParentCashAccount2.mmIdentification);
 			maxOccurs = 1;
 			minOccurs = 1;
 			complexType_lazy = () -> com.tools20022.repository.msg.CashAccount16.mmObject();
@@ -235,10 +237,10 @@ public class ParentCashAccount1 {
 			componentContext_lazy = () -> ParentCashAccount1.mmObject();
 			isDerived = false;
 			xmlTag = "Svcr";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Servicer";
 			definition = "Financial institution in which the parent account resides.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.ParentCashAccount2.mmServicer);
+			nextVersions_lazy = () -> Arrays.asList(ParentCashAccount2.mmServicer);
 			maxOccurs = 1;
 			minOccurs = 0;
 			complexType_lazy = () -> com.tools20022.repository.msg.BranchAndFinancialInstitutionIdentification5.mmObject();
@@ -248,11 +250,10 @@ public class ParentCashAccount1 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.ParentCashAccount1.mmLevel, com.tools20022.repository.msg.ParentCashAccount1.mmIdentification,
-						com.tools20022.repository.msg.ParentCashAccount1.mmServicer);
+				messageElement_lazy = () -> Arrays.asList(ParentCashAccount1.mmLevel, ParentCashAccount1.mmIdentification, ParentCashAccount1.mmServicer);
 				trace_lazy = () -> CashAccount.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "ParentCashAccount1";
 				definition = "Specifies the cash account elements of a parent cash account.";
 				nextVersions_lazy = () -> Arrays.asList(ParentCashAccount2.mmObject());

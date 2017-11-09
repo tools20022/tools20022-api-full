@@ -17,12 +17,11 @@
 
 package com.tools20022.repository.msg;
 
-import com.tools20022.metamodel.MMMessageAssociationEnd;
-import com.tools20022.metamodel.MMMessageAttribute;
-import com.tools20022.metamodel.MMMessageComponent;
-import com.tools20022.metamodel.MMXor;
+import com.tools20022.metamodel.*;
+import com.tools20022.repository.area.acmt.RequestForAccountManagementStatusReportV02;
 import com.tools20022.repository.codeset.AccountManagementType1Code;
 import com.tools20022.repository.datatype.Max35Text;
+import com.tools20022.repository.GeneratedRepository;
 import java.text.DateFormat;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
@@ -136,7 +135,7 @@ public class AccountManagementMessageReference1 {
 			componentContext_lazy = () -> AccountManagementMessageReference1.mmObject();
 			isDerived = false;
 			xmlTag = "OthrRef";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "OtherReference";
 			definition = "Reference to a linked message sent in a proprietary way or reference of a system.";
 			maxOccurs = 1;
@@ -177,7 +176,7 @@ public class AccountManagementMessageReference1 {
 			componentContext_lazy = () -> AccountManagementMessageReference1.mmObject();
 			isDerived = false;
 			xmlTag = "PrvsRef";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PreviousReference";
 			definition = "Reference to a linked message that was previously sent.";
 			maxOccurs = 1;
@@ -231,10 +230,10 @@ public class AccountManagementMessageReference1 {
 			componentContext_lazy = () -> AccountManagementMessageReference1.mmObject();
 			isDerived = false;
 			xmlTag = "StsReqTp";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "StatusRequestType";
 			definition = "Specifies if the status request refers to an earlier account opening or modification instruction message.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.AccountManagementMessageReference2.mmStatusRequestType);
+			nextVersions_lazy = () -> Arrays.asList(AccountManagementMessageReference2.mmStatusRequestType);
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> AccountManagementType1Code.mmObject();
@@ -284,10 +283,10 @@ public class AccountManagementMessageReference1 {
 			componentContext_lazy = () -> AccountManagementMessageReference1.mmObject();
 			isDerived = false;
 			xmlTag = "AcctApplId";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AccountApplicationIdentification";
 			definition = "Unique and unambiguous identifier of the account opening or account modification instruction at application level.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.AccountManagementMessageReference2.mmAccountApplicationIdentification);
+			nextVersions_lazy = () -> Arrays.asList(AccountManagementMessageReference2.mmAccountApplicationIdentification);
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> Max35Text.mmObject();
@@ -336,10 +335,10 @@ public class AccountManagementMessageReference1 {
 			componentContext_lazy = () -> AccountManagementMessageReference1.mmObject();
 			isDerived = false;
 			xmlTag = "InvstmtAcct";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "InvestmentAccount";
 			definition = "Account information for which the status of an account management instruction is requested.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.AccountManagementMessageReference2.mmInvestmentAccount);
+			nextVersions_lazy = () -> Arrays.asList(AccountManagementMessageReference2.mmInvestmentAccount);
 			maxOccurs = 1;
 			minOccurs = 0;
 			isComposite = true;
@@ -351,6 +350,10 @@ public class AccountManagementMessageReference1 {
 	 * <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
+	 * <li>{@linkplain com.tools20022.metamodel.MMXor#getMessageComponent
+	 * messageComponent} =
+	 * {@linkplain com.tools20022.repository.msg.AccountManagementMessageReference1
+	 * AccountManagementMessageReference1}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMXor#getImpactedElements
 	 * impactedElements} =
 	 * <ul>
@@ -362,10 +365,6 @@ public class AccountManagementMessageReference1 {
 	 * AccountManagementMessageReference1.mmPreviousReference}</li>
 	 * </ul>
 	 * </li>
-	 * <li>{@linkplain com.tools20022.metamodel.MMXor#getMessageComponent
-	 * messageComponent} =
-	 * {@linkplain com.tools20022.repository.msg.AccountManagementMessageReference1
-	 * AccountManagementMessageReference1}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
@@ -381,23 +380,22 @@ public class AccountManagementMessageReference1 {
 	 */
 	public static final MMXor mmPreviousReferenceOrOtherReferenceRule = new MMXor() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PreviousReferenceOrOtherReferenceRule";
 			definition = "Either PreviousReference or OtherReference may be present, but not both.";
 			messageComponent_lazy = () -> AccountManagementMessageReference1.mmObject();
-			impactedElements_lazy = () -> Arrays.asList(com.tools20022.repository.msg.AccountManagementMessageReference1.mmOtherReference, com.tools20022.repository.msg.AccountManagementMessageReference1.mmPreviousReference);
+			impactedElements_lazy = () -> Arrays.asList(AccountManagementMessageReference1.mmOtherReference, AccountManagementMessageReference1.mmPreviousReference);
 		}
 	};
 
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.AccountManagementMessageReference1.mmOtherReference, com.tools20022.repository.msg.AccountManagementMessageReference1.mmPreviousReference,
-						com.tools20022.repository.msg.AccountManagementMessageReference1.mmStatusRequestType, com.tools20022.repository.msg.AccountManagementMessageReference1.mmAccountApplicationIdentification,
-						com.tools20022.repository.msg.AccountManagementMessageReference1.mmInvestmentAccount);
-				messageBuildingBlock_lazy = () -> Arrays.asList(com.tools20022.repository.area.acmt.RequestForAccountManagementStatusReportV02.mmRequestDetails);
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.OBSOLETE;
+				messageElement_lazy = () -> Arrays.asList(AccountManagementMessageReference1.mmOtherReference, AccountManagementMessageReference1.mmPreviousReference, AccountManagementMessageReference1.mmStatusRequestType,
+						AccountManagementMessageReference1.mmAccountApplicationIdentification, AccountManagementMessageReference1.mmInvestmentAccount);
+				messageBuildingBlock_lazy = () -> Arrays.asList(RequestForAccountManagementStatusReportV02.mmRequestDetails);
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.OBSOLETE;
 				removalDate = ((Supplier<Date>) (() -> {
 					try {
 						return DateFormat.getDateInstance(java.text.DateFormat.LONG).parse("September 9, 2016");
@@ -408,7 +406,7 @@ public class AccountManagementMessageReference1 {
 				name = "AccountManagementMessageReference1";
 				definition = "Information about the message reference of the account management instruction message for which the status is requested .";
 				nextVersions_lazy = () -> Arrays.asList(AccountManagementMessageReference2.mmObject());
-				xors_lazy = () -> Arrays.asList(com.tools20022.repository.msg.AccountManagementMessageReference1.mmPreviousReferenceOrOtherReferenceRule);
+				xors_lazy = () -> Arrays.asList(AccountManagementMessageReference1.mmPreviousReferenceOrOtherReferenceRule);
 			}
 		});
 		return mmObject_lazy.get();

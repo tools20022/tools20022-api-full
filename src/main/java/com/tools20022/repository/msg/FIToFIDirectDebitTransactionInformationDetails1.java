@@ -19,6 +19,8 @@ package com.tools20022.repository.msg;
 
 import com.tools20022.metamodel.MMMessageAssociationEnd;
 import com.tools20022.metamodel.MMMessageComponent;
+import com.tools20022.metamodel.MMRegistrationStatus;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.List;
@@ -99,7 +101,7 @@ public class FIToFIDirectDebitTransactionInformationDetails1 {
 			componentContext_lazy = () -> FIToFIDirectDebitTransactionInformationDetails1.mmObject();
 			isDerived = false;
 			xmlTag = "GrpHdr";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "GroupHeader";
 			definition = "Common characteristics for all individual transactions included in the message.";
 			maxOccurs = 1;
@@ -144,7 +146,7 @@ public class FIToFIDirectDebitTransactionInformationDetails1 {
 			componentContext_lazy = () -> FIToFIDirectDebitTransactionInformationDetails1.mmObject();
 			isDerived = false;
 			xmlTag = "CdtInstr";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CreditInstruction";
 			definition = "Characteristics that apply to the credit side of the payment transaction(s) included in the message.";
 			minOccurs = 1;
@@ -187,7 +189,7 @@ public class FIToFIDirectDebitTransactionInformationDetails1 {
 			componentContext_lazy = () -> FIToFIDirectDebitTransactionInformationDetails1.mmObject();
 			isDerived = false;
 			xmlTag = "SplmtryData";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SupplementaryData";
 			definition = "Additional information that cannot be captured in the structured elements and/or any other specific block.";
 			minOccurs = 0;
@@ -199,10 +201,10 @@ public class FIToFIDirectDebitTransactionInformationDetails1 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.FIToFIDirectDebitTransactionInformationDetails1.mmGroupHeader,
-						com.tools20022.repository.msg.FIToFIDirectDebitTransactionInformationDetails1.mmCreditInstruction, com.tools20022.repository.msg.FIToFIDirectDebitTransactionInformationDetails1.mmSupplementaryData);
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+				messageElement_lazy = () -> Arrays.asList(FIToFIDirectDebitTransactionInformationDetails1.mmGroupHeader, FIToFIDirectDebitTransactionInformationDetails1.mmCreditInstruction,
+						FIToFIDirectDebitTransactionInformationDetails1.mmSupplementaryData);
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 				name = "FIToFIDirectDebitTransactionInformationDetails1";
 				definition = "Set of elements providing information specific to the individual direct debit(s).";
 			}

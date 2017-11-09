@@ -19,7 +19,9 @@ package com.tools20022.repository.codeset;
 
 import com.tools20022.metamodel.MMCode;
 import com.tools20022.metamodel.MMCodeSet;
+import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.codeset.MessageFunctionCode;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -156,9 +158,9 @@ public class MessageFunction1Code extends MessageFunctionCode {
 	 */
 	public static final MMCode mmAuthorisationRequest = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AuthorisationRequest";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.MessageFunction4Code.mmAuthorisationRequest);
+			nextVersions_lazy = () -> Arrays.asList(MessageFunction4Code.mmAuthorisationRequest);
 			owner_lazy = () -> MessageFunction1Code.mmObject();
 		}
 	};
@@ -188,9 +190,9 @@ public class MessageFunction1Code extends MessageFunctionCode {
 	 */
 	public static final MMCode mmAuthorisationResponse = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AuthorisationResponse";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.MessageFunction4Code.mmAuthorisationResponse);
+			nextVersions_lazy = () -> Arrays.asList(MessageFunction4Code.mmAuthorisationResponse);
 			owner_lazy = () -> MessageFunction1Code.mmObject();
 		}
 	};
@@ -220,9 +222,9 @@ public class MessageFunction1Code extends MessageFunctionCode {
 	 */
 	public static final MMCode mmFinancialAuthorisationRequest = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "FinancialAuthorisationRequest";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.MessageFunction4Code.mmFinancialAuthorisationRequest);
+			nextVersions_lazy = () -> Arrays.asList(MessageFunction4Code.mmFinancialAuthorisationRequest);
 			owner_lazy = () -> MessageFunction1Code.mmObject();
 		}
 	};
@@ -252,9 +254,9 @@ public class MessageFunction1Code extends MessageFunctionCode {
 	 */
 	public static final MMCode mmFinancialAuthorisationResponse = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "FinancialAuthorisationResponse";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.MessageFunction4Code.mmFinancialAuthorisationResponse);
+			nextVersions_lazy = () -> Arrays.asList(MessageFunction4Code.mmFinancialAuthorisationResponse);
 			owner_lazy = () -> MessageFunction1Code.mmObject();
 		}
 	};
@@ -284,9 +286,9 @@ public class MessageFunction1Code extends MessageFunctionCode {
 	 */
 	public static final MMCode mmCompletionAdvice = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CompletionAdvice";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.MessageFunction4Code.mmCompletionAdvice);
+			nextVersions_lazy = () -> Arrays.asList(MessageFunction4Code.mmCompletionAdvice);
 			owner_lazy = () -> MessageFunction1Code.mmObject();
 		}
 	};
@@ -316,9 +318,9 @@ public class MessageFunction1Code extends MessageFunctionCode {
 	 */
 	public static final MMCode mmCompletionAdviceResponse = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CompletionAdviceResponse";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.MessageFunction4Code.mmCompletionAdviceResponse);
+			nextVersions_lazy = () -> Arrays.asList(MessageFunction4Code.mmCompletionAdviceResponse);
 			owner_lazy = () -> MessageFunction1Code.mmObject();
 		}
 	};
@@ -348,9 +350,9 @@ public class MessageFunction1Code extends MessageFunctionCode {
 	 */
 	public static final MMCode mmFinancialCompletionAdvice = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "FinancialCompletionAdvice";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.MessageFunction4Code.mmFinancialCompletionAdvice);
+			nextVersions_lazy = () -> Arrays.asList(MessageFunction4Code.mmFinancialCompletionAdvice);
 			owner_lazy = () -> MessageFunction1Code.mmObject();
 		}
 	};
@@ -380,9 +382,9 @@ public class MessageFunction1Code extends MessageFunctionCode {
 	 */
 	public static final MMCode mmFinancialCompletionAdviceResponse = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "FinancialCompletionAdviceResponse";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.MessageFunction4Code.mmFinancialCompletionAdviceResponse);
+			nextVersions_lazy = () -> Arrays.asList(MessageFunction4Code.mmFinancialCompletionAdviceResponse);
 			owner_lazy = () -> MessageFunction1Code.mmObject();
 		}
 	};
@@ -412,9 +414,9 @@ public class MessageFunction1Code extends MessageFunctionCode {
 	 */
 	public static final MMCode mmReversalAdvice = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ReversalAdvice";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.MessageFunction4Code.mmReversalAdvice);
+			nextVersions_lazy = () -> Arrays.asList(MessageFunction4Code.mmReversalAdvice);
 			owner_lazy = () -> MessageFunction1Code.mmObject();
 		}
 	};
@@ -444,9 +446,9 @@ public class MessageFunction1Code extends MessageFunctionCode {
 	 */
 	public static final MMCode mmReversalAdviceResponse = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ReversalAdviceResponse";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.MessageFunction4Code.mmReversalAdviceResponse);
+			nextVersions_lazy = () -> Arrays.asList(MessageFunction4Code.mmReversalAdviceResponse);
 			owner_lazy = () -> MessageFunction1Code.mmObject();
 		}
 	};
@@ -476,9 +478,9 @@ public class MessageFunction1Code extends MessageFunctionCode {
 	 */
 	public static final MMCode mmFinancialReversalAdvice = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "FinancialReversalAdvice";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.MessageFunction4Code.mmFinancialReversalAdvice);
+			nextVersions_lazy = () -> Arrays.asList(MessageFunction4Code.mmFinancialReversalAdvice);
 			owner_lazy = () -> MessageFunction1Code.mmObject();
 		}
 	};
@@ -508,9 +510,9 @@ public class MessageFunction1Code extends MessageFunctionCode {
 	 */
 	public static final MMCode mmFinancialReversalAdviceResponse = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "FinancialReversalAdviceResponse";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.MessageFunction4Code.mmFinancialReversalAdviceResponse);
+			nextVersions_lazy = () -> Arrays.asList(MessageFunction4Code.mmFinancialReversalAdviceResponse);
 			owner_lazy = () -> MessageFunction1Code.mmObject();
 		}
 	};
@@ -540,9 +542,9 @@ public class MessageFunction1Code extends MessageFunctionCode {
 	 */
 	public static final MMCode mmCancellationRequest = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CancellationRequest";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.MessageFunction4Code.mmCancellationRequest);
+			nextVersions_lazy = () -> Arrays.asList(MessageFunction4Code.mmCancellationRequest);
 			owner_lazy = () -> MessageFunction1Code.mmObject();
 		}
 	};
@@ -572,9 +574,9 @@ public class MessageFunction1Code extends MessageFunctionCode {
 	 */
 	public static final MMCode mmCancellationResponse = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CancellationResponse";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.MessageFunction4Code.mmCancellationResponse);
+			nextVersions_lazy = () -> Arrays.asList(MessageFunction4Code.mmCancellationResponse);
 			owner_lazy = () -> MessageFunction1Code.mmObject();
 		}
 	};
@@ -604,9 +606,9 @@ public class MessageFunction1Code extends MessageFunctionCode {
 	 */
 	public static final MMCode mmCancellationAdvice = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CancellationAdvice";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.MessageFunction4Code.mmCancellationAdvice);
+			nextVersions_lazy = () -> Arrays.asList(MessageFunction4Code.mmCancellationAdvice);
 			owner_lazy = () -> MessageFunction1Code.mmObject();
 		}
 	};
@@ -636,9 +638,9 @@ public class MessageFunction1Code extends MessageFunctionCode {
 	 */
 	public static final MMCode mmCancellationAdviceResponse = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CancellationAdviceResponse";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.MessageFunction4Code.mmCancellationAdviceResponse);
+			nextVersions_lazy = () -> Arrays.asList(MessageFunction4Code.mmCancellationAdviceResponse);
 			owner_lazy = () -> MessageFunction1Code.mmObject();
 		}
 	};
@@ -668,9 +670,9 @@ public class MessageFunction1Code extends MessageFunctionCode {
 	 */
 	public static final MMCode mmDiagnosticRequest = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "DiagnosticRequest";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.MessageFunction4Code.mmDiagnosticRequest);
+			nextVersions_lazy = () -> Arrays.asList(MessageFunction4Code.mmDiagnosticRequest);
 			owner_lazy = () -> MessageFunction1Code.mmObject();
 		}
 	};
@@ -700,9 +702,9 @@ public class MessageFunction1Code extends MessageFunctionCode {
 	 */
 	public static final MMCode mmDiagnosticResponse = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "DiagnosticResponse";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.MessageFunction4Code.mmDiagnosticResponse);
+			nextVersions_lazy = () -> Arrays.asList(MessageFunction4Code.mmDiagnosticResponse);
 			owner_lazy = () -> MessageFunction1Code.mmObject();
 		}
 	};
@@ -732,9 +734,9 @@ public class MessageFunction1Code extends MessageFunctionCode {
 	 */
 	public static final MMCode mmReconciliationRequest = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ReconciliationRequest";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.MessageFunction4Code.mmReconciliationRequest);
+			nextVersions_lazy = () -> Arrays.asList(MessageFunction4Code.mmReconciliationRequest);
 			owner_lazy = () -> MessageFunction1Code.mmObject();
 		}
 	};
@@ -764,9 +766,9 @@ public class MessageFunction1Code extends MessageFunctionCode {
 	 */
 	public static final MMCode mmReconciliationResponse = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ReconciliationResponse";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.MessageFunction4Code.mmReconciliationResponse);
+			nextVersions_lazy = () -> Arrays.asList(MessageFunction4Code.mmReconciliationResponse);
 			owner_lazy = () -> MessageFunction1Code.mmObject();
 		}
 	};
@@ -796,9 +798,9 @@ public class MessageFunction1Code extends MessageFunctionCode {
 	 */
 	public static final MMCode mmRejection = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Rejection";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.MessageFunction4Code.mmRejection);
+			nextVersions_lazy = () -> Arrays.asList(MessageFunction4Code.mmRejection);
 			owner_lazy = () -> MessageFunction1Code.mmObject();
 		}
 	};
@@ -806,23 +808,18 @@ public class MessageFunction1Code extends MessageFunctionCode {
 	static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
 				example = Arrays.asList("AUTQ");
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "MessageFunction1Code";
 				definition = "Identifies the message function within a card payment exchange.";
 				nextVersions_lazy = () -> Arrays.asList(MessageFunction4Code.mmObject());
-				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.MessageFunction1Code.mmAuthorisationRequest, com.tools20022.repository.codeset.MessageFunction1Code.mmAuthorisationResponse,
-						com.tools20022.repository.codeset.MessageFunction1Code.mmFinancialAuthorisationRequest, com.tools20022.repository.codeset.MessageFunction1Code.mmFinancialAuthorisationResponse,
-						com.tools20022.repository.codeset.MessageFunction1Code.mmCompletionAdvice, com.tools20022.repository.codeset.MessageFunction1Code.mmCompletionAdviceResponse,
-						com.tools20022.repository.codeset.MessageFunction1Code.mmFinancialCompletionAdvice, com.tools20022.repository.codeset.MessageFunction1Code.mmFinancialCompletionAdviceResponse,
-						com.tools20022.repository.codeset.MessageFunction1Code.mmReversalAdvice, com.tools20022.repository.codeset.MessageFunction1Code.mmReversalAdviceResponse,
-						com.tools20022.repository.codeset.MessageFunction1Code.mmFinancialReversalAdvice, com.tools20022.repository.codeset.MessageFunction1Code.mmFinancialReversalAdviceResponse,
-						com.tools20022.repository.codeset.MessageFunction1Code.mmCancellationRequest, com.tools20022.repository.codeset.MessageFunction1Code.mmCancellationResponse,
-						com.tools20022.repository.codeset.MessageFunction1Code.mmCancellationAdvice, com.tools20022.repository.codeset.MessageFunction1Code.mmCancellationAdviceResponse,
-						com.tools20022.repository.codeset.MessageFunction1Code.mmDiagnosticRequest, com.tools20022.repository.codeset.MessageFunction1Code.mmDiagnosticResponse,
-						com.tools20022.repository.codeset.MessageFunction1Code.mmReconciliationRequest, com.tools20022.repository.codeset.MessageFunction1Code.mmReconciliationResponse,
-						com.tools20022.repository.codeset.MessageFunction1Code.mmRejection);
+				code_lazy = () -> Arrays.asList(MessageFunction1Code.mmAuthorisationRequest, MessageFunction1Code.mmAuthorisationResponse, MessageFunction1Code.mmFinancialAuthorisationRequest,
+						MessageFunction1Code.mmFinancialAuthorisationResponse, MessageFunction1Code.mmCompletionAdvice, MessageFunction1Code.mmCompletionAdviceResponse, MessageFunction1Code.mmFinancialCompletionAdvice,
+						MessageFunction1Code.mmFinancialCompletionAdviceResponse, MessageFunction1Code.mmReversalAdvice, MessageFunction1Code.mmReversalAdviceResponse, MessageFunction1Code.mmFinancialReversalAdvice,
+						MessageFunction1Code.mmFinancialReversalAdviceResponse, MessageFunction1Code.mmCancellationRequest, MessageFunction1Code.mmCancellationResponse, MessageFunction1Code.mmCancellationAdvice,
+						MessageFunction1Code.mmCancellationAdviceResponse, MessageFunction1Code.mmDiagnosticRequest, MessageFunction1Code.mmDiagnosticResponse, MessageFunction1Code.mmReconciliationRequest,
+						MessageFunction1Code.mmReconciliationResponse, MessageFunction1Code.mmRejection);
 				trace_lazy = () -> MessageFunctionCode.mmObject();
 			}
 		});

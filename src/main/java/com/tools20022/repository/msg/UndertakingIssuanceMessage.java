@@ -19,7 +19,9 @@ package com.tools20022.repository.msg;
 
 import com.tools20022.metamodel.MMMessageAssociationEnd;
 import com.tools20022.metamodel.MMMessageComponent;
+import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.entity.Undertaking;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -105,7 +107,7 @@ public class UndertakingIssuanceMessage {
 			componentContext_lazy = () -> UndertakingIssuanceMessage.mmObject();
 			isDerived = false;
 			xmlTag = "UdrtkgDtls";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "UndertakingDetails";
 			definition = "Independent undertaking, such as a demand guarantee or standby letter of credit, that provides financial assurance, to be collected on the presentation of documents that comply with its terms and conditions.";
 			maxOccurs = 1;
@@ -148,11 +150,11 @@ public class UndertakingIssuanceMessage {
 	 */
 	public static final MMMessageAssociationEnd mmDigitalSignature = new MMMessageAssociationEnd() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Undertaking.mmElectronicSignature;
+			businessElementTrace_lazy = () -> Undertaking.mmElectronicSignature;
 			componentContext_lazy = () -> UndertakingIssuanceMessage.mmObject();
 			isDerived = false;
 			xmlTag = "DgtlSgntr";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "DigitalSignature";
 			definition = "Digital signature of the issued undertaking.";
 			maxOccurs = 1;
@@ -165,10 +167,10 @@ public class UndertakingIssuanceMessage {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.UndertakingIssuanceMessage.mmUndertakingDetails, com.tools20022.repository.msg.UndertakingIssuanceMessage.mmDigitalSignature);
+				messageElement_lazy = () -> Arrays.asList(UndertakingIssuanceMessage.mmUndertakingDetails, UndertakingIssuanceMessage.mmDigitalSignature);
 				trace_lazy = () -> Undertaking.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "UndertakingIssuanceMessage";
 				definition = "Contents of the related UndertakingIssuance message or of the related issuance document.";
 			}

@@ -19,6 +19,8 @@ package com.tools20022.repository.codeset;
 
 import com.tools20022.metamodel.MMCode;
 import com.tools20022.metamodel.MMCodeSet;
+import com.tools20022.metamodel.MMRegistrationStatus;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -27,6 +29,13 @@ import java.util.concurrent.atomic.AtomicReference;
  * <p>
  * <strong>Constant fields:</strong>
  * <ul>
+ * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getDerivation derivation}
+ * =
+ * <ul>
+ * <li>{@linkplain com.tools20022.repository.codeset.EquityReturnParameter1Code
+ * EquityReturnParameter1Code}</li>
+ * </ul>
+ * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getCode code} =
  * <ul>
  * <li>
@@ -41,13 +50,6 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>
  * {@linkplain com.tools20022.repository.codeset.EquityReturnParameterCode#mmParameterReturnDividend
  * EquityReturnParameterCode.mmParameterReturnDividend}</li>
- * </ul>
- * </li>
- * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getDerivation derivation}
- * =
- * <ul>
- * <li>{@linkplain com.tools20022.repository.codeset.EquityReturnParameter1Code
- * EquityReturnParameter1Code}</li>
  * </ul>
  * </li>
  * <li>
@@ -92,7 +94,7 @@ public class EquityReturnParameterCode {
 	 */
 	public static final MMCode mmPriceReturnBasicPerformanceParameter = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PriceReturnBasicPerformanceParameter";
 			definition = "Equity derivative parameter Price Return Basis Performance. ";
 			owner_lazy = () -> EquityReturnParameterCode.mmObject();
@@ -122,7 +124,7 @@ public class EquityReturnParameterCode {
 	 */
 	public static final MMCode mmParameterReturnVariance = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ParameterReturnVariance";
 			definition = "Equity derivative parameter Return Variance. ";
 			owner_lazy = () -> EquityReturnParameterCode.mmObject();
@@ -152,7 +154,7 @@ public class EquityReturnParameterCode {
 	 */
 	public static final MMCode mmParameterReturnVolatility = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ParameterReturnVolatility";
 			definition = "Equity derivative parameter Return Volatility. ";
 			owner_lazy = () -> EquityReturnParameterCode.mmObject();
@@ -182,7 +184,7 @@ public class EquityReturnParameterCode {
 	 */
 	public static final MMCode mmParameterReturnDividend = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ParameterReturnDividend";
 			definition = "Equity derivative parameter Return Dividend. ";
 			owner_lazy = () -> EquityReturnParameterCode.mmObject();
@@ -193,12 +195,12 @@ public class EquityReturnParameterCode {
 	static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "EquityReturnParameterCode";
 				definition = "Specifies an equity derivative return parameter.";
-				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.EquityReturnParameterCode.mmPriceReturnBasicPerformanceParameter, com.tools20022.repository.codeset.EquityReturnParameterCode.mmParameterReturnVariance,
-						com.tools20022.repository.codeset.EquityReturnParameterCode.mmParameterReturnVolatility, com.tools20022.repository.codeset.EquityReturnParameterCode.mmParameterReturnDividend);
+				code_lazy = () -> Arrays.asList(EquityReturnParameterCode.mmPriceReturnBasicPerformanceParameter, EquityReturnParameterCode.mmParameterReturnVariance, EquityReturnParameterCode.mmParameterReturnVolatility,
+						EquityReturnParameterCode.mmParameterReturnDividend);
 				derivation_lazy = () -> Arrays.asList(EquityReturnParameter1Code.mmObject());
 			}
 		});

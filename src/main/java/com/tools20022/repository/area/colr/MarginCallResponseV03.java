@@ -20,6 +20,7 @@ package com.tools20022.repository.area.colr;
 import com.tools20022.metamodel.MMMessageBuildingBlock;
 import com.tools20022.metamodel.MMMessageDefinition;
 import com.tools20022.metamodel.MMMessageDefinitionIdentifier;
+import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.area.CollateralManagementPreviousVersion;
 import com.tools20022.repository.choice.AgreedAmount1Choice;
 import com.tools20022.repository.datatype.Max35Text;
@@ -51,6 +52,9 @@ import java.util.List;
  * <p>
  * <strong>Constant fields:</strong>
  * <ul>
+ * <li>
+ * {@linkplain com.tools20022.metamodel.MMMessageDefinition#getMessageDefinitionIdentifier
+ * messageDefinitionIdentifier} = {@code colr.004.001.03}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMMessageDefinition#getBusinessArea
  * businessArea} =
  * {@linkplain com.tools20022.repository.area.CollateralManagementPreviousVersion
@@ -101,9 +105,6 @@ import java.util.List;
  * MarginCallResponseV03.mmSupplementaryData}</li>
  * </ul>
  * </li>
- * <li>
- * {@linkplain com.tools20022.metamodel.MMMessageDefinition#getMessageDefinitionIdentifier
- * messageDefinitionIdentifier} = {@code colr.004.001.03}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -163,10 +164,10 @@ public class MarginCallResponseV03 {
 	public static final MMMessageBuildingBlock mmTransactionIdentification = new MMMessageBuildingBlock() {
 		{
 			xmlTag = "TxId";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "TransactionIdentification";
 			definition = "Unambiguous identification of the transaction as know by the instructing party.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.area.colr.MarginCallResponseV04.mmTransactionIdentification);
+			nextVersions_lazy = () -> Arrays.asList(MarginCallResponseV04.mmTransactionIdentification);
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> Max35Text.mmObject();
@@ -210,10 +211,10 @@ public class MarginCallResponseV03 {
 	public static final MMMessageBuildingBlock mmObligation = new MMMessageBuildingBlock() {
 		{
 			xmlTag = "Oblgtn";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Obligation";
 			definition = "Provides information like the identification of the party or parties associated with the collateral agreement, the exposure type and the valuation date.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.area.colr.MarginCallResponseV04.mmObligation);
+			nextVersions_lazy = () -> Arrays.asList(MarginCallResponseV04.mmObligation);
 			maxOccurs = 1;
 			minOccurs = 1;
 			complexType_lazy = () -> Obligation3.mmObject();
@@ -253,10 +254,10 @@ public class MarginCallResponseV03 {
 	public static final MMMessageBuildingBlock mmAgreement = new MMMessageBuildingBlock() {
 		{
 			xmlTag = "Agrmt";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Agreement";
 			definition = "Agreement details for the over the counter market.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.area.colr.MarginCallResponseV04.mmAgreement);
+			nextVersions_lazy = () -> Arrays.asList(MarginCallResponseV04.mmAgreement);
 			maxOccurs = 1;
 			minOccurs = 0;
 			complexType_lazy = () -> Agreement2.mmObject();
@@ -299,10 +300,10 @@ public class MarginCallResponseV03 {
 	public static final MMMessageBuildingBlock mmMarginDetailsDueToA = new MMMessageBuildingBlock() {
 		{
 			xmlTag = "MrgnDtlsDueToA";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "MarginDetailsDueToA";
 			definition = "Provides details about the margin calculation that would be due to party A.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.area.colr.MarginCallResponseV04.mmMarginDetailsDueToA);
+			nextVersions_lazy = () -> Arrays.asList(MarginCallResponseV04.mmMarginDetailsDueToA);
 			maxOccurs = 1;
 			minOccurs = 0;
 			complexType_lazy = () -> MarginCall1.mmObject();
@@ -345,10 +346,10 @@ public class MarginCallResponseV03 {
 	public static final MMMessageBuildingBlock mmMarginDetailsDueToB = new MMMessageBuildingBlock() {
 		{
 			xmlTag = "MrgnDtlsDueToB";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "MarginDetailsDueToB";
 			definition = "Provides details about the margin calculation that would be due to party B.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.area.colr.MarginCallResponseV04.mmMarginDetailsDueToB);
+			nextVersions_lazy = () -> Arrays.asList(MarginCallResponseV04.mmMarginDetailsDueToB);
 			maxOccurs = 1;
 			minOccurs = 0;
 			complexType_lazy = () -> MarginCall1.mmObject();
@@ -390,10 +391,10 @@ public class MarginCallResponseV03 {
 	public static final MMMessageBuildingBlock mmAgreedAmountDueToA = new MMMessageBuildingBlock() {
 		{
 			xmlTag = "AgrdAmtDueToA";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AgreedAmountDueToA";
 			definition = "Provides details about the agreed amount that would be due to party A.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.area.colr.MarginCallResponseV04.mmAgreedAmountDueToA);
+			nextVersions_lazy = () -> Arrays.asList(MarginCallResponseV04.mmAgreedAmountDueToA);
 			maxOccurs = 1;
 			minOccurs = 0;
 			complexType_lazy = () -> AgreedAmount1Choice.mmObject();
@@ -435,10 +436,10 @@ public class MarginCallResponseV03 {
 	public static final MMMessageBuildingBlock mmAgreedAmountDueToB = new MMMessageBuildingBlock() {
 		{
 			xmlTag = "AgrdAmtDueToB";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AgreedAmountDueToB";
 			definition = "Provides details about the agreed amount that would be due to party B.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.area.colr.MarginCallResponseV04.mmAgreedAmountDueToB);
+			nextVersions_lazy = () -> Arrays.asList(MarginCallResponseV04.mmAgreedAmountDueToB);
 			maxOccurs = 1;
 			minOccurs = 0;
 			complexType_lazy = () -> AgreedAmount1Choice.mmObject();
@@ -478,10 +479,10 @@ public class MarginCallResponseV03 {
 	public static final MMMessageBuildingBlock mmResponseDetails = new MMMessageBuildingBlock() {
 		{
 			xmlTag = "RspnDtls";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ResponseDetails";
 			definition = "Provides response details about the margin call.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.area.colr.MarginCallResponseV04.mmResponseDetails);
+			nextVersions_lazy = () -> Arrays.asList(MarginCallResponseV04.mmResponseDetails);
 			maxOccurs = 1;
 			minOccurs = 0;
 			complexType_lazy = () -> Response1.mmObject();
@@ -525,10 +526,10 @@ public class MarginCallResponseV03 {
 	public static final MMMessageBuildingBlock mmSupplementaryData = new MMMessageBuildingBlock() {
 		{
 			xmlTag = "SplmtryData";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SupplementaryData";
 			definition = "Additional information that can not be captured in the structured fields and/or any other specific block.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.area.colr.MarginCallResponseV04.mmSupplementaryData);
+			nextVersions_lazy = () -> Arrays.asList(MarginCallResponseV04.mmSupplementaryData);
 			minOccurs = 0;
 			complexType_lazy = () -> SupplementaryData1.mmObject();
 		}
@@ -537,7 +538,7 @@ public class MarginCallResponseV03 {
 	final static public MMMessageDefinition mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageDefinition() {
 			{
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "MarginCallResponseV03";
 				definition = "Scope\r\nThis message is sent by the collateral giver or its collateral manager to the collateral taker or its collateral manager or vice versa. This is a response to the MarginCallRequest message. The margin call can be accepted, fully disputed or partially disputed.\r\n\r\nThe message definition is intended for use with the ISO20022 Business Application Header.\r\n\r\nUsage\r\nWhen sent by the collateral giver the MarginCallResponse message is used to:\r\n- fully accept the MarginCallRequest\r\n- or partially accept the MarginCallRequest.\r\n\r\nWhen sent by the collateral taker the MarginCallResponse message is used to:\r\n- fully accept the recall of collateral\r\n- or partially accept the recall of collateral.";
 				nextVersions_lazy = () -> Arrays.asList(MarginCallResponseV04.mmObject());
@@ -545,11 +546,10 @@ public class MarginCallResponseV03 {
 				rootElement = "Document";
 				xmlTag = "MrgnCallRspn";
 				businessArea_lazy = () -> CollateralManagementPreviousVersion.mmObject();
-				messageBuildingBlock_lazy = () -> Arrays.asList(com.tools20022.repository.area.colr.MarginCallResponseV03.mmTransactionIdentification, com.tools20022.repository.area.colr.MarginCallResponseV03.mmObligation,
-						com.tools20022.repository.area.colr.MarginCallResponseV03.mmAgreement, com.tools20022.repository.area.colr.MarginCallResponseV03.mmMarginDetailsDueToA,
-						com.tools20022.repository.area.colr.MarginCallResponseV03.mmMarginDetailsDueToB, com.tools20022.repository.area.colr.MarginCallResponseV03.mmAgreedAmountDueToA,
-						com.tools20022.repository.area.colr.MarginCallResponseV03.mmAgreedAmountDueToB, com.tools20022.repository.area.colr.MarginCallResponseV03.mmResponseDetails,
-						com.tools20022.repository.area.colr.MarginCallResponseV03.mmSupplementaryData);
+				messageBuildingBlock_lazy = () -> Arrays
+						.asList(MarginCallResponseV03.mmTransactionIdentification, MarginCallResponseV03.mmObligation, MarginCallResponseV03.mmAgreement, MarginCallResponseV03.mmMarginDetailsDueToA,
+								MarginCallResponseV03.mmMarginDetailsDueToB, MarginCallResponseV03.mmAgreedAmountDueToA, MarginCallResponseV03.mmAgreedAmountDueToB, MarginCallResponseV03.mmResponseDetails,
+								MarginCallResponseV03.mmSupplementaryData);
 				messageDefinitionIdentifier_lazy = () -> new MMMessageDefinitionIdentifier() {
 					{
 						businessArea = "colr";

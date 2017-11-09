@@ -19,8 +19,11 @@ package com.tools20022.repository.msg;
 
 import com.tools20022.metamodel.MMMessageAssociationEnd;
 import com.tools20022.metamodel.MMMessageComponent;
+import com.tools20022.metamodel.MMRegistrationStatus;
+import com.tools20022.repository.area.semt.SecuritiesTransactionPendingReportV07;
 import com.tools20022.repository.choice.Status18Choice;
 import com.tools20022.repository.entity.Status;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.List;
@@ -132,11 +135,11 @@ public class StatusAndReason27 {
 			componentContext_lazy = () -> StatusAndReason27.mmObject();
 			isDerived = false;
 			xmlTag = "StsAndRsn";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "StatusAndReason";
 			definition = "Status and reason for the transaction.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.StatusAndReason32.mmStatusAndReason);
-			previousVersion_lazy = () -> com.tools20022.repository.msg.StatusAndReason25.mmStatusAndReason;
+			nextVersions_lazy = () -> Arrays.asList(StatusAndReason32.mmStatusAndReason);
+			previousVersion_lazy = () -> StatusAndReason25.mmStatusAndReason;
 			maxOccurs = 1;
 			minOccurs = 1;
 			isComposite = true;
@@ -188,11 +191,11 @@ public class StatusAndReason27 {
 			componentContext_lazy = () -> StatusAndReason27.mmObject();
 			isDerived = false;
 			xmlTag = "Tx";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Transaction";
 			definition = "Details of the transactions reported.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.StatusAndReason32.mmTransaction);
-			previousVersion_lazy = () -> com.tools20022.repository.msg.StatusAndReason25.mmTransaction;
+			nextVersions_lazy = () -> Arrays.asList(StatusAndReason32.mmTransaction);
+			previousVersion_lazy = () -> StatusAndReason25.mmTransaction;
 			minOccurs = 0;
 			isComposite = true;
 			type_lazy = () -> com.tools20022.repository.msg.Transaction45.mmObject();
@@ -202,11 +205,11 @@ public class StatusAndReason27 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.StatusAndReason27.mmStatusAndReason, com.tools20022.repository.msg.StatusAndReason27.mmTransaction);
-				messageBuildingBlock_lazy = () -> Arrays.asList(com.tools20022.repository.area.semt.SecuritiesTransactionPendingReportV07.mmStatus);
+				messageElement_lazy = () -> Arrays.asList(StatusAndReason27.mmStatusAndReason, StatusAndReason27.mmTransaction);
+				messageBuildingBlock_lazy = () -> Arrays.asList(SecuritiesTransactionPendingReportV07.mmStatus);
 				trace_lazy = () -> Status.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "StatusAndReason27";
 				definition = "Status and reason of an instructed order.";
 				nextVersions_lazy = () -> Arrays.asList(StatusAndReason32.mmObject());

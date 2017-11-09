@@ -19,7 +19,12 @@ package com.tools20022.repository.choice;
 
 import com.tools20022.metamodel.MMChoiceComponent;
 import com.tools20022.metamodel.MMMessageAssociationEnd;
+import com.tools20022.metamodel.MMRegistrationStatus;
+import com.tools20022.repository.area.semt.IntraPositionMovementStatusAdviceV04;
+import com.tools20022.repository.area.semt.IntraPositionMovementStatusAdviceV05;
 import com.tools20022.repository.entity.SecuritiesTradeStatusReason;
+import com.tools20022.repository.entity.StatusReason;
+import com.tools20022.repository.GeneratedRepository;
 import com.tools20022.repository.msg.ProprietaryStatusAndReason6;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
@@ -133,10 +138,10 @@ public class IntraPositionProcessingStatus5Choice {
 			componentContext_lazy = () -> IntraPositionProcessingStatus5Choice.mmObject();
 			isDerived = false;
 			xmlTag = "Rjctd";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Rejected";
 			definition = "Instruction/Request has been rejected for further processing.";
-			previousVersion_lazy = () -> com.tools20022.repository.choice.IntraPositionProcessingStatus3Choice.mmRejected;
+			previousVersion_lazy = () -> IntraPositionProcessingStatus3Choice.mmRejected;
 			maxOccurs = 1;
 			minOccurs = 1;
 			isComposite = true;
@@ -187,10 +192,10 @@ public class IntraPositionProcessingStatus5Choice {
 			componentContext_lazy = () -> IntraPositionProcessingStatus5Choice.mmObject();
 			isDerived = false;
 			xmlTag = "Rpr";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Repair";
 			definition = "Instruction/Request is accepted but in repair.";
-			previousVersion_lazy = () -> com.tools20022.repository.choice.IntraPositionProcessingStatus3Choice.mmRepair;
+			previousVersion_lazy = () -> IntraPositionProcessingStatus3Choice.mmRepair;
 			maxOccurs = 1;
 			minOccurs = 1;
 			isComposite = true;
@@ -237,14 +242,14 @@ public class IntraPositionProcessingStatus5Choice {
 	 */
 	public static final MMMessageAssociationEnd mmCancelled = new MMMessageAssociationEnd() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.StatusReason.mmCancellationReason;
+			businessElementTrace_lazy = () -> StatusReason.mmCancellationReason;
 			componentContext_lazy = () -> IntraPositionProcessingStatus5Choice.mmObject();
 			isDerived = false;
 			xmlTag = "Canc";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Cancelled";
 			definition = "Instruction has been cancelled.";
-			previousVersion_lazy = () -> com.tools20022.repository.choice.IntraPositionProcessingStatus3Choice.mmCancelled;
+			previousVersion_lazy = () -> IntraPositionProcessingStatus3Choice.mmCancelled;
 			maxOccurs = 1;
 			minOccurs = 1;
 			isComposite = true;
@@ -292,14 +297,14 @@ public class IntraPositionProcessingStatus5Choice {
 	 */
 	public static final MMMessageAssociationEnd mmAcknowledgedAccepted = new MMMessageAssociationEnd() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.StatusReason.mmAcknowledgedAcceptedReason;
+			businessElementTrace_lazy = () -> StatusReason.mmAcknowledgedAcceptedReason;
 			componentContext_lazy = () -> IntraPositionProcessingStatus5Choice.mmObject();
 			isDerived = false;
 			xmlTag = "AckdAccptd";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AcknowledgedAccepted";
 			definition = "Instruction has been acknowledged by the account servicer.";
-			previousVersion_lazy = () -> com.tools20022.repository.choice.IntraPositionProcessingStatus3Choice.mmAcknowledgedAccepted;
+			previousVersion_lazy = () -> IntraPositionProcessingStatus3Choice.mmAcknowledgedAccepted;
 			maxOccurs = 1;
 			minOccurs = 1;
 			isComposite = true;
@@ -349,14 +354,14 @@ public class IntraPositionProcessingStatus5Choice {
 	 */
 	public static final MMMessageAssociationEnd mmProprietary = new MMMessageAssociationEnd() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.StatusReason.mmStatus;
+			businessElementTrace_lazy = () -> StatusReason.mmStatus;
 			componentContext_lazy = () -> IntraPositionProcessingStatus5Choice.mmObject();
 			isDerived = false;
 			xmlTag = "Prtry";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Proprietary";
 			definition = "Specifies a choice of status for the processing of an intra-position movement.";
-			previousVersion_lazy = () -> com.tools20022.repository.choice.IntraPositionProcessingStatus3Choice.mmProprietary;
+			previousVersion_lazy = () -> IntraPositionProcessingStatus3Choice.mmProprietary;
 			maxOccurs = 1;
 			minOccurs = 1;
 			isComposite = true;
@@ -367,14 +372,12 @@ public class IntraPositionProcessingStatus5Choice {
 	final static public MMChoiceComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMChoiceComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.choice.IntraPositionProcessingStatus5Choice.mmRejected, com.tools20022.repository.choice.IntraPositionProcessingStatus5Choice.mmRepair,
-						com.tools20022.repository.choice.IntraPositionProcessingStatus5Choice.mmCancelled, com.tools20022.repository.choice.IntraPositionProcessingStatus5Choice.mmAcknowledgedAccepted,
-						com.tools20022.repository.choice.IntraPositionProcessingStatus5Choice.mmProprietary);
-				messageBuildingBlock_lazy = () -> Arrays.asList(com.tools20022.repository.area.semt.IntraPositionMovementStatusAdviceV04.mmProcessingStatus,
-						com.tools20022.repository.area.semt.IntraPositionMovementStatusAdviceV05.mmProcessingStatus);
+				messageElement_lazy = () -> Arrays.asList(IntraPositionProcessingStatus5Choice.mmRejected, IntraPositionProcessingStatus5Choice.mmRepair, IntraPositionProcessingStatus5Choice.mmCancelled,
+						IntraPositionProcessingStatus5Choice.mmAcknowledgedAccepted, IntraPositionProcessingStatus5Choice.mmProprietary);
+				messageBuildingBlock_lazy = () -> Arrays.asList(IntraPositionMovementStatusAdviceV04.mmProcessingStatus, IntraPositionMovementStatusAdviceV05.mmProcessingStatus);
 				trace_lazy = () -> SecuritiesTradeStatusReason.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "IntraPositionProcessingStatus5Choice";
 				definition = "Choice of format for the processing status.";
 				previousVersion_lazy = () -> IntraPositionProcessingStatus3Choice.mmObject();

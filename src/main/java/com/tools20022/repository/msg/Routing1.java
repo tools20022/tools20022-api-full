@@ -19,9 +19,11 @@ package com.tools20022.repository.msg;
 
 import com.tools20022.metamodel.MMMessageAttribute;
 import com.tools20022.metamodel.MMMessageComponent;
+import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.codeset.RoutingType1Code;
 import com.tools20022.repository.datatype.Max35Text;
 import com.tools20022.repository.entity.Organisation;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.List;
@@ -96,7 +98,7 @@ public class Routing1 {
 			componentContext_lazy = () -> Routing1.mmObject();
 			isDerived = false;
 			xmlTag = "List";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "List";
 			definition = "Identifies a list of firms or a vendor maintained list.";
 			minOccurs = 0;
@@ -144,7 +146,7 @@ public class Routing1 {
 			componentContext_lazy = () -> Routing1.mmObject();
 			isDerived = false;
 			xmlTag = "Firm";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Firm";
 			definition = "Organised structure that is set up for a particular purpose, eg, a business, government body, department, charity, or financial institution.";
 			minOccurs = 0;
@@ -184,7 +186,7 @@ public class Routing1 {
 			componentContext_lazy = () -> Routing1.mmObject();
 			isDerived = false;
 			xmlTag = "RtgTp";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "RoutingType";
 			definition = "Indicates if the type of routing is allowed or blocked.";
 			maxOccurs = 1;
@@ -196,9 +198,9 @@ public class Routing1 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.Routing1.mmList, com.tools20022.repository.msg.Routing1.mmFirm, com.tools20022.repository.msg.Routing1.mmRoutingType);
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+				messageElement_lazy = () -> Arrays.asList(Routing1.mmList, Routing1.mmFirm, Routing1.mmRoutingType);
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 				name = "Routing1";
 				definition = "Firms or vendor maintained list of identifiers for the purpose of message routing.";
 			}

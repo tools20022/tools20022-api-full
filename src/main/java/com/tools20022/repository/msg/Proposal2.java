@@ -20,9 +20,11 @@ package com.tools20022.repository.msg;
 import com.tools20022.metamodel.MMMessageAssociationEnd;
 import com.tools20022.metamodel.MMMessageAttribute;
 import com.tools20022.metamodel.MMMessageComponent;
+import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.choice.CollateralProposal2Choice;
 import com.tools20022.repository.codeset.ProposalType1Code;
 import com.tools20022.repository.entity.CollateralProposal;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -116,14 +118,14 @@ public class Proposal2 {
 	 */
 	public static final MMMessageAttribute mmProposalType = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.CollateralProposal.mmType;
+			businessElementTrace_lazy = () -> CollateralProposal.mmType;
 			componentContext_lazy = () -> Proposal2.mmObject();
 			isDerived = false;
 			xmlTag = "PrpslTp";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ProposalType";
 			definition = "Indicates whether this is an initial or counter proposal.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.Proposal3.mmCollateralProposalType);
+			nextVersions_lazy = () -> Arrays.asList(Proposal3.mmCollateralProposalType);
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> ProposalType1Code.mmObject();
@@ -178,10 +180,10 @@ public class Proposal2 {
 			componentContext_lazy = () -> Proposal2.mmObject();
 			isDerived = false;
 			xmlTag = "PrpslDtls";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ProposalDetails";
 			definition = "Provides details about the proposal for the variation margin and the segregated independent amount, or the segregated independent amount only.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.Proposal3.mmCollateralProposal);
+			nextVersions_lazy = () -> Arrays.asList(Proposal3.mmCollateralProposal);
 			maxOccurs = 1;
 			minOccurs = 1;
 			isComposite = true;
@@ -192,10 +194,10 @@ public class Proposal2 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.Proposal2.mmProposalType, com.tools20022.repository.msg.Proposal2.mmProposalDetails);
+				messageElement_lazy = () -> Arrays.asList(Proposal2.mmProposalType, Proposal2.mmProposalDetails);
 				trace_lazy = () -> CollateralProposal.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 				name = "Proposal2";
 				definition = "Indicates the type of proposal and if the proposal is  for the variation margin and the segregated independent amount, or the segregated independent amount only.";
 				nextVersions_lazy = () -> Arrays.asList(Proposal3.mmObject());

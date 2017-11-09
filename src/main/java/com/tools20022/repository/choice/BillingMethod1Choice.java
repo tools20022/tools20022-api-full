@@ -19,7 +19,9 @@ package com.tools20022.repository.choice;
 
 import com.tools20022.metamodel.MMChoiceComponent;
 import com.tools20022.metamodel.MMMessageAssociationEnd;
+import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.entity.Tax;
+import com.tools20022.repository.GeneratedRepository;
 import com.tools20022.repository.msg.BillingMethod1;
 import com.tools20022.repository.msg.BillingMethod2;
 import com.tools20022.repository.msg.BillingMethod3;
@@ -103,7 +105,7 @@ public class BillingMethod1Choice {
 			componentContext_lazy = () -> BillingMethod1Choice.mmObject();
 			isDerived = false;
 			xmlTag = "MtdA";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "MethodA";
 			definition = "Tax values are based on tax calculation method A.";
 			maxOccurs = 1;
@@ -149,7 +151,7 @@ public class BillingMethod1Choice {
 			componentContext_lazy = () -> BillingMethod1Choice.mmObject();
 			isDerived = false;
 			xmlTag = "MtdB";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "MethodB";
 			definition = "Tax values are based on tax calculation method B.";
 			maxOccurs = 1;
@@ -195,7 +197,7 @@ public class BillingMethod1Choice {
 			componentContext_lazy = () -> BillingMethod1Choice.mmObject();
 			isDerived = false;
 			xmlTag = "MtdD";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "MethodD";
 			definition = "Tax values are based on tax calculation method D.";
 			maxOccurs = 1;
@@ -208,11 +210,10 @@ public class BillingMethod1Choice {
 	final static public MMChoiceComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMChoiceComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.choice.BillingMethod1Choice.mmMethodA, com.tools20022.repository.choice.BillingMethod1Choice.mmMethodB,
-						com.tools20022.repository.choice.BillingMethod1Choice.mmMethodD);
+				messageElement_lazy = () -> Arrays.asList(BillingMethod1Choice.mmMethodA, BillingMethod1Choice.mmMethodB, BillingMethod1Choice.mmMethodD);
 				trace_lazy = () -> Tax.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "BillingMethod1Choice";
 				definition = "Choice between tax calculation methods A, B or D.";
 			}

@@ -19,7 +19,9 @@ package com.tools20022.repository.codeset;
 
 import com.tools20022.metamodel.MMCode;
 import com.tools20022.metamodel.MMCodeSet;
+import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.codeset.TransactionActivityCode;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -93,7 +95,7 @@ public class TransactionActivity1Code extends TransactionActivityCode {
 	 */
 	public static final MMCode mmBorrowingLendingActivity = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "BorrowingLendingActivity";
 			owner_lazy = () -> TransactionActivity1Code.mmObject();
 		}
@@ -116,7 +118,7 @@ public class TransactionActivity1Code extends TransactionActivityCode {
 	 */
 	public static final MMCode mmMarketClaim = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "MarketClaim";
 			owner_lazy = () -> TransactionActivity1Code.mmObject();
 		}
@@ -139,7 +141,7 @@ public class TransactionActivity1Code extends TransactionActivityCode {
 	 */
 	public static final MMCode mmCollateralActivity = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CollateralActivity";
 			owner_lazy = () -> TransactionActivity1Code.mmObject();
 		}
@@ -162,7 +164,7 @@ public class TransactionActivity1Code extends TransactionActivityCode {
 	 */
 	public static final MMCode mmCorporateActionActivity = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CorporateActionActivity";
 			owner_lazy = () -> TransactionActivity1Code.mmObject();
 		}
@@ -185,7 +187,7 @@ public class TransactionActivity1Code extends TransactionActivityCode {
 	 */
 	public static final MMCode mmSettlementandClearingActivity = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SettlementandClearingActivity";
 			owner_lazy = () -> TransactionActivity1Code.mmObject();
 		}
@@ -194,14 +196,13 @@ public class TransactionActivity1Code extends TransactionActivityCode {
 	static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
 				example = Arrays.asList("BOLE");
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "TransactionActivity1Code";
 				definition = "Specifies the type of activity to which this transaction relates.";
-				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.TransactionActivity1Code.mmBorrowingLendingActivity, com.tools20022.repository.codeset.TransactionActivity1Code.mmMarketClaim,
-						com.tools20022.repository.codeset.TransactionActivity1Code.mmCollateralActivity, com.tools20022.repository.codeset.TransactionActivity1Code.mmCorporateActionActivity,
-						com.tools20022.repository.codeset.TransactionActivity1Code.mmSettlementandClearingActivity);
+				code_lazy = () -> Arrays.asList(TransactionActivity1Code.mmBorrowingLendingActivity, TransactionActivity1Code.mmMarketClaim, TransactionActivity1Code.mmCollateralActivity, TransactionActivity1Code.mmCorporateActionActivity,
+						TransactionActivity1Code.mmSettlementandClearingActivity);
 				trace_lazy = () -> TransactionActivityCode.mmObject();
 			}
 		});

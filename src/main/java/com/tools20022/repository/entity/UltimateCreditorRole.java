@@ -18,7 +18,10 @@
 package com.tools20022.repository.entity;
 
 import com.tools20022.metamodel.MMBusinessComponent;
+import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.entity.PaymentObligationPartyRole;
+import com.tools20022.repository.GeneratedRepository;
+import com.tools20022.repository.msg.*;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -78,13 +81,12 @@ public class UltimateCreditorRole extends PaymentObligationPartyRole {
 	static public MMBusinessComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMBusinessComponent() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "UltimateCreditorRole";
 				definition = "Ultimate party to which an amount of money is due.";
-				derivationElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.RequestedModification2.mmUltimateCreditor, com.tools20022.repository.msg.RequestedModification3.mmUltimateCreditor,
-						com.tools20022.repository.msg.RequestedModification4.mmUltimateCreditor, com.tools20022.repository.msg.RequestedModification5.mmUltimateCreditor,
-						com.tools20022.repository.msg.RequestedModification6.mmUltimateCreditor);
+				derivationElement_lazy = () -> Arrays.asList(RequestedModification2.mmUltimateCreditor, RequestedModification3.mmUltimateCreditor, RequestedModification4.mmUltimateCreditor, RequestedModification5.mmUltimateCreditor,
+						RequestedModification6.mmUltimateCreditor);
 				superType_lazy = () -> PaymentObligationPartyRole.mmObject();
 			}
 		});

@@ -19,7 +19,9 @@ package com.tools20022.repository.codeset;
 
 import com.tools20022.metamodel.MMCode;
 import com.tools20022.metamodel.MMCodeSet;
+import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.codeset.BaselineStatusCode;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -113,7 +115,7 @@ public class BaselineStatus3Code extends BaselineStatusCode {
 	 */
 	public static final MMCode mmProposed = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Proposed";
 			owner_lazy = () -> BaselineStatus3Code.mmObject();
 		}
@@ -136,7 +138,7 @@ public class BaselineStatus3Code extends BaselineStatusCode {
 	 */
 	public static final MMCode mmClosed = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Closed";
 			owner_lazy = () -> BaselineStatus3Code.mmObject();
 		}
@@ -159,7 +161,7 @@ public class BaselineStatus3Code extends BaselineStatusCode {
 	 */
 	public static final MMCode mmPartiallyMatched = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PartiallyMatched";
 			owner_lazy = () -> BaselineStatus3Code.mmObject();
 		}
@@ -182,7 +184,7 @@ public class BaselineStatus3Code extends BaselineStatusCode {
 	 */
 	public static final MMCode mmEstablished = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Established";
 			owner_lazy = () -> BaselineStatus3Code.mmObject();
 		}
@@ -205,7 +207,7 @@ public class BaselineStatus3Code extends BaselineStatusCode {
 	 */
 	public static final MMCode mmActive = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Active";
 			owner_lazy = () -> BaselineStatus3Code.mmObject();
 		}
@@ -228,7 +230,7 @@ public class BaselineStatus3Code extends BaselineStatusCode {
 	 */
 	public static final MMCode mmComplete = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Complete";
 			owner_lazy = () -> BaselineStatus3Code.mmObject();
 		}
@@ -251,7 +253,7 @@ public class BaselineStatus3Code extends BaselineStatusCode {
 	 */
 	public static final MMCode mmAmendmentRequested = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AmendmentRequested";
 			owner_lazy = () -> BaselineStatus3Code.mmObject();
 		}
@@ -274,7 +276,7 @@ public class BaselineStatus3Code extends BaselineStatusCode {
 	 */
 	public static final MMCode mmReActivateRequested = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ReActivateRequested";
 			owner_lazy = () -> BaselineStatus3Code.mmObject();
 		}
@@ -297,7 +299,7 @@ public class BaselineStatus3Code extends BaselineStatusCode {
 	 */
 	public static final MMCode mmCloseRequested = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CloseRequested";
 			owner_lazy = () -> BaselineStatus3Code.mmObject();
 		}
@@ -320,7 +322,7 @@ public class BaselineStatus3Code extends BaselineStatusCode {
 	 */
 	public static final MMCode mmCompleteRequested = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CompleteRequested";
 			owner_lazy = () -> BaselineStatus3Code.mmObject();
 		}
@@ -343,7 +345,7 @@ public class BaselineStatus3Code extends BaselineStatusCode {
 	 */
 	public static final MMCode mmStatusExtensionRequested = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "StatusExtensionRequested";
 			owner_lazy = () -> BaselineStatus3Code.mmObject();
 		}
@@ -366,7 +368,7 @@ public class BaselineStatus3Code extends BaselineStatusCode {
 	 */
 	public static final MMCode mmDataSetAcceptanceRequested = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "DataSetAcceptanceRequested";
 			owner_lazy = () -> BaselineStatus3Code.mmObject();
 		}
@@ -375,17 +377,14 @@ public class BaselineStatus3Code extends BaselineStatusCode {
 	static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
 				example = Arrays.asList("PROP");
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "BaselineStatus3Code";
 				definition = "Indicates the status of a baseline.";
-				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.BaselineStatus3Code.mmProposed, com.tools20022.repository.codeset.BaselineStatus3Code.mmClosed,
-						com.tools20022.repository.codeset.BaselineStatus3Code.mmPartiallyMatched, com.tools20022.repository.codeset.BaselineStatus3Code.mmEstablished, com.tools20022.repository.codeset.BaselineStatus3Code.mmActive,
-						com.tools20022.repository.codeset.BaselineStatus3Code.mmComplete, com.tools20022.repository.codeset.BaselineStatus3Code.mmAmendmentRequested,
-						com.tools20022.repository.codeset.BaselineStatus3Code.mmReActivateRequested, com.tools20022.repository.codeset.BaselineStatus3Code.mmCloseRequested,
-						com.tools20022.repository.codeset.BaselineStatus3Code.mmCompleteRequested, com.tools20022.repository.codeset.BaselineStatus3Code.mmStatusExtensionRequested,
-						com.tools20022.repository.codeset.BaselineStatus3Code.mmDataSetAcceptanceRequested);
+				code_lazy = () -> Arrays.asList(BaselineStatus3Code.mmProposed, BaselineStatus3Code.mmClosed, BaselineStatus3Code.mmPartiallyMatched, BaselineStatus3Code.mmEstablished, BaselineStatus3Code.mmActive,
+						BaselineStatus3Code.mmComplete, BaselineStatus3Code.mmAmendmentRequested, BaselineStatus3Code.mmReActivateRequested, BaselineStatus3Code.mmCloseRequested, BaselineStatus3Code.mmCompleteRequested,
+						BaselineStatus3Code.mmStatusExtensionRequested, BaselineStatus3Code.mmDataSetAcceptanceRequested);
 				trace_lazy = () -> BaselineStatusCode.mmObject();
 			}
 		});

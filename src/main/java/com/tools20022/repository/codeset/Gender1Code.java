@@ -19,7 +19,9 @@ package com.tools20022.repository.codeset;
 
 import com.tools20022.metamodel.MMCode;
 import com.tools20022.metamodel.MMCodeSet;
+import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.codeset.GenderCode;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -73,7 +75,7 @@ public class Gender1Code extends GenderCode {
 	 */
 	public static final MMCode mmFemale = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Female";
 			owner_lazy = () -> Gender1Code.mmObject();
 		}
@@ -95,7 +97,7 @@ public class Gender1Code extends GenderCode {
 	 */
 	public static final MMCode mmMale = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Male";
 			owner_lazy = () -> Gender1Code.mmObject();
 		}
@@ -104,11 +106,11 @@ public class Gender1Code extends GenderCode {
 	static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "Gender1Code";
 				definition = "Specifies the gender of a person.";
-				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.Gender1Code.mmFemale, com.tools20022.repository.codeset.Gender1Code.mmMale);
+				code_lazy = () -> Arrays.asList(Gender1Code.mmFemale, Gender1Code.mmMale);
 				trace_lazy = () -> GenderCode.mmObject();
 			}
 		});

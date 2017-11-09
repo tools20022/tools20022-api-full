@@ -19,6 +19,8 @@ package com.tools20022.repository.choice;
 
 import com.tools20022.metamodel.MMChoiceComponent;
 import com.tools20022.metamodel.MMMessageAssociationEnd;
+import com.tools20022.metamodel.MMRegistrationStatus;
+import com.tools20022.repository.GeneratedRepository;
 import com.tools20022.repository.msg.ErrorHandling3;
 import com.tools20022.repository.msg.StandingOrder3;
 import java.util.Arrays;
@@ -111,10 +113,10 @@ public class StandingOrderOrError1Choice {
 			componentContext_lazy = () -> StandingOrderOrError1Choice.mmObject();
 			isDerived = false;
 			xmlTag = "Rpt";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Report";
 			definition = "Reports either on the standing order or on a business error.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.choice.StandingOrderOrError3Choice.mmReport);
+			nextVersions_lazy = () -> Arrays.asList(StandingOrderOrError3Choice.mmReport);
 			minOccurs = 1;
 			isComposite = true;
 			type_lazy = () -> StandingOrder3.mmObject();
@@ -163,10 +165,10 @@ public class StandingOrderOrError1Choice {
 			componentContext_lazy = () -> StandingOrderOrError1Choice.mmObject();
 			isDerived = false;
 			xmlTag = "OprlErr";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "OperationalError";
 			definition = "Indicates that an operational error has been issued during the processing of the related request.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.choice.StandingOrderOrError3Choice.mmOperationalError);
+			nextVersions_lazy = () -> Arrays.asList(StandingOrderOrError3Choice.mmOperationalError);
 			minOccurs = 1;
 			isComposite = true;
 			type_lazy = () -> ErrorHandling3.mmObject();
@@ -176,9 +178,9 @@ public class StandingOrderOrError1Choice {
 	final static public MMChoiceComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMChoiceComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.choice.StandingOrderOrError1Choice.mmReport, com.tools20022.repository.choice.StandingOrderOrError1Choice.mmOperationalError);
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+				messageElement_lazy = () -> Arrays.asList(StandingOrderOrError1Choice.mmReport, StandingOrderOrError1Choice.mmOperationalError);
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 				name = "StandingOrderOrError1Choice";
 				definition = "Choice between the standing order details or an operational error when the requested data cannot be retrieved.";
 				nextVersions_lazy = () -> Arrays.asList(StandingOrderOrError3Choice.mmObject());

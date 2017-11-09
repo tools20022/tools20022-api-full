@@ -19,9 +19,11 @@ package com.tools20022.repository.choice;
 
 import com.tools20022.metamodel.MMChoiceComponent;
 import com.tools20022.metamodel.MMMessageAttribute;
+import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.codeset.DocumentType5Code;
 import com.tools20022.repository.datatype.Max35Text;
 import com.tools20022.repository.entity.Document;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -122,15 +124,14 @@ public class ReferredDocumentType1Choice {
 	 */
 	public static final MMMessageAttribute mmCode = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Document.mmType;
+			businessElementTrace_lazy = () -> Document.mmType;
 			componentContext_lazy = () -> ReferredDocumentType1Choice.mmObject();
 			isDerived = false;
 			xmlTag = "Cd";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Code";
 			definition = "Document type in a coded form.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.choice.DocumentLineType1Choice.mmCode, com.tools20022.repository.choice.GarnishmentType1Choice.mmCode,
-					com.tools20022.repository.choice.ReferredDocumentType3Choice.mmCode);
+			nextVersions_lazy = () -> Arrays.asList(DocumentLineType1Choice.mmCode, GarnishmentType1Choice.mmCode, ReferredDocumentType3Choice.mmCode);
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> DocumentType5Code.mmObject();
@@ -186,15 +187,14 @@ public class ReferredDocumentType1Choice {
 	 */
 	public static final MMMessageAttribute mmProprietary = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Document.mmType;
+			businessElementTrace_lazy = () -> Document.mmType;
 			componentContext_lazy = () -> ReferredDocumentType1Choice.mmObject();
 			isDerived = false;
 			xmlTag = "Prtry";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Proprietary";
 			definition = "Proprietary identification of the type of the remittance document.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.choice.DocumentLineType1Choice.mmProprietary, com.tools20022.repository.choice.GarnishmentType1Choice.mmProprietary,
-					com.tools20022.repository.choice.ReferredDocumentType3Choice.mmProprietary);
+			nextVersions_lazy = () -> Arrays.asList(DocumentLineType1Choice.mmProprietary, GarnishmentType1Choice.mmProprietary, ReferredDocumentType3Choice.mmProprietary);
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> Max35Text.mmObject();
@@ -204,10 +204,10 @@ public class ReferredDocumentType1Choice {
 	final static public MMChoiceComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMChoiceComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.choice.ReferredDocumentType1Choice.mmCode, com.tools20022.repository.choice.ReferredDocumentType1Choice.mmProprietary);
+				messageElement_lazy = () -> Arrays.asList(ReferredDocumentType1Choice.mmCode, ReferredDocumentType1Choice.mmProprietary);
 				trace_lazy = () -> Document.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "ReferredDocumentType1Choice";
 				definition = "Specifies the type of the document referred in the remittance information.";
 				nextVersions_lazy = () -> Arrays.asList(GarnishmentType1Choice.mmObject(), ReferredDocumentType3Choice.mmObject());

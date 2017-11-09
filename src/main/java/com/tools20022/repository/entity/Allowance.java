@@ -19,9 +19,14 @@ package com.tools20022.repository.entity;
 
 import com.tools20022.metamodel.MMBusinessAttribute;
 import com.tools20022.metamodel.MMBusinessComponent;
+import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.datatype.CurrencyAndAmount;
 import com.tools20022.repository.entity.Adjustment;
+import com.tools20022.repository.GeneratedRepository;
+import com.tools20022.repository.msg.LineItemMonetarySummation1;
 import com.tools20022.repository.msg.SettlementAllowanceCharge1;
+import com.tools20022.repository.msg.SettlementMonetarySummation1;
+import com.tools20022.repository.msg.TradeSettlement1;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -34,14 +39,12 @@ import java.util.concurrent.atomic.AtomicReference;
  * <p>
  * <strong>Constant fields:</strong>
  * <ul>
- * <li>{@linkplain com.tools20022.metamodel.MMBusinessComponent#getElement
- * element} =
- * <ul>
- * <li>{@linkplain com.tools20022.repository.entity.Allowance#mmTotalAllowance
- * Allowance.mmTotalAllowance}</li>
  * <li>
- * {@linkplain com.tools20022.repository.entity.Allowance#mmNetPriceAllowance
- * Allowance.mmNetPriceAllowance}</li>
+ * {@linkplain com.tools20022.metamodel.MMBusinessComponent#getDerivationComponent
+ * derivationComponent} =
+ * <ul>
+ * <li>{@linkplain com.tools20022.repository.msg.SettlementAllowanceCharge1
+ * SettlementAllowanceCharge1}</li>
  * </ul>
  * </li>
  * <li>
@@ -56,12 +59,14 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>{@linkplain com.tools20022.metamodel.MMBusinessComponent#getSuperType
  * superType} = {@linkplain com.tools20022.repository.entity.Adjustment
  * Adjustment}</li>
- * <li>
- * {@linkplain com.tools20022.metamodel.MMBusinessComponent#getDerivationComponent
- * derivationComponent} =
+ * <li>{@linkplain com.tools20022.metamodel.MMBusinessComponent#getElement
+ * element} =
  * <ul>
- * <li>{@linkplain com.tools20022.repository.msg.SettlementAllowanceCharge1
- * SettlementAllowanceCharge1}</li>
+ * <li>{@linkplain com.tools20022.repository.entity.Allowance#mmTotalAllowance
+ * Allowance.mmTotalAllowance}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.entity.Allowance#mmNetPriceAllowance
+ * Allowance.mmNetPriceAllowance}</li>
  * </ul>
  * </li>
  * <li>
@@ -121,10 +126,10 @@ public class Allowance extends Adjustment {
 	 */
 	public static final MMBusinessAttribute mmTotalAllowance = new MMBusinessAttribute() {
 		{
-			derivation_lazy = () -> Arrays.asList(com.tools20022.repository.msg.SettlementMonetarySummation1.mmAllowanceTotalAmount, com.tools20022.repository.msg.LineItemMonetarySummation1.mmAllowanceTotalAmount);
+			derivation_lazy = () -> Arrays.asList(SettlementMonetarySummation1.mmAllowanceTotalAmount, LineItemMonetarySummation1.mmAllowanceTotalAmount);
 			elementContext_lazy = () -> Allowance.mmObject();
 			isDerived = false;
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "TotalAllowance";
 			definition = "Algebraical sum of allowances related to the invoice.";
 			maxOccurs = 1;
@@ -162,7 +167,7 @@ public class Allowance extends Adjustment {
 		{
 			elementContext_lazy = () -> Allowance.mmObject();
 			isDerived = false;
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "NetPriceAllowance";
 			definition = "Allowance applied to the net price.";
 			maxOccurs = 1;
@@ -174,13 +179,13 @@ public class Allowance extends Adjustment {
 	static public MMBusinessComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMBusinessComponent() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "Allowance";
 				definition = "Amount of money deducted from a price or an amount due.";
-				derivationElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.TradeSettlement1.mmAllowanceCharge);
+				derivationElement_lazy = () -> Arrays.asList(TradeSettlement1.mmAllowanceCharge);
 				superType_lazy = () -> Adjustment.mmObject();
-				element_lazy = () -> Arrays.asList(com.tools20022.repository.entity.Allowance.mmTotalAllowance, com.tools20022.repository.entity.Allowance.mmNetPriceAllowance);
+				element_lazy = () -> Arrays.asList(Allowance.mmTotalAllowance, Allowance.mmNetPriceAllowance);
 				derivationComponent_lazy = () -> Arrays.asList(SettlementAllowanceCharge1.mmObject());
 			}
 		});

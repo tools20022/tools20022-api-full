@@ -20,12 +20,16 @@ package com.tools20022.repository.msg;
 import com.tools20022.metamodel.MMMessageAssociationEnd;
 import com.tools20022.metamodel.MMMessageAttribute;
 import com.tools20022.metamodel.MMMessageComponent;
+import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.choice.*;
 import com.tools20022.repository.datatype.BaseOneRate;
 import com.tools20022.repository.datatype.ISODateTime;
 import com.tools20022.repository.datatype.Max4AlphaNumericText;
 import com.tools20022.repository.datatype.Number;
 import com.tools20022.repository.entity.Option;
+import com.tools20022.repository.entity.Price;
+import com.tools20022.repository.entity.SecuritiesConversion;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.List;
@@ -139,11 +143,11 @@ public class Option7 {
 	 */
 	public static final MMMessageAttribute mmOptionSettlementStyle = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Option.mmSettleStyle;
+			businessElementTrace_lazy = () -> Option.mmSettleStyle;
 			componentContext_lazy = () -> Option7.mmObject();
 			isDerived = false;
 			xmlTag = "OptnSttlmStyle";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "OptionSettlementStyle";
 			definition = "Specifies whether the option contract settles at the open or close of the market.";
 			maxOccurs = 1;
@@ -188,11 +192,11 @@ public class Option7 {
 	 */
 	public static final MMMessageAttribute mmConversionDate = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.SecuritiesConversion.mmConversionDate;
+			businessElementTrace_lazy = () -> SecuritiesConversion.mmConversionDate;
 			componentContext_lazy = () -> Option7.mmObject();
 			isDerived = false;
 			xmlTag = "ConvsDt";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ConversionDate";
 			definition = "Deadline by which a convertible security must be converted according to the terms of the issue.";
 			maxOccurs = 1;
@@ -236,11 +240,11 @@ public class Option7 {
 	 */
 	public static final MMMessageAttribute mmStrikePrice = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Price.mmSecuritiesPricing;
+			businessElementTrace_lazy = () -> Price.mmSecuritiesPricing;
 			componentContext_lazy = () -> Option7.mmObject();
 			isDerived = false;
 			xmlTag = "StrkPric";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "StrikePrice";
 			definition = "Amount of money for which goods, services or assets are offered, sold, or bought.";
 			maxOccurs = 1;
@@ -283,11 +287,11 @@ public class Option7 {
 	 */
 	public static final MMMessageAttribute mmMinimumExercisableQuantity = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.SecuritiesConversion.mmMaximumExercisableQuantity;
+			businessElementTrace_lazy = () -> SecuritiesConversion.mmMaximumExercisableQuantity;
 			componentContext_lazy = () -> Option7.mmObject();
 			isDerived = false;
 			xmlTag = "MinExrcblQty";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "MinimumExercisableQuantity";
 			definition = "Minimum quantity of securities that must be exercised.";
 			maxOccurs = 1;
@@ -332,11 +336,11 @@ public class Option7 {
 	 */
 	public static final MMMessageAssociationEnd mmConversionPeriod = new MMMessageAssociationEnd() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.SecuritiesConversion.mmConversionPeriod;
+			businessElementTrace_lazy = () -> SecuritiesConversion.mmConversionPeriod;
 			componentContext_lazy = () -> Option7.mmObject();
 			isDerived = false;
 			xmlTag = "ConvsPrd";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ConversionPeriod";
 			definition = "Period during which a convertible security may be converted according to the terms of the issue.";
 			maxOccurs = 1;
@@ -380,11 +384,11 @@ public class Option7 {
 	 */
 	public static final MMMessageAssociationEnd mmOptionStyle = new MMMessageAssociationEnd() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Option.mmOptionStyle;
+			businessElementTrace_lazy = () -> Option.mmOptionStyle;
 			componentContext_lazy = () -> Option7.mmObject();
 			isDerived = false;
 			xmlTag = "OptnStyle";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "OptionStyle";
 			definition = "Specifies how an option can be exercised (American, European, Bermudan).";
 			maxOccurs = 1;
@@ -432,11 +436,11 @@ public class Option7 {
 	 */
 	public static final MMMessageAttribute mmOptionType = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Option.mmOptionType;
+			businessElementTrace_lazy = () -> Option.mmOptionType;
 			componentContext_lazy = () -> Option7.mmObject();
 			isDerived = false;
 			xmlTag = "OptnTp";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "OptionType";
 			definition = "Specifies whether it is a Call option (right to purchase a specific underlying asset) or a Put option (right to sell a specific underlying asset).";
 			maxOccurs = 1;
@@ -481,11 +485,11 @@ public class Option7 {
 	 */
 	public static final MMMessageAttribute mmStrikeValue = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Option.mmStrikeValue;
+			businessElementTrace_lazy = () -> Option.mmStrikeValue;
 			componentContext_lazy = () -> Option7.mmObject();
 			isDerived = false;
 			xmlTag = "StrkVal";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "StrikeValue";
 			definition = "Used for derivatives. The number of shares/units for the financial instrument involved in the option trade.";
 			maxOccurs = 1;
@@ -530,11 +534,11 @@ public class Option7 {
 	 */
 	public static final MMMessageAttribute mmStrikeMultiplier = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Option.mmStrikeMultiplier;
+			businessElementTrace_lazy = () -> Option.mmStrikeMultiplier;
 			componentContext_lazy = () -> Option7.mmObject();
 			isDerived = false;
 			xmlTag = "StrkMltplr";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "StrikeMultiplier";
 			definition = "Used for derivatives. Multiplier applied to the strike price for the purpose of calculating the settlement value.";
 			maxOccurs = 1;
@@ -577,11 +581,11 @@ public class Option7 {
 	 */
 	public static final MMMessageAttribute mmInstrumentAssignmentMethod = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Option.mmInstrumentAssignmentMethod;
+			businessElementTrace_lazy = () -> Option.mmInstrumentAssignmentMethod;
 			componentContext_lazy = () -> Option7.mmObject();
 			isDerived = false;
 			xmlTag = "InstrmAssgnmtMtd";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "InstrumentAssignmentMethod";
 			definition = "Method under which assignment was conducted.";
 			maxOccurs = 1;
@@ -625,7 +629,7 @@ public class Option7 {
 			componentContext_lazy = () -> Option7.mmObject();
 			isDerived = false;
 			xmlTag = "VrsnNb";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "VersionNumber";
 			definition = "Number allocated by options exchanges to record that an option has undergone a change in its contract specifications (particularly adjustment of the strike price)";
 			maxOccurs = 1;
@@ -668,11 +672,11 @@ public class Option7 {
 	 */
 	public static final MMMessageAttribute mmExpiryLocation = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Option.mmExpiryLocation;
+			businessElementTrace_lazy = () -> Option.mmExpiryLocation;
 			componentContext_lazy = () -> Option7.mmObject();
 			isDerived = false;
 			xmlTag = "XpryLctn";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ExpiryLocation";
 			definition = "Financial center where option expires.";
 			maxOccurs = 1;
@@ -717,7 +721,7 @@ public class Option7 {
 			componentContext_lazy = () -> Option7.mmObject();
 			isDerived = false;
 			xmlTag = "Stdstn";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Standardisation";
 			definition = "Specifies whether the terms of the security (underlying instruments, expiration date, contract size) are defined according to the exchange specifications or whether they can be user defined.";
 			maxOccurs = 1;
@@ -758,7 +762,7 @@ public class Option7 {
 			componentContext_lazy = () -> Option7.mmObject();
 			isDerived = false;
 			xmlTag = "TradgPtyRole";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "TradingPartyRole";
 			definition = "Specifies the party which is the buyer or the seller.";
 			maxOccurs = 1;
@@ -800,7 +804,7 @@ public class Option7 {
 			componentContext_lazy = () -> Option7.mmObject();
 			isDerived = false;
 			xmlTag = "CtrctSz";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ContractSize";
 			definition = "Ratio or multiplying factor used to convert one contract into a quantity.";
 			maxOccurs = 1;
@@ -840,7 +844,7 @@ public class Option7 {
 			componentContext_lazy = () -> Option7.mmObject();
 			isDerived = false;
 			xmlTag = "AddtlUndrlygAttrbts";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AdditionalUnderlyingAttributes";
 			definition = "Provides more information about the underlying instrument.";
 			minOccurs = 0;
@@ -852,15 +856,12 @@ public class Option7 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.Option7.mmOptionSettlementStyle, com.tools20022.repository.msg.Option7.mmConversionDate, com.tools20022.repository.msg.Option7.mmStrikePrice,
-						com.tools20022.repository.msg.Option7.mmMinimumExercisableQuantity, com.tools20022.repository.msg.Option7.mmConversionPeriod, com.tools20022.repository.msg.Option7.mmOptionStyle,
-						com.tools20022.repository.msg.Option7.mmOptionType, com.tools20022.repository.msg.Option7.mmStrikeValue, com.tools20022.repository.msg.Option7.mmStrikeMultiplier,
-						com.tools20022.repository.msg.Option7.mmInstrumentAssignmentMethod, com.tools20022.repository.msg.Option7.mmVersionNumber, com.tools20022.repository.msg.Option7.mmExpiryLocation,
-						com.tools20022.repository.msg.Option7.mmStandardisation, com.tools20022.repository.msg.Option7.mmTradingPartyRole, com.tools20022.repository.msg.Option7.mmContractSize,
-						com.tools20022.repository.msg.Option7.mmAdditionalUnderlyingAttributes);
+				messageElement_lazy = () -> Arrays.asList(Option7.mmOptionSettlementStyle, Option7.mmConversionDate, Option7.mmStrikePrice, Option7.mmMinimumExercisableQuantity, Option7.mmConversionPeriod, Option7.mmOptionStyle,
+						Option7.mmOptionType, Option7.mmStrikeValue, Option7.mmStrikeMultiplier, Option7.mmInstrumentAssignmentMethod, Option7.mmVersionNumber, Option7.mmExpiryLocation, Option7.mmStandardisation,
+						Option7.mmTradingPartyRole, Option7.mmContractSize, Option7.mmAdditionalUnderlyingAttributes);
 				trace_lazy = () -> Option.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 				name = "Option7";
 				definition = "Contracts which grant to the holder either the privilege to purchase or the privilege to sell the assets specified at a predetermined price or formula at or within a time in the future.";
 			}

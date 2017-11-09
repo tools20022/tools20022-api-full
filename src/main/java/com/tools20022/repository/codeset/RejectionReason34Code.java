@@ -19,7 +19,9 @@ package com.tools20022.repository.codeset;
 
 import com.tools20022.metamodel.MMCode;
 import com.tools20022.metamodel.MMCodeSet;
+import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.codeset.RejectionReasonV2Code;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -101,7 +103,7 @@ public class RejectionReason34Code extends RejectionReasonV2Code {
 	 */
 	public static final MMCode mmAccountServicerDeadlineMissed = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AccountServicerDeadlineMissed";
 			owner_lazy = () -> RejectionReason34Code.mmObject();
 		}
@@ -124,7 +126,7 @@ public class RejectionReason34Code extends RejectionReasonV2Code {
 	 */
 	public static final MMCode mmMarketDeadlineMissed = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "MarketDeadlineMissed";
 			owner_lazy = () -> RejectionReason34Code.mmObject();
 		}
@@ -147,7 +149,7 @@ public class RejectionReason34Code extends RejectionReasonV2Code {
 	 */
 	public static final MMCode mmCashAccount = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CashAccount";
 			owner_lazy = () -> RejectionReason34Code.mmObject();
 		}
@@ -170,7 +172,7 @@ public class RejectionReason34Code extends RejectionReasonV2Code {
 	 */
 	public static final MMCode mmNoMatch = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "NoMatch";
 			owner_lazy = () -> RejectionReason34Code.mmObject();
 		}
@@ -193,7 +195,7 @@ public class RejectionReason34Code extends RejectionReasonV2Code {
 	 */
 	public static final MMCode mmNotFoundRejection = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "NotFoundRejection";
 			owner_lazy = () -> RejectionReason34Code.mmObject();
 		}
@@ -216,7 +218,7 @@ public class RejectionReason34Code extends RejectionReasonV2Code {
 	 */
 	public static final MMCode mmOther = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Other";
 			owner_lazy = () -> RejectionReason34Code.mmObject();
 		}
@@ -239,7 +241,7 @@ public class RejectionReason34Code extends RejectionReasonV2Code {
 	 */
 	public static final MMCode mmReferenceRejection = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ReferenceRejection";
 			owner_lazy = () -> RejectionReason34Code.mmObject();
 		}
@@ -248,14 +250,13 @@ public class RejectionReason34Code extends RejectionReasonV2Code {
 	static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
 				example = Arrays.asList("ADEA");
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "RejectionReason34Code";
 				definition = "Specifies the reason why the instruction/cancellation request has a rejected status.";
-				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.RejectionReason34Code.mmAccountServicerDeadlineMissed, com.tools20022.repository.codeset.RejectionReason34Code.mmMarketDeadlineMissed,
-						com.tools20022.repository.codeset.RejectionReason34Code.mmCashAccount, com.tools20022.repository.codeset.RejectionReason34Code.mmNoMatch, com.tools20022.repository.codeset.RejectionReason34Code.mmNotFoundRejection,
-						com.tools20022.repository.codeset.RejectionReason34Code.mmOther, com.tools20022.repository.codeset.RejectionReason34Code.mmReferenceRejection);
+				code_lazy = () -> Arrays.asList(RejectionReason34Code.mmAccountServicerDeadlineMissed, RejectionReason34Code.mmMarketDeadlineMissed, RejectionReason34Code.mmCashAccount, RejectionReason34Code.mmNoMatch,
+						RejectionReason34Code.mmNotFoundRejection, RejectionReason34Code.mmOther, RejectionReason34Code.mmReferenceRejection);
 				trace_lazy = () -> RejectionReasonV2Code.mmObject();
 			}
 		});

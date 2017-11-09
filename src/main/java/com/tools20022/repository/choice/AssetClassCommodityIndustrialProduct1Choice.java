@@ -19,7 +19,9 @@ package com.tools20022.repository.choice;
 
 import com.tools20022.metamodel.MMChoiceComponent;
 import com.tools20022.metamodel.MMMessageAssociationEnd;
+import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.entity.Commodity;
+import com.tools20022.repository.GeneratedRepository;
 import com.tools20022.repository.msg.IndustrialProductCommodityConstruction1;
 import com.tools20022.repository.msg.IndustrialProductCommodityManufacturing1;
 import java.util.Arrays;
@@ -101,11 +103,11 @@ public class AssetClassCommodityIndustrialProduct1Choice {
 	 */
 	public static final MMMessageAssociationEnd mmConstruction = new MMMessageAssociationEnd() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Commodity.mmSubProduct;
+			businessElementTrace_lazy = () -> Commodity.mmSubProduct;
 			componentContext_lazy = () -> AssetClassCommodityIndustrialProduct1Choice.mmObject();
 			isDerived = false;
 			xmlTag = "Cnstrctn";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Construction";
 			definition = "Construction related industrial product commodity derivative.";
 			maxOccurs = 1;
@@ -150,11 +152,11 @@ public class AssetClassCommodityIndustrialProduct1Choice {
 	 */
 	public static final MMMessageAssociationEnd mmManufacturing = new MMMessageAssociationEnd() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Commodity.mmSubProduct;
+			businessElementTrace_lazy = () -> Commodity.mmSubProduct;
 			componentContext_lazy = () -> AssetClassCommodityIndustrialProduct1Choice.mmObject();
 			isDerived = false;
 			xmlTag = "Manfctg";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Manufacturing";
 			definition = "Manufacturing related industrial product commodity derivative.";
 			maxOccurs = 1;
@@ -167,11 +169,10 @@ public class AssetClassCommodityIndustrialProduct1Choice {
 	final static public MMChoiceComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMChoiceComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.choice.AssetClassCommodityIndustrialProduct1Choice.mmConstruction,
-						com.tools20022.repository.choice.AssetClassCommodityIndustrialProduct1Choice.mmManufacturing);
+				messageElement_lazy = () -> Arrays.asList(AssetClassCommodityIndustrialProduct1Choice.mmConstruction, AssetClassCommodityIndustrialProduct1Choice.mmManufacturing);
 				trace_lazy = () -> Commodity.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "AssetClassCommodityIndustrialProduct1Choice";
 				definition = "Defines commodity attributes of a derivative where the type is industrial product.";
 			}

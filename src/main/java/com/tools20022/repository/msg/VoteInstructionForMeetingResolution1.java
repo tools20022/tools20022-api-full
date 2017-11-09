@@ -17,12 +17,11 @@
 
 package com.tools20022.repository.msg;
 
-import com.tools20022.metamodel.MMMessageAssociationEnd;
-import com.tools20022.metamodel.MMMessageAttribute;
-import com.tools20022.metamodel.MMMessageComponent;
-import com.tools20022.metamodel.MMXor;
+import com.tools20022.metamodel.*;
 import com.tools20022.repository.codeset.VoteInstructionAtMeeting1Code;
+import com.tools20022.repository.entity.Party;
 import com.tools20022.repository.entity.VoteInstructionRequest;
+import com.tools20022.repository.GeneratedRepository;
 import java.text.DateFormat;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
@@ -115,11 +114,11 @@ public class VoteInstructionForMeetingResolution1 {
 	 */
 	public static final MMMessageAttribute mmVoteIndication = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.VoteInstructionRequest.mmVoteForMeetingResolution;
+			businessElementTrace_lazy = () -> VoteInstructionRequest.mmVoteForMeetingResolution;
 			componentContext_lazy = () -> VoteInstructionForMeetingResolution1.mmObject();
 			isDerived = false;
 			xmlTag = "VoteIndctn";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "VoteIndication";
 			definition = "Specifies the vote recommendation for resolutions added during the meeting.";
 			maxOccurs = 1;
@@ -164,11 +163,11 @@ public class VoteInstructionForMeetingResolution1 {
 	 */
 	public static final MMMessageAssociationEnd mmShareholder = new MMMessageAssociationEnd() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Party.mmIdentification;
+			businessElementTrace_lazy = () -> Party.mmIdentification;
 			componentContext_lazy = () -> VoteInstructionForMeetingResolution1.mmObject();
 			isDerived = false;
 			xmlTag = "Shrhldr";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Shareholder";
 			definition = "Specifies the name and address of the shareholder to whom the rights to vote are transferred for resolutions added during the meeting.";
 			maxOccurs = 1;
@@ -182,6 +181,10 @@ public class VoteInstructionForMeetingResolution1 {
 	 * <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
+	 * <li>{@linkplain com.tools20022.metamodel.MMXor#getMessageComponent
+	 * messageComponent} =
+	 * {@linkplain com.tools20022.repository.msg.VoteInstructionForMeetingResolution1
+	 * VoteInstructionForMeetingResolution1}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMXor#getImpactedElements
 	 * impactedElements} =
 	 * <ul>
@@ -193,10 +196,6 @@ public class VoteInstructionForMeetingResolution1 {
 	 * VoteInstructionForMeetingResolution1.mmShareholder}</li>
 	 * </ul>
 	 * </li>
-	 * <li>{@linkplain com.tools20022.metamodel.MMXor#getMessageComponent
-	 * messageComponent} =
-	 * {@linkplain com.tools20022.repository.msg.VoteInstructionForMeetingResolution1
-	 * VoteInstructionForMeetingResolution1}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
@@ -211,21 +210,21 @@ public class VoteInstructionForMeetingResolution1 {
 	 */
 	public static final MMXor mmVoteIndicationOrShareholderRule = new MMXor() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "VoteIndicationOrShareholderRule";
 			definition = "Either VoteIndication or Shareholder must be present but not both.";
 			messageComponent_lazy = () -> VoteInstructionForMeetingResolution1.mmObject();
-			impactedElements_lazy = () -> Arrays.asList(com.tools20022.repository.msg.VoteInstructionForMeetingResolution1.mmVoteIndication, com.tools20022.repository.msg.VoteInstructionForMeetingResolution1.mmShareholder);
+			impactedElements_lazy = () -> Arrays.asList(VoteInstructionForMeetingResolution1.mmVoteIndication, VoteInstructionForMeetingResolution1.mmShareholder);
 		}
 	};
 
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.VoteInstructionForMeetingResolution1.mmVoteIndication, com.tools20022.repository.msg.VoteInstructionForMeetingResolution1.mmShareholder);
+				messageElement_lazy = () -> Arrays.asList(VoteInstructionForMeetingResolution1.mmVoteIndication, VoteInstructionForMeetingResolution1.mmShareholder);
 				trace_lazy = () -> VoteInstructionRequest.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.OBSOLETE;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.OBSOLETE;
 				removalDate = ((Supplier<Date>) (() -> {
 					try {
 						return DateFormat.getDateInstance(java.text.DateFormat.LONG).parse("September 9, 2016");
@@ -235,7 +234,7 @@ public class VoteInstructionForMeetingResolution1 {
 				})).get();
 				name = "VoteInstructionForMeetingResolution1";
 				definition = "Vote instruction applying to resolutions added during the meeting.";
-				xors_lazy = () -> Arrays.asList(com.tools20022.repository.msg.VoteInstructionForMeetingResolution1.mmVoteIndicationOrShareholderRule);
+				xors_lazy = () -> Arrays.asList(VoteInstructionForMeetingResolution1.mmVoteIndicationOrShareholderRule);
 			}
 		});
 		return mmObject_lazy.get();

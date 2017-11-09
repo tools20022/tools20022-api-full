@@ -20,9 +20,12 @@ package com.tools20022.repository.choice;
 import com.tools20022.metamodel.MMChoiceComponent;
 import com.tools20022.metamodel.MMMessageAssociationEnd;
 import com.tools20022.metamodel.MMMessageAttribute;
+import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.datatype.ISODate;
 import com.tools20022.repository.datatype.Max140Text;
+import com.tools20022.repository.entity.ObligationFulfilment;
 import com.tools20022.repository.entity.Payment;
+import com.tools20022.repository.GeneratedRepository;
 import com.tools20022.repository.msg.PaymentPeriod3;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
@@ -118,10 +121,10 @@ public class PaymentCodeOrOther1Choice {
 			componentContext_lazy = () -> PaymentCodeOrOther1Choice.mmObject();
 			isDerived = false;
 			xmlTag = "PmtCd";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PaymentCode";
 			definition = "Specifies the payment period in coded form and a number of days.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.choice.PaymentCodeOrOther2Choice.mmPaymentCode);
+			nextVersions_lazy = () -> Arrays.asList(PaymentCodeOrOther2Choice.mmPaymentCode);
 			maxOccurs = 1;
 			minOccurs = 1;
 			isComposite = true;
@@ -171,14 +174,14 @@ public class PaymentCodeOrOther1Choice {
 	 */
 	public static final MMMessageAttribute mmPaymentDueDate = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.ObligationFulfilment.mmDate;
+			businessElementTrace_lazy = () -> ObligationFulfilment.mmDate;
 			componentContext_lazy = () -> PaymentCodeOrOther1Choice.mmObject();
 			isDerived = false;
 			xmlTag = "PmtDueDt";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PaymentDueDate";
 			definition = "Specifies the payment date as a fixed date.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.choice.PaymentCodeOrOther2Choice.mmPaymentDueDate);
+			nextVersions_lazy = () -> Arrays.asList(PaymentCodeOrOther2Choice.mmPaymentDueDate);
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> ISODate.mmObject();
@@ -225,10 +228,10 @@ public class PaymentCodeOrOther1Choice {
 			componentContext_lazy = () -> PaymentCodeOrOther1Choice.mmObject();
 			isDerived = false;
 			xmlTag = "OthrPmtTerms";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "OtherPaymentTerms";
 			definition = "Specifies payment terms not present in a code list.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.choice.PaymentCodeOrOther2Choice.mmOtherPaymentTerms);
+			nextVersions_lazy = () -> Arrays.asList(PaymentCodeOrOther2Choice.mmOtherPaymentTerms);
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> Max140Text.mmObject();
@@ -238,10 +241,9 @@ public class PaymentCodeOrOther1Choice {
 	final static public MMChoiceComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMChoiceComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.choice.PaymentCodeOrOther1Choice.mmPaymentCode, com.tools20022.repository.choice.PaymentCodeOrOther1Choice.mmPaymentDueDate,
-						com.tools20022.repository.choice.PaymentCodeOrOther1Choice.mmOtherPaymentTerms);
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				messageElement_lazy = () -> Arrays.asList(PaymentCodeOrOther1Choice.mmPaymentCode, PaymentCodeOrOther1Choice.mmPaymentDueDate, PaymentCodeOrOther1Choice.mmOtherPaymentTerms);
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "PaymentCodeOrOther1Choice";
 				definition = "Choice between a payment term in a coded or free format.";
 				nextVersions_lazy = () -> Arrays.asList(PaymentCodeOrOther2Choice.mmObject());

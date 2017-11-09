@@ -19,6 +19,8 @@ package com.tools20022.repository.codeset;
 
 import com.tools20022.metamodel.MMCode;
 import com.tools20022.metamodel.MMCodeSet;
+import com.tools20022.metamodel.MMRegistrationStatus;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -27,6 +29,18 @@ import java.util.concurrent.atomic.AtomicReference;
  * <p>
  * <strong>Constant fields:</strong>
  * <ul>
+ * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getDerivation derivation}
+ * =
+ * <ul>
+ * <li>{@linkplain com.tools20022.repository.codeset.Side1Code Side1Code}</li>
+ * <li>{@linkplain com.tools20022.repository.codeset.Side3Code Side3Code}</li>
+ * <li>{@linkplain com.tools20022.repository.codeset.OrderDriverCode
+ * OrderDriverCode}</li>
+ * <li>{@linkplain com.tools20022.repository.codeset.IOISideTypeCode
+ * IOISideTypeCode}</li>
+ * <li>{@linkplain com.tools20022.repository.codeset.Side5Code Side5Code}</li>
+ * </ul>
+ * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getCode code} =
  * <ul>
  * <li>{@linkplain com.tools20022.repository.codeset.SideCode#mmBuy
@@ -62,18 +76,6 @@ import java.util.concurrent.atomic.AtomicReference;
  * SideCode.mmBorrow}</li>
  * <li>{@linkplain com.tools20022.repository.codeset.SideCode#mmOptionExercise
  * SideCode.mmOptionExercise}</li>
- * </ul>
- * </li>
- * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getDerivation derivation}
- * =
- * <ul>
- * <li>{@linkplain com.tools20022.repository.codeset.Side1Code Side1Code}</li>
- * <li>{@linkplain com.tools20022.repository.codeset.Side3Code Side3Code}</li>
- * <li>{@linkplain com.tools20022.repository.codeset.OrderDriverCode
- * OrderDriverCode}</li>
- * <li>{@linkplain com.tools20022.repository.codeset.IOISideTypeCode
- * IOISideTypeCode}</li>
- * <li>{@linkplain com.tools20022.repository.codeset.Side5Code Side5Code}</li>
  * </ul>
  * </li>
  * <li>
@@ -122,7 +124,7 @@ public class SideCode {
 	 */
 	public static final MMCode mmBuy = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "Buy";
 			definition = "Order is buy driven.";
 			owner_lazy = () -> SideCode.mmObject();
@@ -151,7 +153,7 @@ public class SideCode {
 	 */
 	public static final MMCode mmSell = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "Sell";
 			definition = "Order is sell driven.";
 			owner_lazy = () -> SideCode.mmObject();
@@ -183,7 +185,7 @@ public class SideCode {
 	 */
 	public static final MMCode mmCross = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "Cross";
 			definition = "Identifies an order for which a broker wishes to take the other side and cross with the client.";
 			owner_lazy = () -> SideCode.mmObject();
@@ -218,7 +220,7 @@ public class SideCode {
 	 */
 	public static final MMCode mmCrossShort = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "CrossShort";
 			definition = "Identifies a type of order for which a broker wants to cross with the client in the case a client wants to establish a short position, and sends a Sell Short order to the broker. Many exchanges have tick rules needing to be enforced, and the order getting converted from Sell Short to Cross (instead of Cross Short) could result in an illegal short sell.";
 			owner_lazy = () -> SideCode.mmObject();
@@ -251,7 +253,7 @@ public class SideCode {
 	 */
 	public static final MMCode mmCrossShortExempt = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "CrossShortExempt";
 			definition = "Identifies a type of order for which a broker wants to cross with the client in the case a client wants to establish a short position and is exempt from the uptick restriction. Used as audit trail on exchanges.";
 			owner_lazy = () -> SideCode.mmObject();
@@ -283,7 +285,7 @@ public class SideCode {
 	 */
 	public static final MMCode mmAsDefined = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "AsDefined";
 			definition = "Indicates, in the case of a multileg instrument,that the sides of the legs are the same as defined at the creation of the multileg instrument.";
 			owner_lazy = () -> SideCode.mmObject();
@@ -316,7 +318,7 @@ public class SideCode {
 	 */
 	public static final MMCode mmOpposite = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "Opposite";
 			definition = "Indicates, in the case of a multileg instrument,that the sides of the legs are the opposite of their definition at the creation of the multileg instrument.";
 			owner_lazy = () -> SideCode.mmObject();
@@ -345,7 +347,7 @@ public class SideCode {
 	 */
 	public static final MMCode mmUndisclosed = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "Undisclosed";
 			definition = "The side of the indication of interest is not disclosed.";
 			owner_lazy = () -> SideCode.mmObject();
@@ -374,7 +376,7 @@ public class SideCode {
 	 */
 	public static final MMCode mmTwoSided = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "TwoSided";
 			definition = "Indicates that the side refers to both buys and sells.";
 			owner_lazy = () -> SideCode.mmObject();
@@ -410,7 +412,7 @@ public class SideCode {
 	 */
 	public static final MMCode mmBuyMinus = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "BuyMinus";
 			definition = "A round-lot market order to buy minus is an order to buy a stated amount of a stock provided that its price is:\n- not higher than the last sale if the last sale was a minus or zero minus tick and\n- not higher than the last sale minus the minimum fractional change in the stock if the last sale was a plus or zero plus tick.\nA limit price order to buy minus also states the highest price at which it can be executed.";
 			owner_lazy = () -> SideCode.mmObject();
@@ -446,7 +448,7 @@ public class SideCode {
 	 */
 	public static final MMCode mmSellPlus = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SellPlus";
 			definition = "A round-lot market order to sell plus is an order to sell a stated amount of a stock provided that its price is:\n- not lower than the last sale if the last sale was a plus or zero plus tick and\n- not lower than the last sale minus the minimum fractional change in the stock if the last sale was a minus or zero minus tick.\nA limit-price order to sell plus also states the lowest price at which it can be executed.";
 			owner_lazy = () -> SideCode.mmObject();
@@ -479,7 +481,7 @@ public class SideCode {
 	 */
 	public static final MMCode mmSellShort = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SellShort";
 			definition = "An order to sell a security that the seller does not own; a sale effected by delivering a security borrowed by, or for the account of, the seller. Can only be executed on a plus or zero plus tick.";
 			owner_lazy = () -> SideCode.mmObject();
@@ -508,7 +510,7 @@ public class SideCode {
 	 */
 	public static final MMCode mmSellShortExempt = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SellShortExempt";
 			definition = "Short sale exempt from short-sale rules.";
 			owner_lazy = () -> SideCode.mmObject();
@@ -537,7 +539,7 @@ public class SideCode {
 	 */
 	public static final MMCode mmLend = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Lend";
 			definition = "Order is to lend securities.";
 			owner_lazy = () -> SideCode.mmObject();
@@ -566,7 +568,7 @@ public class SideCode {
 	 */
 	public static final MMCode mmBorrow = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Borrow";
 			definition = "Order is to borrow securities.";
 			owner_lazy = () -> SideCode.mmObject();
@@ -595,7 +597,7 @@ public class SideCode {
 	 */
 	public static final MMCode mmOptionExercise = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "OptionExercise";
 			definition = "Exercise of an option contract.";
 			owner_lazy = () -> SideCode.mmObject();
@@ -606,17 +608,13 @@ public class SideCode {
 	static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
 				example = Arrays.asList("BUYI");
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "SideCode";
 				definition = "Side taken by a party on an order.";
-				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.SideCode.mmBuy, com.tools20022.repository.codeset.SideCode.mmSell, com.tools20022.repository.codeset.SideCode.mmCross,
-						com.tools20022.repository.codeset.SideCode.mmCrossShort, com.tools20022.repository.codeset.SideCode.mmCrossShortExempt, com.tools20022.repository.codeset.SideCode.mmAsDefined,
-						com.tools20022.repository.codeset.SideCode.mmOpposite, com.tools20022.repository.codeset.SideCode.mmUndisclosed, com.tools20022.repository.codeset.SideCode.mmTwoSided,
-						com.tools20022.repository.codeset.SideCode.mmBuyMinus, com.tools20022.repository.codeset.SideCode.mmSellPlus, com.tools20022.repository.codeset.SideCode.mmSellShort,
-						com.tools20022.repository.codeset.SideCode.mmSellShortExempt, com.tools20022.repository.codeset.SideCode.mmLend, com.tools20022.repository.codeset.SideCode.mmBorrow,
-						com.tools20022.repository.codeset.SideCode.mmOptionExercise);
+				code_lazy = () -> Arrays.asList(SideCode.mmBuy, SideCode.mmSell, SideCode.mmCross, SideCode.mmCrossShort, SideCode.mmCrossShortExempt, SideCode.mmAsDefined, SideCode.mmOpposite, SideCode.mmUndisclosed, SideCode.mmTwoSided,
+						SideCode.mmBuyMinus, SideCode.mmSellPlus, SideCode.mmSellShort, SideCode.mmSellShortExempt, SideCode.mmLend, SideCode.mmBorrow, SideCode.mmOptionExercise);
 				derivation_lazy = () -> Arrays.asList(Side1Code.mmObject(), Side3Code.mmObject(), OrderDriverCode.mmObject(), IOISideTypeCode.mmObject(), Side5Code.mmObject());
 			}
 		});

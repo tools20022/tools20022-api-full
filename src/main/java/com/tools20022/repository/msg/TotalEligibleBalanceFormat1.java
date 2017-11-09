@@ -20,8 +20,10 @@ package com.tools20022.repository.msg;
 import com.tools20022.metamodel.MMMessageAssociationEnd;
 import com.tools20022.metamodel.MMMessageAttribute;
 import com.tools20022.metamodel.MMMessageComponent;
+import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.choice.Quantity3Choice;
 import com.tools20022.repository.entity.SecuritiesBalance;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -119,14 +121,14 @@ public class TotalEligibleBalanceFormat1 {
 	 */
 	public static final MMMessageAssociationEnd mmBalance = new MMMessageAssociationEnd() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.SecuritiesBalance.mmAggregateQuantity;
+			businessElementTrace_lazy = () -> SecuritiesBalance.mmAggregateQuantity;
 			componentContext_lazy = () -> TotalEligibleBalanceFormat1.mmObject();
 			isDerived = false;
 			xmlTag = "Bal";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Balance";
 			definition = "Provides information about balance related to a corporate action.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.TotalEligibleBalanceFormat8.mmBalance);
+			nextVersions_lazy = () -> Arrays.asList(TotalEligibleBalanceFormat8.mmBalance);
 			maxOccurs = 1;
 			minOccurs = 0;
 			isComposite = true;
@@ -185,10 +187,10 @@ public class TotalEligibleBalanceFormat1 {
 			componentContext_lazy = () -> TotalEligibleBalanceFormat1.mmObject();
 			isDerived = false;
 			xmlTag = "FullPrdUnits";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "FullPeriodUnits";
 			definition = "Number of units of a fund that were purchased in a previous distribution period and/or held at the beginning of a distribution period, for example Group I Units in the UK.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.TotalEligibleBalanceFormat8.mmFullPeriodUnits);
+			nextVersions_lazy = () -> Arrays.asList(TotalEligibleBalanceFormat8.mmFullPeriodUnits);
 			maxOccurs = 1;
 			minOccurs = 0;
 			complexType_lazy = () -> com.tools20022.repository.msg.SignedQuantityFormat2.mmObject();
@@ -245,10 +247,10 @@ public class TotalEligibleBalanceFormat1 {
 			componentContext_lazy = () -> TotalEligibleBalanceFormat1.mmObject();
 			isDerived = false;
 			xmlTag = "PartWayPrdUnits";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PartWayPeriodUnits";
 			definition = "Number of units of a fund that were purchased part way throughout a distribution period, for example Group II Units in the U.K.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.TotalEligibleBalanceFormat8.mmPartWayPeriodUnits);
+			nextVersions_lazy = () -> Arrays.asList(TotalEligibleBalanceFormat8.mmPartWayPeriodUnits);
 			maxOccurs = 1;
 			minOccurs = 0;
 			complexType_lazy = () -> com.tools20022.repository.msg.SignedQuantityFormat2.mmObject();
@@ -258,11 +260,10 @@ public class TotalEligibleBalanceFormat1 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.TotalEligibleBalanceFormat1.mmBalance, com.tools20022.repository.msg.TotalEligibleBalanceFormat1.mmFullPeriodUnits,
-						com.tools20022.repository.msg.TotalEligibleBalanceFormat1.mmPartWayPeriodUnits);
+				messageElement_lazy = () -> Arrays.asList(TotalEligibleBalanceFormat1.mmBalance, TotalEligibleBalanceFormat1.mmFullPeriodUnits, TotalEligibleBalanceFormat1.mmPartWayPeriodUnits);
 				trace_lazy = () -> SecuritiesBalance.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "TotalEligibleBalanceFormat1";
 				definition = "Total eligible balance for the corporate action and full and part way period units. ";
 				nextVersions_lazy = () -> Arrays.asList(TotalEligibleBalanceFormat8.mmObject());

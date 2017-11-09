@@ -19,6 +19,8 @@ package com.tools20022.repository.codeset;
 
 import com.tools20022.metamodel.MMCode;
 import com.tools20022.metamodel.MMCodeSet;
+import com.tools20022.metamodel.MMRegistrationStatus;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -30,6 +32,13 @@ import java.util.concurrent.atomic.AtomicReference;
  * <p>
  * <strong>Constant fields:</strong>
  * <ul>
+ * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getDerivation derivation}
+ * =
+ * <ul>
+ * <li>{@linkplain com.tools20022.repository.codeset.UKTaxGroupUnit1Code
+ * UKTaxGroupUnit1Code}</li>
+ * </ul>
+ * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getCode code} =
  * <ul>
  * <li>
@@ -38,13 +47,6 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>
  * {@linkplain com.tools20022.repository.codeset.UKTaxGroupUnitCode#mmGroup2
  * UKTaxGroupUnitCode.mmGroup2}</li>
- * </ul>
- * </li>
- * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getDerivation derivation}
- * =
- * <ul>
- * <li>{@linkplain com.tools20022.repository.codeset.UKTaxGroupUnit1Code
- * UKTaxGroupUnit1Code}</li>
  * </ul>
  * </li>
  * <li>
@@ -97,7 +99,7 @@ public class UKTaxGroupUnitCode {
 	 */
 	public static final MMCode mmGroup1 = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "Group1";
 			definition = "The units that were purchased prior to the last ex-div date.";
 			owner_lazy = () -> UKTaxGroupUnitCode.mmObject();
@@ -130,7 +132,7 @@ public class UKTaxGroupUnitCode {
 	 */
 	public static final MMCode mmGroup2 = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "Group2";
 			definition = "The units that were purchased since the ex-div date, and that benefit from the tax exemption.";
 			owner_lazy = () -> UKTaxGroupUnitCode.mmObject();
@@ -141,12 +143,12 @@ public class UKTaxGroupUnitCode {
 	static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
 				example = Arrays.asList("GRP1");
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "UKTaxGroupUnitCode";
 				definition = "Specifies the UK tax group to which units belong. For UK tax, the first dividend that an investor receives from a funds investment is deemed to be part income and part return of capital. The capital element is 'equalisation', and is exempt from income tax.";
-				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.UKTaxGroupUnitCode.mmGroup1, com.tools20022.repository.codeset.UKTaxGroupUnitCode.mmGroup2);
+				code_lazy = () -> Arrays.asList(UKTaxGroupUnitCode.mmGroup1, UKTaxGroupUnitCode.mmGroup2);
 				derivation_lazy = () -> Arrays.asList(UKTaxGroupUnit1Code.mmObject());
 			}
 		});

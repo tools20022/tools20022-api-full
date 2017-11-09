@@ -19,9 +19,13 @@ package com.tools20022.repository.msg;
 
 import com.tools20022.metamodel.MMMessageAttribute;
 import com.tools20022.metamodel.MMMessageComponent;
+import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.datatype.ISODate;
 import com.tools20022.repository.datatype.YesNoIndicator;
+import com.tools20022.repository.entity.Account;
+import com.tools20022.repository.entity.AccountContract;
 import com.tools20022.repository.entity.CashAccountContract;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -113,11 +117,11 @@ public class AccountContract3 {
 	 */
 	public static final MMMessageAttribute mmTargetGoLiveDate = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.AccountContract.mmTargetGoLiveDate;
+			businessElementTrace_lazy = () -> AccountContract.mmTargetGoLiveDate;
 			componentContext_lazy = () -> AccountContract3.mmObject();
 			isDerived = false;
 			xmlTag = "TrgtGoLiveDt";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "TargetGoLiveDate";
 			definition = "Date on which the account and related basic services  are expected to be operational for the account owner.";
 			maxOccurs = 1;
@@ -163,11 +167,11 @@ public class AccountContract3 {
 	 */
 	public static final MMMessageAttribute mmTargetClosingDate = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.AccountContract.mmTargetClosingDate;
+			businessElementTrace_lazy = () -> AccountContract.mmTargetClosingDate;
 			componentContext_lazy = () -> AccountContract3.mmObject();
 			isDerived = false;
 			xmlTag = "TrgtClsgDt";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "TargetClosingDate";
 			definition = "Date on which the account and related services are expected to cease to be operational for the account owner.";
 			maxOccurs = 1;
@@ -213,11 +217,11 @@ public class AccountContract3 {
 	 */
 	public static final MMMessageAttribute mmGoLiveDate = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Account.mmLiveDate;
+			businessElementTrace_lazy = () -> Account.mmLiveDate;
 			componentContext_lazy = () -> AccountContract3.mmObject();
 			isDerived = false;
 			xmlTag = "GoLiveDt";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "GoLiveDate";
 			definition = "Date on which the account and related basic services are effectively operational for the account owner.";
 			maxOccurs = 1;
@@ -263,11 +267,11 @@ public class AccountContract3 {
 	 */
 	public static final MMMessageAttribute mmClosingDate = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Account.mmClosingDate;
+			businessElementTrace_lazy = () -> Account.mmClosingDate;
 			componentContext_lazy = () -> AccountContract3.mmObject();
 			isDerived = false;
 			xmlTag = "ClsgDt";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ClosingDate";
 			definition = "Date on which the account and related services cease effectively to be operational for the account owner.";
 			maxOccurs = 1;
@@ -316,11 +320,11 @@ public class AccountContract3 {
 	 */
 	public static final MMMessageAttribute mmUrgencyFlag = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.AccountContract.mmUrgencyFlag;
+			businessElementTrace_lazy = () -> AccountContract.mmUrgencyFlag;
 			componentContext_lazy = () -> AccountContract3.mmObject();
 			isDerived = false;
 			xmlTag = "UrgcyFlg";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "UrgencyFlag";
 			definition = "Indicator that the account opening/maintenance/closing process needs to be treated urgently, that is, sooner than the terms established by the service level agreed between the account holder customer and the account servicing institution.";
 			maxOccurs = 1;
@@ -367,11 +371,11 @@ public class AccountContract3 {
 	 */
 	public static final MMMessageAttribute mmRemovalIndicator = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.AccountContract.mmRemovalIndicator;
+			businessElementTrace_lazy = () -> AccountContract.mmRemovalIndicator;
 			componentContext_lazy = () -> AccountContract3.mmObject();
 			isDerived = false;
 			xmlTag = "RmvlInd";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "RemovalIndicator";
 			definition = "Indicates removal of the account. After removal, an account will not appear anymore in reports.";
 			maxOccurs = 1;
@@ -383,12 +387,11 @@ public class AccountContract3 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.AccountContract3.mmTargetGoLiveDate, com.tools20022.repository.msg.AccountContract3.mmTargetClosingDate,
-						com.tools20022.repository.msg.AccountContract3.mmGoLiveDate, com.tools20022.repository.msg.AccountContract3.mmClosingDate, com.tools20022.repository.msg.AccountContract3.mmUrgencyFlag,
-						com.tools20022.repository.msg.AccountContract3.mmRemovalIndicator);
+				messageElement_lazy = () -> Arrays.asList(AccountContract3.mmTargetGoLiveDate, AccountContract3.mmTargetClosingDate, AccountContract3.mmGoLiveDate, AccountContract3.mmClosingDate, AccountContract3.mmUrgencyFlag,
+						AccountContract3.mmRemovalIndicator);
 				trace_lazy = () -> CashAccountContract.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "AccountContract3";
 				definition = "Specifies target and actual dates dates related to account opening and closing.";
 			}

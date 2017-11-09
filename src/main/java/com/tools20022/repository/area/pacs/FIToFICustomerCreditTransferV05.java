@@ -20,6 +20,7 @@ package com.tools20022.repository.area.pacs;
 import com.tools20022.metamodel.MMMessageBuildingBlock;
 import com.tools20022.metamodel.MMMessageDefinition;
 import com.tools20022.metamodel.MMMessageDefinitionIdentifier;
+import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.area.PaymentsClearingandSettlementPreviousVersion;
 import com.tools20022.repository.msg.CreditTransferTransaction19;
 import com.tools20022.repository.msg.GroupHeader49;
@@ -63,6 +64,9 @@ import java.util.List;
  * <p>
  * <strong>Constant fields:</strong>
  * <ul>
+ * <li>
+ * {@linkplain com.tools20022.metamodel.MMMessageDefinition#getMessageDefinitionIdentifier
+ * messageDefinitionIdentifier} = {@code pacs.008.001.05}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMMessageDefinition#getBusinessArea
  * businessArea} =
  * {@linkplain com.tools20022.repository.area.PaymentsClearingandSettlementPreviousVersion
@@ -95,9 +99,6 @@ import java.util.List;
  * FIToFICustomerCreditTransferV05.mmSupplementaryData}</li>
  * </ul>
  * </li>
- * <li>
- * {@linkplain com.tools20022.metamodel.MMMessageDefinition#getMessageDefinitionIdentifier
- * messageDefinitionIdentifier} = {@code pacs.008.001.05}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -167,11 +168,11 @@ public class FIToFICustomerCreditTransferV05 {
 	public static final MMMessageBuildingBlock mmGroupHeader = new MMMessageBuildingBlock() {
 		{
 			xmlTag = "GrpHdr";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "GroupHeader";
 			definition = "Set of characteristics shared by all individual transactions included in the message.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.area.pacs.FIToFICustomerCreditTransferV06.mmGroupHeader);
-			previousVersion_lazy = () -> com.tools20022.repository.area.pacs.FIToFICustomerCreditTransferV04.mmGroupHeader;
+			nextVersions_lazy = () -> Arrays.asList(FIToFICustomerCreditTransferV06.mmGroupHeader);
+			previousVersion_lazy = () -> FIToFICustomerCreditTransferV04.mmGroupHeader;
 			maxOccurs = 1;
 			minOccurs = 1;
 			complexType_lazy = () -> GroupHeader49.mmObject();
@@ -220,11 +221,11 @@ public class FIToFICustomerCreditTransferV05 {
 	public static final MMMessageBuildingBlock mmCreditTransferTransactionInformation = new MMMessageBuildingBlock() {
 		{
 			xmlTag = "CdtTrfTxInf";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CreditTransferTransactionInformation";
 			definition = "Set of elements providing information specific to the individual credit transfer(s).";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.area.pacs.FIToFICustomerCreditTransferV06.mmCreditTransferTransactionInformation);
-			previousVersion_lazy = () -> com.tools20022.repository.area.pacs.FIToFICustomerCreditTransferV04.mmCreditTransferTransactionInformation;
+			nextVersions_lazy = () -> Arrays.asList(FIToFICustomerCreditTransferV06.mmCreditTransferTransactionInformation);
+			previousVersion_lazy = () -> FIToFICustomerCreditTransferV04.mmCreditTransferTransactionInformation;
 			minOccurs = 1;
 			complexType_lazy = () -> CreditTransferTransaction19.mmObject();
 		}
@@ -272,11 +273,11 @@ public class FIToFICustomerCreditTransferV05 {
 	public static final MMMessageBuildingBlock mmSupplementaryData = new MMMessageBuildingBlock() {
 		{
 			xmlTag = "SplmtryData";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SupplementaryData";
 			definition = "Additional information that cannot be captured in the structured elements and/or any other specific block.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.area.pacs.FIToFICustomerCreditTransferV06.mmSupplementaryData);
-			previousVersion_lazy = () -> com.tools20022.repository.area.pacs.FIToFICustomerCreditTransferV04.mmSupplementaryData;
+			nextVersions_lazy = () -> Arrays.asList(FIToFICustomerCreditTransferV06.mmSupplementaryData);
+			previousVersion_lazy = () -> FIToFICustomerCreditTransferV04.mmSupplementaryData;
 			minOccurs = 0;
 			complexType_lazy = () -> SupplementaryData1.mmObject();
 		}
@@ -285,7 +286,7 @@ public class FIToFICustomerCreditTransferV05 {
 	final static public MMMessageDefinition mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageDefinition() {
 			{
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "FIToFICustomerCreditTransferV05";
 				definition = "Scope\r\nThe FinancialInstitutionToFinancialInstitutionCustomerCreditTransfer message is sent by the debtor agent to the creditor agent, directly or through other agents and/or a payment clearing and settlement system. It is used to move funds from a debtor account to a creditor.\r\nUsage\r\nThe FIToFICustomerCreditTransfer message is exchanged between agents and can contain one or more customer credit transfer instructions.\r\nThe FIToFICustomerCreditTransfer message does not allow for grouping: a CreditTransferTransactionInformation block must be present for each credit transfer transaction.\r\nThe FIToFICustomerCreditTransfer message can be used in different ways:\r\n- If the instructing agent and the instructed agent wish to use their direct account relationship in the currency of the transfer then the message contains both the funds for the customer transfer(s) as well as the payment details;\r\n- If the instructing agent and the instructed agent have no direct account relationship in the currency of the transfer, or do not wish to use their account relationship, then other (reimbursement) agents will be involved to cover for the customer transfer(s). The FIToFICustomerCreditTransfer contains only the payment details and the instructing agent must cover the customer transfer by sending a FinancialInstitutionCreditTransfer to a reimbursement agent. This payment method is called the Cover method;\r\n- If more than two financial institutions are involved in the payment chain and if the FIToFICustomerCreditTransfer is sent from one financial institution to the next financial institution in the payment chain, then the payment method is called the Serial method.\r\nThe FIToFICustomerCreditTransfer message can be used in domestic and cross-border scenarios.";
 				nextVersions_lazy = () -> Arrays.asList(FIToFICustomerCreditTransferV06.mmObject());
@@ -294,8 +295,7 @@ public class FIToFICustomerCreditTransferV05 {
 				rootElement = "Document";
 				xmlTag = "FIToFICstmrCdtTrf";
 				businessArea_lazy = () -> PaymentsClearingandSettlementPreviousVersion.mmObject();
-				messageBuildingBlock_lazy = () -> Arrays.asList(com.tools20022.repository.area.pacs.FIToFICustomerCreditTransferV05.mmGroupHeader,
-						com.tools20022.repository.area.pacs.FIToFICustomerCreditTransferV05.mmCreditTransferTransactionInformation, com.tools20022.repository.area.pacs.FIToFICustomerCreditTransferV05.mmSupplementaryData);
+				messageBuildingBlock_lazy = () -> Arrays.asList(FIToFICustomerCreditTransferV05.mmGroupHeader, FIToFICustomerCreditTransferV05.mmCreditTransferTransactionInformation, FIToFICustomerCreditTransferV05.mmSupplementaryData);
 				messageDefinitionIdentifier_lazy = () -> new MMMessageDefinitionIdentifier() {
 					{
 						businessArea = "pacs";

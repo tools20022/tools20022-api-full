@@ -19,8 +19,13 @@ package com.tools20022.repository.msg;
 
 import com.tools20022.metamodel.MMMessageAttribute;
 import com.tools20022.metamodel.MMMessageComponent;
+import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.datatype.ActiveCurrencyAndAmount;
 import com.tools20022.repository.entity.Collateral;
+import com.tools20022.repository.entity.CollateralManagement;
+import com.tools20022.repository.entity.CollateralValuation;
+import com.tools20022.repository.entity.Interest;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -111,11 +116,11 @@ public class CollateralAmount1 {
 	 */
 	public static final MMMessageAttribute mmCollateralAmount = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Collateral.mmCollateralAmount;
+			businessElementTrace_lazy = () -> Collateral.mmCollateralAmount;
 			componentContext_lazy = () -> CollateralAmount1.mmObject();
 			isDerived = false;
 			xmlTag = "CollAmt";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CollateralAmount";
 			definition = "Specifies the total amount of the collateral in the collateral currency.";
 			maxOccurs = 1;
@@ -161,11 +166,11 @@ public class CollateralAmount1 {
 	 */
 	public static final MMMessageAttribute mmReportedCurrencyAndAmount = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.CollateralValuation.mmReportedCurrencyAndAmount;
+			businessElementTrace_lazy = () -> CollateralValuation.mmReportedCurrencyAndAmount;
 			componentContext_lazy = () -> CollateralAmount1.mmObject();
 			isDerived = false;
 			xmlTag = "RptdCcyAndAmt";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ReportedCurrencyAndAmount";
 			definition = "Specifies the total amount of the collateral in the reporting currency.";
 			maxOccurs = 1;
@@ -213,11 +218,11 @@ public class CollateralAmount1 {
 	 */
 	public static final MMMessageAttribute mmMarketValueAmount = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.CollateralValuation.mmMarketValueAmount;
+			businessElementTrace_lazy = () -> CollateralValuation.mmMarketValueAmount;
 			componentContext_lazy = () -> CollateralAmount1.mmObject();
 			isDerived = false;
 			xmlTag = "MktValAmt";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "MarketValueAmount";
 			definition = "Specifies the total market to market value of the collateral in the reporting currency. It is the dirty price, that is, the accrued interest is included if any.";
 			maxOccurs = 1;
@@ -264,11 +269,11 @@ public class CollateralAmount1 {
 	 */
 	public static final MMMessageAttribute mmAccruedInterestAmount = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Interest.mmAccruedInterestAmount;
+			businessElementTrace_lazy = () -> Interest.mmAccruedInterestAmount;
 			componentContext_lazy = () -> CollateralAmount1.mmObject();
 			isDerived = false;
 			xmlTag = "AcrdIntrstAmt";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AccruedInterestAmount";
 			definition = "Specifies the accrued interest on the value of the collateral in the currency of the collateral.";
 			maxOccurs = 1;
@@ -315,11 +320,11 @@ public class CollateralAmount1 {
 	 */
 	public static final MMMessageAttribute mmFeesAndCommissions = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.CollateralManagement.mmFeesAndCommissions;
+			businessElementTrace_lazy = () -> CollateralManagement.mmFeesAndCommissions;
 			componentContext_lazy = () -> CollateralAmount1.mmObject();
 			isDerived = false;
 			xmlTag = "FeesAndComssns";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "FeesAndCommissions";
 			definition = "Specifies the amount of money paid for the provision of financial services.";
 			maxOccurs = 1;
@@ -331,11 +336,11 @@ public class CollateralAmount1 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.CollateralAmount1.mmCollateralAmount, com.tools20022.repository.msg.CollateralAmount1.mmReportedCurrencyAndAmount,
-						com.tools20022.repository.msg.CollateralAmount1.mmMarketValueAmount, com.tools20022.repository.msg.CollateralAmount1.mmAccruedInterestAmount, com.tools20022.repository.msg.CollateralAmount1.mmFeesAndCommissions);
+				messageElement_lazy = () -> Arrays.asList(CollateralAmount1.mmCollateralAmount, CollateralAmount1.mmReportedCurrencyAndAmount, CollateralAmount1.mmMarketValueAmount, CollateralAmount1.mmAccruedInterestAmount,
+						CollateralAmount1.mmFeesAndCommissions);
 				trace_lazy = () -> Collateral.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "CollateralAmount1";
 				definition = "Provides information about the collateral valuation such as the collateral amount, the market value.";
 			}

@@ -19,12 +19,17 @@ package com.tools20022.repository.msg;
 
 import com.tools20022.metamodel.MMMessageAttribute;
 import com.tools20022.metamodel.MMMessageComponent;
+import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.codeset.CardDataReading5Code;
 import com.tools20022.repository.datatype.ImpliedCurrencyAndAmount;
 import com.tools20022.repository.datatype.ISODateTime;
 import com.tools20022.repository.datatype.Max10000Binary;
 import com.tools20022.repository.datatype.Max140Text;
 import com.tools20022.repository.entity.CardPayment;
+import com.tools20022.repository.entity.CardPaymentAcquiring;
+import com.tools20022.repository.entity.ObligationFulfilment;
+import com.tools20022.repository.entity.Payment;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -117,14 +122,14 @@ public class DetailedAmount14 {
 	 */
 	public static final MMMessageAttribute mmAmount = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Payment.mmAmount;
+			businessElementTrace_lazy = () -> Payment.mmAmount;
 			componentContext_lazy = () -> DetailedAmount14.mmObject();
 			isDerived = false;
 			xmlTag = "Amt";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Amount";
 			definition = "Amount value.";
-			previousVersion_lazy = () -> com.tools20022.repository.msg.DetailedAmount6.mmAmount;
+			previousVersion_lazy = () -> DetailedAmount6.mmAmount;
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> ImpliedCurrencyAndAmount.mmObject();
@@ -170,14 +175,14 @@ public class DetailedAmount14 {
 	 */
 	public static final MMMessageAttribute mmDateTime = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.ObligationFulfilment.mmDate;
+			businessElementTrace_lazy = () -> ObligationFulfilment.mmDate;
 			componentContext_lazy = () -> DetailedAmount14.mmObject();
 			isDerived = false;
 			xmlTag = "DtTm";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "DateTime";
 			definition = "Date and time of the payment.";
-			previousVersion_lazy = () -> com.tools20022.repository.msg.DetailedAmount6.mmDateTime;
+			previousVersion_lazy = () -> DetailedAmount6.mmDateTime;
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> ISODateTime.mmObject();
@@ -222,10 +227,10 @@ public class DetailedAmount14 {
 			componentContext_lazy = () -> DetailedAmount14.mmObject();
 			isDerived = false;
 			xmlTag = "CardDataNtryMd";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CardDataEntryMode";
 			definition = "Card data entry mode for the related payment.";
-			previousVersion_lazy = () -> com.tools20022.repository.msg.DetailedAmount6.mmCardDataEntryMode;
+			previousVersion_lazy = () -> DetailedAmount6.mmCardDataEntryMode;
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> CardDataReading5Code.mmObject();
@@ -274,14 +279,14 @@ public class DetailedAmount14 {
 	 */
 	public static final MMMessageAttribute mmICCRelatedData = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.CardPaymentAcquiring.mmICCRelatedData;
+			businessElementTrace_lazy = () -> CardPaymentAcquiring.mmICCRelatedData;
 			componentContext_lazy = () -> DetailedAmount14.mmObject();
 			isDerived = false;
 			xmlTag = "ICCRltdData";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ICCRelatedData";
 			definition = "Data of an integrated circuit card application for the related payment.";
-			previousVersion_lazy = () -> com.tools20022.repository.msg.DetailedAmount6.mmICCRelatedData;
+			previousVersion_lazy = () -> DetailedAmount6.mmICCRelatedData;
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> Max10000Binary.mmObject();
@@ -325,10 +330,10 @@ public class DetailedAmount14 {
 			componentContext_lazy = () -> DetailedAmount14.mmObject();
 			isDerived = false;
 			xmlTag = "Labl";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Label";
 			definition = "Short description of the amount to display or print.";
-			previousVersion_lazy = () -> com.tools20022.repository.msg.DetailedAmount6.mmLabel;
+			previousVersion_lazy = () -> DetailedAmount6.mmLabel;
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> Max140Text.mmObject();
@@ -338,11 +343,10 @@ public class DetailedAmount14 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.DetailedAmount14.mmAmount, com.tools20022.repository.msg.DetailedAmount14.mmDateTime,
-						com.tools20022.repository.msg.DetailedAmount14.mmCardDataEntryMode, com.tools20022.repository.msg.DetailedAmount14.mmICCRelatedData, com.tools20022.repository.msg.DetailedAmount14.mmLabel);
+				messageElement_lazy = () -> Arrays.asList(DetailedAmount14.mmAmount, DetailedAmount14.mmDateTime, DetailedAmount14.mmCardDataEntryMode, DetailedAmount14.mmICCRelatedData, DetailedAmount14.mmLabel);
 				trace_lazy = () -> CardPayment.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "DetailedAmount14";
 				definition = "Detailed amounts associated with the total amount of transaction.";
 				previousVersion_lazy = () -> DetailedAmount6.mmObject();

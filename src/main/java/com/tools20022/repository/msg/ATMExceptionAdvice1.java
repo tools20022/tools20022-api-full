@@ -19,6 +19,9 @@ package com.tools20022.repository.msg;
 
 import com.tools20022.metamodel.MMMessageAssociationEnd;
 import com.tools20022.metamodel.MMMessageComponent;
+import com.tools20022.metamodel.MMRegistrationStatus;
+import com.tools20022.repository.area.caam.ATMExceptionAdviceV01;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -100,7 +103,7 @@ public class ATMExceptionAdvice1 {
 			componentContext_lazy = () -> ATMExceptionAdvice1.mmObject();
 			isDerived = false;
 			xmlTag = "Envt";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Environment";
 			definition = "Environment of the exception.";
 			maxOccurs = 1;
@@ -141,7 +144,7 @@ public class ATMExceptionAdvice1 {
 			componentContext_lazy = () -> ATMExceptionAdvice1.mmObject();
 			isDerived = false;
 			xmlTag = "Cntxt";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Context";
 			definition = "Context of the exception.";
 			maxOccurs = 1;
@@ -182,7 +185,7 @@ public class ATMExceptionAdvice1 {
 			componentContext_lazy = () -> ATMExceptionAdvice1.mmObject();
 			isDerived = false;
 			xmlTag = "Tx";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Transaction";
 			definition = "Transaction for which the exception is sent.";
 			maxOccurs = 1;
@@ -195,11 +198,10 @@ public class ATMExceptionAdvice1 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.ATMExceptionAdvice1.mmEnvironment, com.tools20022.repository.msg.ATMExceptionAdvice1.mmContext,
-						com.tools20022.repository.msg.ATMExceptionAdvice1.mmTransaction);
-				messageBuildingBlock_lazy = () -> Arrays.asList(com.tools20022.repository.area.caam.ATMExceptionAdviceV01.mmATMExceptionAdvice);
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				messageElement_lazy = () -> Arrays.asList(ATMExceptionAdvice1.mmEnvironment, ATMExceptionAdvice1.mmContext, ATMExceptionAdvice1.mmTransaction);
+				messageBuildingBlock_lazy = () -> Arrays.asList(ATMExceptionAdviceV01.mmATMExceptionAdvice);
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "ATMExceptionAdvice1";
 				definition = "Information related to exceptions occurring on the ATM.";
 			}

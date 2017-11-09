@@ -20,10 +20,14 @@ package com.tools20022.repository.msg;
 import com.tools20022.metamodel.MMMessageAssociationEnd;
 import com.tools20022.metamodel.MMMessageAttribute;
 import com.tools20022.metamodel.MMMessageComponent;
+import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.choice.IdentificationSource3Choice;
 import com.tools20022.repository.datatype.Max16Text;
 import com.tools20022.repository.datatype.RestrictedFINXMax31Text;
+import com.tools20022.repository.entity.GenericIdentification;
+import com.tools20022.repository.entity.Scheme;
 import com.tools20022.repository.entity.SecuritiesIdentification;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -104,11 +108,11 @@ public class OtherIdentification3 {
 	 */
 	public static final MMMessageAttribute mmIdentification = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.GenericIdentification.mmIdentification;
+			businessElementTrace_lazy = () -> GenericIdentification.mmIdentification;
 			componentContext_lazy = () -> OtherIdentification3.mmObject();
 			isDerived = false;
 			xmlTag = "Id";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Identification";
 			definition = "Identification of a security.";
 			maxOccurs = 1;
@@ -151,11 +155,11 @@ public class OtherIdentification3 {
 	 */
 	public static final MMMessageAttribute mmSuffix = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.SecuritiesIdentification.mmIdentificationSuffix;
+			businessElementTrace_lazy = () -> SecuritiesIdentification.mmIdentificationSuffix;
 			componentContext_lazy = () -> OtherIdentification3.mmObject();
 			isDerived = false;
 			xmlTag = "Sfx";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Suffix";
 			definition = "Identifies the suffix of the security identification.";
 			maxOccurs = 1;
@@ -198,11 +202,11 @@ public class OtherIdentification3 {
 	 */
 	public static final MMMessageAssociationEnd mmType = new MMMessageAssociationEnd() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Scheme.mmIdentification;
+			businessElementTrace_lazy = () -> Scheme.mmIdentification;
 			componentContext_lazy = () -> OtherIdentification3.mmObject();
 			isDerived = false;
 			xmlTag = "Tp";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Type";
 			definition = "Type of the identification.";
 			maxOccurs = 1;
@@ -215,11 +219,10 @@ public class OtherIdentification3 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.OtherIdentification3.mmIdentification, com.tools20022.repository.msg.OtherIdentification3.mmSuffix,
-						com.tools20022.repository.msg.OtherIdentification3.mmType);
+				messageElement_lazy = () -> Arrays.asList(OtherIdentification3.mmIdentification, OtherIdentification3.mmSuffix, OtherIdentification3.mmType);
 				trace_lazy = () -> SecuritiesIdentification.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "OtherIdentification3";
 				definition = "Other accepted financial instrument's identification than ISIN.";
 			}

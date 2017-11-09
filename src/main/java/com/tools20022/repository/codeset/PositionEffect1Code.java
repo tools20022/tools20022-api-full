@@ -19,7 +19,9 @@ package com.tools20022.repository.codeset;
 
 import com.tools20022.metamodel.MMCode;
 import com.tools20022.metamodel.MMCodeSet;
+import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.codeset.PositionEffectCode;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -90,7 +92,7 @@ public class PositionEffect1Code extends PositionEffectCode {
 	 */
 	public static final MMCode mmOpen = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Open";
 			owner_lazy = () -> PositionEffect1Code.mmObject();
 		}
@@ -113,7 +115,7 @@ public class PositionEffect1Code extends PositionEffectCode {
 	 */
 	public static final MMCode mmClose = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Close";
 			owner_lazy = () -> PositionEffect1Code.mmObject();
 		}
@@ -136,7 +138,7 @@ public class PositionEffect1Code extends PositionEffectCode {
 	 */
 	public static final MMCode mmRolled = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Rolled";
 			owner_lazy = () -> PositionEffect1Code.mmObject();
 		}
@@ -159,7 +161,7 @@ public class PositionEffect1Code extends PositionEffectCode {
 	 */
 	public static final MMCode mmFifo = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Fifo";
 			owner_lazy = () -> PositionEffect1Code.mmObject();
 		}
@@ -168,13 +170,12 @@ public class PositionEffect1Code extends PositionEffectCode {
 	static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
 				example = Arrays.asList("OPEN");
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "PositionEffect1Code";
 				definition = "Indicates whether the resulting position after a  trade should be an opening position or closing position.";
-				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.PositionEffect1Code.mmOpen, com.tools20022.repository.codeset.PositionEffect1Code.mmClose, com.tools20022.repository.codeset.PositionEffect1Code.mmRolled,
-						com.tools20022.repository.codeset.PositionEffect1Code.mmFifo);
+				code_lazy = () -> Arrays.asList(PositionEffect1Code.mmOpen, PositionEffect1Code.mmClose, PositionEffect1Code.mmRolled, PositionEffect1Code.mmFifo);
 				trace_lazy = () -> PositionEffectCode.mmObject();
 			}
 		});

@@ -19,8 +19,10 @@ package com.tools20022.repository.msg;
 
 import com.tools20022.metamodel.MMMessageAttribute;
 import com.tools20022.metamodel.MMMessageComponent;
+import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.datatype.Max3NumericText;
 import com.tools20022.repository.datatype.Max4Text;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -89,7 +91,7 @@ public class TransferEvent1 {
 			componentContext_lazy = () -> TransferEvent1.mmObject();
 			isDerived = false;
 			xmlTag = "EvtCd";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "EventCode";
 			definition = "Code of fund transfer event.";
 			maxOccurs = 1;
@@ -130,7 +132,7 @@ public class TransferEvent1 {
 			componentContext_lazy = () -> TransferEvent1.mmObject();
 			isDerived = false;
 			xmlTag = "EvtNb";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "EventNumber";
 			definition = "Event number related to the event code.";
 			maxOccurs = 1;
@@ -142,9 +144,9 @@ public class TransferEvent1 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.TransferEvent1.mmEventCode, com.tools20022.repository.msg.TransferEvent1.mmEventNumber);
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+				messageElement_lazy = () -> Arrays.asList(TransferEvent1.mmEventCode, TransferEvent1.mmEventNumber);
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 				name = "TransferEvent1";
 				definition = "Information about code and number of event of fund transfer.";
 			}

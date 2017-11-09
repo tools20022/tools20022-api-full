@@ -19,9 +19,12 @@ package com.tools20022.repository.msg;
 
 import com.tools20022.metamodel.MMMessageAssociationEnd;
 import com.tools20022.metamodel.MMMessageComponent;
+import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.entity.InstructionForMeeting;
 import com.tools20022.repository.entity.MeetingAttendeeRole;
 import com.tools20022.repository.entity.ProxyAgent;
+import com.tools20022.repository.entity.SecuritiesAccount;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.List;
@@ -114,11 +117,11 @@ public class SecurityPosition2 {
 	 */
 	public static final MMMessageAssociationEnd mmPosition = new MMMessageAssociationEnd() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.SecuritiesAccount.mmSecuritiesBalance;
+			businessElementTrace_lazy = () -> SecuritiesAccount.mmSecuritiesBalance;
 			componentContext_lazy = () -> SecurityPosition2.mmObject();
 			isDerived = false;
 			xmlTag = "Pos";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Position";
 			definition = "Amount of securities that are eligible for the vote.";
 			maxOccurs = 1;
@@ -166,7 +169,7 @@ public class SecurityPosition2 {
 			componentContext_lazy = () -> SecurityPosition2.mmObject();
 			isDerived = false;
 			xmlTag = "MtgAttndee";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "MeetingAttendee";
 			definition = "Specifies a person who will attend the meeting.";
 			minOccurs = 0;
@@ -213,7 +216,7 @@ public class SecurityPosition2 {
 			componentContext_lazy = () -> SecurityPosition2.mmObject();
 			isDerived = false;
 			xmlTag = "Prxy";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Proxy";
 			definition = "Identification of the proxy appointed by the security holder.";
 			minOccurs = 0;
@@ -255,11 +258,11 @@ public class SecurityPosition2 {
 	 */
 	public static final MMMessageAssociationEnd mmVoteDetails = new MMMessageAssociationEnd() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.InstructionForMeeting.mmVoteInstruction;
+			businessElementTrace_lazy = () -> InstructionForMeeting.mmVoteInstruction;
 			componentContext_lazy = () -> SecurityPosition2.mmObject();
 			isDerived = false;
 			xmlTag = "VoteDtls";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "VoteDetails";
 			definition = "Specifies detailed voting instructions.";
 			minOccurs = 0;
@@ -301,11 +304,11 @@ public class SecurityPosition2 {
 	 */
 	public static final MMMessageAssociationEnd mmParticipationRegistrationRequest = new MMMessageAssociationEnd() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.InstructionForMeeting.mmParticipationRegistration;
+			businessElementTrace_lazy = () -> InstructionForMeeting.mmParticipationRegistration;
 			componentContext_lazy = () -> SecurityPosition2.mmObject();
 			isDerived = false;
 			xmlTag = "PrtcptnRegnReq";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ParticipationRegistrationRequest";
 			definition = "Request to register for participation to the meeting.";
 			minOccurs = 0;
@@ -347,11 +350,11 @@ public class SecurityPosition2 {
 	 */
 	public static final MMMessageAssociationEnd mmBlockingRequest = new MMMessageAssociationEnd() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.InstructionForMeeting.mmBlockingSecurities;
+			businessElementTrace_lazy = () -> InstructionForMeeting.mmBlockingSecurities;
 			componentContext_lazy = () -> SecurityPosition2.mmObject();
 			isDerived = false;
 			xmlTag = "BlckgReq";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "BlockingRequest";
 			definition = "Request to block the securities.";
 			minOccurs = 0;
@@ -393,11 +396,11 @@ public class SecurityPosition2 {
 	 */
 	public static final MMMessageAssociationEnd mmSecuritiesRegistrationRequest = new MMMessageAssociationEnd() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.InstructionForMeeting.mmSecuritiesRegistration;
+			businessElementTrace_lazy = () -> InstructionForMeeting.mmSecuritiesRegistration;
 			componentContext_lazy = () -> SecurityPosition2.mmObject();
 			isDerived = false;
 			xmlTag = "SctiesRegnReq";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SecuritiesRegistrationRequest";
 			definition = "Request to register the securities for the meeting.";
 			minOccurs = 0;
@@ -409,12 +412,11 @@ public class SecurityPosition2 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.SecurityPosition2.mmPosition, com.tools20022.repository.msg.SecurityPosition2.mmMeetingAttendee,
-						com.tools20022.repository.msg.SecurityPosition2.mmProxy, com.tools20022.repository.msg.SecurityPosition2.mmVoteDetails, com.tools20022.repository.msg.SecurityPosition2.mmParticipationRegistrationRequest,
-						com.tools20022.repository.msg.SecurityPosition2.mmBlockingRequest, com.tools20022.repository.msg.SecurityPosition2.mmSecuritiesRegistrationRequest);
+				messageElement_lazy = () -> Arrays.asList(SecurityPosition2.mmPosition, SecurityPosition2.mmMeetingAttendee, SecurityPosition2.mmProxy, SecurityPosition2.mmVoteDetails, SecurityPosition2.mmParticipationRegistrationRequest,
+						SecurityPosition2.mmBlockingRequest, SecurityPosition2.mmSecuritiesRegistrationRequest);
 				trace_lazy = () -> InstructionForMeeting.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 				name = "SecurityPosition2";
 				definition = "Net position of a segregated holding, in a single security, within the overall position held in a securities account.";
 			}

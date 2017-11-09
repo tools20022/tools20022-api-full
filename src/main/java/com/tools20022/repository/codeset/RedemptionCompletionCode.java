@@ -19,6 +19,8 @@ package com.tools20022.repository.codeset;
 
 import com.tools20022.metamodel.MMCode;
 import com.tools20022.metamodel.MMCodeSet;
+import com.tools20022.metamodel.MMRegistrationStatus;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -27,6 +29,13 @@ import java.util.concurrent.atomic.AtomicReference;
  * <p>
  * <strong>Constant fields:</strong>
  * <ul>
+ * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getDerivation derivation}
+ * =
+ * <ul>
+ * <li>{@linkplain com.tools20022.repository.codeset.RedemptionCompletion1Code
+ * RedemptionCompletion1Code}</li>
+ * </ul>
+ * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getCode code} =
  * <ul>
  * <li>
@@ -35,13 +44,6 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>
  * {@linkplain com.tools20022.repository.codeset.RedemptionCompletionCode#mmRedemptionNo
  * RedemptionCompletionCode.mmRedemptionNo}</li>
- * </ul>
- * </li>
- * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getDerivation derivation}
- * =
- * <ul>
- * <li>{@linkplain com.tools20022.repository.codeset.RedemptionCompletion1Code
- * RedemptionCompletion1Code}</li>
  * </ul>
  * </li>
  * <li>
@@ -88,7 +90,7 @@ public class RedemptionCompletionCode {
 	 */
 	public static final MMCode mmRedemptionYes = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "RedemptionYes";
 			definition = "Additional redemption order instructions must be sent to the executing party order to have the rest of the redemption executed.";
 			owner_lazy = () -> RedemptionCompletionCode.mmObject();
@@ -122,7 +124,7 @@ public class RedemptionCompletionCode {
 	 */
 	public static final MMCode mmRedemptionNo = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "RedemptionNo";
 			definition = "It is not necessary to send more redemption order instructions to the executing party to complete the redemption, the executing will generate redemption confirmations automatically.";
 			owner_lazy = () -> RedemptionCompletionCode.mmObject();
@@ -133,11 +135,11 @@ public class RedemptionCompletionCode {
 	static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "RedemptionCompletionCode";
 				definition = "Specifies the redemption status of the redemption order.";
-				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.RedemptionCompletionCode.mmRedemptionYes, com.tools20022.repository.codeset.RedemptionCompletionCode.mmRedemptionNo);
+				code_lazy = () -> Arrays.asList(RedemptionCompletionCode.mmRedemptionYes, RedemptionCompletionCode.mmRedemptionNo);
 				derivation_lazy = () -> Arrays.asList(RedemptionCompletion1Code.mmObject());
 			}
 		});

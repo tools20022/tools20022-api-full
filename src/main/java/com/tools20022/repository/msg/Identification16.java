@@ -19,8 +19,13 @@ package com.tools20022.repository.msg;
 
 import com.tools20022.metamodel.MMMessageAttribute;
 import com.tools20022.metamodel.MMMessageComponent;
+import com.tools20022.metamodel.MMRegistrationStatus;
+import com.tools20022.repository.area.semt.IntraPositionMovementInstruction002V04;
+import com.tools20022.repository.area.semt.SecuritiesSettlementTransactionAuditTrailReport002V03;
+import com.tools20022.repository.area.sese.*;
 import com.tools20022.repository.datatype.RestrictedFINXMax16Text;
 import com.tools20022.repository.entity.SecuritiesTradeIdentification;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -142,7 +147,7 @@ public class Identification16 {
 			componentContext_lazy = () -> Identification16.mmObject();
 			isDerived = false;
 			xmlTag = "Id";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Identification";
 			definition = "Unique identifier of a document, message or transaction.";
 			maxOccurs = 1;
@@ -154,20 +159,16 @@ public class Identification16 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.Identification16.mmIdentification);
-				messageBuildingBlock_lazy = () -> Arrays.asList(com.tools20022.repository.area.sese.SecuritiesSettlementTransactionModificationRequestStatusAdvice002V04.mmModificationRequestReference,
-						com.tools20022.repository.area.sese.SecuritiesSettlementTransactionAllegementNotification002V05.mmMarketInfrastructureTransactionIdentification,
-						com.tools20022.repository.area.sese.SecuritiesSettlementTransactionReversalAdvice002V05.mmConfirmationReference,
-						com.tools20022.repository.area.semt.SecuritiesSettlementTransactionAuditTrailReport002V03.mmQueryReference,
-						com.tools20022.repository.area.sese.SecuritiesSettlementAllegementRemovalAdvice002V04.mmMarketInfrastructureTransactionIdentification,
-						com.tools20022.repository.area.sese.SecuritiesTransactionCancellationRequestStatusAdvice002V05.mmCancellationRequestReference,
-						com.tools20022.repository.area.semt.IntraPositionMovementInstruction002V04.mmCorporateActionEventIdentification,
-						com.tools20022.repository.area.sese.SecuritiesSettlementConditionModificationStatusAdvice002V07.mmRequestReference,
-						com.tools20022.repository.area.sese.SecuritiesSettlementTransactionAllegementNotification002V06.mmMarketInfrastructureTransactionIdentification,
-						com.tools20022.repository.area.sese.SecuritiesSettlementTransactionReversalAdvice002V06.mmConfirmationReference);
+				messageElement_lazy = () -> Arrays.asList(Identification16.mmIdentification);
+				messageBuildingBlock_lazy = () -> Arrays.asList(SecuritiesSettlementTransactionModificationRequestStatusAdvice002V04.mmModificationRequestReference,
+						SecuritiesSettlementTransactionAllegementNotification002V05.mmMarketInfrastructureTransactionIdentification, SecuritiesSettlementTransactionReversalAdvice002V05.mmConfirmationReference,
+						SecuritiesSettlementTransactionAuditTrailReport002V03.mmQueryReference, SecuritiesSettlementAllegementRemovalAdvice002V04.mmMarketInfrastructureTransactionIdentification,
+						SecuritiesTransactionCancellationRequestStatusAdvice002V05.mmCancellationRequestReference, IntraPositionMovementInstruction002V04.mmCorporateActionEventIdentification,
+						SecuritiesSettlementConditionModificationStatusAdvice002V07.mmRequestReference, SecuritiesSettlementTransactionAllegementNotification002V06.mmMarketInfrastructureTransactionIdentification,
+						SecuritiesSettlementTransactionReversalAdvice002V06.mmConfirmationReference);
 				trace_lazy = () -> SecuritiesTradeIdentification.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "Identification16";
 				definition = "Unique identifier of a document, message or transaction.";
 			}

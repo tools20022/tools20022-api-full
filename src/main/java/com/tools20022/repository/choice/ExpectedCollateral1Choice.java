@@ -19,7 +19,10 @@ package com.tools20022.repository.choice;
 
 import com.tools20022.metamodel.MMChoiceComponent;
 import com.tools20022.metamodel.MMMessageAssociationEnd;
+import com.tools20022.metamodel.MMRegistrationStatus;
+import com.tools20022.repository.area.colr.MarginCallRequestV03;
 import com.tools20022.repository.entity.ExpectedCollateralType;
+import com.tools20022.repository.GeneratedRepository;
 import com.tools20022.repository.msg.ExpectedCollateral1;
 import com.tools20022.repository.msg.ExpectedCollateralMovement1;
 import java.util.Arrays;
@@ -135,10 +138,10 @@ public class ExpectedCollateral1Choice {
 			componentContext_lazy = () -> ExpectedCollateral1Choice.mmObject();
 			isDerived = false;
 			xmlTag = "XpctdCollDtls";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ExpectedCollateralDetails";
 			definition = "Provides the expected collateral type and direction for the variation margin and optionaly the segregated independent amount.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.choice.ExpectedCollateral2Choice.mmExpectedCollateralDetails);
+			nextVersions_lazy = () -> Arrays.asList(ExpectedCollateral2Choice.mmExpectedCollateralDetails);
 			maxOccurs = 1;
 			minOccurs = 1;
 			isComposite = true;
@@ -195,10 +198,10 @@ public class ExpectedCollateral1Choice {
 			componentContext_lazy = () -> ExpectedCollateral1Choice.mmObject();
 			isDerived = false;
 			xmlTag = "SgrtdIndpdntAmt";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SegregatedIndependentAmount";
 			definition = "Provides the expected collateral type and direction for the segregated independent amount.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.choice.ExpectedCollateral2Choice.mmSegregatedIndependentAmount);
+			nextVersions_lazy = () -> Arrays.asList(ExpectedCollateral2Choice.mmSegregatedIndependentAmount);
 			maxOccurs = 1;
 			minOccurs = 1;
 			isComposite = true;
@@ -209,11 +212,11 @@ public class ExpectedCollateral1Choice {
 	final static public MMChoiceComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMChoiceComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.choice.ExpectedCollateral1Choice.mmExpectedCollateralDetails, com.tools20022.repository.choice.ExpectedCollateral1Choice.mmSegregatedIndependentAmount);
-				messageBuildingBlock_lazy = () -> Arrays.asList(com.tools20022.repository.area.colr.MarginCallRequestV03.mmExpectedCollateralDueToB, com.tools20022.repository.area.colr.MarginCallRequestV03.mmExpectedCollateralDueToA);
+				messageElement_lazy = () -> Arrays.asList(ExpectedCollateral1Choice.mmExpectedCollateralDetails, ExpectedCollateral1Choice.mmSegregatedIndependentAmount);
+				messageBuildingBlock_lazy = () -> Arrays.asList(MarginCallRequestV03.mmExpectedCollateralDueToB, MarginCallRequestV03.mmExpectedCollateralDueToA);
 				trace_lazy = () -> ExpectedCollateralType.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "ExpectedCollateral1Choice";
 				definition = "Provides the expected collateral type and direction for the variation margin and the segregated independent amount, or the segregated independent amount only.";
 				nextVersions_lazy = () -> Arrays.asList(ExpectedCollateral2Choice.mmObject());

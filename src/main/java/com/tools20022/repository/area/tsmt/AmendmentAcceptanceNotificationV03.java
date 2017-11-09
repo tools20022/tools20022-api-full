@@ -20,6 +20,7 @@ package com.tools20022.repository.area.tsmt;
 import com.tools20022.metamodel.MMMessageBuildingBlock;
 import com.tools20022.metamodel.MMMessageDefinition;
 import com.tools20022.metamodel.MMMessageDefinitionIdentifier;
+import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.area.TradeServicesManagementLatestVersion;
 import com.tools20022.repository.msg.*;
 import com.tools20022.repository.msgset.TradeServicesManagementISOLatestversion;
@@ -43,6 +44,9 @@ import java.util.List;
  * <p>
  * <strong>Constant fields:</strong>
  * <ul>
+ * <li>
+ * {@linkplain com.tools20022.metamodel.MMMessageDefinition#getMessageDefinitionIdentifier
+ * messageDefinitionIdentifier} = {@code tsmt.006.001.03}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMMessageDefinition#getBusinessArea
  * businessArea} =
  * {@linkplain com.tools20022.repository.area.TradeServicesManagementLatestVersion
@@ -96,9 +100,6 @@ import java.util.List;
  * </ul>
  * </li>
  * <li>
- * {@linkplain com.tools20022.metamodel.MMMessageDefinition#getMessageDefinitionIdentifier
- * messageDefinitionIdentifier} = {@code tsmt.006.001.03}</li>
- * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
  * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
@@ -140,7 +141,7 @@ public class AmendmentAcceptanceNotificationV03 {
 	public static final MMMessageBuildingBlock mmNotificationIdentification = new MMMessageBuildingBlock() {
 		{
 			xmlTag = "NtfctnId";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "NotificationIdentification";
 			definition = "Identifies the notification message.";
 			maxOccurs = 1;
@@ -179,7 +180,7 @@ public class AmendmentAcceptanceNotificationV03 {
 	public static final MMMessageBuildingBlock mmTransactionIdentification = new MMMessageBuildingBlock() {
 		{
 			xmlTag = "TxId";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "TransactionIdentification";
 			definition = "Unique identification assigned by the matching application to the transaction.\nThis identification is to be used in any communication between the parties.\n";
 			maxOccurs = 1;
@@ -217,7 +218,7 @@ public class AmendmentAcceptanceNotificationV03 {
 	public static final MMMessageBuildingBlock mmEstablishedBaselineIdentification = new MMMessageBuildingBlock() {
 		{
 			xmlTag = "EstblishdBaselnId";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "EstablishedBaselineIdentification";
 			definition = "Unique identification assigned by the matching application to the baseline when it is established. ";
 			maxOccurs = 1;
@@ -253,7 +254,7 @@ public class AmendmentAcceptanceNotificationV03 {
 	public static final MMMessageBuildingBlock mmTransactionStatus = new MMMessageBuildingBlock() {
 		{
 			xmlTag = "TxSts";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "TransactionStatus";
 			definition = "Identifies the status of the transaction by means of a code.";
 			maxOccurs = 1;
@@ -291,7 +292,7 @@ public class AmendmentAcceptanceNotificationV03 {
 	public static final MMMessageBuildingBlock mmUserTransactionReference = new MMMessageBuildingBlock() {
 		{
 			xmlTag = "UsrTxRef";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "UserTransactionReference";
 			definition = "Reference to the transaction for each financial institution which is a party to the transaction.";
 			maxOccurs = 2;
@@ -329,7 +330,7 @@ public class AmendmentAcceptanceNotificationV03 {
 	public static final MMMessageBuildingBlock mmDeltaReportReference = new MMMessageBuildingBlock() {
 		{
 			xmlTag = "DltaRptRef";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "DeltaReportReference";
 			definition = "Reference to the identification of the delta report that contained the amendment.";
 			maxOccurs = 1;
@@ -362,7 +363,7 @@ public class AmendmentAcceptanceNotificationV03 {
 	public static final MMMessageBuildingBlock mmAcceptedAmendmentNumber = new MMMessageBuildingBlock() {
 		{
 			xmlTag = "AccptdAmdmntNb";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AcceptedAmendmentNumber";
 			definition = "Sequence number of the accepted baseline amendment.";
 			maxOccurs = 1;
@@ -397,7 +398,7 @@ public class AmendmentAcceptanceNotificationV03 {
 	public static final MMMessageBuildingBlock mmInitiator = new MMMessageBuildingBlock() {
 		{
 			xmlTag = "Initr";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Initiator";
 			definition = "Party that has accepted the amendment.";
 			maxOccurs = 1;
@@ -432,7 +433,7 @@ public class AmendmentAcceptanceNotificationV03 {
 	public static final MMMessageBuildingBlock mmRequestForAction = new MMMessageBuildingBlock() {
 		{
 			xmlTag = "ReqForActn";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "RequestForAction";
 			definition = "Information on the next processing step required.";
 			maxOccurs = 1;
@@ -444,18 +445,17 @@ public class AmendmentAcceptanceNotificationV03 {
 	final static public MMMessageDefinition mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageDefinition() {
 			{
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "AmendmentAcceptanceNotificationV03";
 				definition = "Scope\r\nThe AmendmentAcceptanceNotification message is sent by the matching application to the requester of an amendment.\r\nThis message is used to notify the acceptance of an amendment request.\r\nUsage\r\nThe AmendmentAcceptanceNotification message can be sent by the matching application to pass on information about the acceptance of an amendment request that it has obtained through the receipt of an AmendmentAcceptance message.\r\nIn order to pass on information about the rejection of an amendment request the matching application sends an AmendmentRejectionNotification message.";
 				messageSet_lazy = () -> Arrays.asList(TradeServicesManagementISOPreviousversion.mmObject(), TradeServicesManagementISOLatestversion.mmObject());
 				rootElement = "Document";
 				xmlTag = "AmdmntAccptncNtfctn";
 				businessArea_lazy = () -> TradeServicesManagementLatestVersion.mmObject();
-				messageBuildingBlock_lazy = () -> Arrays.asList(com.tools20022.repository.area.tsmt.AmendmentAcceptanceNotificationV03.mmNotificationIdentification,
-						com.tools20022.repository.area.tsmt.AmendmentAcceptanceNotificationV03.mmTransactionIdentification, com.tools20022.repository.area.tsmt.AmendmentAcceptanceNotificationV03.mmEstablishedBaselineIdentification,
-						com.tools20022.repository.area.tsmt.AmendmentAcceptanceNotificationV03.mmTransactionStatus, com.tools20022.repository.area.tsmt.AmendmentAcceptanceNotificationV03.mmUserTransactionReference,
-						com.tools20022.repository.area.tsmt.AmendmentAcceptanceNotificationV03.mmDeltaReportReference, com.tools20022.repository.area.tsmt.AmendmentAcceptanceNotificationV03.mmAcceptedAmendmentNumber,
-						com.tools20022.repository.area.tsmt.AmendmentAcceptanceNotificationV03.mmInitiator, com.tools20022.repository.area.tsmt.AmendmentAcceptanceNotificationV03.mmRequestForAction);
+				messageBuildingBlock_lazy = () -> Arrays.asList(AmendmentAcceptanceNotificationV03.mmNotificationIdentification, AmendmentAcceptanceNotificationV03.mmTransactionIdentification,
+						AmendmentAcceptanceNotificationV03.mmEstablishedBaselineIdentification, AmendmentAcceptanceNotificationV03.mmTransactionStatus, AmendmentAcceptanceNotificationV03.mmUserTransactionReference,
+						AmendmentAcceptanceNotificationV03.mmDeltaReportReference, AmendmentAcceptanceNotificationV03.mmAcceptedAmendmentNumber, AmendmentAcceptanceNotificationV03.mmInitiator,
+						AmendmentAcceptanceNotificationV03.mmRequestForAction);
 				messageDefinitionIdentifier_lazy = () -> new MMMessageDefinitionIdentifier() {
 					{
 						businessArea = "tsmt";

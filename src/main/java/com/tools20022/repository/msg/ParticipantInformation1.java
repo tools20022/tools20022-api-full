@@ -20,9 +20,11 @@ package com.tools20022.repository.msg;
 import com.tools20022.metamodel.MMMessageAssociationEnd;
 import com.tools20022.metamodel.MMMessageAttribute;
 import com.tools20022.metamodel.MMMessageComponent;
+import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.choice.CentralisedAndAuthorisedBranchIdentification1Choice;
 import com.tools20022.repository.datatype.ISODateTime;
 import com.tools20022.repository.datatype.Max35Text;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.List;
@@ -107,7 +109,7 @@ public class ParticipantInformation1 {
 			componentContext_lazy = () -> ParticipantInformation1.mmObject();
 			isDerived = false;
 			xmlTag = "PrflDeltnDt";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ProfileDeletionDate";
 			definition = "Date the profile was deleted.";
 			maxOccurs = 1;
@@ -149,7 +151,7 @@ public class ParticipantInformation1 {
 			componentContext_lazy = () -> ParticipantInformation1.mmObject();
 			isDerived = false;
 			xmlTag = "BkBrnch";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "BankBranch";
 			definition = "National BIC identifiers for authorised and central branches.";
 			maxOccurs = 1;
@@ -191,7 +193,7 @@ public class ParticipantInformation1 {
 			componentContext_lazy = () -> ParticipantInformation1.mmObject();
 			isDerived = false;
 			xmlTag = "TermnlId";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "TerminalIdentification";
 			definition = "CBRF identification of the terminal. ";
 			maxOccurs = 1;
@@ -232,7 +234,7 @@ public class ParticipantInformation1 {
 			componentContext_lazy = () -> ParticipantInformation1.mmObject();
 			isDerived = false;
 			xmlTag = "Rstrctns";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Restrictions";
 			definition = "Intraday restrictions details.";
 			minOccurs = 0;
@@ -272,7 +274,7 @@ public class ParticipantInformation1 {
 			componentContext_lazy = () -> ParticipantInformation1.mmObject();
 			isDerived = false;
 			xmlTag = "XtrnlPmtSysInf";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ExternalPaymentSystemInformation";
 			definition = "External payment system details.";
 			maxOccurs = 1;
@@ -313,7 +315,7 @@ public class ParticipantInformation1 {
 			componentContext_lazy = () -> ParticipantInformation1.mmObject();
 			isDerived = false;
 			xmlTag = "Mgrtn";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Migration";
 			definition = "Information related for participant migration process. ";
 			maxOccurs = 1;
@@ -326,11 +328,10 @@ public class ParticipantInformation1 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.ParticipantInformation1.mmProfileDeletionDate, com.tools20022.repository.msg.ParticipantInformation1.mmBankBranch,
-						com.tools20022.repository.msg.ParticipantInformation1.mmTerminalIdentification, com.tools20022.repository.msg.ParticipantInformation1.mmRestrictions,
-						com.tools20022.repository.msg.ParticipantInformation1.mmExternalPaymentSystemInformation, com.tools20022.repository.msg.ParticipantInformation1.mmMigration);
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+				messageElement_lazy = () -> Arrays.asList(ParticipantInformation1.mmProfileDeletionDate, ParticipantInformation1.mmBankBranch, ParticipantInformation1.mmTerminalIdentification, ParticipantInformation1.mmRestrictions,
+						ParticipantInformation1.mmExternalPaymentSystemInformation, ParticipantInformation1.mmMigration);
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 				name = "ParticipantInformation1";
 				definition = "Participant profile participant information.";
 			}

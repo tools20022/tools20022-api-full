@@ -19,8 +19,10 @@ package com.tools20022.repository.msg;
 
 import com.tools20022.metamodel.MMMessageAttribute;
 import com.tools20022.metamodel.MMMessageComponent;
+import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.codeset.AttributeType2Code;
 import com.tools20022.repository.datatype.Max140Text;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -105,10 +107,10 @@ public class RelativeDistinguishedName2 {
 			componentContext_lazy = () -> RelativeDistinguishedName2.mmObject();
 			isDerived = false;
 			xmlTag = "AttrTp";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AttributeType";
 			definition = "Type of attribute of a distinguished name (see X.500).";
-			previousVersion_lazy = () -> com.tools20022.repository.msg.RelativeDistinguishedName1.mmAttributeType;
+			previousVersion_lazy = () -> RelativeDistinguishedName1.mmAttributeType;
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> AttributeType2Code.mmObject();
@@ -153,10 +155,10 @@ public class RelativeDistinguishedName2 {
 			componentContext_lazy = () -> RelativeDistinguishedName2.mmObject();
 			isDerived = false;
 			xmlTag = "AttrVal";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AttributeValue";
 			definition = "Value of the attribute of a distinguished name (see X.500).";
-			previousVersion_lazy = () -> com.tools20022.repository.msg.RelativeDistinguishedName1.mmAttributeValue;
+			previousVersion_lazy = () -> RelativeDistinguishedName1.mmAttributeValue;
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> Max140Text.mmObject();
@@ -166,9 +168,9 @@ public class RelativeDistinguishedName2 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.RelativeDistinguishedName2.mmAttributeType, com.tools20022.repository.msg.RelativeDistinguishedName2.mmAttributeValue);
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				messageElement_lazy = () -> Arrays.asList(RelativeDistinguishedName2.mmAttributeType, RelativeDistinguishedName2.mmAttributeValue);
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "RelativeDistinguishedName2";
 				definition = "Attribute of the certificate service to be put in the certificate extensions, or to be used for the request.";
 				previousVersion_lazy = () -> RelativeDistinguishedName1.mmObject();

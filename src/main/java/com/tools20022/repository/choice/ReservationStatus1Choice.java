@@ -19,9 +19,12 @@ package com.tools20022.repository.choice;
 
 import com.tools20022.metamodel.MMChoiceComponent;
 import com.tools20022.metamodel.MMMessageAttribute;
+import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.codeset.ReservationStatus1Code;
 import com.tools20022.repository.datatype.Max35Text;
+import com.tools20022.repository.entity.Limit;
 import com.tools20022.repository.entity.Reservation;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -99,11 +102,11 @@ public class ReservationStatus1Choice {
 	 */
 	public static final MMMessageAttribute mmCode = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Limit.mmLimitStatus;
+			businessElementTrace_lazy = () -> Limit.mmLimitStatus;
 			componentContext_lazy = () -> ReservationStatus1Choice.mmObject();
 			isDerived = false;
 			xmlTag = "Cd";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Code";
 			definition = "Liquidity transfer request type, in a coded form.";
 			maxOccurs = 1;
@@ -146,11 +149,11 @@ public class ReservationStatus1Choice {
 	 */
 	public static final MMMessageAttribute mmProprietary = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Limit.mmLimitStatus;
+			businessElementTrace_lazy = () -> Limit.mmLimitStatus;
 			componentContext_lazy = () -> ReservationStatus1Choice.mmObject();
 			isDerived = false;
 			xmlTag = "Prtry";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Proprietary";
 			definition = "Liquidity transfer request type, in a proprietary form.";
 			maxOccurs = 1;
@@ -162,10 +165,10 @@ public class ReservationStatus1Choice {
 	final static public MMChoiceComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMChoiceComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.choice.ReservationStatus1Choice.mmCode, com.tools20022.repository.choice.ReservationStatus1Choice.mmProprietary);
+				messageElement_lazy = () -> Arrays.asList(ReservationStatus1Choice.mmCode, ReservationStatus1Choice.mmProprietary);
 				trace_lazy = () -> Reservation.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "ReservationStatus1Choice";
 				definition = "Defines the type of action to be performed in the request.";
 			}

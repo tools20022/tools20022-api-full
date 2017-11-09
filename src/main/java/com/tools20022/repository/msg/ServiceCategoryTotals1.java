@@ -20,11 +20,13 @@ package com.tools20022.repository.msg;
 import com.tools20022.metamodel.MMMessageAssociationEnd;
 import com.tools20022.metamodel.MMMessageAttribute;
 import com.tools20022.metamodel.MMMessageComponent;
+import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.choice.AccountIdentification20Choice;
 import com.tools20022.repository.datatype.ActiveCurrencyAndAmount;
 import com.tools20022.repository.datatype.BICFIIdentifier;
 import com.tools20022.repository.datatype.Max4AlphaNumericText;
-import com.tools20022.repository.entity.Invoice;
+import com.tools20022.repository.entity.*;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.List;
@@ -119,11 +121,11 @@ public class ServiceCategoryTotals1 {
 	 */
 	public static final MMMessageAssociationEnd mmAccountIdentification = new MMMessageAssociationEnd() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Account.mmIdentification;
+			businessElementTrace_lazy = () -> Account.mmIdentification;
 			componentContext_lazy = () -> ServiceCategoryTotals1.mmObject();
 			isDerived = false;
 			xmlTag = "AcctId";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AccountIdentification";
 			definition = "Unique identification of an securities account or cash account belonging to billed customer.";
 			maxOccurs = 1;
@@ -168,11 +170,11 @@ public class ServiceCategoryTotals1 {
 	 */
 	public static final MMMessageAttribute mmBilledCustomerIdentification = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.OrganisationIdentification.mmBICFI;
+			businessElementTrace_lazy = () -> OrganisationIdentification.mmBICFI;
 			componentContext_lazy = () -> ServiceCategoryTotals1.mmObject();
 			isDerived = false;
 			xmlTag = "BlldCstmrId";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "BilledCustomerIdentification";
 			definition = "BIC of the party which is invoiced by the CSD/NCB.";
 			maxOccurs = 1;
@@ -216,11 +218,11 @@ public class ServiceCategoryTotals1 {
 	 */
 	public static final MMMessageAttribute mmTotalTaxableAmount = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Tax.mmTaxableBaseAmount;
+			businessElementTrace_lazy = () -> Tax.mmTaxableBaseAmount;
 			componentContext_lazy = () -> ServiceCategoryTotals1.mmObject();
 			isDerived = false;
 			xmlTag = "TtlTaxblAmt";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "TotalTaxableAmount";
 			definition = "Total amount subject to tax.";
 			maxOccurs = 1;
@@ -263,11 +265,11 @@ public class ServiceCategoryTotals1 {
 	 */
 	public static final MMMessageAttribute mmTotalTaxAmount = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Tax.mmAmount;
+			businessElementTrace_lazy = () -> Tax.mmAmount;
 			componentContext_lazy = () -> ServiceCategoryTotals1.mmObject();
 			isDerived = false;
 			xmlTag = "TtlTaxAmt";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "TotalTaxAmount";
 			definition = "Sum of all tax amounts related to the invoice.";
 			maxOccurs = 1;
@@ -315,11 +317,11 @@ public class ServiceCategoryTotals1 {
 	 */
 	public static final MMMessageAttribute mmTotalInvoiceAmount = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Document.mmAmount;
+			businessElementTrace_lazy = () -> Document.mmAmount;
 			componentContext_lazy = () -> ServiceCategoryTotals1.mmObject();
 			isDerived = false;
 			xmlTag = "TtlInvcAmt";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "TotalInvoiceAmount";
 			definition = "Total amount of the invoice, being the sum of total invoice lines amounts, total invoice adjustment amount (discounts, allowances and charges) and total tax amounts.";
 			maxOccurs = 1;
@@ -364,7 +366,7 @@ public class ServiceCategoryTotals1 {
 			componentContext_lazy = () -> ServiceCategoryTotals1.mmObject();
 			isDerived = false;
 			xmlTag = "SvcCtgy";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ServiceCategory";
 			definition = "Agreement under which or rules under which the transaction should be processed.";
 			maxOccurs = 1;
@@ -406,11 +408,11 @@ public class ServiceCategoryTotals1 {
 	 */
 	public static final MMMessageAssociationEnd mmServiceItemTotals = new MMMessageAssociationEnd() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.LineItem.mmInvoicedProduct;
+			businessElementTrace_lazy = () -> LineItem.mmInvoicedProduct;
 			componentContext_lazy = () -> ServiceCategoryTotals1.mmObject();
 			isDerived = false;
 			xmlTag = "SvcItmTtls";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ServiceItemTotals";
 			definition = "Specifies totals related to the invoice.";
 			minOccurs = 0;
@@ -422,13 +424,11 @@ public class ServiceCategoryTotals1 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.ServiceCategoryTotals1.mmAccountIdentification, com.tools20022.repository.msg.ServiceCategoryTotals1.mmBilledCustomerIdentification,
-						com.tools20022.repository.msg.ServiceCategoryTotals1.mmTotalTaxableAmount, com.tools20022.repository.msg.ServiceCategoryTotals1.mmTotalTaxAmount,
-						com.tools20022.repository.msg.ServiceCategoryTotals1.mmTotalInvoiceAmount, com.tools20022.repository.msg.ServiceCategoryTotals1.mmServiceCategory,
-						com.tools20022.repository.msg.ServiceCategoryTotals1.mmServiceItemTotals);
+				messageElement_lazy = () -> Arrays.asList(ServiceCategoryTotals1.mmAccountIdentification, ServiceCategoryTotals1.mmBilledCustomerIdentification, ServiceCategoryTotals1.mmTotalTaxableAmount,
+						ServiceCategoryTotals1.mmTotalTaxAmount, ServiceCategoryTotals1.mmTotalInvoiceAmount, ServiceCategoryTotals1.mmServiceCategory, ServiceCategoryTotals1.mmServiceItemTotals);
 				trace_lazy = () -> Invoice.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 				name = "ServiceCategoryTotals1";
 				definition = "Specifies totals related to the invoice.";
 			}

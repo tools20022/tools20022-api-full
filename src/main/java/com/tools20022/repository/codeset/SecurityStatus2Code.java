@@ -19,7 +19,9 @@ package com.tools20022.repository.codeset;
 
 import com.tools20022.metamodel.MMCode;
 import com.tools20022.metamodel.MMCodeSet;
+import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.codeset.SecurityStatusCode;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -86,7 +88,7 @@ public class SecurityStatus2Code extends SecurityStatusCode {
 	 */
 	public static final MMCode mmActive = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Active";
 			owner_lazy = () -> SecurityStatus2Code.mmObject();
 		}
@@ -109,7 +111,7 @@ public class SecurityStatus2Code extends SecurityStatusCode {
 	 */
 	public static final MMCode mmInactive = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Inactive";
 			owner_lazy = () -> SecurityStatus2Code.mmObject();
 		}
@@ -132,7 +134,7 @@ public class SecurityStatus2Code extends SecurityStatusCode {
 	 */
 	public static final MMCode mmSuspended = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Suspended";
 			owner_lazy = () -> SecurityStatus2Code.mmObject();
 		}
@@ -141,13 +143,12 @@ public class SecurityStatus2Code extends SecurityStatusCode {
 	static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
 				example = Arrays.asList("ACTV");
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "SecurityStatus2Code";
 				definition = "Specifies the status of the security.";
-				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.SecurityStatus2Code.mmActive, com.tools20022.repository.codeset.SecurityStatus2Code.mmInactive,
-						com.tools20022.repository.codeset.SecurityStatus2Code.mmSuspended);
+				code_lazy = () -> Arrays.asList(SecurityStatus2Code.mmActive, SecurityStatus2Code.mmInactive, SecurityStatus2Code.mmSuspended);
 				trace_lazy = () -> SecurityStatusCode.mmObject();
 			}
 		});

@@ -19,7 +19,9 @@ package com.tools20022.repository.msg;
 
 import com.tools20022.metamodel.MMMessageAssociationEnd;
 import com.tools20022.metamodel.MMMessageComponent;
+import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.entity.CardholderRole;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.List;
@@ -93,7 +95,7 @@ public class ATMCustomer5 {
 			componentContext_lazy = () -> ATMCustomer5.mmObject();
 			isDerived = false;
 			xmlTag = "Prfl";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Profile";
 			definition = "Profile of the customer selected to perform the transaction.";
 			maxOccurs = 1;
@@ -135,7 +137,7 @@ public class ATMCustomer5 {
 			componentContext_lazy = () -> ATMCustomer5.mmObject();
 			isDerived = false;
 			xmlTag = "AuthntcnRslt";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AuthenticationResult";
 			definition = "Result of the customer authentication for this transaction.";
 			minOccurs = 0;
@@ -147,10 +149,10 @@ public class ATMCustomer5 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.ATMCustomer5.mmProfile, com.tools20022.repository.msg.ATMCustomer5.mmAuthenticationResult);
+				messageElement_lazy = () -> Arrays.asList(ATMCustomer5.mmProfile, ATMCustomer5.mmAuthenticationResult);
 				trace_lazy = () -> CardholderRole.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "ATMCustomer5";
 				definition = "Customer involved in a transaction.";
 			}

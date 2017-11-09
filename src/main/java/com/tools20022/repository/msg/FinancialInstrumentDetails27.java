@@ -19,8 +19,12 @@ package com.tools20022.repository.msg;
 
 import com.tools20022.metamodel.MMMessageAssociationEnd;
 import com.tools20022.metamodel.MMMessageComponent;
+import com.tools20022.metamodel.MMRegistrationStatus;
+import com.tools20022.repository.area.semt.SecuritiesTransactionPostingReport002V07;
 import com.tools20022.repository.entity.SafekeepingPlace;
+import com.tools20022.repository.entity.SecuritiesQuantity;
 import com.tools20022.repository.entity.Security;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.List;
@@ -121,11 +125,11 @@ public class FinancialInstrumentDetails27 {
 	 */
 	public static final MMMessageAssociationEnd mmFinancialInstrumentIdentification = new MMMessageAssociationEnd() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Security.mmIdentification;
+			businessElementTrace_lazy = () -> Security.mmIdentification;
 			componentContext_lazy = () -> FinancialInstrumentDetails27.mmObject();
 			isDerived = false;
 			xmlTag = "FinInstrmId";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "FinancialInstrumentIdentification";
 			definition = "Financial instruments representing a sum of rights of the investor vis-a-vis the issuer.";
 			maxOccurs = 1;
@@ -168,11 +172,11 @@ public class FinancialInstrumentDetails27 {
 	 */
 	public static final MMMessageAssociationEnd mmPriceDetails = new MMMessageAssociationEnd() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Security.mmPricing;
+			businessElementTrace_lazy = () -> Security.mmPricing;
 			componentContext_lazy = () -> FinancialInstrumentDetails27.mmObject();
 			isDerived = false;
 			xmlTag = "PricDtls";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PriceDetails";
 			definition = "Information regarding the price of the instrument.";
 			maxOccurs = 1;
@@ -224,7 +228,7 @@ public class FinancialInstrumentDetails27 {
 			componentContext_lazy = () -> FinancialInstrumentDetails27.mmObject();
 			isDerived = false;
 			xmlTag = "SfkpgPlc";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SafekeepingPlace";
 			definition = "Place where the securities are safe-kept, physically or notionally.  This place can be, for example, a local custodian, a Central Securities Depository (CSD) or an International Central Securities Depository (ICSD).";
 			maxOccurs = 1;
@@ -270,11 +274,11 @@ public class FinancialInstrumentDetails27 {
 	 */
 	public static final MMMessageAssociationEnd mmOpeningBalance = new MMMessageAssociationEnd() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.SecuritiesQuantity.mmAggregateQuantityBalance;
+			businessElementTrace_lazy = () -> SecuritiesQuantity.mmAggregateQuantityBalance;
 			componentContext_lazy = () -> FinancialInstrumentDetails27.mmObject();
 			isDerived = false;
 			xmlTag = "OpngBal";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "OpeningBalance";
 			definition = "Opening balance for the statement period (first opening balance) or of this page (intermediary opening balance).";
 			maxOccurs = 1;
@@ -320,11 +324,11 @@ public class FinancialInstrumentDetails27 {
 	 */
 	public static final MMMessageAssociationEnd mmClosingBalance = new MMMessageAssociationEnd() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.SecuritiesQuantity.mmAggregateQuantityBalance;
+			businessElementTrace_lazy = () -> SecuritiesQuantity.mmAggregateQuantityBalance;
 			componentContext_lazy = () -> FinancialInstrumentDetails27.mmObject();
 			isDerived = false;
 			xmlTag = "ClsgBal";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ClosingBalance";
 			definition = "Closing balance for the statement period (final closing balance) or of this page (intermediary closing balance).";
 			maxOccurs = 1;
@@ -367,11 +371,11 @@ public class FinancialInstrumentDetails27 {
 	 */
 	public static final MMMessageAssociationEnd mmTransaction = new MMMessageAssociationEnd() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.SecuritiesQuantity.mmTrade;
+			businessElementTrace_lazy = () -> SecuritiesQuantity.mmTrade;
 			componentContext_lazy = () -> FinancialInstrumentDetails27.mmObject();
 			isDerived = false;
 			xmlTag = "Tx";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Transaction";
 			definition = "Transaction details.";
 			minOccurs = 1;
@@ -383,13 +387,12 @@ public class FinancialInstrumentDetails27 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.FinancialInstrumentDetails27.mmFinancialInstrumentIdentification, com.tools20022.repository.msg.FinancialInstrumentDetails27.mmPriceDetails,
-						com.tools20022.repository.msg.FinancialInstrumentDetails27.mmSafekeepingPlace, com.tools20022.repository.msg.FinancialInstrumentDetails27.mmOpeningBalance,
-						com.tools20022.repository.msg.FinancialInstrumentDetails27.mmClosingBalance, com.tools20022.repository.msg.FinancialInstrumentDetails27.mmTransaction);
-				messageBuildingBlock_lazy = () -> Arrays.asList(com.tools20022.repository.area.semt.SecuritiesTransactionPostingReport002V07.mmFinancialInstrumentDetails);
+				messageElement_lazy = () -> Arrays.asList(FinancialInstrumentDetails27.mmFinancialInstrumentIdentification, FinancialInstrumentDetails27.mmPriceDetails, FinancialInstrumentDetails27.mmSafekeepingPlace,
+						FinancialInstrumentDetails27.mmOpeningBalance, FinancialInstrumentDetails27.mmClosingBalance, FinancialInstrumentDetails27.mmTransaction);
+				messageBuildingBlock_lazy = () -> Arrays.asList(SecuritiesTransactionPostingReport002V07.mmFinancialInstrumentDetails);
 				trace_lazy = () -> Security.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "FinancialInstrumentDetails27";
 				definition = "Reporting per financial instrument.";
 			}

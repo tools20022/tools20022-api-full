@@ -19,6 +19,8 @@ package com.tools20022.repository.codeset;
 
 import com.tools20022.metamodel.MMCode;
 import com.tools20022.metamodel.MMCodeSet;
+import com.tools20022.metamodel.MMRegistrationStatus;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -27,6 +29,15 @@ import java.util.concurrent.atomic.AtomicReference;
  * <p>
  * <strong>Constant fields:</strong>
  * <ul>
+ * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getDerivation derivation}
+ * =
+ * <ul>
+ * <li>{@linkplain com.tools20022.repository.codeset.CashSettlementSystem2Code
+ * CashSettlementSystem2Code}</li>
+ * <li>{@linkplain com.tools20022.repository.codeset.CashSettlementSystem1Code
+ * CashSettlementSystem1Code}</li>
+ * </ul>
+ * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getCode code} =
  * <ul>
  * <li>
@@ -50,15 +61,6 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>
  * {@linkplain com.tools20022.repository.codeset.CashSettlementSystemCode#mmFedWireUS
  * CashSettlementSystemCode.mmFedWireUS}</li>
- * </ul>
- * </li>
- * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getDerivation derivation}
- * =
- * <ul>
- * <li>{@linkplain com.tools20022.repository.codeset.CashSettlementSystem2Code
- * CashSettlementSystem2Code}</li>
- * <li>{@linkplain com.tools20022.repository.codeset.CashSettlementSystem1Code
- * CashSettlementSystem1Code}</li>
  * </ul>
  * </li>
  * <li>
@@ -108,7 +110,7 @@ public class CashSettlementSystemCode {
 	 */
 	public static final MMCode mmBankOfKoreaWire = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "BankOfKoreaWire";
 			definition = "Settle money through Bank of Korea Wire.";
 			owner_lazy = () -> CashSettlementSystemCode.mmObject();
@@ -138,7 +140,7 @@ public class CashSettlementSystemCode {
 	 */
 	public static final MMCode mmCheque = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Cheque";
 			definition = "Settle money through cheque.";
 			owner_lazy = () -> CashSettlementSystemCode.mmObject();
@@ -168,7 +170,7 @@ public class CashSettlementSystemCode {
 	 */
 	public static final MMCode mmUKDomestic = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "UKDomestic";
 			definition = "Settle money through UK domestic.";
 			owner_lazy = () -> CashSettlementSystemCode.mmObject();
@@ -198,7 +200,7 @@ public class CashSettlementSystemCode {
 	 */
 	public static final MMCode mmGrossSettlementSystem = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "GrossSettlementSystem";
 			definition = "Settle money through gross settlement system.";
 			owner_lazy = () -> CashSettlementSystemCode.mmObject();
@@ -228,7 +230,7 @@ public class CashSettlementSystemCode {
 	 */
 	public static final MMCode mmNetSettlementSystem = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "NetSettlementSystem";
 			definition = "Settle money through net settlement system.";
 			owner_lazy = () -> CashSettlementSystemCode.mmObject();
@@ -258,7 +260,7 @@ public class CashSettlementSystemCode {
 	 */
 	public static final MMCode mmUSChips = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "USChips";
 			definition = "Settle money through CHIPS (US).";
 			owner_lazy = () -> CashSettlementSystemCode.mmObject();
@@ -288,7 +290,7 @@ public class CashSettlementSystemCode {
 	 */
 	public static final MMCode mmFedWireUS = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "FedWireUS";
 			definition = "Settle money through Fedwire (US).";
 			owner_lazy = () -> CashSettlementSystemCode.mmObject();
@@ -299,15 +301,13 @@ public class CashSettlementSystemCode {
 	static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
 				example = Arrays.asList("BOKW");
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "CashSettlementSystemCode";
 				definition = "Specifies the cash settlement system used.";
-				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.CashSettlementSystemCode.mmBankOfKoreaWire, com.tools20022.repository.codeset.CashSettlementSystemCode.mmCheque,
-						com.tools20022.repository.codeset.CashSettlementSystemCode.mmUKDomestic, com.tools20022.repository.codeset.CashSettlementSystemCode.mmGrossSettlementSystem,
-						com.tools20022.repository.codeset.CashSettlementSystemCode.mmNetSettlementSystem, com.tools20022.repository.codeset.CashSettlementSystemCode.mmUSChips,
-						com.tools20022.repository.codeset.CashSettlementSystemCode.mmFedWireUS);
+				code_lazy = () -> Arrays.asList(CashSettlementSystemCode.mmBankOfKoreaWire, CashSettlementSystemCode.mmCheque, CashSettlementSystemCode.mmUKDomestic, CashSettlementSystemCode.mmGrossSettlementSystem,
+						CashSettlementSystemCode.mmNetSettlementSystem, CashSettlementSystemCode.mmUSChips, CashSettlementSystemCode.mmFedWireUS);
 				derivation_lazy = () -> Arrays.asList(CashSettlementSystem2Code.mmObject(), CashSettlementSystem1Code.mmObject());
 			}
 		});

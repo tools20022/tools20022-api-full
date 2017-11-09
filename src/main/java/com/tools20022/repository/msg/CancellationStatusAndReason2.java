@@ -17,13 +17,14 @@
 
 package com.tools20022.repository.msg;
 
-import com.tools20022.metamodel.MMMessageAssociationEnd;
-import com.tools20022.metamodel.MMMessageAttribute;
-import com.tools20022.metamodel.MMMessageComponent;
-import com.tools20022.metamodel.MMXor;
+import com.tools20022.metamodel.*;
+import com.tools20022.repository.area.sese.TransferCancellationStatusReportV02;
+import com.tools20022.repository.area.sese.TransferCancellationStatusReportV03;
+import com.tools20022.repository.area.sese.TransferCancellationStatusReportV04;
 import com.tools20022.repository.choice.PartyIdentification2Choice;
 import com.tools20022.repository.datatype.Max35Text;
-import com.tools20022.repository.entity.SecuritiesTradeStatus;
+import com.tools20022.repository.entity.*;
+import com.tools20022.repository.GeneratedRepository;
 import java.text.DateFormat;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
@@ -168,14 +169,14 @@ public class CancellationStatusAndReason2 {
 	 */
 	public static final MMMessageAttribute mmMasterReference = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Order.mmMasterIdentification;
+			businessElementTrace_lazy = () -> Order.mmMasterIdentification;
 			componentContext_lazy = () -> CancellationStatusAndReason2.mmObject();
 			isDerived = false;
 			xmlTag = "MstrRef";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "MasterReference";
 			definition = "Unique and unambiguous identifier for a group of individual transfers as assigned by the instructing party. This identifier links the individual transfers together.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.CancellationStatusAndReason3.mmMasterReference);
+			nextVersions_lazy = () -> Arrays.asList(CancellationStatusAndReason3.mmMasterReference);
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> Max35Text.mmObject();
@@ -227,14 +228,14 @@ public class CancellationStatusAndReason2 {
 	 */
 	public static final MMMessageAttribute mmTransferReference = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.SecuritiesTransfer.mmIdentification;
+			businessElementTrace_lazy = () -> SecuritiesTransfer.mmIdentification;
 			componentContext_lazy = () -> CancellationStatusAndReason2.mmObject();
 			isDerived = false;
 			xmlTag = "TrfRef";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "TransferReference";
 			definition = "Unique and unambiguous identification of a transfer, as assigned by the instructing party.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.CancellationStatusAndReason3.mmTransferReference);
+			nextVersions_lazy = () -> Arrays.asList(CancellationStatusAndReason3.mmTransferReference);
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> Max35Text.mmObject();
@@ -287,14 +288,14 @@ public class CancellationStatusAndReason2 {
 	 */
 	public static final MMMessageAttribute mmClientReference = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.InvestmentFundTransaction.mmClientReference;
+			businessElementTrace_lazy = () -> InvestmentFundTransaction.mmClientReference;
 			componentContext_lazy = () -> CancellationStatusAndReason2.mmObject();
 			isDerived = false;
 			xmlTag = "ClntRef";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ClientReference";
 			definition = "Unique and unambiguous investor's identification of a transfer. This reference can typically be used in a hub scenario to give the reference of the transfer as assigned by the underlying client.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.CancellationStatusAndReason3.mmClientReference);
+			nextVersions_lazy = () -> Arrays.asList(CancellationStatusAndReason3.mmClientReference);
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> Max35Text.mmObject();
@@ -344,10 +345,10 @@ public class CancellationStatusAndReason2 {
 			componentContext_lazy = () -> CancellationStatusAndReason2.mmObject();
 			isDerived = false;
 			xmlTag = "CxlRef";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CancellationReference";
 			definition = "Unique and unambiguous identifier for a transfer cancellation, as assigned by the instructing party.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.CancellationStatusAndReason3.mmCancellationReference);
+			nextVersions_lazy = () -> Arrays.asList(CancellationStatusAndReason3.mmCancellationReference);
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> Max35Text.mmObject();
@@ -393,7 +394,7 @@ public class CancellationStatusAndReason2 {
 			componentContext_lazy = () -> CancellationStatusAndReason2.mmObject();
 			isDerived = false;
 			xmlTag = "Sts";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Status";
 			definition = "Status of the transfer cancellation is accepted or sent to next party.";
 			maxOccurs = 1;
@@ -437,11 +438,11 @@ public class CancellationStatusAndReason2 {
 	 */
 	public static final MMMessageAssociationEnd mmRejected = new MMMessageAssociationEnd() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.SecuritiesTradeStatus.mmReason;
+			businessElementTrace_lazy = () -> SecuritiesTradeStatus.mmReason;
 			componentContext_lazy = () -> CancellationStatusAndReason2.mmObject();
 			isDerived = false;
 			xmlTag = "Rjctd";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Rejected";
 			definition = "Status of the transfer cancellation is rejected.";
 			maxOccurs = 1;
@@ -489,11 +490,11 @@ public class CancellationStatusAndReason2 {
 	 */
 	public static final MMMessageAssociationEnd mmComplete = new MMMessageAssociationEnd() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.SecuritiesTradeStatus.mmReason;
+			businessElementTrace_lazy = () -> SecuritiesTradeStatus.mmReason;
 			componentContext_lazy = () -> CancellationStatusAndReason2.mmObject();
 			isDerived = false;
 			xmlTag = "Cmplt";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Complete";
 			definition = "Status of the transfer cancellation is complete. The cancellation instruction has been accepted and processed, the cancellation is complete.";
 			maxOccurs = 1;
@@ -537,11 +538,11 @@ public class CancellationStatusAndReason2 {
 	 */
 	public static final MMMessageAssociationEnd mmPending = new MMMessageAssociationEnd() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.SecuritiesTradeStatus.mmReason;
+			businessElementTrace_lazy = () -> SecuritiesTradeStatus.mmReason;
 			componentContext_lazy = () -> CancellationStatusAndReason2.mmObject();
 			isDerived = false;
 			xmlTag = "Pdg";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Pending";
 			definition = "Status of the transfer cancellation is pending.";
 			maxOccurs = 1;
@@ -593,14 +594,14 @@ public class CancellationStatusAndReason2 {
 	 */
 	public static final MMMessageAssociationEnd mmStatusInitiator = new MMMessageAssociationEnd() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Party.mmIdentification;
+			businessElementTrace_lazy = () -> Party.mmIdentification;
 			componentContext_lazy = () -> CancellationStatusAndReason2.mmObject();
 			isDerived = false;
 			xmlTag = "StsInitr";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "StatusInitiator";
 			definition = "Party that initiates the status.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.CancellationStatusAndReason3.mmStatusInitiator);
+			nextVersions_lazy = () -> Arrays.asList(CancellationStatusAndReason3.mmStatusInitiator);
 			maxOccurs = 1;
 			minOccurs = 0;
 			isComposite = true;
@@ -613,6 +614,10 @@ public class CancellationStatusAndReason2 {
 	 * <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
+	 * <li>{@linkplain com.tools20022.metamodel.MMXor#getMessageComponent
+	 * messageComponent} =
+	 * {@linkplain com.tools20022.repository.msg.CancellationStatusAndReason2
+	 * CancellationStatusAndReason2}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMXor#getImpactedElements
 	 * impactedElements} =
 	 * <ul>
@@ -630,10 +635,6 @@ public class CancellationStatusAndReason2 {
 	 * CancellationStatusAndReason2.mmPending}</li>
 	 * </ul>
 	 * </li>
-	 * <li>{@linkplain com.tools20022.metamodel.MMXor#getMessageComponent
-	 * messageComponent} =
-	 * {@linkplain com.tools20022.repository.msg.CancellationStatusAndReason2
-	 * CancellationStatusAndReason2}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
@@ -649,27 +650,24 @@ public class CancellationStatusAndReason2 {
 	 */
 	public static final MMXor mmStatusOrRejectedOrCompleteOrPendingRule = new MMXor() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "StatusOrRejectedOrCompleteOrPendingRule";
 			definition = "One and only one message element in the list (Status, Rejected, Complete, Pending) must be present.";
 			messageComponent_lazy = () -> CancellationStatusAndReason2.mmObject();
-			impactedElements_lazy = () -> Arrays.asList(com.tools20022.repository.msg.CancellationStatusAndReason2.mmStatus, com.tools20022.repository.msg.CancellationStatusAndReason2.mmRejected,
-					com.tools20022.repository.msg.CancellationStatusAndReason2.mmComplete, com.tools20022.repository.msg.CancellationStatusAndReason2.mmPending);
+			impactedElements_lazy = () -> Arrays.asList(CancellationStatusAndReason2.mmStatus, CancellationStatusAndReason2.mmRejected, CancellationStatusAndReason2.mmComplete, CancellationStatusAndReason2.mmPending);
 		}
 	};
 
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.CancellationStatusAndReason2.mmMasterReference, com.tools20022.repository.msg.CancellationStatusAndReason2.mmTransferReference,
-						com.tools20022.repository.msg.CancellationStatusAndReason2.mmClientReference, com.tools20022.repository.msg.CancellationStatusAndReason2.mmCancellationReference,
-						com.tools20022.repository.msg.CancellationStatusAndReason2.mmStatus, com.tools20022.repository.msg.CancellationStatusAndReason2.mmRejected, com.tools20022.repository.msg.CancellationStatusAndReason2.mmComplete,
-						com.tools20022.repository.msg.CancellationStatusAndReason2.mmPending, com.tools20022.repository.msg.CancellationStatusAndReason2.mmStatusInitiator);
-				messageBuildingBlock_lazy = () -> Arrays.asList(com.tools20022.repository.area.sese.TransferCancellationStatusReportV02.mmStatusReport, com.tools20022.repository.area.sese.TransferCancellationStatusReportV03.mmStatusReport,
-						com.tools20022.repository.area.sese.TransferCancellationStatusReportV04.mmStatusReport);
+				messageElement_lazy = () -> Arrays.asList(CancellationStatusAndReason2.mmMasterReference, CancellationStatusAndReason2.mmTransferReference, CancellationStatusAndReason2.mmClientReference,
+						CancellationStatusAndReason2.mmCancellationReference, CancellationStatusAndReason2.mmStatus, CancellationStatusAndReason2.mmRejected, CancellationStatusAndReason2.mmComplete, CancellationStatusAndReason2.mmPending,
+						CancellationStatusAndReason2.mmStatusInitiator);
+				messageBuildingBlock_lazy = () -> Arrays.asList(TransferCancellationStatusReportV02.mmStatusReport, TransferCancellationStatusReportV03.mmStatusReport, TransferCancellationStatusReportV04.mmStatusReport);
 				trace_lazy = () -> SecuritiesTradeStatus.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.OBSOLETE;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.OBSOLETE;
 				removalDate = ((Supplier<Date>) (() -> {
 					try {
 						return DateFormat.getDateInstance(java.text.DateFormat.LONG).parse("September 9, 2016");
@@ -680,7 +678,7 @@ public class CancellationStatusAndReason2 {
 				name = "CancellationStatusAndReason2";
 				definition = "Status of a transfer cancellation instruction and the reason for the status.";
 				nextVersions_lazy = () -> Arrays.asList(CancellationStatusAndReason3.mmObject());
-				xors_lazy = () -> Arrays.asList(com.tools20022.repository.msg.CancellationStatusAndReason2.mmStatusOrRejectedOrCompleteOrPendingRule);
+				xors_lazy = () -> Arrays.asList(CancellationStatusAndReason2.mmStatusOrRejectedOrCompleteOrPendingRule);
 			}
 		});
 		return mmObject_lazy.get();

@@ -19,7 +19,9 @@ package com.tools20022.repository.codeset;
 
 import com.tools20022.metamodel.MMCode;
 import com.tools20022.metamodel.MMCodeSet;
+import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.codeset.LimitTypeCode;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -88,7 +90,7 @@ public class RiskLimitType1Code extends LimitTypeCode {
 	 */
 	public static final MMCode mmMultilateral = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Multilateral";
 			owner_lazy = () -> RiskLimitType1Code.mmObject();
 		}
@@ -111,7 +113,7 @@ public class RiskLimitType1Code extends LimitTypeCode {
 	 */
 	public static final MMCode mmBilateral = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Bilateral";
 			owner_lazy = () -> RiskLimitType1Code.mmObject();
 		}
@@ -134,7 +136,7 @@ public class RiskLimitType1Code extends LimitTypeCode {
 	 */
 	public static final MMCode mmNetBilateral = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "NetBilateral";
 			owner_lazy = () -> RiskLimitType1Code.mmObject();
 		}
@@ -157,7 +159,7 @@ public class RiskLimitType1Code extends LimitTypeCode {
 	 */
 	public static final MMCode mmIndirectBilateral = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "IndirectBilateral";
 			owner_lazy = () -> RiskLimitType1Code.mmObject();
 		}
@@ -166,13 +168,12 @@ public class RiskLimitType1Code extends LimitTypeCode {
 	static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
 				example = Arrays.asList("MULT");
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "RiskLimitType1Code";
 				definition = "Specifies the type of risk management limit.";
-				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.RiskLimitType1Code.mmMultilateral, com.tools20022.repository.codeset.RiskLimitType1Code.mmBilateral,
-						com.tools20022.repository.codeset.RiskLimitType1Code.mmNetBilateral, com.tools20022.repository.codeset.RiskLimitType1Code.mmIndirectBilateral);
+				code_lazy = () -> Arrays.asList(RiskLimitType1Code.mmMultilateral, RiskLimitType1Code.mmBilateral, RiskLimitType1Code.mmNetBilateral, RiskLimitType1Code.mmIndirectBilateral);
 				trace_lazy = () -> LimitTypeCode.mmObject();
 			}
 		});

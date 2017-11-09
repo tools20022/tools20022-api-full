@@ -19,8 +19,10 @@ package com.tools20022.repository.msg;
 
 import com.tools20022.metamodel.MMMessageAttribute;
 import com.tools20022.metamodel.MMMessageComponent;
+import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.datatype.CurrencyAndAmount;
-import com.tools20022.repository.entity.Invoice;
+import com.tools20022.repository.entity.*;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.List;
@@ -126,11 +128,11 @@ public class SettlementMonetarySummation1 {
 	 */
 	public static final MMMessageAttribute mmLineTotalAmount = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.LineItem.mmGrossAmount;
+			businessElementTrace_lazy = () -> LineItem.mmGrossAmount;
 			componentContext_lazy = () -> SettlementMonetarySummation1.mmObject();
 			isDerived = false;
 			xmlTag = "LineTtlAmt";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "LineTotalAmount";
 			definition = "Monetary value of the line amount total being reported for this settlement.";
 			minOccurs = 0;
@@ -175,11 +177,11 @@ public class SettlementMonetarySummation1 {
 	 */
 	public static final MMMessageAttribute mmAllowanceTotalAmount = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Allowance.mmTotalAllowance;
+			businessElementTrace_lazy = () -> Allowance.mmTotalAllowance;
 			componentContext_lazy = () -> SettlementMonetarySummation1.mmObject();
 			isDerived = false;
 			xmlTag = "AllwncTtlAmt";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AllowanceTotalAmount";
 			definition = "Monetary value of the allowance total being reported for this settlement.";
 			minOccurs = 0;
@@ -224,11 +226,11 @@ public class SettlementMonetarySummation1 {
 	 */
 	public static final MMMessageAttribute mmTotalDiscountAmount = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Discount.mmDiscountAppliedAmount;
+			businessElementTrace_lazy = () -> Discount.mmDiscountAppliedAmount;
 			componentContext_lazy = () -> SettlementMonetarySummation1.mmObject();
 			isDerived = false;
 			xmlTag = "TtlDscntAmt";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "TotalDiscountAmount";
 			definition = "Monetary value of the total discount being reported for this settlement.";
 			minOccurs = 0;
@@ -274,11 +276,11 @@ public class SettlementMonetarySummation1 {
 	 */
 	public static final MMMessageAttribute mmChargeTotalAmount = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Invoice.mmTotalCharge;
+			businessElementTrace_lazy = () -> Invoice.mmTotalCharge;
 			componentContext_lazy = () -> SettlementMonetarySummation1.mmObject();
 			isDerived = false;
 			xmlTag = "ChrgTtlAmt";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ChargeTotalAmount";
 			definition = "Monetary value of the charge amount total being reported for this settlement.";
 			minOccurs = 0;
@@ -324,11 +326,11 @@ public class SettlementMonetarySummation1 {
 	 */
 	public static final MMMessageAttribute mmTotalPrepaidAmount = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Invoice.mmTotalPrepaidAmount;
+			businessElementTrace_lazy = () -> Invoice.mmTotalPrepaidAmount;
 			componentContext_lazy = () -> SettlementMonetarySummation1.mmObject();
 			isDerived = false;
 			xmlTag = "TtlPrepdAmt";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "TotalPrepaidAmount";
 			definition = "Monetary value of the total prepaid amount being reported for this settlement.";
 			minOccurs = 0;
@@ -374,11 +376,11 @@ public class SettlementMonetarySummation1 {
 	 */
 	public static final MMMessageAttribute mmTaxTotalAmount = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Invoice.mmTotalTaxAmount;
+			businessElementTrace_lazy = () -> Invoice.mmTotalTaxAmount;
 			componentContext_lazy = () -> SettlementMonetarySummation1.mmObject();
 			isDerived = false;
 			xmlTag = "TaxTtlAmt";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "TaxTotalAmount";
 			definition = "Monetary value of the total of all tax basis amounts being reported for this settlement.";
 			minOccurs = 0;
@@ -424,11 +426,11 @@ public class SettlementMonetarySummation1 {
 	 */
 	public static final MMMessageAttribute mmTaxBasisAmount = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Tax.mmTaxableBaseAmount;
+			businessElementTrace_lazy = () -> Tax.mmTaxableBaseAmount;
 			componentContext_lazy = () -> SettlementMonetarySummation1.mmObject();
 			isDerived = false;
 			xmlTag = "TaxBsisAmt";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "TaxBasisAmount";
 			definition = "Monetary value of the total of all tax basis amounts being reported for this settlement.";
 			minOccurs = 0;
@@ -472,7 +474,7 @@ public class SettlementMonetarySummation1 {
 			componentContext_lazy = () -> SettlementMonetarySummation1.mmObject();
 			isDerived = false;
 			xmlTag = "RndgAmt";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "RoundingAmount";
 			definition = "Monetary value of a rounding amount being applied and reported for this settlement.";
 			minOccurs = 0;
@@ -518,11 +520,11 @@ public class SettlementMonetarySummation1 {
 	 */
 	public static final MMMessageAttribute mmGrandTotalAmount = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Invoice.mmTotalInvoiceAmount;
+			businessElementTrace_lazy = () -> Invoice.mmTotalInvoiceAmount;
 			componentContext_lazy = () -> SettlementMonetarySummation1.mmObject();
 			isDerived = false;
 			xmlTag = "GrdTtlAmt";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "GrandTotalAmount";
 			definition = "Monetary value of the grand total being reported for this settlement, to include addition and subtraction of individual summation amounts.";
 			minOccurs = 0;
@@ -566,7 +568,7 @@ public class SettlementMonetarySummation1 {
 			componentContext_lazy = () -> SettlementMonetarySummation1.mmObject();
 			isDerived = false;
 			xmlTag = "InfAmt";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "InformationAmount";
 			definition = "Monetary value of an amount being reported as information for this settlement.";
 			minOccurs = 0;
@@ -577,14 +579,12 @@ public class SettlementMonetarySummation1 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.SettlementMonetarySummation1.mmLineTotalAmount, com.tools20022.repository.msg.SettlementMonetarySummation1.mmAllowanceTotalAmount,
-						com.tools20022.repository.msg.SettlementMonetarySummation1.mmTotalDiscountAmount, com.tools20022.repository.msg.SettlementMonetarySummation1.mmChargeTotalAmount,
-						com.tools20022.repository.msg.SettlementMonetarySummation1.mmTotalPrepaidAmount, com.tools20022.repository.msg.SettlementMonetarySummation1.mmTaxTotalAmount,
-						com.tools20022.repository.msg.SettlementMonetarySummation1.mmTaxBasisAmount, com.tools20022.repository.msg.SettlementMonetarySummation1.mmRoundingAmount,
-						com.tools20022.repository.msg.SettlementMonetarySummation1.mmGrandTotalAmount, com.tools20022.repository.msg.SettlementMonetarySummation1.mmInformationAmount);
+				messageElement_lazy = () -> Arrays.asList(SettlementMonetarySummation1.mmLineTotalAmount, SettlementMonetarySummation1.mmAllowanceTotalAmount, SettlementMonetarySummation1.mmTotalDiscountAmount,
+						SettlementMonetarySummation1.mmChargeTotalAmount, SettlementMonetarySummation1.mmTotalPrepaidAmount, SettlementMonetarySummation1.mmTaxTotalAmount, SettlementMonetarySummation1.mmTaxBasisAmount,
+						SettlementMonetarySummation1.mmRoundingAmount, SettlementMonetarySummation1.mmGrandTotalAmount, SettlementMonetarySummation1.mmInformationAmount);
 				trace_lazy = () -> Invoice.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "SettlementMonetarySummation1";
 				definition = "Specifies a collection of monetary totals for this settlement.";
 			}

@@ -19,7 +19,9 @@ package com.tools20022.repository.codeset;
 
 import com.tools20022.metamodel.MMCode;
 import com.tools20022.metamodel.MMCodeSet;
+import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.codeset.ProformaStatusReasonCode;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -77,7 +79,7 @@ public class ProformaStatusReason1Code extends ProformaStatusReasonCode {
 	 */
 	public static final MMCode mmModificationInProcess = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ModificationInProcess";
 			owner_lazy = () -> ProformaStatusReason1Code.mmObject();
 		}
@@ -100,7 +102,7 @@ public class ProformaStatusReason1Code extends ProformaStatusReasonCode {
 	 */
 	public static final MMCode mmRights = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Rights";
 			owner_lazy = () -> ProformaStatusReason1Code.mmObject();
 		}
@@ -109,11 +111,11 @@ public class ProformaStatusReason1Code extends ProformaStatusReasonCode {
 	static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "ProformaStatusReason1Code";
 				definition = "Specifies the reason for proforma status.";
-				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.ProformaStatusReason1Code.mmModificationInProcess, com.tools20022.repository.codeset.ProformaStatusReason1Code.mmRights);
+				code_lazy = () -> Arrays.asList(ProformaStatusReason1Code.mmModificationInProcess, ProformaStatusReason1Code.mmRights);
 				trace_lazy = () -> ProformaStatusReasonCode.mmObject();
 			}
 		});

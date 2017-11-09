@@ -20,11 +20,15 @@ package com.tools20022.repository.msg;
 import com.tools20022.metamodel.MMMessageAssociationEnd;
 import com.tools20022.metamodel.MMMessageAttribute;
 import com.tools20022.metamodel.MMMessageComponent;
+import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.choice.AccountIdentificationSearchCriteria2Choice;
 import com.tools20022.repository.choice.DateAndDateTimeSearch2Choice;
 import com.tools20022.repository.choice.ModificationProcessingStatus1Choice;
 import com.tools20022.repository.datatype.Max35Text;
 import com.tools20022.repository.entity.BookEntry;
+import com.tools20022.repository.entity.CashEntry;
+import com.tools20022.repository.entity.System;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.List;
@@ -111,7 +115,7 @@ public class IntraBalanceQueryCriteria3 {
 			componentContext_lazy = () -> IntraBalanceQueryCriteria3.mmObject();
 			isDerived = false;
 			xmlTag = "ModReqId";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ModificationRequestIdentification";
 			definition = "Collective reference identifying a set of messages.";
 			minOccurs = 0;
@@ -152,7 +156,7 @@ public class IntraBalanceQueryCriteria3 {
 			componentContext_lazy = () -> IntraBalanceQueryCriteria3.mmObject();
 			isDerived = false;
 			xmlTag = "PrcgSts";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ProcessingStatus";
 			definition = "Provides the status of settlement of a transaction.";
 			minOccurs = 0;
@@ -195,11 +199,11 @@ public class IntraBalanceQueryCriteria3 {
 	 */
 	public static final MMMessageAttribute mmCashAccount = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.CashEntry.mmCashAccount;
+			businessElementTrace_lazy = () -> CashEntry.mmCashAccount;
 			componentContext_lazy = () -> IntraBalanceQueryCriteria3.mmObject();
 			isDerived = false;
 			xmlTag = "CshAcct";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CashAccount";
 			definition = "Account in which cash is maintained.";
 			minOccurs = 0;
@@ -241,11 +245,11 @@ public class IntraBalanceQueryCriteria3 {
 	 */
 	public static final MMMessageAssociationEnd mmCashAccountOwner = new MMMessageAssociationEnd() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.System.mmPartyRole;
+			businessElementTrace_lazy = () -> System.mmPartyRole;
 			componentContext_lazy = () -> IntraBalanceQueryCriteria3.mmObject();
 			isDerived = false;
 			xmlTag = "CshAcctOwnr";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CashAccountOwner";
 			definition = "Party that owns the account.";
 			minOccurs = 0;
@@ -287,7 +291,7 @@ public class IntraBalanceQueryCriteria3 {
 			componentContext_lazy = () -> IntraBalanceQueryCriteria3.mmObject();
 			isDerived = false;
 			xmlTag = "MsgOrgtr";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "MessageOriginator";
 			definition = "Party that originated the message, if other than the sender.";
 			minOccurs = 0;
@@ -330,7 +334,7 @@ public class IntraBalanceQueryCriteria3 {
 			componentContext_lazy = () -> IntraBalanceQueryCriteria3.mmObject();
 			isDerived = false;
 			xmlTag = "CreDtTm";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CreationDateTime";
 			definition = "Specifies the creation date/time of the intra-balance movement.";
 			maxOccurs = 1;
@@ -342,12 +346,11 @@ public class IntraBalanceQueryCriteria3 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.IntraBalanceQueryCriteria3.mmModificationRequestIdentification, com.tools20022.repository.msg.IntraBalanceQueryCriteria3.mmProcessingStatus,
-						com.tools20022.repository.msg.IntraBalanceQueryCriteria3.mmCashAccount, com.tools20022.repository.msg.IntraBalanceQueryCriteria3.mmCashAccountOwner,
-						com.tools20022.repository.msg.IntraBalanceQueryCriteria3.mmMessageOriginator, com.tools20022.repository.msg.IntraBalanceQueryCriteria3.mmCreationDateTime);
+				messageElement_lazy = () -> Arrays.asList(IntraBalanceQueryCriteria3.mmModificationRequestIdentification, IntraBalanceQueryCriteria3.mmProcessingStatus, IntraBalanceQueryCriteria3.mmCashAccount,
+						IntraBalanceQueryCriteria3.mmCashAccountOwner, IntraBalanceQueryCriteria3.mmMessageOriginator, IntraBalanceQueryCriteria3.mmCreationDateTime);
 				trace_lazy = () -> BookEntry.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 				name = "IntraBalanceQueryCriteria3";
 				definition = "Defines the criteria based on which information is included.";
 			}

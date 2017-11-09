@@ -20,10 +20,13 @@ package com.tools20022.repository.msg;
 import com.tools20022.metamodel.MMMessageAssociationEnd;
 import com.tools20022.metamodel.MMMessageAttribute;
 import com.tools20022.metamodel.MMMessageComponent;
+import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.choice.PartyIdentification35Choice;
 import com.tools20022.repository.entity.DeliveringSettlementParty;
+import com.tools20022.repository.entity.Party;
 import com.tools20022.repository.entity.ReceivingSettlementParty;
 import com.tools20022.repository.entity.SystemPartyRole;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -126,14 +129,14 @@ public class NonGuaranteedTrade2 {
 	 */
 	public static final MMMessageAttribute mmTradeCounterpartyMemberIdentification = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Party.mmIdentification;
+			businessElementTrace_lazy = () -> Party.mmIdentification;
 			componentContext_lazy = () -> NonGuaranteedTrade2.mmObject();
 			isDerived = false;
 			xmlTag = "TradCtrPtyMmbId";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "TradeCounterpartyMemberIdentification";
 			definition = "External identification of the member who is the market counterpart member of the current trade leg (in case of non guarantee trades, this field allows buyer and seller to identify each other).";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.NonGuaranteedTrade3.mmTradeCounterpartyMemberIdentification);
+			nextVersions_lazy = () -> Arrays.asList(NonGuaranteedTrade3.mmTradeCounterpartyMemberIdentification);
 			maxOccurs = 1;
 			minOccurs = 1;
 			complexType_lazy = () -> PartyIdentification35Choice.mmObject();
@@ -187,14 +190,14 @@ public class NonGuaranteedTrade2 {
 	 */
 	public static final MMMessageAttribute mmTradeCounterpartyClearingMemberIdentification = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Party.mmIdentification;
+			businessElementTrace_lazy = () -> Party.mmIdentification;
 			componentContext_lazy = () -> NonGuaranteedTrade2.mmObject();
 			isDerived = false;
 			xmlTag = "TradCtrPtyClrMmbId";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "TradeCounterpartyClearingMemberIdentification";
 			definition = "External identification of the clearing member of the market couterpart member (in case of non guarantee trades, this field allows buyer and seller to identify each other).";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.NonGuaranteedTrade3.mmTradeCounterpartyClearingMemberIdentification);
+			nextVersions_lazy = () -> Arrays.asList(NonGuaranteedTrade3.mmTradeCounterpartyClearingMemberIdentification);
 			maxOccurs = 1;
 			minOccurs = 1;
 			complexType_lazy = () -> PartyIdentification35Choice.mmObject();
@@ -250,10 +253,10 @@ public class NonGuaranteedTrade2 {
 			componentContext_lazy = () -> NonGuaranteedTrade2.mmObject();
 			isDerived = false;
 			xmlTag = "DlvrgPties";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "DeliveringParties";
 			definition = "Provides details about the delivering parties involved in the settlement chain.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.NonGuaranteedTrade3.mmDeliveringParties);
+			nextVersions_lazy = () -> Arrays.asList(NonGuaranteedTrade3.mmDeliveringParties);
 			maxOccurs = 1;
 			minOccurs = 0;
 			isComposite = true;
@@ -310,10 +313,10 @@ public class NonGuaranteedTrade2 {
 			componentContext_lazy = () -> NonGuaranteedTrade2.mmObject();
 			isDerived = false;
 			xmlTag = "RcvgPties";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ReceivingParties";
 			definition = "Provides details about the receiving parties involved in the settlement chain.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.NonGuaranteedTrade3.mmReceivingParties);
+			nextVersions_lazy = () -> Arrays.asList(NonGuaranteedTrade3.mmReceivingParties);
 			maxOccurs = 1;
 			minOccurs = 0;
 			isComposite = true;
@@ -324,12 +327,11 @@ public class NonGuaranteedTrade2 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.NonGuaranteedTrade2.mmTradeCounterpartyMemberIdentification,
-						com.tools20022.repository.msg.NonGuaranteedTrade2.mmTradeCounterpartyClearingMemberIdentification, com.tools20022.repository.msg.NonGuaranteedTrade2.mmDeliveringParties,
-						com.tools20022.repository.msg.NonGuaranteedTrade2.mmReceivingParties);
+				messageElement_lazy = () -> Arrays.asList(NonGuaranteedTrade2.mmTradeCounterpartyMemberIdentification, NonGuaranteedTrade2.mmTradeCounterpartyClearingMemberIdentification, NonGuaranteedTrade2.mmDeliveringParties,
+						NonGuaranteedTrade2.mmReceivingParties);
 				trace_lazy = () -> SystemPartyRole.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 				name = "NonGuaranteedTrade2";
 				definition = "Provides the non guaranteed trade details.";
 				nextVersions_lazy = () -> Arrays.asList(NonGuaranteedTrade3.mmObject());

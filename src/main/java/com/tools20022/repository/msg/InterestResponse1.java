@@ -19,11 +19,17 @@ package com.tools20022.repository.msg;
 
 import com.tools20022.metamodel.MMMessageAttribute;
 import com.tools20022.metamodel.MMMessageComponent;
+import com.tools20022.metamodel.MMRegistrationStatus;
+import com.tools20022.repository.area.colr.InterestPaymentResponseV03;
+import com.tools20022.repository.area.colr.InterestPaymentResponseV04;
 import com.tools20022.repository.choice.RejectionReason21FormatChoice;
 import com.tools20022.repository.codeset.Status4Code;
 import com.tools20022.repository.datatype.Max140Text;
 import com.tools20022.repository.datatype.Max35Text;
 import com.tools20022.repository.entity.CollateralStatus;
+import com.tools20022.repository.entity.Status;
+import com.tools20022.repository.entity.StatusReason;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -120,11 +126,11 @@ public class InterestResponse1 {
 	 */
 	public static final MMMessageAttribute mmResponseType = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Status.mmInstructionProcessingStatus;
+			businessElementTrace_lazy = () -> Status.mmInstructionProcessingStatus;
 			componentContext_lazy = () -> InterestResponse1.mmObject();
 			isDerived = false;
 			xmlTag = "RspnTp";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ResponseType";
 			definition = "Provides the type of the response, either accepted or rejected.";
 			maxOccurs = 1;
@@ -171,11 +177,11 @@ public class InterestResponse1 {
 	 */
 	public static final MMMessageAttribute mmRejectionReason = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.CollateralStatus.mmInterestRejectionReason;
+			businessElementTrace_lazy = () -> CollateralStatus.mmInterestRejectionReason;
 			componentContext_lazy = () -> InterestResponse1.mmObject();
 			isDerived = false;
 			xmlTag = "RjctnRsn";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "RejectionReason";
 			definition = "Provides a reason for rejection identified using a code or a proprietary format.";
 			maxOccurs = 1;
@@ -218,11 +224,11 @@ public class InterestResponse1 {
 	 */
 	public static final MMMessageAttribute mmRejectionReasonInformation = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.StatusReason.mmReason;
+			businessElementTrace_lazy = () -> StatusReason.mmReason;
 			componentContext_lazy = () -> InterestResponse1.mmObject();
 			isDerived = false;
 			xmlTag = "RjctnRsnInf";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "RejectionReasonInformation";
 			definition = "Provides additional information on the rejection reason.";
 			maxOccurs = 1;
@@ -263,7 +269,7 @@ public class InterestResponse1 {
 			componentContext_lazy = () -> InterestResponse1.mmObject();
 			isDerived = false;
 			xmlTag = "IntrstPmtReqId";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "InterestPaymentRequestIdentification";
 			definition = "Provides the reference to the interest payment request.";
 			maxOccurs = 1;
@@ -275,12 +281,11 @@ public class InterestResponse1 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.InterestResponse1.mmResponseType, com.tools20022.repository.msg.InterestResponse1.mmRejectionReason,
-						com.tools20022.repository.msg.InterestResponse1.mmRejectionReasonInformation, com.tools20022.repository.msg.InterestResponse1.mmInterestPaymentRequestIdentification);
-				messageBuildingBlock_lazy = () -> Arrays.asList(com.tools20022.repository.area.colr.InterestPaymentResponseV03.mmInterestResponse, com.tools20022.repository.area.colr.InterestPaymentResponseV04.mmInterestResponse);
+				messageElement_lazy = () -> Arrays.asList(InterestResponse1.mmResponseType, InterestResponse1.mmRejectionReason, InterestResponse1.mmRejectionReasonInformation, InterestResponse1.mmInterestPaymentRequestIdentification);
+				messageBuildingBlock_lazy = () -> Arrays.asList(InterestPaymentResponseV03.mmInterestResponse, InterestPaymentResponseV04.mmInterestResponse);
 				trace_lazy = () -> CollateralStatus.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "InterestResponse1";
 				definition = "Provides details about the reponse to the interest payment request.";
 			}

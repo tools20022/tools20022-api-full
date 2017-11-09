@@ -17,10 +17,9 @@
 
 package com.tools20022.repository.entity;
 
-import com.tools20022.metamodel.MMBusinessAssociationEnd;
-import com.tools20022.metamodel.MMBusinessAttribute;
-import com.tools20022.metamodel.MMBusinessComponent;
+import com.tools20022.metamodel.*;
 import com.tools20022.repository.datatype.YesNoIndicator;
+import com.tools20022.repository.GeneratedRepository;
 import com.tools20022.repository.msg.AccountLink1;
 import com.tools20022.repository.msg.AccountLink2;
 import com.tools20022.repository.msg.AccountLinkUpdate1;
@@ -37,6 +36,33 @@ import java.util.List;
  * <p>
  * <strong>Constant fields:</strong>
  * <ul>
+ * <li>
+ * {@linkplain com.tools20022.metamodel.MMBusinessComponent#getDerivationComponent
+ * derivationComponent} =
+ * <ul>
+ * <li>{@linkplain com.tools20022.repository.msg.AccountLink1 AccountLink1}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.AccountLink2 AccountLink2}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.AccountLinkUpdate1
+ * AccountLinkUpdate1}</li>
+ * </ul>
+ * </li>
+ * <li>
+ * {@linkplain com.tools20022.metamodel.MMBusinessComponent#getAssociationDomain
+ * associationDomain} =
+ * <ul>
+ * <li>{@linkplain com.tools20022.repository.entity.CashAccount#mmAccountLink
+ * CashAccount.mmAccountLink}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.entity.DateTimePeriod#mmRelatedAccountLink
+ * DateTimePeriod.mmRelatedAccountLink}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.entity.SecuritiesAccount#mmAccountLink
+ * SecuritiesAccount.mmAccountLink}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.entity.MarketInfrastructure#mmAccountLink
+ * MarketInfrastructure.mmAccountLink}</li>
+ * </ul>
+ * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMBusinessComponent#getElement
  * element} =
  * <ul>
@@ -60,33 +86,6 @@ import java.util.List;
  * <li>
  * {@linkplain com.tools20022.repository.entity.AccountLink#mmDefaultIndicator
  * AccountLink.mmDefaultIndicator}</li>
- * </ul>
- * </li>
- * <li>
- * {@linkplain com.tools20022.metamodel.MMBusinessComponent#getAssociationDomain
- * associationDomain} =
- * <ul>
- * <li>{@linkplain com.tools20022.repository.entity.CashAccount#mmAccountLink
- * CashAccount.mmAccountLink}</li>
- * <li>
- * {@linkplain com.tools20022.repository.entity.DateTimePeriod#mmRelatedAccountLink
- * DateTimePeriod.mmRelatedAccountLink}</li>
- * <li>
- * {@linkplain com.tools20022.repository.entity.SecuritiesAccount#mmAccountLink
- * SecuritiesAccount.mmAccountLink}</li>
- * <li>
- * {@linkplain com.tools20022.repository.entity.MarketInfrastructure#mmAccountLink
- * MarketInfrastructure.mmAccountLink}</li>
- * </ul>
- * </li>
- * <li>
- * {@linkplain com.tools20022.metamodel.MMBusinessComponent#getDerivationComponent
- * derivationComponent} =
- * <ul>
- * <li>{@linkplain com.tools20022.repository.msg.AccountLink1 AccountLink1}</li>
- * <li>{@linkplain com.tools20022.repository.msg.AccountLink2 AccountLink2}</li>
- * <li>{@linkplain com.tools20022.repository.msg.AccountLinkUpdate1
- * AccountLinkUpdate1}</li>
  * </ul>
  * </li>
  * <li>
@@ -152,16 +151,16 @@ public class AccountLink {
 	 */
 	public static final MMBusinessAssociationEnd mmCashAccount = new MMBusinessAssociationEnd() {
 		{
-			derivation_lazy = () -> Arrays.asList(com.tools20022.repository.msg.AccountLink1.mmCashAccount, com.tools20022.repository.msg.AccountLink2.mmCashAccount);
+			derivation_lazy = () -> Arrays.asList(AccountLink1.mmCashAccount, AccountLink2.mmCashAccount);
 			elementContext_lazy = () -> AccountLink.mmObject();
 			isDerived = false;
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "CashAccount";
 			definition = "Cash account linked to a securities account.";
 			maxOccurs = 1;
 			minOccurs = 1;
 			opposite_lazy = () -> com.tools20022.repository.entity.CashAccount.mmAccountLink;
-			aggregation = com.tools20022.metamodel.MMAggregation.NONE;
+			aggregation = MMAggregation.NONE;
 			type_lazy = () -> com.tools20022.repository.entity.CashAccount.mmObject();
 		}
 	};
@@ -205,12 +204,12 @@ public class AccountLink {
 		{
 			elementContext_lazy = () -> AccountLink.mmObject();
 			isDerived = false;
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "ValidityPeriod";
 			definition = "Defines the period when the securities account is linked to the cash account.";
 			minOccurs = 0;
 			opposite_lazy = () -> com.tools20022.repository.entity.DateTimePeriod.mmRelatedAccountLink;
-			aggregation = com.tools20022.metamodel.MMAggregation.NONE;
+			aggregation = MMAggregation.NONE;
 			type_lazy = () -> com.tools20022.repository.entity.DateTimePeriod.mmObject();
 		}
 	};
@@ -260,15 +259,15 @@ public class AccountLink {
 	 */
 	public static final MMBusinessAssociationEnd mmSecuritiesAccount = new MMBusinessAssociationEnd() {
 		{
-			derivation_lazy = () -> Arrays.asList(com.tools20022.repository.msg.AccountLink1.mmSecuritiesAccount, com.tools20022.repository.msg.AccountLink2.mmSecuritiesAccount);
+			derivation_lazy = () -> Arrays.asList(AccountLink1.mmSecuritiesAccount, AccountLink2.mmSecuritiesAccount);
 			elementContext_lazy = () -> AccountLink.mmObject();
 			isDerived = false;
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "SecuritiesAccount";
 			definition = "Securities account linked to a cash account.";
 			minOccurs = 0;
 			opposite_lazy = () -> com.tools20022.repository.entity.SecuritiesAccount.mmAccountLink;
-			aggregation = com.tools20022.metamodel.MMAggregation.NONE;
+			aggregation = MMAggregation.NONE;
 			type_lazy = () -> com.tools20022.repository.entity.SecuritiesAccount.mmObject();
 		}
 	};
@@ -311,12 +310,12 @@ public class AccountLink {
 		{
 			elementContext_lazy = () -> AccountLink.mmObject();
 			isDerived = false;
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "MarketInfrastructure";
 			definition = "Specifies the market infrastructure where the accounts are held.";
 			minOccurs = 0;
 			opposite_lazy = () -> com.tools20022.repository.entity.MarketInfrastructure.mmAccountLink;
-			aggregation = com.tools20022.metamodel.MMAggregation.NONE;
+			aggregation = MMAggregation.NONE;
 			type_lazy = () -> com.tools20022.repository.entity.MarketInfrastructure.mmObject();
 		}
 	};
@@ -360,10 +359,10 @@ public class AccountLink {
 	 */
 	public static final MMBusinessAttribute mmCashSettlementIndicator = new MMBusinessAttribute() {
 		{
-			derivation_lazy = () -> Arrays.asList(com.tools20022.repository.msg.AccountLink1.mmCashSettlementIndicator);
+			derivation_lazy = () -> Arrays.asList(AccountLink1.mmCashSettlementIndicator);
 			elementContext_lazy = () -> AccountLink.mmObject();
 			isDerived = false;
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "CashSettlementIndicator";
 			definition = "Specifies whether market infrastructure can use the link between the securities account and the market infrastructure dedicated cash account for the settlement of the cash leg of a settlement instruction.";
 			maxOccurs = 1;
@@ -412,10 +411,10 @@ public class AccountLink {
 	 */
 	public static final MMBusinessAttribute mmCollateralisationIndicator = new MMBusinessAttribute() {
 		{
-			derivation_lazy = () -> Arrays.asList(com.tools20022.repository.msg.AccountLink1.mmCollateralisationIndicator);
+			derivation_lazy = () -> Arrays.asList(AccountLink1.mmCollateralisationIndicator);
 			elementContext_lazy = () -> AccountLink.mmObject();
 			isDerived = false;
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CollateralisationIndicator";
 			definition = "Specifies whether market infrastructure can use the securities, earmarked as collateral and held on the securities account, for auto-collateralisation operations on the linked market infrastructure dedicated cash account.";
 			maxOccurs = 1;
@@ -461,10 +460,10 @@ public class AccountLink {
 	 */
 	public static final MMBusinessAttribute mmDefaultIndicator = new MMBusinessAttribute() {
 		{
-			derivation_lazy = () -> Arrays.asList(com.tools20022.repository.msg.AccountLink1.mmDefaultIndicator);
+			derivation_lazy = () -> Arrays.asList(AccountLink1.mmDefaultIndicator);
 			elementContext_lazy = () -> AccountLink.mmObject();
 			isDerived = false;
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "DefaultIndicator";
 			definition = "Specifies whether created account link is set as default for settlement.";
 			maxOccurs = 1;
@@ -476,15 +475,14 @@ public class AccountLink {
 	static public MMBusinessComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMBusinessComponent() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "AccountLink";
 				definition = "Defines the link between the accounts held with a market infrastructure.";
 				associationDomain_lazy = () -> Arrays.asList(com.tools20022.repository.entity.CashAccount.mmAccountLink, com.tools20022.repository.entity.DateTimePeriod.mmRelatedAccountLink,
 						com.tools20022.repository.entity.SecuritiesAccount.mmAccountLink, com.tools20022.repository.entity.MarketInfrastructure.mmAccountLink);
-				element_lazy = () -> Arrays.asList(com.tools20022.repository.entity.AccountLink.mmCashAccount, com.tools20022.repository.entity.AccountLink.mmValidityPeriod, com.tools20022.repository.entity.AccountLink.mmSecuritiesAccount,
-						com.tools20022.repository.entity.AccountLink.mmMarketInfrastructure, com.tools20022.repository.entity.AccountLink.mmCashSettlementIndicator, com.tools20022.repository.entity.AccountLink.mmCollateralisationIndicator,
-						com.tools20022.repository.entity.AccountLink.mmDefaultIndicator);
+				element_lazy = () -> Arrays.asList(AccountLink.mmCashAccount, AccountLink.mmValidityPeriod, AccountLink.mmSecuritiesAccount, AccountLink.mmMarketInfrastructure, AccountLink.mmCashSettlementIndicator,
+						AccountLink.mmCollateralisationIndicator, AccountLink.mmDefaultIndicator);
 				derivationComponent_lazy = () -> Arrays.asList(AccountLink1.mmObject(), AccountLink2.mmObject(), AccountLinkUpdate1.mmObject());
 			}
 		});

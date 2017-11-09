@@ -17,12 +17,11 @@
 
 package com.tools20022.repository.entity;
 
-import com.tools20022.metamodel.MMBusinessAssociationEnd;
-import com.tools20022.metamodel.MMBusinessAttribute;
-import com.tools20022.metamodel.MMBusinessComponent;
+import com.tools20022.metamodel.*;
 import com.tools20022.repository.datatype.PercentageRate;
 import com.tools20022.repository.datatype.PlusOrMinusIndicator;
-import com.tools20022.repository.msg.BasicCollateralValuation1Details;
+import com.tools20022.repository.GeneratedRepository;
+import com.tools20022.repository.msg.*;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.List;
@@ -36,19 +35,13 @@ import java.util.List;
  * <p>
  * <strong>Constant fields:</strong>
  * <ul>
- * <li>{@linkplain com.tools20022.metamodel.MMBusinessComponent#getElement
- * element} =
+ * <li>
+ * {@linkplain com.tools20022.metamodel.MMBusinessComponent#getDerivationComponent
+ * derivationComponent} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.entity.HaircutValuation#mmAssetHolding
- * HaircutValuation.mmAssetHolding}</li>
- * <li>{@linkplain com.tools20022.repository.entity.HaircutValuation#mmHaircut
- * HaircutValuation.mmHaircut}</li>
- * <li>{@linkplain com.tools20022.repository.entity.HaircutValuation#mmSign
- * HaircutValuation.mmSign}</li>
- * <li>
- * {@linkplain com.tools20022.repository.entity.HaircutValuation#mmPartyRole
- * HaircutValuation.mmPartyRole}</li>
+ * {@linkplain com.tools20022.repository.msg.BasicCollateralValuation1Details
+ * BasicCollateralValuation1Details}</li>
  * </ul>
  * </li>
  * <li>
@@ -62,13 +55,19 @@ import java.util.List;
  * AssetHolding.mmHaircut}</li>
  * </ul>
  * </li>
- * <li>
- * {@linkplain com.tools20022.metamodel.MMBusinessComponent#getDerivationComponent
- * derivationComponent} =
+ * <li>{@linkplain com.tools20022.metamodel.MMBusinessComponent#getElement
+ * element} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.msg.BasicCollateralValuation1Details
- * BasicCollateralValuation1Details}</li>
+ * {@linkplain com.tools20022.repository.entity.HaircutValuation#mmAssetHolding
+ * HaircutValuation.mmAssetHolding}</li>
+ * <li>{@linkplain com.tools20022.repository.entity.HaircutValuation#mmHaircut
+ * HaircutValuation.mmHaircut}</li>
+ * <li>{@linkplain com.tools20022.repository.entity.HaircutValuation#mmSign
+ * HaircutValuation.mmSign}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.entity.HaircutValuation#mmPartyRole
+ * HaircutValuation.mmPartyRole}</li>
  * </ul>
  * </li>
  * <li>
@@ -127,13 +126,13 @@ public class HaircutValuation {
 		{
 			elementContext_lazy = () -> HaircutValuation.mmObject();
 			isDerived = false;
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "AssetHolding";
 			definition = "Asset holding for which a haircut is specified.";
 			maxOccurs = 1;
 			minOccurs = 0;
 			opposite_lazy = () -> com.tools20022.repository.entity.AssetHolding.mmHaircut;
-			aggregation = com.tools20022.metamodel.MMAggregation.NONE;
+			aggregation = MMAggregation.NONE;
 			type_lazy = () -> com.tools20022.repository.entity.AssetHolding.mmObject();
 		}
 	};
@@ -261,22 +260,16 @@ public class HaircutValuation {
 	 */
 	public static final MMBusinessAttribute mmHaircut = new MMBusinessAttribute() {
 		{
-			derivation_lazy = () -> Arrays.asList(com.tools20022.repository.msg.BasicCollateralValuation1Details.mmValuationHaircut, com.tools20022.repository.msg.SecuritiesFinancingTransactionDetails3.mmSecuritiesHaircut,
-					com.tools20022.repository.msg.SecuritiesFinancingTransactionDetails5.mmSecuritiesHaircut, com.tools20022.repository.msg.SecuritiesFinancingTransactionDetails1.mmSecuritiesHaircut,
-					com.tools20022.repository.msg.SecuritiesFinancingTransactionDetails4.mmSecuritiesHaircut, com.tools20022.repository.msg.FinancialInstrumentStipulations2.mmHaircut,
-					com.tools20022.repository.msg.SecuritiesFinancingTransactionDetails2.mmSecuritiesHaircut, com.tools20022.repository.msg.SecuritiesFinancingTransactionDetails8.mmSecuritiesHaircut,
-					com.tools20022.repository.msg.SecuritiesCollateral1.mmHaircut, com.tools20022.repository.msg.CashCollateral1.mmHaircut, com.tools20022.repository.msg.OtherCollateral1.mmHaircut,
-					com.tools20022.repository.msg.CollateralValuation1.mmCurrencyHaircut, com.tools20022.repository.msg.SecuritiesFinancingTransactionDetails6.mmSecuritiesHaircut,
-					com.tools20022.repository.msg.SecuritiesFinancingTransactionDetails10.mmSecuritiesHaircut, com.tools20022.repository.msg.Debt2.mmHaircut, com.tools20022.repository.msg.CollateralValuation2.mmCurrencyHaircut,
-					com.tools20022.repository.msg.SecuritiesCollateral2.mmHaircut, com.tools20022.repository.msg.OtherCollateral2.mmHaircut, com.tools20022.repository.msg.CashCollateral3.mmHaircut,
-					com.tools20022.repository.msg.SecuritiesCollateral3.mmHaircut, com.tools20022.repository.msg.OtherCollateral3.mmHaircut, com.tools20022.repository.msg.CashCollateral4.mmHaircut,
-					com.tools20022.repository.msg.CashCollateral2.mmHaircut, com.tools20022.repository.msg.OtherCollateral4.mmHaircut, com.tools20022.repository.msg.SecuritiesCollateral4.mmHaircut,
-					com.tools20022.repository.msg.CashCollateral5.mmHaircut, com.tools20022.repository.msg.OtherCollateral7.mmHaircut, com.tools20022.repository.msg.CollateralValuation5.mmCurrencyHaircut,
-					com.tools20022.repository.msg.OtherCollateral6.mmHaircut, com.tools20022.repository.msg.SecuritiesCollateral6.mmHaircut, com.tools20022.repository.msg.SecuritiesCollateral5.mmHaircut,
-					com.tools20022.repository.msg.OtherCollateral5.mmHaircut, com.tools20022.repository.msg.SecuritiesCollateral7.mmHaircut, com.tools20022.repository.msg.SecuritiesCollateral8.mmHaircut);
+			derivation_lazy = () -> Arrays.asList(BasicCollateralValuation1Details.mmValuationHaircut, SecuritiesFinancingTransactionDetails3.mmSecuritiesHaircut, SecuritiesFinancingTransactionDetails5.mmSecuritiesHaircut,
+					SecuritiesFinancingTransactionDetails1.mmSecuritiesHaircut, SecuritiesFinancingTransactionDetails4.mmSecuritiesHaircut, FinancialInstrumentStipulations2.mmHaircut,
+					SecuritiesFinancingTransactionDetails2.mmSecuritiesHaircut, SecuritiesFinancingTransactionDetails8.mmSecuritiesHaircut, SecuritiesCollateral1.mmHaircut, CashCollateral1.mmHaircut, OtherCollateral1.mmHaircut,
+					CollateralValuation1.mmCurrencyHaircut, SecuritiesFinancingTransactionDetails6.mmSecuritiesHaircut, SecuritiesFinancingTransactionDetails10.mmSecuritiesHaircut, Debt2.mmHaircut, CollateralValuation2.mmCurrencyHaircut,
+					SecuritiesCollateral2.mmHaircut, OtherCollateral2.mmHaircut, CashCollateral3.mmHaircut, SecuritiesCollateral3.mmHaircut, OtherCollateral3.mmHaircut, CashCollateral4.mmHaircut, CashCollateral2.mmHaircut,
+					OtherCollateral4.mmHaircut, SecuritiesCollateral4.mmHaircut, CashCollateral5.mmHaircut, OtherCollateral7.mmHaircut, CollateralValuation5.mmCurrencyHaircut, OtherCollateral6.mmHaircut, SecuritiesCollateral6.mmHaircut,
+					SecuritiesCollateral5.mmHaircut, OtherCollateral5.mmHaircut, SecuritiesCollateral7.mmHaircut, SecuritiesCollateral8.mmHaircut);
 			elementContext_lazy = () -> HaircutValuation.mmObject();
 			isDerived = false;
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "Haircut";
 			definition = "Haircut or valuation factor on the security expressed as a percentage.";
 			maxOccurs = 1;
@@ -319,7 +312,7 @@ public class HaircutValuation {
 		{
 			elementContext_lazy = () -> HaircutValuation.mmObject();
 			isDerived = false;
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "Sign";
 			definition = "One of the following PlusOrMinusIndicator values must be used:\r\nMeaningWhenTrue: Plus (the haircut is added)\r\nMeaningWhenFalse: Minus (the haircut is deducted)";
 			maxOccurs = 1;
@@ -367,12 +360,12 @@ public class HaircutValuation {
 		{
 			elementContext_lazy = () -> HaircutValuation.mmObject();
 			isDerived = false;
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "PartyRole";
 			definition = "Specifies the role of a party in the haircut valuation process.";
 			minOccurs = 0;
 			opposite_lazy = () -> com.tools20022.repository.entity.InformationPartyRole.mmHaircutValuation;
-			aggregation = com.tools20022.metamodel.MMAggregation.NONE;
+			aggregation = MMAggregation.NONE;
 			type_lazy = () -> com.tools20022.repository.entity.InformationPartyRole.mmObject();
 		}
 	};
@@ -380,13 +373,12 @@ public class HaircutValuation {
 	static public MMBusinessComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMBusinessComponent() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "HaircutValuation";
 				definition = "Basic valuation details of an asset's market value.";
 				associationDomain_lazy = () -> Arrays.asList(com.tools20022.repository.entity.InformationPartyRole.mmHaircutValuation, com.tools20022.repository.entity.AssetHolding.mmHaircut);
-				element_lazy = () -> Arrays.asList(com.tools20022.repository.entity.HaircutValuation.mmAssetHolding, com.tools20022.repository.entity.HaircutValuation.mmHaircut, com.tools20022.repository.entity.HaircutValuation.mmSign,
-						com.tools20022.repository.entity.HaircutValuation.mmPartyRole);
+				element_lazy = () -> Arrays.asList(HaircutValuation.mmAssetHolding, HaircutValuation.mmHaircut, HaircutValuation.mmSign, HaircutValuation.mmPartyRole);
 				derivationComponent_lazy = () -> Arrays.asList(BasicCollateralValuation1Details.mmObject());
 			}
 		});

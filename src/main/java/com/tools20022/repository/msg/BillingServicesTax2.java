@@ -20,11 +20,13 @@ package com.tools20022.repository.msg;
 import com.tools20022.metamodel.MMMessageAssociationEnd;
 import com.tools20022.metamodel.MMMessageAttribute;
 import com.tools20022.metamodel.MMMessageComponent;
+import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.datatype.DecimalNumber;
 import com.tools20022.repository.datatype.Max35Text;
 import com.tools20022.repository.datatype.Max40Text;
 import com.tools20022.repository.entity.Tax;
 import com.tools20022.repository.entity.TaxRecord;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -105,7 +107,7 @@ public class BillingServicesTax2 {
 			componentContext_lazy = () -> BillingServicesTax2.mmObject();
 			isDerived = false;
 			xmlTag = "Nb";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Number";
 			definition = "Identification number of the specific region tax used to calculate the tax.";
 			maxOccurs = 1;
@@ -147,7 +149,7 @@ public class BillingServicesTax2 {
 			componentContext_lazy = () -> BillingServicesTax2.mmObject();
 			isDerived = false;
 			xmlTag = "Desc";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Description";
 			definition = "Name used to describe the tax (such as the national value added tax).";
 			maxOccurs = 1;
@@ -194,7 +196,7 @@ public class BillingServicesTax2 {
 			componentContext_lazy = () -> BillingServicesTax2.mmObject();
 			isDerived = false;
 			xmlTag = "Rate";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Rate";
 			definition = "Rate used to calculate the tax.";
 			maxOccurs = 1;
@@ -239,11 +241,11 @@ public class BillingServicesTax2 {
 	 */
 	public static final MMMessageAssociationEnd mmPricingAmount = new MMMessageAssociationEnd() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.TaxRecord.mmAmount;
+			businessElementTrace_lazy = () -> TaxRecord.mmAmount;
 			componentContext_lazy = () -> BillingServicesTax2.mmObject();
 			isDerived = false;
 			xmlTag = "PricgAmt";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PricingAmount";
 			definition = "Amount of the tax obligation expressed in the tax region's pricing currency.";
 			maxOccurs = 1;
@@ -256,11 +258,10 @@ public class BillingServicesTax2 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.BillingServicesTax2.mmNumber, com.tools20022.repository.msg.BillingServicesTax2.mmDescription,
-						com.tools20022.repository.msg.BillingServicesTax2.mmRate, com.tools20022.repository.msg.BillingServicesTax2.mmPricingAmount);
+				messageElement_lazy = () -> Arrays.asList(BillingServicesTax2.mmNumber, BillingServicesTax2.mmDescription, BillingServicesTax2.mmRate, BillingServicesTax2.mmPricingAmount);
 				trace_lazy = () -> TaxRecord.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "BillingServicesTax2";
 				definition = "Provides for regional taxes on the service.";
 			}

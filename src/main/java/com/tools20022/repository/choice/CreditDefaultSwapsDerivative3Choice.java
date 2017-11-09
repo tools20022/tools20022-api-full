@@ -19,7 +19,9 @@ package com.tools20022.repository.choice;
 
 import com.tools20022.metamodel.MMChoiceComponent;
 import com.tools20022.metamodel.MMMessageAssociationEnd;
+import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.entity.CreditDefaultSwap;
+import com.tools20022.repository.GeneratedRepository;
 import com.tools20022.repository.msg.CreditDefaultSwapDerivative3;
 import com.tools20022.repository.msg.CreditDefaultSwapDerivative4;
 import com.tools20022.repository.msg.CreditDefaultSwapIndex2;
@@ -111,7 +113,7 @@ public class CreditDefaultSwapsDerivative3Choice {
 			componentContext_lazy = () -> CreditDefaultSwapsDerivative3Choice.mmObject();
 			isDerived = false;
 			xmlTag = "SnglNmCdtDfltSwp";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SingleNameCreditDefaultSwap";
 			definition = "A credit default swap on a single name instrument.";
 			maxOccurs = 1;
@@ -159,7 +161,7 @@ public class CreditDefaultSwapsDerivative3Choice {
 			componentContext_lazy = () -> CreditDefaultSwapsDerivative3Choice.mmObject();
 			isDerived = false;
 			xmlTag = "CdtDfltSwpIndx";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CreditDefaultSwapIndex";
 			definition = "A credit default swap on an index.";
 			maxOccurs = 1;
@@ -207,7 +209,7 @@ public class CreditDefaultSwapsDerivative3Choice {
 			componentContext_lazy = () -> CreditDefaultSwapsDerivative3Choice.mmObject();
 			isDerived = false;
 			xmlTag = "SnglNmCdtDfltSwpDeriv";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SingleNameCreditDefaultSwapDerivative";
 			definition = "A credit default swap derivative on a single name.";
 			maxOccurs = 1;
@@ -255,7 +257,7 @@ public class CreditDefaultSwapsDerivative3Choice {
 			componentContext_lazy = () -> CreditDefaultSwapsDerivative3Choice.mmObject();
 			isDerived = false;
 			xmlTag = "CdtDfltSwpIndxDeriv";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CreditDefaultSwapIndexDerivative";
 			definition = "A credit default swap derivative on an index.";
 			maxOccurs = 1;
@@ -268,12 +270,11 @@ public class CreditDefaultSwapsDerivative3Choice {
 	final static public MMChoiceComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMChoiceComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.choice.CreditDefaultSwapsDerivative3Choice.mmSingleNameCreditDefaultSwap,
-						com.tools20022.repository.choice.CreditDefaultSwapsDerivative3Choice.mmCreditDefaultSwapIndex, com.tools20022.repository.choice.CreditDefaultSwapsDerivative3Choice.mmSingleNameCreditDefaultSwapDerivative,
-						com.tools20022.repository.choice.CreditDefaultSwapsDerivative3Choice.mmCreditDefaultSwapIndexDerivative);
+				messageElement_lazy = () -> Arrays.asList(CreditDefaultSwapsDerivative3Choice.mmSingleNameCreditDefaultSwap, CreditDefaultSwapsDerivative3Choice.mmCreditDefaultSwapIndex,
+						CreditDefaultSwapsDerivative3Choice.mmSingleNameCreditDefaultSwapDerivative, CreditDefaultSwapsDerivative3Choice.mmCreditDefaultSwapIndexDerivative);
 				trace_lazy = () -> CreditDefaultSwap.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "CreditDefaultSwapsDerivative3Choice";
 				definition = "Choice structure allowing a credit default swap derivative to be defined.";
 			}

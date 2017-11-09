@@ -19,7 +19,10 @@ package com.tools20022.repository.msg;
 
 import com.tools20022.metamodel.MMMessageAssociationEnd;
 import com.tools20022.metamodel.MMMessageComponent;
+import com.tools20022.metamodel.MMRegistrationStatus;
+import com.tools20022.repository.area.caaa.AcceptorDiagnosticRequestV05;
 import com.tools20022.repository.entity.CardPayment;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -129,11 +132,11 @@ public class AcceptorDiagnosticRequest5 {
 			componentContext_lazy = () -> AcceptorDiagnosticRequest5.mmObject();
 			isDerived = false;
 			xmlTag = "Envt";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Environment";
 			definition = "Environment of the transaction.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.AcceptorDiagnosticRequest6.mmEnvironment);
-			previousVersion_lazy = () -> com.tools20022.repository.msg.AcceptorDiagnosticRequest4.mmEnvironment;
+			nextVersions_lazy = () -> Arrays.asList(AcceptorDiagnosticRequest6.mmEnvironment);
+			previousVersion_lazy = () -> AcceptorDiagnosticRequest4.mmEnvironment;
 			maxOccurs = 1;
 			minOccurs = 1;
 			isComposite = true;
@@ -144,11 +147,11 @@ public class AcceptorDiagnosticRequest5 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.AcceptorDiagnosticRequest5.mmEnvironment);
-				messageBuildingBlock_lazy = () -> Arrays.asList(com.tools20022.repository.area.caaa.AcceptorDiagnosticRequestV05.mmDiagnosticRequest);
+				messageElement_lazy = () -> Arrays.asList(AcceptorDiagnosticRequest5.mmEnvironment);
+				messageBuildingBlock_lazy = () -> Arrays.asList(AcceptorDiagnosticRequestV05.mmDiagnosticRequest);
 				trace_lazy = () -> CardPayment.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "AcceptorDiagnosticRequest5";
 				definition = "Diagnostic request from an acceptor.";
 				nextVersions_lazy = () -> Arrays.asList(AcceptorDiagnosticRequest6.mmObject());

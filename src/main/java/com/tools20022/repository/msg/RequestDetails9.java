@@ -20,10 +20,14 @@ package com.tools20022.repository.msg;
 import com.tools20022.metamodel.MMMessageAssociationEnd;
 import com.tools20022.metamodel.MMMessageAttribute;
 import com.tools20022.metamodel.MMMessageComponent;
+import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.choice.*;
 import com.tools20022.repository.codeset.SettlementTransactionCondition5Code;
 import com.tools20022.repository.datatype.YesNoIndicator;
+import com.tools20022.repository.entity.Obligation;
 import com.tools20022.repository.entity.SecuritiesSettlement;
+import com.tools20022.repository.entity.SecuritiesTrade;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.List;
@@ -129,11 +133,11 @@ public class RequestDetails9 {
 	 */
 	public static final MMMessageAssociationEnd mmReference = new MMMessageAssociationEnd() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.SecuritiesTrade.mmSecuritiesTradeRelatedIdentifications;
+			businessElementTrace_lazy = () -> SecuritiesTrade.mmSecuritiesTradeRelatedIdentifications;
 			componentContext_lazy = () -> RequestDetails9.mmObject();
 			isDerived = false;
 			xmlTag = "Ref";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Reference";
 			definition = "References of the transaction for which the securities settlement condition modification is requested.";
 			maxOccurs = 1;
@@ -177,11 +181,11 @@ public class RequestDetails9 {
 	 */
 	public static final MMMessageAssociationEnd mmAutomaticBorrowing = new MMMessageAssociationEnd() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.SecuritiesSettlement.mmAutomaticBorrowing;
+			businessElementTrace_lazy = () -> SecuritiesSettlement.mmAutomaticBorrowing;
 			componentContext_lazy = () -> RequestDetails9.mmObject();
 			isDerived = false;
 			xmlTag = "AutomtcBrrwg";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AutomaticBorrowing";
 			definition = "Condition for automatic borrowing.";
 			maxOccurs = 1;
@@ -227,7 +231,7 @@ public class RequestDetails9 {
 			componentContext_lazy = () -> RequestDetails9.mmObject();
 			isDerived = false;
 			xmlTag = "RtnInd";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "RetainIndicator";
 			definition = "Specifies whether the instruction due to expire is confirmed for settlement";
 			maxOccurs = 1;
@@ -267,7 +271,7 @@ public class RequestDetails9 {
 			componentContext_lazy = () -> RequestDetails9.mmObject();
 			isDerived = false;
 			xmlTag = "Lkg";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Linkage";
 			definition = "Specifies the type of linkage requested.";
 			maxOccurs = 1;
@@ -313,11 +317,11 @@ public class RequestDetails9 {
 	 */
 	public static final MMMessageAssociationEnd mmPriority = new MMMessageAssociationEnd() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Obligation.mmPriority;
+			businessElementTrace_lazy = () -> Obligation.mmPriority;
 			componentContext_lazy = () -> RequestDetails9.mmObject();
 			isDerived = false;
 			xmlTag = "Prty";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Priority";
 			definition = "Specifies whether the transaction is to be executed with a high priority.";
 			maxOccurs = 1;
@@ -359,7 +363,7 @@ public class RequestDetails9 {
 			componentContext_lazy = () -> RequestDetails9.mmObject();
 			isDerived = false;
 			xmlTag = "OthrPrcg";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "OtherProcessing";
 			definition = "Specifies another type of processing change request";
 			minOccurs = 0;
@@ -403,11 +407,11 @@ public class RequestDetails9 {
 	 */
 	public static final MMMessageAttribute mmPartialSettlementIndicator = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.SecuritiesSettlement.mmSettlementTransactionCondition;
+			businessElementTrace_lazy = () -> SecuritiesSettlement.mmSettlementTransactionCondition;
 			componentContext_lazy = () -> RequestDetails9.mmObject();
 			isDerived = false;
 			xmlTag = "PrtlSttlmInd";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PartialSettlementIndicator";
 			definition = "Specifies whether partial settlement is allowed.";
 			maxOccurs = 1;
@@ -453,11 +457,11 @@ public class RequestDetails9 {
 	 */
 	public static final MMMessageAssociationEnd mmSecuritiesRTGS = new MMMessageAssociationEnd() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.SecuritiesSettlement.mmSecuritiesRealTimeGrossSettlement;
+			businessElementTrace_lazy = () -> SecuritiesSettlement.mmSecuritiesRealTimeGrossSettlement;
 			componentContext_lazy = () -> RequestDetails9.mmObject();
 			isDerived = false;
 			xmlTag = "SctiesRTGS";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SecuritiesRTGS";
 			definition = "Specifies whether the settlement transaction is to be settled through an RTGS or a non RTGS system.";
 			maxOccurs = 1;
@@ -501,11 +505,11 @@ public class RequestDetails9 {
 	 */
 	public static final MMMessageAssociationEnd mmHoldIndicator = new MMMessageAssociationEnd() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.SecuritiesSettlement.mmHoldIndicator;
+			businessElementTrace_lazy = () -> SecuritiesSettlement.mmHoldIndicator;
 			componentContext_lazy = () -> RequestDetails9.mmObject();
 			isDerived = false;
 			xmlTag = "HldInd";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "HoldIndicator";
 			definition = "Specifies whether the transaction is on hold/blocked/frozen.";
 			maxOccurs = 1;
@@ -549,11 +553,11 @@ public class RequestDetails9 {
 	 */
 	public static final MMMessageAssociationEnd mmMatchingDenial = new MMMessageAssociationEnd() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.SecuritiesTrade.mmSecuritiesTradeStatus;
+			businessElementTrace_lazy = () -> SecuritiesTrade.mmSecuritiesTradeStatus;
 			componentContext_lazy = () -> RequestDetails9.mmObject();
 			isDerived = false;
 			xmlTag = "MtchgDnl";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "MatchingDenial";
 			definition = "Specifies the matching processing change requested.";
 			maxOccurs = 1;
@@ -602,7 +606,7 @@ public class RequestDetails9 {
 			componentContext_lazy = () -> RequestDetails9.mmObject();
 			isDerived = false;
 			xmlTag = "UnltrlSplt";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "UnilateralSplit";
 			definition = "Specifies that the transaction is requested to be unilaterally split.";
 			maxOccurs = 1;
@@ -642,7 +646,7 @@ public class RequestDetails9 {
 			componentContext_lazy = () -> RequestDetails9.mmObject();
 			isDerived = false;
 			xmlTag = "Lnkgs";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Linkages";
 			definition = "Information regarding the linkage requested.";
 			minOccurs = 0;
@@ -654,14 +658,12 @@ public class RequestDetails9 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.RequestDetails9.mmReference, com.tools20022.repository.msg.RequestDetails9.mmAutomaticBorrowing,
-						com.tools20022.repository.msg.RequestDetails9.mmRetainIndicator, com.tools20022.repository.msg.RequestDetails9.mmLinkage, com.tools20022.repository.msg.RequestDetails9.mmPriority,
-						com.tools20022.repository.msg.RequestDetails9.mmOtherProcessing, com.tools20022.repository.msg.RequestDetails9.mmPartialSettlementIndicator, com.tools20022.repository.msg.RequestDetails9.mmSecuritiesRTGS,
-						com.tools20022.repository.msg.RequestDetails9.mmHoldIndicator, com.tools20022.repository.msg.RequestDetails9.mmMatchingDenial, com.tools20022.repository.msg.RequestDetails9.mmUnilateralSplit,
-						com.tools20022.repository.msg.RequestDetails9.mmLinkages);
+				messageElement_lazy = () -> Arrays.asList(RequestDetails9.mmReference, RequestDetails9.mmAutomaticBorrowing, RequestDetails9.mmRetainIndicator, RequestDetails9.mmLinkage, RequestDetails9.mmPriority,
+						RequestDetails9.mmOtherProcessing, RequestDetails9.mmPartialSettlementIndicator, RequestDetails9.mmSecuritiesRTGS, RequestDetails9.mmHoldIndicator, RequestDetails9.mmMatchingDenial,
+						RequestDetails9.mmUnilateralSplit, RequestDetails9.mmLinkages);
 				trace_lazy = () -> SecuritiesSettlement.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "RequestDetails9";
 				definition = "Details of the settlement condition modification request";
 			}

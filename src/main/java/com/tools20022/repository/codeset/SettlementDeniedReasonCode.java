@@ -19,6 +19,8 @@ package com.tools20022.repository.codeset;
 
 import com.tools20022.metamodel.MMCode;
 import com.tools20022.metamodel.MMCodeSet;
+import com.tools20022.metamodel.MMRegistrationStatus;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -27,6 +29,15 @@ import java.util.concurrent.atomic.AtomicReference;
  * <p>
  * <strong>Constant fields:</strong>
  * <ul>
+ * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getDerivation derivation}
+ * =
+ * <ul>
+ * <li>{@linkplain com.tools20022.repository.codeset.DeniedReason7Code
+ * DeniedReason7Code}</li>
+ * <li>{@linkplain com.tools20022.repository.codeset.DeniedReason6Code
+ * DeniedReason6Code}</li>
+ * </ul>
+ * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getCode code} =
  * <ul>
  * <li>
@@ -68,15 +79,6 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>
  * {@linkplain com.tools20022.repository.codeset.SettlementDeniedReasonCode#mmConditionalRegistrar
  * SettlementDeniedReasonCode.mmConditionalRegistrar}</li>
- * </ul>
- * </li>
- * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getDerivation derivation}
- * =
- * <ul>
- * <li>{@linkplain com.tools20022.repository.codeset.DeniedReason7Code
- * DeniedReason7Code}</li>
- * <li>{@linkplain com.tools20022.repository.codeset.DeniedReason6Code
- * DeniedReason6Code}</li>
  * </ul>
  * </li>
  * <li>
@@ -126,7 +128,7 @@ public class SettlementDeniedReasonCode {
 	 */
 	public static final MMCode mmAccountServicerDeadlineMissed = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AccountServicerDeadlineMissed";
 			definition = "Received after the account servicer's deadline.";
 			owner_lazy = () -> SettlementDeniedReasonCode.mmObject();
@@ -157,7 +159,7 @@ public class SettlementDeniedReasonCode {
 	 */
 	public static final MMCode mmCallDeniedSinceAlreadyApplied = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CallDeniedSinceAlreadyApplied";
 			definition = "Repo call request was denied since another call already applies.";
 			owner_lazy = () -> SettlementDeniedReasonCode.mmObject();
@@ -188,7 +190,7 @@ public class SettlementDeniedReasonCode {
 	 */
 	public static final MMCode mmDeniedSinceCancelled = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "DeniedSinceCancelled";
 			definition = "Request was denied since the instruction has been cancelled.";
 			owner_lazy = () -> SettlementDeniedReasonCode.mmObject();
@@ -221,7 +223,7 @@ public class SettlementDeniedReasonCode {
 	 */
 	public static final MMCode mmDeniedSinceNotAllowed = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "DeniedSinceNotAllowed";
 			definition = "Repo call request was denied. Call not allowed on the concerned repo, for example, out of delay.";
 			owner_lazy = () -> SettlementDeniedReasonCode.mmObject();
@@ -252,7 +254,7 @@ public class SettlementDeniedReasonCode {
 	 */
 	public static final MMCode mmDeniedSinceInProgress = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "DeniedSinceInProgress";
 			definition = "Request was denied because the process of settlement is in progress.";
 			owner_lazy = () -> SettlementDeniedReasonCode.mmObject();
@@ -282,7 +284,7 @@ public class SettlementDeniedReasonCode {
 	 */
 	public static final MMCode mmDeniedSinceRepoEnded = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "DeniedSinceRepoEnded";
 			definition = "Request was denied because the repo was cancelled.";
 			owner_lazy = () -> SettlementDeniedReasonCode.mmObject();
@@ -312,7 +314,7 @@ public class SettlementDeniedReasonCode {
 	 */
 	public static final MMCode mmDeniedSinceSettled = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "DeniedSinceSettled";
 			definition = "Request was denied because the instruction was settled.";
 			owner_lazy = () -> SettlementDeniedReasonCode.mmObject();
@@ -342,7 +344,7 @@ public class SettlementDeniedReasonCode {
 	 */
 	public static final MMCode mmInstructionProcessed = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "InstructionProcessed";
 			definition = "Instruction has been processed and cannot be cancelled.";
 			owner_lazy = () -> SettlementDeniedReasonCode.mmObject();
@@ -372,7 +374,7 @@ public class SettlementDeniedReasonCode {
 	 */
 	public static final MMCode mmMarketDeadlineMissed = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "MarketDeadlineMissed";
 			definition = "Received after market deadline.";
 			owner_lazy = () -> SettlementDeniedReasonCode.mmObject();
@@ -402,7 +404,7 @@ public class SettlementDeniedReasonCode {
 	 */
 	public static final MMCode mmOther = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Other";
 			definition = "Other. See Narrative.";
 			owner_lazy = () -> SettlementDeniedReasonCode.mmObject();
@@ -435,7 +437,7 @@ public class SettlementDeniedReasonCode {
 	 */
 	public static final MMCode mmConditionalCurrency = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ConditionalCurrency";
 			definition = "Execution is denied due to a process linked to the currency of the transaction.";
 			owner_lazy = () -> SettlementDeniedReasonCode.mmObject();
@@ -468,7 +470,7 @@ public class SettlementDeniedReasonCode {
 	 */
 	public static final MMCode mmConditionalRealignement = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ConditionalRealignement";
 			definition = "Execution is denied due to the execution of a process of realignment at the issuer CSD.";
 			owner_lazy = () -> SettlementDeniedReasonCode.mmObject();
@@ -500,7 +502,7 @@ public class SettlementDeniedReasonCode {
 	 */
 	public static final MMCode mmConditionalRegistrar = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ConditionalRegistrar";
 			definition = "Execution is denied due to the execution of a process at the registrar.";
 			owner_lazy = () -> SettlementDeniedReasonCode.mmObject();
@@ -511,18 +513,15 @@ public class SettlementDeniedReasonCode {
 	static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
 				example = Arrays.asList("ADEA");
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "SettlementDeniedReasonCode";
 				definition = "Specifies the denied reason.";
-				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.SettlementDeniedReasonCode.mmAccountServicerDeadlineMissed, com.tools20022.repository.codeset.SettlementDeniedReasonCode.mmCallDeniedSinceAlreadyApplied,
-						com.tools20022.repository.codeset.SettlementDeniedReasonCode.mmDeniedSinceCancelled, com.tools20022.repository.codeset.SettlementDeniedReasonCode.mmDeniedSinceNotAllowed,
-						com.tools20022.repository.codeset.SettlementDeniedReasonCode.mmDeniedSinceInProgress, com.tools20022.repository.codeset.SettlementDeniedReasonCode.mmDeniedSinceRepoEnded,
-						com.tools20022.repository.codeset.SettlementDeniedReasonCode.mmDeniedSinceSettled, com.tools20022.repository.codeset.SettlementDeniedReasonCode.mmInstructionProcessed,
-						com.tools20022.repository.codeset.SettlementDeniedReasonCode.mmMarketDeadlineMissed, com.tools20022.repository.codeset.SettlementDeniedReasonCode.mmOther,
-						com.tools20022.repository.codeset.SettlementDeniedReasonCode.mmConditionalCurrency, com.tools20022.repository.codeset.SettlementDeniedReasonCode.mmConditionalRealignement,
-						com.tools20022.repository.codeset.SettlementDeniedReasonCode.mmConditionalRegistrar);
+				code_lazy = () -> Arrays.asList(SettlementDeniedReasonCode.mmAccountServicerDeadlineMissed, SettlementDeniedReasonCode.mmCallDeniedSinceAlreadyApplied, SettlementDeniedReasonCode.mmDeniedSinceCancelled,
+						SettlementDeniedReasonCode.mmDeniedSinceNotAllowed, SettlementDeniedReasonCode.mmDeniedSinceInProgress, SettlementDeniedReasonCode.mmDeniedSinceRepoEnded, SettlementDeniedReasonCode.mmDeniedSinceSettled,
+						SettlementDeniedReasonCode.mmInstructionProcessed, SettlementDeniedReasonCode.mmMarketDeadlineMissed, SettlementDeniedReasonCode.mmOther, SettlementDeniedReasonCode.mmConditionalCurrency,
+						SettlementDeniedReasonCode.mmConditionalRealignement, SettlementDeniedReasonCode.mmConditionalRegistrar);
 				derivation_lazy = () -> Arrays.asList(DeniedReason7Code.mmObject(), DeniedReason6Code.mmObject());
 			}
 		});

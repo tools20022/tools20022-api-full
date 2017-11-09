@@ -17,9 +17,12 @@
 
 package com.tools20022.repository.entity;
 
+import com.tools20022.metamodel.MMAggregation;
 import com.tools20022.metamodel.MMBusinessAssociationEnd;
 import com.tools20022.metamodel.MMBusinessComponent;
+import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.entity.SecuritiesFinancing;
+import com.tools20022.repository.GeneratedRepository;
 import com.tools20022.repository.msg.SecuredMarketTransaction1;
 import com.tools20022.repository.msg.SecuredMarketTransaction2;
 import com.tools20022.repository.msg.SecuredMarketTransaction3;
@@ -40,12 +43,18 @@ import java.util.concurrent.atomic.AtomicReference;
  * <p>
  * <strong>Constant fields:</strong>
  * <ul>
- * <li>{@linkplain com.tools20022.metamodel.MMBusinessComponent#getElement
- * element} =
- * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.entity.RepurchaseAgreement#mmPaymentObligation
- * RepurchaseAgreement.mmPaymentObligation}</li>
+ * {@linkplain com.tools20022.metamodel.MMBusinessComponent#getDerivationComponent
+ * derivationComponent} =
+ * <ul>
+ * <li>{@linkplain com.tools20022.repository.msg.SecuredMarketTransaction1
+ * SecuredMarketTransaction1}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.SecuredMarketTransaction2
+ * SecuredMarketTransaction2}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.SecuredMarketTransaction3
+ * SecuredMarketTransaction3}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.SecuredMarketTransaction4
+ * SecuredMarketTransaction4}</li>
  * </ul>
  * </li>
  * <li>
@@ -79,18 +88,12 @@ import java.util.concurrent.atomic.AtomicReference;
  * superType} =
  * {@linkplain com.tools20022.repository.entity.SecuritiesFinancing
  * SecuritiesFinancing}</li>
- * <li>
- * {@linkplain com.tools20022.metamodel.MMBusinessComponent#getDerivationComponent
- * derivationComponent} =
+ * <li>{@linkplain com.tools20022.metamodel.MMBusinessComponent#getElement
+ * element} =
  * <ul>
- * <li>{@linkplain com.tools20022.repository.msg.SecuredMarketTransaction1
- * SecuredMarketTransaction1}</li>
- * <li>{@linkplain com.tools20022.repository.msg.SecuredMarketTransaction2
- * SecuredMarketTransaction2}</li>
- * <li>{@linkplain com.tools20022.repository.msg.SecuredMarketTransaction3
- * SecuredMarketTransaction3}</li>
- * <li>{@linkplain com.tools20022.repository.msg.SecuredMarketTransaction4
- * SecuredMarketTransaction4}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.entity.RepurchaseAgreement#mmPaymentObligation
+ * RepurchaseAgreement.mmPaymentObligation}</li>
  * </ul>
  * </li>
  * <li>
@@ -151,13 +154,13 @@ public class RepurchaseAgreement extends SecuritiesFinancing {
 		{
 			elementContext_lazy = () -> RepurchaseAgreement.mmObject();
 			isDerived = false;
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "PaymentObligation";
 			definition = "Obligation covered by a repurchase agreement.";
 			maxOccurs = 1;
 			minOccurs = 1;
 			opposite_lazy = () -> com.tools20022.repository.entity.PaymentObligation.mmRepurchaseAgreement;
-			aggregation = com.tools20022.metamodel.MMAggregation.NONE;
+			aggregation = MMAggregation.NONE;
 			type_lazy = () -> com.tools20022.repository.entity.PaymentObligation.mmObject();
 		}
 	};
@@ -165,16 +168,15 @@ public class RepurchaseAgreement extends SecuritiesFinancing {
 	static public MMBusinessComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMBusinessComponent() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "RepurchaseAgreement";
 				definition = "Sale of securities together with an agreement for the seller to buy back the securities at a later date.\r\nA repo is equivalent to a spot sale combined with a forward contract.\r\nFor the seller of the security it is a repo; for the buyer of the security it is a reverse repurchase agreement. ";
 				associationDomain_lazy = () -> Arrays.asList(com.tools20022.repository.entity.PaymentObligation.mmRepurchaseAgreement);
-				derivationElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.SecuredMarketTransaction1.mmFloatingRateRepurchaseAgreement,
-						com.tools20022.repository.msg.SecuredMarketTransaction2.mmFloatingRateRepurchaseAgreement, com.tools20022.repository.msg.SecuredMarketTransaction3.mmFloatingRateRepurchaseAgreement,
-						com.tools20022.repository.msg.SecuredMarketTransaction4.mmFloatingRateRepurchaseAgreement);
+				derivationElement_lazy = () -> Arrays.asList(SecuredMarketTransaction1.mmFloatingRateRepurchaseAgreement, SecuredMarketTransaction2.mmFloatingRateRepurchaseAgreement,
+						SecuredMarketTransaction3.mmFloatingRateRepurchaseAgreement, SecuredMarketTransaction4.mmFloatingRateRepurchaseAgreement);
 				superType_lazy = () -> SecuritiesFinancing.mmObject();
-				element_lazy = () -> Arrays.asList(com.tools20022.repository.entity.RepurchaseAgreement.mmPaymentObligation);
+				element_lazy = () -> Arrays.asList(RepurchaseAgreement.mmPaymentObligation);
 				derivationComponent_lazy = () -> Arrays.asList(SecuredMarketTransaction1.mmObject(), SecuredMarketTransaction2.mmObject(), SecuredMarketTransaction3.mmObject(), SecuredMarketTransaction4.mmObject());
 			}
 		});

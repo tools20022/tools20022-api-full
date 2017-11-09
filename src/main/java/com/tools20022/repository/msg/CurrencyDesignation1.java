@@ -19,10 +19,12 @@ package com.tools20022.repository.msg;
 
 import com.tools20022.metamodel.MMMessageAttribute;
 import com.tools20022.metamodel.MMMessageComponent;
+import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.codeset.CountryCode;
 import com.tools20022.repository.codeset.CurrencyDesignation1Code;
 import com.tools20022.repository.datatype.Max350Text;
 import com.tools20022.repository.entity.CurrencyExchange;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -102,7 +104,7 @@ public class CurrencyDesignation1 {
 			componentContext_lazy = () -> CurrencyDesignation1.mmObject();
 			isDerived = false;
 			xmlTag = "CcyDsgnt";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CurrencyDesignation";
 			definition = "Specifies whether the currency is settled offshore or onshore.";
 			maxOccurs = 1;
@@ -143,7 +145,7 @@ public class CurrencyDesignation1 {
 			componentContext_lazy = () -> CurrencyDesignation1.mmObject();
 			isDerived = false;
 			xmlTag = "Lctn";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Location";
 			definition = "Offshore location of the currency.";
 			maxOccurs = 1;
@@ -184,7 +186,7 @@ public class CurrencyDesignation1 {
 			componentContext_lazy = () -> CurrencyDesignation1.mmObject();
 			isDerived = false;
 			xmlTag = "AddtlInf";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AdditionalInformation";
 			definition = "Additional information about the off-shore currency.";
 			maxOccurs = 1;
@@ -196,11 +198,10 @@ public class CurrencyDesignation1 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.CurrencyDesignation1.mmCurrencyDesignation, com.tools20022.repository.msg.CurrencyDesignation1.mmLocation,
-						com.tools20022.repository.msg.CurrencyDesignation1.mmAdditionalInformation);
+				messageElement_lazy = () -> Arrays.asList(CurrencyDesignation1.mmCurrencyDesignation, CurrencyDesignation1.mmLocation, CurrencyDesignation1.mmAdditionalInformation);
 				trace_lazy = () -> CurrencyExchange.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "CurrencyDesignation1";
 				definition = "Information about the designation of a currency.";
 			}

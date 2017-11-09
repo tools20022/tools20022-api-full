@@ -19,8 +19,11 @@ package com.tools20022.repository.choice;
 
 import com.tools20022.metamodel.MMChoiceComponent;
 import com.tools20022.metamodel.MMMessageAttribute;
+import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.datatype.ISODate;
+import com.tools20022.repository.entity.ShipmentDateRange;
 import com.tools20022.repository.entity.TransportBySea;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -97,11 +100,11 @@ public class ShipmentDate1Choice {
 	 */
 	public static final MMMessageAttribute mmProposedShipmentDate = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.ShipmentDateRange.mmShipmentDate;
+			businessElementTrace_lazy = () -> ShipmentDateRange.mmShipmentDate;
 			componentContext_lazy = () -> ShipmentDate1Choice.mmObject();
 			isDerived = false;
 			xmlTag = "PropsdShipmntDt";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ProposedShipmentDate";
 			definition = "Proposed date on which the goods should be shipped.";
 			maxOccurs = 1;
@@ -144,11 +147,11 @@ public class ShipmentDate1Choice {
 	 */
 	public static final MMMessageAttribute mmActualShipmentDate = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.ShipmentDateRange.mmShipmentDate;
+			businessElementTrace_lazy = () -> ShipmentDateRange.mmShipmentDate;
 			componentContext_lazy = () -> ShipmentDate1Choice.mmObject();
 			isDerived = false;
 			xmlTag = "ActlShipmntDt";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ActualShipmentDate";
 			definition = "Actual date whereby the goods were shipped.";
 			maxOccurs = 1;
@@ -160,10 +163,10 @@ public class ShipmentDate1Choice {
 	final static public MMChoiceComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMChoiceComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.choice.ShipmentDate1Choice.mmProposedShipmentDate, com.tools20022.repository.choice.ShipmentDate1Choice.mmActualShipmentDate);
+				messageElement_lazy = () -> Arrays.asList(ShipmentDate1Choice.mmProposedShipmentDate, ShipmentDate1Choice.mmActualShipmentDate);
 				trace_lazy = () -> TransportBySea.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "ShipmentDate1Choice";
 				definition = "Choice between proposed and actual shipment date.";
 			}

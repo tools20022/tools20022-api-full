@@ -19,6 +19,8 @@ package com.tools20022.repository.codeset;
 
 import com.tools20022.metamodel.MMCode;
 import com.tools20022.metamodel.MMCodeSet;
+import com.tools20022.metamodel.MMRegistrationStatus;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -27,6 +29,13 @@ import java.util.concurrent.atomic.AtomicReference;
  * <p>
  * <strong>Constant fields:</strong>
  * <ul>
+ * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getDerivation derivation}
+ * =
+ * <ul>
+ * <li>{@linkplain com.tools20022.repository.codeset.TimeUnit1Code
+ * TimeUnit1Code}</li>
+ * </ul>
+ * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getCode code} =
  * <ul>
  * <li>{@linkplain com.tools20022.repository.codeset.TimeUnitCode#mmSecond
@@ -43,13 +52,6 @@ import java.util.concurrent.atomic.AtomicReference;
  * TimeUnitCode.mmMonth}</li>
  * <li>{@linkplain com.tools20022.repository.codeset.TimeUnitCode#mmYear
  * TimeUnitCode.mmYear}</li>
- * </ul>
- * </li>
- * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getDerivation derivation}
- * =
- * <ul>
- * <li>{@linkplain com.tools20022.repository.codeset.TimeUnit1Code
- * TimeUnit1Code}</li>
  * </ul>
  * </li>
  * <li>
@@ -98,7 +100,7 @@ public class TimeUnitCode {
 	 */
 	public static final MMCode mmSecond = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "Second";
 			definition = "Time unit is second.";
 			owner_lazy = () -> TimeUnitCode.mmObject();
@@ -127,7 +129,7 @@ public class TimeUnitCode {
 	 */
 	public static final MMCode mmMinute = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "Minute";
 			definition = "Time unit is minute.";
 			owner_lazy = () -> TimeUnitCode.mmObject();
@@ -156,7 +158,7 @@ public class TimeUnitCode {
 	 */
 	public static final MMCode mmHour = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "Hour";
 			definition = "Time unit is hour.";
 			owner_lazy = () -> TimeUnitCode.mmObject();
@@ -185,7 +187,7 @@ public class TimeUnitCode {
 	 */
 	public static final MMCode mmCalendarDay = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "CalendarDay";
 			definition = "Time unit is calendar day.";
 			owner_lazy = () -> TimeUnitCode.mmObject();
@@ -214,7 +216,7 @@ public class TimeUnitCode {
 	 */
 	public static final MMCode mmWeek = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "Week";
 			definition = "Time unit is week.";
 			owner_lazy = () -> TimeUnitCode.mmObject();
@@ -243,7 +245,7 @@ public class TimeUnitCode {
 	 */
 	public static final MMCode mmMonth = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "Month";
 			definition = "Time unit is month.";
 			owner_lazy = () -> TimeUnitCode.mmObject();
@@ -272,7 +274,7 @@ public class TimeUnitCode {
 	 */
 	public static final MMCode mmYear = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "Year";
 			definition = "Time unit is year.";
 			owner_lazy = () -> TimeUnitCode.mmObject();
@@ -283,14 +285,12 @@ public class TimeUnitCode {
 	static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
 				example = Arrays.asList("SECO");
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "TimeUnitCode";
 				definition = "Specifies the time unit.";
-				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.TimeUnitCode.mmSecond, com.tools20022.repository.codeset.TimeUnitCode.mmMinute, com.tools20022.repository.codeset.TimeUnitCode.mmHour,
-						com.tools20022.repository.codeset.TimeUnitCode.mmCalendarDay, com.tools20022.repository.codeset.TimeUnitCode.mmWeek, com.tools20022.repository.codeset.TimeUnitCode.mmMonth,
-						com.tools20022.repository.codeset.TimeUnitCode.mmYear);
+				code_lazy = () -> Arrays.asList(TimeUnitCode.mmSecond, TimeUnitCode.mmMinute, TimeUnitCode.mmHour, TimeUnitCode.mmCalendarDay, TimeUnitCode.mmWeek, TimeUnitCode.mmMonth, TimeUnitCode.mmYear);
 				derivation_lazy = () -> Arrays.asList(TimeUnit1Code.mmObject());
 			}
 		});

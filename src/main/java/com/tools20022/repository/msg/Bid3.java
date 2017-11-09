@@ -20,8 +20,11 @@ package com.tools20022.repository.msg;
 import com.tools20022.metamodel.MMMessageAssociationEnd;
 import com.tools20022.metamodel.MMMessageAttribute;
 import com.tools20022.metamodel.MMMessageComponent;
+import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.datatype.Max35Text;
 import com.tools20022.repository.entity.SecuritiesOrder;
+import com.tools20022.repository.entity.SecuritiesQuoteVariable;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.List;
@@ -98,7 +101,7 @@ public class Bid3 {
 			componentContext_lazy = () -> Bid3.mmObject();
 			isDerived = false;
 			xmlTag = "BidId";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "BidIdentification";
 			definition = "Unique and unambiguous identification of the bid.";
 			maxOccurs = 1;
@@ -140,7 +143,7 @@ public class Bid3 {
 			componentContext_lazy = () -> Bid3.mmObject();
 			isDerived = false;
 			xmlTag = "ClntBidId";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ClientBidIdentification";
 			definition = "Unique identifier for a Bid Request as assigned by institution. Uniqueness must be guaranteed within a single trading day.";
 			maxOccurs = 1;
@@ -180,11 +183,11 @@ public class Bid3 {
 	 */
 	public static final MMMessageAssociationEnd mmBidResponsePriceDetails = new MMMessageAssociationEnd() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.SecuritiesQuoteVariable.mmBidSide;
+			businessElementTrace_lazy = () -> SecuritiesQuoteVariable.mmBidSide;
 			componentContext_lazy = () -> Bid3.mmObject();
 			isDerived = false;
 			xmlTag = "BidRspnPricDtls";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "BidResponsePriceDetails";
 			definition = "Proposition of price for a financial instrument.";
 			minOccurs = 1;
@@ -196,10 +199,10 @@ public class Bid3 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.Bid3.mmBidIdentification, com.tools20022.repository.msg.Bid3.mmClientBidIdentification, com.tools20022.repository.msg.Bid3.mmBidResponsePriceDetails);
+				messageElement_lazy = () -> Arrays.asList(Bid3.mmBidIdentification, Bid3.mmClientBidIdentification, Bid3.mmBidResponsePriceDetails);
 				trace_lazy = () -> SecuritiesOrder.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 				name = "Bid3";
 				definition = "Identification of an attempt to buy or sell a large number of financial instruments contained in or comprising a portfolio.";
 			}

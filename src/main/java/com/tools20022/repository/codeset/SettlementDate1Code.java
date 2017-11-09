@@ -19,7 +19,9 @@ package com.tools20022.repository.codeset;
 
 import com.tools20022.metamodel.MMCode;
 import com.tools20022.metamodel.MMCodeSet;
+import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.codeset.SettlementDateCode;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -86,7 +88,7 @@ public class SettlementDate1Code extends SettlementDateCode {
 	 */
 	public static final MMCode mmAsSoonAsPossible = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AsSoonAsPossible";
 			owner_lazy = () -> SettlementDate1Code.mmObject();
 		}
@@ -109,7 +111,7 @@ public class SettlementDate1Code extends SettlementDateCode {
 	 */
 	public static final MMCode mmAtEndOfContract = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AtEndOfContract";
 			owner_lazy = () -> SettlementDate1Code.mmObject();
 		}
@@ -132,7 +134,7 @@ public class SettlementDate1Code extends SettlementDateCode {
 	 */
 	public static final MMCode mmWhenAndIfIssued = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "WhenAndIfIssued";
 			owner_lazy = () -> SettlementDate1Code.mmObject();
 		}
@@ -141,13 +143,12 @@ public class SettlementDate1Code extends SettlementDateCode {
 	static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
 				example = Arrays.asList("ASAP");
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "SettlementDate1Code";
 				definition = "Indicates the date of settlement in coded form.";
-				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.SettlementDate1Code.mmAsSoonAsPossible, com.tools20022.repository.codeset.SettlementDate1Code.mmAtEndOfContract,
-						com.tools20022.repository.codeset.SettlementDate1Code.mmWhenAndIfIssued);
+				code_lazy = () -> Arrays.asList(SettlementDate1Code.mmAsSoonAsPossible, SettlementDate1Code.mmAtEndOfContract, SettlementDate1Code.mmWhenAndIfIssued);
 				trace_lazy = () -> SettlementDateCode.mmObject();
 			}
 		});

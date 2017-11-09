@@ -19,9 +19,11 @@ package com.tools20022.repository.msg;
 
 import com.tools20022.metamodel.MMMessageAttribute;
 import com.tools20022.metamodel.MMMessageComponent;
+import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.codeset.ActiveCurrencyCode;
 import com.tools20022.repository.codeset.DerivativeWorkflowStatus1Code;
 import com.tools20022.repository.datatype.*;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -133,7 +135,7 @@ public class CorporateActionNotificationSD2 {
 			componentContext_lazy = () -> CorporateActionNotificationSD2.mmObject();
 			isDerived = false;
 			xmlTag = "PlcAndNm";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PlaceAndName";
 			definition = "xPath to the element that is being extended.";
 			maxOccurs = 1;
@@ -175,7 +177,7 @@ public class CorporateActionNotificationSD2 {
 			componentContext_lazy = () -> CorporateActionNotificationSD2.mmObject();
 			isDerived = false;
 			xmlTag = "DerivWorkflwSts";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "DerivativeWorkflowStatus";
 			definition = "Status of a notice of change.";
 			maxOccurs = 1;
@@ -217,7 +219,7 @@ public class CorporateActionNotificationSD2 {
 			componentContext_lazy = () -> CorporateActionNotificationSD2.mmObject();
 			isDerived = false;
 			xmlTag = "DerivXchg";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "DerivativeExchange";
 			definition = "Exchange where the derivative is traded.";
 			maxOccurs = 1;
@@ -261,7 +263,7 @@ public class CorporateActionNotificationSD2 {
 			componentContext_lazy = () -> CorporateActionNotificationSD2.mmObject();
 			isDerived = false;
 			xmlTag = "DerivPblctnDt";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "DerivativePublicationDate";
 			definition = "Date when the notice of change to the derivative is published by the exchange.";
 			maxOccurs = 1;
@@ -303,7 +305,7 @@ public class CorporateActionNotificationSD2 {
 			componentContext_lazy = () -> CorporateActionNotificationSD2.mmObject();
 			isDerived = false;
 			xmlTag = "DerivAdjstmntDt";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "DerivativeAdjustmentDate";
 			definition = "Effective date of the adjustment to the derivative contract.";
 			maxOccurs = 1;
@@ -348,7 +350,7 @@ public class CorporateActionNotificationSD2 {
 			componentContext_lazy = () -> CorporateActionNotificationSD2.mmObject();
 			isDerived = false;
 			xmlTag = "DerivClctnMtd";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "DerivativeCalculationMethod";
 			definition = "Method (usually a formula) that will be used to calculate the adjustment factor that will be applied to the derivative to account for the impact of a corporate action event on the underlying equity.";
 			maxOccurs = 1;
@@ -394,7 +396,7 @@ public class CorporateActionNotificationSD2 {
 			componentContext_lazy = () -> CorporateActionNotificationSD2.mmObject();
 			isDerived = false;
 			xmlTag = "DerivFctr";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "DerivativeFactor";
 			definition = "Adjustment factor to be applied to the derivative contract to account for the impact of a corporate action event on the underlying equity. Derived by using the calculation method. ";
 			maxOccurs = 1;
@@ -439,7 +441,7 @@ public class CorporateActionNotificationSD2 {
 			componentContext_lazy = () -> CorporateActionNotificationSD2.mmObject();
 			isDerived = false;
 			xmlTag = "LotSzChngFlg";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "LotSizeChangeFlag";
 			definition = "Indicates whether the deliverable stock amount on the derivative contract will be changed.";
 			maxOccurs = 1;
@@ -484,7 +486,7 @@ public class CorporateActionNotificationSD2 {
 			componentContext_lazy = () -> CorporateActionNotificationSD2.mmObject();
 			isDerived = false;
 			xmlTag = "LotAdjstmntMtd";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "LotAdjustmentMethod";
 			definition = "Method that is used to calculate the new stock deliverable on the derivative contract. Usually multiplication or division by a stated figure but may include explanatory text and examples. ";
 			maxOccurs = 1;
@@ -529,7 +531,7 @@ public class CorporateActionNotificationSD2 {
 			componentContext_lazy = () -> CorporateActionNotificationSD2.mmObject();
 			isDerived = false;
 			xmlTag = "StrkPricChngFlg";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "StrikePriceChangeFlag";
 			definition = "Indicates whether there is a new strike price for the change of the derivative contract as a result of the corporate action.";
 			maxOccurs = 1;
@@ -573,7 +575,7 @@ public class CorporateActionNotificationSD2 {
 			componentContext_lazy = () -> CorporateActionNotificationSD2.mmObject();
 			isDerived = false;
 			xmlTag = "StrkPricRndgMtd";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "StrikePriceRoundingMethod";
 			definition = "Method that will be used to adjust the strike price. May include the number of decimal places and rounding rules, example up or down.";
 			maxOccurs = 1;
@@ -619,7 +621,7 @@ public class CorporateActionNotificationSD2 {
 			componentContext_lazy = () -> CorporateActionNotificationSD2.mmObject();
 			isDerived = false;
 			xmlTag = "RsdlCshFlg";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ResidualCashFlag";
 			definition = "Indicates whether a residual cash is paid on the derivative contract. For example, this may be a cash element that is included in the terms of a takeover that the underlying equity is subject to.";
 			maxOccurs = 1;
@@ -665,7 +667,7 @@ public class CorporateActionNotificationSD2 {
 			componentContext_lazy = () -> CorporateActionNotificationSD2.mmObject();
 			isDerived = false;
 			xmlTag = "RefPric";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ReferencePrice";
 			definition = "Price of the security to be used in factor calculations. Usually the closing price of the underlying equity on the effective date of the contract adjustment.";
 			maxOccurs = 1;
@@ -707,7 +709,7 @@ public class CorporateActionNotificationSD2 {
 			componentContext_lazy = () -> CorporateActionNotificationSD2.mmObject();
 			isDerived = false;
 			xmlTag = "RefPricCcy";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ReferencePriceCurrency";
 			definition = "Currency associated with the reference price.";
 			maxOccurs = 1;
@@ -752,7 +754,7 @@ public class CorporateActionNotificationSD2 {
 			componentContext_lazy = () -> CorporateActionNotificationSD2.mmObject();
 			isDerived = false;
 			xmlTag = "ApprvdFlg";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ApprovedFlag";
 			definition = "Indicates whether the derivative data has/hasn't been approved by a validation service.";
 			maxOccurs = 1;
@@ -764,16 +766,13 @@ public class CorporateActionNotificationSD2 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.CorporateActionNotificationSD2.mmPlaceAndName, com.tools20022.repository.msg.CorporateActionNotificationSD2.mmDerivativeWorkflowStatus,
-						com.tools20022.repository.msg.CorporateActionNotificationSD2.mmDerivativeExchange, com.tools20022.repository.msg.CorporateActionNotificationSD2.mmDerivativePublicationDate,
-						com.tools20022.repository.msg.CorporateActionNotificationSD2.mmDerivativeAdjustmentDate, com.tools20022.repository.msg.CorporateActionNotificationSD2.mmDerivativeCalculationMethod,
-						com.tools20022.repository.msg.CorporateActionNotificationSD2.mmDerivativeFactor, com.tools20022.repository.msg.CorporateActionNotificationSD2.mmLotSizeChangeFlag,
-						com.tools20022.repository.msg.CorporateActionNotificationSD2.mmLotAdjustmentMethod, com.tools20022.repository.msg.CorporateActionNotificationSD2.mmStrikePriceChangeFlag,
-						com.tools20022.repository.msg.CorporateActionNotificationSD2.mmStrikePriceRoundingMethod, com.tools20022.repository.msg.CorporateActionNotificationSD2.mmResidualCashFlag,
-						com.tools20022.repository.msg.CorporateActionNotificationSD2.mmReferencePrice, com.tools20022.repository.msg.CorporateActionNotificationSD2.mmReferencePriceCurrency,
-						com.tools20022.repository.msg.CorporateActionNotificationSD2.mmApprovedFlag);
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+				messageElement_lazy = () -> Arrays.asList(CorporateActionNotificationSD2.mmPlaceAndName, CorporateActionNotificationSD2.mmDerivativeWorkflowStatus, CorporateActionNotificationSD2.mmDerivativeExchange,
+						CorporateActionNotificationSD2.mmDerivativePublicationDate, CorporateActionNotificationSD2.mmDerivativeAdjustmentDate, CorporateActionNotificationSD2.mmDerivativeCalculationMethod,
+						CorporateActionNotificationSD2.mmDerivativeFactor, CorporateActionNotificationSD2.mmLotSizeChangeFlag, CorporateActionNotificationSD2.mmLotAdjustmentMethod, CorporateActionNotificationSD2.mmStrikePriceChangeFlag,
+						CorporateActionNotificationSD2.mmStrikePriceRoundingMethod, CorporateActionNotificationSD2.mmResidualCashFlag, CorporateActionNotificationSD2.mmReferencePrice,
+						CorporateActionNotificationSD2.mmReferencePriceCurrency, CorporateActionNotificationSD2.mmApprovedFlag);
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 				name = "CorporateActionNotificationSD2";
 				definition = "Provides additional information regarding corporate action notification.";
 			}

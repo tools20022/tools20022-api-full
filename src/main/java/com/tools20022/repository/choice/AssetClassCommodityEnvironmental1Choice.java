@@ -19,7 +19,9 @@ package com.tools20022.repository.choice;
 
 import com.tools20022.metamodel.MMChoiceComponent;
 import com.tools20022.metamodel.MMMessageAssociationEnd;
+import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.entity.Commodity;
+import com.tools20022.repository.GeneratedRepository;
 import com.tools20022.repository.msg.EnvironmentalCommodityCarbonRelated1;
 import com.tools20022.repository.msg.EnvironmentalCommodityEmission1;
 import com.tools20022.repository.msg.EnvironmentalCommodityWeather1;
@@ -103,11 +105,11 @@ public class AssetClassCommodityEnvironmental1Choice {
 	 */
 	public static final MMMessageAssociationEnd mmEmissions = new MMMessageAssociationEnd() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Commodity.mmSubProduct;
+			businessElementTrace_lazy = () -> Commodity.mmSubProduct;
 			componentContext_lazy = () -> AssetClassCommodityEnvironmental1Choice.mmObject();
 			isDerived = false;
 			xmlTag = "Emssns";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Emissions";
 			definition = "Emissions environmental commodity derivative.";
 			maxOccurs = 1;
@@ -151,11 +153,11 @@ public class AssetClassCommodityEnvironmental1Choice {
 	 */
 	public static final MMMessageAssociationEnd mmWeather = new MMMessageAssociationEnd() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Commodity.mmSubProduct;
+			businessElementTrace_lazy = () -> Commodity.mmSubProduct;
 			componentContext_lazy = () -> AssetClassCommodityEnvironmental1Choice.mmObject();
 			isDerived = false;
 			xmlTag = "Wthr";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Weather";
 			definition = "Weather environmental commodity derivative.";
 			maxOccurs = 1;
@@ -199,11 +201,11 @@ public class AssetClassCommodityEnvironmental1Choice {
 	 */
 	public static final MMMessageAssociationEnd mmCarbonRelated = new MMMessageAssociationEnd() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Commodity.mmSubProduct;
+			businessElementTrace_lazy = () -> Commodity.mmSubProduct;
 			componentContext_lazy = () -> AssetClassCommodityEnvironmental1Choice.mmObject();
 			isDerived = false;
 			xmlTag = "CrbnRltd";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CarbonRelated";
 			definition = "Carbon related environmental commodity derivative.";
 			maxOccurs = 1;
@@ -216,11 +218,10 @@ public class AssetClassCommodityEnvironmental1Choice {
 	final static public MMChoiceComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMChoiceComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.choice.AssetClassCommodityEnvironmental1Choice.mmEmissions, com.tools20022.repository.choice.AssetClassCommodityEnvironmental1Choice.mmWeather,
-						com.tools20022.repository.choice.AssetClassCommodityEnvironmental1Choice.mmCarbonRelated);
+				messageElement_lazy = () -> Arrays.asList(AssetClassCommodityEnvironmental1Choice.mmEmissions, AssetClassCommodityEnvironmental1Choice.mmWeather, AssetClassCommodityEnvironmental1Choice.mmCarbonRelated);
 				trace_lazy = () -> Commodity.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "AssetClassCommodityEnvironmental1Choice";
 				definition = "Defines commodity attributes of a derivative where the type is environmental.";
 			}

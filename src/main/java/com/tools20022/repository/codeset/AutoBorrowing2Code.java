@@ -19,7 +19,9 @@ package com.tools20022.repository.codeset;
 
 import com.tools20022.metamodel.MMCode;
 import com.tools20022.metamodel.MMCodeSet;
+import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.codeset.AutoBorrowingCode;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -90,7 +92,7 @@ public class AutoBorrowing2Code extends AutoBorrowingCode {
 	 */
 	public static final MMCode mmLastResort = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "LastResort";
 			owner_lazy = () -> AutoBorrowing2Code.mmObject();
 		}
@@ -113,7 +115,7 @@ public class AutoBorrowing2Code extends AutoBorrowingCode {
 	 */
 	public static final MMCode mmNoAutomatic = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "NoAutomatic";
 			owner_lazy = () -> AutoBorrowing2Code.mmObject();
 		}
@@ -136,7 +138,7 @@ public class AutoBorrowing2Code extends AutoBorrowingCode {
 	 */
 	public static final MMCode mmAutomatic = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Automatic";
 			owner_lazy = () -> AutoBorrowing2Code.mmObject();
 		}
@@ -159,7 +161,7 @@ public class AutoBorrowing2Code extends AutoBorrowingCode {
 	 */
 	public static final MMCode mmReturn = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Return";
 			owner_lazy = () -> AutoBorrowing2Code.mmObject();
 		}
@@ -168,13 +170,12 @@ public class AutoBorrowing2Code extends AutoBorrowingCode {
 	static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
 				example = Arrays.asList("LAMI");
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "AutoBorrowing2Code";
 				definition = "Specifies the condition under which automatic borrowing is allowed.";
-				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.AutoBorrowing2Code.mmLastResort, com.tools20022.repository.codeset.AutoBorrowing2Code.mmNoAutomatic,
-						com.tools20022.repository.codeset.AutoBorrowing2Code.mmAutomatic, com.tools20022.repository.codeset.AutoBorrowing2Code.mmReturn);
+				code_lazy = () -> Arrays.asList(AutoBorrowing2Code.mmLastResort, AutoBorrowing2Code.mmNoAutomatic, AutoBorrowing2Code.mmAutomatic, AutoBorrowing2Code.mmReturn);
 				trace_lazy = () -> AutoBorrowingCode.mmObject();
 			}
 		});

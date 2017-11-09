@@ -19,7 +19,9 @@ package com.tools20022.repository.codeset;
 
 import com.tools20022.metamodel.MMCode;
 import com.tools20022.metamodel.MMCodeSet;
+import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.codeset.ChargeTypeCode;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -95,7 +97,7 @@ public class ChargeType16Code extends ChargeTypeCode {
 	 */
 	public static final MMCode mmBackEndLoad = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "BackEndLoad";
 			owner_lazy = () -> ChargeType16Code.mmObject();
 		}
@@ -118,7 +120,7 @@ public class ChargeType16Code extends ChargeTypeCode {
 	 */
 	public static final MMCode mmFrontEndLoad = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "FrontEndLoad";
 			owner_lazy = () -> ChargeType16Code.mmObject();
 		}
@@ -141,7 +143,7 @@ public class ChargeType16Code extends ChargeTypeCode {
 	 */
 	public static final MMCode mmDiscount = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Discount";
 			owner_lazy = () -> ChargeType16Code.mmObject();
 		}
@@ -164,7 +166,7 @@ public class ChargeType16Code extends ChargeTypeCode {
 	 */
 	public static final MMCode mmBrokerageFee = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "BrokerageFee";
 			owner_lazy = () -> ChargeType16Code.mmObject();
 		}
@@ -187,7 +189,7 @@ public class ChargeType16Code extends ChargeTypeCode {
 	 */
 	public static final MMCode mmUCITSCommission = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "UCITSCommission";
 			owner_lazy = () -> ChargeType16Code.mmObject();
 		}
@@ -210,7 +212,7 @@ public class ChargeType16Code extends ChargeTypeCode {
 	 */
 	public static final MMCode mmServiceProvisionFee = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ServiceProvisionFee";
 			owner_lazy = () -> ChargeType16Code.mmObject();
 		}
@@ -219,14 +221,13 @@ public class ChargeType16Code extends ChargeTypeCode {
 	static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
 				example = Arrays.asList("BEND");
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "ChargeType16Code";
 				definition = "Specifies the type of service for which a charge is asked or paid.";
-				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.ChargeType16Code.mmBackEndLoad, com.tools20022.repository.codeset.ChargeType16Code.mmFrontEndLoad,
-						com.tools20022.repository.codeset.ChargeType16Code.mmDiscount, com.tools20022.repository.codeset.ChargeType16Code.mmBrokerageFee, com.tools20022.repository.codeset.ChargeType16Code.mmUCITSCommission,
-						com.tools20022.repository.codeset.ChargeType16Code.mmServiceProvisionFee);
+				code_lazy = () -> Arrays.asList(ChargeType16Code.mmBackEndLoad, ChargeType16Code.mmFrontEndLoad, ChargeType16Code.mmDiscount, ChargeType16Code.mmBrokerageFee, ChargeType16Code.mmUCITSCommission,
+						ChargeType16Code.mmServiceProvisionFee);
 				trace_lazy = () -> ChargeTypeCode.mmObject();
 			}
 		});

@@ -19,7 +19,9 @@ package com.tools20022.repository.codeset;
 
 import com.tools20022.metamodel.MMCode;
 import com.tools20022.metamodel.MMCodeSet;
+import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.codeset.CancellationProcessingStatusCode;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -92,7 +94,7 @@ public class CancellationProcessingStatus2Code extends CancellationProcessingSta
 	 */
 	public static final MMCode mmCancellationCompleted = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CancellationCompleted";
 			owner_lazy = () -> CancellationProcessingStatus2Code.mmObject();
 		}
@@ -115,7 +117,7 @@ public class CancellationProcessingStatus2Code extends CancellationProcessingSta
 	 */
 	public static final MMCode mmPendingCancellation = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PendingCancellation";
 			owner_lazy = () -> CancellationProcessingStatus2Code.mmObject();
 		}
@@ -138,7 +140,7 @@ public class CancellationProcessingStatus2Code extends CancellationProcessingSta
 	 */
 	public static final MMCode mmDenied = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Denied";
 			owner_lazy = () -> CancellationProcessingStatus2Code.mmObject();
 		}
@@ -161,7 +163,7 @@ public class CancellationProcessingStatus2Code extends CancellationProcessingSta
 	 */
 	public static final MMCode mmAccepted = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Accepted";
 			owner_lazy = () -> CancellationProcessingStatus2Code.mmObject();
 		}
@@ -184,7 +186,7 @@ public class CancellationProcessingStatus2Code extends CancellationProcessingSta
 	 */
 	public static final MMCode mmRejected = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Rejected";
 			owner_lazy = () -> CancellationProcessingStatus2Code.mmObject();
 		}
@@ -193,14 +195,13 @@ public class CancellationProcessingStatus2Code extends CancellationProcessingSta
 	static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
 				example = Arrays.asList("CAND");
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "CancellationProcessingStatus2Code";
 				definition = "Specifies the status of a cancellation request.";
-				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.CancellationProcessingStatus2Code.mmCancellationCompleted, com.tools20022.repository.codeset.CancellationProcessingStatus2Code.mmPendingCancellation,
-						com.tools20022.repository.codeset.CancellationProcessingStatus2Code.mmDenied, com.tools20022.repository.codeset.CancellationProcessingStatus2Code.mmAccepted,
-						com.tools20022.repository.codeset.CancellationProcessingStatus2Code.mmRejected);
+				code_lazy = () -> Arrays.asList(CancellationProcessingStatus2Code.mmCancellationCompleted, CancellationProcessingStatus2Code.mmPendingCancellation, CancellationProcessingStatus2Code.mmDenied,
+						CancellationProcessingStatus2Code.mmAccepted, CancellationProcessingStatus2Code.mmRejected);
 				trace_lazy = () -> CancellationProcessingStatusCode.mmObject();
 			}
 		});

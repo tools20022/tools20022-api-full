@@ -18,7 +18,10 @@
 package com.tools20022.repository.entity;
 
 import com.tools20022.metamodel.MMBusinessComponent;
+import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.entity.AccountPartyRole;
+import com.tools20022.repository.GeneratedRepository;
+import com.tools20022.repository.msg.*;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -112,18 +115,14 @@ public class AccountServicerRole extends AccountPartyRole {
 	static public MMBusinessComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMBusinessComponent() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "AccountServicerRole";
 				definition = "Party that manages the account on behalf of the account owner, that is manages the registration and booking of entries on the account, calculates balances on the account and provides information about the account.";
-				derivationElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.Account5.mmServicer, com.tools20022.repository.msg.Account6.mmServicer,
-						com.tools20022.repository.msg.AccountReport1.mmTransferAccountServicerIdentification, com.tools20022.repository.msg.ParentCashAccount1.mmServicer,
-						com.tools20022.repository.msg.AccountReport14.mmTransferAccountServicerIdentification, com.tools20022.repository.msg.Account15.mmServicer, com.tools20022.repository.msg.Account16.mmServicer,
-						com.tools20022.repository.msg.CardAccount3.mmServicer, com.tools20022.repository.msg.CardAccount1.mmServicer, com.tools20022.repository.msg.CardAccount6.mmServicer,
-						com.tools20022.repository.msg.CardAccount4.mmServicer, com.tools20022.repository.msg.CardAccount5.mmServicer, com.tools20022.repository.msg.CardAccount2.mmServicer,
-						com.tools20022.repository.msg.ParentCashAccount2.mmServicer, com.tools20022.repository.msg.Account19.mmServicer, com.tools20022.repository.msg.CardAccount10.mmServicer,
-						com.tools20022.repository.msg.CardAccount9.mmServicer, com.tools20022.repository.msg.CardAccount8.mmServicer, com.tools20022.repository.msg.CardAccount11.mmServicer,
-						com.tools20022.repository.msg.CardAccount13.mmServicer, com.tools20022.repository.msg.CardAccount7.mmServicer, com.tools20022.repository.msg.CardAccount12.mmServicer);
+				derivationElement_lazy = () -> Arrays.asList(Account5.mmServicer, Account6.mmServicer, AccountReport1.mmTransferAccountServicerIdentification, ParentCashAccount1.mmServicer,
+						AccountReport14.mmTransferAccountServicerIdentification, Account15.mmServicer, Account16.mmServicer, CardAccount3.mmServicer, CardAccount1.mmServicer, CardAccount6.mmServicer, CardAccount4.mmServicer,
+						CardAccount5.mmServicer, CardAccount2.mmServicer, ParentCashAccount2.mmServicer, Account19.mmServicer, CardAccount10.mmServicer, CardAccount9.mmServicer, CardAccount8.mmServicer, CardAccount11.mmServicer,
+						CardAccount13.mmServicer, CardAccount7.mmServicer, CardAccount12.mmServicer);
 				superType_lazy = () -> AccountPartyRole.mmObject();
 			}
 		});

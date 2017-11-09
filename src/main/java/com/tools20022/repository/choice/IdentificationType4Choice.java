@@ -20,8 +20,10 @@ package com.tools20022.repository.choice;
 import com.tools20022.metamodel.MMChoiceComponent;
 import com.tools20022.metamodel.MMMessageAssociationEnd;
 import com.tools20022.metamodel.MMMessageAttribute;
+import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.codeset.TypeOfIdentification1Code;
 import com.tools20022.repository.entity.PartyIdentificationInformation;
+import com.tools20022.repository.GeneratedRepository;
 import com.tools20022.repository.msg.GenericIdentification20;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
@@ -119,14 +121,14 @@ public class IdentificationType4Choice {
 	 */
 	public static final MMMessageAttribute mmCode = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.PartyIdentificationInformation.mmTypeOfIdentification;
+			businessElementTrace_lazy = () -> PartyIdentificationInformation.mmTypeOfIdentification;
 			componentContext_lazy = () -> IdentificationType4Choice.mmObject();
 			isDerived = false;
 			xmlTag = "Cd";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Code";
 			definition = "Type of identification is defined using a code.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.choice.IdentificationType42Choice.mmCode);
+			nextVersions_lazy = () -> Arrays.asList(IdentificationType42Choice.mmCode);
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> TypeOfIdentification1Code.mmObject();
@@ -176,14 +178,14 @@ public class IdentificationType4Choice {
 	 */
 	public static final MMMessageAssociationEnd mmProprietary = new MMMessageAssociationEnd() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.PartyIdentificationInformation.mmTypeOfIdentification;
+			businessElementTrace_lazy = () -> PartyIdentificationInformation.mmTypeOfIdentification;
 			componentContext_lazy = () -> IdentificationType4Choice.mmObject();
 			isDerived = false;
 			xmlTag = "Prtry";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Proprietary";
 			definition = "Type of identification is defined using a data source scheme.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.choice.IdentificationType42Choice.mmProprietary);
+			nextVersions_lazy = () -> Arrays.asList(IdentificationType42Choice.mmProprietary);
 			maxOccurs = 1;
 			minOccurs = 1;
 			isComposite = true;
@@ -194,10 +196,10 @@ public class IdentificationType4Choice {
 	final static public MMChoiceComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMChoiceComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.choice.IdentificationType4Choice.mmCode, com.tools20022.repository.choice.IdentificationType4Choice.mmProprietary);
+				messageElement_lazy = () -> Arrays.asList(IdentificationType4Choice.mmCode, IdentificationType4Choice.mmProprietary);
 				trace_lazy = () -> PartyIdentificationInformation.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "IdentificationType4Choice";
 				definition = "Choice between a code and a data source scheme to specify the type of alternate identification.";
 				nextVersions_lazy = () -> Arrays.asList(IdentificationType42Choice.mmObject());

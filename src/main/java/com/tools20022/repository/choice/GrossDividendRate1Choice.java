@@ -19,8 +19,10 @@ package com.tools20022.repository.choice;
 
 import com.tools20022.metamodel.MMChoiceComponent;
 import com.tools20022.metamodel.MMMessageAttribute;
+import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.datatype.ActiveCurrencyAndAmount;
 import com.tools20022.repository.entity.Dividend;
+import com.tools20022.repository.GeneratedRepository;
 import com.tools20022.repository.msg.GrossDividendRate2;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
@@ -100,7 +102,7 @@ public class GrossDividendRate1Choice {
 			componentContext_lazy = () -> GrossDividendRate1Choice.mmObject();
 			isDerived = false;
 			xmlTag = "NotSpcfdRate";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "NotSpecifiedRate";
 			definition = "The value of the rate is not specified, eg, the rate is unknown.";
 			maxOccurs = 1;
@@ -144,11 +146,11 @@ public class GrossDividendRate1Choice {
 	 */
 	public static final MMMessageAttribute mmAmount = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Dividend.mmFinalDividend;
+			businessElementTrace_lazy = () -> Dividend.mmFinalDividend;
 			componentContext_lazy = () -> GrossDividendRate1Choice.mmObject();
 			isDerived = false;
 			xmlTag = "Amt";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Amount";
 			definition = "Value expressed as an amount.";
 			maxOccurs = 1;
@@ -198,7 +200,7 @@ public class GrossDividendRate1Choice {
 			componentContext_lazy = () -> GrossDividendRate1Choice.mmObject();
 			isDerived = false;
 			xmlTag = "RateTpAmt";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "RateTypeAmount";
 			definition = "Value is expressed as an amount related to an underlying securities, eg, underlying security for which an interest is paid.";
 			maxOccurs = 1;
@@ -210,11 +212,10 @@ public class GrossDividendRate1Choice {
 	final static public MMChoiceComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMChoiceComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.choice.GrossDividendRate1Choice.mmNotSpecifiedRate, com.tools20022.repository.choice.GrossDividendRate1Choice.mmAmount,
-						com.tools20022.repository.choice.GrossDividendRate1Choice.mmRateTypeAmount);
+				messageElement_lazy = () -> Arrays.asList(GrossDividendRate1Choice.mmNotSpecifiedRate, GrossDividendRate1Choice.mmAmount, GrossDividendRate1Choice.mmRateTypeAmount);
 				trace_lazy = () -> Dividend.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "GrossDividendRate1Choice";
 				definition = "Choice of format to express a gross dividend.";
 			}

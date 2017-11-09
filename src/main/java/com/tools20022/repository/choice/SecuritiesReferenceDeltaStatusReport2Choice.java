@@ -19,6 +19,9 @@ package com.tools20022.repository.choice;
 
 import com.tools20022.metamodel.MMChoiceComponent;
 import com.tools20022.metamodel.MMMessageAssociationEnd;
+import com.tools20022.metamodel.MMRegistrationStatus;
+import com.tools20022.repository.area.auth.FinancialInstrumentReportingReferenceDataDeltaReportV01;
+import com.tools20022.repository.GeneratedRepository;
 import com.tools20022.repository.msg.SecuritiesReferenceDataReport5;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
@@ -108,7 +111,7 @@ public class SecuritiesReferenceDeltaStatusReport2Choice {
 			componentContext_lazy = () -> SecuritiesReferenceDeltaStatusReport2Choice.mmObject();
 			isDerived = false;
 			xmlTag = "ModfdRcrd";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ModifiedRecord";
 			definition = "Specifies data that has been modified since the previous report.";
 			maxOccurs = 1;
@@ -152,7 +155,7 @@ public class SecuritiesReferenceDeltaStatusReport2Choice {
 			componentContext_lazy = () -> SecuritiesReferenceDeltaStatusReport2Choice.mmObject();
 			isDerived = false;
 			xmlTag = "NewRcrd";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "NewRecord";
 			definition = "Specifies new instruments that have been added since the previous report.";
 			maxOccurs = 1;
@@ -197,7 +200,7 @@ public class SecuritiesReferenceDeltaStatusReport2Choice {
 			componentContext_lazy = () -> SecuritiesReferenceDeltaStatusReport2Choice.mmObject();
 			isDerived = false;
 			xmlTag = "TermntdRcrd";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "TerminatedRecord";
 			definition = "Specifies instruments which have been terminated / have reached there pre-set termination data and are no longer valid instruments.";
 			maxOccurs = 1;
@@ -210,11 +213,11 @@ public class SecuritiesReferenceDeltaStatusReport2Choice {
 	final static public MMChoiceComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMChoiceComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.choice.SecuritiesReferenceDeltaStatusReport2Choice.mmModifiedRecord,
-						com.tools20022.repository.choice.SecuritiesReferenceDeltaStatusReport2Choice.mmNewRecord, com.tools20022.repository.choice.SecuritiesReferenceDeltaStatusReport2Choice.mmTerminatedRecord);
-				messageBuildingBlock_lazy = () -> Arrays.asList(com.tools20022.repository.area.auth.FinancialInstrumentReportingReferenceDataDeltaReportV01.mmFinancialInstrument);
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				messageElement_lazy = () -> Arrays
+						.asList(SecuritiesReferenceDeltaStatusReport2Choice.mmModifiedRecord, SecuritiesReferenceDeltaStatusReport2Choice.mmNewRecord, SecuritiesReferenceDeltaStatusReport2Choice.mmTerminatedRecord);
+				messageBuildingBlock_lazy = () -> Arrays.asList(FinancialInstrumentReportingReferenceDataDeltaReportV01.mmFinancialInstrument);
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "SecuritiesReferenceDeltaStatusReport2Choice";
 				definition = "Choice defining financial instruments that are either new or have been modified. ";
 			}

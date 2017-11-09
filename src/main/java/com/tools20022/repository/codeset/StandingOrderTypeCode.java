@@ -19,6 +19,8 @@ package com.tools20022.repository.codeset;
 
 import com.tools20022.metamodel.MMCode;
 import com.tools20022.metamodel.MMCodeSet;
+import com.tools20022.metamodel.MMRegistrationStatus;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -27,6 +29,13 @@ import java.util.concurrent.atomic.AtomicReference;
  * <p>
  * <strong>Constant fields:</strong>
  * <ul>
+ * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getDerivation derivation}
+ * =
+ * <ul>
+ * <li>{@linkplain com.tools20022.repository.codeset.StandingOrderType1Code
+ * StandingOrderType1Code}</li>
+ * </ul>
+ * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getCode code} =
  * <ul>
  * <li>
@@ -35,13 +44,6 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>
  * {@linkplain com.tools20022.repository.codeset.StandingOrderTypeCode#mmPredefinedStandingOrder
  * StandingOrderTypeCode.mmPredefinedStandingOrder}</li>
- * </ul>
- * </li>
- * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getDerivation derivation}
- * =
- * <ul>
- * <li>{@linkplain com.tools20022.repository.codeset.StandingOrderType1Code
- * StandingOrderType1Code}</li>
  * </ul>
  * </li>
  * <li>
@@ -94,7 +96,7 @@ public class StandingOrderTypeCode {
 	 */
 	public static final MMCode mmUserDefinedStandingOrder = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "UserDefinedStandingOrder";
 			definition = "Liquidity transfer standing order type, that has been customised or defined to the specific need of the user.";
 			owner_lazy = () -> StandingOrderTypeCode.mmObject();
@@ -125,7 +127,7 @@ public class StandingOrderTypeCode {
 	 */
 	public static final MMCode mmPredefinedStandingOrder = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PredefinedStandingOrder";
 			definition = "Liquidity transfer standing order type, as predefined in the system.";
 			owner_lazy = () -> StandingOrderTypeCode.mmObject();
@@ -136,12 +138,12 @@ public class StandingOrderTypeCode {
 	static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
 				example = Arrays.asList("USTO");
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "StandingOrderTypeCode";
 				definition = "Specifies the type of standing order.";
-				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.StandingOrderTypeCode.mmUserDefinedStandingOrder, com.tools20022.repository.codeset.StandingOrderTypeCode.mmPredefinedStandingOrder);
+				code_lazy = () -> Arrays.asList(StandingOrderTypeCode.mmUserDefinedStandingOrder, StandingOrderTypeCode.mmPredefinedStandingOrder);
 				derivation_lazy = () -> Arrays.asList(StandingOrderType1Code.mmObject());
 			}
 		});

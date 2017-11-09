@@ -19,7 +19,9 @@ package com.tools20022.repository.codeset;
 
 import com.tools20022.metamodel.MMCode;
 import com.tools20022.metamodel.MMCodeSet;
+import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.codeset.OrderCancellationStatusCode;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -87,7 +89,7 @@ public class OrderCancellationStatus1Code extends OrderCancellationStatusCode {
 	 */
 	public static final MMCode mmSentToNextParty = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SentToNextParty";
 			owner_lazy = () -> OrderCancellationStatus1Code.mmObject();
 		}
@@ -110,7 +112,7 @@ public class OrderCancellationStatus1Code extends OrderCancellationStatusCode {
 	 */
 	public static final MMCode mmCancellationPending = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CancellationPending";
 			owner_lazy = () -> OrderCancellationStatus1Code.mmObject();
 		}
@@ -133,7 +135,7 @@ public class OrderCancellationStatus1Code extends OrderCancellationStatusCode {
 	 */
 	public static final MMCode mmCancellationCompleted = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CancellationCompleted";
 			owner_lazy = () -> OrderCancellationStatus1Code.mmObject();
 		}
@@ -142,13 +144,12 @@ public class OrderCancellationStatus1Code extends OrderCancellationStatusCode {
 	static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
 				example = Arrays.asList("STNP");
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "OrderCancellationStatus1Code";
 				definition = "Specifies the current status of the order cancellation request.";
-				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.OrderCancellationStatus1Code.mmSentToNextParty, com.tools20022.repository.codeset.OrderCancellationStatus1Code.mmCancellationPending,
-						com.tools20022.repository.codeset.OrderCancellationStatus1Code.mmCancellationCompleted);
+				code_lazy = () -> Arrays.asList(OrderCancellationStatus1Code.mmSentToNextParty, OrderCancellationStatus1Code.mmCancellationPending, OrderCancellationStatus1Code.mmCancellationCompleted);
 				trace_lazy = () -> OrderCancellationStatusCode.mmObject();
 			}
 		});

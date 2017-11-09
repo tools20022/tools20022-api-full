@@ -19,8 +19,15 @@ package com.tools20022.repository.msg;
 
 import com.tools20022.metamodel.MMMessageAttribute;
 import com.tools20022.metamodel.MMMessageComponent;
+import com.tools20022.metamodel.MMRegistrationStatus;
+import com.tools20022.repository.area.seev.MeetingEntitlementNotificationV02;
+import com.tools20022.repository.area.seev.MeetingEntitlementNotificationV03;
+import com.tools20022.repository.area.seev.MeetingEntitlementNotificationV04;
+import com.tools20022.repository.area.seev.MeetingEntitlementNotificationV05;
 import com.tools20022.repository.datatype.ISODate;
+import com.tools20022.repository.entity.MeetingEntitlement;
 import com.tools20022.repository.entity.MeetingNotice;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -115,11 +122,11 @@ public class EligibilityDates1 {
 	 */
 	public static final MMMessageAttribute mmEntitlementFixingDate = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.MeetingEntitlement.mmEntitlementFixingDate;
+			businessElementTrace_lazy = () -> MeetingEntitlement.mmEntitlementFixingDate;
 			componentContext_lazy = () -> EligibilityDates1.mmObject();
 			isDerived = false;
 			xmlTag = "EntitlmntFxgDt";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "EntitlementFixingDate";
 			definition = "Date at which the positions are struck to note which parties will receive the entitlement, e.g. record date, book close date...";
 			maxOccurs = 1;
@@ -131,12 +138,12 @@ public class EligibilityDates1 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.EligibilityDates1.mmEntitlementFixingDate);
-				messageBuildingBlock_lazy = () -> Arrays.asList(com.tools20022.repository.area.seev.MeetingEntitlementNotificationV02.mmEligibility, com.tools20022.repository.area.seev.MeetingEntitlementNotificationV03.mmEligibility,
-						com.tools20022.repository.area.seev.MeetingEntitlementNotificationV04.mmEligibility, com.tools20022.repository.area.seev.MeetingEntitlementNotificationV05.mmEligibility);
+				messageElement_lazy = () -> Arrays.asList(EligibilityDates1.mmEntitlementFixingDate);
+				messageBuildingBlock_lazy = () -> Arrays.asList(MeetingEntitlementNotificationV02.mmEligibility, MeetingEntitlementNotificationV03.mmEligibility, MeetingEntitlementNotificationV04.mmEligibility,
+						MeetingEntitlementNotificationV05.mmEligibility);
 				trace_lazy = () -> MeetingNotice.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "EligibilityDates1";
 				definition = "Dates determining the entitlement.";
 			}

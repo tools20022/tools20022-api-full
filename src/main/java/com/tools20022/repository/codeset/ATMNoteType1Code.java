@@ -19,7 +19,9 @@ package com.tools20022.repository.codeset;
 
 import com.tools20022.metamodel.MMCode;
 import com.tools20022.metamodel.MMCodeSet;
+import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.codeset.ATMNoteTypeCode;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -84,7 +86,7 @@ public class ATMNoteType1Code extends ATMNoteTypeCode {
 	 */
 	public static final MMCode mmAll = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "All";
 			owner_lazy = () -> ATMNoteType1Code.mmObject();
 		}
@@ -107,7 +109,7 @@ public class ATMNoteType1Code extends ATMNoteTypeCode {
 	 */
 	public static final MMCode mmCounterfeit = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Counterfeit";
 			owner_lazy = () -> ATMNoteType1Code.mmObject();
 		}
@@ -130,7 +132,7 @@ public class ATMNoteType1Code extends ATMNoteTypeCode {
 	 */
 	public static final MMCode mmIndividual = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Individual";
 			owner_lazy = () -> ATMNoteType1Code.mmObject();
 		}
@@ -153,7 +155,7 @@ public class ATMNoteType1Code extends ATMNoteTypeCode {
 	 */
 	public static final MMCode mmSuspectedCounterfeit = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SuspectedCounterfeit";
 			owner_lazy = () -> ATMNoteType1Code.mmObject();
 		}
@@ -176,7 +178,7 @@ public class ATMNoteType1Code extends ATMNoteTypeCode {
 	 */
 	public static final MMCode mmUnfit = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Unfit";
 			owner_lazy = () -> ATMNoteType1Code.mmObject();
 		}
@@ -185,12 +187,11 @@ public class ATMNoteType1Code extends ATMNoteTypeCode {
 	static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "ATMNoteType1Code";
 				definition = "Type of items the cash-in cassette.";
-				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.ATMNoteType1Code.mmAll, com.tools20022.repository.codeset.ATMNoteType1Code.mmCounterfeit, com.tools20022.repository.codeset.ATMNoteType1Code.mmIndividual,
-						com.tools20022.repository.codeset.ATMNoteType1Code.mmSuspectedCounterfeit, com.tools20022.repository.codeset.ATMNoteType1Code.mmUnfit);
+				code_lazy = () -> Arrays.asList(ATMNoteType1Code.mmAll, ATMNoteType1Code.mmCounterfeit, ATMNoteType1Code.mmIndividual, ATMNoteType1Code.mmSuspectedCounterfeit, ATMNoteType1Code.mmUnfit);
 				trace_lazy = () -> ATMNoteTypeCode.mmObject();
 			}
 		});

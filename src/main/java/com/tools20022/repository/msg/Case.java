@@ -19,10 +19,14 @@ package com.tools20022.repository.msg;
 
 import com.tools20022.metamodel.MMMessageAttribute;
 import com.tools20022.metamodel.MMMessageComponent;
+import com.tools20022.metamodel.MMRegistrationStatus;
+import com.tools20022.repository.area.camt.*;
 import com.tools20022.repository.datatype.AnyBICIdentifier;
 import com.tools20022.repository.datatype.Max35Text;
 import com.tools20022.repository.datatype.YesNoIndicator;
 import com.tools20022.repository.entity.InvestigationCase;
+import com.tools20022.repository.entity.OrganisationIdentification;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -141,11 +145,11 @@ public class Case {
 	 */
 	public static final MMMessageAttribute mmIdentification = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.InvestigationCase.mmIdentification;
+			businessElementTrace_lazy = () -> InvestigationCase.mmIdentification;
 			componentContext_lazy = () -> Case.mmObject();
 			isDerived = false;
 			xmlTag = "Id";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Identification";
 			definition = "Unique id assigned by the case creator.";
 			maxOccurs = 1;
@@ -187,11 +191,11 @@ public class Case {
 	 */
 	public static final MMMessageAttribute mmCreator = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.OrganisationIdentification.mmAnyBIC;
+			businessElementTrace_lazy = () -> OrganisationIdentification.mmAnyBIC;
 			componentContext_lazy = () -> Case.mmObject();
 			isDerived = false;
 			xmlTag = "Cretr";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Creator";
 			definition = "Party that created the case.";
 			maxOccurs = 1;
@@ -232,7 +236,7 @@ public class Case {
 			componentContext_lazy = () -> Case.mmObject();
 			isDerived = false;
 			xmlTag = "ReopCaseIndctn";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ReopenCaseIndication";
 			definition = "Set to yes if the case was closed and needs to be re-opened.";
 			maxOccurs = 1;
@@ -244,15 +248,13 @@ public class Case {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.Case.mmIdentification, com.tools20022.repository.msg.Case.mmCreator, com.tools20022.repository.msg.Case.mmReopenCaseIndication);
-				messageBuildingBlock_lazy = () -> Arrays.asList(com.tools20022.repository.area.camt.RequestToModifyPayment.mmCase, com.tools20022.repository.area.camt.RequestToCancelPayment.mmCase,
-						com.tools20022.repository.area.camt.UnableToApply.mmCase, com.tools20022.repository.area.camt.ClaimNonReceipt.mmCase, com.tools20022.repository.area.camt.AdditionalPaymentInformation.mmCase,
-						com.tools20022.repository.area.camt.ResolutionOfInvestigation.mmResolvedCase, com.tools20022.repository.area.camt.NotificationOfCaseAssignment.mmCase, com.tools20022.repository.area.camt.RejectCaseAssignment.mmCase,
-						com.tools20022.repository.area.camt.RequestForDuplicateInstruction.mmCase, com.tools20022.repository.area.camt.DebitAuthorisationResponse.mmCase, com.tools20022.repository.area.camt.DebitAuthorisationRequest.mmCase,
-						com.tools20022.repository.area.camt.CaseStatusReportRequest.mmCase, com.tools20022.repository.area.camt.CaseStatusReport.mmCase, com.tools20022.repository.area.camt.CancelCaseAssignment.mmCase);
+				messageElement_lazy = () -> Arrays.asList(Case.mmIdentification, Case.mmCreator, Case.mmReopenCaseIndication);
+				messageBuildingBlock_lazy = () -> Arrays.asList(RequestToModifyPayment.mmCase, RequestToCancelPayment.mmCase, UnableToApply.mmCase, ClaimNonReceipt.mmCase, AdditionalPaymentInformation.mmCase,
+						ResolutionOfInvestigation.mmResolvedCase, NotificationOfCaseAssignment.mmCase, RejectCaseAssignment.mmCase, RequestForDuplicateInstruction.mmCase, DebitAuthorisationResponse.mmCase, DebitAuthorisationRequest.mmCase,
+						CaseStatusReportRequest.mmCase, CaseStatusReport.mmCase, CancelCaseAssignment.mmCase);
 				trace_lazy = () -> InvestigationCase.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "Case";
 				definition = "Information identifying a case.";
 			}

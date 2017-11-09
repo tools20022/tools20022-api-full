@@ -19,7 +19,9 @@ package com.tools20022.repository.codeset;
 
 import com.tools20022.metamodel.MMCode;
 import com.tools20022.metamodel.MMCodeSet;
+import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.codeset.SettlementConditionModificationStatusStatusCode;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -95,7 +97,7 @@ public class SettlementConditionModificationStatus1Code extends SettlementCondit
 	 */
 	public static final MMCode mmAcknowledgedAccepted = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AcknowledgedAccepted";
 			owner_lazy = () -> SettlementConditionModificationStatus1Code.mmObject();
 		}
@@ -118,7 +120,7 @@ public class SettlementConditionModificationStatus1Code extends SettlementCondit
 	 */
 	public static final MMCode mmRejected = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Rejected";
 			owner_lazy = () -> SettlementConditionModificationStatus1Code.mmObject();
 		}
@@ -141,7 +143,7 @@ public class SettlementConditionModificationStatus1Code extends SettlementCondit
 	 */
 	public static final MMCode mmPending = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Pending";
 			owner_lazy = () -> SettlementConditionModificationStatus1Code.mmObject();
 		}
@@ -164,7 +166,7 @@ public class SettlementConditionModificationStatus1Code extends SettlementCondit
 	 */
 	public static final MMCode mmDenied = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Denied";
 			owner_lazy = () -> SettlementConditionModificationStatus1Code.mmObject();
 		}
@@ -187,7 +189,7 @@ public class SettlementConditionModificationStatus1Code extends SettlementCondit
 	 */
 	public static final MMCode mmCompleted = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Completed";
 			owner_lazy = () -> SettlementConditionModificationStatus1Code.mmObject();
 		}
@@ -196,14 +198,13 @@ public class SettlementConditionModificationStatus1Code extends SettlementCondit
 	static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
 				example = Arrays.asList("PACK");
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "SettlementConditionModificationStatus1Code";
 				definition = "Specifies the status of a securities settlement condition modification request.";
-				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.SettlementConditionModificationStatus1Code.mmAcknowledgedAccepted, com.tools20022.repository.codeset.SettlementConditionModificationStatus1Code.mmRejected,
-						com.tools20022.repository.codeset.SettlementConditionModificationStatus1Code.mmPending, com.tools20022.repository.codeset.SettlementConditionModificationStatus1Code.mmDenied,
-						com.tools20022.repository.codeset.SettlementConditionModificationStatus1Code.mmCompleted);
+				code_lazy = () -> Arrays.asList(SettlementConditionModificationStatus1Code.mmAcknowledgedAccepted, SettlementConditionModificationStatus1Code.mmRejected, SettlementConditionModificationStatus1Code.mmPending,
+						SettlementConditionModificationStatus1Code.mmDenied, SettlementConditionModificationStatus1Code.mmCompleted);
 				trace_lazy = () -> SettlementConditionModificationStatusStatusCode.mmObject();
 			}
 		});

@@ -19,10 +19,10 @@ package com.tools20022.repository.msg;
 
 import com.tools20022.metamodel.MMMessageAssociationEnd;
 import com.tools20022.metamodel.MMMessageComponent;
+import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.choice.PartyIdentification2Choice;
-import com.tools20022.repository.entity.Organisation;
-import com.tools20022.repository.entity.Person;
-import com.tools20022.repository.entity.PortfolioTransfer;
+import com.tools20022.repository.entity.*;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.List;
@@ -147,10 +147,10 @@ public class ISATransfer9 {
 			componentContext_lazy = () -> ISATransfer9.mmObject();
 			isDerived = false;
 			xmlTag = "PmryIndvInvstr";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PrimaryIndividualInvestor";
 			definition = "Information identifying the primary individual investor, eg, name, address, social security number and date of birth.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.ISATransfer12.mmPrimaryIndividualInvestor);
+			nextVersions_lazy = () -> Arrays.asList(ISATransfer12.mmPrimaryIndividualInvestor);
 			maxOccurs = 1;
 			minOccurs = 0;
 			isComposite = true;
@@ -204,10 +204,10 @@ public class ISATransfer9 {
 			componentContext_lazy = () -> ISATransfer9.mmObject();
 			isDerived = false;
 			xmlTag = "ScndryIndvInvstr";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SecondaryIndividualInvestor";
 			definition = "Information identifying the secondary individual investor, eg, name, address, social security number and date of birth.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.ISATransfer12.mmSecondaryIndividualInvestor);
+			nextVersions_lazy = () -> Arrays.asList(ISATransfer12.mmSecondaryIndividualInvestor);
 			maxOccurs = 1;
 			minOccurs = 0;
 			isComposite = true;
@@ -261,10 +261,10 @@ public class ISATransfer9 {
 			componentContext_lazy = () -> ISATransfer9.mmObject();
 			isDerived = false;
 			xmlTag = "OthrIndvInvstr";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "OtherIndividualInvestor";
 			definition = "Information identifying the other individual investors, eg, name, address, social security number and date of birth.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.ISATransfer12.mmOtherIndividualInvestor);
+			nextVersions_lazy = () -> Arrays.asList(ISATransfer12.mmOtherIndividualInvestor);
 			minOccurs = 0;
 			isComposite = true;
 			type_lazy = () -> com.tools20022.repository.msg.IndividualPerson8.mmObject();
@@ -317,10 +317,10 @@ public class ISATransfer9 {
 			componentContext_lazy = () -> ISATransfer9.mmObject();
 			isDerived = false;
 			xmlTag = "PmryCorpInvstr";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PrimaryCorporateInvestor";
 			definition = "Information identifying the primary corporate investor, eg, name and address.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.ISATransfer12.mmPrimaryCorporateInvestor);
+			nextVersions_lazy = () -> Arrays.asList(ISATransfer12.mmPrimaryCorporateInvestor);
 			maxOccurs = 1;
 			minOccurs = 0;
 			isComposite = true;
@@ -374,10 +374,10 @@ public class ISATransfer9 {
 			componentContext_lazy = () -> ISATransfer9.mmObject();
 			isDerived = false;
 			xmlTag = "ScndryCorpInvstr";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SecondaryCorporateInvestor";
 			definition = "Information identifying the secondary corporate investor, eg, name and address.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.ISATransfer12.mmSecondaryCorporateInvestor);
+			nextVersions_lazy = () -> Arrays.asList(ISATransfer12.mmSecondaryCorporateInvestor);
 			maxOccurs = 1;
 			minOccurs = 0;
 			isComposite = true;
@@ -431,10 +431,10 @@ public class ISATransfer9 {
 			componentContext_lazy = () -> ISATransfer9.mmObject();
 			isDerived = false;
 			xmlTag = "OthrCorpInvstr";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "OtherCorporateInvestor";
 			definition = "Information identifying the other corporate investors, eg, name and address.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.ISATransfer12.mmOtherCorporateInvestor);
+			nextVersions_lazy = () -> Arrays.asList(ISATransfer12.mmOtherCorporateInvestor);
 			minOccurs = 0;
 			isComposite = true;
 			type_lazy = () -> com.tools20022.repository.msg.Organisation4.mmObject();
@@ -483,14 +483,14 @@ public class ISATransfer9 {
 	 */
 	public static final MMMessageAssociationEnd mmTransferorAccount = new MMMessageAssociationEnd() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.PortfolioTransfer.mmAccountFrom;
+			businessElementTrace_lazy = () -> PortfolioTransfer.mmAccountFrom;
 			componentContext_lazy = () -> ISATransfer9.mmObject();
 			isDerived = false;
 			xmlTag = "TrfrAcct";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "TransferorAccount";
 			definition = "Identification of an account owned by the investor at the old plan manager (account servicer).";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.ISATransfer12.mmTransferorAccount);
+			nextVersions_lazy = () -> Arrays.asList(ISATransfer12.mmTransferorAccount);
 			maxOccurs = 1;
 			minOccurs = 1;
 			isComposite = true;
@@ -540,14 +540,14 @@ public class ISATransfer9 {
 	 */
 	public static final MMMessageAssociationEnd mmNomineeAccount = new MMMessageAssociationEnd() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.PortfolioTransfer.mmNomineeAccount;
+			businessElementTrace_lazy = () -> PortfolioTransfer.mmNomineeAccount;
 			componentContext_lazy = () -> ISATransfer9.mmObject();
 			isDerived = false;
 			xmlTag = "NmneeAcct";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "NomineeAccount";
 			definition = "Account held in the name of a party that is not the name of the beneficial owner of the shares.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.ISATransfer12.mmNomineeAccount);
+			nextVersions_lazy = () -> Arrays.asList(ISATransfer12.mmNomineeAccount);
 			maxOccurs = 1;
 			minOccurs = 0;
 			isComposite = true;
@@ -598,14 +598,14 @@ public class ISATransfer9 {
 	 */
 	public static final MMMessageAssociationEnd mmTransferee = new MMMessageAssociationEnd() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Party.mmIdentification;
+			businessElementTrace_lazy = () -> Party.mmIdentification;
 			componentContext_lazy = () -> ISATransfer9.mmObject();
 			isDerived = false;
 			xmlTag = "Trfee";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Transferee";
 			definition = "Information related to the institution to which the financial instrument is to be transferred.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.ISATransfer12.mmTransferee);
+			nextVersions_lazy = () -> Arrays.asList(ISATransfer12.mmTransferee);
 			maxOccurs = 1;
 			minOccurs = 1;
 			isComposite = true;
@@ -656,14 +656,14 @@ public class ISATransfer9 {
 	 */
 	public static final MMMessageAssociationEnd mmCashAccount = new MMMessageAssociationEnd() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.InvestmentAccount.mmCashAccount;
+			businessElementTrace_lazy = () -> InvestmentAccount.mmCashAccount;
 			componentContext_lazy = () -> ISATransfer9.mmObject();
 			isDerived = false;
 			xmlTag = "CshAcct";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CashAccount";
 			definition = "Identification of an account owned by the investor to which a cash entry is made based on the transfer of asset(s).";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.ISATransfer12.mmCashAccount);
+			nextVersions_lazy = () -> Arrays.asList(ISATransfer12.mmCashAccount);
 			maxOccurs = 1;
 			minOccurs = 0;
 			isComposite = true;
@@ -708,7 +708,7 @@ public class ISATransfer9 {
 			componentContext_lazy = () -> ISATransfer9.mmObject();
 			isDerived = false;
 			xmlTag = "PdctTrf";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ProductTransfer";
 			definition = "Provides information related to the asset(s) transferred.";
 			minOccurs = 1;
@@ -756,10 +756,10 @@ public class ISATransfer9 {
 			componentContext_lazy = () -> ISATransfer9.mmObject();
 			isDerived = false;
 			xmlTag = "Xtnsn";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Extension";
 			definition = "Additional information that cannot be captured in the structured elements and/or any other specific block.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.ISATransfer12.mmExtension);
+			nextVersions_lazy = () -> Arrays.asList(ISATransfer12.mmExtension);
 			minOccurs = 0;
 			isComposite = true;
 			type_lazy = () -> com.tools20022.repository.msg.Extension1.mmObject();
@@ -769,14 +769,12 @@ public class ISATransfer9 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.ISATransfer9.mmPrimaryIndividualInvestor, com.tools20022.repository.msg.ISATransfer9.mmSecondaryIndividualInvestor,
-						com.tools20022.repository.msg.ISATransfer9.mmOtherIndividualInvestor, com.tools20022.repository.msg.ISATransfer9.mmPrimaryCorporateInvestor, com.tools20022.repository.msg.ISATransfer9.mmSecondaryCorporateInvestor,
-						com.tools20022.repository.msg.ISATransfer9.mmOtherCorporateInvestor, com.tools20022.repository.msg.ISATransfer9.mmTransferorAccount, com.tools20022.repository.msg.ISATransfer9.mmNomineeAccount,
-						com.tools20022.repository.msg.ISATransfer9.mmTransferee, com.tools20022.repository.msg.ISATransfer9.mmCashAccount, com.tools20022.repository.msg.ISATransfer9.mmProductTransfer,
-						com.tools20022.repository.msg.ISATransfer9.mmExtension);
+				messageElement_lazy = () -> Arrays.asList(ISATransfer9.mmPrimaryIndividualInvestor, ISATransfer9.mmSecondaryIndividualInvestor, ISATransfer9.mmOtherIndividualInvestor, ISATransfer9.mmPrimaryCorporateInvestor,
+						ISATransfer9.mmSecondaryCorporateInvestor, ISATransfer9.mmOtherCorporateInvestor, ISATransfer9.mmTransferorAccount, ISATransfer9.mmNomineeAccount, ISATransfer9.mmTransferee, ISATransfer9.mmCashAccount,
+						ISATransfer9.mmProductTransfer, ISATransfer9.mmExtension);
 				trace_lazy = () -> PortfolioTransfer.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "ISATransfer9";
 				definition = "Describes the type of product and the assets to be transferred.";
 				nextVersions_lazy = () -> Arrays.asList(ISATransfer12.mmObject());

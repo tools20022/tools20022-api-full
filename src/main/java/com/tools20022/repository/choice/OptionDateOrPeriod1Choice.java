@@ -19,9 +19,12 @@ package com.tools20022.repository.choice;
 
 import com.tools20022.metamodel.MMChoiceComponent;
 import com.tools20022.metamodel.MMMessageAttribute;
+import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.datatype.ISODate;
 import com.tools20022.repository.datatype.Number;
 import com.tools20022.repository.entity.Option;
+import com.tools20022.repository.entity.SecuritiesConversion;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -100,11 +103,11 @@ public class OptionDateOrPeriod1Choice {
 	 */
 	public static final MMMessageAttribute mmEarliestExerciseDate = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Option.mmEarliestExerciseDate;
+			businessElementTrace_lazy = () -> Option.mmEarliestExerciseDate;
 			componentContext_lazy = () -> OptionDateOrPeriod1Choice.mmObject();
 			isDerived = false;
 			xmlTag = "EarlstExrcDt";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "EarliestExerciseDate";
 			definition = "First date on which the call option or the put option can be exercised. ";
 			maxOccurs = 1;
@@ -151,11 +154,11 @@ public class OptionDateOrPeriod1Choice {
 	 */
 	public static final MMMessageAttribute mmNoticePeriod = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.SecuritiesConversion.mmConversionPeriod;
+			businessElementTrace_lazy = () -> SecuritiesConversion.mmConversionPeriod;
 			componentContext_lazy = () -> OptionDateOrPeriod1Choice.mmObject();
 			isDerived = false;
 			xmlTag = "NtcePrd";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "NoticePeriod";
 			definition = "Number of calendar days that the holder of the instrument/issuer of the instrument will give to the issuer/holder of the instrument before exercising the put/call option. ";
 			maxOccurs = 1;
@@ -167,10 +170,10 @@ public class OptionDateOrPeriod1Choice {
 	final static public MMChoiceComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMChoiceComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.choice.OptionDateOrPeriod1Choice.mmEarliestExerciseDate, com.tools20022.repository.choice.OptionDateOrPeriod1Choice.mmNoticePeriod);
+				messageElement_lazy = () -> Arrays.asList(OptionDateOrPeriod1Choice.mmEarliestExerciseDate, OptionDateOrPeriod1Choice.mmNoticePeriod);
 				trace_lazy = () -> Option.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "OptionDateOrPeriod1Choice";
 				definition = "Provides the exercise date or notice period for a call/put option.";
 			}

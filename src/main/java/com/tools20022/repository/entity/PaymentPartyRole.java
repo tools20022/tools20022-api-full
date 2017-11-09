@@ -17,9 +17,12 @@
 
 package com.tools20022.repository.entity;
 
+import com.tools20022.metamodel.MMAggregation;
 import com.tools20022.metamodel.MMBusinessAssociationEnd;
 import com.tools20022.metamodel.MMBusinessComponent;
+import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.entity.Role;
+import com.tools20022.repository.GeneratedRepository;
 import com.tools20022.repository.msg.*;
 import java.util.ArrayList;
 import java.util.Arrays;
@@ -35,76 +38,6 @@ import java.util.List;
  * <p>
  * <strong>Constant fields:</strong>
  * <ul>
- * <li>{@linkplain com.tools20022.metamodel.MMBusinessComponent#getElement
- * element} =
- * <ul>
- * <li>
- * {@linkplain com.tools20022.repository.entity.PaymentPartyRole#mmCashAccount
- * PaymentPartyRole.mmCashAccount}</li>
- * <li>{@linkplain com.tools20022.repository.entity.PaymentPartyRole#mmPayment
- * PaymentPartyRole.mmPayment}</li>
- * </ul>
- * </li>
- * <li>{@linkplain com.tools20022.metamodel.MMBusinessComponent#getSubType
- * subType} =
- * <ul>
- * <li>{@linkplain com.tools20022.repository.entity.InstructingAgentRole
- * InstructingAgentRole}</li>
- * <li>{@linkplain com.tools20022.repository.entity.InstructedAgentRole
- * InstructedAgentRole}</li>
- * <li>{@linkplain com.tools20022.repository.entity.DebtorRole DebtorRole}</li>
- * <li>{@linkplain com.tools20022.repository.entity.DebtorAgentRole
- * DebtorAgentRole}</li>
- * <li>{@linkplain com.tools20022.repository.entity.CreditorRole CreditorRole}</li>
- * <li>{@linkplain com.tools20022.repository.entity.IntermediaryAgentRole
- * IntermediaryAgentRole}</li>
- * <li>{@linkplain com.tools20022.repository.entity.CreditorAgentRole
- * CreditorAgentRole}</li>
- * <li>{@linkplain com.tools20022.repository.entity.ForwardingAgentRole
- * ForwardingAgentRole}</li>
- * <li>{@linkplain com.tools20022.repository.entity.InitiatingPartyRole
- * InitiatingPartyRole}</li>
- * </ul>
- * </li>
- * <li>
- * {@linkplain com.tools20022.metamodel.MMBusinessComponent#getAssociationDomain
- * associationDomain} =
- * <ul>
- * <li>
- * {@linkplain com.tools20022.repository.entity.CashAccount#mmPaymentPartyRole
- * CashAccount.mmPaymentPartyRole}</li>
- * <li>{@linkplain com.tools20022.repository.entity.Payment#mmPartyRole
- * Payment.mmPartyRole}</li>
- * </ul>
- * </li>
- * <li>
- * {@linkplain com.tools20022.metamodel.MMBusinessComponent#getDerivationElement
- * derivationElement} =
- * <ul>
- * <li>{@linkplain com.tools20022.repository.msg.PaymentSearch4#mmParties
- * PaymentSearch4.mmParties}</li>
- * <li>
- * {@linkplain com.tools20022.repository.msg.SecuritiesTradeDetails4#mmCashParties
- * SecuritiesTradeDetails4.mmCashParties}</li>
- * <li>
- * {@linkplain com.tools20022.repository.msg.SecuritiesTradeDetails10#mmCashParties
- * SecuritiesTradeDetails10.mmCashParties}</li>
- * <li>{@linkplain com.tools20022.repository.msg.InstrumentLeg2#mmCashParties
- * InstrumentLeg2.mmCashParties}</li>
- * <li>{@linkplain com.tools20022.repository.msg.SingleQuote1#mmCashParties
- * SingleQuote1.mmCashParties}</li>
- * <li>{@linkplain com.tools20022.repository.msg.InstrumentLeg3#mmCashParties
- * InstrumentLeg3.mmCashParties}</li>
- * <li>{@linkplain com.tools20022.repository.msg.QuoteRequest1#mmCashParties
- * QuoteRequest1.mmCashParties}</li>
- * <li>{@linkplain com.tools20022.repository.msg.RequestForQuote#mmCashParties
- * RequestForQuote.mmCashParties}</li>
- * <li>{@linkplain com.tools20022.repository.msg.PaymentSearch5#mmParties
- * PaymentSearch5.mmParties}</li>
- * </ul>
- * </li>
- * <li>{@linkplain com.tools20022.metamodel.MMBusinessComponent#getSuperType
- * superType} = {@linkplain com.tools20022.repository.entity.Role Role}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMBusinessComponent#getDerivationComponent
  * derivationComponent} =
@@ -153,6 +86,76 @@ import java.util.List;
  * <li>{@linkplain com.tools20022.repository.msg.CashParties29 CashParties29}</li>
  * <li>{@linkplain com.tools20022.repository.msg.CashParties30 CashParties30}</li>
  * <li>{@linkplain com.tools20022.repository.msg.CashParties32 CashParties32}</li>
+ * </ul>
+ * </li>
+ * <li>
+ * {@linkplain com.tools20022.metamodel.MMBusinessComponent#getAssociationDomain
+ * associationDomain} =
+ * <ul>
+ * <li>
+ * {@linkplain com.tools20022.repository.entity.CashAccount#mmPaymentPartyRole
+ * CashAccount.mmPaymentPartyRole}</li>
+ * <li>{@linkplain com.tools20022.repository.entity.Payment#mmPartyRole
+ * Payment.mmPartyRole}</li>
+ * </ul>
+ * </li>
+ * <li>
+ * {@linkplain com.tools20022.metamodel.MMBusinessComponent#getDerivationElement
+ * derivationElement} =
+ * <ul>
+ * <li>{@linkplain com.tools20022.repository.msg.PaymentSearch4#mmParties
+ * PaymentSearch4.mmParties}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.msg.SecuritiesTradeDetails4#mmCashParties
+ * SecuritiesTradeDetails4.mmCashParties}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.msg.SecuritiesTradeDetails10#mmCashParties
+ * SecuritiesTradeDetails10.mmCashParties}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.InstrumentLeg2#mmCashParties
+ * InstrumentLeg2.mmCashParties}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.SingleQuote1#mmCashParties
+ * SingleQuote1.mmCashParties}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.InstrumentLeg3#mmCashParties
+ * InstrumentLeg3.mmCashParties}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.QuoteRequest1#mmCashParties
+ * QuoteRequest1.mmCashParties}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.RequestForQuote#mmCashParties
+ * RequestForQuote.mmCashParties}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.PaymentSearch5#mmParties
+ * PaymentSearch5.mmParties}</li>
+ * </ul>
+ * </li>
+ * <li>{@linkplain com.tools20022.metamodel.MMBusinessComponent#getSuperType
+ * superType} = {@linkplain com.tools20022.repository.entity.Role Role}</li>
+ * <li>{@linkplain com.tools20022.metamodel.MMBusinessComponent#getSubType
+ * subType} =
+ * <ul>
+ * <li>{@linkplain com.tools20022.repository.entity.InstructingAgentRole
+ * InstructingAgentRole}</li>
+ * <li>{@linkplain com.tools20022.repository.entity.InstructedAgentRole
+ * InstructedAgentRole}</li>
+ * <li>{@linkplain com.tools20022.repository.entity.DebtorRole DebtorRole}</li>
+ * <li>{@linkplain com.tools20022.repository.entity.DebtorAgentRole
+ * DebtorAgentRole}</li>
+ * <li>{@linkplain com.tools20022.repository.entity.CreditorRole CreditorRole}</li>
+ * <li>{@linkplain com.tools20022.repository.entity.IntermediaryAgentRole
+ * IntermediaryAgentRole}</li>
+ * <li>{@linkplain com.tools20022.repository.entity.CreditorAgentRole
+ * CreditorAgentRole}</li>
+ * <li>{@linkplain com.tools20022.repository.entity.ForwardingAgentRole
+ * ForwardingAgentRole}</li>
+ * <li>{@linkplain com.tools20022.repository.entity.InitiatingPartyRole
+ * InitiatingPartyRole}</li>
+ * </ul>
+ * </li>
+ * <li>{@linkplain com.tools20022.metamodel.MMBusinessComponent#getElement
+ * element} =
+ * <ul>
+ * <li>
+ * {@linkplain com.tools20022.repository.entity.PaymentPartyRole#mmCashAccount
+ * PaymentPartyRole.mmCashAccount}</li>
+ * <li>{@linkplain com.tools20022.repository.entity.PaymentPartyRole#mmPayment
+ * PaymentPartyRole.mmPayment}</li>
  * </ul>
  * </li>
  * <li>
@@ -217,12 +220,12 @@ public class PaymentPartyRole extends Role {
 			derivation_lazy = () -> ListBuilderForPaymentPartyRole_00.addElems(new ArrayList<>());
 			elementContext_lazy = () -> PaymentPartyRole.mmObject();
 			isDerived = false;
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "CashAccount";
 			definition = "Unambiguous identification of the account used in the context of the party role such as debtor account, instructing agent account...";
 			minOccurs = 0;
 			opposite_lazy = () -> com.tools20022.repository.entity.CashAccount.mmPaymentPartyRole;
-			aggregation = com.tools20022.metamodel.MMAggregation.NONE;
+			aggregation = MMAggregation.NONE;
 			type_lazy = () -> com.tools20022.repository.entity.CashAccount.mmObject();
 		}
 	};
@@ -263,12 +266,12 @@ public class PaymentPartyRole extends Role {
 		{
 			elementContext_lazy = () -> PaymentPartyRole.mmObject();
 			isDerived = false;
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "Payment";
 			definition = "Identifies the payment in which a party plays a role.";
 			minOccurs = 1;
 			opposite_lazy = () -> com.tools20022.repository.entity.Payment.mmPartyRole;
-			aggregation = com.tools20022.metamodel.MMAggregation.NONE;
+			aggregation = MMAggregation.NONE;
 			type_lazy = () -> com.tools20022.repository.entity.Payment.mmObject();
 		}
 	};
@@ -276,19 +279,17 @@ public class PaymentPartyRole extends Role {
 	static public MMBusinessComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMBusinessComponent() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "PaymentPartyRole";
 				definition = "Role played by a party in the context of a payment.";
 				associationDomain_lazy = () -> Arrays.asList(com.tools20022.repository.entity.CashAccount.mmPaymentPartyRole, com.tools20022.repository.entity.Payment.mmPartyRole);
-				derivationElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.PaymentSearch4.mmParties, com.tools20022.repository.msg.SecuritiesTradeDetails4.mmCashParties,
-						com.tools20022.repository.msg.SecuritiesTradeDetails10.mmCashParties, com.tools20022.repository.msg.InstrumentLeg2.mmCashParties, com.tools20022.repository.msg.SingleQuote1.mmCashParties,
-						com.tools20022.repository.msg.InstrumentLeg3.mmCashParties, com.tools20022.repository.msg.QuoteRequest1.mmCashParties, com.tools20022.repository.msg.RequestForQuote.mmCashParties,
-						com.tools20022.repository.msg.PaymentSearch5.mmParties);
+				derivationElement_lazy = () -> Arrays.asList(PaymentSearch4.mmParties, SecuritiesTradeDetails4.mmCashParties, SecuritiesTradeDetails10.mmCashParties, InstrumentLeg2.mmCashParties, SingleQuote1.mmCashParties,
+						InstrumentLeg3.mmCashParties, QuoteRequest1.mmCashParties, RequestForQuote.mmCashParties, PaymentSearch5.mmParties);
 				subType_lazy = () -> Arrays.asList(InstructingAgentRole.mmObject(), InstructedAgentRole.mmObject(), DebtorRole.mmObject(), DebtorAgentRole.mmObject(), CreditorRole.mmObject(), IntermediaryAgentRole.mmObject(),
 						CreditorAgentRole.mmObject(), ForwardingAgentRole.mmObject(), InitiatingPartyRole.mmObject());
 				superType_lazy = () -> Role.mmObject();
-				element_lazy = () -> Arrays.asList(com.tools20022.repository.entity.PaymentPartyRole.mmCashAccount, com.tools20022.repository.entity.PaymentPartyRole.mmPayment);
+				element_lazy = () -> Arrays.asList(PaymentPartyRole.mmCashAccount, PaymentPartyRole.mmPayment);
 				derivationComponent_lazy = () -> Arrays.asList(PaymentTransactionParty.mmObject(), PaymentTransactionParty2.mmObject(), CashParties1.mmObject(), CashParties3.mmObject(), CashParties8.mmObject(), CashParties14.mmObject(),
 						CashParties2.mmObject(), CashParties5.mmObject(), CashParties10.mmObject(), CashParties12.mmObject(), CashParties4.mmObject(), CashParties7.mmObject(), CashParties13.mmObject(), CashParties17.mmObject(),
 						CashParties19.mmObject(), CashParties6.mmObject(), TransactionParty1.mmObject(), TransactionParty2.mmObject(), TransactionParties3.mmObject(), CashParties18.mmObject(), SettlementParties1.mmObject(),

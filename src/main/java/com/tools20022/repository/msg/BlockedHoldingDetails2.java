@@ -19,10 +19,14 @@ package com.tools20022.repository.msg;
 
 import com.tools20022.metamodel.MMMessageAttribute;
 import com.tools20022.metamodel.MMMessageComponent;
+import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.codeset.Holding1Code;
 import com.tools20022.repository.datatype.DecimalNumber;
 import com.tools20022.repository.datatype.Max35Text;
+import com.tools20022.repository.entity.GenericIdentification;
 import com.tools20022.repository.entity.InvestmentFundClass;
+import com.tools20022.repository.entity.SecuritiesQuantity;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -115,10 +119,10 @@ public class BlockedHoldingDetails2 {
 			componentContext_lazy = () -> BlockedHoldingDetails2.mmObject();
 			isDerived = false;
 			xmlTag = "BlckdHldg";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "BlockedHolding";
 			definition = "Specifies how the blocked account holding is defined.";
-			previousVersion_lazy = () -> com.tools20022.repository.msg.BlockedHoldingDetails1.mmBlockedHolding;
+			previousVersion_lazy = () -> BlockedHoldingDetails1.mmBlockedHolding;
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> Holding1Code.mmObject();
@@ -168,14 +172,14 @@ public class BlockedHoldingDetails2 {
 	 */
 	public static final MMMessageAttribute mmPartialHoldingUnits = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.SecuritiesQuantity.mmUnit;
+			businessElementTrace_lazy = () -> SecuritiesQuantity.mmUnit;
 			componentContext_lazy = () -> BlockedHoldingDetails2.mmObject();
 			isDerived = false;
 			xmlTag = "PrtlHldgUnits";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PartialHoldingUnits";
 			definition = "When an account is blocked at the level of fund or security, partially, this is the number of units blocked.";
-			previousVersion_lazy = () -> com.tools20022.repository.msg.BlockedHoldingDetails1.mmPartialHoldingUnits;
+			previousVersion_lazy = () -> BlockedHoldingDetails1.mmPartialHoldingUnits;
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> DecimalNumber.mmObject();
@@ -224,14 +228,14 @@ public class BlockedHoldingDetails2 {
 	 */
 	public static final MMMessageAttribute mmHoldingCertificateNumber = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.GenericIdentification.mmIdentification;
+			businessElementTrace_lazy = () -> GenericIdentification.mmIdentification;
 			componentContext_lazy = () -> BlockedHoldingDetails2.mmObject();
 			isDerived = false;
 			xmlTag = "HldgCertNb";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "HoldingCertificateNumber";
 			definition = "When an account is blocked at the level of fund or security, this specifies the certificate number of the blocked units.";
-			previousVersion_lazy = () -> com.tools20022.repository.msg.BlockedHoldingDetails1.mmHoldingCertificateNumber;
+			previousVersion_lazy = () -> BlockedHoldingDetails1.mmHoldingCertificateNumber;
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> Max35Text.mmObject();
@@ -241,11 +245,10 @@ public class BlockedHoldingDetails2 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.BlockedHoldingDetails2.mmBlockedHolding, com.tools20022.repository.msg.BlockedHoldingDetails2.mmPartialHoldingUnits,
-						com.tools20022.repository.msg.BlockedHoldingDetails2.mmHoldingCertificateNumber);
+				messageElement_lazy = () -> Arrays.asList(BlockedHoldingDetails2.mmBlockedHolding, BlockedHoldingDetails2.mmPartialHoldingUnits, BlockedHoldingDetails2.mmHoldingCertificateNumber);
 				trace_lazy = () -> InvestmentFundClass.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "BlockedHoldingDetails2";
 				definition = "Information about a blocked holding.";
 				previousVersion_lazy = () -> BlockedHoldingDetails1.mmObject();

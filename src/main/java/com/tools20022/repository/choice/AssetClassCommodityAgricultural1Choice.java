@@ -19,7 +19,9 @@ package com.tools20022.repository.choice;
 
 import com.tools20022.metamodel.MMChoiceComponent;
 import com.tools20022.metamodel.MMMessageAssociationEnd;
+import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.entity.Commodity;
+import com.tools20022.repository.GeneratedRepository;
 import com.tools20022.repository.msg.*;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
@@ -119,11 +121,11 @@ public class AssetClassCommodityAgricultural1Choice {
 	 */
 	public static final MMMessageAssociationEnd mmGrainOilSeed = new MMMessageAssociationEnd() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Commodity.mmSubProduct;
+			businessElementTrace_lazy = () -> Commodity.mmSubProduct;
 			componentContext_lazy = () -> AssetClassCommodityAgricultural1Choice.mmObject();
 			isDerived = false;
 			xmlTag = "GrnOilSeed";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "GrainOilSeed";
 			definition = "Grain oil seed agricultural commodity derivative.";
 			maxOccurs = 1;
@@ -167,11 +169,11 @@ public class AssetClassCommodityAgricultural1Choice {
 	 */
 	public static final MMMessageAssociationEnd mmSoft = new MMMessageAssociationEnd() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Commodity.mmSubProduct;
+			businessElementTrace_lazy = () -> Commodity.mmSubProduct;
 			componentContext_lazy = () -> AssetClassCommodityAgricultural1Choice.mmObject();
 			isDerived = false;
 			xmlTag = "Soft";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Soft";
 			definition = "Soft agricultural commodity derivative.";
 			maxOccurs = 1;
@@ -215,11 +217,11 @@ public class AssetClassCommodityAgricultural1Choice {
 	 */
 	public static final MMMessageAssociationEnd mmPotato = new MMMessageAssociationEnd() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Commodity.mmSubProduct;
+			businessElementTrace_lazy = () -> Commodity.mmSubProduct;
 			componentContext_lazy = () -> AssetClassCommodityAgricultural1Choice.mmObject();
 			isDerived = false;
 			xmlTag = "Ptt";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Potato";
 			definition = "Potato agricultural commodity derivative.";
 			maxOccurs = 1;
@@ -263,11 +265,11 @@ public class AssetClassCommodityAgricultural1Choice {
 	 */
 	public static final MMMessageAssociationEnd mmOliveOil = new MMMessageAssociationEnd() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Commodity.mmSubProduct;
+			businessElementTrace_lazy = () -> Commodity.mmSubProduct;
 			componentContext_lazy = () -> AssetClassCommodityAgricultural1Choice.mmObject();
 			isDerived = false;
 			xmlTag = "OlvOil";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "OliveOil";
 			definition = "Olive oil agricultural commodity derivative.";
 			maxOccurs = 1;
@@ -311,11 +313,11 @@ public class AssetClassCommodityAgricultural1Choice {
 	 */
 	public static final MMMessageAssociationEnd mmDairy = new MMMessageAssociationEnd() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Commodity.mmSubProduct;
+			businessElementTrace_lazy = () -> Commodity.mmSubProduct;
 			componentContext_lazy = () -> AssetClassCommodityAgricultural1Choice.mmObject();
 			isDerived = false;
 			xmlTag = "Dairy";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Dairy";
 			definition = "Dairy agricultural commodity derivative.";
 			maxOccurs = 1;
@@ -359,11 +361,11 @@ public class AssetClassCommodityAgricultural1Choice {
 	 */
 	public static final MMMessageAssociationEnd mmForestry = new MMMessageAssociationEnd() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Commodity.mmSubProduct;
+			businessElementTrace_lazy = () -> Commodity.mmSubProduct;
 			componentContext_lazy = () -> AssetClassCommodityAgricultural1Choice.mmObject();
 			isDerived = false;
 			xmlTag = "Frstry";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Forestry";
 			definition = "Forestry agricultural commodity derivative.";
 			maxOccurs = 1;
@@ -407,11 +409,11 @@ public class AssetClassCommodityAgricultural1Choice {
 	 */
 	public static final MMMessageAssociationEnd mmSeafood = new MMMessageAssociationEnd() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Commodity.mmSubProduct;
+			businessElementTrace_lazy = () -> Commodity.mmSubProduct;
 			componentContext_lazy = () -> AssetClassCommodityAgricultural1Choice.mmObject();
 			isDerived = false;
 			xmlTag = "Sfd";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Seafood";
 			definition = "Seafood agricultural commodity derivative.";
 			maxOccurs = 1;
@@ -455,11 +457,11 @@ public class AssetClassCommodityAgricultural1Choice {
 	 */
 	public static final MMMessageAssociationEnd mmLiveStock = new MMMessageAssociationEnd() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Commodity.mmSubProduct;
+			businessElementTrace_lazy = () -> Commodity.mmSubProduct;
 			componentContext_lazy = () -> AssetClassCommodityAgricultural1Choice.mmObject();
 			isDerived = false;
 			xmlTag = "LiveStock";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "LiveStock";
 			definition = "Livestock agricultural commodity derivative.";
 			maxOccurs = 1;
@@ -503,11 +505,11 @@ public class AssetClassCommodityAgricultural1Choice {
 	 */
 	public static final MMMessageAssociationEnd mmGrain = new MMMessageAssociationEnd() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Commodity.mmSubProduct;
+			businessElementTrace_lazy = () -> Commodity.mmSubProduct;
 			componentContext_lazy = () -> AssetClassCommodityAgricultural1Choice.mmObject();
 			isDerived = false;
 			xmlTag = "Grn";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Grain";
 			definition = "Grain agricultural commodity derivative.";
 			maxOccurs = 1;
@@ -520,14 +522,12 @@ public class AssetClassCommodityAgricultural1Choice {
 	final static public MMChoiceComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMChoiceComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.choice.AssetClassCommodityAgricultural1Choice.mmGrainOilSeed, com.tools20022.repository.choice.AssetClassCommodityAgricultural1Choice.mmSoft,
-						com.tools20022.repository.choice.AssetClassCommodityAgricultural1Choice.mmPotato, com.tools20022.repository.choice.AssetClassCommodityAgricultural1Choice.mmOliveOil,
-						com.tools20022.repository.choice.AssetClassCommodityAgricultural1Choice.mmDairy, com.tools20022.repository.choice.AssetClassCommodityAgricultural1Choice.mmForestry,
-						com.tools20022.repository.choice.AssetClassCommodityAgricultural1Choice.mmSeafood, com.tools20022.repository.choice.AssetClassCommodityAgricultural1Choice.mmLiveStock,
-						com.tools20022.repository.choice.AssetClassCommodityAgricultural1Choice.mmGrain);
+				messageElement_lazy = () -> Arrays.asList(AssetClassCommodityAgricultural1Choice.mmGrainOilSeed, AssetClassCommodityAgricultural1Choice.mmSoft, AssetClassCommodityAgricultural1Choice.mmPotato,
+						AssetClassCommodityAgricultural1Choice.mmOliveOil, AssetClassCommodityAgricultural1Choice.mmDairy, AssetClassCommodityAgricultural1Choice.mmForestry, AssetClassCommodityAgricultural1Choice.mmSeafood,
+						AssetClassCommodityAgricultural1Choice.mmLiveStock, AssetClassCommodityAgricultural1Choice.mmGrain);
 				trace_lazy = () -> Commodity.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "AssetClassCommodityAgricultural1Choice";
 				definition = "Defines commodity attributes of a derivative where the type is agricultural.";
 			}

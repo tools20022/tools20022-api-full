@@ -19,6 +19,8 @@ package com.tools20022.repository.codeset;
 
 import com.tools20022.metamodel.MMCode;
 import com.tools20022.metamodel.MMCodeSet;
+import com.tools20022.metamodel.MMRegistrationStatus;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -27,6 +29,13 @@ import java.util.concurrent.atomic.AtomicReference;
  * <p>
  * <strong>Constant fields:</strong>
  * <ul>
+ * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getDerivation derivation}
+ * =
+ * <ul>
+ * <li>{@linkplain com.tools20022.repository.codeset.ServiceTaxDesignation1Code
+ * ServiceTaxDesignation1Code}</li>
+ * </ul>
+ * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getCode code} =
  * <ul>
  * <li>
@@ -38,13 +47,6 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>
  * {@linkplain com.tools20022.repository.codeset.ServiceTaxDesignationCode#mmTaxable
  * ServiceTaxDesignationCode.mmTaxable}</li>
- * </ul>
- * </li>
- * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getDerivation derivation}
- * =
- * <ul>
- * <li>{@linkplain com.tools20022.repository.codeset.ServiceTaxDesignation1Code
- * ServiceTaxDesignation1Code}</li>
  * </ul>
  * </li>
  * <li>
@@ -94,7 +96,7 @@ public class ServiceTaxDesignationCode {
 	 */
 	public static final MMCode mmExempt = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Exempt";
 			definition = "No taxes are due.";
 			owner_lazy = () -> ServiceTaxDesignationCode.mmObject();
@@ -124,7 +126,7 @@ public class ServiceTaxDesignationCode {
 	 */
 	public static final MMCode mmZeroRate = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ZeroRate";
 			definition = "Tax is due but at zero percent and a zero charge.";
 			owner_lazy = () -> ServiceTaxDesignationCode.mmObject();
@@ -154,7 +156,7 @@ public class ServiceTaxDesignationCode {
 	 */
 	public static final MMCode mmTaxable = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Taxable";
 			definition = "One or more taxes are due on this service.";
 			owner_lazy = () -> ServiceTaxDesignationCode.mmObject();
@@ -165,13 +167,12 @@ public class ServiceTaxDesignationCode {
 	static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
 				example = Arrays.asList("XMPT");
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "ServiceTaxDesignationCode";
 				definition = "Defines the taxable status of the service.";
-				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.ServiceTaxDesignationCode.mmExempt, com.tools20022.repository.codeset.ServiceTaxDesignationCode.mmZeroRate,
-						com.tools20022.repository.codeset.ServiceTaxDesignationCode.mmTaxable);
+				code_lazy = () -> Arrays.asList(ServiceTaxDesignationCode.mmExempt, ServiceTaxDesignationCode.mmZeroRate, ServiceTaxDesignationCode.mmTaxable);
 				derivation_lazy = () -> Arrays.asList(ServiceTaxDesignation1Code.mmObject());
 			}
 		});

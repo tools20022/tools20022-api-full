@@ -20,9 +20,12 @@ package com.tools20022.repository.msg;
 import com.tools20022.metamodel.MMMessageAssociationEnd;
 import com.tools20022.metamodel.MMMessageAttribute;
 import com.tools20022.metamodel.MMMessageComponent;
+import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.datatype.YesNoIndicator;
 import com.tools20022.repository.entity.ContactPersonRole;
+import com.tools20022.repository.entity.Party;
 import com.tools20022.repository.entity.PhysicalDelivery;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -106,11 +109,11 @@ public class DeliveryParameters4 {
 	 */
 	public static final MMMessageAttribute mmRegisteredAddressIndicator = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.PhysicalDelivery.mmRegisteredAddressIndicator;
+			businessElementTrace_lazy = () -> PhysicalDelivery.mmRegisteredAddressIndicator;
 			componentContext_lazy = () -> DeliveryParameters4.mmObject();
 			isDerived = false;
 			xmlTag = "RegdAdrInd";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "RegisteredAddressIndicator";
 			definition = "Indicates whether the address for the physical delivery is the registered address.";
 			maxOccurs = 1;
@@ -156,11 +159,11 @@ public class DeliveryParameters4 {
 	 */
 	public static final MMMessageAttribute mmNameAndAddress = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Party.mmIdentification;
+			businessElementTrace_lazy = () -> Party.mmIdentification;
 			componentContext_lazy = () -> DeliveryParameters4.mmObject();
 			isDerived = false;
 			xmlTag = "NmAndAdr";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "NameAndAddress";
 			definition = "Name and address to/from which the physical delivery/receipt of the financial instrument must take place.";
 			maxOccurs = 1;
@@ -206,7 +209,7 @@ public class DeliveryParameters4 {
 			componentContext_lazy = () -> DeliveryParameters4.mmObject();
 			isDerived = false;
 			xmlTag = "CtctPrsn";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ContactPerson";
 			definition = "Contact person and contact information.";
 			maxOccurs = 1;
@@ -219,11 +222,10 @@ public class DeliveryParameters4 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.DeliveryParameters4.mmRegisteredAddressIndicator, com.tools20022.repository.msg.DeliveryParameters4.mmNameAndAddress,
-						com.tools20022.repository.msg.DeliveryParameters4.mmContactPerson);
+				messageElement_lazy = () -> Arrays.asList(DeliveryParameters4.mmRegisteredAddressIndicator, DeliveryParameters4.mmNameAndAddress, DeliveryParameters4.mmContactPerson);
 				trace_lazy = () -> PhysicalDelivery.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "DeliveryParameters4";
 				definition = "Parameters of a physical delivery.";
 			}

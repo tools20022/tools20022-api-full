@@ -19,7 +19,9 @@ package com.tools20022.repository.codeset;
 
 import com.tools20022.metamodel.MMCode;
 import com.tools20022.metamodel.MMCodeSet;
+import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.codeset.TradeTypeCode;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -135,7 +137,7 @@ public class TradeType3Code extends TradeTypeCode {
 	 */
 	public static final MMCode mmBasket = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Basket";
 			owner_lazy = () -> TradeType3Code.mmObject();
 		}
@@ -158,7 +160,7 @@ public class TradeType3Code extends TradeTypeCode {
 	 */
 	public static final MMCode mmIndex = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Index";
 			owner_lazy = () -> TradeType3Code.mmObject();
 		}
@@ -181,7 +183,7 @@ public class TradeType3Code extends TradeTypeCode {
 	 */
 	public static final MMCode mmIPO = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "IPO";
 			owner_lazy = () -> TradeType3Code.mmObject();
 		}
@@ -204,7 +206,7 @@ public class TradeType3Code extends TradeTypeCode {
 	 */
 	public static final MMCode mmList = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "List";
 			owner_lazy = () -> TradeType3Code.mmObject();
 		}
@@ -227,7 +229,7 @@ public class TradeType3Code extends TradeTypeCode {
 	 */
 	public static final MMCode mmPreAllocation = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PreAllocation";
 			owner_lazy = () -> TradeType3Code.mmObject();
 		}
@@ -250,7 +252,7 @@ public class TradeType3Code extends TradeTypeCode {
 	 */
 	public static final MMCode mmProgram = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Program";
 			owner_lazy = () -> TradeType3Code.mmObject();
 		}
@@ -273,7 +275,7 @@ public class TradeType3Code extends TradeTypeCode {
 	 */
 	public static final MMCode mmTrade = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Trade";
 			owner_lazy = () -> TradeType3Code.mmObject();
 		}
@@ -296,7 +298,7 @@ public class TradeType3Code extends TradeTypeCode {
 	 */
 	public static final MMCode mmBrokerToBroker = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "BrokerToBroker";
 			owner_lazy = () -> TradeType3Code.mmObject();
 		}
@@ -319,7 +321,7 @@ public class TradeType3Code extends TradeTypeCode {
 	 */
 	public static final MMCode mmRiskTrade = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "RiskTrade";
 			owner_lazy = () -> TradeType3Code.mmObject();
 		}
@@ -342,7 +344,7 @@ public class TradeType3Code extends TradeTypeCode {
 	 */
 	public static final MMCode mmVWAPGuarantee = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "VWAPGuarantee";
 			owner_lazy = () -> TradeType3Code.mmObject();
 		}
@@ -365,7 +367,7 @@ public class TradeType3Code extends TradeTypeCode {
 	 */
 	public static final MMCode mmAgency = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Agency";
 			owner_lazy = () -> TradeType3Code.mmObject();
 		}
@@ -388,7 +390,7 @@ public class TradeType3Code extends TradeTypeCode {
 	 */
 	public static final MMCode mmGuaranteedClose = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "GuaranteedClose";
 			owner_lazy = () -> TradeType3Code.mmObject();
 		}
@@ -411,7 +413,7 @@ public class TradeType3Code extends TradeTypeCode {
 	 */
 	public static final MMCode mmEmployeeTradeReporting = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "EmployeeTradeReporting";
 			owner_lazy = () -> TradeType3Code.mmObject();
 		}
@@ -434,7 +436,7 @@ public class TradeType3Code extends TradeTypeCode {
 	 */
 	public static final MMCode mmIssuance = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Issuance";
 			owner_lazy = () -> TradeType3Code.mmObject();
 		}
@@ -457,7 +459,7 @@ public class TradeType3Code extends TradeTypeCode {
 	 */
 	public static final MMCode mmBondStart = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "BondStart";
 			owner_lazy = () -> TradeType3Code.mmObject();
 		}
@@ -480,7 +482,7 @@ public class TradeType3Code extends TradeTypeCode {
 	 */
 	public static final MMCode mmBondEnd = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "BondEnd";
 			owner_lazy = () -> TradeType3Code.mmObject();
 		}
@@ -503,7 +505,7 @@ public class TradeType3Code extends TradeTypeCode {
 	 */
 	public static final MMCode mmLendingAndBorrowing = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "LendingAndBorrowing";
 			owner_lazy = () -> TradeType3Code.mmObject();
 		}
@@ -526,7 +528,7 @@ public class TradeType3Code extends TradeTypeCode {
 	 */
 	public static final MMCode mmBondRepricing = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "BondRepricing";
 			owner_lazy = () -> TradeType3Code.mmObject();
 		}
@@ -549,7 +551,7 @@ public class TradeType3Code extends TradeTypeCode {
 	 */
 	public static final MMCode mmOfferingIssuingTrade = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "OfferingIssuingTrade";
 			owner_lazy = () -> TradeType3Code.mmObject();
 		}
@@ -572,7 +574,7 @@ public class TradeType3Code extends TradeTypeCode {
 	 */
 	public static final MMCode mmBondSubstitution = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "BondSubstitution";
 			owner_lazy = () -> TradeType3Code.mmObject();
 		}
@@ -595,7 +597,7 @@ public class TradeType3Code extends TradeTypeCode {
 	 */
 	public static final MMCode mmFutureBuyBackTrade = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "FutureBuyBackTrade";
 			owner_lazy = () -> TradeType3Code.mmObject();
 		}
@@ -618,7 +620,7 @@ public class TradeType3Code extends TradeTypeCode {
 	 */
 	public static final MMCode mmOptions = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Options";
 			owner_lazy = () -> TradeType3Code.mmObject();
 		}
@@ -641,7 +643,7 @@ public class TradeType3Code extends TradeTypeCode {
 	 */
 	public static final MMCode mmFuturesOption = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "FuturesOption";
 			owner_lazy = () -> TradeType3Code.mmObject();
 		}
@@ -664,7 +666,7 @@ public class TradeType3Code extends TradeTypeCode {
 	 */
 	public static final MMCode mmFutures = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Futures";
 			owner_lazy = () -> TradeType3Code.mmObject();
 		}
@@ -673,19 +675,15 @@ public class TradeType3Code extends TradeTypeCode {
 	static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
 				example = Arrays.asList("BSKT");
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "TradeType3Code";
 				definition = "Specifies the type of executed order.";
-				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.TradeType3Code.mmBasket, com.tools20022.repository.codeset.TradeType3Code.mmIndex, com.tools20022.repository.codeset.TradeType3Code.mmIPO,
-						com.tools20022.repository.codeset.TradeType3Code.mmList, com.tools20022.repository.codeset.TradeType3Code.mmPreAllocation, com.tools20022.repository.codeset.TradeType3Code.mmProgram,
-						com.tools20022.repository.codeset.TradeType3Code.mmTrade, com.tools20022.repository.codeset.TradeType3Code.mmBrokerToBroker, com.tools20022.repository.codeset.TradeType3Code.mmRiskTrade,
-						com.tools20022.repository.codeset.TradeType3Code.mmVWAPGuarantee, com.tools20022.repository.codeset.TradeType3Code.mmAgency, com.tools20022.repository.codeset.TradeType3Code.mmGuaranteedClose,
-						com.tools20022.repository.codeset.TradeType3Code.mmEmployeeTradeReporting, com.tools20022.repository.codeset.TradeType3Code.mmIssuance, com.tools20022.repository.codeset.TradeType3Code.mmBondStart,
-						com.tools20022.repository.codeset.TradeType3Code.mmBondEnd, com.tools20022.repository.codeset.TradeType3Code.mmLendingAndBorrowing, com.tools20022.repository.codeset.TradeType3Code.mmBondRepricing,
-						com.tools20022.repository.codeset.TradeType3Code.mmOfferingIssuingTrade, com.tools20022.repository.codeset.TradeType3Code.mmBondSubstitution, com.tools20022.repository.codeset.TradeType3Code.mmFutureBuyBackTrade,
-						com.tools20022.repository.codeset.TradeType3Code.mmOptions, com.tools20022.repository.codeset.TradeType3Code.mmFuturesOption, com.tools20022.repository.codeset.TradeType3Code.mmFutures);
+				code_lazy = () -> Arrays.asList(TradeType3Code.mmBasket, TradeType3Code.mmIndex, TradeType3Code.mmIPO, TradeType3Code.mmList, TradeType3Code.mmPreAllocation, TradeType3Code.mmProgram, TradeType3Code.mmTrade,
+						TradeType3Code.mmBrokerToBroker, TradeType3Code.mmRiskTrade, TradeType3Code.mmVWAPGuarantee, TradeType3Code.mmAgency, TradeType3Code.mmGuaranteedClose, TradeType3Code.mmEmployeeTradeReporting,
+						TradeType3Code.mmIssuance, TradeType3Code.mmBondStart, TradeType3Code.mmBondEnd, TradeType3Code.mmLendingAndBorrowing, TradeType3Code.mmBondRepricing, TradeType3Code.mmOfferingIssuingTrade,
+						TradeType3Code.mmBondSubstitution, TradeType3Code.mmFutureBuyBackTrade, TradeType3Code.mmOptions, TradeType3Code.mmFuturesOption, TradeType3Code.mmFutures);
 				trace_lazy = () -> TradeTypeCode.mmObject();
 			}
 		});

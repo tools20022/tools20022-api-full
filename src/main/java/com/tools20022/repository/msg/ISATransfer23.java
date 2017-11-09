@@ -20,12 +20,15 @@ package com.tools20022.repository.msg;
 import com.tools20022.metamodel.MMMessageAssociationEnd;
 import com.tools20022.metamodel.MMMessageAttribute;
 import com.tools20022.metamodel.MMMessageComponent;
+import com.tools20022.metamodel.MMRegistrationStatus;
+import com.tools20022.repository.area.sese.AccountHoldingInformationV05;
 import com.tools20022.repository.choice.ISAPortfolio1Choice;
 import com.tools20022.repository.codeset.AllOtherCash1Code;
 import com.tools20022.repository.codeset.ResidualCash1Code;
 import com.tools20022.repository.datatype.Max35Text;
 import com.tools20022.repository.entity.InvestmentFundClass;
 import com.tools20022.repository.entity.PortfolioTransfer;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.List;
@@ -134,10 +137,10 @@ public class ISATransfer23 {
 			componentContext_lazy = () -> ISATransfer23.mmObject();
 			isDerived = false;
 			xmlTag = "MstrRef";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "MasterReference";
 			definition = "Unique and unambiguous identifier for a group of individual transfers as assigned by the instructing party. This identifier links the individual transfers together.";
-			previousVersion_lazy = () -> com.tools20022.repository.msg.ISATransfer14.mmMasterReference;
+			previousVersion_lazy = () -> ISATransfer14.mmMasterReference;
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> Max35Text.mmObject();
@@ -183,10 +186,10 @@ public class ISATransfer23 {
 			componentContext_lazy = () -> ISATransfer23.mmObject();
 			isDerived = false;
 			xmlTag = "TrfId";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "TransferIdentification";
 			definition = "Identification assigned to the transfer of asset, typically assigned by the transferee.";
-			previousVersion_lazy = () -> com.tools20022.repository.msg.ISATransfer14.mmTransferIdentification;
+			previousVersion_lazy = () -> ISATransfer14.mmTransferIdentification;
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> Max35Text.mmObject();
@@ -232,10 +235,10 @@ public class ISATransfer23 {
 			componentContext_lazy = () -> ISATransfer23.mmObject();
 			isDerived = false;
 			xmlTag = "TrfConfId";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "TransferConfirmationIdentification";
 			definition = "Identification of the confirmation assigned by the transferor to the transfer.";
-			previousVersion_lazy = () -> com.tools20022.repository.msg.ISATransfer14.mmTransferConfirmationIdentification;
+			previousVersion_lazy = () -> ISATransfer14.mmTransferConfirmationIdentification;
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> Max35Text.mmObject();
@@ -282,10 +285,10 @@ public class ISATransfer23 {
 			componentContext_lazy = () -> ISATransfer23.mmObject();
 			isDerived = false;
 			xmlTag = "RsdlCsh";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ResidualCash";
 			definition = "Indicates whether there is cash in the account that is awaiting investment.";
-			previousVersion_lazy = () -> com.tools20022.repository.msg.ISATransfer14.mmResidualCash;
+			previousVersion_lazy = () -> ISATransfer14.mmResidualCash;
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> ResidualCash1Code.mmObject();
@@ -332,14 +335,14 @@ public class ISATransfer23 {
 	 */
 	public static final MMMessageAssociationEnd mmPortfolio = new MMMessageAssociationEnd() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.PortfolioTransfer.mmTransferredPortfolio;
+			businessElementTrace_lazy = () -> PortfolioTransfer.mmTransferredPortfolio;
 			componentContext_lazy = () -> ISATransfer23.mmObject();
 			isDerived = false;
 			xmlTag = "Prtfl";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Portfolio";
 			definition = "Specifies portfolio information or government schemes, for example Individual Savings Account (ISA) in the UK.";
-			previousVersion_lazy = () -> com.tools20022.repository.msg.ISATransfer14.mmPortfolio;
+			previousVersion_lazy = () -> ISATransfer14.mmPortfolio;
 			maxOccurs = 1;
 			minOccurs = 0;
 			isComposite = true;
@@ -387,10 +390,10 @@ public class ISATransfer23 {
 			componentContext_lazy = () -> ISATransfer23.mmObject();
 			isDerived = false;
 			xmlTag = "AllOthrCsh";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AllOtherCash";
 			definition = "Specifies whether all remaining assets in a portfolio not listed for transfer should be liquidated and transferred as cash.";
-			previousVersion_lazy = () -> com.tools20022.repository.msg.ISATransfer14.mmAllOtherCash;
+			previousVersion_lazy = () -> ISATransfer14.mmAllOtherCash;
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> AllOtherCash1Code.mmObject();
@@ -439,10 +442,10 @@ public class ISATransfer23 {
 			componentContext_lazy = () -> ISATransfer23.mmObject();
 			isDerived = false;
 			xmlTag = "FinInstrmAsstForTrf";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "FinancialInstrumentAssetForTransfer";
 			definition = "Specifies the underlying assets for the ISA or portfolio.";
-			previousVersion_lazy = () -> com.tools20022.repository.msg.ISATransfer14.mmFinancialInstrumentAssetForTransfer;
+			previousVersion_lazy = () -> ISATransfer14.mmFinancialInstrumentAssetForTransfer;
 			minOccurs = 0;
 			isComposite = true;
 			type_lazy = () -> com.tools20022.repository.msg.FinancialInstrument47.mmObject();
@@ -452,13 +455,12 @@ public class ISATransfer23 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.ISATransfer23.mmMasterReference, com.tools20022.repository.msg.ISATransfer23.mmTransferIdentification,
-						com.tools20022.repository.msg.ISATransfer23.mmTransferConfirmationIdentification, com.tools20022.repository.msg.ISATransfer23.mmResidualCash, com.tools20022.repository.msg.ISATransfer23.mmPortfolio,
-						com.tools20022.repository.msg.ISATransfer23.mmAllOtherCash, com.tools20022.repository.msg.ISATransfer23.mmFinancialInstrumentAssetForTransfer);
-				messageBuildingBlock_lazy = () -> Arrays.asList(com.tools20022.repository.area.sese.AccountHoldingInformationV05.mmProductTransfer);
+				messageElement_lazy = () -> Arrays.asList(ISATransfer23.mmMasterReference, ISATransfer23.mmTransferIdentification, ISATransfer23.mmTransferConfirmationIdentification, ISATransfer23.mmResidualCash, ISATransfer23.mmPortfolio,
+						ISATransfer23.mmAllOtherCash, ISATransfer23.mmFinancialInstrumentAssetForTransfer);
+				messageBuildingBlock_lazy = () -> Arrays.asList(AccountHoldingInformationV05.mmProductTransfer);
 				trace_lazy = () -> PortfolioTransfer.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "ISATransfer23";
 				definition = "Describes the type of product and the assets to be transferred.";
 				previousVersion_lazy = () -> ISATransfer14.mmObject();

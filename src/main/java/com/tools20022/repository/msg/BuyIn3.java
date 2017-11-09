@@ -20,11 +20,15 @@ package com.tools20022.repository.msg;
 import com.tools20022.metamodel.MMMessageAssociationEnd;
 import com.tools20022.metamodel.MMMessageAttribute;
 import com.tools20022.metamodel.MMMessageComponent;
+import com.tools20022.metamodel.MMRegistrationStatus;
+import com.tools20022.repository.area.secl.BuyInResponseV03;
 import com.tools20022.repository.choice.FinancialInstrumentQuantity1Choice;
 import com.tools20022.repository.datatype.Max35Text;
 import com.tools20022.repository.datatype.Number;
 import com.tools20022.repository.datatype.YesNoIndicator;
 import com.tools20022.repository.entity.BuyIn;
+import com.tools20022.repository.entity.SecuritiesTransfer;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -118,7 +122,7 @@ public class BuyIn3 {
 			componentContext_lazy = () -> BuyIn3.mmObject();
 			isDerived = false;
 			xmlTag = "BuyInNtfctnId";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "BuyInNotificationIdentification";
 			definition = "Indicates the reference of the BuyInNotification message.";
 			maxOccurs = 1;
@@ -163,7 +167,7 @@ public class BuyIn3 {
 			componentContext_lazy = () -> BuyIn3.mmObject();
 			isDerived = false;
 			xmlTag = "ReqForDelyInd";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "RequestForDelayIndicator";
 			definition = "Specific continuous net settlement case where the central counterparty can call for buy-in at a date anterior to \"theoretical\" buy-in date, the clearing member may request a delay.";
 			maxOccurs = 1;
@@ -203,7 +207,7 @@ public class BuyIn3 {
 			componentContext_lazy = () -> BuyIn3.mmObject();
 			isDerived = false;
 			xmlTag = "NbOfDays";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "NumberOfDays";
 			definition = "Number of days associated to the request for delay.";
 			maxOccurs = 1;
@@ -246,11 +250,11 @@ public class BuyIn3 {
 	 */
 	public static final MMMessageAssociationEnd mmInitialQuantity = new MMMessageAssociationEnd() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.BuyIn.mmSecuritiesCompensation;
+			businessElementTrace_lazy = () -> BuyIn.mmSecuritiesCompensation;
 			componentContext_lazy = () -> BuyIn3.mmObject();
 			isDerived = false;
 			xmlTag = "InitlQty";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "InitialQuantity";
 			definition = "Buy in quantity called initially by the central counterparty.";
 			maxOccurs = 1;
@@ -294,11 +298,11 @@ public class BuyIn3 {
 	 */
 	public static final MMMessageAssociationEnd mmCoveredQuantity = new MMMessageAssociationEnd() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.SecuritiesTransfer.mmTransferredQuantity;
+			businessElementTrace_lazy = () -> SecuritiesTransfer.mmTransferredQuantity;
 			componentContext_lazy = () -> BuyIn3.mmObject();
 			isDerived = false;
 			xmlTag = "CvrdQty";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CoveredQuantity";
 			definition = "Quantity amount covered by the clearing member after notification.";
 			maxOccurs = 1;
@@ -344,11 +348,11 @@ public class BuyIn3 {
 	 */
 	public static final MMMessageAssociationEnd mmUncoveredQuantity = new MMMessageAssociationEnd() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.BuyIn.mmSecuritiesCompensation;
+			businessElementTrace_lazy = () -> BuyIn.mmSecuritiesCompensation;
 			componentContext_lazy = () -> BuyIn3.mmObject();
 			isDerived = false;
 			xmlTag = "UcvrdQty";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "UncoveredQuantity";
 			definition = "Quantity amount non covered by the clearing member after notification (this is, new buy in amount to be executed).";
 			maxOccurs = 1;
@@ -361,13 +365,11 @@ public class BuyIn3 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.BuyIn3.mmBuyInNotificationIdentification, com.tools20022.repository.msg.BuyIn3.mmRequestForDelayIndicator,
-						com.tools20022.repository.msg.BuyIn3.mmNumberOfDays, com.tools20022.repository.msg.BuyIn3.mmInitialQuantity, com.tools20022.repository.msg.BuyIn3.mmCoveredQuantity,
-						com.tools20022.repository.msg.BuyIn3.mmUncoveredQuantity);
-				messageBuildingBlock_lazy = () -> Arrays.asList(com.tools20022.repository.area.secl.BuyInResponseV03.mmBuyInResponseDetails);
+				messageElement_lazy = () -> Arrays.asList(BuyIn3.mmBuyInNotificationIdentification, BuyIn3.mmRequestForDelayIndicator, BuyIn3.mmNumberOfDays, BuyIn3.mmInitialQuantity, BuyIn3.mmCoveredQuantity, BuyIn3.mmUncoveredQuantity);
+				messageBuildingBlock_lazy = () -> Arrays.asList(BuyInResponseV03.mmBuyInResponseDetails);
 				trace_lazy = () -> BuyIn.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "BuyIn3";
 				definition = "Specifies elements related to the response sent by the clearing member to the central counterparty in the context of the buy in process.";
 			}

@@ -19,6 +19,8 @@ package com.tools20022.repository.msg;
 
 import com.tools20022.metamodel.MMMessageAssociationEnd;
 import com.tools20022.metamodel.MMMessageComponent;
+import com.tools20022.metamodel.MMRegistrationStatus;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -95,7 +97,7 @@ public class ReceiptAcknowledgementReport1 {
 			componentContext_lazy = () -> ReceiptAcknowledgementReport1.mmObject();
 			isDerived = false;
 			xmlTag = "RltdRef";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "RelatedReference";
 			definition = "Reference of the request.";
 			maxOccurs = 1;
@@ -136,7 +138,7 @@ public class ReceiptAcknowledgementReport1 {
 			componentContext_lazy = () -> ReceiptAcknowledgementReport1.mmObject();
 			isDerived = false;
 			xmlTag = "ReqHdlg";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "RequestHandling";
 			definition = "Gives the status of the request.";
 			maxOccurs = 1;
@@ -180,7 +182,7 @@ public class ReceiptAcknowledgementReport1 {
 			componentContext_lazy = () -> ReceiptAcknowledgementReport1.mmObject();
 			isDerived = false;
 			xmlTag = "OrgnlMsgId";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "OriginalMessageIdentification";
 			definition = "Identification of the original message for which the acknowledgement is sent.";
 			maxOccurs = 1;
@@ -193,10 +195,9 @@ public class ReceiptAcknowledgementReport1 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.ReceiptAcknowledgementReport1.mmRelatedReference, com.tools20022.repository.msg.ReceiptAcknowledgementReport1.mmRequestHandling,
-						com.tools20022.repository.msg.ReceiptAcknowledgementReport1.mmOriginalMessageIdentification);
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+				messageElement_lazy = () -> Arrays.asList(ReceiptAcknowledgementReport1.mmRelatedReference, ReceiptAcknowledgementReport1.mmRequestHandling, ReceiptAcknowledgementReport1.mmOriginalMessageIdentification);
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 				name = "ReceiptAcknowledgementReport1";
 				definition = "Provides details on the original request. Identifies the message being acknowledged and its status";
 			}

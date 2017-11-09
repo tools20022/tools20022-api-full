@@ -19,7 +19,9 @@ package com.tools20022.repository.codeset;
 
 import com.tools20022.metamodel.MMCode;
 import com.tools20022.metamodel.MMCodeSet;
+import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.codeset.SupportedPaymentOptionCode;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -77,7 +79,7 @@ public class SupportedPaymentOption1Code extends SupportedPaymentOptionCode {
 	 */
 	public static final MMCode mmPartialApproval = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PartialApproval";
 			owner_lazy = () -> SupportedPaymentOption1Code.mmObject();
 		}
@@ -100,7 +102,7 @@ public class SupportedPaymentOption1Code extends SupportedPaymentOptionCode {
 	 */
 	public static final MMCode mmPaymentApprovalOnly = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PaymentApprovalOnly";
 			owner_lazy = () -> SupportedPaymentOption1Code.mmObject();
 		}
@@ -109,11 +111,11 @@ public class SupportedPaymentOption1Code extends SupportedPaymentOptionCode {
 	static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "SupportedPaymentOption1Code";
 				definition = "Specifies the options supported for a payment transaction.";
-				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.SupportedPaymentOption1Code.mmPartialApproval, com.tools20022.repository.codeset.SupportedPaymentOption1Code.mmPaymentApprovalOnly);
+				code_lazy = () -> Arrays.asList(SupportedPaymentOption1Code.mmPartialApproval, SupportedPaymentOption1Code.mmPaymentApprovalOnly);
 				trace_lazy = () -> SupportedPaymentOptionCode.mmObject();
 			}
 		});

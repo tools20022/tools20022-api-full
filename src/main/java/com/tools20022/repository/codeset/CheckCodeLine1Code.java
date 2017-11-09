@@ -19,7 +19,9 @@ package com.tools20022.repository.codeset;
 
 import com.tools20022.metamodel.MMCode;
 import com.tools20022.metamodel.MMCodeSet;
+import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.codeset.CheckCodeLineCode;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -82,7 +84,7 @@ public class CheckCodeLine1Code extends CheckCodeLineCode {
 	 */
 	public static final MMCode mmCMC7 = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CMC7";
 			owner_lazy = () -> CheckCodeLine1Code.mmObject();
 		}
@@ -105,7 +107,7 @@ public class CheckCodeLine1Code extends CheckCodeLineCode {
 	 */
 	public static final MMCode mmE13B = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "E13B";
 			owner_lazy = () -> CheckCodeLine1Code.mmObject();
 		}
@@ -128,7 +130,7 @@ public class CheckCodeLine1Code extends CheckCodeLineCode {
 	 */
 	public static final MMCode mmOCRA = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "OCRA";
 			owner_lazy = () -> CheckCodeLine1Code.mmObject();
 		}
@@ -151,7 +153,7 @@ public class CheckCodeLine1Code extends CheckCodeLineCode {
 	 */
 	public static final MMCode mmOCRB = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "OCRB";
 			owner_lazy = () -> CheckCodeLine1Code.mmObject();
 		}
@@ -174,7 +176,7 @@ public class CheckCodeLine1Code extends CheckCodeLineCode {
 	 */
 	public static final MMCode mmOCRDefault = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "OCRDefault";
 			owner_lazy = () -> CheckCodeLine1Code.mmObject();
 		}
@@ -183,12 +185,11 @@ public class CheckCodeLine1Code extends CheckCodeLineCode {
 	static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "CheckCodeLine1Code";
 				definition = "Format of the check code line.";
-				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.CheckCodeLine1Code.mmCMC7, com.tools20022.repository.codeset.CheckCodeLine1Code.mmE13B, com.tools20022.repository.codeset.CheckCodeLine1Code.mmOCRA,
-						com.tools20022.repository.codeset.CheckCodeLine1Code.mmOCRB, com.tools20022.repository.codeset.CheckCodeLine1Code.mmOCRDefault);
+				code_lazy = () -> Arrays.asList(CheckCodeLine1Code.mmCMC7, CheckCodeLine1Code.mmE13B, CheckCodeLine1Code.mmOCRA, CheckCodeLine1Code.mmOCRB, CheckCodeLine1Code.mmOCRDefault);
 				trace_lazy = () -> CheckCodeLineCode.mmObject();
 			}
 		});

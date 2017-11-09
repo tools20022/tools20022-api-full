@@ -19,7 +19,9 @@ package com.tools20022.repository.codeset;
 
 import com.tools20022.metamodel.MMCode;
 import com.tools20022.metamodel.MMCodeSet;
+import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.codeset.SettledStatusReasonCode;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -86,7 +88,7 @@ public class SettledStatusReason1Code extends SettledStatusReasonCode {
 	 */
 	public static final MMCode mmUnitsPartiallySettled = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "UnitsPartiallySettled";
 			owner_lazy = () -> SettledStatusReason1Code.mmObject();
 		}
@@ -109,7 +111,7 @@ public class SettledStatusReason1Code extends SettledStatusReasonCode {
 	 */
 	public static final MMCode mmCashPartiallySettled = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CashPartiallySettled";
 			owner_lazy = () -> SettledStatusReason1Code.mmObject();
 		}
@@ -132,7 +134,7 @@ public class SettledStatusReason1Code extends SettledStatusReasonCode {
 	 */
 	public static final MMCode mmUnitsCashPartiallySettled = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "UnitsCashPartiallySettled";
 			owner_lazy = () -> SettledStatusReason1Code.mmObject();
 		}
@@ -141,13 +143,12 @@ public class SettledStatusReason1Code extends SettledStatusReasonCode {
 	static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
 				example = Arrays.asList("UPST");
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "SettledStatusReason1Code";
 				definition = "Specifies the reason for a partially settled status.";
-				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.SettledStatusReason1Code.mmUnitsPartiallySettled, com.tools20022.repository.codeset.SettledStatusReason1Code.mmCashPartiallySettled,
-						com.tools20022.repository.codeset.SettledStatusReason1Code.mmUnitsCashPartiallySettled);
+				code_lazy = () -> Arrays.asList(SettledStatusReason1Code.mmUnitsPartiallySettled, SettledStatusReason1Code.mmCashPartiallySettled, SettledStatusReason1Code.mmUnitsCashPartiallySettled);
 				trace_lazy = () -> SettledStatusReasonCode.mmObject();
 			}
 		});

@@ -20,11 +20,16 @@ package com.tools20022.repository.msg;
 import com.tools20022.metamodel.MMMessageAssociationEnd;
 import com.tools20022.metamodel.MMMessageAttribute;
 import com.tools20022.metamodel.MMMessageComponent;
+import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.choice.ContractRegistrationReference1Choice;
 import com.tools20022.repository.datatype.ActiveCurrencyAndAmount;
 import com.tools20022.repository.datatype.ISODate;
 import com.tools20022.repository.datatype.Max1025Text;
 import com.tools20022.repository.entity.Contract;
+import com.tools20022.repository.entity.Document;
+import com.tools20022.repository.entity.PaymentObligation;
+import com.tools20022.repository.entity.ShipmentDateRange;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -112,11 +117,11 @@ public class TransactionCertificateContract1 {
 	 */
 	public static final MMMessageAssociationEnd mmContractReference = new MMMessageAssociationEnd() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Document.mmDocumentIdentification;
+			businessElementTrace_lazy = () -> Document.mmDocumentIdentification;
 			componentContext_lazy = () -> TransactionCertificateContract1.mmObject();
 			isDerived = false;
 			xmlTag = "CtrctRef";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ContractReference";
 			definition = "Reference of the contract provided as through the date and identification of the contract or through the registered contract identification.";
 			maxOccurs = 1;
@@ -164,11 +169,11 @@ public class TransactionCertificateContract1 {
 	 */
 	public static final MMMessageAttribute mmTransactionAmountInContractCurrency = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Document.mmAmount;
+			businessElementTrace_lazy = () -> Document.mmAmount;
 			componentContext_lazy = () -> TransactionCertificateContract1.mmObject();
 			isDerived = false;
 			xmlTag = "TxAmtInCtrctCcy";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "TransactionAmountInContractCurrency";
 			definition = "Provides the amount of the transaction in the currency of the registered contract.";
 			maxOccurs = 1;
@@ -211,11 +216,11 @@ public class TransactionCertificateContract1 {
 	 */
 	public static final MMMessageAttribute mmExpectedShipmentDate = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.ShipmentDateRange.mmShipmentDate;
+			businessElementTrace_lazy = () -> ShipmentDateRange.mmShipmentDate;
 			componentContext_lazy = () -> TransactionCertificateContract1.mmObject();
 			isDerived = false;
 			xmlTag = "XpctdShipmntDt";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ExpectedShipmentDate";
 			definition = "Expected shipment date as per registered contract.";
 			maxOccurs = 1;
@@ -261,11 +266,11 @@ public class TransactionCertificateContract1 {
 	 */
 	public static final MMMessageAttribute mmExpectedAdvancePaymentReturnDate = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.PaymentObligation.mmPaymentDueDate;
+			businessElementTrace_lazy = () -> PaymentObligation.mmPaymentDueDate;
 			componentContext_lazy = () -> TransactionCertificateContract1.mmObject();
 			isDerived = false;
 			xmlTag = "XpctdAdvncPmtRtrDt";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ExpectedAdvancePaymentReturnDate";
 			definition = "Expected advance payment (or prepayment) return date in case counterparty will not deliver the goods/services.";
 			maxOccurs = 1;
@@ -306,7 +311,7 @@ public class TransactionCertificateContract1 {
 			componentContext_lazy = () -> TransactionCertificateContract1.mmObject();
 			isDerived = false;
 			xmlTag = "AddtlInf";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AdditionalInformation";
 			definition = "Further details on the transaction certificate contract.";
 			maxOccurs = 1;
@@ -318,12 +323,11 @@ public class TransactionCertificateContract1 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.TransactionCertificateContract1.mmContractReference,
-						com.tools20022.repository.msg.TransactionCertificateContract1.mmTransactionAmountInContractCurrency, com.tools20022.repository.msg.TransactionCertificateContract1.mmExpectedShipmentDate,
-						com.tools20022.repository.msg.TransactionCertificateContract1.mmExpectedAdvancePaymentReturnDate, com.tools20022.repository.msg.TransactionCertificateContract1.mmAdditionalInformation);
+				messageElement_lazy = () -> Arrays.asList(TransactionCertificateContract1.mmContractReference, TransactionCertificateContract1.mmTransactionAmountInContractCurrency, TransactionCertificateContract1.mmExpectedShipmentDate,
+						TransactionCertificateContract1.mmExpectedAdvancePaymentReturnDate, TransactionCertificateContract1.mmAdditionalInformation);
 				trace_lazy = () -> Contract.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "TransactionCertificateContract1";
 				definition = "Certificate and contract reference of a transaction.";
 			}

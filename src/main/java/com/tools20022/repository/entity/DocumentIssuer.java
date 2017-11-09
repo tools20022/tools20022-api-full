@@ -18,7 +18,10 @@
 package com.tools20022.repository.entity;
 
 import com.tools20022.metamodel.MMBusinessComponent;
+import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.entity.DocumentPartyRole;
+import com.tools20022.repository.GeneratedRepository;
+import com.tools20022.repository.msg.*;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -85,13 +88,12 @@ public class DocumentIssuer extends DocumentPartyRole {
 	static public MMBusinessComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMBusinessComponent() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "DocumentIssuer";
 				definition = "Party that issues a document such as a bank guarantee or letter of / documentary credit. For instance the inspection company for a trade certificate or the insurance company or its agent for an insurance certificate.";
-				derivationElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.ReferredDocumentType1.mmIssuer, com.tools20022.repository.msg.CreditorReferenceType1.mmIssuer,
-						com.tools20022.repository.msg.ReferredDocumentType2.mmIssuer, com.tools20022.repository.msg.CreditorReferenceType2.mmIssuer, com.tools20022.repository.msg.InvoiceHeader1.mmIssuer,
-						com.tools20022.repository.msg.GarnishmentType1.mmIssuer, com.tools20022.repository.msg.ReferredDocumentType4.mmIssuer, com.tools20022.repository.msg.InvoiceHeader2.mmIssuer);
+				derivationElement_lazy = () -> Arrays.asList(ReferredDocumentType1.mmIssuer, CreditorReferenceType1.mmIssuer, ReferredDocumentType2.mmIssuer, CreditorReferenceType2.mmIssuer, InvoiceHeader1.mmIssuer,
+						GarnishmentType1.mmIssuer, ReferredDocumentType4.mmIssuer, InvoiceHeader2.mmIssuer);
 				superType_lazy = () -> DocumentPartyRole.mmObject();
 			}
 		});

@@ -19,9 +19,14 @@ package com.tools20022.repository.msg;
 
 import com.tools20022.metamodel.MMMessageAttribute;
 import com.tools20022.metamodel.MMMessageComponent;
+import com.tools20022.metamodel.MMRegistrationStatus;
+import com.tools20022.repository.area.sese.TransferCancellationStatusReportV05;
+import com.tools20022.repository.area.sese.TransferInstructionStatusReportV05;
 import com.tools20022.repository.choice.PartyIdentification97Choice;
 import com.tools20022.repository.datatype.Max35Text;
 import com.tools20022.repository.entity.GenericIdentification;
+import com.tools20022.repository.entity.Party;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -125,14 +130,14 @@ public class AdditionalReference7 {
 	 */
 	public static final MMMessageAttribute mmReference = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.GenericIdentification.mmIdentification;
+			businessElementTrace_lazy = () -> GenericIdentification.mmIdentification;
 			componentContext_lazy = () -> AdditionalReference7.mmObject();
 			isDerived = false;
 			xmlTag = "Ref";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Reference";
 			definition = "Reference issued by a party to identify an instruction, transaction or a message.";
-			previousVersion_lazy = () -> com.tools20022.repository.msg.AdditionalReference6.mmReference;
+			previousVersion_lazy = () -> AdditionalReference6.mmReference;
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> Max35Text.mmObject();
@@ -179,14 +184,14 @@ public class AdditionalReference7 {
 	 */
 	public static final MMMessageAttribute mmReferenceIssuer = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Party.mmIdentification;
+			businessElementTrace_lazy = () -> Party.mmIdentification;
 			componentContext_lazy = () -> AdditionalReference7.mmObject();
 			isDerived = false;
 			xmlTag = "RefIssr";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ReferenceIssuer";
 			definition = "Party that issued the reference.";
-			previousVersion_lazy = () -> com.tools20022.repository.msg.AdditionalReference6.mmReferenceIssuer;
+			previousVersion_lazy = () -> AdditionalReference6.mmReferenceIssuer;
 			maxOccurs = 1;
 			minOccurs = 0;
 			complexType_lazy = () -> PartyIdentification97Choice.mmObject();
@@ -230,10 +235,10 @@ public class AdditionalReference7 {
 			componentContext_lazy = () -> AdditionalReference7.mmObject();
 			isDerived = false;
 			xmlTag = "MsgNm";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "MessageName";
 			definition = "Name of the message.";
-			previousVersion_lazy = () -> com.tools20022.repository.msg.AdditionalReference6.mmMessageName;
+			previousVersion_lazy = () -> AdditionalReference6.mmMessageName;
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> Max35Text.mmObject();
@@ -243,13 +248,11 @@ public class AdditionalReference7 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.AdditionalReference7.mmReference, com.tools20022.repository.msg.AdditionalReference7.mmReferenceIssuer,
-						com.tools20022.repository.msg.AdditionalReference7.mmMessageName);
-				messageBuildingBlock_lazy = () -> Arrays.asList(com.tools20022.repository.area.sese.TransferInstructionStatusReportV05.mmCounterpartyReference,
-						com.tools20022.repository.area.sese.TransferCancellationStatusReportV05.mmCounterpartyReference);
+				messageElement_lazy = () -> Arrays.asList(AdditionalReference7.mmReference, AdditionalReference7.mmReferenceIssuer, AdditionalReference7.mmMessageName);
+				messageBuildingBlock_lazy = () -> Arrays.asList(TransferInstructionStatusReportV05.mmCounterpartyReference, TransferCancellationStatusReportV05.mmCounterpartyReference);
 				trace_lazy = () -> GenericIdentification.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "AdditionalReference7";
 				definition = "Reference to a related message or transaction.";
 				previousVersion_lazy = () -> AdditionalReference6.mmObject();

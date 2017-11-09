@@ -20,10 +20,14 @@ package com.tools20022.repository.msg;
 import com.tools20022.metamodel.MMMessageAssociationEnd;
 import com.tools20022.metamodel.MMMessageAttribute;
 import com.tools20022.metamodel.MMMessageComponent;
+import com.tools20022.metamodel.MMRegistrationStatus;
+import com.tools20022.repository.area.colr.InterestPaymentStatementV03;
 import com.tools20022.repository.datatype.ActiveCurrencyAndAmount;
 import com.tools20022.repository.datatype.ISODate;
 import com.tools20022.repository.datatype.Max35Text;
 import com.tools20022.repository.entity.Interest;
+import com.tools20022.repository.entity.InterestCalculation;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.List;
@@ -146,15 +150,15 @@ public class InterestStatement3 {
 	 */
 	public static final MMMessageAttribute mmInterestPeriod = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.InterestCalculation.mmInterestPeriod;
+			businessElementTrace_lazy = () -> InterestCalculation.mmInterestPeriod;
 			componentContext_lazy = () -> InterestStatement3.mmObject();
 			isDerived = false;
 			xmlTag = "IntrstPrd";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "InterestPeriod";
 			definition = "Provides the period during which the interest rate has been applied.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.InterestStatement4.mmInterestPeriod);
-			previousVersion_lazy = () -> com.tools20022.repository.msg.InterestStatement2.mmInterestPeriod;
+			nextVersions_lazy = () -> Arrays.asList(InterestStatement4.mmInterestPeriod);
+			previousVersion_lazy = () -> InterestStatement2.mmInterestPeriod;
 			maxOccurs = 1;
 			minOccurs = 1;
 			complexType_lazy = () -> com.tools20022.repository.msg.DatePeriodDetails.mmObject();
@@ -210,15 +214,15 @@ public class InterestStatement3 {
 	 */
 	public static final MMMessageAttribute mmTotalInterestAmountDueToA = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Interest.mmAmount;
+			businessElementTrace_lazy = () -> Interest.mmAmount;
 			componentContext_lazy = () -> InterestStatement3.mmObject();
 			isDerived = false;
 			xmlTag = "TtlIntrstAmtDueToA";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "TotalInterestAmountDueToA";
 			definition = "Provides the total amount of interest that is due to partyA.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.InterestStatement4.mmTotalInterestAmountDueToA);
-			previousVersion_lazy = () -> com.tools20022.repository.msg.InterestStatement2.mmTotalInterestAmountDueToA;
+			nextVersions_lazy = () -> Arrays.asList(InterestStatement4.mmTotalInterestAmountDueToA);
+			previousVersion_lazy = () -> InterestStatement2.mmTotalInterestAmountDueToA;
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> ActiveCurrencyAndAmount.mmObject();
@@ -274,15 +278,15 @@ public class InterestStatement3 {
 	 */
 	public static final MMMessageAttribute mmTotalInterestAmountDueToB = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Interest.mmAmount;
+			businessElementTrace_lazy = () -> Interest.mmAmount;
 			componentContext_lazy = () -> InterestStatement3.mmObject();
 			isDerived = false;
 			xmlTag = "TtlIntrstAmtDueToB";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "TotalInterestAmountDueToB";
 			definition = "Provides the total amount of interest that is due to partyB.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.InterestStatement4.mmTotalInterestAmountDueToB);
-			previousVersion_lazy = () -> com.tools20022.repository.msg.InterestStatement2.mmTotalInterestAmountDueToB;
+			nextVersions_lazy = () -> Arrays.asList(InterestStatement4.mmTotalInterestAmountDueToB);
+			previousVersion_lazy = () -> InterestStatement2.mmTotalInterestAmountDueToB;
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> ActiveCurrencyAndAmount.mmObject();
@@ -336,15 +340,15 @@ public class InterestStatement3 {
 	 */
 	public static final MMMessageAttribute mmValueDate = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Interest.mmPaymentDate;
+			businessElementTrace_lazy = () -> Interest.mmPaymentDate;
 			componentContext_lazy = () -> InterestStatement3.mmObject();
 			isDerived = false;
 			xmlTag = "ValDt";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ValueDate";
 			definition = "Indicates the value date of the interest statement.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.InterestStatement4.mmValueDate);
-			previousVersion_lazy = () -> com.tools20022.repository.msg.InterestStatement2.mmValueDate;
+			nextVersions_lazy = () -> Arrays.asList(InterestStatement4.mmValueDate);
+			previousVersion_lazy = () -> InterestStatement2.mmValueDate;
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> ISODate.mmObject();
@@ -396,11 +400,11 @@ public class InterestStatement3 {
 			componentContext_lazy = () -> InterestStatement3.mmObject();
 			isDerived = false;
 			xmlTag = "IntrstPmtReqId";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "InterestPaymentRequestIdentification";
 			definition = "Provides the reference to the interest payment request.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.InterestStatement4.mmInterestPaymentRequestIdentification);
-			previousVersion_lazy = () -> com.tools20022.repository.msg.InterestStatement2.mmInterestPaymentRequestIdentification;
+			nextVersions_lazy = () -> Arrays.asList(InterestStatement4.mmInterestPaymentRequestIdentification);
+			previousVersion_lazy = () -> InterestStatement2.mmInterestPaymentRequestIdentification;
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> Max35Text.mmObject();
@@ -453,15 +457,15 @@ public class InterestStatement3 {
 	 */
 	public static final MMMessageAssociationEnd mmInterestCalculation = new MMMessageAssociationEnd() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Interest.mmInterestCalculation;
+			businessElementTrace_lazy = () -> Interest.mmInterestCalculation;
 			componentContext_lazy = () -> InterestStatement3.mmObject();
 			isDerived = false;
 			xmlTag = "IntrstClctn";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "InterestCalculation";
 			definition = "Provides the details of the interest calculation.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.InterestStatement4.mmInterestCalculation);
-			previousVersion_lazy = () -> com.tools20022.repository.msg.InterestStatement2.mmInterestCalculationDetails;
+			nextVersions_lazy = () -> Arrays.asList(InterestStatement4.mmInterestCalculation);
+			previousVersion_lazy = () -> InterestStatement2.mmInterestCalculationDetails;
 			minOccurs = 0;
 			isComposite = true;
 			type_lazy = () -> com.tools20022.repository.msg.InterestCalculation3.mmObject();
@@ -471,13 +475,12 @@ public class InterestStatement3 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.InterestStatement3.mmInterestPeriod, com.tools20022.repository.msg.InterestStatement3.mmTotalInterestAmountDueToA,
-						com.tools20022.repository.msg.InterestStatement3.mmTotalInterestAmountDueToB, com.tools20022.repository.msg.InterestStatement3.mmValueDate,
-						com.tools20022.repository.msg.InterestStatement3.mmInterestPaymentRequestIdentification, com.tools20022.repository.msg.InterestStatement3.mmInterestCalculation);
-				messageBuildingBlock_lazy = () -> Arrays.asList(com.tools20022.repository.area.colr.InterestPaymentStatementV03.mmInterestStatement);
+				messageElement_lazy = () -> Arrays.asList(InterestStatement3.mmInterestPeriod, InterestStatement3.mmTotalInterestAmountDueToA, InterestStatement3.mmTotalInterestAmountDueToB, InterestStatement3.mmValueDate,
+						InterestStatement3.mmInterestPaymentRequestIdentification, InterestStatement3.mmInterestCalculation);
+				messageBuildingBlock_lazy = () -> Arrays.asList(InterestPaymentStatementV03.mmInterestStatement);
 				trace_lazy = () -> Interest.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "InterestStatement3";
 				definition = "Provides details on the interest statement.";
 				nextVersions_lazy = () -> Arrays.asList(InterestStatement4.mmObject());

@@ -20,14 +20,14 @@ package com.tools20022.repository.msg;
 import com.tools20022.metamodel.MMMessageAssociationEnd;
 import com.tools20022.metamodel.MMMessageAttribute;
 import com.tools20022.metamodel.MMMessageComponent;
+import com.tools20022.metamodel.MMRegistrationStatus;
+import com.tools20022.repository.area.colr.CollateralSubstitutionRequestV04;
 import com.tools20022.repository.codeset.CollateralSubstitutionSequence1Code;
 import com.tools20022.repository.codeset.CollateralSubstitutionType1Code;
 import com.tools20022.repository.datatype.ActiveCurrencyAndAmount;
 import com.tools20022.repository.datatype.Max140Text;
-import com.tools20022.repository.entity.Asset;
-import com.tools20022.repository.entity.CollateralSubstitution;
-import com.tools20022.repository.entity.Money;
-import com.tools20022.repository.entity.Security;
+import com.tools20022.repository.entity.*;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.List;
@@ -143,10 +143,10 @@ public class CollateralSubstitution4 {
 			componentContext_lazy = () -> CollateralSubstitution4.mmObject();
 			isDerived = false;
 			xmlTag = "CollSbstitnSeq";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CollateralSubstitutionSequence";
 			definition = "Indicates whether the collateral substitution request is new or updated.";
-			previousVersion_lazy = () -> com.tools20022.repository.msg.CollateralSubstitution3.mmCollateralSubstitutionSequence;
+			previousVersion_lazy = () -> CollateralSubstitution3.mmCollateralSubstitutionSequence;
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> CollateralSubstitutionSequence1Code.mmObject();
@@ -196,14 +196,14 @@ public class CollateralSubstitution4 {
 	 */
 	public static final MMMessageAttribute mmSubstitutionRequirement = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Collateral.mmBaseCurrencyAmount;
+			businessElementTrace_lazy = () -> Collateral.mmBaseCurrencyAmount;
 			componentContext_lazy = () -> CollateralSubstitution4.mmObject();
 			isDerived = false;
 			xmlTag = "SbstitnRqrmnt";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SubstitutionRequirement";
 			definition = "Cash value of the requested collateral substitution transfer in the base currency.";
-			previousVersion_lazy = () -> com.tools20022.repository.msg.CollateralSubstitution3.mmSubstitutionRequirement;
+			previousVersion_lazy = () -> CollateralSubstitution3.mmSubstitutionRequirement;
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> ActiveCurrencyAndAmount.mmObject();
@@ -253,14 +253,14 @@ public class CollateralSubstitution4 {
 	 */
 	public static final MMMessageAttribute mmCollateralSubstitutionType = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.CollateralSubstitution.mmType;
+			businessElementTrace_lazy = () -> CollateralSubstitution.mmType;
 			componentContext_lazy = () -> CollateralSubstitution4.mmObject();
 			isDerived = false;
 			xmlTag = "CollSbstitnTp";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CollateralSubstitutionType";
 			definition = "Specifies if the collateral that is substituted was posted against the variation margin or the independent amount.";
-			previousVersion_lazy = () -> com.tools20022.repository.msg.CollateralSubstitution3.mmCollateralSubstitutionType;
+			previousVersion_lazy = () -> CollateralSubstitution3.mmCollateralSubstitutionType;
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> CollateralSubstitutionType1Code.mmObject();
@@ -306,14 +306,14 @@ public class CollateralSubstitution4 {
 	 */
 	public static final MMMessageAttribute mmStandardSettlementInstructions = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.CollateralAgreement.mmStandingSettlementInstructions;
+			businessElementTrace_lazy = () -> CollateralAgreement.mmStandingSettlementInstructions;
 			componentContext_lazy = () -> CollateralSubstitution4.mmObject();
 			isDerived = false;
 			xmlTag = "StdSttlmInstrs";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "StandardSettlementInstructions";
 			definition = "Identifies the standard settlement instructions.";
-			previousVersion_lazy = () -> com.tools20022.repository.msg.CollateralSubstitution3.mmStandardSettlementInstructions;
+			previousVersion_lazy = () -> CollateralSubstitution3.mmStandardSettlementInstructions;
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> Max140Text.mmObject();
@@ -361,10 +361,10 @@ public class CollateralSubstitution4 {
 			componentContext_lazy = () -> CollateralSubstitution4.mmObject();
 			isDerived = false;
 			xmlTag = "SctiesColl";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SecuritiesCollateral";
 			definition = "Collateral type is securities.";
-			previousVersion_lazy = () -> com.tools20022.repository.msg.CollateralSubstitution3.mmSecuritiesCollateral;
+			previousVersion_lazy = () -> CollateralSubstitution3.mmSecuritiesCollateral;
 			minOccurs = 0;
 			isComposite = true;
 			type_lazy = () -> com.tools20022.repository.msg.SecuritiesCollateral5.mmObject();
@@ -412,10 +412,10 @@ public class CollateralSubstitution4 {
 			componentContext_lazy = () -> CollateralSubstitution4.mmObject();
 			isDerived = false;
 			xmlTag = "CshColl";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CashCollateral";
 			definition = "Collateral type is cash.";
-			previousVersion_lazy = () -> com.tools20022.repository.msg.CollateralSubstitution3.mmCashCollateral;
+			previousVersion_lazy = () -> CollateralSubstitution3.mmCashCollateral;
 			minOccurs = 0;
 			isComposite = true;
 			type_lazy = () -> com.tools20022.repository.msg.CashCollateral3.mmObject();
@@ -466,10 +466,10 @@ public class CollateralSubstitution4 {
 			componentContext_lazy = () -> CollateralSubstitution4.mmObject();
 			isDerived = false;
 			xmlTag = "OthrColl";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "OtherCollateral";
 			definition = "Collateral type is other than securities or cash for example letter of credit.";
-			previousVersion_lazy = () -> com.tools20022.repository.msg.CollateralSubstitution3.mmOtherCollateral;
+			previousVersion_lazy = () -> CollateralSubstitution3.mmOtherCollateral;
 			minOccurs = 0;
 			isComposite = true;
 			type_lazy = () -> com.tools20022.repository.msg.OtherCollateral5.mmObject();
@@ -515,10 +515,10 @@ public class CollateralSubstitution4 {
 			componentContext_lazy = () -> CollateralSubstitution4.mmObject();
 			isDerived = false;
 			xmlTag = "LkdRefs";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "LinkedReferences";
 			definition = "Provides details on the identification of previously sent and/or received message(s), in case of updated substitution request.";
-			previousVersion_lazy = () -> com.tools20022.repository.msg.CollateralSubstitution3.mmLinkedReferences;
+			previousVersion_lazy = () -> CollateralSubstitution3.mmLinkedReferences;
 			maxOccurs = 1;
 			minOccurs = 0;
 			isComposite = true;
@@ -529,14 +529,13 @@ public class CollateralSubstitution4 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.CollateralSubstitution4.mmCollateralSubstitutionSequence, com.tools20022.repository.msg.CollateralSubstitution4.mmSubstitutionRequirement,
-						com.tools20022.repository.msg.CollateralSubstitution4.mmCollateralSubstitutionType, com.tools20022.repository.msg.CollateralSubstitution4.mmStandardSettlementInstructions,
-						com.tools20022.repository.msg.CollateralSubstitution4.mmSecuritiesCollateral, com.tools20022.repository.msg.CollateralSubstitution4.mmCashCollateral,
-						com.tools20022.repository.msg.CollateralSubstitution4.mmOtherCollateral, com.tools20022.repository.msg.CollateralSubstitution4.mmLinkedReferences);
-				messageBuildingBlock_lazy = () -> Arrays.asList(com.tools20022.repository.area.colr.CollateralSubstitutionRequestV04.mmCollateralSubstitutionDeliver);
+				messageElement_lazy = () -> Arrays.asList(CollateralSubstitution4.mmCollateralSubstitutionSequence, CollateralSubstitution4.mmSubstitutionRequirement, CollateralSubstitution4.mmCollateralSubstitutionType,
+						CollateralSubstitution4.mmStandardSettlementInstructions, CollateralSubstitution4.mmSecuritiesCollateral, CollateralSubstitution4.mmCashCollateral, CollateralSubstitution4.mmOtherCollateral,
+						CollateralSubstitution4.mmLinkedReferences);
+				messageBuildingBlock_lazy = () -> Arrays.asList(CollateralSubstitutionRequestV04.mmCollateralSubstitutionDeliver);
 				trace_lazy = () -> CollateralSubstitution.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "CollateralSubstitution4";
 				definition = "Provides details about the collateral that will be substituted.";
 				previousVersion_lazy = () -> CollateralSubstitution3.mmObject();

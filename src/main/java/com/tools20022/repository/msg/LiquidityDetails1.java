@@ -20,7 +20,9 @@ package com.tools20022.repository.msg;
 import com.tools20022.metamodel.MMMessageAssociationEnd;
 import com.tools20022.metamodel.MMMessageAttribute;
 import com.tools20022.metamodel.MMMessageComponent;
+import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.datatype.ActiveCurrencyAndAmount;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -96,7 +98,7 @@ public class LiquidityDetails1 {
 			componentContext_lazy = () -> LiquidityDetails1.mmObject();
 			isDerived = false;
 			xmlTag = "Bal";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Balance";
 			definition = "Current balance.";
 			maxOccurs = 1;
@@ -139,7 +141,7 @@ public class LiquidityDetails1 {
 			componentContext_lazy = () -> LiquidityDetails1.mmObject();
 			isDerived = false;
 			xmlTag = "NetAvlblLqdty";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "NetAvailableLiquidity";
 			definition = "Net available liquidity on the account(s). ";
 			maxOccurs = 1;
@@ -184,7 +186,7 @@ public class LiquidityDetails1 {
 			componentContext_lazy = () -> LiquidityDetails1.mmObject();
 			isDerived = false;
 			xmlTag = "NonCshRsvdAmt";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "NonCashReservedAmount";
 			definition = "Total amount of liquidity reserved for operations other than cash withdrawal.";
 			maxOccurs = 1;
@@ -226,7 +228,7 @@ public class LiquidityDetails1 {
 			componentContext_lazy = () -> LiquidityDetails1.mmObject();
 			isDerived = false;
 			xmlTag = "CshRsvdAmt";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CashReservedAmount";
 			definition = "Total amount of liquidity reserved for cash withdrawal.";
 			maxOccurs = 1;
@@ -238,10 +240,9 @@ public class LiquidityDetails1 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.LiquidityDetails1.mmBalance, com.tools20022.repository.msg.LiquidityDetails1.mmNetAvailableLiquidity,
-						com.tools20022.repository.msg.LiquidityDetails1.mmNonCashReservedAmount, com.tools20022.repository.msg.LiquidityDetails1.mmCashReservedAmount);
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+				messageElement_lazy = () -> Arrays.asList(LiquidityDetails1.mmBalance, LiquidityDetails1.mmNetAvailableLiquidity, LiquidityDetails1.mmNonCashReservedAmount, LiquidityDetails1.mmCashReservedAmount);
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 				name = "LiquidityDetails1";
 				definition = "Information regarding liquidity valuation.";
 			}

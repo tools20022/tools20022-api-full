@@ -19,10 +19,13 @@ package com.tools20022.repository.msg;
 
 import com.tools20022.metamodel.MMMessageAttribute;
 import com.tools20022.metamodel.MMMessageComponent;
+import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.metamodel.MMXor;
 import com.tools20022.repository.codeset.TaxationBasis2Code;
 import com.tools20022.repository.datatype.Extended350Code;
 import com.tools20022.repository.entity.InvestmentFundTax;
+import com.tools20022.repository.entity.Tax;
+import com.tools20022.repository.GeneratedRepository;
 import java.text.DateFormat;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
@@ -127,14 +130,14 @@ public class TaxCalculationInformation5 {
 	 */
 	public static final MMMessageAttribute mmBasis = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Tax.mmBasis;
+			businessElementTrace_lazy = () -> Tax.mmBasis;
 			componentContext_lazy = () -> TaxCalculationInformation5.mmObject();
 			isDerived = false;
 			xmlTag = "Bsis";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Basis";
 			definition = "Basis used to determine the capital gain or loss, eg, the purchase price.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.TaxCalculationInformation8.mmBasis);
+			nextVersions_lazy = () -> Arrays.asList(TaxCalculationInformation8.mmBasis);
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> TaxationBasis2Code.mmObject();
@@ -177,11 +180,11 @@ public class TaxCalculationInformation5 {
 	 */
 	public static final MMMessageAttribute mmExtendedBasis = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Tax.mmBasis;
+			businessElementTrace_lazy = () -> Tax.mmBasis;
 			componentContext_lazy = () -> TaxCalculationInformation5.mmObject();
 			isDerived = false;
 			xmlTag = "XtndedBsis";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ExtendedBasis";
 			definition = "Basis used to determine the capital gain or loss, eg, the purchase price.";
 			maxOccurs = 1;
@@ -194,6 +197,10 @@ public class TaxCalculationInformation5 {
 	 * <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
+	 * <li>{@linkplain com.tools20022.metamodel.MMXor#getMessageComponent
+	 * messageComponent} =
+	 * {@linkplain com.tools20022.repository.msg.TaxCalculationInformation5
+	 * TaxCalculationInformation5}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMXor#getImpactedElements
 	 * impactedElements} =
 	 * <ul>
@@ -205,10 +212,6 @@ public class TaxCalculationInformation5 {
 	 * TaxCalculationInformation5.mmExtendedBasis}</li>
 	 * </ul>
 	 * </li>
-	 * <li>{@linkplain com.tools20022.metamodel.MMXor#getMessageComponent
-	 * messageComponent} =
-	 * {@linkplain com.tools20022.repository.msg.TaxCalculationInformation5
-	 * TaxCalculationInformation5}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
@@ -223,21 +226,21 @@ public class TaxCalculationInformation5 {
 	 */
 	public static final MMXor mmBasisOrExtendedBasisRule = new MMXor() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "BasisOrExtendedBasisRule";
 			definition = "Either Basis or ExtendedBasis may be present, but not both.";
 			messageComponent_lazy = () -> TaxCalculationInformation5.mmObject();
-			impactedElements_lazy = () -> Arrays.asList(com.tools20022.repository.msg.TaxCalculationInformation5.mmBasis, com.tools20022.repository.msg.TaxCalculationInformation5.mmExtendedBasis);
+			impactedElements_lazy = () -> Arrays.asList(TaxCalculationInformation5.mmBasis, TaxCalculationInformation5.mmExtendedBasis);
 		}
 	};
 
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.TaxCalculationInformation5.mmBasis, com.tools20022.repository.msg.TaxCalculationInformation5.mmExtendedBasis);
+				messageElement_lazy = () -> Arrays.asList(TaxCalculationInformation5.mmBasis, TaxCalculationInformation5.mmExtendedBasis);
 				trace_lazy = () -> InvestmentFundTax.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.OBSOLETE;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.OBSOLETE;
 				removalDate = ((Supplier<Date>) (() -> {
 					try {
 						return DateFormat.getDateInstance(java.text.DateFormat.LONG).parse("September 9, 2016");
@@ -248,7 +251,7 @@ public class TaxCalculationInformation5 {
 				name = "TaxCalculationInformation5";
 				definition = "Information used to calculate the tax.";
 				nextVersions_lazy = () -> Arrays.asList(TaxCalculationInformation8.mmObject());
-				xors_lazy = () -> Arrays.asList(com.tools20022.repository.msg.TaxCalculationInformation5.mmBasisOrExtendedBasisRule);
+				xors_lazy = () -> Arrays.asList(TaxCalculationInformation5.mmBasisOrExtendedBasisRule);
 			}
 		});
 		return mmObject_lazy.get();

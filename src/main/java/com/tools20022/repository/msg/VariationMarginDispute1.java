@@ -19,8 +19,10 @@ package com.tools20022.repository.msg;
 
 import com.tools20022.metamodel.MMMessageAssociationEnd;
 import com.tools20022.metamodel.MMMessageComponent;
+import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.choice.DisputeResolutionType2Choice;
 import com.tools20022.repository.entity.DisputeManagement;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.List;
@@ -103,7 +105,7 @@ public class VariationMarginDispute1 {
 			componentContext_lazy = () -> VariationMarginDispute1.mmObject();
 			isDerived = false;
 			xmlTag = "DsptDtls";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "DisputeDetails";
 			definition = "Details of the disputed instruction.";
 			maxOccurs = 1;
@@ -150,11 +152,11 @@ public class VariationMarginDispute1 {
 	 */
 	public static final MMMessageAssociationEnd mmResolutionTypeDetails = new MMMessageAssociationEnd() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.DisputeManagement.mmDisputeResolutionType;
+			businessElementTrace_lazy = () -> DisputeManagement.mmDisputeResolutionType;
 			componentContext_lazy = () -> VariationMarginDispute1.mmObject();
 			isDerived = false;
 			xmlTag = "RsltnTpDtls";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ResolutionTypeDetails";
 			definition = "Specifies the type of dispute that is to be resolved regarding the disputed collateral amount.";
 			minOccurs = 0;
@@ -166,10 +168,10 @@ public class VariationMarginDispute1 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.VariationMarginDispute1.mmDisputeDetails, com.tools20022.repository.msg.VariationMarginDispute1.mmResolutionTypeDetails);
+				messageElement_lazy = () -> Arrays.asList(VariationMarginDispute1.mmDisputeDetails, VariationMarginDispute1.mmResolutionTypeDetails);
 				trace_lazy = () -> DisputeManagement.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "VariationMarginDispute1";
 				definition = "Provides for the variation margin, the dispute details like the dispute amount or the dispute date and the resolution type details.";
 			}

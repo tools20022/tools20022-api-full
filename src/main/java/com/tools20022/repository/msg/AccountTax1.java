@@ -19,10 +19,13 @@ package com.tools20022.repository.msg;
 
 import com.tools20022.metamodel.MMMessageAttribute;
 import com.tools20022.metamodel.MMMessageComponent;
+import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.choice.ResidenceLocation1Choice;
 import com.tools20022.repository.codeset.BillingTaxCalculationMethod1Code;
 import com.tools20022.repository.datatype.Max40Text;
+import com.tools20022.repository.entity.Party;
 import com.tools20022.repository.entity.Tax;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -101,7 +104,7 @@ public class AccountTax1 {
 			componentContext_lazy = () -> AccountTax1.mmObject();
 			isDerived = false;
 			xmlTag = "ClctnMtd";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CalculationMethod";
 			definition = "Defines the calculation method on how the taxes are applied on the account.";
 			maxOccurs = 1;
@@ -143,11 +146,11 @@ public class AccountTax1 {
 	 */
 	public static final MMMessageAttribute mmRegion = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Tax.mmAdministrationZone;
+			businessElementTrace_lazy = () -> Tax.mmAdministrationZone;
 			componentContext_lazy = () -> AccountTax1.mmObject();
 			isDerived = false;
 			xmlTag = "Rgn";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Region";
 			definition = "Identifies the tax region in which the account resides.";
 			maxOccurs = 1;
@@ -196,11 +199,11 @@ public class AccountTax1 {
 	 */
 	public static final MMMessageAttribute mmNonResidenceCountry = new MMMessageAttribute() {
 		{
-			businessElementTrace_lazy = () -> com.tools20022.repository.entity.Party.mmContactPoint;
+			businessElementTrace_lazy = () -> Party.mmContactPoint;
 			componentContext_lazy = () -> AccountTax1.mmObject();
 			isDerived = false;
 			xmlTag = "NonResCtry";
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "NonResidenceCountry";
 			definition = "Specifies the country of residence, when the account owner does not reside in the account's tax region.\n\nUsage: If present, the account owner does not reside in the account's tax region.";
 			maxOccurs = 1;
@@ -212,10 +215,10 @@ public class AccountTax1 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.AccountTax1.mmCalculationMethod, com.tools20022.repository.msg.AccountTax1.mmRegion, com.tools20022.repository.msg.AccountTax1.mmNonResidenceCountry);
+				messageElement_lazy = () -> Arrays.asList(AccountTax1.mmCalculationMethod, AccountTax1.mmRegion, AccountTax1.mmNonResidenceCountry);
 				trace_lazy = () -> Tax.mmObject();
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "AccountTax1";
 				definition = "Describes account taxing parameters.";
 			}

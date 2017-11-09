@@ -19,7 +19,9 @@ package com.tools20022.repository.codeset;
 
 import com.tools20022.metamodel.MMCode;
 import com.tools20022.metamodel.MMCodeSet;
+import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.codeset.PresentationMediumCode;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -86,7 +88,7 @@ public class PresentationMedium1Code extends PresentationMediumCode {
 	 */
 	public static final MMCode mmPaperElectronic = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PaperElectronic";
 			owner_lazy = () -> PresentationMedium1Code.mmObject();
 		}
@@ -109,7 +111,7 @@ public class PresentationMedium1Code extends PresentationMediumCode {
 	 */
 	public static final MMCode mmElectronic = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Electronic";
 			owner_lazy = () -> PresentationMedium1Code.mmObject();
 		}
@@ -132,7 +134,7 @@ public class PresentationMedium1Code extends PresentationMediumCode {
 	 */
 	public static final MMCode mmPaper = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Paper";
 			owner_lazy = () -> PresentationMedium1Code.mmObject();
 		}
@@ -141,13 +143,12 @@ public class PresentationMedium1Code extends PresentationMediumCode {
 	static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
 				example = Arrays.asList("BOTH");
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "PresentationMedium1Code";
 				definition = "Specifies the presentation medium.";
-				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.PresentationMedium1Code.mmPaperElectronic, com.tools20022.repository.codeset.PresentationMedium1Code.mmElectronic,
-						com.tools20022.repository.codeset.PresentationMedium1Code.mmPaper);
+				code_lazy = () -> Arrays.asList(PresentationMedium1Code.mmPaperElectronic, PresentationMedium1Code.mmElectronic, PresentationMedium1Code.mmPaper);
 				trace_lazy = () -> PresentationMediumCode.mmObject();
 			}
 		});

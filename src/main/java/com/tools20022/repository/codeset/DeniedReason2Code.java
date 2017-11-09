@@ -19,7 +19,9 @@ package com.tools20022.repository.codeset;
 
 import com.tools20022.metamodel.MMCode;
 import com.tools20022.metamodel.MMCodeSet;
+import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.codeset.DeniedReasonCode;
+import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -101,7 +103,7 @@ public class DeniedReason2Code extends DeniedReasonCode {
 	 */
 	public static final MMCode mmAccountServicerDeadlineMissed = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AccountServicerDeadlineMissed";
 			owner_lazy = () -> DeniedReason2Code.mmObject();
 		}
@@ -124,7 +126,7 @@ public class DeniedReason2Code extends DeniedReasonCode {
 	 */
 	public static final MMCode mmCallDeniedSinceAlreadyApplied = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CallDeniedSinceAlreadyApplied";
 			owner_lazy = () -> DeniedReason2Code.mmObject();
 		}
@@ -147,7 +149,7 @@ public class DeniedReason2Code extends DeniedReasonCode {
 	 */
 	public static final MMCode mmDeniedSinceAlreadyCancelled = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "DeniedSinceAlreadyCancelled";
 			owner_lazy = () -> DeniedReason2Code.mmObject();
 		}
@@ -170,7 +172,7 @@ public class DeniedReason2Code extends DeniedReasonCode {
 	 */
 	public static final MMCode mmDeniedSinceNotAllowed = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "DeniedSinceNotAllowed";
 			owner_lazy = () -> DeniedReason2Code.mmObject();
 		}
@@ -193,7 +195,7 @@ public class DeniedReason2Code extends DeniedReasonCode {
 	 */
 	public static final MMCode mmDeniedSinceInProgress = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "DeniedSinceInProgress";
 			owner_lazy = () -> DeniedReason2Code.mmObject();
 		}
@@ -216,7 +218,7 @@ public class DeniedReason2Code extends DeniedReasonCode {
 	 */
 	public static final MMCode mmDeniedSinceRepoEnded = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "DeniedSinceRepoEnded";
 			owner_lazy = () -> DeniedReason2Code.mmObject();
 		}
@@ -239,7 +241,7 @@ public class DeniedReason2Code extends DeniedReasonCode {
 	 */
 	public static final MMCode mmDeniedSinceAlreadySettled = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "DeniedSinceAlreadySettled";
 			owner_lazy = () -> DeniedReason2Code.mmObject();
 		}
@@ -262,7 +264,7 @@ public class DeniedReason2Code extends DeniedReasonCode {
 	 */
 	public static final MMCode mmMarketDeadlineMissed = new MMCode() {
 		{
-			registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "MarketDeadlineMissed";
 			owner_lazy = () -> DeniedReason2Code.mmObject();
 		}
@@ -271,15 +273,14 @@ public class DeniedReason2Code extends DeniedReasonCode {
 	static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> com.tools20022.repository.GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
 				example = Arrays.asList("ADEA");
-				registrationStatus = com.tools20022.metamodel.MMRegistrationStatus.REGISTERED;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "DeniedReason2Code";
 				definition = "Specifies the denied reason.";
-				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.DeniedReason2Code.mmAccountServicerDeadlineMissed, com.tools20022.repository.codeset.DeniedReason2Code.mmCallDeniedSinceAlreadyApplied,
-						com.tools20022.repository.codeset.DeniedReason2Code.mmDeniedSinceAlreadyCancelled, com.tools20022.repository.codeset.DeniedReason2Code.mmDeniedSinceNotAllowed,
-						com.tools20022.repository.codeset.DeniedReason2Code.mmDeniedSinceInProgress, com.tools20022.repository.codeset.DeniedReason2Code.mmDeniedSinceRepoEnded,
-						com.tools20022.repository.codeset.DeniedReason2Code.mmDeniedSinceAlreadySettled, com.tools20022.repository.codeset.DeniedReason2Code.mmMarketDeadlineMissed);
+				code_lazy = () -> Arrays
+						.asList(DeniedReason2Code.mmAccountServicerDeadlineMissed, DeniedReason2Code.mmCallDeniedSinceAlreadyApplied, DeniedReason2Code.mmDeniedSinceAlreadyCancelled, DeniedReason2Code.mmDeniedSinceNotAllowed,
+								DeniedReason2Code.mmDeniedSinceInProgress, DeniedReason2Code.mmDeniedSinceRepoEnded, DeniedReason2Code.mmDeniedSinceAlreadySettled, DeniedReason2Code.mmMarketDeadlineMissed);
 				trace_lazy = () -> DeniedReasonCode.mmObject();
 			}
 		});
